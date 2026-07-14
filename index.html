@@ -176,6 +176,8 @@
   footer .wrap{position:relative;z-index:1}
   footer .contact,footer .profiles,footer .fine{text-shadow:0 1px 10px rgba(20,15,33,.85)}
   footer .contact{font-size:1.02rem}
+  footer .copied{display:inline-block;margin-left:10px;font-size:.8rem;color:var(--gold);opacity:0;transition:opacity .35s ease}
+  footer .copied.show{opacity:1}
   footer .profiles{margin-top:14px;font-size:.9rem;color:var(--muted)}
   footer .profiles a{color:var(--cream-dim);margin:0 10px}
   footer .fine{margin-top:26px;font-size:.78rem;color:var(--muted)}
@@ -371,7 +373,7 @@
   <rect x="704" y="148" width="5" height="1.6" rx=".8" fill="#f5c76a" opacity=".12"/>
 </svg>
   <div class="wrap">
-    <p class="contact"><span data-i18n="contact">Say hello — </span><a href="mailto:hello@43sunsets.com">hello@43sunsets.com</a></p>
+    <p class="contact"><span data-i18n="contact">Say hello — </span><a id="hello-link" href="mailto:hello@43sunsets.com">hello@43sunsets.com</a><span class="copied" id="copied-note" aria-live="polite"></span></p>
     <p class="profiles">
       <a href="https://n8n.io/creators/the43sunsets" target="_blank" rel="noopener">n8n</a>·
       <a href="https://apify.com/43sunsets" target="_blank" rel="noopener">Apify</a>·
@@ -400,6 +402,21 @@ document.getElementById('latest-short').addEventListener('click', function (e) {
   f.setAttribute('allowfullscreen', '');
   box.appendChild(f);
   this.replaceWith(box);
+});
+
+/* Contact link: mailto works only when the visitor has a mail app configured,
+   so clicking also copies the address and says so — every visitor gets a response. */
+document.getElementById('hello-link').addEventListener('click', function () {
+  var note = document.getElementById('copied-note');
+  var msg = document.documentElement.lang === 'ja' ? 'アドレスをコピーしました ✓' : 'Address copied ✓';
+  function show() {
+    note.textContent = msg;
+    note.classList.add('show');
+    setTimeout(function () { note.classList.remove('show'); }, 2400);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText('hello@43sunsets.com').then(show, show);
+  } else { show(); }
 });
 
 /* Language toggle — English is the default; Japanese lives in this dictionary.
