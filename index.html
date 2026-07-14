@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>43 Sunsets — Small, production-grade automations</title>
+<meta name="description" content="43 Sunsets builds small, production-grade automations for real businesses. Every template ships with error handling, idempotency guards, and clear setup notes.">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/slat-sun-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/slat-sun-192.png">
+<link rel="apple-touch-icon" href="assets/slat-sun-192.png">
+<link rel="canonical" href="https://43sunsets.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="43 Sunsets — Small, production-grade automations">
+<meta property="og:description" content="Every template ships with error handling, idempotency guards, and clear setup notes — because &quot;it runs&quot; and &quot;it's ready&quot; are different things.">
+<meta property="og:url" content="https://43sunsets.com/">
+<meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@the43sunsets">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"43 Sunsets","url":"https://43sunsets.com/","logo":"https://43sunsets.com/assets/slat-sun-512.png","email":"hello@43sunsets.com","description":"43 Sunsets builds small, production-grade automations for real businesses.","sameAs":["https://n8n.io/creators/the43sunsets","https://apify.com/43sunsets","https://the43sunsets.etsy.com","https://x.com/the43sunsets","https://www.youtube.com/@the43sunsets"]}
+</script>
+<style>
+  :root{
+    --night:#241d33; --night-2:#2e2542; --dusk:#3a2d4a;
+    --cream:#f5ecd7; --cream-dim:#cfc4b4;
+    --gold:#f5c76a; --ember:#f08c5a; --rose:#d95a78;
+    --card:#2c2340; --card-edge:#453757; --muted:#9d92ab;
+    --sunw:min(300px,66vw);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:linear-gradient(180deg,#1d1730 0%,var(--night) 30%,var(--night-2) 70%,#382a48 100%);
+    color:var(--cream);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  a{color:var(--gold);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  /* Language toggle */
+  #lang-toggle{
+    position:fixed;top:16px;right:16px;z-index:20;
+    background:rgba(36,29,51,.78);border:1px solid var(--card-edge);border-radius:999px;
+    color:var(--cream-dim);font-size:.82rem;font-weight:600;letter-spacing:.06em;
+    padding:7px 16px;cursor:pointer;backdrop-filter:blur(6px);
+    transition:color .15s ease,border-color .15s ease;
+  }
+  #lang-toggle:hover{color:var(--gold);border-color:var(--ember)}
+
+  /* Hero */
+  header.wrap{padding:56px 24px 48px;text-align:center;overflow:hidden}
+  .hero{position:relative;padding-top:calc(var(--sunw) * .60)}
+  .hero::before{ /* ambient bloom around the sun, like the original mark */
+    content:"";position:absolute;z-index:0;
+    top:calc(var(--sunw) * .5);left:50%;transform:translate(-50%,-50%);
+    width:calc(var(--sunw) * 3.4);height:calc(var(--sunw) * 2.9);
+    background:radial-gradient(closest-side,
+      rgba(246,168,110,.42) 0%,
+      rgba(228,116,124,.26) 30%,
+      rgba(150,84,112,.16) 52%,
+      rgba(90,58,92,.08) 68%,
+      rgba(36,29,51,0) 82%);
+    pointer-events:none;
+  }
+  .hero .sun{
+    position:absolute;z-index:1;top:0;left:50%;transform:translateX(-50%);
+    width:var(--sunw);height:auto;
+    /* two glows: a tight one that softens the disc's contour, a wide one for haze */
+    filter:drop-shadow(0 0 calc(var(--sunw) * .035) rgba(247,186,130,.65))
+           drop-shadow(0 0 calc(var(--sunw) * .16) rgba(240,140,90,.38));
+  }
+  /* Two gulls flying out of the sunset, toward the viewer:
+     they appear tiny near the middle of the disc, grow as they approach,
+     and fade out just before "passing" the screen. */
+  .gull path{fill:#241a30;stroke:none}
+  .gull .wing{animation:flap .9s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
+  .g1{animation:approach-a 21s cubic-bezier(.45,.1,.75,.45) infinite;opacity:0}
+  .g2{animation:approach-b 26s cubic-bezier(.45,.1,.75,.45) infinite;animation-delay:-12s;opacity:0}
+  .g2 .wing{animation-duration:1.05s}
+  @keyframes flap{from{transform:scaleY(1)}to{transform:scaleY(.5)}}
+  @keyframes approach-a{
+    0%{transform:translate(97px,86px) scale(.18);opacity:0}
+    10%{opacity:.7}
+    80%{opacity:.8}
+    100%{transform:translate(42px,148px) scale(1.7);opacity:0}
+  }
+  @keyframes approach-b{
+    0%{transform:translate(108px,78px) scale(.15);opacity:0}
+    10%{opacity:.6}
+    80%{opacity:.75}
+    100%{transform:translate(158px,138px) scale(1.45);opacity:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .g1,.g2,.gull .wing{animation:none}
+    .g1,.g2{opacity:.7}
+  }
+  .hero h1{
+    position:relative;z-index:2;
+    font-size:clamp(2.6rem,8vw,4rem);font-weight:700;letter-spacing:.035em;
+    color:var(--cream);
+    text-shadow:0 2px 6px rgba(20,15,33,.75),0 6px 40px rgba(20,15,33,.9);
+  }
+  .hero .tagline{
+    position:relative;z-index:2;margin-top:12px;
+    font-size:1rem;letter-spacing:.34em;text-transform:uppercase;color:var(--cream-dim);
+    text-shadow:0 2px 10px rgba(20,15,33,.9);
+  }
+  header .bio{position:relative;z-index:2;max-width:620px;margin:30px auto 0;font-size:1.06rem;color:var(--cream)}
+  header .bio em{color:var(--gold);font-style:normal}
+  @media (max-width:480px){
+    .hero .tagline{font-size:.88rem;letter-spacing:.26em}
+    .hero .tagline .dot{display:none}
+    .hero .tagline span{display:block;line-height:1.9}
+  }
+  .horizon{max-width:520px;margin:42px auto 0;position:relative;height:14px}
+  .horizon::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--cream) 18%,var(--cream) 82%,transparent)}
+  .horizon::after{content:"";position:absolute;left:22%;right:22%;top:9px;height:2px;background:linear-gradient(90deg,transparent,var(--cream-dim) 25%,var(--cream-dim) 75%,transparent)}
+
+  /* Sections */
+  section{padding:34px 0}
+  h2{font-size:.92rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);margin-bottom:6px}
+  .lede{color:var(--muted);font-size:.95rem;margin-bottom:22px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+
+  /* Cards */
+  a.card{
+    display:flex;flex-direction:column;gap:8px;
+    background:var(--card);border:1px solid var(--card-edge);border-radius:14px;
+    padding:20px 20px 16px;color:var(--cream);
+    transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;
+  }
+  a.card:hover{transform:translateY(-2px);border-color:var(--ember);box-shadow:0 10px 30px rgba(0,0,0,.35);text-decoration:none}
+  .card h3{font-size:1.04rem;font-weight:650;line-height:1.35}
+  .card p{font-size:.9rem;color:var(--cream-dim);flex-grow:1}
+  .meta{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:.8rem}
+  .meta .where{color:var(--muted);letter-spacing:.05em}
+  .badge{padding:2px 10px;border-radius:999px;font-weight:600;letter-spacing:.03em}
+  .badge.free{background:rgba(245,199,106,.14);color:var(--gold)}
+  .badge.paid{background:rgba(217,90,120,.16);color:#f0a0b4}
+  .badge.usage{background:rgba(240,140,90,.15);color:var(--ember)}
+
+  /* From the studio */
+  .studio{margin-top:28px;border-radius:18px;overflow:hidden;position:relative;border:1px solid var(--card-edge)}
+  .studio .bg{position:absolute;inset:0;background:url(assets/og-counted-light.png) center/cover no-repeat}
+  .studio .veil{position:absolute;inset:0;background:linear-gradient(105deg,rgba(26,20,42,.93) 0%,rgba(26,20,42,.82) 55%,rgba(26,20,42,.6) 100%)}
+  .studio-inner{position:relative;display:flex;gap:36px;align-items:center;padding:40px 36px}
+  .studio-text{flex:1;min-width:0}
+  .studio-text h2{margin-bottom:2px}
+  .studio-text p{margin-top:12px;font-size:.97rem;color:var(--cream)}
+  .studio-text p em{color:var(--gold);font-style:normal}
+  a.short-card{flex:0 0 168px;display:block;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--card-edge);box-shadow:0 10px 30px rgba(0,0,0,.4);transition:transform .15s ease,border-color .15s ease}
+  a.short-card:hover{transform:translateY(-2px);border-color:var(--ember);text-decoration:none}
+  a.short-card img{display:block;width:100%;height:auto}
+  a.short-card .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(29,23,48,.72);border:1.5px solid var(--cream);display:flex;align-items:center;justify-content:center}
+  a.short-card .play::after{content:"";display:block;margin-left:4px;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent var(--cream)}
+  a.short-card .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;font-size:.72rem;letter-spacing:.05em;text-align:center;color:var(--cream);background:linear-gradient(180deg,transparent,rgba(20,15,33,.9))}
+  @media (max-width:640px){.studio-inner{flex-direction:column;padding:32px 24px}a.short-card{flex-basis:auto;width:168px}}
+  .short-embed{flex:0 0 auto;border-radius:14px;overflow:hidden;border:1px solid var(--card-edge);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+  .short-embed iframe{width:100%;height:100%;border:0;display:block}
+
+  /* Shore scene as the footer's backdrop — the sun set at the top of the page;
+     down here the lamp is already on. */
+  .shore{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .shore .beam{transform-box:fill-box;transform-origin:100% 50%;animation:sweep 16s ease-in-out infinite alternate;opacity:.5}
+  .shore .lamp-glow{animation:lamppulse 5s ease-in-out infinite alternate}
+  @keyframes sweep{from{transform:rotate(7deg)}to{transform:rotate(-9deg)}}
+  @keyframes lamppulse{from{opacity:.55}to{opacity:.95}}
+  @media (prefers-reduced-motion:reduce){.shore .beam,.shore .lamp-glow{animation:none}}
+
+  /* Footer */
+  footer{position:relative;margin-top:52px;padding:48px 0 100px;overflow:hidden;text-align:center}
+  footer .wrap{position:relative;z-index:1}
+  footer .contact,footer .profiles,footer .fine{text-shadow:0 1px 10px rgba(20,15,33,.85)}
+  footer .contact{font-size:1.02rem}
+  footer .profiles{margin-top:14px;font-size:.9rem;color:var(--muted)}
+  footer .profiles a{color:var(--cream-dim);margin:0 10px}
+  footer .fine{margin-top:26px;font-size:.78rem;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<button id="lang-toggle" type="button" aria-label="Switch language">日本語</button>
+
+<header class="wrap">
+  <div class="hero">
+    <svg class="sun" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="sungrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f7d488"/>
+          <stop offset=".52" stop-color="#f08c5a"/>
+          <stop offset="1" stop-color="#d95a78"/>
+        </linearGradient>
+        <clipPath id="sunclip"><circle cx="100" cy="100" r="95"/></clipPath>
+      </defs>
+      <g clip-path="url(#sunclip)" fill="url(#sungrad)"><rect x="0" y="5.00" width="200" height="3.09"/><rect x="0" y="9.42" width="200" height="3.09"/><rect x="0" y="13.84" width="200" height="3.09"/><rect x="0" y="18.26" width="200" height="3.09"/><rect x="0" y="22.67" width="200" height="3.09"/><rect x="0" y="27.09" width="200" height="3.09"/><rect x="0" y="31.51" width="200" height="3.09"/><rect x="0" y="35.93" width="200" height="3.09"/><rect x="0" y="40.35" width="200" height="3.09"/><rect x="0" y="44.77" width="200" height="3.09"/><rect x="0" y="49.19" width="200" height="3.09"/><rect x="0" y="53.60" width="200" height="3.09"/><rect x="0" y="58.02" width="200" height="3.09"/><rect x="0" y="62.44" width="200" height="3.09"/><rect x="0" y="66.86" width="200" height="3.09"/><rect x="0" y="71.28" width="200" height="3.09"/><rect x="0" y="75.70" width="200" height="3.09"/><rect x="0" y="80.12" width="200" height="3.09"/><rect x="0" y="84.53" width="200" height="3.09"/><rect x="0" y="88.95" width="200" height="3.09"/><rect x="0" y="93.37" width="200" height="3.09"/><rect x="0" y="97.79" width="200" height="3.09"/><rect x="0" y="102.21" width="200" height="3.09"/><rect x="0" y="106.63" width="200" height="3.09"/><rect x="0" y="111.05" width="200" height="3.09"/><rect x="0" y="115.47" width="200" height="3.09"/><rect x="0" y="119.88" width="200" height="3.09"/><rect x="0" y="124.30" width="200" height="3.09"/><rect x="0" y="128.72" width="200" height="3.09"/><rect x="0" y="133.14" width="200" height="3.09"/><rect x="0" y="137.56" width="200" height="3.09"/><rect x="0" y="141.98" width="200" height="3.09"/><rect x="0" y="146.40" width="200" height="3.09"/><rect x="0" y="150.81" width="200" height="3.09"/><rect x="0" y="155.23" width="200" height="3.09"/><rect x="0" y="159.65" width="200" height="3.09"/><rect x="0" y="164.07" width="200" height="3.09"/><rect x="0" y="168.49" width="200" height="3.09"/><rect x="0" y="172.91" width="200" height="3.09"/><rect x="0" y="177.33" width="200" height="3.09"/><rect x="0" y="181.74" width="200" height="3.09"/><rect x="0" y="186.16" width="200" height="3.09"/><rect x="0" y="190.58" width="200" height="3.09"/></g>
+      <g class="gull g1" transform="translate(72,104) scale(.9)"><g transform="scale(.42)"><path class="wing" d="M0 3 C4.5 -0.5 9 -2.8 13 -1.8 C15.5 -1.2 17.5 0 18.6 0.4 C19 -1.6 21 -1.6 21.4 0.4 C22.5 0 24.5 -1.2 27 -1.8 C31 -2.8 35.5 -0.5 40 3 C35.5 1.6 31 0.8 28 1.4 C25 2 22.5 4.2 20 4.6 C17.5 4.2 15 2 12 1.4 C9 0.8 4.5 1.6 0 3 Z"/></g></g>
+      <g class="gull g2" transform="translate(120,88) scale(.6)"><g transform="scale(.42)"><path class="wing" d="M0 3 C4.5 -0.5 9 -2.8 13 -1.8 C15.5 -1.2 17.5 0 18.6 0.4 C19 -1.6 21 -1.6 21.4 0.4 C22.5 0 24.5 -1.2 27 -1.8 C31 -2.8 35.5 -0.5 40 3 C35.5 1.6 31 0.8 28 1.4 C25 2 22.5 4.2 20 4.6 C17.5 4.2 15 2 12 1.4 C9 0.8 4.5 1.6 0 3 Z"/></g></g>
+    </svg>
+    <h1>43 Sunsets</h1>
+    <p class="tagline"><span>Counted Light</span><span class="dot"> · </span><span>Careful Work</span></p>
+  </div>
+  <p class="bio" data-i18n="bio">43 Sunsets builds small, production-grade automations for real businesses. Every template ships with error handling, idempotency guards, and clear setup notes — because <em>“it runs”</em> and <em>“it’s ready”</em> are different things.</p>
+  <div class="horizon" aria-hidden="true"></div>
+</header>
+
+<main class="wrap">
+
+  <section id="templates">
+    <h2 data-i18n="templates_h">Free n8n templates</h2>
+    <p class="lede" data-i18n="templates_lede">Published in the official n8n template library. Import, connect your credentials, done — setup notes live right on the canvas.</p>
+    <div class="grid">
+      <a class="card" href="https://n8n.io/workflows/16889" target="_blank" rel="noopener">
+        <h3>Google Reviews — AI Reply Drafts</h3>
+        <p data-i18n="f1">Watches Gmail for Google's review alerts and drafts a reply that follows Google's moderation rules. Nothing is ever posted automatically — you approve every word.</p>
+        <div class="meta"><span class="where">n8n library</span><span class="badge free" data-i18n="free">Free</span></div>
+      </a>
+      <a class="card" href="https://n8n.io/workflows/16975" target="_blank" rel="noopener">
+        <h3>Quote Follow-up Sequences</h3>
+        <p data-i18n="f2">Follow up on quotes at day 3, 7 and 14 with Gmail + Sheets. Sequence state lives in your sheet, so re-runs and crashes never double-send.</p>
+        <div class="meta"><span class="where">n8n library</span><span class="badge free" data-i18n="free">Free</span></div>
+      </a>
+      <a class="card" href="https://n8n.io/workflows/16983" target="_blank" rel="noopener">
+        <h3>Receipt → Expense Ledger</h3>
+        <p data-i18n="f3">Reads receipts from your inbox — PDFs and photos, via AI extraction — into a clean Google Sheets ledger, with a processed-flag guard so no email is ever booked twice. Monthly summary included.</p>
+        <div class="meta"><span class="where">n8n library</span><span class="badge free" data-i18n="free">Free</span></div>
+      </a>
+      <a class="card" href="https://n8n.io/workflows/17059" target="_blank" rel="noopener">
+        <h3>Google Review Request Emails</h3>
+        <p data-i18n="f4b">Asks happy customers for a review two days after the job is done — plus one polite reminder, never more. Honest notes on the canvas about what to expect.</p>
+        <div class="meta"><span class="where">n8n library</span><span class="badge free" data-i18n="free">Free</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 data-i18n="skills_h">AI agent skills</h2>
+    <p class="lede" data-i18n="skills_lede">Skills your AI agent can install and run — sold on Agensi.</p>
+    <div class="grid">
+      <a class="card" href="https://www.agensi.io/skills/n8n-production-readiness-auditor" target="_blank" rel="noopener">
+        <h3>n8n Production-Readiness Auditor</h3>
+        <p data-i18n="s1">Audits an n8n workflow before you trust it with real work: error handling, idempotency, credential hygiene and more — with a prioritized fix list.</p>
+        <div class="meta"><span class="where">Agensi</span><span class="badge paid">$12</span></div>
+      </a>
+      <a class="card" href="https://www.agensi.io/skills/api-breaking-change-detector" target="_blank" rel="noopener">
+        <h3>API Breaking-Change Detector</h3>
+        <p data-i18n="s2">Compares API spec versions and flags breaking changes before they break you — removed endpoints, changed types, tightened auth.</p>
+        <div class="meta"><span class="where">Agensi</span><span class="badge paid">$12</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="more">
+    <h2 data-i18n="more_h">Tools &amp; guides</h2>
+    <p class="lede" data-i18n="more_lede">Same philosophy, other shelves.</p>
+    <div class="grid">
+      <a class="card" href="https://apify.com/43sunsets/ai-visibility-site-audit" target="_blank" rel="noopener">
+        <h3>GEO / AI-Visibility Site Audit</h3>
+        <p data-i18n="a1">Audits how visible your own site is to AI assistants — robots.txt rules for 13 AI crawlers, llms.txt, structured data, meta hygiene — and returns a scored report plus a ready-to-edit llms.txt draft.</p>
+        <div class="meta"><span class="where">Apify Store</span><span class="badge usage" data-i18n="usage">Pay per report</span></div>
+      </a>
+      <a class="card" href="https://the43sunsets.etsy.com" target="_blank" rel="noopener">
+        <h3>n8n Production-Readiness Checklist (PDF)</h3>
+        <p data-i18n="e1">The same 10-point audit as our agent skill, as a printable 2-page PDF — 30 concrete checkboxes plus a scoring guide, in plain language.</p>
+        <div class="meta"><span class="where">Etsy</span><span class="badge paid">$3.99</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="studio" class="studio">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="veil" aria-hidden="true"></div>
+    <div class="studio-inner">
+      <div class="studio-text">
+        <h2 data-i18n="studio_h">From the studio</h2>
+        <p data-i18n="studio_p1">43 Sunsets is a one-person studio near Chicago. I’ve spent twenty years building sales and operations systems between Japan and the United States — long enough to learn that <em>“it runs”</em> and <em>“it’s ready”</em> are very different things, and that the gap between them is exactly where small businesses get hurt.</p>
+        <p data-i18n="studio_p2">So everything on this page ships the unglamorous parts: error handling, idempotency guards, plain-language setup notes, and honest lines about what a tool <em>won’t</em> do.</p>
+        <p data-i18n="studio_p3">The name is a small ritual. On the hard days, you watch the sunset — and you count. Careful, deliberate, one at a time. That’s also how these tools are made.</p>
+      </div>
+      <a class="short-card" id="latest-short" href="https://www.youtube.com/@the43sunsets/shorts" target="_blank" rel="noopener" aria-label="Watch the latest 43 Sunsets short">
+        <img src="assets/short-thumb.jpg" alt="Still from a 43 Sunsets short — a shopkeeper closing up at sunset" width="270" height="480" loading="lazy">
+        <span class="play" aria-hidden="true"></span>
+        <span class="cap" data-i18n="short_cap">Latest from the studio</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+<svg class="shore" viewBox="0 0 960 170" preserveAspectRatio="xMaxYMax slice" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="beamgrad" gradientUnits="userSpaceOnUse" x1="705" y1="51" x2="455" y2="51">
+      <stop offset="0" stop-color="#f5c76a" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#f5c76a" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#f5c76a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sealine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5ecd7" stop-opacity="0"/>
+      <stop offset=".18" stop-color="#f5ecd7" stop-opacity=".85"/>
+      <stop offset=".82" stop-color="#f5ecd7" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#f5ecd7" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="afterglow" gradientUnits="userSpaceOnUse" cx="390" cy="127" r="330"
+                    gradientTransform="matrix(1 0 0 .26 0 94)">
+      <stop offset="0" stop-color="#f0985c" stop-opacity=".34"/>
+      <stop offset=".45" stop-color="#e0748a" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#e0748a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowwater" gradientUnits="userSpaceOnUse" cx="390" cy="132" r="250"
+                    gradientTransform="matrix(1 0 0 .14 0 113.5)">
+      <stop offset="0" stop-color="#f0985c" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#f0985c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="seatone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b98ba0" stop-opacity=".14"/>
+      <stop offset=".5" stop-color="#7a5a86" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#7a5a86" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- stars -->
+  <circle cx="120" cy="38" r="1.2" fill="#f5ecd7" opacity=".45"/>
+  <circle cx="238" cy="72" r="1" fill="#f5ecd7" opacity=".3"/>
+  <circle cx="356" cy="30" r="1.4" fill="#f5ecd7" opacity=".5"/>
+  <circle cx="520" cy="88" r="1" fill="#f5ecd7" opacity=".28"/>
+  <circle cx="600" cy="42" r="1.2" fill="#f5ecd7" opacity=".4"/>
+  <circle cx="806" cy="34" r="1.3" fill="#f5ecd7" opacity=".48"/>
+  <circle cx="882" cy="78" r="1" fill="#f5ecd7" opacity=".3"/>
+  <circle cx="60" cy="92" r="1" fill="#f5ecd7" opacity=".26"/>
+  <!-- afterglow: the sun set a moment ago, low over the water -->
+  <rect x="30" y="40" width="720" height="87" fill="url(#afterglow)"/>
+  <!-- beam (pivots at the lamp) -->
+  <polygon class="beam" points="705,51 462,30 462,72" fill="url(#beamgrad)"/>
+  <!-- sea line -->
+  <rect x="0" y="127" width="960" height="2" fill="url(#sealine)"/>
+  <!-- the water -->
+  <rect x="0" y="129" width="960" height="41" fill="url(#seatone)"/>
+  <rect x="120" y="129" width="540" height="34" fill="url(#glowwater)"/>
+  <g fill="#f5c76a">
+    <rect x="352" y="134" width="52" height="1.8" rx=".9" opacity=".26"/>
+    <rect x="386" y="139" width="30" height="1.6" rx=".8" opacity=".2"/>
+    <rect x="330" y="145" width="42" height="1.6" rx=".8" opacity=".15"/>
+    <rect x="402" y="151" width="24" height="1.4" rx=".7" opacity=".12"/>
+    <rect x="356" y="158" width="34" height="1.4" rx=".7" opacity=".08"/>
+    <rect x="440" y="136" width="18" height="1.5" rx=".7" opacity=".14"/>
+    <rect x="300" y="137" width="16" height="1.5" rx=".7" opacity=".12"/>
+  </g>
+  <g fill="#f5ecd7">
+    <rect x="96" y="138" width="22" height="1.4" rx=".7" opacity=".08"/>
+    <rect x="170" y="149" width="16" height="1.3" rx=".6" opacity=".06"/>
+    <rect x="540" y="143" width="20" height="1.4" rx=".7" opacity=".07"/>
+    <rect x="836" y="140" width="24" height="1.4" rx=".7" opacity=".08"/>
+    <rect x="884" y="152" width="14" height="1.3" rx=".6" opacity=".06"/>
+    <rect x="608" y="155" width="16" height="1.3" rx=".6" opacity=".05"/>
+  </g>
+  <!-- rocks -->
+  <path d="M676 128 Q690 114 705 116 Q722 114 734 128 Z" fill="#1b1428"/>
+  <!-- tower -->
+  <path d="M690 122 L695 61 L715 61 L720 122 Z" fill="#1b1428"/>
+  <rect x="691" y="58" width="28" height="3" rx="1.5" fill="#1b1428"/>
+  <!-- lamp room -->
+  <rect x="697" y="44" width="16" height="14" fill="#1b1428"/>
+  <rect class="lamp-glow" x="700" y="46.5" width="10" height="9" rx="1.5" fill="#f5c76a"/>
+  <path d="M695 44 L705 31 L715 44 Z" fill="#1b1428"/>
+  <!-- reflection on the water -->
+  <rect x="699" y="134" width="12" height="2" rx="1" fill="#f5c76a" opacity=".32"/>
+  <rect x="702" y="141" width="8" height="1.8" rx=".9" fill="#f5c76a" opacity=".2"/>
+  <rect x="704" y="148" width="5" height="1.6" rx=".8" fill="#f5c76a" opacity=".12"/>
+</svg>
+  <div class="wrap">
+    <p class="contact"><span data-i18n="contact">Say hello — </span><a href="mailto:hello@43sunsets.com">hello@43sunsets.com</a></p>
+    <p class="profiles">
+      <a href="https://n8n.io/creators/the43sunsets" target="_blank" rel="noopener">n8n</a>·
+      <a href="https://apify.com/43sunsets" target="_blank" rel="noopener">Apify</a>·
+      <a href="https://the43sunsets.etsy.com" target="_blank" rel="noopener">Etsy</a>·
+      <a href="https://x.com/the43sunsets" target="_blank" rel="noopener">X</a>
+    </p>
+    <p class="fine">© 2026 43 Sunsets. Counted light, careful work.</p>
+  </div>
+</footer>
+
+<script>
+/* Click-to-play: nothing loads from YouTube until the visitor asks for it.
+   The uploads playlist (UU…) always starts at the channel's newest public video,
+   so this card stays current without redeploying the site. */
+document.getElementById('latest-short').addEventListener('click', function (e) {
+  e.preventDefault();
+  var rect = this.getBoundingClientRect();
+  var box = document.createElement('div');
+  box.className = 'short-embed';
+  box.style.width = rect.width + 'px';
+  box.style.height = rect.height + 'px';
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/videoseries?list=UUwLWO6tlQT7QX_LOqIU-c8A&autoplay=1';
+  f.title = '43 Sunsets — latest short';
+  f.allow = 'autoplay; encrypted-media; picture-in-picture';
+  f.setAttribute('allowfullscreen', '');
+  box.appendChild(f);
+  this.replaceWith(box);
+});
+
+/* Language toggle — English is the default; Japanese lives in this dictionary.
+   English defaults are captured from the DOM on first switch, so copy is
+   maintained in one place (the markup). */
+(function () {
+  var ja = {
+    bio: '43 Sunsets は、小さな会社の実務にそのまま使える「本番品質」の自動化をつくるスタジオです。どのテンプレートにも、エラー処理・二重送信の防止・迷わないセットアップ手順を最初から組み込んであります。<em>「とりあえず動く」</em>と<em>「安心して任せられる」</em>は、別物だと知っているから。',
+    templates_h: '無料 n8n テンプレート',
+    templates_lede: 'n8n 公式テンプレートライブラリで公開中。インポートして、認証情報をつなげば完了 — セットアップ手順はキャンバス上に書いてあります。',
+    f1: 'Google からのレビュー通知メールを見張り、Google のモデレーション規則に沿った返信文を AI が下書き。自動投稿は一切なし — 一語一句、あなたが承認します。',
+    f2: '見積もりの3日後・7日後・14日後に Gmail + Sheets でフォローアップ。進行状態はシート側に記録されるので、再実行やクラッシュでも二重送信は起きません。',
+    f3: '受信箱のレシート(PDF も写真も AI で抽出)を Google Sheets の台帳へ。処理済みフラグ付きで、同じメールが二度記帳されることはありません。月次サマリー付き。',
+    f4b: '作業完了の2日後、満足したお客様にレビュー依頼メールを送信 — 丁寧なリマインドは1回だけ、それ以上は送りません。注意事項もキャンバスに正直に記載。',
+    skills_h: 'AI エージェントスキル',
+    skills_lede: 'AI エージェントがインストールして実行できるスキル — Agensi で販売中。',
+    s1: '実運用を任せる前に n8n ワークフローを監査: エラー処理・冪等性・認証情報の衛生など — 優先度つきの修正リスト付き。',
+    s2: 'API 仕様のバージョン間を比較し、壊れる前に破壊的変更を検出 — 削除されたエンドポイント、型の変更、認証の厳格化。',
+    more_h: 'ツールとガイド',
+    more_lede: 'つくる姿勢はそのままに、別の棚にも並べています。',
+    a1: 'あなたのサイトが AI アシスタントからどう見えるかを監査 — 13 の AI クローラーに対する robots.txt、llms.txt、構造化データ、メタ情報 — スコア付きレポートと、そのまま編集して使える llms.txt ドラフトを出力。',
+    e1: 'エージェントスキルと同じ 10 項目の監査を、印刷できる 2 ページの PDF に — 30 の具体的なチェックボックスと採点ガイド付き、平易な言葉で。',
+    studio_h: 'スタジオから',
+    studio_p1: '43 Sunsets は、シカゴ近郊でひとりで営んでいる小さなスタジオです。日本とアメリカを行き来しながら、20 年間、営業とオペレーションの仕組みづくりに携わってきました。その中で身にしみたのは、<em>「とりあえず動く」</em>と<em>「安心して任せられる」</em>のあいだには大きな隔たりがあること — そして小さなビジネスほど、その隙間で痛い思いをするということでした。',
+    studio_p2: 'だからこのページに並ぶものはすべて、目立たない部分こそ丁寧につくってあります。エラー処理、二重実行の防止、平易な言葉で書いたセットアップ手順。そして「この道具に<em>できない</em>こと」も、正直に書き添えてあります。',
+    studio_p3: '屋号には、ささやかな習慣を込めました。うまくいかない日は、夕日を眺めて — ひとつ、またひとつと数える。丁寧に、ひとつずつ。道具づくりも、同じ心持ちでやっています。',
+    short_cap: 'スタジオの最新ショート',
+    contact: 'お気軽にどうぞ — ',
+    free: '無料',
+    usage: 'レポートごと課金'
+  };
+  var en = {};
+  var btn = document.getElementById('lang-toggle');
+  var nodes = document.querySelectorAll('[data-i18n]');
+  nodes.forEach(function (el) { en[el.getAttribute('data-i18n')] = el.innerHTML; });
+  function apply(lang) {
+    var dict = lang === 'ja' ? ja : en;
+    nodes.forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    document.documentElement.lang = lang;
+    btn.textContent = lang === 'ja' ? 'EN' : '日本語';
+    try { localStorage.setItem('lang', lang); } catch (err) {}
+  }
+  btn.addEventListener('click', function () {
+    apply(document.documentElement.lang === 'ja' ? 'en' : 'ja');
+  });
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (err) {}
+  if (saved === 'ja') apply('ja');
+})();
+</script>
+
+</body>
+</html>
