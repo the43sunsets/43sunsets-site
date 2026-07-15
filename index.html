@@ -127,13 +127,16 @@
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
 
   /* Cards */
-  a.card{
+  a.card,div.card{
     display:flex;flex-direction:column;gap:8px;
     background:var(--card);border:1px solid var(--card-edge);border-radius:14px;
     padding:20px 20px 16px;color:var(--cream);
     transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;
   }
-  a.card:hover{transform:translateY(-2px);border-color:var(--ember);box-shadow:0 10px 30px rgba(0,0,0,.35);text-decoration:none}
+  a.card:hover,div.card:hover{transform:translateY(-2px);border-color:var(--ember);box-shadow:0 10px 30px rgba(0,0,0,.35);text-decoration:none}
+  .card .card-main{display:flex;flex-direction:column;gap:8px;color:var(--cream);flex-grow:1}
+  .card .card-main:hover{text-decoration:none}
+  .lite-link{font-size:.8rem;color:var(--gold);margin-top:2px}
   .card h3{font-size:1.04rem;font-weight:650;line-height:1.35}
   .card p{font-size:.9rem;color:var(--cream-dim);flex-grow:1}
   .meta{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:.8rem}
@@ -242,11 +245,14 @@
     <h2 data-i18n="skills_h">AI agent skills</h2>
     <p class="lede" data-i18n="skills_lede">Skills your AI agent can install and run — sold on Agensi.</p>
     <div class="grid">
-      <a class="card" href="https://www.agensi.io/skills/n8n-production-readiness-auditor" target="_blank" rel="noopener">
-        <h3>n8n Production-Readiness Auditor</h3>
-        <p data-i18n="s1">Audits an n8n workflow before you trust it with real work: error handling, idempotency, credential hygiene and more — with a prioritized fix list.</p>
-        <div class="meta"><span class="where">Agensi</span><span class="badge paid">$12</span></div>
-      </a>
+      <div class="card">
+        <a class="card-main" href="https://www.agensi.io/skills/n8n-production-readiness-auditor" target="_blank" rel="noopener">
+          <h3>n8n Production-Readiness Auditor</h3>
+          <p data-i18n="s1">Audits an n8n workflow before you trust it with real work: error handling, idempotency, credential hygiene and more — with a prioritized fix list.</p>
+          <div class="meta"><span class="where">Agensi</span><span class="badge paid">$12</span></div>
+        </a>
+        <a class="lite-link" href="https://skills.sh/the43sunsets/n8n-workflow-quickcheck" target="_blank" rel="noopener" data-i18n="s1_lite">Free lite version — quick 3-check pass →</a>
+      </div>
       <a class="card" href="https://www.agensi.io/skills/api-breaking-change-detector" target="_blank" rel="noopener">
         <h3>API Breaking-Change Detector</h3>
         <p data-i18n="s2">Compares API spec versions and flags breaking changes before they break you — removed endpoints, changed types, tightened auth.</p>
@@ -434,6 +440,7 @@ document.getElementById('hello-link').addEventListener('click', function () {
     skills_h: 'AI エージェントスキル',
     skills_lede: 'AI エージェントがインストールして実行できるスキル — Agensi で販売中。',
     s1: '実運用を任せる前に n8n ワークフローを監査: エラー処理・冪等性・認証情報の衛生など — 優先度つきの修正リスト付き。',
+    s1_lite: '無料ライト版 — 3項目のクイックチェック →',
     s2: 'API 仕様のバージョン間を比較し、壊れる前に破壊的変更を検出 — 削除されたエンドポイント、型の変更、認証の厳格化。',
     more_h: 'ツールとガイド',
     more_lede: 'つくる姿勢はそのままに、別の棚にも並べています。',
