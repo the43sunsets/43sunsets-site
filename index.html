@@ -214,6 +214,18 @@
 
 <main class="wrap">
 
+  <section id="pro">
+    <h2 data-i18n="pro_h">Pro pack</h2>
+    <p class="lede" data-i18n="pro_lede">The full quote-to-cash chase, run from one Google Sheet — follow-ups that stop when they answer, invoices raised the moment you win, reminders until the money lands.</p>
+    <div class="grid">
+      <a class="card" href="https://43sunsets.gumroad.com/l/quote-to-cash-followup-pro" target="_blank" rel="noopener">
+        <h3>Quote-to-Cash Follow-up Pro</h3>
+        <p data-i18n="p3">Two n8n workflows + a fully documented spreadsheet template. Up to five follow-up touches that stop the moment a customer replies to your latest email, automatic invoice rows for won quotes, and polite dunning counted from the due date. Optional AI personalisation — runs 100% without an AI key.</p>
+        <div class="meta"><span class="where">Gumroad</span><span class="badge paid">$19</span></div>
+      </a>
+    </div>
+  </section>
+
   <section id="templates">
     <h2 data-i18n="templates_h">Free n8n templates</h2>
     <p class="lede" data-i18n="templates_lede">Published in the official n8n template library. Import, connect your credentials, done — setup notes live right on the canvas.</p>
@@ -223,11 +235,14 @@
         <p data-i18n="f1">Watches Gmail for Google's review alerts and drafts a reply that follows Google's moderation rules. Nothing is ever posted automatically — you approve every word.</p>
         <div class="meta"><span class="where">n8n library</span><span class="badge free" data-i18n="free">Free</span></div>
       </a>
-      <a class="card" href="https://n8n.io/workflows/16975" target="_blank" rel="noopener">
-        <h3>Quote Follow-up Sequences</h3>
-        <p data-i18n="f2">Follow up on quotes at day 3, 7 and 14 with Gmail + Sheets. Sequence state lives in your sheet, so re-runs and crashes never double-send.</p>
-        <div class="meta"><span class="where">n8n library</span><span class="badge free" data-i18n="free">Free</span></div>
-      </a>
+      <div class="card">
+        <a class="card-main" href="https://n8n.io/workflows/16975" target="_blank" rel="noopener">
+          <h3>Quote Follow-up Sequences</h3>
+          <p data-i18n="f2">Follow up on quotes at day 3, 7 and 14 with Gmail + Sheets. Sequence state lives in your sheet, so re-runs and crashes never double-send.</p>
+          <div class="meta"><span class="where">n8n library</span><span class="badge free" data-i18n="free">Free</span></div>
+        </a>
+        <a class="lite-link" href="https://43sunsets.gumroad.com/l/quote-to-cash-followup-pro" target="_blank" rel="noopener" data-i18n="f2_pro">Pro version — stops on reply, raises invoices, chases payment →</a>
+      </div>
       <a class="card" href="https://n8n.io/workflows/16983" target="_blank" rel="noopener">
         <h3>Receipt → Expense Ledger</h3>
         <p data-i18n="f3">Reads receipts from your inbox — PDFs and photos, via AI extraction — into a clean Google Sheets ledger, with a processed-flag guard so no email is ever booked twice. Monthly summary included.</p>
@@ -459,7 +474,11 @@ document.getElementById('hello-link').addEventListener('click', function () {
     short_cap: 'スタジオの最新ショート',
     contact: 'お気軽にどうぞ — ',
     free: '無料',
-    usage: 'レポートごと課金'
+    usage: 'レポートごと課金',
+    pro_h: '有料パック',
+    pro_lede: '見積もりから入金までの追いかけを、1枚の Google シートでまるごと — 返事が来たら止まり、受注したら請求行を起こし、入金までリマインドします。',
+    p3: 'n8n ワークフロー2本+全列に説明付きのスプレッドシートテンプレート。最大5段のフォローアップは、最新メールへの返信で自動停止。受注した見積もりは請求行に自動変換され、支払期日からの丁寧な督促まで面倒を見ます。AI パーソナライズは任意 — AI キーなしで 100% 動きます。',
+    f2_pro: 'プロ版 — 返信で自動停止・請求化・入金まで督促 →'
   };
   var en = {};
   var btn = document.getElementById('lang-toggle');
