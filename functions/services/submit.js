@@ -25,16 +25,20 @@ export async function onRequestPost({ request, env }) {
 
   const area = String(form.get("area") || "other").slice(0, 32);
   const job = String(form.get("job") || "").trim().slice(0, MAX.job);
-  const site = String(form.get("url") || "").trim().slice(0, MAX.url);
+  const siteRaw = String(form.get("url") || "").trim().slice(0, MAX.url);
   const email = String(form.get("email") || "").trim().slice(0, MAX.email);
-  const lang = String(form.get("lang") || "en").slice(0, 5);
+  const lang = String(form.get("lang") || "en").slice(0, 5) === "ja" ? "ja" : "en";
   const jobRefRaw = String(form.get("job_ref") || "").slice(0, 64);
   const jobRef = /^[a-z0-9-]{0,64}$/.test(jobRefRaw) ? jobRefRaw : "";
 
-  if (!jobRef && job.length < 20) return bad("Please describe the job in a few sentences.");
-  if (jobRef === "ai-visibility-audit" && !site) return bad("Please enter your website address.");
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return bad("Please give a valid email address.");
-  if (!ALLOWED_AREA.has(area)) return bad("Unknown area.");
+  if (!jobRef && job.length < 20) return bad(lang, "job");
+  // Website address: required and must be a real http(s) host for the audit (normalised, e.g. "example.com" → "https://example.com/");
+  // optional free text on the general form ("a website or example").
+  const normalized = normalizeSite(siteRaw);
+  if (jobRef === "ai-visibility-audit" && !normalized) return bad(lang, "url");
+  const site = normalized || siteRaw;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return bad(lang, "email");
+  if (!ALLOWED_AREA.has(area)) return bad(lang, "area");
 
   // Fail loudly if nothing can record the request (misconfigured deployment) — never pretend success.
   if (!env.BEACON_REQUESTS && !env.REQUEST_MAIL) {
@@ -81,8 +85,47 @@ export async function onRequestPost({ request, env }) {
 function redirect(url, path) {
   return new Response(null, { status: 303, headers: { Location: new URL(path, url.origin).toString() } });
 }
-function bad(msg) {
-  return new Response(msg, { status: 400, headers: { "content-type": "text/plain; charset=utf-8" } });
+// Accepts "example.com", "www.example.com/page", "https://example.com"; rejects anything without a dotted hostname
+// or with a non-http(s) scheme. Returns the normalised URL string, or "" if unusable.
+function normalizeSite(raw) {
+  if (!raw) return "";
+  let s = raw.replace(/\s+/g, "");
+  if (!/^[a-z][a-z0-9+.-]*:\/\//i.test(s)) s = "https://" + s;
+  let u;
+  try { u = new URL(s); } catch { return ""; }
+  if (u.protocol !== "https:" && u.protocol !== "http:") return "";
+  if (u.username || u.password) return "";
+  const host = u.hostname.toLowerCase();
+  if (!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(host) || host === "localhost") return "";
+  return u.toString();
+}
+
+const MSG = {
+  en: {
+    title: "Something is missing",
+    job: "Please describe the job in a few sentences (at least 20 characters).",
+    url: "Please enter your website address, e.g. example.com.",
+    email: "Please give a valid email address so we can reply.",
+    area: "Please choose one of the listed areas.",
+    back: "← Go back and fix it",
+    mail: "If the form keeps failing, email hello@43sunsets.com instead."
+  },
+  ja: {
+    title: "入力内容をご確認ください",
+    job: "仕事の内容を数文で(20文字以上)ご記入ください。",
+    url: "サイトのアドレスをご記入ください(例: example.com)。",
+    email: "返信先のメールアドレスの形式をご確認ください。",
+    area: "一覧にある分野からお選びください。",
+    back: "← 戻って修正する",
+    mail: "うまく送れない場合は hello@43sunsets.com へ直接メールをお送りください。"
+  }
+};
+function bad(lang, key) {
+  const m = MSG[lang] || MSG.en;
+  const html = `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>${m.title} — 43 Sunsets</title>
+<style>html{background:#fbfaf7;color:#1c1c24;color-scheme:light}body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;max-width:36rem;margin:12vh auto;padding:0 1.25rem;line-height:1.6}h1{font-size:1.35rem}a{color:#0b5fff}p.small{color:#555;font-size:.9rem}</style></head>
+<body><h1>${m.title}</h1><p>${m[key] || m.job}</p><p><a href="javascript:history.back()">${m.back}</a></p><p class="small">${m.mail}</p></body></html>`;
+  return new Response(html, { status: 400, headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
 }
 function cryptoId() {
   const b = new Uint8Array(12); crypto.getRandomValues(b);
