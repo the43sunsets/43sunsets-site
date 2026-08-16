@@ -1,0 +1,59 @@
+/* 43 Sunsets Services — shared styles for the "use it" side of the site (Beacon).
+   Same palette as the root site; separate header so the two faces stay distinct. */
+:root{--night:#241d33;--night-2:#2e2542;--cream:#f5ecd7;--cream-dim:#cfc4b4;--gold:#f5c76a;--ember:#f08c5a;--rose:#d95a78;--card:#2c2340;--card-edge:#453757;--muted:#9d92ab}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:linear-gradient(180deg,#1d1730 0%,var(--night) 30%,var(--night-2) 70%,#382a48 100%);color:var(--cream);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+#lang-toggle{position:fixed;top:14px;right:16px;z-index:20;background:rgba(36,29,51,.78);border:1px solid var(--card-edge);border-radius:999px;color:var(--cream-dim);font-size:.82rem;font-weight:600;letter-spacing:.06em;padding:7px 16px;cursor:pointer;backdrop-filter:blur(6px)}
+#lang-toggle:hover{color:var(--gold);border-color:var(--ember)}
+.bar{border-bottom:1px solid var(--card-edge);background:rgba(29,23,48,.6);backdrop-filter:blur(6px)}
+.barin{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--cream);font-weight:700}
+.brand img{width:26px;height:26px}.brand span{color:var(--muted);font-weight:500}
+.bar nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem;padding-right:96px}
+.bar nav a{color:var(--cream-dim)}.bar nav a:hover{color:var(--gold);text-decoration:none}.bar nav a.dim{color:var(--muted)}
+.hero{padding:56px 0 28px}
+h1{font-size:clamp(2rem,5.5vw,3rem);line-height:1.15;font-weight:700}
+.lede{color:var(--cream-dim);font-size:1.1rem;max-width:680px;margin-top:16px}
+.lede.small{font-size:.98rem;margin-top:6px;margin-bottom:8px}
+.ctas{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+.cta{display:inline-block;background:var(--gold);color:#241d33;font-weight:700;padding:11px 20px;border-radius:999px}
+.cta:hover{text-decoration:none;background:#ffd98a}
+.cta.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.cta.ghost:hover{background:rgba(245,199,106,.12)}
+section{padding:34px 0}
+h2{font-size:1.35rem;margin-bottom:8px}
+h3.cat{font-size:.85rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);margin:26px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+a.card,div.card{display:flex;flex-direction:column;gap:8px;background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:20px 20px 16px;color:var(--cream);transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+a.card:hover{transform:translateY(-2px);border-color:var(--ember);box-shadow:0 10px 30px rgba(0,0,0,.35);text-decoration:none}
+a.card.empty{border-style:dashed;background:rgba(44,35,64,.55)}
+.card h4{font-size:1.06rem;font-weight:650;line-height:1.35}
+.card p{font-size:.92rem;color:var(--cream-dim);flex-grow:1}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:.82rem;color:var(--muted)}
+.badge{padding:2px 10px;border-radius:999px;font-weight:600;background:rgba(245,199,106,.14);color:var(--gold)}
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:12px}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:16px 18px 14px;color:var(--cream-dim);font-size:.95rem}
+.steps li::before{content:counter(s);display:inline-block;width:26px;height:26px;border-radius:50%;background:var(--ember);color:#241d33;font-weight:700;text-align:center;line-height:26px;margin-bottom:8px}
+.steps strong{display:block;color:var(--cream);margin-bottom:4px}
+.fine{color:var(--muted);font-size:.88rem;margin-top:10px}
+.box{background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:18px 20px;margin-top:12px}
+table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.93rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--card-edge);vertical-align:top}
+th{color:var(--cream-dim);font-weight:600}
+details{margin:8px 0;background:var(--card);border:1px solid var(--card-edge);border-radius:10px;padding:10px 14px}
+summary{cursor:pointer;font-weight:600}details p{margin-top:8px;color:var(--cream-dim)}
+form{display:grid;gap:14px;margin-top:14px;max-width:640px}
+label{display:block;font-weight:600;font-size:.95rem}
+label small{display:block;font-weight:400;color:var(--muted);margin-top:2px}
+input[type=text],input[type=url],input[type=email],select,textarea{width:100%;margin-top:6px;background:#1a1426;border:1px solid var(--card-edge);border-radius:10px;color:var(--cream);padding:11px 12px;font:inherit}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ember)}
+button.cta{border:0;cursor:pointer;font:inherit;font-weight:700}
+.note{color:var(--muted);font-size:.86rem}
+.foot{margin-top:56px;padding-top:18px;padding-bottom:48px;border-top:1px solid var(--card-edge);color:var(--muted);font-size:.85rem}
+.status{background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:22px 24px;margin-top:20px}
+.status .phase{font-weight:700;color:var(--gold)}
+@media (max-width:600px){.bar nav{padding-right:0;gap:12px}.hero{padding-top:36px}}

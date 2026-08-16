@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Visibility Audit — 43sunsets.com</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.55;color:#1a1a2e;max-width:920px;margin:0 auto;padding:24px 16px;background:#fafafa}
+h1{font-size:1.5rem;margin-bottom:.25rem}h2{font-size:1.15rem;margin-top:2rem;border-bottom:2px solid #e0e0e8;padding-bottom:.3rem}
+table{border-collapse:collapse;width:100%;margin:.75rem 0;background:#fff}th,td{border:1px solid #e0e0e8;padding:.45rem .55rem;text-align:left;font-size:.87rem;vertical-align:top}th{background:#f0f0f5}
+.scores{display:flex;gap:1.5rem;flex-wrap:wrap;margin:.5rem 0}.scores div{background:#fff;border:1px solid #e0e0e8;border-radius:8px;padding:.7rem 1.1rem}.scores .n{font-size:1.9rem;font-weight:700}.scores .l{font-size:.78rem;color:#6c7590;max-width:15rem}
+.box{background:#fff;border:1px solid #e0e0e8;border-left:4px solid #6c7590;border-radius:6px;padding:.9rem 1rem;margin:1rem 0;font-size:.95rem}
+.fix{background:#fff;border:1px solid #e0e0e8;border-radius:6px;padding:1rem;margin:1rem 0}
+.fix h3{margin:0 0 .5rem;font-size:1rem}.pri{display:inline-block;font-size:.75rem;font-weight:700;padding:.1rem .5rem;border-radius:9px;margin-right:.5rem;vertical-align:1px}
+.pri.HIGH{background:#fde8e8;color:#b91c1c}.pri.MEDIUM{background:#fef3d9;color:#92600a}.pri.LOW{background:#e8f2fd;color:#1d4ed8}.pri.OPTIONAL{background:#eef2f0;color:#3a6355}
+pre{background:#f4f4f8;border:1px solid #e0e0e8;border-radius:4px;padding:.7rem;overflow-x:auto;font-size:.8rem;white-space:pre-wrap;word-break:break-word}
+.meta{font-size:.85rem;color:#3a3a52}.muted{color:#6c7590;font-size:.85rem}details{margin:.5rem 0}summary{cursor:pointer}
+</style><link rel="canonical" href="https://43sunsets.com/services/ai-visibility-audit/sample/">
+</head><body>
+<div style="background:#f5c76a;color:#241d33;padding:10px 16px;font:14px/1.5 ui-sans-serif,system-ui,sans-serif;text-align:center">
+<strong>Sample report</strong> — a real check of our own website (43sunsets.com), generated 16 August 2026 with the same process you would receive. Only internal file paths were removed; findings are unedited.
+&nbsp;·&nbsp; <a href="/services/ai-visibility-audit/" style="color:#241d33;text-decoration:underline">Get one for your site</a>
+&nbsp;·&nbsp; <a href="/services/" style="color:#241d33;text-decoration:underline">43 Sunsets Services</a></div>
+
+<h1>AI Visibility Audit — 43sunsets.com</h1>
+<p class="muted">2026-08-16 19:56Z · 3 of 3 known URLs deep-inspected · robots.txt respected · recommended next check: 2026-09-15<br>Crawler registry updated 2026-08-06 (bundled snapshot); token presence checked against official pages this run (this is a presence check, not semantic verification).</p>
+<div class="scores">
+<div><span class="n">100</span>/100<div class="l">ACCESS — search &amp; retrieval crawlers allowed in (6 bots scored)</div></div>
+<div><span class="n">67%</span><div class="l">TECHNICAL PAGE READINESS — unweighted mean of 4 pass rates (uncalibrated heuristic; see table)</div></div>
+<div><span class="n">100%</span><div class="l">DEEP-INSPECTION COVERAGE — confidence: High</div></div>
+</div>
+<div class="box"><strong>What this report can and can't tell you.</strong>
+It <em>can</em> tell you, checkably: which crawlers your robots.txt lets in, which of your pages are discoverable, and what technical signals each inspected page carries — with the evidence and an acceptance test for every fix.
+It <em>cannot</em> measure how AI systems understand or cite your content, and it does not promise traffic, rankings or mentions — nobody can verify those, so we don't sell them.
+Blocking training bots can be the right business choice; this report records your current policy so it is a decision, not an accident.</div>
+<h2>Coverage — what this audit did and did not see</h2>
+<table><tr><td>Inventory sources</td><td>sitemap (1 declared in robots.txt) + link crawl + 0 owner-provided URL(s)</td></tr><tr><td>Declared in sitemaps</td><td>3</td></tr><tr><td>Known URLs (union)</td><td>3</td></tr><tr><td>Deep-inspected</td><td>3 (100%) — 3 request(s) attempted against the 60-request budget; 0 failed or non-HTML</td></tr><tr><td>Liveness-checked only</td><td>0 (alive 0 / confirmed dead 404-410 0 / access blocked 4xx 0 / server error 5xx 0 / no response 0)</td></tr><tr><td>Redirect aliases consolidated</td><td>0 known URL(s) resolved to already-inspected pages (not re-probed); 0 duplicate fetch(es) consumed request budget</td></tr><tr><td>Crawl redirects refused (robots/host guard)</td><td>0 known URL(s) — final classification, each refusal named in the robots-skipped list; not probed again</td></tr><tr><td>Not probed (robots.txt disallows this audit)</td><td>0</td></tr><tr><td>Not checked (caps)</td><td>0</td></tr><tr><td>Sitemap URLs confirmed dead (GET-confirmed 404/410 only)</td><td>0</td></tr><tr><td>Reachable pages missing from sitemap</td><td>0</td></tr><tr><td>Owner-provided pages not in sitemap</td><td>n/a</td></tr><tr><td>Confidence</td><td>High</td></tr></table>
+
+<p class="muted">Pages in no inventory above (e.g. unlinked landing pages) are invisible to this audit — and to crawlers. Provide them as additional URLs to include them; if intentionally hidden, make sure they carry noindex. Internal consistency: all internal consistency checks passed.</p>
+<h2>Who can get in today (robots.txt policy, RFC 9309 evaluation)</h2>
+<table><tr><th>Token</th><th>Operator</th><th>Type</th><th>Status</th><th>Why</th><th>Official-page token check</th></tr>
+<tr><td>GPTBot</td><td>OpenAI</td><td>Training / data-use control</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://developers.openai.com/api/docs/bots">https://developers.openai.com/api/docs/bots</a></span></td></tr>
+<tr><td>OAI-SearchBot</td><td>OpenAI</td><td>Search &amp; retrieval</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://developers.openai.com/api/docs/bots">https://developers.openai.com/api/docs/bots</a></span></td></tr>
+<tr><td>ChatGPT-User</td><td>OpenAI</td><td>User-triggered fetch</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://developers.openai.com/api/docs/bots">https://developers.openai.com/api/docs/bots</a></span></td></tr>
+<tr><td>OAI-AdsBot</td><td>OpenAI</td><td>Other</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://developers.openai.com/api/docs/bots">https://developers.openai.com/api/docs/bots</a></span></td></tr>
+<tr><td>ClaudeBot</td><td>Anthropic</td><td>Training / data-use control</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler</a></span></td></tr>
+<tr><td>Claude-User</td><td>Anthropic</td><td>User-triggered fetch</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler</a></span></td></tr>
+<tr><td>Claude-SearchBot</td><td>Anthropic</td><td>Search &amp; retrieval</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler</a></span></td></tr>
+<tr><td>PerplexityBot</td><td>Perplexity</td><td>Search &amp; retrieval</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://docs.perplexity.ai/guides/bots">https://docs.perplexity.ai/guides/bots</a></span></td></tr>
+<tr><td>Perplexity-User</td><td>Perplexity</td><td>User-triggered fetch</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://docs.perplexity.ai/guides/bots">https://docs.perplexity.ai/guides/bots</a></span></td></tr>
+<tr><td>Googlebot</td><td>Google</td><td>Search &amp; retrieval</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers">https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers</a></span></td></tr>
+<tr><td>Google-Extended</td><td>Google</td><td>Training / data-use control (control token)</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers">https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers</a></span></td></tr>
+<tr><td>CCBot</td><td>Common Crawl</td><td>Training / data-use control</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://commoncrawl.org/ccbot">https://commoncrawl.org/ccbot</a></span></td></tr>
+<tr><td>Bytespider</td><td>ByteDance</td><td>Training / data-use control</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>— no official documentation page (unverified)<br><span class="muted">HTTP — · 2026-08-16 19:56Z · no official source URL on file</span></td></tr>
+<tr><td>Amazonbot</td><td>Amazon</td><td>Training / data-use control</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://developer.amazon.com/amazonbot">https://developer.amazon.com/amazonbot</a></span></td></tr>
+<tr><td>Amzn-SearchBot</td><td>Amazon</td><td>Search &amp; retrieval</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://developer.amazon.com/amazonbot">https://developer.amazon.com/amazonbot</a></span></td></tr>
+<tr><td>Amzn-User</td><td>Amazon</td><td>User-triggered fetch</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://developer.amazon.com/amazonbot">https://developer.amazon.com/amazonbot</a></span></td></tr>
+<tr><td>Applebot</td><td>Apple</td><td>Search &amp; retrieval</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://support.apple.com/en-us/119829">https://support.apple.com/en-us/119829</a></span></td></tr>
+<tr><td>Applebot-Extended</td><td>Apple</td><td>Training / data-use control (control token)</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://support.apple.com/en-us/119829">https://support.apple.com/en-us/119829</a></span></td></tr>
+<tr><td>meta-externalagent</td><td>Meta</td><td>Training / data-use control</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ token present on official page<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://developers.facebook.com/docs/sharing/webmasters/web-crawlers">https://developers.facebook.com/docs/sharing/webmasters/web-crawlers</a></span></td></tr>
+<tr><td>anthropic-ai</td><td>Anthropic</td><td>Legacy token</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ absent from current official page (consistent with legacy status)<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler</a></span></td></tr>
+<tr><td>Claude-Web</td><td>Anthropic</td><td>Legacy token</td><td>🟢 Allowed in</td><td>all 3 known URL(s) allowed</td><td>✓ absent from current official page (consistent with legacy status)<br><span class="muted">HTTP 200 · 2026-08-16 19:56Z · source: <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler">https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler</a></span></td></tr>
+</table>
+<details><summary>Applied robots.txt rule text per bot (evidence)</summary>
+<p class="meta"><strong>GPTBot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>OAI-SearchBot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>ChatGPT-User</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>OAI-AdsBot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>ClaudeBot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Claude-User</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Claude-SearchBot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>PerplexityBot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Perplexity-User</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Googlebot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Google-Extended</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>CCBot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Bytespider</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Amazonbot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Amzn-SearchBot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Amzn-User</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Applebot</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>Applebot-Extended</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+<p class="meta"><strong>meta-externalagent</strong> (wildcard(*))</p><pre>User-agent: *
+Allow: /</pre>
+</details>
+<p class="muted">Access score counts search &amp; retrieval crawlers only; each contributes its allowed share of known URLs (ALLOWED=1, PARTIAL=allowed/(allowed+disallowed), BLOCKED/UNAVAILABLE=0). Allowing/blocking training bots is a business trade-off (protection from training vs presence in AI products) — recorded, not scored. Perplexity-User and Amzn-User officially may not honor robots.txt.</p>
+<h2>Technical page readiness (3 pages inspected)</h2>
+<table><tr><th></th><th>Check</th><th>Pass rate</th><th>Note</th></tr>
+<tr><td>🔴</td><td>Parseable JSON-LD with a declared @type</td><td>33%</td><td>syntax-level check, NOT schema.org validation; unparseable blocks count as fail</td></tr>
+<tr><td>🔴</td><td>Title &amp; meta description in range</td><td>33%</td><td>heuristic ranges, not official requirements</td></tr>
+<tr><td>🟢</td><td>Canonical present</td><td>100%</td><td>URL-consolidation signal</td></tr>
+<tr><td>🟢</td><td>Raw-HTML text not thin</td><td>100%</td><td>~50 words, CJK-aware — heuristic</td></tr>
+</table>
+<h2>Findings by URL family</h2>
+<table><tr><th>Finding</th><th>Pages</th><th>URL families (shared template suspected)</th></tr><tr><td>meta description length outside 50–160 chars (heuristic, not an official requirement)</td><td>2 (67%)</td><td>sitemap (2)</td></tr><tr><td>no parseable JSON-LD structured data (syntax-level check)</td><td>2 (67%)</td><td>sitemap (2)</td></tr></table>
+<p class="muted">"URL family" groups by sitemap section or first path segment — a shared template is suspected, not confirmed; verify in your CMS. Per-page detail: (included in the delivered report) (included in the delivered report)</p>
+<h2>Fix plan — ticket-grade, do this then re-run</h2>
+<div class="fix"><h3><span class="pri MEDIUM">MEDIUM</span>A1-FIX-01 — 2 of 3 page(s) have no parseable JSON-LD</h3>
+<p class="meta">Certainty: suspected (shared templates inferred from URL families — verify in your CMS) · Suggested owner: whoever owns the page templates · Affected: 2 pages (67%)</p>
+<p class="meta"><strong>Evidence:</strong></p><pre>URL families affected: sitemap (2)</pre>
+<p class="meta"><strong>Samples:</strong> https://43sunsets.com/skills/n8n-production-readiness-auditor/ · https://43sunsets.com/skills/api-breaking-change-detector/</p>
+<p class="meta"><strong>Requested change:</strong></p><pre>Start with the homepage: add an Organization JSON-LD to &lt;head&gt; (template below is prefilled from your own pages — EDIT it and make sure every statement matches your visible content before publishing):
+{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;Organization&quot;,
+  &quot;name&quot;: &quot;43 Sunsets — Small, production-grade automations&quot;,
+  &quot;url&quot;: &quot;https://43sunsets.com&quot;,
+  &quot;description&quot;: &quot;43 Sunsets builds small, production-grade automations for real businesses. Every template ships with error handling, idempotency guards, and clear setup notes.&quot;
+}
+Then add the matching type per family template (Product, Article, FAQPage …) — again, only stating what the visible page already says.</pre>
+<p class="meta"><strong>Acceptance test:</strong> Re-run this audit: the JSON-LD pass rate rises family by family.</p>
+<p class="meta"><strong>Risk / rollback:</strong> Structured data that contradicts visible content can be treated as spam by search engines — keep them consistent.</p></div>
+<div class="fix"><h3><span class="pri MEDIUM">MEDIUM</span>A1-FIX-02 — 2 page(s) with missing/out-of-range title or meta description</h3>
+<p class="meta">Certainty: confirmed (ranges are heuristics, not official requirements) · Suggested owner: content owner per family · Affected: 2 pages</p>
+<p class="meta"><strong>Evidence:</strong></p><pre>Families: sitemap (2) — per-page detail in the dataset</pre>
+<p class="meta"><strong>Samples:</strong> https://43sunsets.com/skills/n8n-production-readiness-auditor/ · https://43sunsets.com/skills/api-breaking-change-detector/</p>
+<p class="meta"><strong>Requested change:</strong></p><pre>Write each title as the page's one-line answer and each description as the two-sentence version; for templated families, fix the generating template.</pre>
+<p class="meta"><strong>Acceptance test:</strong> Re-run this audit: title/description flags disappear.</p>
+<p class="meta"><strong>Risk / rollback:</strong> None.</p></div>
+<h2>Appendix A: llms.txt starter draft (optional)</h2>
+<details><summary>Show draft</summary><pre># 43 Sunsets — Small, production-grade automations
+
+&gt; 43 Sunsets builds small, production-grade automations for real businesses. Every template ships with error handling, idempotency guards, and clear setup notes.
+
+## Pages
+- [43 Sunsets — Small, production-grade automations](https://43sunsets.com/): 43 Sunsets builds small, production-grade automations for real businesses. Every template ships with
+- [API Breaking-Change Detector — documentation · 43 Sunsets](https://43sunsets.com/skills/api-breaking-change-detector/): How the API Breaking-Change Detector skill works: give it two OpenAPI/Swagger spec versions, get a v
+- [n8n Production-Readiness Auditor — documentation · 43 Sunsets](https://43sunsets.com/skills/n8n-production-readiness-auditor/): How the n8n Production-Readiness Auditor skill works: what to paste, what the graded report contains
+</pre></details>
+<h2>Appendix B: discovered URL inventory</h2>
+<details><summary>First 100 of 3 known URLs (the dataset holds one row per deep-inspected page; URLs beyond this list and the probe outcomes appear in OUTPUT's counts, not row by row)</summary><pre>- https://43sunsets.com/
+- https://43sunsets.com/skills/n8n-production-readiness-auditor/
+- https://43sunsets.com/skills/api-breaking-change-detector/</pre></details>
+<h2>Method &amp; limits</h2>
+<p class="muted">Raw HTML only (no JavaScript rendering) — what many crawlers see. Sitemaps are the site's claim, never truth: every URL reported with an HTTP result was actually fetched or probed (robots-skipped, capped, and inventory-only URLs are labelled as such), and unanswered probes are "unverifiable", not "dead". robots.txt evaluated per RFC 9309 (merged groups, longest match, Allow wins ties, * and $). The official-page check is token presence, not semantic verification. Heuristic thresholds are labeled. /cdn-cgi/ excluded. Hostnames are resolved once per run, every address must be publicly routable, and connections are made to the vetted address only. The one pre-robots request is the initial GET of the URL you provided (canonical host resolution); everything after is robots-checked pre-fetch. The audit reads only the site you provided (canonical apex/www resolution disclosed above) plus allowlisted official crawler-documentation pages, following their redirects. Crawl redirects refused by the robots/host guard are classified once (named in the robots-skipped list), not probed again; crawl-failed URLs keep their liveness check. Credential screening: inputs with credential-looking query parameters are refused; stored outputs mask the values of known secret-named parameters (token, key, signature, password, …), nested URLs included; values past the safety caps (length/decode/nesting) are masked wholesale as unstorable — known names only, so treat any URL embedding credentials as exposed wherever it is linked.</p>
+</body></html>

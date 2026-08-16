@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can you do this? — 43 Sunsets Services</title>
+<meta name="description" content="Describe the job you keep doing by hand. We reply in writing with whether we can take it on, how, and for how much.">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/slat-sun-64.png">
+<link rel="canonical" href="https://43sunsets.com/services/request/">
+<meta name="robots" content="noindex,follow">
+<link rel="stylesheet" href="/services/services.css">
+</head>
+<body>
+<button id="lang-toggle" type="button" aria-label="Switch language">日本語</button>
+<header class="bar">
+  <div class="wrap barin">
+    <a class="brand" href="/services/"><img src="/assets/slat-sun-64.png" alt="">43 Sunsets <span>· Services</span></a>
+    <nav>
+      <a href="/services/#services" data-i18n="nav_services">Services</a>
+      <a href="/services/#how" data-i18n="nav_how">How it works</a>
+      <a href="/services/request/" data-i18n="nav_request">Request</a>
+      <a class="dim" href="/" data-i18n="nav_builders">For builders →</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" style="padding-bottom:8px">
+    <h1 data-i18n="h1">Can you do this?</h1>
+    <p class="lede" data-i18n="lede">Describe the job in a paragraph — the way you would explain it to a colleague. We reply in writing, usually within two business days, with whether we can take it on, how we would do it, what it would cost, and what we would need from you.</p>
+  </section>
+
+  <section>
+    <form method="POST" action="/services/submit" id="req">
+      <label><span data-i18n="l_area">Which area is this closest to?</span>
+        <select name="area" id="area">
+          <option value="marketing" data-i18n="o_marketing">Marketing</option>
+          <option value="sales" data-i18n="o_sales">Sales</option>
+          <option value="research" data-i18n="o_research">Research &amp; analysis</option>
+          <option value="other" data-i18n="o_other">Something else</option>
+        </select>
+      </label>
+      <label><span data-i18n="l_job">What is the job?</span>
+        <small data-i18n="l_job_s">What you need, how often, and what “done” looks like. Plain words are perfect.</small>
+        <textarea name="job" required minlength="20" maxlength="4000"></textarea>
+      </label>
+      <label><span data-i18n="l_url">A website or example that helps us understand it (optional)</span>
+        <input type="text" name="url" maxlength="500" placeholder="https://">
+      </label>
+      <label><span data-i18n="l_email">Where should we reply?</span>
+        <small data-i18n="l_email_s">Your email — used only to answer this request.</small>
+        <input type="email" name="email" required maxlength="200">
+      </label>
+      <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <input type="hidden" name="job_ref" id="job_ref" value="">
+      <input type="hidden" name="lang" id="lang_f" value="en">
+      <p><button class="cta" type="submit" data-i18n="send">Send</button></p>
+      <p class="note" data-i18n="fine">We keep what you send only to reply and to improve our services. <a href="/legal/">Terms &amp; privacy</a>.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>© 43 Sunsets · <a href="mailto:hello@43sunsets.com">hello@43sunsets.com</a> · <a href="/legal/" data-i18n="foot_legal">Terms &amp; privacy</a> · <a href="/services/" data-i18n="foot_all">All services</a></p>
+</footer>
+
+<script>
+window.SERVICES_JA = {
+  nav_services: 'サービス一覧', nav_how: 'ご利用の流れ', nav_request: 'ご相談', nav_builders: '自分で作りたい方はこちら →',
+  h1: 'こんな仕事も頼めますか?',
+  lede: '同僚に説明するように、やってほしい仕事を一段落でお書きください。通常2営業日以内に、対応の可否、進め方、費用、必要な情報をメールでお返事します。',
+  l_area: 'いちばん近い部門', o_marketing: 'マーケティング', o_sales: '営業', o_research: '調査・分析', o_other: 'その他',
+  l_job: 'やってほしい仕事', l_job_s: '必要なもの、頻度、どの状態になれば完了かを、普段の言葉でお書きください。',
+  l_url: '参考になるサイトや例があれば(任意)',
+  l_email: 'お返事先のメールアドレス', l_email_s: 'このご相談へのお返事にのみ使用します。',
+  send: '相談内容を送る', fine: 'いただいた内容は、お返事とサービス改善の目的にのみ使用します。<a href="/legal/">利用規約・プライバシー</a>',
+  foot_legal: '利用規約・プライバシー', foot_all: 'サービス一覧'
+};
+// Preselect the area / job when arriving from an empty shelf card or a service page.
+(function () {
+  var q = new URLSearchParams(location.search);
+  var a = q.get('area'); if (a) { var sel = document.getElementById('area'); for (var i = 0; i < sel.options.length; i++) if (sel.options[i].value === a) sel.selectedIndex = i; }
+  var j = q.get('job'); if (j) document.getElementById('job_ref').value = j;
+  document.getElementById('req').addEventListener('submit', function () { document.getElementById('lang_f').value = document.documentElement.lang; });
+})();
+</script>
+<script src="/services/i18n.js"></script>
+</body>
+</html>

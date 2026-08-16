@@ -116,6 +116,16 @@
     .hero .tagline .dot{display:none}
     .hero .tagline span{display:block;line-height:1.9}
   }
+  /* Two doors (2026-08-16): builders scroll on; people who just need the result go to /services/ */
+  .doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;max-width:760px;margin:34px auto 0;text-align:left;position:relative;z-index:2}
+  .doors a{display:block;background:rgba(44,35,64,.72);border:1px solid var(--card-edge);border-radius:14px;padding:16px 18px;color:var(--cream);transition:transform .15s ease,border-color .15s ease}
+  .doors a:hover{transform:translateY(-2px);border-color:var(--ember);text-decoration:none}
+  .doors strong{display:block;font-size:1.02rem;margin-bottom:4px}
+  .doors span{color:var(--cream-dim);font-size:.9rem}
+  .doors .arrow{color:var(--gold);white-space:nowrap}
+  #services-link{position:fixed;top:16px;right:112px;z-index:20;background:rgba(36,29,51,.78);border:1px solid var(--card-edge);border-radius:999px;color:var(--cream-dim);font-size:.82rem;font-weight:600;letter-spacing:.06em;padding:7px 16px;backdrop-filter:blur(6px)}
+  #services-link:hover{color:var(--gold);border-color:var(--ember);text-decoration:none}
+  @media (max-width:480px){#services-link{right:auto;left:16px}}
   .horizon{max-width:520px;margin:42px auto 0;position:relative;height:14px}
   .horizon::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--cream) 18%,var(--cream) 82%,transparent)}
   .horizon::after{content:"";position:absolute;left:22%;right:22%;top:9px;height:2px;background:linear-gradient(90deg,transparent,var(--cream-dim) 25%,var(--cream-dim) 75%,transparent)}
@@ -189,6 +199,7 @@
 </head>
 <body>
 
+<a id="services-link" href="/services/" data-i18n="services_link">Services</a>
 <button id="lang-toggle" type="button" aria-label="Switch language">日本語</button>
 
 <header class="wrap">
@@ -210,6 +221,10 @@
     <p class="tagline"><span>Counted Light</span><span class="dot"> · </span><span>Careful Work</span></p>
   </div>
   <p class="bio" data-i18n="bio">43 Sunsets builds small, production-grade automations for real businesses. Every template ships with error handling, idempotency guards, and clear setup notes — because <em>“it runs”</em> and <em>“it’s ready”</em> are different things.</p>
+  <div class="doors">
+    <a href="#pro"><strong data-i18n="door_build_h">I build automations</strong><span data-i18n="door_build_p">Templates, tools and skills — with the setup notes and honest limits written in.</span> <span class="arrow">↓</span></a>
+    <a href="/services/"><strong data-i18n="door_use_h">I just need the result</strong><span data-i18n="door_use_p">Send us the job, get the finished report or check — no tools to learn. Start with a free website check.</span> <span class="arrow">→</span></a>
+  </div>
   <div class="horizon" aria-hidden="true"></div>
 </header>
 
@@ -414,6 +429,7 @@
 </svg>
   <div class="wrap">
     <p class="contact"><span data-i18n="contact">Say hello — </span><a id="hello-link" href="mailto:hello@43sunsets.com">hello@43sunsets.com</a><span class="copied" id="copied-note" aria-live="polite"></span></p>
+      <p class="fine" style="margin-top:8px"><a href="/legal/" data-i18n="foot_legal">Terms &amp; privacy</a></p>
     <p class="profiles">
       <a href="https://n8n.io/creators/the43sunsets" target="_blank" rel="noopener">n8n</a>·
       <a href="https://apify.com/43sunsets" target="_blank" rel="noopener">Apify</a>·
@@ -464,7 +480,8 @@ document.getElementById('hello-link').addEventListener('click', function () {
    maintained in one place (the markup). */
 (function () {
   var ja = {
-    bio: '43 Sunsets は、小さな会社の実務にそのまま使える「本番品質」の自動化をつくるスタジオです。どのテンプレートにも、エラー処理・二重送信の防止・迷わないセットアップ手順を最初から組み込んであります。<em>「とりあえず動く」</em>と<em>「安心して任せられる」</em>は、別物だと知っているから。',
+    bio: '43 Sunsets は、現場の実務にそのまま使える「本番品質」の自動化を、小さく確実につくるスタジオです。どのテンプレートにも、エラー処理・二重送信の防止・迷わないセットアップ手順を最初から組み込んであります。<em>「とりあえず動く」</em>と<em>「安心して任せられる」</em>は、別物だと知っているから。',
+    door_build_h: '自分で自動化を作りたい方へ', door_build_p: 'テンプレート・ツール・スキル。設定手順と「できないこと」まで正直に書いてあります。', door_use_h: '結果だけが欲しい方へ', door_use_p: 'やってほしい仕事を伝えるだけで、仕上がったレポートや診断をお渡しします。ツールを覚える必要はありません。まずはサイトの無料診断から。', services_link: 'サービス',
     templates_h: '無料 <span class="nocaps">n8n</span> テンプレート',
     templates_lede: 'n8n 公式テンプレートライブラリで公開中。インポートして、認証情報をつなげば完了 — セットアップ手順はキャンバス上に書いてあります。',
     f1: 'Google からのレビュー通知メールを見張り、Google のモデレーション規則に沿った返信文を AI が下書き。自動投稿は一切なし — 一語一句、あなたが承認します。',
@@ -484,7 +501,7 @@ document.getElementById('hello-link').addEventListener('click', function () {
     a1: 'あなたのサイトが AI アシスタントからどう見えるかを監査 — 21 の AI クローラートークンに対する robots.txt(RFC 9309 評価・運営元の公式ドキュメントと突合)、llms.txt、構造化データ、メタ情報 — 証拠つきレポートとチケット形式の修正計画、そのまま編集して使える llms.txt ドラフトを出力。',
     e1: 'エージェントスキルと同じ 10 項目の監査を、印刷できる 2 ページの PDF に — 30 の具体的なチェックボックスと採点ガイド付き、平易な言葉で。',
     studio_h: 'スタジオから',
-    studio_p1: '43 Sunsets は、シカゴ近郊でひとりで営んでいる小さなスタジオです。日本とアメリカを行き来しながら、20 年間、営業とオペレーションの仕組みづくりに携わってきました。その中で身にしみたのは、<em>「とりあえず動く」</em>と<em>「安心して任せられる」</em>のあいだには大きな隔たりがあること — そして小さなビジネスほど、その隙間で痛い思いをするということでした。',
+    studio_p1: '43 Sunsets は、シカゴ近郊でひとりで営んでいる小さなスタジオです。日本とアメリカを行き来しながら、20 年間、営業とオペレーションの仕組みづくりに携わってきました。その中で身にしみたのは、<em>「とりあえず動く」</em>と<em>「安心して任せられる」</em>のあいだには大きな隔たりがあること — そして専任のIT担当を置けない現場ほど、その隙間で痛い思いをするということでした。',
     studio_p2: 'だからこのページに並ぶものはすべて、目立たない部分こそ丁寧につくってあります。エラー処理、二重実行の防止、平易な言葉で書いたセットアップ手順。そして「この道具に<em>できない</em>こと」も、正直に書き添えてあります。',
     studio_p3: '屋号には、ささやかな習慣を込めました。うまくいかない日は、夕日を眺めて — ひとつ、またひとつと数える。丁寧に、ひとつずつ。道具づくりも、同じ心持ちでやっています。',
     short_cap: 'スタジオの最新ショート',
