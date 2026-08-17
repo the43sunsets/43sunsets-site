@@ -154,6 +154,8 @@
   .meta .where{color:var(--muted);letter-spacing:.05em}
   .badge{padding:2px 10px;border-radius:999px;font-weight:600;letter-spacing:.03em}
   .badge.free{background:rgba(245,199,106,.14);color:var(--gold)}
+  .work-how,.work-cta,.work-note{margin-top:14px;margin-bottom:0}
+  .work-note{font-size:.8rem}
   .badge.paid{background:rgba(217,90,120,.16);color:#f0a0b4}
   .badge.usage{background:rgba(240,140,90,.15);color:var(--ember)}
 
@@ -240,6 +242,37 @@
         <div class="meta"><span class="where">Gumroad</span><span class="badge paid">$19</span></div>
       </a>
     </div>
+  </section>
+
+  <section id="work">
+    <h2 data-i18n="work_h">Work with us</h2>
+    <p class="lede" data-i18n="work_lede">You've seen the free templates. If you need one running in <em>your</em> n8n — tested, documented, and supported — that's what we do.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-main">
+          <h3 data-i18n="work_1_h">Production install</h3>
+          <p data-i18n="work_1_p">One template (ours or yours), installed in your n8n Cloud or self-hosted instance, connected to your accounts, and tested live before we hand it back. You get a written note of what we changed and why, plus a JSON backup taken before we touched anything.</p>
+          <div class="meta"><span class="where" data-i18n="work_fixed">Fixed price</span><span class="badge paid" data-i18n="work_1_price">from $100</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-main">
+          <h3 data-i18n="work_2_h">Technical partner</h3>
+          <p data-i18n="work_2_p">Two hours a month for questions, fixes, and small changes, answered in writing by the next business day. Put "Technical partner: 43 Sunsets" on your proposals if it helps you win them. Extra hours $40 each. Cancel any month.</p>
+          <div class="meta"><span class="where" data-i18n="work_monthly">Monthly</span><span class="badge paid" data-i18n="work_2_price">from $60 / mo</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-main">
+          <h3 data-i18n="work_3_h">Custom build</h3>
+          <p data-i18n="work_3_p">A workflow that doesn't exist yet. Fixed price after a free written scope review. Delivered as version-controlled, documented JSON with a test log — production credentials stay on your side.</p>
+          <div class="meta"><span class="where" data-i18n="work_quoted">Quoted</span><span class="badge paid" data-i18n="work_3_price">quoted</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="lede work-how" data-i18n="work_how">How we work: we never ask for your password — invite <code>hello@43sunsets.com</code> as a user, or send the JSON. We back up before we change, and write down what we changed. We don't touch a running production flow without telling you first.</p>
+    <p class="lede work-cta" data-i18n="work_cta">Email <a href="mailto:hello@43sunsets.com">hello@43sunsets.com</a> with a link to the template or a two-line description of the job. Reply within one business day (Mon–Fri, US Central).</p>
+    <p class="lede work-note" data-i18n="work_note">Starting prices as of August 2026. Invoiced by email.</p>
   </section>
 
   <section id="templates">
@@ -509,10 +542,28 @@ document.getElementById('hello-link').addEventListener('click', function () {
     free: '無料',
     usage: 'レポートごと課金',
     pro_h: '有料パック',
-    pro_lede: '見積もりから入金までの追いかけを、1枚の Google シートでまるごと — 返事が来たら止まり、受注したら請求行を起こし、支払いが遅れたら丁寧にリマインドします。',
+    pro_lede: '見積もりから入金までのフォローアップを、1枚の Google シートでまるごと — 返事が来たら止まり、受注したら請求行を起こし、支払いが遅れたら丁寧にリマインドします。',
     p3: 'n8n ワークフロー2本+全列に説明付きのスプレッドシートテンプレート。最大5段のフォローアップは、最新メールへの返信で自動停止。受注した見積もりは請求行に自動変換され、支払期日からの丁寧な督促まで面倒を見ます。AI パーソナライズは任意 — AI キーなしで 100% 動きます。',
     f2_pro: 'プロ版 — 返信で自動停止・請求化・入金まで督促 →',
-    f6_pro: 'プロ版 — 同じシートのまま、止まった見積を自動で追跡 →'
+    f6_pro: 'プロ版 — 同じシートのまま、止まった見積を自動で追跡 →',
+    work_h: 'ご依頼はこちら',
+    work_lede: '無料のテンプレートを、<em>あなたの n8n</em> で実際の業務に使える状態にする — テストして、記録を残して、必要に応じて伴走支援いたします。それが私の仕事です。',
+    work_1_h: '本番環境への導入',
+    work_1_p: 'テンプレート1本(私のもの/お手持ちのもの)を、お使いの n8n(Cloud/セルフホスト)に入れ、アカウントをつなぎ、実機でテストしてからお返しします。変更内容の記録(何を、なぜ)と、作業前の JSON バックアップをお渡しします。',
+    work_fixed: '固定料金',
+    work_1_price: '100ドルから',
+    work_2_h: '技術パートナー(継続サポート)',
+    work_2_p: '月2時間まで、質問・修正・小さな変更に、翌営業日までに書面でお答えします。提案書に「Technical partner: 43 Sunsets」と記載していただいて構いません。超過分は1時間40ドル。解約はいつでも。',
+    work_monthly: '月額',
+    work_2_price: '月額60ドルから',
+    work_3_h: '個別開発',
+    work_3_p: 'まだ存在しないワークフローを作ります。無料の書面でのご要件確認のあと、固定料金でお見積もりします。納品はバージョン管理・注記付きの JSON とテスト記録 — 本番の認証情報はお客さま側に置いたまま。',
+    work_quoted: 'お見積もり',
+    work_3_price: 'お見積もり',
+    work_how: '進め方: パスワードはお預かりしません。<code>hello@43sunsets.com</code> をユーザーとして招待いただくか、JSON をお送りください。作業前にバックアップ、作業後に記録。稼働中の本番フローには、事前にお伝えせず触ることはありません。',
+    work_cta: 'テンプレートのリンク、またはご希望の内容を2行ほどにまとめて <a href="mailto:hello@43sunsets.com">hello@43sunsets.com</a> へ。1営業日以内(米国中部時間・月〜金)にご返信します。',
+    work_note: '表示料金は2026年8月時点の開始料金です。お支払いはメールでご請求します。',
+    foot_legal: '利用規約とプライバシー'
   };
   var en = {};
   var btn = document.getElementById('lang-toggle');
