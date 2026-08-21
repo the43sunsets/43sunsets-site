@@ -13,7 +13,7 @@
 // Retention: KV entries expire after 30 days (expirationTtl) — matches /legal/; the email copy lives in hello@ per /legal/.
 
 const MAX = { job: 4000, url: 500, email: 200 };
-const ALLOWED_AREA = new Set(["marketing", "sales", "research", "other"]);
+const ALLOWED_AREA = new Set(["operations", "marketing", "sales", "research", "other"]);
 
 export async function onRequestPost({ request, env }) {
   const url = new URL(request.url);
