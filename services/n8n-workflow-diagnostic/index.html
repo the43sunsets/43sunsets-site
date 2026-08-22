@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>n8n Workflow Diagnostic — $149, fixed, in writing within 48 hours · 43 Sunsets Services</title>
-<meta name="description" content="Your n8n workflow runs, but bookings land at the wrong hour, webhook fields come out blank, or a payment posted twice after a retry. We find out why — a written, node-level report in 48 hours. $149 fixed. If we find nothing worth fixing, you don't pay.">
+<title>Your n8n technical partner — written answers by the next business day · 43 Sunsets Services</title>
+<meta name="description" content="An n8n expert on call for when something breaks, something has to go live, or a client asks a technical question you would rather answer with confidence. Written, asynchronous, next business day. From $60 a month. One workflow checked in depth: $149 fixed.">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/slat-sun-64.png">
 <link rel="canonical" href="https://43sunsets.com/services/n8n-workflow-diagnostic/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="n8n Workflow Diagnostic — 43 Sunsets Services">
-<meta property="og:description" content="Your workflow runs — but something is wrong. We find out why, in writing, in 48 hours. $149 fixed; nothing worth fixing, no charge.">
+<meta property="og:title" content="Your n8n technical partner — 43 Sunsets Services">
+<meta property="og:description" content="An n8n expert on call — written, asynchronous, next business day. From $60 a month.">
 <meta property="og:url" content="https://43sunsets.com/services/n8n-workflow-diagnostic/">
 <meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
 <link rel="stylesheet" href="/services/services.css?v=20260816c">
@@ -31,18 +31,18 @@
 <main class="wrap">
   <section class="hero" style="padding-bottom:12px">
     <p class="note" data-i18n="crumb">Operations · Automation</p>
-    <h1 data-i18n="h1">Your n8n workflow runs — but something is wrong.</h1>
-    <p class="lede" data-i18n="lede">Bookings land at 2am. Webhook fields come out blank. A payment posted twice after a retry. Every node is green and the data is still wrong. We read your workflow and tell you why — in writing, node by node, within 48 hours. <strong>$149, fixed.</strong> If we find nothing worth fixing, you don't pay.</p>
+    <h1 data-i18n="h1">An n8n expert on call — in writing, by the next business day.</h1>
+    <p class="lede" data-i18n="lede">Something broke and you need it working again. A flow has to go live and you want a second pair of eyes first. A client is asking a technical question you would rather answer with confidence. We are the n8n team behind you — written, asynchronous, answered by the next business day. <strong>From $60 a month.</strong> Cancel any month.</p>
   </section>
 
   <section id="order">
     <div class="box">
-      <h2 data-i18n="order_h">Book a diagnostic</h2>
-      <p class="note" data-i18n="order_note">Tell us what goes wrong and where to reply. We answer within one business day with a secure way to send your workflow export (JSON) — we never need your credentials and we never touch a live flow. The written report follows within 48 hours of receiving the export. Invoiced by email after you have the report.</p>
+      <h2 data-i18n="order_h">Tell us what you need</h2>
+      <p class="note" data-i18n="order_note">Two or three lines is enough — what you are building, what broke, or what you want checked before it goes live. We answer within one business day with what we would do, what it costs and how long it takes. Nothing starts until you approve. We never ask for your password and we never touch a live flow without telling you first.</p>
       <form method="POST" action="/services/submit" id="order-form">
-        <label><span data-i18n="f_job">What goes wrong?</span>
-          <small data-i18n="f_job_s">Two or three lines are enough: what you expected, what actually happens, how often.</small>
-          <textarea name="job" required minlength="20" maxlength="4000" placeholder="Example: Calendar events from our booking form land one hour early, but only for some customers."></textarea>
+        <label><span data-i18n="f_job">What do you need help with?</span>
+          <small data-i18n="f_job_s">A repair, a build, a pre-launch check, or an ongoing partner — whichever it is, two or three lines are enough.</small>
+          <textarea name="job" required minlength="20" maxlength="4000" placeholder="Example: We install the same flow for each new dealer and I need someone to check it before it goes live — and to answer questions while I set them up."></textarea>
         </label>
         <label><span data-i18n="f_url">Link to the workflow or your site (optional)</span>
           <input type="text" name="url" maxlength="500" placeholder="https://…" inputmode="url">
@@ -55,40 +55,39 @@
         <input type="hidden" name="area" value="operations">
         <input type="hidden" name="job_ref" value="n8n-workflow-diagnostic">
         <input type="hidden" name="lang" id="lang_f" value="en">
-        <p class="ctas" style="margin-top:4px"><button class="cta" type="submit" data-i18n="order_cta">Book the $149 diagnostic</button> <a class="cta ghost" href="https://youtu.be/YiAwRBX30I4" data-i18n="order_sample">Watch a real diagnosis (2 min)</a></p>
+        <p class="ctas" style="margin-top:4px"><button class="cta" type="submit" data-i18n="order_cta">Ask us</button></p>
         <p class="note" data-i18n="order_fine">We keep your address only for this request. <a href="/legal/">Terms &amp; privacy</a>.</p>
       </form>
     </div>
   </section>
 
   <section id="what">
-    <h2 data-i18n="what_h">What you get</h2>
+    <h2 data-i18n="what_h">What working with us looks like</h2>
     <ul>
-      <li data-i18n="w1"><strong>A 10-category check of one workflow</strong> — error handling, idempotency, rate limits, webhook security, timeouts, credential hygiene, data handling, observability, naming and cost traps — including what happens on run #2: duplicates, retries, out-of-order events.</li>
-      <li data-i18n="w2"><strong>A written report where every finding names the node, the setting and the exact value to change.</strong> Copy-paste ready for you or whoever maintains the flow.</li>
-      <li data-i18n="w3"><strong>An honest coverage note</strong> — what we could verify from the export, what would need a live run, and why.</li>
-      <li data-i18n="w4"><strong>A fixed price for each repair, if you want one.</strong> You approve before we change anything. Nothing is bundled in; the report stands on its own.</li>
+      <li data-i18n="w1"><strong>Written, asynchronous, and on the record.</strong> Every answer arrives as text you can apply yourself, hand to whoever maintains the flow, or forward to your own client. Nothing depends on catching us on a call.</li>
+      <li data-i18n="w2"><strong>Answers by the next business day.</strong> We are in US Central. If you work in Europe or Asia, you write in your evening and the answer is waiting when you start the next morning.</li>
+      <li data-i18n="w3"><strong>Your account stays yours.</strong> We work from an export, or from a user you invite and can remove with one click. We never ask for your password, and we take a backup before touching anything that is already live.</li>
+      <li data-i18n="w4"><strong>A fixed price before any work starts.</strong> You describe the job; we come back with scope, price and delivery time. You approve first — so you know what to quote your own client before you commit to them.</li>
     </ul>
-    <p class="fine" data-i18n="what_sample">Want to see how we look at a workflow first? Two narrated diagnoses of real failures, using only real output: <a href="https://youtu.be/YiAwRBX30I4">bookings landing at the wrong hour</a> and <a href="https://youtu.be/Lf2SM1AMqVE">webhook fields coming out blank</a>.</p>
   </section>
 
   <section id="how">
     <h2 data-i18n="how_h">How it works</h2>
     <table>
-      <tr><th data-i18n="t_in">You give us</th><td data-i18n="t_in_v">Your workflow export (in n8n: workflow menu → Download) and two lines on what goes wrong. No credentials, no access to your instance — the export carries none of your secrets.</td></tr>
-      <tr><th data-i18n="t_out">You receive</th><td data-i18n="t_out_v">A written report, node by node, with the exact change for each finding — plus a fixed quote for any repair you want us to make.</td></tr>
-      <tr><th data-i18n="t_when">When</th><td data-i18n="t_when_v">Within 48 hours of receiving the export (Mon–Fri, US Central). If a workflow is unusually large we tell you before we start, not after.</td></tr>
-      <tr><th data-i18n="t_price">Price</th><td data-i18n="t_price_v"><strong>$149, fixed</strong>, one workflow. Invoiced by email after you have the report. <strong>If we find nothing worth fixing, you don't pay.</strong> Repairs are quoted separately as fixed prices.</td></tr>
-      <tr><th data-i18n="t_ongoing">Ongoing</th><td data-i18n="t_ongoing_v"><strong>Technical partner, $60 / month</strong>: two hours of work each month, written answers by the next business day, and a free pre-production check before anything new goes live. Cancel any month.</td></tr>
+      <tr><th data-i18n="t_ongoing">Technical partner</th><td data-i18n="t_ongoing_v"><strong>$60 / month.</strong> Two hours of work each month, written answers by the next business day, and a free pre-production check before anything new goes live. You may name 43 Sunsets as your technical partner in your own proposals. Beyond two hours: $40/hour. Cancel any month.</td></tr>
+      <tr><th data-i18n="t_job">Per job</th><td data-i18n="t_job_v"><strong>Fixed price, agreed before we start.</strong> A new integration, a database or phone/API connection, a migration, a repair — describe it in one message and we come back with scope, price and delivery time. You approve, then we begin.</td></tr>
+      <tr><th data-i18n="t_price">One workflow, checked in depth</th><td data-i18n="t_price_v"><strong>$149, fixed.</strong> A written report, node by node, within 48 hours of receiving your export — error handling, idempotency, rate limits, webhook security, timeouts, credential hygiene, data handling, observability, naming and cost traps, including what happens on run #2. <strong>If we find nothing worth fixing, you don't pay.</strong></td></tr>
+      <tr><th data-i18n="t_in">What we need from you</th><td data-i18n="t_in_v">A sentence about the problem — and, when it helps, your workflow export (in n8n: workflow menu → Download). No credentials and no access to your instance: the export carries none of your secrets.</td></tr>
+      <tr><th data-i18n="t_when">Hours</th><td data-i18n="t_when_v">Mon–Fri, US Central. First reply within one business day; the $149 report within 48 hours of receiving the export. If a job is unusually large we tell you before we start, not after.</td></tr>
     </table>
   </section>
 
   <section id="faq">
     <h2 data-i18n="faq_h">Good to know</h2>
-    <details><summary data-i18n="q1">Why should I trust a diagnosis from you?</summary><p data-i18n="a1">Six of our own workflows are published in the official n8n template library — each passed n8n's human editorial review and was live-tested with real executions before submission. The same checklist we use on our own work is the one we run on yours. AI helps us build and test; a human is accountable for every line of the report, and everything is in writing.</p></details>
+    <details><summary data-i18n="q1">Why should I trust you with my automation?</summary><p data-i18n="a1">Six of our own workflows are published in the official n8n template library — each passed n8n's human editorial review and was live-tested with real executions before submission. The same checklist we use on our own work is the one we run on yours. AI helps us build and test; a human is accountable for every line of the report, and everything is in writing.</p></details>
     <details><summary data-i18n="q2">Is it safe to send my workflow export?</summary><p data-i18n="a2">An n8n export contains the workflow's structure and settings, not your passwords or API keys — credentials stay in your instance. We read the export, we do not run it against your accounts, and we delete it on request once the report is delivered.</p></details>
     <details><summary data-i18n="q3">What can you not see from an export?</summary><p data-i18n="a3">Anything that only shows up at run time: the actual data your services return, rate-limit responses, timing. When a finding needs a live run to confirm, the report says so and tells you how to confirm it yourself — or we do it as part of a repair.</p></details>
-    <details><summary data-i18n="q4">Refunds?</summary><p data-i18n="a4">You pay after the report, and only if it found something worth fixing. If the report did not deliver what this page promised, tell us within 14 days and there is no charge. See <a href="/legal/">terms &amp; privacy</a>.</p></details>
+    <details><summary data-i18n="q4">What if it does not work out?</summary><p data-i18n="a4">The monthly plan can be cancelled any month, with no notice period. For the $149 check you pay after the report, and only if it found something worth fixing. If work we delivered did not match what we agreed, tell us within 14 days and there is no charge. See <a href="/legal/">terms &amp; privacy</a>.</p></details>
   </section>
 </main>
 
@@ -100,32 +99,31 @@
 window.SERVICES_JA = {
   nav_services: 'サービス一覧', nav_how: 'ご利用の流れ', nav_request: 'ご相談', nav_builders: '自分で作りたい方はこちら →',
   crumb: '業務 · 自動化',
-  h1: 'n8n のワークフローは動いている — でも、何かがおかしい。',
-  lede: '予約が深夜 2 時に入る。Webhook の項目が空で届く。再試行のあとに支払いが二重に記録される。ノードは全部緑なのに、データが正しくない。私たちがワークフローを読み、なぜそうなるのかを、ノード単位の書面で 48 時間以内にお答えします。<strong>料金は 149 ドル固定</strong>。直す価値のある所見が一つもなければ、料金はいただきません。',
-  order_h: '診断を申し込む',
-  order_note: '何が起きているかと、返信先を教えてください。1 営業日以内に、ワークフローのエクスポート(JSON)を安全にお送りいただく方法をご案内します。認証情報は一切不要で、稼働中のフローには触れません。エクスポート受領から 48 時間以内に書面のレポートをお届けし、その後メールでご請求します。※レポートは英語でお渡しします(日本語版は準備中)。',
-  f_job: '何が起きていますか?', f_job_s: '2〜3 行で十分です: 期待していた動き、実際の動き、頻度。',
+  h1: '困ったときに相談できる、自動化の技術パートナー。翌営業日までに書面で回答します。',
+  lede: '止まってしまった、動かしたい。本番に出す前に、もう一組の目で確認したい。お客さまからの技術的な質問に、自信をもって答えたい。そうしたときに相談できる技術パートナーです。やり取りは書面で、時間を合わせる必要はありません。回答は翌営業日までにお届けします。<strong>月額60ドルから。</strong>解約はいつでも可能です。',
+  order_h: 'ご相談ください',
+  order_note: 'ご相談内容は2〜3行で構いません。作成中のもの、発生している問題、公開前に確認したい点をお知らせください。1営業日以内に、対応内容・料金・所要日数をご案内します。ご承認後に着手します。パスワードはお預かりせず、稼働中の処理に無断で手を加えることはありません。※回答文書は英語ですが、日本語でのやり取りは可能です。',
+  f_job: 'どんなことでお困りですか?', f_job_s: '修理・構築・本番前の点検・継続的なサポート — どれでも、2〜3 行で十分です。',
   f_url: 'ワークフローやサイトへのリンク(任意)',
   f_email: '返信先のメールアドレス', f_email_s: 'このご依頼の連絡にのみ使用します。',
-  order_cta: '149 ドルの診断を申し込む', order_sample: '実際の診断の様子を見る(2 分)',
+  order_cta: '相談する',
   order_fine: 'メールアドレスは、このご依頼の連絡にのみ使います。<a href="/legal/">利用規約・プライバシー</a>',
-  what_h: 'お渡しするもの',
-  w1: '<strong>ワークフロー 1 本の 10 項目点検</strong> — エラー処理、冪等性、レート制限、Webhook の安全性、タイムアウト、認証情報の扱い、データの扱い、監視、命名、コストの罠。「2 回目の実行で何が起きるか」(重複・再試行・順序の逆転)も含みます。',
-  w2: '<strong>所見ごとに、ノード名・設定項目・変更後の値を明記した書面のレポート。</strong> ご自身でも、保守担当の方でも、そのまま反映できます。',
-  w3: '<strong>調べた範囲の正直な注記</strong> — エクスポートから確認できたこと、実行しないと分からないこと、その理由。',
-  w4: '<strong>修理をご希望の場合は、修理ごとの固定料金。</strong> 変更前に必ずご承認いただきます。抱き合わせはなく、レポートは単体で完結します。',
-  what_sample: '先に私たちの見方をご覧になりたい方へ。実際の故障を、実際の出力だけで解説した 2 本の動画(英語): <a href="https://youtu.be/YiAwRBX30I4">予約が違う時刻に入る</a> / <a href="https://youtu.be/Lf2SM1AMqVE">Webhook の項目が空で届く</a>。',
+  what_h: '一緒に仕事をするとどうなるか',
+  w1: '<strong>やり取りは書面で、記録に残ります。</strong> お返しするのは、そのままご自身で反映できる文章です。保守を担当される方へ渡すことも、お客さまへ転送することもできます。打ち合わせの時間を合わせる必要はありません。',
+  w2: '<strong>翌営業日までに回答します。</strong> 対応時間は米国中部時間の平日です。日本から夜間にご連絡いただいた場合は、原則として翌朝までに回答が届きます。',
+  w3: '<strong>アカウントの管理権限はお客さまに残ります。</strong> エクスポートを拝見するか、ご招待いただいたユーザーとして作業します。権限はワンクリックでいつでも解除できます。パスワードはお預かりしません。稼働中のものに手を加える前には、必ず控えを取ります。',
+  w4: '<strong>着手前に固定料金をご提示します。</strong> ご希望の内容をお知らせいただければ、作業範囲・料金・納期をご案内します。ご承認後に着手しますので、お客さまがご自身の取引先へお見積りを出す前に、費用が確定します。',
   how_h: 'ご利用の流れ',
-  t_in: 'ご用意いただくもの', t_in_v: 'ワークフローのエクスポート(n8n のワークフローメニュー → Download)と、何が起きているかの 2 行。認証情報やインスタンスへのアクセスは不要です — エクスポートに秘密情報は含まれません。',
-  t_out: 'お渡しするもの', t_out_v: 'ノード単位の書面レポート(英語)と、所見ごとの具体的な変更内容。修理をご希望の場合は固定料金のお見積もりも。',
-  t_when: '所要時間', t_when_v: 'エクスポート受領から 48 時間以内(米国中部時間・月〜金)。極端に大きなワークフローの場合は、着手前にお知らせします。',
-  t_price: '料金', t_price_v: '<strong>149 ドル固定</strong>(ワークフロー 1 本)。レポートをお受け取りいただいた後にメールでご請求します。<strong>直す価値のある所見が一つもなければ、料金はいただきません。</strong> 修理は別途、固定料金でお見積もりします。',
-  t_ongoing: '継続サポート', t_ongoing_v: '<strong>技術パートナー 月額 60 ドル</strong>: 月 2 時間の作業、翌営業日までの書面回答、新しいものを本番に入れる前の無料チェック。解約はいつでも。',
+  t_ongoing: '技術パートナー', t_ongoing_v: '<strong>月額60ドル。</strong> 月2時間の作業、翌営業日までの書面回答、本番公開前の無料点検が含まれます。ご自身のご提案書に「技術パートナー: 43 Sunsets」と記載いただけます。2時間を超える分は1時間あたり40ドル。解約はいつでも可能です。',
+  t_job: '案件ごと', t_job_v: '<strong>着手前に決める固定料金。</strong> 新しいサービスとの連携、データベースや電話・APIの接続、移行、不具合の修正なども案件ごとに承ります。内容を簡単にお知らせいただければ、作業範囲・料金・納期をご案内します。ご承認後に着手します。',
+  t_price: 'ワークフロー1本の詳しい点検', t_price_v: '<strong>149ドル固定。</strong> エクスポートを受領してから48時間以内に、ノード単位の書面レポートをお渡しします。点検項目は、エラー処理、重複防止、レート制限、Webhookの安全性、タイムアウト、認証情報の扱い、データの扱い、監視、命名、コストの罠、そして再実行時の挙動です。<strong>改善すべき点が見つからなければ、料金はいただきません。</strong>',
+  t_in: 'ご用意いただくもの', t_in_v: '困っていることを一文でお知らせください。必要に応じて、ワークフローのエクスポート(n8nのワークフローメニュー → Download)をお送りください。認証情報やインスタンスへのアクセスは不要です。エクスポートに機密情報は含まれません。',
+  t_when: '対応時間', t_when_v: '米国中部時間の平日に対応します。初回のご返信は1営業日以内、149ドルのレポートはエクスポート受領から48時間以内です。分量が大きい場合は、着手前にお知らせします。',
   faq_h: 'よくあるご質問',
-  q1: 'なぜ信頼できるのですか?', a1: '私たち自身のワークフロー 6 本が n8n 公式テンプレートライブラリに掲載されています — いずれも n8n の人手による審査を通過し、提出前に実際の実行でテストしたものです。自分の仕事に使っているのと同じチェックリストを、あなたのワークフローにも使います。AI は構築とテストを手伝いますが、レポートの一行一行には人間が責任を持ち、すべて書面でお渡しします。',
+  q1: 'なぜ自動化を任せられるのですか?', a1: '43 Sunsetsが公開した自動化6件は、n8n公式テンプレートライブラリの審査を通過し、提出前に実際の動作確認も済ませています。自社の制作物と同じ基準でお客さまの内容を確認し、回答のすべてに運営者が責任を持ちます。',
   q2: 'エクスポートを送っても安全ですか?', a2: 'n8n のエクスポートに含まれるのはワークフローの構造と設定で、パスワードや API キーは含まれません — 認証情報はお客さまのインスタンスに残ります。私たちはエクスポートを読むだけで、お客さまのアカウントに対して実行することはなく、レポート納品後はご要望があれば削除します。',
   q3: 'エクスポートから分からないことは?', a3: '実行時にしか現れないもの — 外部サービスが実際に返すデータ、レート制限の応答、タイミングなど。実行して確かめる必要がある所見は、レポートにそう明記し、ご自身で確認する方法をお伝えします(修理の一環として私たちが行うことも可能です)。',
-  q4: '返金はできますか?', a4: 'お支払いはレポートの後、直す価値のある所見があった場合のみです。レポートがこのページでお約束した内容に届いていなければ、14 日以内にお知らせください。請求はいたしません。詳しくは<a href="/legal/">利用規約・プライバシー</a>をご覧ください。',
+  q4: 'うまくいかなかった場合は?', a4: '月額プランはいつでも解約でき、予告期間もありません。149ドルの点検は、レポートをお受け取りいただいた後、改善すべき点があった場合のみのお支払いです。お約束した内容に届いていない場合は、14日以内にお知らせください。請求はいたしません。詳しくは<a href="/legal/">利用規約・プライバシー</a>をご覧ください。',
   foot_legal: '利用規約・プライバシー', foot_all: 'サービス一覧'
 };
 document.getElementById('order-form').addEventListener('submit', function(){ document.getElementById('lang_f').value = document.documentElement.lang; });
