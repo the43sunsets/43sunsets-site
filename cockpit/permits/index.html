@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中西部・設備投資検出面 — 建設許可 | 43 Sunsets Cockpit</title>
+<meta name="description" content="米国中西部 5 州(IL・IN・MI・OH・WI)の建設許可・州建築審査記録から、製造業の設備投資シグナルを検出して一覧化。事実は公的記録の逐語、推論はバッジで分離表示。">
+<link rel="canonical" href="https://43sunsets.com/cockpit/permits/">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="中西部・設備投資検出面 — 建設許可">
+<meta property="og:description" content="公的記録から設備投資の動きを検出。報道より早いターゲット発掘の材料に。">
+<meta property="og:url" content="https://43sunsets.com/cockpit/permits/">
+<meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E;
+  --ai-accent:#2F5D8A; --line:#D9DDD9; --line-soft:#E7EAE6;
+  --fact:#2E6E4E; --fact-bg:#EEF5F0; --infer:#8A5A2F; --infer-bg:#F7F1E8; --infer-line:#D9C6A8;
+  --stamp:#B54434; --chip-bg:#EDF0F3;
+  --warn:#9A4A1F; --warn-bg:#F6EDE6;
+  --jp:#8A2F55; --jp-bg:#F5E9EF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#161A1F; --card:#1E242B; --ink:#E4E7EA; --sub:#9AA4AE;
+    --ai-accent:#7FA8D0; --line:#333B44; --line-soft:#2A313A;
+    --fact:#7CC49C; --fact-bg:#20302A; --infer:#D8A96B; --infer-bg:#332A1E; --infer-line:#5A4A32;
+    --stamp:#D07360; --chip-bg:#2A313A;
+    --warn:#D0885C; --warn-bg:#33261C;
+    --jp:#D07FA5; --jp-bg:#33202A;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#161A1F; --card:#1E242B; --ink:#E4E7EA; --sub:#9AA4AE;
+  --ai-accent:#7FA8D0; --line:#333B44; --line-soft:#2A313A;
+  --fact:#7CC49C; --fact-bg:#20302A; --infer:#D8A96B; --infer-bg:#332A1E; --infer-line:#5A4A32;
+  --stamp:#D07360; --chip-bg:#2A313A;
+  --warn:#D0885C; --warn-bg:#33261C;
+  --jp:#D07FA5; --jp-bg:#33202A;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper); color:var(--ink); font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif; margin:0; line-height:1.7; font-size:14.5px;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;}
+
+header{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:16px 28px 13px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; background:var(--card);}
+.masthead h1{font-family:"Shippori Mincho",serif; font-size:21px; font-weight:700; margin:0; letter-spacing:.02em;}
+.masthead .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
+.masthead .meta{font-size:12px; color:var(--sub); margin-top:4px;}
+.stamp{flex:none; border:2.5px solid var(--stamp); color:var(--stamp); font-family:"Shippori Mincho",serif; font-weight:700; font-size:15px; padding:5px 6px 5px 10px; transform:rotate(-6deg); border-radius:4px; letter-spacing:.3em; opacity:.85; margin-top:4px;}
+
+.app{display:grid; grid-template-columns:264px minmax(0,1fr); gap:0; align-items:start; min-height:70vh;}
+
+/* ---- 左: フィルタ ---- */
+aside{border-right:1px solid var(--line); padding:20px 20px 40px; position:sticky; top:0; max-height:100vh; overflow-y:auto;}
+.fgroup{margin-bottom:22px;}
+.fgroup h2{font-size:11px; letter-spacing:.2em; color:var(--sub); font-weight:700; margin:0 0 8px; text-transform:uppercase; border-bottom:1px solid var(--line-soft); padding-bottom:5px;}
+.fitem{display:flex; align-items:center; gap:8px; padding:3px 2px; font-size:13.5px; cursor:pointer; border-radius:4px;}
+.fitem:hover{background:var(--chip-bg);}
+.fitem input{accent-color:var(--ai-accent); width:15px; height:15px; cursor:pointer;}
+.fitem .cnt{margin-left:auto; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11.5px; color:var(--sub);}
+.fitem.jp-toggle{background:var(--jp-bg); color:var(--jp); font-weight:500; padding:6px 8px; margin-bottom:4px;}
+.fitem.jp-toggle input{accent-color:var(--jp);}
+.clearbtn{width:100%; border:1px solid var(--line); background:var(--card); color:var(--sub); font-family:inherit; font-size:12.5px; padding:7px; border-radius:5px; cursor:pointer; margin-top:4px;}
+.clearbtn:hover{color:var(--ink); border-color:var(--sub);}
+.fnote{font-size:11px; color:var(--sub); margin-top:18px; line-height:1.6; border-top:1px solid var(--line-soft); padding-top:10px;}
+
+/* ---- 右: 結果 ---- */
+main{padding:18px 28px 60px; min-width:0;}
+.toolbar{display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding-bottom:12px; border-bottom:2px solid var(--ink); margin-bottom:16px;}
+.hitcount{font-family:"Shippori Mincho",serif; font-size:17px; font-weight:700;}
+.hitcount .num{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:19px;}
+.hitsub{font-size:12px; color:var(--sub);}
+.exportbtn{margin-left:auto; border:1.5px solid var(--ai-accent); color:var(--ai-accent); background:transparent; font-family:inherit; font-weight:700; font-size:13px; padding:7px 16px; border-radius:5px; cursor:pointer;}
+.exportbtn:hover{background:var(--ai-accent); color:var(--paper);}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px;}
+.card{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:15px 17px 13px; display:flex; flex-direction:column; gap:7px;}
+.card .head{display:flex; align-items:flex-start; gap:8px;}
+.card h3{margin:0; font-size:14.5px; font-weight:700; line-height:1.5; flex:1;}
+.state{display:inline-block; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px; font-weight:500; color:var(--paper); background:var(--ink); border-radius:3px; padding:0 6px; letter-spacing:.08em; flex:none; margin-top:3px;}
+.chip{display:inline-block; font-size:10.5px; color:var(--sub); background:var(--chip-bg); border-radius:3px; padding:0 7px; margin-right:5px;}
+.chip.jp{color:var(--jp); background:var(--jp-bg); font-weight:700;}
+.chip.newchip{color:var(--stamp); background:transparent; border:1.5px solid var(--stamp); font-weight:700; letter-spacing:.1em; font-size:10px;}
+.card .loc{font-size:12px; color:var(--sub);}
+.card .summary{font-size:13px;}
+.fact{border-left:3px solid var(--fact); background:var(--fact-bg); padding:7px 11px; border-radius:0 4px 4px 0; font-size:12.5px;}
+.fact .flabel{font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--fact); display:block; margin-bottom:1px;}
+.fact .verbatim{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; display:block; margin-top:3px; word-break:break-word; color:var(--sub);}
+.infer{border:1px dashed var(--infer-line); background:var(--infer-bg); padding:7px 11px; border-radius:4px; font-size:12.5px;}
+.badge-infer{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--infer); border:1px solid var(--infer); border-radius:3px; padding:0 5px; margin-right:6px; vertical-align:1px;}
+
+.pager{display:flex; align-items:center; justify-content:center; gap:6px; margin-top:24px;}
+.pager button{border:1px solid var(--line); background:var(--card); color:var(--ink); font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:13px; min-width:34px; padding:5px 8px; border-radius:5px; cursor:pointer;}
+.pager button:hover{border-color:var(--ai-accent); color:var(--ai-accent);}
+.pager button[disabled]{opacity:.35; cursor:default;}
+.pager button.cur{background:var(--ink); color:var(--paper); border-color:var(--ink); cursor:default;}
+.empty{padding:60px 20px; text-align:center; color:var(--sub); font-size:14px;}
+
+footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5px; color:var(--sub);}
+
+/* ---- 企業カルテ ---- */
+.companylink{background:none; border:none; padding:0; font:inherit; font-weight:700; color:var(--ai-accent); cursor:pointer; text-align:left; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;}
+.companylink:hover{text-decoration-thickness:2px;}
+.karte-bg{position:fixed; inset:0; background:var(--paper); z-index:60; overflow-y:auto;}
+.karte{max-width:880px; margin:0 auto; padding:28px 24px 80px;}
+.karte-top{display:flex; justify-content:space-between; align-items:flex-start; gap:14px; border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:14px 0 12px; margin-bottom:18px;}
+.karte-top .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
+.karte-top h2{font-family:"Shippori Mincho",serif; font-size:22px; margin:0;}
+.karte-top .ksub{font-size:12.5px; color:var(--sub); margin-top:4px;}
+.karte-close{border:1px solid var(--line); background:var(--card); color:var(--ink); font-family:inherit; font-size:13px; padding:7px 14px; border-radius:5px; cursor:pointer; flex:none;}
+.karte-close:hover{border-color:var(--ai-accent); color:var(--ai-accent);}
+.karte h3{font-size:13px; letter-spacing:.14em; color:var(--sub); font-weight:700; border-bottom:2px solid var(--ink); padding-bottom:5px; margin:26px 0 12px;}
+.timeline{border-left:2px solid var(--line); margin-left:6px; padding-left:18px; display:flex; flex-direction:column; gap:14px;}
+.tl-item{position:relative;}
+.tl-item::before{content:""; position:absolute; left:-24px; top:6px; width:9px; height:9px; border-radius:50%; background:var(--fact);}
+.tl-item .tl-date{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px; color:var(--sub);}
+.tl-item .tl-title{font-weight:700; font-size:14px;}
+.tl-item .tl-body{font-size:12.5px; color:var(--sub);}
+.kv{display:grid; grid-template-columns:max-content 1fr; gap:4px 16px; font-size:13px;}
+.kv dt{color:var(--sub); font-size:12px; padding-top:1px;}
+.kv dd{margin:0;}
+.karte .fact,.karte .infer{font-size:13px;}
+.karte-note{font-size:11.5px; color:var(--sub); border-top:1px solid var(--line-soft); margin-top:28px; padding-top:10px;}
+
+button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accent); outline-offset:2px;}
+.scope-details{margin:26px 0 0;}
+.scope-details summary{cursor:pointer; font-weight:700; font-size:13px; color:var(--sub); letter-spacing:.06em; padding:8px 0; border-top:1px solid var(--line);}
+.scope-details summary:hover{color:var(--ink);}
+.scope-details table{width:100%; border-collapse:collapse; font-size:12.5px; background:var(--card); border:1px solid var(--line); border-radius:6px; overflow:hidden; margin:10px 0;}
+.scope-details th{font-size:10.5px; letter-spacing:.12em; color:var(--sub); text-align:left; font-weight:500; padding:7px 10px; border-bottom:1px solid var(--line); background:var(--chip-bg);}
+.scope-details td{padding:7px 10px; border-bottom:1px solid var(--line-soft); vertical-align:top;}
+.scope-details tr:last-child td{border-bottom:none;}
+.scope-details .ok{color:var(--fact); font-weight:700;}
+.scope-details .ng{color:var(--stamp); font-weight:700;}
+.scope-details ul{margin:6px 0 0; padding-left:18px; font-size:12.5px; color:var(--sub);}
+.scope-details li{margin-bottom:4px;}
+.tblwrap{overflow-x:auto;}
+.beta{flex:none; border:2px solid var(--ai-accent); color:var(--ai-accent); font-family:"IBM Plex Mono",ui-monospace,monospace; font-weight:700; font-size:12px; padding:2px 9px; border-radius:4px; letter-spacing:.14em; margin-top:8px;}
+.brandlink{color:var(--sub); text-decoration:none;}
+.brandlink:hover{color:var(--ai-accent);}
+a{color:var(--ai-accent);}
+@media (max-width:760px){
+  .app{grid-template-columns:1fr;}
+  aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="masthead">
+    <div class="kicker"><a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a> — COCKPIT</div>
+    <h1>中西部・設備投資検出面</h1>
+    <div class="meta" id="metaline">建設許可シグナル 5 州(IL・IN・MI・OH・WI)/ データ読み込み中…</div>
+  </div>
+  <div class="beta">BETA</div>
+</header>
+
+<div class="app">
+<aside>
+  <label class="fitem jp-toggle"><input type="checkbox" id="jponly">日系関連のみ表示</label>
+  <label class="fitem jp-toggle"><input type="checkbox" id="showunc">未分類も表示 <span class="cnt" id="unccnt"></span></label>
+
+  <div class="fgroup">
+    <h2>州</h2>
+    <div id="f-state"></div>
+  </div>
+  <div class="fgroup">
+    <h2>設備投資の種類</h2>
+    <div id="f-category"></div>
+  </div>
+  <div class="fgroup">
+    <h2>対象企業の業種</h2>
+    <div id="f-industry"></div>
+  </div>
+  <button class="clearbtn" id="clear">フィルタをすべて解除</button>
+  <div class="fnote">業種・投資種類は固定の分類語彙への AI 割り当てです(DB に保存・出所つき)。4 分類のどれでもないもの、確信度が低いものは「未分類」に置き、既定では表示しません — 上のトグルで出せます(誰かにとってはシグナルになりうるため除外はしません)。件数は現在の表示集合の全数。</div>
+</aside>
+
+<main>
+  <div class="toolbar">
+    <div>
+      <span class="hitcount"><span class="num" id="hitnum">0</span> 件</span>
+      <span class="hitsub" id="hitsub"></span>
+    </div>
+    <button class="exportbtn" id="export">CSV エクスポート</button>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>条件に一致するシグナルはありません。フィルタを緩めてください。</div>
+  <div class="pager" id="pager"></div>
+
+  <details class="scope-details">
+    <summary>収集網の健全性と射程 — この面が「見ているもの」と「見ていないもの」</summary>
+    <div id="scopebox">読み込み中…</div>
+    <ul id="scopenotes">
+      <li>本面は 5 州(Census East North Central)の悉皆ではありません。各州の主要市の公開許可 API+インディアナ州 DB を配線しており、郊外・小規模自治体(ブラウザ専用ポータル)は未走査です。網羅は自治体数でなく許可ボリュームで測る方針です。</li>
+      <li>「未評価」= 全件保存済みだが AI がまだ読んでいない行。「未分類」= 読んだが 4 分類のどれでもない、または確信度が低い行(トグルで表示可)。</li>
+      <li>所有者名は許可記録にあればそれ、無い市は課税台帳(公開)を地番・住所で引いて補っています(カードに出所を表示)。課税台帳の名義は土地所有者で、テナントの投資は SPE・家主名で出ることがあります。</li>
+      <li>金額の定義は市により異なります(申告工事費/評価額)。Express 許可の申告額は工事規模を表さないことがあり、その旨を注記しています。</li>
+    </ul>
+  </details>
+</main>
+</div>
+
+<footer>
+  <b>43 Sunsets Cockpit(BETA)</b> — 公的記録から中西部の設備投資シグナルを検出する無料の実験的サービスです。
+  出典: 各市建築許可の公開記録+各市課税台帳(所有者名の補完)+インディアナ州 DHS 建築計画審査 DB(取得日は射程欄のとおり)。事実欄はすべて記録の逐語転記、推論欄は当社 AI の読みで、必ず「推論」バッジを付けて分離表示しています。
+  情報は公的記録に基づきますが、正確性・完全性を保証するものではなく、投資・法務等の助言でもありません。個人名義の記録は個人名を表示しません。
+  ご意見・掲載に関するご連絡(掲載内容の訂正・削除のご依頼を含む)は <span class="mono">hello@43sunsets.com</span> または <a href="https://43sunsets.com/">43sunsets.com</a> まで。
+  © 43 Sunsets
+</footer>
+
+<div class="karte-bg" id="kartebg" hidden></div>
+
+<script>
+/* データ = ../data/permits.json(DB から export.py が書き出す。描画時に AI は動かない)
+   fact = 公的記録の逐語 / summary・infer・note = AI 付与(DB の enriched 層・出所つき) */
+let SIGNALS = [];   // 読み込み後に充填
+let META = null;
+let COMPANIES = [];
+const STATES = ["IL","IN","MI","OH","WI"];
+const CATEGORIES = ["製造能力の増強","物流・倉庫の新設","データセンター建設","研究・医療・航空宇宙"];
+const INDUSTRIES = ["半導体・電子","医薬・ライフサイエンス","航空宇宙","軍事・防衛","自動車部品","機械・金属","食品・素材加工","物流・EC","データセンター","その他製造","未分類"];
+const PAGE_SIZE = 8;
+let page = 1;
+
+const sel = {state:new Set(), category:new Set(), industry:new Set()};
+
+function visibleBase(){
+  const unc = document.getElementById("showunc").checked;
+  return unc ? SIGNALS : SIGNALS.filter(s=>s.category!=="未分類");
+}
+function countBy(field){
+  const c = {};
+  for(const s of visibleBase()) c[s[field]] = (c[s[field]]||0)+1;
+  return c;
+}
+function renderFilters(){
+  const defs = [["f-state","state",STATES],["f-category","category",CATEGORIES],["f-industry","industry",INDUSTRIES]];
+  for(const [elId, field, vocab] of defs){
+    const counts = countBy(field);
+    const el = document.getElementById(elId);
+    el.innerHTML = "";
+    for(const v of vocab){
+      const n = counts[v]||0;
+      const lab = document.createElement("label");
+      lab.className = "fitem";
+      lab.innerHTML = `<input type="checkbox" data-field="${field}" value="${v}"><span>${v}</span><span class="cnt">${n}</span>`;
+      el.appendChild(lab);
+    }
+  }
+  document.querySelectorAll('.fitem input[data-field]').forEach(cb=>{
+    cb.addEventListener("change", ()=>{
+      const set = sel[cb.dataset.field];
+      cb.checked ? set.add(cb.value) : set.delete(cb.value);
+      page = 1; render();
+    });
+  });
+}
+function filtered(){
+  const jp = document.getElementById("jponly").checked;
+  return visibleBase().filter(s=>
+    (sel.state.size===0    || sel.state.has(s.state)) &&
+    (sel.category.size===0 || sel.category.has(s.category)) &&
+    (sel.industry.size===0 || sel.industry.has(s.industry)) &&
+    (!jp || s.jp)
+  ).sort((a,b)=> b.date.localeCompare(a.date));
+}
+function fmtUsd(v){ return v==null ? "" : "$"+v.toLocaleString("en-US"); }
+function cardHtml(s){
+  const val = s.fact.value!=null ? `・評価額 <span class="mono">${fmtUsd(s.fact.value)}</span>` : "";
+  const jp  = s.jp ? `<span class="chip jp">日系</span>` : "";
+  const inf = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${s.infer}</div>` : "";
+  const name = s.karte
+    ? `<button class="companylink" data-karte="${s.karte}" title="企業カルテを開く">${s.company} ›</button>`
+    : s.company;
+  const nw = s.new ? `<span class="chip newchip" title="${META ? META.new_rule : ''}">NEW</span>` : "";
+  const note = s.note ? `<div class="loc" style="margin-top:4px">注記: ${s.note}</div>` : "";
+  const src = s.fact.owner_source && s.fact.owner_source.startsWith("parcel") ? `・所有者名は課税台帳から` : "";
+  const unc = s.category==="未分類" ? `<span class="chip" title="4 分類のどれでもない、または確信度が低い">未分類</span>` : `<span class="chip">${s.category}</span>`;
+  return `<article class="card">
+    <div class="head"><span class="state">${s.state}</span><h3>${name}</h3></div>
+    <div>${nw}${jp}${unc}<span class="chip">${s.industry}</span></div>
+    <div class="loc">${s.city}</div>
+    <div class="summary">${s.summary}</div>
+    ${note}
+    <div class="fact"><span class="flabel">事実(公的記録)</span>${s.fact.src}・${s.fact.ref}・<span class="mono">${s.date}</span>${val}${src}</div>
+    ${inf}
+  </article>`;
+}
+function render(){
+  const list = filtered();
+  const pages = Math.max(1, Math.ceil(list.length/PAGE_SIZE));
+  if(page>pages) page = pages;
+  const slice = list.slice((page-1)*PAGE_SIZE, page*PAGE_SIZE);
+
+  document.getElementById("hitnum").textContent = list.length;
+  const anyFilter = sel.state.size||sel.category.size||sel.industry.size||document.getElementById("jponly").checked;
+  const base = visibleBase().length;
+  document.getElementById("hitsub").textContent = anyFilter ? `(表示集合 ${base} 件中・新しい順)` : `(表示集合 ${base} 件・新しい順)`;
+
+  document.getElementById("grid").innerHTML = slice.map(cardHtml).join("");
+  document.getElementById("empty").hidden = list.length>0;
+
+  const pager = document.getElementById("pager");
+  pager.innerHTML = "";
+  if(pages>1){
+    const mk = (label, target, opts={})=>{
+      const b = document.createElement("button");
+      b.textContent = label;
+      if(opts.cur) b.className = "cur";
+      if(opts.disabled) b.disabled = true;
+      b.addEventListener("click", ()=>{ page = target; render(); document.querySelector("main").scrollIntoView({behavior:"smooth"}); });
+      pager.appendChild(b);
+    };
+    mk("‹", Math.max(1,page-1), {disabled:page===1});
+    for(let p=1;p<=pages;p++) mk(String(p), p, {cur:p===page});
+    mk("›", Math.min(pages,page+1), {disabled:page===pages});
+  }
+}
+document.getElementById("jponly").addEventListener("change", ()=>{ page=1; render(); });
+document.getElementById("showunc").addEventListener("change", ()=>{ page=1; renderFilters(); render(); });
+document.getElementById("clear").addEventListener("click", ()=>{
+  for(const k in sel) sel[k].clear();
+  document.querySelectorAll('.fitem input').forEach(cb=>cb.checked=false);
+  page = 1; render();
+});
+
+/* ---- CSV エクスポート(フィルタ適用後の集合。無フィルタなら全件・UTF-8 BOM 付き = Excel 想定) ---- */
+function csvEscape(v){ v = String(v==null?"":v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
+document.getElementById("export").addEventListener("click", ()=>{
+  const list = filtered();
+  const head = ["id","州","市・所在","会社","名義の種別","所有者の出所","業種","設備投資の種類","確信度","日付","申請日","評価額USD","日系","サマリー(AI付与)","注記(AI付与)","事実_出典","事実_参照","事実_逐語","推論(AI付与)"];
+  const rows = list.map(s=>[s.id,s.state,s.city,s.company,s.entity_type??"",s.fact.owner_source??"",s.industry,s.category,s.confidence??"",s.date,s.applied??"",s.fact.value??"",s.jp?"1":"",s.summary,s.note??"",s.fact.src,s.fact.ref,s.fact.verbatim,s.infer??""]);
+  const csv = "﻿" + [head, ...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n");
+  const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `43sunsets-cockpit-permits-${new Date().toISOString().slice(0,10)}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+});
+
+/* 企業カルテ: 事実 = 公的記録の逐語(2026-09-01 照会)/推論 = バッジ表示 */
+const KARTE = {
+ "C-001": {
+  entity:"Pictor 4435 S Western Boulevard LLC",
+  entityNote:"所有名義。連絡先住所が New York / Dallas と許可間で異なり、特別目的会社(SPE)とみられる — 事業主体の特定には登記・課税記録(PIN 経由)の第二ホップが要る(推論)。",
+  site:"2260 W 47th St, Chicago, IL(Ward 12・Community Area 61)",
+  pin:"20-06-302-020", lat:"41.808545", lng:"-87.681819",
+  sqft:{v:"137,410 SF", note:"許可記録の説明文の逐語から抽出"},
+  signals:[
+   {date:"2026-01-22", title:"新築 2 許可の申請開始", body:"application_start_date。発行の約 6 ヶ月前 — 検出の最速点。", kind:"fact"},
+   {date:"2026-07-09", title:"基礎工事の許可発行(#101078781・$1.5M)", body:"逐語: \"INSTALLATION OF AGGREGATE PIERS TO A DEPTH OF 19' BELOW GRADE… FOR A 137,410 SQFT STORAGE FACILITY\"・処理 168 日", kind:"fact"},
+   {date:"2026-07-17", title:"本体新築の許可発行(#101074708・$9.5M)", body:"逐語: \"NEW CONSTRUCTION FOR A 137,410 SF WAREHOUSE STORAGE FACILITY, CONTAINING A STORAGE (S-1)…\"・手数料 $74,297.63・処理 176 日", kind:"fact"},
+   {date:"2026-08-26", title:"火災報知システムの後続許可(B200506915)", body:"ASSOCIATED BUILDING PERMIT: 101074708 と明記・申請翌日発行(Express)。内装・設備段階への移行を示す。", kind:"fact"},
+  ],
+  status:"ACTIVE・INSPECTIONS(使用許可 CofO 取得前)= 検査段階(2026-09-01 照会時点)",
+  contacts:[
+   ["所有(OWNER OCCUPIED)","Pictor 4435 S Western Boulevard LLC(New York / Dallas)"],
+   ["設計","(個人名義のためマスク・Itasca, IL)"],
+   ["ゼネコン","ARCO/MURRAY National Construction(Downers Grove, IL)"],
+   ["電気","CSN Electric LLC(Shorewood)"],
+   ["冷凍・換気","RAM Mechanical Services, Inc.(Carol Stream)"],
+   ["配管","MVP Plumbing Corp(Montgomery)"],
+   ["組積","J.T.J. Contractors & Builders(Streamwood)"],
+   ["火災報知","CFP Life Safety Systems LLC(Chicago)"],
+  ],
+  infers:[
+   "冷凍(REFRIGERATION)業者が名を連ねる倉庫 = 冷蔵・低温物流施設の可能性。コールドチェーン系の設備・部材需要が後続する読み。",
+   "GC の ARCO/MURRAY は産業建築のデザインビルド大手 — 同社の進行案件を追うこと自体が中西部の産業投資の先行指標になる。",
+   "検査段階(CofO 前)= 稼働開始が近い。テナント/運用主体の判明が攻め時の合図。",
+  ],
+ },
+};
+function karteHtml(k, standalone){
+  const tl = k.signals.map(s=>`<div class="tl-item"><div class="tl-date">${s.date}</div><div class="tl-title">${s.title}</div><div class="tl-body">${s.body}</div></div>`).join("");
+  const ct = k.contacts.map(([r,n])=>`<dt>${r}</dt><dd>${n}</dd>`).join("");
+  const inf = k.infers.map(t=>`<div class="infer"><span class="badge-infer">推論</span>${t}</div>`).join("");
+  const closeBtn = standalone
+    ? `<button class="karte-close" onclick="window.close()">閉じる ×</button>`
+    : `<button class="karte-close" id="kclose">‹ 検出面に戻る</button>`;
+  return `<div class="karte">
+    <div class="karte-top">
+      <div>
+        <div class="kicker">43 SUNSETS COCKPIT — COMPANY KARTE(BETA)</div>
+        <h2>${k.entity}</h2>
+        <div class="ksub">${k.site}</div>
+      </div>
+      ${closeBtn}
+    </div>
+    <div class="infer"><span class="badge-infer">推論</span>${k.entityNote}</div>
+    <h3>シグナル時系列(この名義に紐づく許可の束ね)</h3>
+    <div class="timeline">${tl}</div>
+    <h3>現況</h3>
+    <div class="fact"><span class="flabel">事実(公的記録)</span>${k.status}</div>
+    <h3>物件</h3>
+    <dl class="kv">
+      <dt>規模</dt><dd>${k.sqft.v} <span style="color:var(--sub);font-size:11.5px">(${k.sqft.note})</span></dd>
+      <dt>課税地番 PIN</dt><dd class="mono">${k.pin}</dd>
+      <dt>座標</dt><dd class="mono">${k.lat}, ${k.lng}</dd>
+    </dl>
+    <h3>関係者(市記録の逐語・法人のみ表示/個人はマスク)</h3>
+    <dl class="kv">${ct}</dl>
+    <h3>読み(攻め筋の材料)</h3>
+    ${inf}
+    <div class="karte-note">本カルテの事実欄はシカゴ市建築許可の公開記録の逐語です(2026-09-01 直接照会)。推論欄は当社 AI の読みで、必ず「推論」バッジを付けています。情報の正確性・完全性は保証されません。個人名義の記録は個人名を表示しません。© 43 Sunsets</div>
+  </div>`;
+}
+/* カルテは新しいウィンドウで開く(不可ならオーバーレイ表示) */
+const KARTE_CSS = document.querySelector("style") ? document.querySelector("style").textContent : "";
+function openKarte(id){
+  const k = KARTE[id];
+  if(!k) return;
+  let w = null;
+  try{ w = window.open("", "_blank"); }catch(_){ w = null; }
+  if(w && w.document){
+    w.document.write(`<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>企業カルテ — ${k.entity}</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"><style>${KARTE_CSS}</style></head><body>${karteHtml(k, true)}</body></html>`);
+    w.document.close();
+  } else {
+    const bg = document.getElementById("kartebg");
+    bg.setAttribute("role","dialog");
+    bg.setAttribute("aria-modal","true");
+    bg.setAttribute("aria-label",`企業カルテ — ${k.entity}`);
+    bg.innerHTML = karteHtml(k, false);
+    bg.hidden = false;
+    bg.scrollTop = 0;
+    const close = document.getElementById("kclose");
+    close.addEventListener("click", ()=>{ bg.hidden = true; });
+    close.focus();
+  }
+}
+document.getElementById("grid").addEventListener("click", (e)=>{
+  const btn = e.target.closest(".companylink");
+  if(btn) openKarte(btn.dataset.karte);
+});
+document.addEventListener("keydown", (e)=>{
+  if(e.key==="Escape"){ document.getElementById("kartebg").hidden = true; }
+});
+
+function renderScope(){
+  const m = META; if(!m) return;
+  const f = m.funnel;
+  const rows = m.sources.map(s=>{
+    const ok = s.last_run_status==="ok" || s.last_run_status==="empty";
+    const st = s.last_run_status==="ok" ? "生" : s.last_run_status==="empty" ? "生(新着なし)" : s.last_run_status==="error" ? "源障害" : s.last_run_status;
+    const fresh = s.date_max ? `${s.date_min} 〜 ${s.date_max}` : "—";
+    return `<tr><td class="mono">${s.state}</td><td>${s.label}</td><td class="mono">${s.signals.toLocaleString()} 件</td><td class="mono">${fresh}</td><td class="mono">${s.owner_coverage.toLocaleString()}</td><td class="mono">${s.targets}</td><td class="${ok?'ok':'ng'}" title="${s.last_run_note||''}">${st}</td></tr>`;
+  }).join("");
+  document.getElementById("scopebox").innerHTML = `
+    <div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>
+      保存 <span class="mono">${f.signals_total.toLocaleString()}</span> 件 → AI 読取候補 <span class="mono">${f.candidates}</span> 件(方針 ${m.policy.id}) → 読了 <span class="mono">${f.enriched}</span> 件 → 設備投資シグナル <span class="mono">${f.targets}</span> 件 / 未分類 <span class="mono">${f.unclassified}</span> 件 / 未評価 <span class="mono">${f.unevaluated.toLocaleString()}</span> 件。
+      書き出し <span class="mono">${m.generated_at.slice(0,16).replace("T"," ")} UTC</span>・読み手: ${m.reader}</div>
+    <div class="tblwrap"><table>
+      <tr><th>州</th><th>源</th><th>保存件数</th><th>記録日の範囲(実測)</th><th>所有者名あり</th><th>シグナル</th><th>状態</th></tr>${rows}
+    </table></div>`;
+}
+async function boot(){
+  try{
+    const r = await fetch("../data/permits.json", {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json();
+    META = d.meta; SIGNALS = d.signals; COMPANIES = d.companies || [];
+    const unc = SIGNALS.filter(s=>s.category==="未分類").length;
+    document.getElementById("unccnt").textContent = unc;
+    const f = META.funnel;
+    document.getElementById("metaline").innerHTML = `建設許可シグナル 5 州(IL・IN・MI・OH・WI)/ 保存 <span class="mono">${f.signals_total.toLocaleString()}</span> 件・AI 読了 <span class="mono">${f.enriched}</span> 件・設備投資シグナル <span class="mono">${f.targets}</span> 件 / データ書き出し <span class="mono">${META.generated_at.slice(0,10)}</span>`;
+    renderFilters(); render(); renderScope();
+  }catch(err){
+    document.getElementById("metaline").textContent = "データの読み込みに失敗しました(" + err.message + ")。";
+    document.getElementById("empty").hidden = false;
+    document.getElementById("empty").textContent = "データ(permits.json)を読み込めませんでした。時間をおいて再読み込みしてください。";
+  }
+}
+boot();
+</script>
+</body>
+</html>
