@@ -67,7 +67,6 @@ export async function onRequestPost({ request, env }) {
       // KV is the record of truth; /services/inbox-count still counts it.
     }
   }
-  }
 
   return redirect(url, jobRef ? `/services/request/thanks/?job=${encodeURIComponent(jobRef)}` : "/services/request/thanks/");
 }
