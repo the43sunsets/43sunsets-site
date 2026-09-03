@@ -106,6 +106,13 @@ td.reason{white-space:normal; color:var(--sub); max-width:300px; font-size:12px;
 .st{display:inline-block; padding:1px 8px; border-radius:999px; font-size:11px; font-weight:700; letter-spacing:.04em;}
 .st.fresh{color:var(--fresh); background:var(--fresh-bg)} .st.stale{color:var(--stale); background:var(--stale-bg)} .st.overdue{color:var(--over); background:var(--over-bg)} .st.never{color:var(--never); background:var(--never-bg)} .st.na{color:var(--na); background:var(--na-bg)}
 .more{margin:10px 0 0; text-align:center;}
+.srcsum{font-size:12.5px; color:var(--sub); margin:8px 0 2px;}
+.srcsum .bad{color:var(--over); font-weight:700;}
+td.src{white-space:normal; min-width:170px; max-width:240px; font-size:12px;}
+td.src .subl{color:var(--sub); font-size:11px; margin-top:1px;}
+td.reason{max-width:180px;}
+th,td{padding:7px 8px;}
+table{table-layout:auto;}
 .more button{border:1px solid var(--line); background:var(--card); color:var(--ink); padding:7px 18px; border-radius:6px; cursor:pointer; font:inherit;}
 .defs{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px;}
 .def{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px; font-size:13px;}
@@ -124,7 +131,7 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
     <h1>データの鮮度と網羅</h1>
     <div class="meta" id="metaline">自治体ごとに「いつ取れたか・データはいつのものか・次はいつ動くか」を毎日再計算して表示します。読み込み中…</div>
   </div>
-  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
+  <div class="hdr-right"><a class="theme-btn" href="../permits/" style="text-decoration:none">← コックピットへ戻る</a><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
 </header>
 <script>
 /* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
@@ -162,26 +169,19 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
   </div>
   <div class="tip" id="tip" hidden></div>
 
-  <h2>自治体の一覧<span class="sub">人口順。「最終取得」= 当社が最後に記録を受け取った日時(米中部時間)/「最終データ日」= その記録に含まれる最新の許可日</span></h2>
+  <h2>自治体の一覧<span class="sub">人口順。「源」= その町のデータをどこから取っているか/「最終取得」= 当社が最後に記録を受け取った日時(米中部時間)/「最終データ日」= その記録に含まれる最新の許可日</span></h2>
+  <div class="srcsum" id="srcsum"></div>
   <div class="toolbar" id="toolbar"></div>
   <div class="tablewrap">
     <table id="table">
       <thead><tr id="thead-row">
-        <th class="sortable" data-k="name">自治体<span class="arr">↕</span></th><th class="sortable" data-k="population">人口<span class="arr">↕</span></th><th class="sortable" data-k="route">経路<span class="arr">↕</span></th><th class="sortable" data-k="method">取得方法<span class="arr">↕</span></th>
+        <th class="sortable" data-k="name">自治体<span class="arr">↕</span></th><th class="sortable" data-k="population">人口<span class="arr">↕</span></th><th class="sortable" data-k="_src">源(取得方法・周期)<span class="arr">↕</span></th><th class="sortable" data-k="_srcst">源の状態<span class="arr">↕</span></th>
         <th class="sortable" data-k="last_fetch_at">最終取得<span class="arr">↕</span></th><th class="sortable" data-k="last_record_date">最終データ日<span class="arr">↕</span></th><th class="sortable" data-k="records_60d">直近 60 日<span class="arr">↕</span></th>
-        <th class="sortable" data-k="status">判定<span class="arr">↕</span></th><th class="sortable" data-k="next_due_at">次回<span class="arr">↕</span></th><th class="sortable" data-k="_why">備考<span class="arr">↕</span></th></tr></thead>
+        <th class="sortable" data-k="status">判定<span class="arr">↕</span></th><th class="sortable" data-k="_why">備考<span class="arr">↕</span></th></tr></thead>
       <tbody id="tbody"></tbody>
     </table>
   </div>
   <div class="more" id="more"></div>
-
-  <h2>源別の状態<span class="sub">当社が自動取得している公開記録・FOIA 回答の源ごとに、最終実行と保存件数(コックピットの「収集網の健全性」から移設)</span></h2>
-  <div class="tablewrap">
-    <table id="srctable">
-      <thead><tr><th>州</th><th>源</th><th>保存件数</th><th>記録日の範囲(実測)</th><th>所有者名あり</th><th>シグナル</th><th>最終実行(米中部)</th><th>状態</th></tr></thead>
-      <tbody id="srcbody"><tr><td colspan="8" style="color:var(--sub)">読み込み中…</td></tr></tbody>
-    </table>
-  </div>
 
   <h2>この面の読み方</h2>
   <div class="defs">
@@ -214,7 +214,7 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
   const NAMES = {IL:"イリノイ", IN:"インディアナ", MI:"ミシガン", OH:"オハイオ", WI:"ウィスコンシン"};
   const ORDER = ["IL","IN","MI","OH","WI"];
   const ROUTE = {source:"公開記録", backstop:"郡台帳", foia:"FOIA", parcel:"地番", none:"—"};
-  const METHOD = {curl:"自動取得", browser:"ブラウザ取得", "actions-relay":"中継取得", pdf:"PDF 月報", foia:"FOIA 回答(月次)", email:"メール依頼", form:"フォーム依頼", portal:"ポータル依頼", phone:"電話/郵送", "login-required":"ログイン必須", unknown:"未調査"};
+  const METHOD = {curl:"公開記録を自動取得", browser:"公開記録をブラウザ取得", "actions-relay":"公開記録を中継取得", pdf:"PDF 月報", foia:"FOIA 回答", email:"メール依頼", form:"フォーム依頼", portal:"ポータル依頼", phone:"電話/郵送", "login-required":"ログイン必須", unknown:"未調査"};
   const PLATFORM = {"none-found":"ポータルなし", "bsa-online":"BS&A", opengov:"OpenGov", cityview:"CityView", cloudpermit:"Cloudpermit", communitycore:"CommunityCore", iworq:"iWorQ", "pdf-report":"PDF 報告", citizenserve:"Citizenserve", energov:"EnerGov", etrakit:"eTRAKiT", lama:"LAMA", "safebuilt-community-core":"CommunityCore", smartgov:"SmartGov", accela:"Accela", socrata:"Socrata", unknown:"未調査"};
   const STATUS_JA = {fresh:"最新", stale:"データが古い", overdue:"取得停止", never:"未取得", "n/a":"経路なし"};
   const fmtN = v => (v == null ? "—" : Number(v).toLocaleString("en-US"));
@@ -339,7 +339,7 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
   const STATUS_RANK = {fresh:0, stale:1, overdue:2, never:3, "n/a":4};
   document.querySelectorAll("th.sortable").forEach(th => th.onclick = () => {
     const k = th.dataset.k;
-    if (sortKey === k) sortDir = -sortDir; else { sortKey = k; sortDir = (k === "name" || k === "route" || k === "method" || k === "status" || k === "_why") ? 1 : -1; }
+    if (sortKey === k) sortDir = -sortDir; else { sortKey = k; sortDir = (k === "name" || k === "route" || k === "method" || k === "status" || k === "_why" || k === "_src" || k === "_srcst") ? 1 : -1; }
     limit = 60; renderTable();
   });
   function cmp(a, b){
@@ -362,6 +362,29 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
     if (r.route === "foia" && r.method === "phone") return "窓口がメール/フォームでない";
     return r.reason || "";
   };
+  // 源(どこから取っているか)と源の状態 — coverage.json の sources を町の行に結合
+  const SRC = Object.fromEntries((COV.sources || []).map(s => [s.source_id, s]));
+  const RUN = {ok:"生", empty:"生(新着なし)", error:"源障害", running:"実行中", never:"未実行"};
+  const RUN_RANK = {error:0, never:1, running:2, empty:3, ok:4};
+  const srcLabel = r => {
+    if (r.route === "foia") return "情報公開請求(FOIA)の回答";
+    if (r.route === "none") return "—";
+    const s = SRC[r.program];
+    // 「(公開記録)」は取得方法の小字と重複するので落とす。郡台帳などの注記は残す
+    return s ? s.label.replace("{j}", r.name.replace(/ (city|village|town)$/, "")).replace("(公開記録)", "") : (r.program || "—");
+  };
+  const srcState = r => {
+    if (r.route === "source" || r.route === "backstop") { const s = SRC[r.program]; return s ? (s.last_run_status || "never") : "never"; }
+    return null;
+  };
+  function renderSrcSummary(){
+    const list = (COV.sources || []).filter(s => s.state === state);
+    const n = {}; list.forEach(s => { n[s.last_run_status] = (n[s.last_run_status] || 0) + 1; });
+    const bad = list.filter(s => s.last_run_status === "error").map(s => s.label);
+    document.getElementById("srcsum").innerHTML = list.length
+      ? `源の健全性(${NAMES[state]}): ${list.length} 源のうち 生 ${(n.ok||0) + (n.empty||0)}${n.empty ? `(うち新着なし ${n.empty})` : ""}・<span class="${bad.length ? "bad" : ""}">源障害 ${n.error||0}</span>${bad.length ? `(${bad.join("・")})` : ""}。源が止まっている町は「源の状態」列に出ます。`
+      : `${NAMES[state]}に自動取得の源はまだありません。`;
+  }
   function renderTable(){
     const q = document.getElementById("q").value.trim().toLowerCase();
     toolbar.querySelectorAll(".chip[data-s]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.s === statusFilter)));
@@ -370,7 +393,7 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
     if (statusFilter) rows = rows.filter(r => r.status === statusFilter);
     if (countyFilter) rows = rows.filter(r => r.county_fips === countyFilter);
     if (q) rows = rows.filter(r => r.name.toLowerCase().includes(q));
-    rows.forEach(r => { r._why = why(r); });
+    rows.forEach(r => { r._why = why(r); r._src = srcLabel(r); const st = srcState(r); r._srcst = st == null ? null : RUN_RANK[st] ?? 9; r._srcstName = st; });
     rows.sort(cmp);
     document.querySelectorAll("th.sortable").forEach(th => {
       const on = th.dataset.k === sortKey;
@@ -378,35 +401,28 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
       th.querySelector(".arr").textContent = on ? (sortDir > 0 ? "↑" : "↓") : "↕";
     });
     const show = rows.slice(0, limit);
+    const srcChip = r => r._srcstName == null ? "—" : `<span class="st ${r._srcstName === "error" ? "overdue" : (r._srcstName === "ok" || r._srcstName === "empty") ? "fresh" : "never"}" title="${((SRC[r.program]||{}).last_run_note || "").replace(/"/g, "'")}">${RUN[r._srcstName] || r._srcstName}</span>`;
+    const subLine = r => {
+      if (r.route === "none") return "";
+      const m = METHOD[r.method] || r.method || "";
+      const cyc = r.next_due_at ? `次回 ${r.next_due_at.slice(5).replace("-", "/")}` : (r.cadence_days === 1 ? "毎日" : r.cadence_days ? `${r.cadence_days} 日周期` : "");
+      return `<div class="subl">${[m, cyc].filter(Boolean).join("・")}</div>`;
+    };
     document.getElementById("tbody").innerHTML = show.map(r => `<tr>
-      <td>${r.name}</td><td class="num">${fmtN(r.population)}</td><td>${ROUTE[r.route]||r.route}${r.program && r.route !== "foia" ? ` <span class="mono" style="color:var(--sub)">${r.program}</span>` : ""}</td>
-      <td>${r.route === "none" ? "—" : (METHOD[r.method]||r.method||"—")}</td><td class="mono">${r.last_fetch_at ? ct(new Date(r.last_fetch_at)) : "—"}</td><td class="mono">${fmtD(r.last_record_date)}</td>
+      <td>${r.name}</td><td class="num">${fmtN(r.population)}</td><td class="src">${r._src}${subLine(r)}</td>
+      <td>${srcChip(r)}</td><td class="mono" title="${r.last_fetch_at ? ct(new Date(r.last_fetch_at)) + " 米中部時間" : ""}">${r.last_fetch_at ? ct(new Date(r.last_fetch_at)).slice(0,10) : "—"}</td><td class="mono">${fmtD(r.last_record_date)}</td>
       <td class="num">${r.records_60d ? fmtN(r.records_60d) : "—"}</td><td><span class="st ${cls(r.status)}">${STATUS_JA[r.status]||r.status}</span></td>
-      <td class="mono">${r.next_due_at || (r.cadence_days === 1 ? "毎日" : r.cadence_days ? `${r.cadence_days} 日周期` : "—")}</td><td class="reason">${r._why}</td></tr>`).join("") ||
-      `<tr><td colspan="10" style="color:var(--sub)">条件に一致する自治体はありません。</td></tr>`;
+      <td class="reason">${r._why}</td></tr>`).join("") ||
+      `<tr><td colspan="9" style="color:var(--sub)">条件に一致する自治体はありません。</td></tr>`;
     const more = document.getElementById("more");
     more.innerHTML = rows.length > limit ? `<button id="morebtn">さらに表示(残り ${fmtN(rows.length - limit)} 自治体)</button>` : `<span style="color:var(--sub); font-size:12px">${fmtN(rows.length)} 自治体を表示</span>`;
     const mb = document.getElementById("morebtn"); if (mb) mb.onclick = () => { limit += 100; renderTable(); };
   }
 
-  // ---- 源別の状態(coverage.json の sources。無ければ permits.json の meta.sources に退避)
-  async function renderSources(){
-    let src = COV.sources;
-    if (!src) { try { src = (await fetch("../data/permits.json", {cache:"no-store"}).then(r => r.json())).meta.sources; } catch (e) { src = []; } }
-    const RUN = {ok:"生", empty:"生(新着なし)", error:"源障害", running:"実行中", never:"未実行"};
-    const rows = src.filter(s => s.state === state);
-    document.getElementById("srcbody").innerHTML = rows.map(s => {
-      const ok = s.last_run_status === "ok" || s.last_run_status === "empty";
-      return `<tr><td class="mono">${s.state}</td><td>${s.label}</td><td class="num">${fmtN(s.signals)}</td><td class="mono">${s.date_max ? `${s.date_min} 〜 ${s.date_max}` : "—"}</td>
-        <td class="num">${fmtN(s.owner_coverage)}</td><td class="num">${fmtN(s.targets)}</td><td class="mono">${s.last_run_at ? ct(new Date(s.last_run_at)) : "—"}</td>
-        <td><span class="st ${ok ? "fresh" : (s.last_run_status === "error" ? "overdue" : "never")}" title="${(s.last_run_note || "").replace(/"/g, "'")}">${RUN[s.last_run_status] || s.last_run_status}</span></td></tr>`;
-    }).join("") || `<tr><td colspan="8" style="color:var(--sub)">${NAMES[state]}に自動取得の源はまだありません。</td></tr>`;
-  }
-
   function render(){
     tabs.querySelectorAll("button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.st === state)));
     countyFilter = null;
-    renderKpis(); drawMap(); renderSide(); renderTable(); renderSources();
+    renderKpis(); drawMap(); renderSide(); renderSrcSummary(); renderTable();
   }
   render();
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => drawMap());
