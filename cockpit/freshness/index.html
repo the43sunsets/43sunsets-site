@@ -175,6 +175,14 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
   </div>
   <div class="more" id="more"></div>
 
+  <h2>源別の状態<span class="sub">当社が自動取得している公開記録・FOIA 回答の源ごとに、最終実行と保存件数(コックピットの「収集網の健全性」から移設)</span></h2>
+  <div class="tablewrap">
+    <table id="srctable">
+      <thead><tr><th>州</th><th>源</th><th>保存件数</th><th>記録日の範囲(実測)</th><th>所有者名あり</th><th>シグナル</th><th>最終実行(米中部)</th><th>状態</th></tr></thead>
+      <tbody id="srcbody"><tr><td colspan="8" style="color:var(--sub)">読み込み中…</td></tr></tbody>
+    </table>
+  </div>
+
   <h2>この面の読み方</h2>
   <div class="defs">
     <div class="def"><h3><span class="st fresh">fresh</span> 最新</h3><p>取得が周期どおりに続いていて、最新の許可日が 45 日以内。小規模な自治体で件数が少ないだけの場合も、源全体が新しければ fresh と判定します。</p></div>
@@ -381,10 +389,24 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
     const mb = document.getElementById("morebtn"); if (mb) mb.onclick = () => { limit += 100; renderTable(); };
   }
 
+  // ---- 源別の状態(coverage.json の sources。無ければ permits.json の meta.sources に退避)
+  async function renderSources(){
+    let src = COV.sources;
+    if (!src) { try { src = (await fetch("../data/permits.json", {cache:"no-store"}).then(r => r.json())).meta.sources; } catch (e) { src = []; } }
+    const RUN = {ok:"生", empty:"生(新着なし)", error:"源障害", running:"実行中", never:"未実行"};
+    const rows = src.filter(s => s.state === state);
+    document.getElementById("srcbody").innerHTML = rows.map(s => {
+      const ok = s.last_run_status === "ok" || s.last_run_status === "empty";
+      return `<tr><td class="mono">${s.state}</td><td>${s.label}</td><td class="num">${fmtN(s.signals)}</td><td class="mono">${s.date_max ? `${s.date_min} 〜 ${s.date_max}` : "—"}</td>
+        <td class="num">${fmtN(s.owner_coverage)}</td><td class="num">${fmtN(s.targets)}</td><td class="mono">${s.last_run_at ? ct(new Date(s.last_run_at)) : "—"}</td>
+        <td><span class="st ${ok ? "fresh" : (s.last_run_status === "error" ? "overdue" : "never")}" title="${(s.last_run_note || "").replace(/"/g, "'")}">${RUN[s.last_run_status] || s.last_run_status}</span></td></tr>`;
+    }).join("") || `<tr><td colspan="8" style="color:var(--sub)">${NAMES[state]}に自動取得の源はまだありません。</td></tr>`;
+  }
+
   function render(){
     tabs.querySelectorAll("button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.st === state)));
     countyFilter = null;
-    renderKpis(); drawMap(); renderSide(); renderTable();
+    renderKpis(); drawMap(); renderSide(); renderTable(); renderSources();
   }
   render();
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => drawMap());

@@ -216,10 +216,10 @@ a{color:var(--ai-accent);}
   <div class="pager" id="pager"></div>
 
   <details class="scope-details">
-    <summary>収集網の健全性と射程 — この面が「見ているもの」と「見ていないもの」</summary>
+    <summary>この面の読み方 — 数字の定義と、見ていないもの</summary>
     <div id="scopebox">読み込み中…</div>
     <ul id="scopenotes">
-      <li>本面は 5 州(Census East North Central)の悉皆ではありません。各州の主要な市・郡・州の公開許可記録を配線しており、郊外・小規模自治体の一部は未配線です(自治体ごとの状態は「<a href="../freshness/">データの鮮度と網羅</a>」ページ)。網羅は自治体数でなく許可ボリュームで測る方針です。</li>
+      <li>本面は 5 州の悉皆ではありません。どの自治体をいつ取れているか、源ごとの状態、郡別の網羅は「<a href="../freshness/">データの鮮度と網羅</a>」ページ(毎日更新)をご覧ください。</li>
       <li>「未評価」= 全件保存済みだが AI がまだ読んでいない行。「未分類」= 読んだが 4 分類のどれでもない、または確信度が低い行(トグルで表示可)。</li>
       <li>所有者名は許可記録にあればそれ、無い市は課税台帳(公開)を地番・住所で引いて補っています(カードに出所を表示)。課税台帳の名義は土地所有者で、テナントの投資は SPE・家主名で出ることがあります。</li>
       <li>金額の定義は市により異なります(申告工事費/評価額)。Express 許可の申告額は工事規模を表さないことがあり、その旨を注記しています。</li>
@@ -527,19 +527,12 @@ document.addEventListener("keydown", (e)=>{
 function renderScope(){
   const m = META; if(!m) return;
   const f = m.funnel;
-  const rows = m.sources.map(s=>{
-    const ok = s.last_run_status==="ok" || s.last_run_status==="empty";
-    const st = s.last_run_status==="ok" ? "生" : s.last_run_status==="empty" ? "生(新着なし)" : s.last_run_status==="error" ? "源障害" : s.last_run_status;
-    const fresh = s.date_max ? `${s.date_min} 〜 ${s.date_max}` : "—";
-    return `<tr><td class="mono">${s.state}</td><td>${s.label}</td><td class="mono">${s.signals.toLocaleString()} 件</td><td class="mono">${fresh}</td><td class="mono">${s.owner_coverage.toLocaleString()}</td><td class="mono">${s.targets}</td><td class="${ok?'ok':'ng'}" title="${s.last_run_note||''}">${st}</td></tr>`;
-  }).join("");
+  // 源ごとの表は 9/3 に「データの鮮度と網羅」ページへ移設(ここは漏斗の 1 行だけ)
+  const bad = m.sources.filter(s => s.last_run_status === "error").map(s => s.label.replace(/\(.*$/, ""));
   document.getElementById("scopebox").innerHTML = `
     <div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>
       保存 <span class="mono">${f.signals_total.toLocaleString()}</span> 件 → AI 読取候補 <span class="mono">${f.candidates}</span> 件(方針 ${m.policy.id}) → 読了 <span class="mono">${f.enriched}</span> 件 → 設備投資シグナル <span class="mono">${f.targets}</span> 件 / 未分類 <span class="mono">${f.unclassified}</span> 件 / 未評価 <span class="mono">${f.unevaluated.toLocaleString()}</span> 件。
-      書き出し <span class="mono">${fmtCT(m.generated_at)}</span>(米中部時間・UTC ${m.generated_at.slice(0,16).replace("T"," ")})・読み手: ${m.reader}</div>
-    <div class="tblwrap"><table>
-      <tr><th>州</th><th>源</th><th>保存件数</th><th>記録日の範囲(実測)</th><th>所有者名あり</th><th>シグナル</th><th>状態</th></tr>${rows}
-    </table></div>`;
+      書き出し <span class="mono">${fmtCT(m.generated_at)}</span>(米中部時間・UTC ${m.generated_at.slice(0,16).replace("T"," ")})・読み手: ${m.reader}${bad.length ? `<br><span class="ng">源障害:</span> ${bad.join("・")}(詳細は <a href="../freshness/">データの鮮度と網羅</a>)` : ""}</div>`;
 }
 /* 時刻は米中部時間(America/Chicago)を主に表示する — 読者は中西部にいる */
 function fmtCT(iso, withTime=true){
