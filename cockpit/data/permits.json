@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-03T02:56:42+00:00",
+"generated_at": "2026-09-03T03:26:26+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,16 +17,16 @@
 "funnel": {
 "signals_total": 21674,
 "candidates": 487,
-"enriched": 331,
-"targets": 25,
-"unclassified": 306,
-"unevaluated": 21343,
+"enriched": 487,
+"targets": 32,
+"unclassified": 455,
+"unevaluated": 21187,
 "by_category": {
 "データセンター建設": 4,
-"未分類": 306,
-"物流・倉庫の新設": 6,
-"研究・医療・航空宇宙": 12,
-"製造能力の増強": 3
+"未分類": 455,
+"物流・倉庫の新設": 7,
+"研究・医療・航空宇宙": 15,
+"製造能力の増強": 6
 }
 },
 "sources": [
@@ -140,7 +140,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-08-31",
 "owner_coverage": 207,
-"targets": 0
+"targets": 2
 },
 {
 "source_id": "SRC-019",
@@ -168,7 +168,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-11-20",
 "owner_coverage": 3307,
-"targets": 0
+"targets": 1
 },
 {
 "source_id": "SRC-022",
@@ -182,16 +182,16 @@
 "date_min": "2026-07-01",
 "date_max": "2026-09-02",
 "owner_coverage": 2662,
-"targets": 0
+"targets": 4
 },
 {
 "source_id": "SRC-023",
 "state": "IL",
 "jurisdiction": "Citizenserve 5 自治体",
 "label": "Citizenserve(ブラウザ層・Lombard/Machesney Park…)",
-"last_run_status": "error",
-"last_run_at": "2026-09-03T02:47:06Z",
-"last_run_note": "Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://www4.citizenserve.com/Portal/PortalController?Action=showSearchPage&ctzPagePrefix=Portal_&installationI",
+"last_run_status": "ok",
+"last_run_at": "2026-09-03T03:08:21Z",
+"last_run_note": "ingested from citizenserve-maryville-20260903T0305Z.json",
 "signals": 789,
 "date_min": "2026-07-01",
 "date_max": "2026-09-02",
@@ -259,6 +259,286 @@
 },
 "signals": [
 {
+"id": "S-19425",
+"state": "IL",
+"city": "Highland Park・734 CENTRAL AVE HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2025-12-30",
+"jp": false,
+"new": true,
+"summary": "Highland Park 734 Central Ave 6 階建て 11 戸の集合住宅新築 $6.5M(Building Permit - Commercial Construction (includes condos & townhomes))。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BCOM-2025-00253 Building Permit - Commercial Construction (includes condos & townhomes)",
+"value": 6500000.0,
+"verbatim": "NEW CONSTRUCTION 6-STORY 11-UNIT MULTI-FAMILY DEVELOPMENT. / Building Permit - Commercial Construction (includes condos & townhomes) / Building",
+"gc": null,
+"pin": "16233140020000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19427",
+"state": "IL",
+"city": "Highland Park・734 CENTRAL AVE HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2026-01-23",
+"jp": false,
+"new": true,
+"summary": "Highland Park 734 Central Ave 6 階建て 11 戸の集合住宅新築 $6.5M(Mechanical Sub-Permit)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 MECH-2026-00561 Mechanical Sub-Permit",
+"value": 6500000.0,
+"verbatim": "NEW CONSTRUCTION 6-STORY 11-UNIT MULTI-FAMILY DEVELOPMENT. / Mechanical Sub-Permit / Mechanical - Sub-Permit",
+"gc": null,
+"pin": "16233140020000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19428",
+"state": "IL",
+"city": "Highland Park・734 CENTRAL AVE HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2026-01-23",
+"jp": false,
+"new": true,
+"summary": "Highland Park 734 Central Ave 6 階建て 11 戸の集合住宅新築 $6.5M(Drainage & Grading - Sub-Permit)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 DRNG-2026-00247 Drainage & Grading - Sub-Permit",
+"value": 6500000.0,
+"verbatim": "NEW CONSTRUCTION 6-STORY 11-UNIT MULTI-FAMILY DEVELOPMENT. / Drainage & Grading - Sub-Permit / Drainage & Grading - Sub-Permit",
+"gc": null,
+"pin": "16233140020000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19429",
+"state": "IL",
+"city": "Highland Park・734 CENTRAL AVE HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2026-01-23",
+"jp": false,
+"new": true,
+"summary": "Highland Park 734 Central Ave 6 階建て 11 戸の集合住宅新築 $6.5M(Plumbing Sub-Permit)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 PLMB-2026-01622 Plumbing Sub-Permit",
+"value": 6500000.0,
+"verbatim": "NEW CONSTRUCTION 6-STORY 11-UNIT MULTI-FAMILY DEVELOPMENT. / Plumbing Sub-Permit / Plumbing - Sub-Permit",
+"gc": null,
+"pin": "16233140020000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19430",
+"state": "IL",
+"city": "Highland Park・734 CENTRAL AVE HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2026-01-23",
+"jp": false,
+"new": true,
+"summary": "Highland Park 734 Central Ave 6 階建て 11 戸の集合住宅新築 $6.5M(Exterior Work - Sub-Permit)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 EXTR-2026-02550 Exterior Work - Sub-Permit",
+"value": 6500000.0,
+"verbatim": "ROOF-NEW CONSTRUCTION 6-STORY 11-UNIT MULTI-FAMILY DEVELOPMENT. / Exterior Work - Sub-Permit / Exterior - Sub-Permit",
+"gc": null,
+"pin": "16233140020000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19431",
+"state": "IL",
+"city": "Highland Park・734 CENTRAL AVE HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2026-01-23",
+"jp": false,
+"new": true,
+"summary": "Highland Park 734 Central Ave 6 階建て 11 戸の集合住宅新築 $6.5M(Electrical Sub-Permit)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 ELEC-2026-01171 Electrical Sub-Permit",
+"value": 6500000.0,
+"verbatim": "NEW CONSTRUCTION 6-STORY 11-UNIT MULTI-FAMILY DEVELOPMENT. / Electrical Sub-Permit / Electrical - Sub-Permit",
+"gc": null,
+"pin": "16233140020000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-15269",
+"state": "IL",
+"city": "Arlington Heights・2735 N VISTA RD ARLINGTON HEIGHTS IL 60004",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2025-09-23",
+"jp": false,
+"new": true,
+"summary": "Arlington Heights 戸建て新築 $1.6M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDR2025-01872 New Construction - Single Family Residential Structure",
+"value": 1574482.75,
+"verbatim": "THE PROPOSED PROJECT IS A NEW 2-STORY WOOD-FRAMED DETACHED SINGLE FAMILY RESIDENCE ON A CONVENTIONAL CAST-IN-PLACE CONCRETE FOUNDATION SYSTEM. A NEW CONVENTIONALLY FRAMED DETACHED GARAGE IS ALSO INCLUDED IN THE THE PROJECT. PROJECT FOLLOWS IECC PRESCRIPTIVE PATH. \n\nFIRE PROTECTION SYSTEM SHALL BE SUBMITTED UNDER A SEPERATE PERMIT.\n\nTHIS PROJECT CONTAINS NO GAS SERVICE, EQUIPMENT, OR APPLIANCES.\n\nE",
+"gc": null,
+"pin": "03084000070000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-21660",
+"state": "IL",
+"city": "Elmhurst・303 W ELM PARK AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2026-09-01",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 不動産譲渡印紙 $1.1M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010855-2026 Transfer Stamp",
+"value": 1100000.0,
+"verbatim": "9/2/26 please schedule sump pump inspection / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0602400004",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-7138",
 "state": "IL",
 "city": "Chicago・536 N WESTERN AVE",
@@ -291,6 +571,41 @@
 "batch": "02",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-16851",
+"state": "IL",
+"city": "Park Ridge・2800 OAKTON ST PARK RIDGE IL 60068",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-01",
+"applied": "2025-01-08",
+"jp": false,
+"new": true,
+"summary": "Park Ridge ゴルフ練習場のポール・ネット更新 $2.5M。",
+"infer": null,
+"note": "レジャー。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CM-25-0006 Commercial Remodel",
+"value": 2500000.0,
+"verbatim": "Replacement of driving range poles and netting / Commercial Remodel / Remodel",
+"gc": null,
+"pin": "09223130020000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -469,6 +784,41 @@
 }
 },
 {
+"id": "S-19376",
+"state": "IL",
+"city": "Highland Park・444 CEDAR AVE HIGHLAND PARK IL 60035",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-01",
+"applied": "2026-07-09",
+"jp": false,
+"new": true,
+"summary": "Highland Park 住宅の外装改修 $439k。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BRES-2026-01171 Building Permit - Residential Construction (single family homes only)",
+"value": 439322.0,
+"verbatim": "Coordinated exterior remodel at 444 Cedar Avenue, Highland Park, IL. Remove existing EIFS/Dryvit cladding and install new exterior wall assembly including weather-resistive barrier, vertical rainscreen furring, and ChamClad engineered exterior wall and soffit panels. Replace windows and doors with new Marvin units (Ultimate, Modern, and Essential). Remove and replace fascia with TruExterior poly-a",
+"gc": null,
+"pin": "16253080200000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-988",
 "state": "IL",
 "city": "Chicago・435 N MICHIGAN AVE",
@@ -539,6 +889,76 @@
 }
 },
 {
+"id": "S-15184",
+"state": "IL",
+"city": "Arlington Heights・909 E GOLF RD ARLINGTON HEIGHTS IL 60005",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-31",
+"applied": "2026-04-02",
+"jp": false,
+"new": true,
+"summary": "Arlington Heights 集合住宅 The Avery のリーシング・フィットネス棟新築 $1.0M。",
+"infer": null,
+"note": "住宅付帯。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC2026-00068 New Construction - Commercial/Industrial",
+"value": 1000000.0,
+"verbatim": "THE AVERY AT ARLINGTON LAKES---New construction of a single story, frame building for a Leasing and Fitness Center at a multifamily property. / New Construction - Commercial/Industrial / New Construction",
+"gc": null,
+"pin": "08151040380000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17621",
+"state": "IL",
+"city": "Elmhurst・256 N YORK ST ELMHURST IL 60126",
+"company": "MORNINGSIDE ELMHURST LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-28",
+"applied": "2026-08-28",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 256 N York St の大型商業不動産売買(4 PIN)$91.3M の譲渡印紙。",
+"infer": "売買であり建設ではない。買い手は Morningside Elmhurst LLC(開発 SPE)= 再開発の前段階の可能性(推論)。",
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010791-2026 Transfer Stamp",
+"value": 91250000.0,
+"verbatim": "THIS IS A LARGE COMMERCIAL SALE TRANSACTION WITH 4 PINS AND MULTIPLE ADDRESSES\n9/2/26 please upload deed, mydec, and sales contract\n9/2/26 please schedule sump inspection / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0602206019",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-1200",
 "state": "MI",
 "city": "Detroit・5850 Michigan Ave",
@@ -571,6 +991,41 @@
 "batch": "05",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:44:38+00:00"
+}
+},
+{
+"id": "S-17455",
+"state": "IL",
+"city": "Elmhurst・275 E THIRD ST ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-28",
+"applied": "2026-08-21",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 不動産譲渡印紙 $2.1M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010672-2026 Transfer Stamp",
+"value": 2070000.0,
+"verbatim": "8/24/26 PLEASE UPLOAD DEED AND MYDEC AND SCHEDULE SUMP PUMP INSPECTION / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0601106035",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -714,6 +1169,41 @@
 }
 },
 {
+"id": "S-17459",
+"state": "IL",
+"city": "Elmhurst・565 OLD YORK RD ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-28",
+"applied": "2026-04-02",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 不動産譲渡印紙 $1.1M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-008363-2026 Exempt Transfer Stamp",
+"value": 1100000.0,
+"verbatim": "Transfer into Trust\n4/3/26 please schedule sump inspection / Exempt Transfer Stamp / Exempt Transfer Stamp",
+"gc": null,
+"pin": "0613308006",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-943",
 "state": "IL",
 "city": "Chicago・444 N WABASH AVE",
@@ -749,6 +1239,41 @@
 }
 },
 {
+"id": "S-19278",
+"state": "IL",
+"city": "Highland Park・1726 PARK AVE W HIGHLAND PARK IL 60035",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-27",
+"applied": "2026-07-01",
+"jp": false,
+"new": true,
+"summary": "Highland Park 戸建て新築 $2.8M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 WDP-2026-00048 Watershed Development Permit",
+"value": 2750000.0,
+"verbatim": "Application for Watershed Development Permit / Watershed Development Permit / Watershed Development Permit",
+"gc": null,
+"pin": "16214020240000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-1191",
 "state": "OH",
 "city": "Cincinnati・792 E MCMILLAN ST",
@@ -781,6 +1306,41 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"id": "S-19280",
+"state": "IL",
+"city": "Highland Park・1726 PARK AVE W HIGHLAND PARK IL 60035",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-27",
+"applied": "2026-02-13",
+"jp": false,
+"new": true,
+"summary": "Highland Park 戸建て新築 $2.2M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BRES-2026-01028 Building Permit - Residential Construction (single family homes only)",
+"value": 2200000.0,
+"verbatim": "New construction of single family home / Building Permit - Residential Construction (single family homes only) / Building",
+"gc": null,
+"pin": "16214020240000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -854,6 +1414,41 @@
 }
 },
 {
+"id": "S-17437",
+"state": "IL",
+"city": "Elmhurst・166 N MAPLE AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-27",
+"applied": "2026-08-27",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 不動産譲渡印紙 $1.3M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010770-2026 Exempt Transfer Stamp",
+"value": 1300000.0,
+"verbatim": "exempt stamp for quit claim deed to correct title'\n8/27/26 taking angelo battaglia name of deed and changing to sole ownership of rosalia battaglia\n8/27/26 kristy baerenzklau picked up / Exempt Transfer Stamp / Exempt Transfer Stamp",
+"gc": null,
+"pin": "0602211020",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-945",
 "state": "IL",
 "city": "Chicago・4300 N NARRAGANSETT AVE",
@@ -921,6 +1516,41 @@
 "batch": "01",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-19432",
+"state": "IL",
+"city": "Highland Park・734 CENTRAL AVE HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-26",
+"applied": "2026-06-29",
+"jp": false,
+"new": true,
+"summary": "Highland Park 734 Central Ave 6 階建て 11 戸の集合住宅新築 $6.5M(Watershed Development Permit)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 WDP-2026-00046 Watershed Development Permit",
+"value": 6500000.0,
+"verbatim": "NEW CONSTRUCTION 6-STORY 11-UNIT MULTI-FAMILY DEVELOPMENT. / Watershed Development Permit / Watershed Development Permit",
+"gc": null,
+"pin": "16233140020000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -994,6 +1624,41 @@
 }
 },
 {
+"id": "S-14986",
+"state": "IL",
+"city": "Arlington Heights・1600 E EUCLID AVE ARLINGTON HEIGHTS IL 60004",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-26",
+"applied": "2026-03-09",
+"jp": false,
+"new": true,
+"summary": "Arlington Heights 戸建て新築 $1.5M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDR2026-00232 New Construction - Single Family Residential Structure",
+"value": 1500000.0,
+"verbatim": "We will be demolishing an old structure that is currently on the lot,and building a new construction 2-story single family residents.\n / New Construction - Single Family Residential Structure / New Construction",
+"gc": null,
+"pin": "03281000050000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-1452",
 "state": "OH",
 "city": "Columbus・2750 BRICE RD",
@@ -1026,6 +1691,41 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"id": "S-15305",
+"state": "IL",
+"city": "Arlington Heights・342 E RAND RD ARLINGTON HEIGHTS IL 60004",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-26",
+"applied": "2026-06-29",
+"jp": false,
+"new": true,
+"summary": "Arlington Heights Men's Wearhouse 移転店舗の内装 $813k。",
+"infer": null,
+"note": "小売。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC2026-00162 Alteration, Remodel, Repair - Commercial/Industrial/Multi-Family",
+"value": 813484.0,
+"verbatim": "Tenant Improvement to an existing retail space.\nThe Men's Wearhouse #4611.  Store is relocating from 202 E Rand Rd. / Alteration, Remodel, Repair - Commercial/Industrial/Multi-Family / Alteration, Remodel, Repair",
+"gc": null,
+"pin": "03173010220000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -1096,6 +1796,76 @@
 "batch": "01",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-19265",
+"state": "IL",
+"city": "Highland Park・1700 OLD DEERFIELD RD HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-25",
+"applied": "2026-05-29",
+"jp": false,
+"new": true,
+"summary": "Highland Park 1700 Old Deerfield Rd の解体に伴う配管切り離し $4.3M(副許可)。",
+"infer": "$4.3M は親プロジェクトの額で、内容は記録にない。",
+"note": "親プロジェクト不明(未分類 low)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 PLMB-2026-01808 Plumbing Sub-Permit",
+"value": 4300000.0,
+"verbatim": "Demolition Disconnects in alleyway / Plumbing Sub-Permit / Plumbing - Sub-Permit",
+"gc": null,
+"pin": "16273020080000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19266",
+"state": "IL",
+"city": "Highland Park・1700 OLD DEERFIELD RD HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-25",
+"applied": "2026-05-29",
+"jp": false,
+"new": true,
+"summary": "同 路地の上下水接続に伴う道路占用 $4.3M(副許可)。",
+"infer": null,
+"note": "親プロジェクト不明(未分類 low)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 OBST-2026-00082 Obstruction - Sub-Permit",
+"value": 4300000.0,
+"verbatim": "Obstruction of ROW during Ally connecting sanitary and storm / Obstruction - Sub-Permit / Obstruction - Sub-Permit",
+"gc": null,
+"pin": "16273020080000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -1344,6 +2114,41 @@
 }
 },
 {
+"id": "S-17373",
+"state": "IL",
+"city": "Elmhurst・611 W FAY AVE ELMHURST IL 60126",
+"company": "611 W FAY LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-25",
+"applied": "2026-05-15",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 戸建て新築/使用許可 $1.0M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDR-009169-2026 Building New Construction - Residential",
+"value": 1000000.0,
+"verbatim": "Demo existing home and rebuild new home\nPermit Terms:\n**PERMITS ARE GOOD FOR 1 YEAR FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 30DAYS. AFTER THE 30 DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER DAY WILL BE INVOICED FOR EACH DAY THE PERMIT IS NOT COMPLETED. PERMITS ARE NOT CONSIDERED ",
+"gc": null,
+"pin": "0334403019",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-890",
 "state": "IL",
 "city": "Chicago・205 W SUPERIOR ST",
@@ -1414,6 +2219,41 @@
 }
 },
 {
+"id": "S-15232",
+"state": "IL",
+"city": "Arlington Heights・1322 N ILLINOIS AVE ARLINGTON HEIGHTS IL 60004",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-24",
+"applied": "2026-08-23",
+"jp": false,
+"new": true,
+"summary": "Arlington Heights 戸建ての屋根葺き替え $2.96M(金額は誤入力の疑い)。",
+"infer": null,
+"note": "住宅・金額異常。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDR2026-01741 Re-Roof - Residential Single Family",
+"value": 2957200.0,
+"verbatim": "COMPLETE TEAR-OFF & RE-SHINGLE\nNEW GUTTERS & DOWNSPOUTS / Re-Roof - Residential Single Family / Re-Roof Single Family Residence",
+"gc": null,
+"pin": "03193170250000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-884",
 "state": "IL",
 "city": "Chicago・4943 N DAMEN AVE",
@@ -1481,6 +2321,181 @@
 "batch": "02",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-17478",
+"state": "IL",
+"city": "Elmhurst・130 N WALNUT ST ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-24",
+"applied": "2026-08-21",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 不動産譲渡印紙 $1.7M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010663-2026 Exempt Transfer Stamp",
+"value": 1700000.0,
+"verbatim": "Property transferred to revocable living trusts. No consideration.\n8/24/26 PLEASE SCHEDULE SUMP PUMP INSPECTION / Exempt Transfer Stamp / Exempt Transfer Stamp",
+"gc": null,
+"pin": "0602113029",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-18950",
+"state": "IL",
+"city": "Highland Park・432 MORAINE RD HIGHLAND PARK IL 60035",
+"company": "626 FOREST LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-24",
+"applied": "2026-05-12",
+"jp": false,
+"new": true,
+"summary": "Highland Park 432 Moraine Rd 戸建て新築 $1.5M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TREE-2026-02511 Tree Preservation/Removal (Construction)",
+"value": 1500000.0,
+"verbatim": "A Single-Family Residential New Construction Porject / Tree Preservation/Removal (Construction) / Tree Preservation/Removal (Construction) ",
+"gc": null,
+"pin": "16143150020000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19441",
+"state": "IL",
+"city": "Highland Park・432 MORAINE RD HIGHLAND PARK IL 60035",
+"company": "626 FOREST LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-24",
+"applied": "2026-05-12",
+"jp": false,
+"new": true,
+"summary": "Highland Park 432 Moraine Rd 戸建て新築 $1.5M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BRES-2026-01106 Building Permit - Residential Construction (single family homes only)",
+"value": 1500000.0,
+"verbatim": "A Single-Family Residential New Construction Porject / Building Permit - Residential Construction (single family homes only) / Building",
+"gc": null,
+"pin": "16143150020000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17558",
+"state": "IL",
+"city": "Elmhurst・215 E FIRST ST ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-24",
+"applied": "2026-08-21",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 不動産譲渡印紙 $1.4M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010667-2026 Transfer Stamp",
+"value": 1350000.0,
+"verbatim": "8/24/26 PLEASE SCHEDULE SUMP INSPECTION AND CORRECT BUYER BETWEEN DOCS / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0601121009",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-15131",
+"state": "IL",
+"city": "Arlington Heights・333 W MAUDE AVE ARLINGTON HEIGHTS IL 60004",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-24",
+"applied": "2026-04-01",
+"jp": false,
+"new": true,
+"summary": "Arlington Heights Hasbrook Park の遊具・人工芝 $598k。",
+"infer": null,
+"note": "公共(公園)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 ESD2026-00006 Site Development - Commercial/Industrial/Institutional/Mixed Use",
+"value": 598000.0,
+"verbatim": "Improvements are being undertaken at the playground at Hasbrook Park. Improvements include new play equipment, synthetic turf installation, underdrain system improvements, grading improvements, fencing improvements, pavement improvements, and ADA improvements. Exterior drainage and fencing permits have also been submitted. / Site Development - Commercial/Industrial/Institutional/Mixed Use / Commer",
+"gc": null,
+"pin": "03192080010000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -1799,6 +2814,111 @@
 }
 },
 {
+"id": "S-18927",
+"state": "IL",
+"city": "Highland Park・2939 SUMMIT AVE HIGHLAND PARK IL 60035",
+"company": "BOARD OF EDUCATION DISTRICT 112",
+"entity_type": "public",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-20",
+"applied": "2026-05-01",
+"jp": false,
+"new": true,
+"summary": "Highland Park Wayne Thomas 小学校の改修(駐車場)$4.5M。",
+"infer": null,
+"note": "学校(公共)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 EXTR-2026-02736 Exterior Work - Parking Lot",
+"value": 4500000.0,
+"verbatim": "Wayne Thomas Elementary School Renovation / Exterior Work - Parking Lot / Exterior - Parking Lot",
+"gc": null,
+"pin": "16151100370000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-18939",
+"state": "IL",
+"city": "Highland Park・2939 SUMMIT AVE HIGHLAND PARK IL 60035",
+"company": "BOARD OF EDUCATION DISTRICT 112",
+"entity_type": "public",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-20",
+"applied": "2026-05-27",
+"jp": false,
+"new": true,
+"summary": "同 小学校改修(樹木)$4.5M。",
+"infer": null,
+"note": "学校(公共)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TREE-2026-02546 Tree Preservation/Removal (Construction)",
+"value": 4500000.0,
+"verbatim": "Wayne Thomas Elementary School Renovation / Tree Preservation/Removal (Construction) / Tree Preservation/Removal (Construction) ",
+"gc": null,
+"pin": "16151100370000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17353",
+"state": "IL",
+"city": "Elmhurst・265 S KENILWORTH AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-20",
+"applied": "2026-08-20",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 不動産譲渡印紙 $3.6M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010641-2026 Transfer Stamp",
+"value": 3600000.0,
+"verbatim": "DUPLICATE STAMP APPLICATION - SEE PERMIT #: \nTS-010642-2026 / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0601313005",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-844",
 "state": "IL",
 "city": "Chicago・330 E 133RD ST",
@@ -1939,6 +3059,41 @@
 }
 },
 {
+"id": "S-17577",
+"state": "IL",
+"city": "Elmhurst・207 N LARCH AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-20",
+"applied": "2026-08-18",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 不動産譲渡印紙 $1.3M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010614-2026 Transfer Stamp",
+"value": 1310000.0,
+"verbatim": "8/19/26 PLEASE SCHEDULE SUMP PUMP INSPECTION, UPLOAD DEED, MYDEC, AND SALES CONTRACT / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0602213054",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-837",
 "state": "IL",
 "city": "Chicago・932 N RUSH ST",
@@ -2006,6 +3161,41 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"id": "S-17441",
+"state": "IL",
+"city": "Elmhurst・213 N WALNUT ST ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-20",
+"applied": "2026-08-20",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 不動産譲渡印紙 $1.2M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010643-2026 Exempt Transfer Stamp",
+"value": 1162000.0,
+"verbatim": "8/24/26 PLEASE SCHEDULE SUMP PUMP INSPECTION / Exempt Transfer Stamp / Exempt Transfer Stamp",
+"gc": null,
+"pin": "0602110015",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -2324,6 +3514,41 @@
 }
 },
 {
+"id": "S-17542",
+"state": "IL",
+"city": "Elmhurst・305 S CHANDLER AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-18",
+"applied": "2026-08-17",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.2M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010596-2026 Transfer Stamp",
+"value": 1250000.0,
+"verbatim": "8/18/26 please upload deed, mydec, and schedule sump pump inspection / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0601322007",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-775",
 "state": "IL",
 "city": "Chicago・8700 W BRYN MAWR AVE",
@@ -2429,6 +3654,111 @@
 }
 },
 {
+"id": "S-17609",
+"state": "IL",
+"city": "Elmhurst・711 S WASHINGTON ST ELMHURST IL 60126",
+"company": "DOHERTY CUSTOM HOMES INC",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-18",
+"applied": "2026-06-22",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 戸建て新築/使用許可 $1.0M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDR-009747-2026 Building New Construction - Residential",
+"value": 1000000.0,
+"verbatim": "build new single family home\nPermit Terms:\n**PERMITS ARE GOOD FOR 1 YEAR FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 30DAYS. AFTER THE 30 DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER DAY WILL BE INVOICED FOR EACH DAY THE PERMIT IS NOT COMPLETED. PERMITS ARE NOT CONSIDERED COMPLETED U",
+"gc": null,
+"pin": "0611430013",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-16853",
+"state": "IL",
+"city": "Park Ridge・1775 DEMPSTER ST PARK RIDGE IL 60068",
+"company": "TUTEN",
+"entity_type": "unknown",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-17",
+"applied": "2026-01-21",
+"jp": false,
+"new": false,
+"summary": "同病院 正面入口の舗装更新と貯留施設の改修 $2.1M。",
+"infer": null,
+"note": "外構・雨水。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CM-26-0021 Commercial - Flood Control - Stormwater",
+"value": 2110000.0,
+"verbatim": "Replace porous brick paver drive at the hospital main entrance with concrete pavement, modify existing detention basins and facilities, new volume control basin / Commercial - Flood Control - Stormwater / Flood Control - Stormwater",
+"gc": null,
+"pin": "09222000290000",
+"owner_source": "applicant:SRC-021"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-18608",
+"state": "IL",
+"city": "Niles・6960 W OAKTON ST NILES IL 60714",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-17",
+"applied": "2025-12-02",
+"jp": false,
+"new": false,
+"summary": "Niles 6960 W Oakton St(図書館)の下層・2 階内装改修(学習室・メーカースペース)$1.8M。",
+"infer": null,
+"note": "公共(図書館)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDNR-01143-02-12-2025 Building Non-Residential (Alteration)",
+"value": 1800000.0,
+"verbatim": "Online INTERIOR RENOVATION TO PORTIONS OF THE LOWER LEVEL & SECOND FLOOR; INCL. NEW STUDY ROOMS, RESTROOMS, AND A MAKERSPACE / CLASSROOM. / Building Non-Residential (Alteration) / Alteration",
+"gc": null,
+"pin": "10193200180000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-745",
 "state": "IL",
 "city": "Chicago・6045 S KENWOOD AVE",
@@ -2499,6 +3829,41 @@
 }
 },
 {
+"id": "S-16965",
+"state": "IL",
+"city": "Elmhurst・333 W ELM PARK AVE ELMHURST IL 60126",
+"company": "EQUITY TRUST COMPANY",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-17",
+"applied": "2026-08-17",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 戸建て新築/使用許可 $1.0M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CO-010584-2026 Certificate of Occupancy",
+"value": 1000000.0,
+"verbatim": "Certificate Of Occupancy - Single family home\n**Demo done in Sept. 2024**\n**PERMITS ARE GOOD FOR 1 YEAR FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 30DAYS. AFTER THE 30 DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER DAY WILL BE INVOICED FOR EACH DAY THE PERMIT IS NOT COMPLETED. PERMITS",
+"gc": null,
+"pin": "0602315012",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-734",
 "state": "IL",
 "city": "Chicago・5000 S UNION AVE",
@@ -2534,6 +3899,41 @@
 }
 },
 {
+"id": "S-17401",
+"state": "IL",
+"city": "Elmhurst・600 N COUNTY LINE RD ELMHURST IL 60126",
+"company": "MCMASTER CARR SUPPLY CO",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "物流・EC",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-14",
+"applied": "2026-04-14",
+"jp": false,
+"new": false,
+"summary": "McMaster-Carr(産業用品通販)の Elmhurst 拠点で、既存ハイベイ倉庫 83,600 SF を 2 層のオフィスへ改修 $50M。",
+"infer": "倉庫を事務所へ転用 = 物流能力ではなく本社機能の拡張(推論)。設備面では空調・電気・昇降機の大型調達が伴う。",
+"note": "事務所転用(倉庫の縮小)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CR-008540-2026 Interior Remodel (Over 2000 Sq Ft) - Commercial",
+"value": 50000000.0,
+"verbatim": "The project consists of the renovation of approximately 83,600 SF of existing high-bay single story warehouse space into a two-level office with the construction of a new steel framed composite deck floor and interior finish out. The office space will include private offices, open office space, and a variety of conference spaces. These are supported by new restrooms, breakroom areas, and MEP suppo",
+"gc": null,
+"pin": "0336206041",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-714",
 "state": "IL",
 "city": "Chicago・3959 N LINCOLN AVE",
@@ -2566,6 +3966,41 @@
 "batch": "01",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-17391",
+"state": "IL",
+"city": "Elmhurst・740 N YORK ST ELMHURST IL 60126",
+"company": "WILKINS FAMILY LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-14",
+"applied": "2026-08-14",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $12.0M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010574-2026 Transfer Stamp",
+"value": 12000000.0,
+"verbatim": "Also 750 N. York\n03-26-406-014\nCOMMERCIAL\n8/17/26 PLEASE SCHEDULE SUMP PUMP INSPECTION AND UPLOAD MYDEC\n8/25/26 thomas wilkins picked up / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0326406020",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -2639,6 +4074,76 @@
 }
 },
 {
+"id": "S-16009",
+"state": "IL",
+"city": "Palatine・2252 N RAND RD Palatine IL 60074",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "物流・EC",
+"category": "物流・倉庫の新設",
+"category_raw": "物流・倉庫の新設",
+"confidence": "high",
+"date": "2026-08-14",
+"applied": "2026-04-01",
+"jp": false,
+"new": false,
+"summary": "Palatine 2252 N Rand Rd にセミトレーラー駐車場と 45,157 SF のトラック整備施設を新設 $6.5M。",
+"infer": "トラック整備+トレーラーヤード = 運送会社の拠点新設(推論・所有者不明)。",
+"note": null,
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC-024286-2026 Building Permit for New Commercial Building",
+"value": 6523500.0,
+"verbatim": "To install parking area for semi-trucks and trailers and build a 45,157 SF building with a truck repair area. / Building Permit for New Commercial Building / Commercial - New",
+"gc": null,
+"pin": "02021010200000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-16963",
+"state": "IL",
+"city": "Elmhurst・186 E SOUTH ST ELMHURST IL 60126",
+"company": "TE MCKENNA BUILDERS INC",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-14",
+"applied": "2026-08-14",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $3.2M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010567-2026 Transfer Stamp",
+"value": 3250000.0,
+"verbatim": "8/17/26 PLEASE SCHEDULE SUMP PUMP INSPECTION AND UPLOAD DEED AND MYDEC / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0612118005",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-724",
 "state": "IL",
 "city": "Chicago・225 W WACKER DR",
@@ -2674,6 +4179,146 @@
 }
 },
 {
+"id": "S-18776",
+"state": "IL",
+"city": "Highland Park・175 PROSPECT AVE HIGHLAND PARK IL 60035",
+"company": "175 PROSPECT, LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-14",
+"applied": "2026-05-27",
+"jp": false,
+"new": false,
+"summary": "Highland Park 175 Prospect Ave 戸建て新築 $1.8M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 WDP-2026-00037 Watershed Development Permit",
+"value": 1800000.0,
+"verbatim": "construction of new single family residence / Watershed Development Permit / Watershed Development Permit",
+"gc": null,
+"pin": "16243030030000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-18783",
+"state": "IL",
+"city": "Highland Park・175 PROSPECT AVE HIGHLAND PARK IL 60035",
+"company": "175 PROSPECT, LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-14",
+"applied": "2026-07-14",
+"jp": false,
+"new": false,
+"summary": "Highland Park 175 Prospect Ave 戸建て新築 $1.8M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TREE-2026-02701 Tree Preservation/Removal (Construction)",
+"value": 1800000.0,
+"verbatim": "Single family residence / Tree Preservation/Removal (Construction) / Tree Preservation/Removal (Construction) ",
+"gc": null,
+"pin": "16243030030000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19406",
+"state": "IL",
+"city": "Highland Park・175 PROSPECT AVE HIGHLAND PARK IL 60035",
+"company": "175 PROSPECT, LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-14",
+"applied": "2026-02-09",
+"jp": false,
+"new": false,
+"summary": "Highland Park 175 Prospect Ave 戸建て新築 $1.8M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BRES-2026-01022 Building Permit - Residential Construction (single family homes only)",
+"value": 1800000.0,
+"verbatim": "Single family residence / Building Permit - Residential Construction (single family homes only) / Building",
+"gc": null,
+"pin": "16243030030000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-16926",
+"state": "IL",
+"city": "Elmhurst・588 S HAWTHORNE AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-14",
+"applied": "2026-08-14",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.8M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010559-2026 Exempt Transfer Stamp",
+"value": 1781586.0,
+"verbatim": "8/14/26 please schedule sump pump inspection / Exempt Transfer Stamp / Exempt Transfer Stamp",
+"gc": null,
+"pin": "0611311011",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-726",
 "state": "IL",
 "city": "Chicago・3519 N CLARK ST",
@@ -2706,6 +4351,76 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-15703",
+"state": "IL",
+"city": "Des Plaines・1313 E OAKTON ST DES PLAINES IL 60018",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-13",
+"applied": "2025-11-21",
+"jp": false,
+"new": false,
+"summary": "Des Plaines 消防署 62 の新築 $8.2M。",
+"infer": null,
+"note": "公共。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC-2025-11-21-00834 New Construction (Commercial)",
+"value": 8175000.0,
+"verbatim": "New construction of Public Fire Station 62 / New Construction (Commercial) / New Construction",
+"gc": null,
+"pin": "09292020150000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17432",
+"state": "IL",
+"city": "Elmhurst・107 N YORK ST ELMHURST IL 60126",
+"company": "YORK ST VENTURE LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・医療・航空宇宙",
+"category_raw": "研究・医療・航空宇宙",
+"confidence": "high",
+"date": "2026-08-13",
+"applied": "2025-12-23",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 107 N York St に 3 階建て約 24,000 SF のメディカルオフィスビルを新築(躯体)$6.7M。",
+"infer": "開発 SPE 名義・入居する医療機関は未定(推論)。",
+"note": null,
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC-007104-2025 Building New Construction - Commercial",
+"value": 6700000.0,
+"verbatim": "Core/Shell - Permit\nThree story medical office building of approximately 24,000 sf.\nPermit Terms\n**PERMITS ARE GOOD FOR 18 MONTHS FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 90DAYS. AFTER THE 90 DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER DAY WILL BE INVOICED FOR EACH DAY THE PERMIT",
+"gc": null,
+"pin": "0601118021",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -3094,6 +4809,41 @@
 }
 },
 {
+"id": "S-17448",
+"state": "IL",
+"city": "Elmhurst・543 S YORK ST ELMHURST IL 60126",
+"company": "VALLETT RENTAL",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-12",
+"applied": "2026-08-11",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.0M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010501-2026 Exempt Transfer Stamp",
+"value": 1047600.0,
+"verbatim": "Partial owner is transferring her interest from her revocable trust to her LLC for estate planning purposes.\nCOMMERCIAL\n8/12/26 please schedule sump pump inspection\n8/27/26 water bill for 547 S York owed $22.16\n8/27/26 water bill for 543 S York owed $6.13\n8/27/26 wireless alarm bill for 543 S York owed $258.83 / Exempt Transfer Stamp / Exempt Transfer Stamp",
+"gc": null,
+"pin": "0612120007",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-1737",
 "state": "OH",
 "city": "Columbus・111 S GRANT AVE",
@@ -3266,6 +5016,41 @@
 "batch": "01",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-16848",
+"state": "IL",
+"city": "Park Ridge・1700 LUTHER LN PARK RIDGE IL 60068",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "医薬・ライフサイエンス",
+"category": "研究・医療・航空宇宙",
+"category_raw": "研究・医療・航空宇宙",
+"confidence": "high",
+"date": "2026-08-11",
+"applied": "2026-07-14",
+"jp": false,
+"new": false,
+"summary": "Park Ridge 1700 Luther Ln の商業増築 第 1 段階(造成・配管・排水)$3.7M。",
+"infer": "所在地は Advocate Lutheran General 病院キャンパスと一致(推論)。病院の増築プロジェクトの準備工事。",
+"note": null,
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CM-26-0204 Commercial Addition",
+"value": 3700000.0,
+"verbatim": "Permit 1 of 2 for SITE GRADING/UTILITY PREP & DRAINAGE PRIOR TO EXPANSION CONSTRUCTION NOTE: INCLUDES SITE TRAILER W/ELECTRICAL FEED / Commercial Addition / Addition",
+"gc": null,
+"pin": "09222000300000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -3724,6 +5509,146 @@
 }
 },
 {
+"id": "S-18868",
+"state": "IL",
+"city": "Highland Park・1850 GARLAND AVE HIGHLAND PARK IL 60035",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-10",
+"applied": "2026-05-29",
+"jp": false,
+"new": false,
+"summary": "Highland Park 戸建て新築 $1.6M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TREE-2026-02554 Tree Preservation/Removal (Construction)",
+"value": 1647352.0,
+"verbatim": "New construction of a Single Family Home / Tree Preservation/Removal (Construction) / Tree Preservation/Removal (Construction) ",
+"gc": null,
+"pin": "16282150040000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-18976",
+"state": "IL",
+"city": "Highland Park・1850 GARLAND AVE HIGHLAND PARK IL 60035",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-10",
+"applied": "2026-05-27",
+"jp": false,
+"new": false,
+"summary": "Highland Park 戸建て新築 $1.6M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BRES-2026-01121 Building Permit - Residential Construction (single family homes only)",
+"value": 1647352.0,
+"verbatim": "New construction of a Single Family Home / Building Permit - Residential Construction (single family homes only) / Building",
+"gc": null,
+"pin": "16282150040000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17258",
+"state": "IL",
+"city": "Elmhurst・512 N EMROY AVE ELMHURST IL 60126",
+"company": "MOUNT NUGENT CONSTRUCTION",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-10",
+"applied": "2026-08-10",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.4M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010480-2026 Transfer Stamp",
+"value": 1420000.0,
+"verbatim": "New Construction\n8/14/26 SENT OUT VIA FEDEX / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0336306028",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-15995",
+"state": "IL",
+"city": "Palatine・541 E DUNDEE RD Palatine IL 60074",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-10",
+"applied": "2026-04-21",
+"jp": false,
+"new": false,
+"summary": "Palatine 541 E Dundee Rd にペットケア施設のテナント工事 $1.4M。",
+"infer": null,
+"note": "サービス。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC-024600-2026 Building Permit for Commercial Alteration\r\n",
+"value": 1399615.0,
+"verbatim": "Tenant improvement to build out a pet care resort. / Building Permit for Commercial Alteration\r\n / Commercial - Alteration",
+"gc": null,
+"pin": "02112000180000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-637",
 "state": "IL",
 "city": "Chicago・939 E 132ND ST",
@@ -3826,6 +5751,41 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"id": "S-17206",
+"state": "IL",
+"city": "Elmhurst・512 N EMROY AVE ELMHURST IL 60126",
+"company": "MOUNT NUGENT CONSTRUCTION",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-10",
+"applied": "2026-08-10",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 戸建て新築/使用許可 $1.0M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CO-010488-2026 Certificate of Occupancy",
+"value": 1000000.0,
+"verbatim": "Demolishing existing home and rebuilding with a new single family home. / Certificate of Occupancy / Certificate of Occupancy",
+"gc": null,
+"pin": "0336306028",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -4389,6 +6349,41 @@
 }
 },
 {
+"id": "S-17286",
+"state": "IL",
+"city": "Elmhurst・248 E ELMHURST AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-06",
+"applied": "2026-08-06",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.0M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010454-2026 Exempt Transfer Stamp",
+"value": 1031600.0,
+"verbatim": "8/10/26 please schedule sump pump inspection\n8/19/26 erika keirse picked up / Exempt Transfer Stamp / Exempt Transfer Stamp",
+"gc": null,
+"pin": "0601113007",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-563",
 "state": "IL",
 "city": "Chicago・350 E CERMAK RD",
@@ -4459,6 +6454,41 @@
 }
 },
 {
+"id": "S-17581",
+"state": "IL",
+"city": "Elmhurst・735 S BRYAN ST ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-05",
+"applied": "2026-08-04",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.6M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010411-2026 Transfer Stamp",
+"value": 1600000.0,
+"verbatim": "8/6/26 PLEASE UPLOAD DEED, MYDEC, AND SCHEDULE SUMP PUMP INSPECTION 8/31/26 EMILY FUCHSEN PICKED UP / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0611429020",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-1967",
 "state": "OH",
 "city": "Columbus・3690 FISHINGER BLVD",
@@ -4494,6 +6524,41 @@
 }
 },
 {
+"id": "S-17580",
+"state": "IL",
+"city": "Elmhurst・267 N WALNUT ST ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-05",
+"applied": "2026-08-05",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.3M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010431-2026 Transfer Stamp",
+"value": 1270500.0,
+"verbatim": "8/6/26 PLEASE UPLOAD DEED, MYDEC, AND SCHEDULE SUMP PUMP INSPECTION\n8/18/26 utility bill owed $308.92\n8/18/26 2 citations owed EACH/$30.00 ($60.00 TOTAL)\n8/31/26 PICKED UP / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0602106004",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-551",
 "state": "IL",
 "city": "Chicago・1 E SCOTT ST",
@@ -4526,6 +6591,111 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-17390",
+"state": "IL",
+"city": "Elmhurst・488 S KENILWORTH AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-05",
+"applied": "2026-08-04",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.2M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010401-2026 Transfer Stamp",
+"value": 1175000.0,
+"verbatim": "transfer stamp not exempt\n8/6/26 PLEASE SCHEDULE SUMP PUMP INSPECTION AND UPLOAD THE DEED AND MYDEC\n8/25/26 christine alt picked up / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0612114016",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17381",
+"state": "IL",
+"city": "Elmhurst・198 N GLENVIEW AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-05",
+"applied": "2026-08-05",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.1M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010421-2026 Transfer Stamp",
+"value": 1125000.0,
+"verbatim": "8/6/26 PLEASE UPLOAD DEED, MYDEC, AND SCHEDULE SUMP PUMP INSPECTION\n8/20/26 UTILTIY BILL OWED $424.72\n8/25/26 sarah ford picked up / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0603212036",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-15447",
+"state": "IL",
+"city": "Des Plaines・1401 LEE ST DES PLAINES IL 60018",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-05",
+"applied": "2025-12-12",
+"jp": false,
+"new": false,
+"summary": "Des Plaines 1401 Lee St の 7 Brew ドライブスルー珈琲店の造成 $1.1M。",
+"infer": null,
+"note": "飲食。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 GSW-2025-12-12-00033 Grading & Site Work (Commercial & Residential)",
+"value": 1100000.0,
+"verbatim": "7Brew - Drive Thru Coffee Shop - Commercial Use / Grading & Site Work (Commercial & Residential) / Grading & Site Work",
+"gc": null,
+"pin": "09204000240000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -4949,6 +7119,41 @@
 }
 },
 {
+"id": "S-16968",
+"state": "IL",
+"city": "Elmhurst・217 E BUTTERFIELD RD ELMHURST IL 60126",
+"company": "CIMA DEVELOPERS LP",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-04",
+"applied": "2026-08-04",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 217 E Butterfield Rd ガソリンスタンド敷地にコンビニ新築 $1.0M。",
+"infer": null,
+"note": "小売。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CO-010396-2026 Certificate of Occupancy",
+"value": 1000000.0,
+"verbatim": "Construct a new C-store on an existing gas station site.\n**PERMITS ARE GOOD FOR 18 MONTHS FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 90DAYS. AFTER THE 90 DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER DAY WILL BE INVOICED FOR EACH DAY THE PERMIT IS NOT COMPLETED. PERMITS ARE NOT CONSI",
+"gc": null,
+"pin": "0613125026",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-1980",
 "state": "OH",
 "city": "Columbus・1800 WATKINS RD",
@@ -5299,6 +7504,146 @@
 }
 },
 {
+"id": "S-14585",
+"state": "IL",
+"city": "Arlington Heights・1421 W SHURE DR ARLINGTON HEIGHTS IL 60004",
+"company": "UNITED AIRLINES",
+"entity_type": "corp",
+"company_basis": "description",
+"industry": "航空宇宙",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-31",
+"applied": "2026-04-30",
+"jp": false,
+"new": false,
+"summary": "Arlington Heights 1421 W Shure Dr の United Airlines オフィス 1 階西側の内装改修 $1.3M。",
+"infer": null,
+"note": "航空会社の事務所改修(設備投資ではない)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC2026-00097 Alteration, Remodel, Repair - Commercial/Industrial/Multi-Family",
+"value": 1320906.0,
+"verbatim": "UNITED AIRLINES Interior renovation on the west area of the first floor of the building.  Work includes select demolition of partitions, lighting, and installation of new partition walls, ceilings, doors, lighting, finishes, related mep/fp, and the upgrade to the existing BAS system. / Alteration, Remodel, Repair - Commercial/Industrial/Multi-Family / Alteration, Remodel, Repair",
+"gc": null,
+"pin": "03071000240000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-14048",
+"state": "IL",
+"city": "Inverness・384 KILDARE COURT, CAROL STREAM, IL, 60188",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-31",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Inverness 戸建て新築 $1.0M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 8516 RESIDENTIAL PERMIT",
+"value": 1000000.0,
+"verbatim": "NEW SINGLE-FAMILY RESIDENCE / RESIDENTIAL PERMIT / NEW BUILDING",
+"gc": null,
+"pin": "01134020340000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-14049",
+"state": "IL",
+"city": "Inverness・2204 SHETLAND RD, INVERNESS, IL 60010",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-31",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Inverness 戸建て新築 $1.0M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 008516 COMMERCIAL PERMIT",
+"value": 1000000.0,
+"verbatim": "NEW HOUSE / COMMERCIAL PERMIT / NEW BUILDING",
+"gc": null,
+"pin": "01134020340000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-14116",
+"state": "IL",
+"city": "Elk Grove Village・1599 LUNT AVE, ELK GROVE VILLAGE, IL 60007",
+"company": "CSM TUBE USA INC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "機械・金属",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-07-31",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Elk Grove Village 1599 Lunt Ave の CSM Tube USA(鋼管メーカー)工場の内装改修 $775k。",
+"infer": "既存工場のリノベーション = 生産ライン更新の可能性(推論・規模は小)。",
+"note": null,
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 B26-0179 COMMERCIAL PERMIT",
+"value": 775000.0,
+"verbatim": "INDUSTRIAL RENOVATION / COMMERCIAL PERMIT / REMODELING - INTERIOR ONLY",
+"gc": null,
+"pin": "08342030300000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-2100",
 "state": "OH",
 "city": "Columbus・5641 ALSHIRE RD",
@@ -5369,6 +7714,111 @@
 }
 },
 {
+"id": "S-14042",
+"state": "IL",
+"city": "Matteson・21800 S CICERO AVE, MATTESON, IL 60443",
+"company": "21800S CICERO HOLDING",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-30",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Matteson 21800 S Cicero Ave の TPO 屋根オーバーレイ $1.25M。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 COM26-000080 COMMERCIAL PERMIT",
+"value": 1250000.0,
+"verbatim": "RECOVER 60MIL FLEECE BACKED TPO ROOF OVERLAY / COMMERCIAL PERMIT / OTHER REMODELING",
+"gc": null,
+"pin": "31282000140000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-16915",
+"state": "IL",
+"city": "Elmhurst・549 W THIRD ST ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-30",
+"applied": "2026-07-28",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.1M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010295-2026 Transfer Stamp",
+"value": 1150000.0,
+"verbatim": "7/28/26 PLEASE UPLOAD DEED, MYDEC, AND SCHEDULE SUMP PUMP INSPECTION 8/6/26 mary mcswain picked up / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0603205010",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17158",
+"state": "IL",
+"city": "Elmhurst・400 S POPLAR AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-30",
+"applied": "2026-07-14",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 住宅の窓交換 $1.0M(金額は誤入力の疑い)。",
+"infer": null,
+"note": "住宅・金額異常。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 W-010074-2026 Windows/Glazing - Residential",
+"value": 1024656.0,
+"verbatim": "A full-frame residential installation of 19 Pella replacement windows and 1 sliding patio door for Trish Gleason at 400 S Poplar Ave, Elmhurst, IL 60126 / Windows/Glazing - Residential / Windows (Residential)",
+"gc": null,
+"pin": "0612113029",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-1266",
 "state": "MI",
 "city": "Detroit・20110 Woodward Ave",
@@ -5401,6 +7851,41 @@
 "batch": "05",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:44:38+00:00"
+}
+},
+{
+"id": "S-15314",
+"state": "IL",
+"city": "Arlington Heights・1902 N ARLINGTON HEIGHTS RD ARLINGTON HEIGHTS IL 60004",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-30",
+"applied": "2026-04-06",
+"jp": false,
+"new": false,
+"summary": "Arlington Heights 7-Eleven の給油設備・地下タンク付帯更新 $350k。",
+"infer": null,
+"note": "小売(給油設備)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC2026-00072 Alteration, Remodel, Repair - Commercial/Industrial/Multi-Family",
+"value": 349940.0,
+"verbatim": "7-ELEVEN---Remove existing and install new dispensers, submersible pumps, double-wall product piping, vent piping, and tank top equipment on existing underground storage tanks, along with new concrete slabs, islands, bollards, and electrical connections. / Alteration, Remodel, Repair - Commercial/Industrial/Multi-Family / Alteration, Remodel, Repair",
+"gc": null,
+"pin": "03173020320000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -5509,6 +7994,41 @@
 }
 },
 {
+"id": "S-10422",
+"state": "IL",
+"city": "Naperville・2101 IRON RIDGE LN",
+"company": "M/I HOMES OF CHICAGO LLC",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-29",
+"applied": "2026-07-07",
+"jp": false,
+"new": false,
+"summary": "Naperville Iron Ridge タウンホーム 棟 9(7 戸)の火災報知 $2.7M(M/I Homes)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 FIRE-0280-2026 FIRE ALARM",
+"value": 2702452.0,
+"verbatim": "New townhome construction - Building 9 (master plans COMM-0429-2025 Urban)1 Bldg. 7 Units2101-2113 Iron Ridge901 - 2113 Iron Ridge Ln - Brooklyn902 - 2111 Iron Ridge Ln - Brooklyn903 - 2109 Iron Ridge Ln - Brooklyn904 - 2107 Iron Ridge Ln - Brooklyn905 - / FIRE ALARM / FIRE DEPARTMENT PERMIT / 3734 SQFT",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:dupage:addr"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-486",
 "state": "IL",
 "city": "Chicago・401 N WABASH AVE",
@@ -5541,6 +8061,76 @@
 "batch": "02",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-10423",
+"state": "IL",
+"city": "Naperville・2070 IRON RIDGE LN",
+"company": "M/I HOMES OF CHICAGO LLC",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-29",
+"applied": "2026-07-07",
+"jp": false,
+"new": false,
+"summary": "同 棟 1(6 戸)の火災報知 $1.8M。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 FIRE-0281-2026 FIRE ALARM",
+"value": 1824172.0,
+"verbatim": "New townhome construction Bldg. 1 - (master plans COMM-0430-2025 - Revival)1 Bldg. 6 Units2071-2080 Iron Ridge Ln.101 - 2080 Iron Ridge Ln - York plan102 - 2078 Iron Ridge Ln - Walker plan103 - 2076 Iron Ridge Ln - Teagan plan104 - 2074 Iron Ridge Ln - W / FIRE ALARM / FIRE DEPARTMENT PERMIT / 2912 SQFT",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:dupage:addr"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17406",
+"state": "IL",
+"city": "Elmhurst・428 S FAIRFIELD AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-29",
+"applied": "2026-04-08",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 戸建て新築/使用許可 $1.8M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDR-008473-2026 Building New Construction - Residential",
+"value": 1800000.0,
+"verbatim": "Construction of a new single family home\nPermit Terms:\n**PERMITS ARE GOOD FOR 1 YEAR FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 30DAYS. AFTER THE 30 DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER DAY WILL BE INVOICED FOR EACH DAY THE PERMIT IS NOT COMPLETED. PERMITS ARE NOT CONSIDERED",
+"gc": null,
+"pin": "0611114025",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -5611,6 +8201,181 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-18949",
+"state": "IL",
+"city": "Highland Park・932 DEERFIELD RD HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-29",
+"applied": "2025-08-12",
+"jp": false,
+"new": false,
+"summary": "Highland Park 932 Deerfield Rd タウンホーム 4 戸新築 $1.2M(Building Permit - Commercial Construction (includes condos & townhomes))。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BCOM-2025-00205 Building Permit - Commercial Construction (includes condos & townhomes)",
+"value": 1200000.0,
+"verbatim": "NEW MULTI-FAMILY - Building four (4) new townhomes under one roof. Paving one driveway to meet all garages. It will be 3 stories tall and 12000 square feet total for and average of 3000 square feet per unit. / Building Permit - Commercial Construction (includes condos & townhomes) / Building",
+"gc": null,
+"pin": "16261010120000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19109",
+"state": "IL",
+"city": "Highland Park・932 DEERFIELD RD HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-29",
+"applied": "2026-02-03",
+"jp": false,
+"new": false,
+"summary": "Highland Park 932 Deerfield Rd タウンホーム 4 戸新築 $1.2M(Mechanical Sub-Permit)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 MECH-2026-00565 Mechanical Sub-Permit",
+"value": 1200000.0,
+"verbatim": "NEW MULTI-FAMILY - Building four (4) new townhomes under one roof. Paving one driveway to meet all garages. It will be 3 stories tall and 12000 square feet total for and average of 3000 square feet per unit. / Mechanical Sub-Permit / Mechanical - Sub-Permit",
+"gc": null,
+"pin": "16261010120000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19111",
+"state": "IL",
+"city": "Highland Park・932 DEERFIELD RD HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-29",
+"applied": "2026-02-03",
+"jp": false,
+"new": false,
+"summary": "Highland Park 932 Deerfield Rd タウンホーム 4 戸新築 $1.2M(Electrical Sub-Permit)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 ELEC-2026-01179 Electrical Sub-Permit",
+"value": 1200000.0,
+"verbatim": "NEW MULTI-FAMILY - Building four (4) new townhomes under one roof. Paving one driveway to meet all garages. It will be 3 stories tall and 12000 square feet total for and average of 3000 square feet per unit. / Electrical Sub-Permit / Electrical - Sub-Permit",
+"gc": null,
+"pin": "16261010120000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19112",
+"state": "IL",
+"city": "Highland Park・932 DEERFIELD RD HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-29",
+"applied": "2025-08-21",
+"jp": false,
+"new": false,
+"summary": "Highland Park 932 Deerfield Rd タウンホーム 4 戸新築 $1.2M(Drainage & Grading - Sub-Permit)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 DRNG-2025-00219 Drainage & Grading - Sub-Permit",
+"value": 1200000.0,
+"verbatim": "NEW MULTI-FAMILY - Building four (4) new townhomes under one roof. Paving one driveway to meet all garages. It will be 3 stories tall and 12000 square feet total for and average of 3000 square feet per unit. / Drainage & Grading - Sub-Permit / Drainage & Grading - Sub-Permit",
+"gc": null,
+"pin": "16261010120000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19333",
+"state": "IL",
+"city": "Highland Park・932 DEERFIELD RD HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-29",
+"applied": "2026-02-03",
+"jp": false,
+"new": false,
+"summary": "Highland Park 932 Deerfield Rd タウンホーム 4 戸新築 $1.2M(Plumbing Sub-Permit)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 PLMB-2026-01637 Plumbing Sub-Permit",
+"value": 1200000.0,
+"verbatim": "NEW MULTI-FAMILY - Building four (4) new townhomes under one roof. Paving one driveway to meet all garages. It will be 3 stories tall and 12000 square feet total for and average of 3000 square feet per unit. / Plumbing Sub-Permit / Plumbing - Sub-Permit",
+"gc": null,
+"pin": "16261010120000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -5754,6 +8519,41 @@
 }
 },
 {
+"id": "S-14433",
+"state": "IL",
+"city": "Arlington Heights・316 W UNIVERSITY DR ARLINGTON HEIGHTS IL 60004",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-29",
+"applied": "2026-07-22",
+"jp": false,
+"new": false,
+"summary": "Arlington Heights 事務所通路の屋根更新 $559k。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC2026-00187 Re-Roof - Commercial/Industrial/Multi-Family",
+"value": 558560.0,
+"verbatim": "Office Walkway-remove existing roof to steel deck-mechanically fasten 2 layers of 2.6\" iso insulation-install TPO 080 Membrane/North Section-remove rock from roof surface-remove EPDM roof- mechanically fasten down 1 layer of 2.0 insulation-install TPO080 white membrane utilizing Rhinobond application / Re-Roof - Commercial/Industrial/Multi-Family / Re-Roof",
+"gc": null,
+"pin": "03072030010000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-2183",
 "state": "OH",
 "city": "Columbus・68 W WHITTIER ST",
@@ -5786,6 +8586,41 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"id": "S-17102",
+"state": "IL",
+"city": "Elmhurst・1100 S YORK ST ELMHURST IL 60126",
+"company": "ELMHURST MEMORIAL HEALTH",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・医療・航空宇宙",
+"category_raw": "研究・医療・航空宇宙",
+"confidence": "high",
+"date": "2026-07-28",
+"applied": "2026-07-28",
+"jp": false,
+"new": false,
+"summary": "Elmhurst Memorial Health の 51,300 SF メディカルオフィス(MOB)内装工事 $7.2M(使用許可)。",
+"infer": null,
+"note": null,
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CO-010308-2026 Certificate of Occupancy",
+"value": 7233641.0,
+"verbatim": "Tenant Improvement / Interior Fit-out of 51,300 sq ft MOB / Certificate of Occupancy / Certificate of Occupancy",
+"gc": null,
+"pin": "0613305019",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -5859,6 +8694,41 @@
 }
 },
 {
+"id": "S-17514",
+"state": "IL",
+"city": "Elmhurst・568 N WEST AVE ELMHURST IL 60126",
+"company": "MOUNT NUGENT BUILDERS",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-28",
+"applied": "2026-04-30",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 戸建て新築/使用許可 $1.2M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDR-008858-2026 Building New Construction - Residential",
+"value": 1200000.0,
+"verbatim": "Build a New Single Family Home / Building New Construction - Residential / New Construction",
+"gc": null,
+"pin": "0334214046",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-434",
 "state": "IL",
 "city": "Chicago・2515 N CLARK ST",
@@ -5891,6 +8761,76 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-13722",
+"state": "IL",
+"city": "Homewood・18231 PARK AV 60430",
+"company": "RAVISLOE COUNTRY CLUB",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-28",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Homewood Ravisloe カントリークラブの内装改修 $500k。",
+"infer": null,
+"note": "レジャー。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 0958-25 COMMERCIAL PERMIT",
+"value": 500000.0,
+"verbatim": "REMODEL BRIDAL RM & RESTRMS / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY / OTHER REMODELING / BASEMENT-ATTIC ROOM BATH",
+"gc": null,
+"pin": "29313000020000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-13679",
+"state": "IL",
+"city": "Elk Grove Village・1951 LIVELY BLVD, ELK GROVE VILLAGE, IL 60007",
+"company": "SONG FAMILY ORD LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-28",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Elk Grove Village 1951 Lively Blvd 工業建物のファサード改修 $265k。",
+"infer": null,
+"note": "外装。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 B26-0828 COMMERCIAL PERMIT",
+"value": 265000.0,
+"verbatim": "INDUSTRIAL FACADE-6B / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"gc": null,
+"pin": "08343000510000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -6244,6 +9184,76 @@
 }
 },
 {
+"id": "S-10485",
+"state": "IL",
+"city": "Naperville・2815 SHOWPLACE DR",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-27",
+"applied": "2026-03-13",
+"jp": false,
+"new": false,
+"summary": "Naperville Showplace 映画館 9 番スクリーンの座席・映写・音響更新 $1.0M。",
+"infer": null,
+"note": "娯楽。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 COMM-0118-2026 COMMERCIAL BUILDING ALTERATION",
+"value": 1030000.0,
+"verbatim": "Remodel of auditorium 9 only. Scope consists of removing existing seats  projector  sound equipment and replacing with new. / COMMERCIAL BUILDING ALTERATION / COMMERCIAL / 4111 SQFT",
+"gc": null,
+"pin": "01044100600000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-14427",
+"state": "IL",
+"city": "Arlington Heights・111 W OLIVE ST ARLINGTON HEIGHTS IL 60004",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-27",
+"applied": "2026-07-22",
+"jp": false,
+"new": false,
+"summary": "Arlington Heights 111 W Olive St の屋根 3 面更新 $289k。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC2026-00189 Re-Roof - Commercial/Industrial/Multi-Family",
+"value": 288500.0,
+"verbatim": "Replace 3 sections of roofing\nTear off existing and install 60 mil TPO / Re-Roof - Commercial/Industrial/Multi-Family / Re-Roof",
+"gc": null,
+"pin": "03203001300000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-398",
 "state": "IL",
 "city": "Chicago・1144 W LOYOLA AVE",
@@ -6276,6 +9286,41 @@
 "batch": "01",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-13390",
+"state": "IL",
+"city": "Hoffman Estates・1801 GOVERNORS LN, HOFFMAN ESTATES, IL 60169",
+"company": "VILLAGE OF HOFFMAN ESTATES",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-24",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Hoffman Estates 村の造成・雨水・舗装工事(免除許可)$16M。",
+"infer": null,
+"note": "公共(インフラ)。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 SITE2605-0002 EXEMPT PERMIT",
+"value": 16000000.0,
+"verbatim": "SITE GRADING, NEW STORM STRUCTURES, UTILITIES, PAVEMENT AND SIDEWALKS. / EXEMPT PERMIT / EXEMPT PROPERTIES",
+"gc": null,
+"pin": "07072002370000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -6384,6 +9429,146 @@
 }
 },
 {
+"id": "S-10249",
+"state": "IL",
+"city": "Normal・2219 W College Ave",
+"company": "TRANSITION PROPERTIES LP",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "自動車部品",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-24",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Normal の倉庫を Rivian サービスセンターへ改修 $3.5M(所有者 Transition Properties LP)。",
+"infer": "販売・整備拠点であり生産設備ではない。",
+"note": "サービス拠点(生産外)。",
+"fact": {
+"src": "ノーマル町 ArcGIS 許可レイヤ",
+"ref": "許可 BLDC2026-4100 Commercial Building",
+"value": 3456259.0,
+"verbatim": "Renovation of warehouse into new Rivian Service Center / Commercial Building / REMODEL",
+"gc": "Grow America",
+"pin": "1430376017",
+"owner_source": "permit"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17389",
+"state": "IL",
+"city": "Elmhurst・333 W ELM PARK AVE ELMHURST IL 60126",
+"company": "EQUITY TRUST COMPANY",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-24",
+"applied": "2026-07-23",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $2.6M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010230-2026 Transfer Stamp",
+"value": 2600000.0,
+"verbatim": "7/23/26 please upload the deed, mydec, and schedule sump pump inspection\n8/25/26 david pagan picked up / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0602315012",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17175",
+"state": "IL",
+"city": "Elmhurst・220 N GENEVA AVE ELMHURST IL 60126",
+"company": "MC KENNA HOMES INC",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-24",
+"applied": "2026-07-23",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $2.4M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010243-2026 Transfer Stamp",
+"value": 2350000.0,
+"verbatim": "Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0601206032",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17197",
+"state": "IL",
+"city": "Elmhurst・456 N ELM AVE ELMHURST IL 60126",
+"company": "CGJ DEVELOPMENT INC",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-24",
+"applied": "2026-07-24",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.7M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010251-2026 Transfer Stamp",
+"value": 1700000.0,
+"verbatim": "7/27/26 please schedule sump pump inspection 8/11/26 dave schlueter picked up / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0335401025",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-400",
 "state": "IL",
 "city": "Chicago・1301 W 76TH ST",
@@ -6416,6 +9601,41 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-17045",
+"state": "IL",
+"city": "Elmhurst・254 N ADDISON AVE ELMHURST IL 60126",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-24",
+"applied": "2026-07-24",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.6M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010253-2026 Transfer Stamp",
+"value": 1575000.0,
+"verbatim": "7/24/26 please upload deed and mydec\n7/29/26 picked up by glen batzkall / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0602205060",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -6664,6 +9884,41 @@
 }
 },
 {
+"id": "S-10253",
+"state": "IL",
+"city": "Normal・121 N Rivian Mtwy",
+"company": "RIVIAN AUTOMOTIVE LLC",
+"entity_type": "corp",
+"company_basis": "description",
+"industry": "自動車部品",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-07-23",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Rivian 工場(121 N Rivian Motorway)の危険物保管エリア(GRIT Hazardous Storage)改修 $1.4M。",
+"infer": "工場内の危険物保管 = 電池・化学品の取扱い増に伴う付帯設備(推論)。",
+"note": null,
+"fact": {
+"src": "ノーマル町 ArcGIS 許可レイヤ",
+"ref": "許可 BLDC2026-4105 Commercial Building",
+"value": 1386057.0,
+"verbatim": "Rivian GRIT Hazardous Storage area / Commercial Building / REMODEL",
+"gc": "P.J. HOERR",
+"pin": "1326401001",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-384",
 "state": "IL",
 "city": "Chicago・707 W JUNIOR TER",
@@ -6909,6 +10164,76 @@
 }
 },
 {
+"id": "S-19053",
+"state": "IL",
+"city": "Highland Park・1200 OLD SKOKIE RD HIGHLAND PARK IL 60035",
+"company": "KAM DEVELOPMENT IL LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-22",
+"applied": "2026-03-27",
+"jp": false,
+"new": false,
+"summary": "Highland Park 1200 Old Skokie Rd を EV 販売・整備・納車施設へ内装改修 $1.5M(KAM Development IL LLC)。",
+"infer": null,
+"note": "EV ディーラー。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BCOM-2026-00281 Building Permit - Commercial Construction (including condos & townhomes)",
+"value": 1500000.0,
+"verbatim": "INTERIOR TENANT FITOUT TO UPDATE FACILITY FOR ELECTRIC VEHICLE\nSALES, SERVICE AND DELIVERY / Building Permit - Commercial Construction (including condos & townhomes) / Building - Commercial",
+"gc": null,
+"pin": "16272050160000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-19054",
+"state": "IL",
+"city": "Highland Park・1200 OLD SKOKIE RD HIGHLAND PARK IL 60035",
+"company": "KAM DEVELOPMENT IL LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-22",
+"applied": "2026-04-03",
+"jp": false,
+"new": false,
+"summary": "同 EV 施設改修(樹木)$1.5M。",
+"infer": null,
+"note": "EV ディーラー。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TREE-2026-02390 Tree Preservation/Removal (Construction)",
+"value": 1500000.0,
+"verbatim": "INTERIOR TENANT FITOUT TO UPDATE FACILITY FOR ELECTRIC VEHICLE\nSALES, SERVICE AND DELIVERY / Tree Preservation/Removal (Construction) / Tree Preservation/Removal (Construction) ",
+"gc": null,
+"pin": "16272050160000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-338",
 "state": "IL",
 "city": "Chicago・1010 S WELLS ST",
@@ -6944,6 +10269,41 @@
 }
 },
 {
+"id": "S-13142",
+"state": "IL",
+"city": "River Forest・7574 DIVISION ST, VILLAGE OF RIVER F, IL 60305",
+"company": "AILEY SOLAR ELECTRIC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-22",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "River Forest 屋上太陽光 691 枚 442 kWdc $1.3M(免除許可)。",
+"infer": null,
+"note": "太陽光(対象外)。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 27-0158 EXEMPT PERMIT",
+"value": 1310831.0,
+"verbatim": "INSTALLATION OF 691 PV SOLAR MODULES 442.24 KWDC 4 SOLAREDGE INVERTERS ATTACHED VIA BALLAST BLOCKS ON ROOFTOP ONLY. / EXEMPT PERMIT / EXEMPT PROPERTIES",
+"gc": null,
+"pin": "15012150010000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-340",
 "state": "IL",
 "city": "Chicago・1048 W DAKIN ST",
@@ -6976,6 +10336,181 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-10570",
+"state": "IL",
+"city": "Naperville・1430 WHITMORE DR",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-22",
+"applied": "2026-06-02",
+"jp": false,
+"new": false,
+"summary": "Naperville Whitmore Dr のタウンホーム新築 $1.3M。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 RESD-0554-2026 TOWNHOUSE",
+"value": 1278000.0,
+"verbatim": "new townhome(ROWHOME) Building # 3: 1 Bldg. with 5 Units (master plan RESD-0913-2025)1430-1438 Whitmore  Dr / TOWNHOUSE / RESIDENTIAL / 9834 SQFT",
+"gc": null,
+"pin": "BASEADD0000165",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-13057",
+"state": "IL",
+"city": "Palatine・2070 N RAND RD, K, PALATINE, IL 60074",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-22",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Palatine 2070 N Rand Rd の商業改修 $925k(Assessor の用途分類 'FACTORY' は汎用ラベル)。",
+"infer": null,
+"note": "内容不明(未分類 low)。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 BLDC-024653-2026 COMMERCIAL PERMIT",
+"value": 925000.0,
+"verbatim": "COMMERCIAL - ALTERATION / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"gc": null,
+"pin": "02022040130000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-13058",
+"state": "IL",
+"city": "Palatine・2195 N HICKS RD, PALATINE, IL 60074",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-22",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Palatine 2195 N Hicks Rd の商業改修(免除)$569k。",
+"infer": null,
+"note": "内容不明(未分類 low)。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 BLDC-025543-2026 EXEMPT PERMIT",
+"value": 569000.0,
+"verbatim": "COMMERCIAL - ALTERATION / EXEMPT PERMIT / EXEMPT PROPERTIES / REPLACE-REPAIR BUILDING - FACTORY",
+"gc": null,
+"pin": "02022050160000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-13119",
+"state": "IL",
+"city": "Rolling Meadows・2850 GOLF RD, ROLLING MEADOWS, IL 60008",
+"company": "LEOPARDO CONSTRUCTION",
+"entity_type": "corp",
+"company_basis": "gc",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-22",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Rolling Meadows 2850 Golf Rd の業務エリア内装リフレッシュ $546k(Leopardo 施工)。",
+"infer": null,
+"note": "オフィス。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 BLDC26-0073 COMMERCIAL PERMIT",
+"value": 546000.0,
+"verbatim": "RENOVATION PERMIT FOR INTERIOR REFRESH OF EXISTING BUSINESS AREAS. NO CHANGE OF OCCUPANCY OR USE. / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"gc": null,
+"pin": "08083000080000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-14603",
+"state": "IL",
+"city": "Arlington Heights・909 E GOLF RD ARLINGTON HEIGHTS IL 60005",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-22",
+"applied": "2026-05-08",
+"jp": false,
+"new": false,
+"summary": "同 The Avery の外構・駐車場・雨水 $427k。",
+"infer": null,
+"note": "住宅付帯。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 ESD2026-00009 Site Development - Multi-Family",
+"value": 427148.0,
+"verbatim": "IMPROVEMENTS AVERY AT ARLINGTON HEIGHTS for THE CONSTRUCTION OF A PROPOSED OFFICE AND FITNESS BUILDING WITH ASSOCIATED PRIVATE UTILITY, PARKING LOT, AND STORM WATER IMPROVEMENTS.\nPrior to any work commencing, provide and install 6’-0” high construction, chain link, panel fencing including two (2), 12’-0” gates, stands, clips and sandbags surrounding the construction site as required.  Provide ‘Con",
+"gc": null,
+"pin": "08151040380000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -7046,6 +10581,41 @@
 "batch": "01",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-10259",
+"state": "IL",
+"city": "Normal・100 N Rivian Mtwy",
+"company": "RIVIAN AUTOMOTIVE LLC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "自動車部品",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-07-21",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Rivian の Normal 工場(100 N Rivian Motorway)の商業建物改修 'Project Resilience' $9.2M。",
+"infer": "EV 工場敷地内の改修プロジェクト名 'Resilience' = 生産継続性/冗長化に関わる設備投資の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "ノーマル町 ArcGIS 許可レイヤ",
+"ref": "許可 BLDC2026-4082 Commercial Building",
+"value": 9183189.0,
+"verbatim": "Rivian - Project Resilience / Commercial Building / REMODEL",
+"gc": "P.J. HOERR",
+"pin": "1325100004",
+"owner_source": "permit"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -7259,6 +10829,41 @@
 }
 },
 {
+"id": "S-17014",
+"state": "IL",
+"city": "Elmhurst・787 S CAMBRIDGE AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-21",
+"applied": "2026-07-21",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.9M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010206-2026 Transfer Stamp",
+"value": 1850683.23,
+"verbatim": "7/23/26 SENT OUT VIA FEDEX / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0613108006",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-1088",
 "state": "OH",
 "city": "Cincinnati・425 WALNUT ST",
@@ -7434,6 +11039,76 @@
 }
 },
 {
+"id": "S-12911",
+"state": "IL",
+"city": "Palatine・24 N SMITH ST, PALATINE, IL 60067",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-21",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Palatine 集合住宅の改修 $516k。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 BLDC-025714-2026 COMMERCIAL PERMIT",
+"value": 515680.0,
+"verbatim": "MULTIFAMILY - ALTERATION / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"gc": null,
+"pin": "02154190090000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-15694",
+"state": "IL",
+"city": "Des Plaines・2200 E GOLF RD DES PLAINES IL 60016",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-20",
+"applied": "2025-12-17",
+"jp": false,
+"new": false,
+"summary": "Des Plaines 2200 E Golf Rd に 4 階建て 150 室の支援付き住宅を新築 $38M(概算)。",
+"infer": null,
+"note": "高齢者住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC-2025-12-17-00852 New Construction (Commercial)",
+"value": 38000000.0,
+"verbatim": "THE PROJECT CONSISTS OF THE NEW CONSTRUCTION OF A FOUR-STORY SUPPORTIVE LIVING FACILITY WITH 150 LIVING UNITS AND ASSOCIATED SITE WORK. NOTE THAT:\n--THE VALUATION BELOW IS APPROXIMATE. \n--THE CONTRACTOR IS TBD AND WILL BE PROVIDED PRIOR TO FINAL PERMIT APPROVAL.\n--THE APPLICANT IS THE CONTRACT PURCHASER FOR THE PROPERTY. CLOSE ON THE LAND WILL TAKE PLACE ON 1/11/26. THE CURRENT PROPERTY OWNER IS L",
+"gc": null,
+"pin": "09094020100000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-277",
 "state": "IL",
 "city": "Chicago・1282 W WASHINGTON BLVD",
@@ -7501,6 +11176,41 @@
 "batch": "01",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-10591",
+"state": "IL",
+"city": "Naperville・121 W BENTON AV",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-20",
+"applied": "2026-05-18",
+"jp": false,
+"new": false,
+"summary": "Naperville Benton & Main のタウンホーム 棟 3 新築 $5.8M。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 RESD-0504-2026 TOWNHOUSE",
+"value": 5815000.0,
+"verbatim": "Benton & Main building 3:301 - 181 W Benton Ave - Bellamy plan302 - 171 W Benton Ave - Aveline plan303 - 161 W Benton Ave - Aveline plan304 - 151 W Benton Ave - Aveline plan305 - 141 W Benton Ave - Aveline plan306 - 131 W Benton Ave - Aveline plan307 - 1 / TOWNHOUSE / RESIDENTIAL / 36469 SQFT",
+"gc": null,
+"pin": "BASEADD0000133",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -7644,6 +11354,76 @@
 }
 },
 {
+"id": "S-10589",
+"state": "IL",
+"city": "Naperville・1545 SWALLOW ST",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-20",
+"applied": "2026-06-29",
+"jp": false,
+"new": false,
+"summary": "Naperville 住宅の屋根・雨樋 $2.25M(29 SQFT・金額は誤入力の疑い)。",
+"infer": null,
+"note": "住宅・金額異常。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 RESD-0644-2026 RESD BUILDING ALTERATION",
+"value": 2254094.0,
+"verbatim": "roofing and decking & Gutters / RESD BUILDING ALTERATION / RESIDENTIAL / 29 SQFT",
+"gc": null,
+"pin": "08304140250000",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17251",
+"state": "IL",
+"city": "Elmhurst・329 S KENMORE AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-20",
+"applied": "2026-07-20",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.9M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010179-2026 Transfer Stamp",
+"value": 1850000.0,
+"verbatim": "7/21/26 please schedule sump pump inspection\n8/6/26 sent out via fedex / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0612103001",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-305",
 "state": "IL",
 "city": "Chicago・300 N MICHIGAN AVE",
@@ -7679,6 +11459,41 @@
 }
 },
 {
+"id": "S-17037",
+"state": "IL",
+"city": "Elmhurst・787 S CAMBRIDGE AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-20",
+"applied": "2026-07-20",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 戸建て新築/使用許可 $1.7M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CO-010188-2026 Certificate of Occupancy",
+"value": 1700000.0,
+"verbatim": "Certificate Of Occupancy - New construction single family house\n**PERMITS ARE GOOD FOR 1 YEAR FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 30DAYS. AFTER THE 30 DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER DAY WILL BE INVOICED FOR EACH DAY THE PERMIT IS NOT COMPLETED. PERMITS ARE NOT C",
+"gc": null,
+"pin": "0613108006",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-283",
 "state": "IL",
 "city": "Chicago・3918 W ROOSEVELT RD",
@@ -7711,6 +11526,41 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-10598",
+"state": "IL",
+"city": "Naperville・111 W BENTON AV",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-19",
+"applied": "2026-05-15",
+"jp": false,
+"new": false,
+"summary": "同 棟 2(2 戸)$1.1M。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 RESD-0498-2026 TOWNHOUSE",
+"value": 1109962.0,
+"verbatim": "Benton & Main building 2: TWO (2) UNIT TOWNHOME (MASTER PLAN UNDER RESD-0980-2025)UNIT 201 - 113 W Benton Ave - Camden planUNIT 202 - 111 W Benton Ave - Camden plan / TOWNHOUSE / RESIDENTIAL / 6912 SQFT",
+"gc": null,
+"pin": "BASEADD0000139",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -7854,6 +11704,41 @@
 }
 },
 {
+"id": "S-17589",
+"state": "IL",
+"city": "Elmhurst・188 W BUTTERFIELD RD ELMHURST IL 60126",
+"company": "TIMOTHY CHRISTIAN SCHOOLS",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-17",
+"applied": "2026-05-01",
+"jp": false,
+"new": false,
+"summary": "Timothy Christian Schools(Elmhurst)の中学校棟増築 $7M。",
+"infer": null,
+"note": "学校。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC-008888-2026 Building Addition - Commercial",
+"value": 7000000.0,
+"verbatim": "Building addition onto the existing middle school on the Timothy Christian campus. Addition includes classroom spaces, a multipurpose room, restrooms, and variety of support spaces. / Building Addition - Commercial / Addition",
+"gc": null,
+"pin": "0614412058",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-270",
 "state": "IL",
 "city": "Chicago・6027 N KENMORE AVE",
@@ -7889,6 +11774,111 @@
 }
 },
 {
+"id": "S-10608",
+"state": "IL",
+"city": "Naperville・1971 BROOKDALE RD",
+"company": "CITY OF NAPERVILLE",
+"entity_type": "public",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-17",
+"applied": "2025-10-03",
+"jp": false,
+"new": false,
+"summary": "Naperville 消防署の訓練室増築・内装 $2.5M。",
+"infer": null,
+"note": "公共。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 COMM-0631-2025 COMMERCIAL BUILDING - NEW OR ADDITION",
+"value": 2500000.0,
+"verbatim": "Training room addition and interior remodeling to existing fire station. / COMMERCIAL BUILDING - NEW OR ADDITION / COMMERCIAL / 3930 SQFT",
+"gc": null,
+"pin": "07101020080000",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-15722",
+"state": "IL",
+"city": "Palatine・1331 N RAND RD Palatine IL 60074",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-17",
+"applied": "2024-12-13",
+"jp": false,
+"new": false,
+"summary": "同 食料品店改修(EnerGov 側の記録)$2.5M。",
+"infer": null,
+"note": "小売。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC-019612-2024 Building Permit for Commercial Alteration\r\n",
+"value": 2500000.0,
+"verbatim": "EXISTING BUILDING REMODELING FOR NEW \"LOCAL MARKET\"  GROCERY STORE - phase 2 / Building Permit for Commercial Alteration\r\n / Commercial - Alteration",
+"gc": null,
+"pin": "02121010510000",
+"owner_source": "applicant:SRC-021"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-12617",
+"state": "IL",
+"city": "Palatine・1331 N RAND RD, PALATINE, IL 60074",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-17",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Palatine 1331 N Rand Rd の既存建物を食料品店へ改修(第 2 期)$2.5M。",
+"infer": null,
+"note": "小売。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 BLDC-019612-2024 COMMERCIAL PERMIT",
+"value": 2500000.0,
+"verbatim": "COMMERCIAL - ALTERATION / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"gc": null,
+"pin": "02121010510000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-2406",
 "state": "OH",
 "city": "Columbus・41 S HIGH ST",
@@ -7921,6 +11911,146 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"id": "S-17018",
+"state": "IL",
+"city": "Elmhurst・226 W CLAREMONT ST ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-17",
+"applied": "2026-07-16",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.2M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010137-2026 Exempt Transfer Stamp",
+"value": 1200000.0,
+"verbatim": "7/17/26 PLEASE SHCEDULE SUMP PUMP INSPECTION / Exempt Transfer Stamp / Exempt Transfer Stamp",
+"gc": null,
+"pin": "0602402017",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-12672",
+"state": "IL",
+"city": "Park Ridge・226 GRAND BLVD   PARK RIDGE, ,PARK RIDGE, IL 60068",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-17",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Park Ridge 戸建て新築 $1.2M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 SF-26-0481 RESIDENTIAL PERMIT",
+"value": 1198367.0,
+"verbatim": "NEW SINGLE FAMILY RESIDENCE / RESIDENTIAL PERMIT / NEW BUILDING",
+"gc": null,
+"pin": "09264160110000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-16762",
+"state": "IL",
+"city": "Park Ridge・226 GRAND BLVD PARK RIDGE IL 60068",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-17",
+"applied": "2026-05-01",
+"jp": false,
+"new": false,
+"summary": "Park Ridge 戸建て新築 $1.2M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 SF-26-0481 Single Family - New",
+"value": 1198367.0,
+"verbatim": "New Single Family Residence / Single Family - New / New",
+"gc": null,
+"pin": "09264160110000",
+"owner_source": "applicant:SRC-021"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17042",
+"state": "IL",
+"city": "Elmhurst・927 S CHATHAM AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-17",
+"applied": "2026-07-16",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.2M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010145-2026 Transfer Stamp",
+"value": 1196520.0,
+"verbatim": "7/20/26 PICKED UP BY EMILY FUCHSEN / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0613127008",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -7991,6 +12121,41 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"id": "S-17131",
+"state": "IL",
+"city": "Elmhurst・556 S SUNNYSIDE AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-16",
+"applied": "2026-07-16",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $13.0M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010135-2026 Exempt Transfer Stamp",
+"value": 13000000.0,
+"verbatim": "Exempt Transfer Stamp / Exempt Transfer Stamp",
+"gc": null,
+"pin": "0611128016",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -8169,6 +12334,216 @@
 }
 },
 {
+"id": "S-10616",
+"state": "IL",
+"city": "Naperville・1208 E DIEHL RD",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-16",
+"applied": "2026-03-02",
+"jp": false,
+"new": false,
+"summary": "Naperville 1208 E Diehl Rd の商業建物(小売 東)新築 $1.6M。",
+"infer": null,
+"note": "小売。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 COMM-0093-2026 COMMERCIAL BUILDING - NEW OR ADDITION",
+"value": 1600000.0,
+"verbatim": "Application for Building Permit for commercial building being built as part of larger development. Retail East Site is already covered under site permit MISC-0056-2026 / COMMERCIAL BUILDING - NEW OR ADDITION / COMMERCIAL / 7500 SQFT",
+"gc": null,
+"pin": "08053020230000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-10624",
+"state": "IL",
+"city": "Naperville・1164 E DIEHL RD",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-16",
+"applied": "2026-03-02",
+"jp": false,
+"new": false,
+"summary": "Naperville 1164 E Diehl Rd の商業建物(小売 西)6,628 SF 新築 $1.6M。",
+"infer": null,
+"note": "小売。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 COMM-0091-2026 COMMERCIAL BUILDING - NEW OR ADDITION",
+"value": 1600000.0,
+"verbatim": "Permit for the new commercial building. Retail West Site permit already issued under MISC-0056-2026 / COMMERCIAL BUILDING - NEW OR ADDITION / COMMERCIAL / 6628 SQFT",
+"gc": null,
+"pin": "08053020230000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-10629",
+"state": "IL",
+"city": "Naperville・1440 WHITMORE DR",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-16",
+"applied": "2026-06-04",
+"jp": false,
+"new": false,
+"summary": "Naperville Whitmore Dr のタウンホーム新築 $1.2M。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 RESD-0563-2026 TOWNHOUSE",
+"value": 1205770.0,
+"verbatim": "Building 2 TownhouseMaster Plan Set RESD-0913-20255 units - 1440  1442  1444  1446  1448 Whitmore Dr / TOWNHOUSE / RESIDENTIAL / 9835 SQFT",
+"gc": null,
+"pin": "BASEADD0000167",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-10618",
+"state": "IL",
+"city": "Naperville・3 N MAIN ST",
+"company": "M/I HOMES OF CHICAGO",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-16",
+"applied": "2026-05-15",
+"jp": false,
+"new": false,
+"summary": "Naperville Benton & Main 棟 1(2 戸)$1.1M(M/I Homes)。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 RESD-0497-2026 TOWNHOUSE",
+"value": 1109962.0,
+"verbatim": "Benton & Main building 1: (2) UNIT TOWNHOME-(MASTER PLAN UNDER RESD-0980-2025)UNIT 101 - 3 N Main St - Camden planUNIT 102 - 5 N Main St - Camden plan / TOWNHOUSE / RESIDENTIAL / 6912 SQFT",
+"gc": null,
+"pin": "07134100210000",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-12556",
+"state": "IL",
+"city": "River Forest・7513 LAKE ST, VILLAGE OF RIVER F, IL 60305",
+"company": "RWE MANAGEMENT COMPANY DBA RWE DESIGN BUILD",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-16",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "River Forest RWE Design Build のオフィス拡張 3,612 SF $900k。",
+"infer": null,
+"note": "オフィス。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 26-1102 COMMERCIAL PERMIT",
+"value": 900000.0,
+"verbatim": "EXPANSION 550 SF IN EXISTING SIDE, TO ALLOW CONNECTION TO EXPANSION SPACE, NEW 3,062 SF FITOUT FOR EXPANSION SPACE NEW INTERIOR OPENINGS TO CONNECT SUITES NEW MEP DISTRIBUTION PER NEW LAYOUT / COMMERCIAL PERMIT / ADDITIONS / NEW BUILDING",
+"gc": null,
+"pin": "15122190400000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-14349",
+"state": "IL",
+"city": "Arlington Heights・440 E RAND RD ARLINGTON HEIGHTS IL 60004",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-16",
+"applied": "2026-07-10",
+"jp": false,
+"new": false,
+"summary": "Arlington Heights 440 E Rand Rd の商業屋根更新 23,581 SF $427k。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC2026-00174 Re-Roof - Commercial/Industrial/Multi-Family",
+"value": 427439.0,
+"verbatim": "Commercial reroof\nTear off 23,581SF - install 2 layers of 2.6\" ISO and new 60 mil TPO roof system\nOverlay 11,346SF-install 1 layer of 1/2\" ISO mechanically attached and 1 layer 1/2\" in low rise foam and new 60 mil TPO roof system / Re-Roof - Commercial/Industrial/Multi-Family / Re-Roof",
+"gc": null,
+"pin": "03173010220000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-235",
 "state": "IL",
 "city": "Chicago・3720 N GREENVIEW AVE",
@@ -8201,6 +12576,76 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-18261",
+"state": "IL",
+"city": "Westmont・6015 S CASS AVE WESTMONT IL 60559",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-15",
+"applied": "2025-12-18",
+"jp": false,
+"new": false,
+"summary": "Westmont 6015 S Cass Ave の商業新築 $25.9M(記録に内容の記載なし)。",
+"infer": "大型商業新築だが用途不明。所在地は Cass Ave 沿いの商業地(推論)。",
+"note": "内容不明・要照会(未分類 low)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 Com-001454-2025 Commercial - New Construction",
+"value": 25892274.0,
+"verbatim": "Commercial - New Construction / New Construction",
+"gc": null,
+"pin": "0915311001",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-16927",
+"state": "IL",
+"city": "Elmhurst・270 E SOUTH ST ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-15",
+"applied": "2026-07-14",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $20.0M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010098-2026 Transfer Stamp",
+"value": 20000000.0,
+"verbatim": "7/15/26 please upload deed, mydec, and schedule sump pump inspection / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0612118026",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -8271,6 +12716,76 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"id": "S-16967",
+"state": "IL",
+"city": "Elmhurst・620 N YORK ST ELMHURST IL 60126",
+"company": "FITNESS & SPORTS CLUBS LL",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-15",
+"applied": "2026-02-06",
+"jp": false,
+"new": false,
+"summary": "Elmhurst LA Fitness を Club Studio へ改装 $2.9M。",
+"infer": null,
+"note": "フィットネス。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CR-007554-2026 Interior Remodel (Over 2000 Sq Ft) - Commercial",
+"value": 2884056.0,
+"verbatim": "Interior Alteration of an existing LA Fitness health club to convert it into Club Studio health club.\n**PERMITS ARE GOOD FOR 18 MONTHS FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 90-DAYS. AFTER THE 90-DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER DAY WILL BE INVOICED FOR EACH DAY THE ",
+"gc": null,
+"pin": "0335204019",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-12381",
+"state": "IL",
+"city": "North Lake・137 W NORTH AV 60164",
+"company": "MANEVAL CONSTRUCTION CO. INC",
+"entity_type": "corp",
+"company_basis": "gc",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-15",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "North Lake 137 W North Ave の駐車場舗装更新・トラック動線コンクリート $1.7M(Maneval Construction 申請)。",
+"infer": "トラック動線の更新 = 配送・工業施設の可能性(推論・所有者不明)。",
+"note": "外構。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 P20250335 COMMERCIAL PERMIT",
+"value": 1695158.0,
+"verbatim": "PARKING LOT PAVEMENT REHAB, LANDSCAPE ISLAND CONSTRUCTION, SIDEWALL CONCRETE REPLACEMENT, TRUCK DRIVE CONCRETE REPLACEMENT. / COMMERCIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION / DRIVEWAYS - PATIOS",
+"gc": null,
+"pin": "15062030440000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -8446,6 +12961,76 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"id": "S-16921",
+"state": "IL",
+"city": "Elmhurst・208 E COLUMBIA AVE ELMHURST IL 60126",
+"company": "THE HERITAGE RESI TRUST",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-15",
+"applied": "2026-07-15",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.4M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010101-2026 Transfer Stamp",
+"value": 1365000.0,
+"verbatim": "7/15/26 please schedule sump, upload deed and mydec, and confirm post possession move out date\n8/3/26 themis katris picked up / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0336315014",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17579",
+"state": "IL",
+"city": "Elmhurst・652 S FAIRVIEW AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-15",
+"applied": "2026-07-15",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.3M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-010108-2026 Transfer Stamp",
+"value": 1270000.0,
+"verbatim": "7/15/26 please schedule sump inspection and upload deed and mydec\n8/27/26 utility bill owed $240.83 8/31/26 JOY LUPERINI PICKED UP / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0611317016",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -8974,6 +13559,41 @@
 }
 },
 {
+"id": "S-12274",
+"state": "IL",
+"city": "River Forest・7400 AUGUSTA ST, VILLAGE OF RIVER F, IL 60305",
+"company": "MARTIN PETERSEN COMPANY, INC.",
+"entity_type": "corp",
+"company_basis": "gc",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-14",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "River Forest 7400 Augusta St のボイラー更新 $1.7M(免除許可・Martin Petersen Company 施工)。",
+"infer": "免除物件 = 学校・教会等の非課税施設(推論)。",
+"note": "設備更新(公共・非営利)。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 27-0214 EXEMPT PERMIT",
+"value": 1688660.0,
+"verbatim": "BOILER REPLACEMENT / EXEMPT PERMIT / EXEMPT PROPERTIES",
+"gc": null,
+"pin": "15014020020000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-188",
 "state": "IL",
 "city": "Chicago・4300 N NARRAGANSETT AVE",
@@ -9076,6 +13696,41 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-12290",
+"state": "IL",
+"city": "Tinley Park・16100 HARLEM AVE, TINLEY PARK, IL 60477",
+"company": "RL BISHOP & ASSOCIATES INC",
+"entity_type": "corp",
+"company_basis": "gc",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-14",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Tinley Park Sam's Club の屋根膜更新 $381k。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 BP2026-07-1129 COMMERCIAL PERMIT",
+"value": 381498.0,
+"verbatim": "SAMS CLUB - REMOVE TPO ROOF MEMBRANE. INSULATION TO REMAIN. INSTALL NEW TPO ROOF MEMBRANE. LIKE FOR LIKE. / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"gc": null,
+"pin": "27242020090000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -9219,6 +13874,41 @@
 }
 },
 {
+"id": "S-10692",
+"state": "IL",
+"city": "Naperville・1441 WHITMORE DR",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-13",
+"applied": "2026-06-03",
+"jp": false,
+"new": false,
+"summary": "Naperville Whitmore Dr のタウンホーム新築 $1.3M。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 RESD-0560-2026 TOWNHOUSE",
+"value": 1278000.0,
+"verbatim": "Building 16 new townhouse  5 units1441  1443  1445  1447 and 1449 Whitmore DrMaster Planset  RESD-0913-2025 / TOWNHOUSE / RESIDENTIAL / 9178 SQFT",
+"gc": null,
+"pin": "BASEADD0000193",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-150",
 "state": "IL",
 "city": "Chicago・3020 N ASHLAND AVE",
@@ -9251,6 +13941,76 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-12143",
+"state": "IL",
+"city": "Orland Hills・9291 W 159TH ST, ORLAND HILLS, IL",
+"company": "ORLAND TOWNE CNTR 106",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-13",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Orland Hills 9291 W 159th St の DMV(運転免許事務所)工事 $1.1M。",
+"infer": null,
+"note": "公共施設。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 26-07-119 COMMERCIAL PERMIT",
+"value": 1089143.0,
+"verbatim": "DMV / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"gc": null,
+"pin": "27221010240000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-10686",
+"state": "IL",
+"city": "Naperville・1460 WHITMORE DR",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-13",
+"applied": "2026-06-08",
+"jp": false,
+"new": false,
+"summary": "Naperville Whitmore Dr のタウンホーム新築 $1.1M。",
+"infer": null,
+"note": "住宅開発。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 RESD-0580-2026 TOWNHOUSE",
+"value": 1065541.0,
+"verbatim": "New Townhouse Bldg #17  4 units- 1460  1462  1464  1466 Whitmore Dr(Master RESD-0913-2025) / TOWNHOUSE / RESIDENTIAL / 7420 SQFT",
+"gc": null,
+"pin": "BASEADD0000177",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -9569,6 +14329,41 @@
 }
 },
 {
+"id": "S-16911",
+"state": "IL",
+"city": "Elmhurst・756 S FAIRFIELD AVE ELMHURST IL 60126",
+"company": "756 FAIRFIELD LLC",
+"entity_type": "spe",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-10",
+"applied": "2026-04-15",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 戸建て新築/使用許可 $1.8M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDR-008584-2026 Building New Construction - Residential",
+"value": 1800000.0,
+"verbatim": "single family home 5 bedroom and 4.5bathroom\nPermit Terms:\n**PERMITS ARE GOOD FOR 1 YEAR FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 30DAYS. AFTER THE 30 DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER DAY WILL BE INVOICED FOR EACH DAY THE PERMIT IS NOT COMPLETED. PERMITS ARE NOT CONSID",
+"gc": null,
+"pin": "0611338020",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-2594",
 "state": "OH",
 "city": "Columbus・935 NORTHRIDGE RD",
@@ -9709,6 +14504,41 @@
 }
 },
 {
+"id": "S-14399",
+"state": "IL",
+"city": "Arlington Heights・711 W ALGONQUIN RD ARLINGTON HEIGHTS IL 60005",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-10",
+"applied": "2026-06-17",
+"jp": false,
+"new": false,
+"summary": "Arlington Heights 711 W Algonquin Rd の TPO 屋根更新 $1.0M。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDC2026-00148 Re-Roof - Commercial/Industrial/Multi-Family",
+"value": 1004325.0,
+"verbatim": "Install new 60 MIL TPO,  mechanically fastened, new counterflashing / Re-Roof - Commercial/Industrial/Multi-Family / Re-Roof",
+"gc": null,
+"pin": "08161020350000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-125",
 "state": "IL",
 "city": "Chicago・707 N WELLS ST",
@@ -9776,6 +14606,146 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-11788",
+"state": "IL",
+"city": "Mt Prospect・1780 WALL ST, MOUNT PROSPECT, IL 60056",
+"company": "LAKE CENTER INDUSTRIAL, LP",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-09",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Mount Prospect 1780 Wall St(工業施設・Lake Center Industrial LP)の内装改修 $3.5M。",
+"infer": "工業建物の $3.5M 内装改修 = 製造テナントの入居/更新の可能性はあるが記録に業種なし(推論)。",
+"note": "工業施設・テナント不明(未分類 low)。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 CB26-000088 COMMERCIAL PERMIT",
+"value": 3500000.0,
+"verbatim": "INTERIOR REMODEL / COMMERCIAL PERMIT / REMODELING - INTERIOR ONLY",
+"gc": null,
+"pin": "08232030410000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-11797",
+"state": "IL",
+"city": "Park Ridge・1925 DEMPSTER ST   PARK RIDG, PARK RIDGE, IL 60068",
+"company": "WEDEMEIER",
+"entity_type": "unknown",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-09",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Advocate Lutheran General 病院 西立体駐車場の拡張(免除許可)$3.2M。",
+"infer": null,
+"note": "駐車場(医療設備投資ではない)。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 CM-26-0123 EXEMPT PERMIT",
+"value": 3200000.0,
+"verbatim": "ADDITION ALGH WEST PARKING GARAGE EXPANSION PROJECT / EXEMPT PERMIT / EXEMPT PROPERTIES",
+"gc": null,
+"pin": "09222000320000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-16778",
+"state": "IL",
+"city": "Park Ridge・1925 DEMPSTER ST PARK RIDGE IL 60068",
+"company": "WEDEMEIER",
+"entity_type": "unknown",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-09",
+"applied": "2026-05-05",
+"jp": false,
+"new": false,
+"summary": "同 西立体駐車場拡張の許可 2/3(敷地・配管準備)$3.2M。",
+"infer": null,
+"note": "駐車場。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 CM-26-0123 Commercial Addition",
+"value": 3200000.0,
+"verbatim": "ALGH West Parking Garage Expansion Project – Permit 2 of 3 for SITE/UTILITY PREP PRIOR TO EXPANSION CONSTRUCTION / Commercial Addition / Addition",
+"gc": null,
+"pin": "09222000320000",
+"owner_source": "applicant:SRC-021"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-10736",
+"state": "IL",
+"city": "Naperville・2336 FERRY RD",
+"company": "HIGHPOINT INVESTMENTS",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-09",
+"applied": "2026-02-11",
+"jp": false,
+"new": false,
+"summary": "Naperville 2336 Ferry Rd にガレージコンド 15,099 SF 新築 $2.4M。",
+"infer": null,
+"note": "収納・ガレージ。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 COMM-0063-2026 COMMERCIAL BUILDING - NEW OR ADDITION",
+"value": 2400000.0,
+"verbatim": "Garage condo / COMMERCIAL BUILDING - NEW OR ADDITION / COMMERCIAL / 15099 SQFT",
+"gc": null,
+"pin": "07042030250000",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -10129,6 +15099,41 @@
 }
 },
 {
+"id": "S-17123",
+"state": "IL",
+"city": "Elmhurst・845 S COLFAX AVE ELMHURST IL 60126",
+"company": "GREAT OAKS CONSTRUCTION I",
+"entity_type": "corp",
+"company_basis": "parcel",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-08",
+"applied": "2026-07-08",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.8M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-009978-2026 Transfer Stamp",
+"value": 1800000.0,
+"verbatim": "7/8/26 please upload deed and mydec / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0613120006",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-79",
 "state": "IL",
 "city": "Chicago・710 N FAIRBANKS CT",
@@ -10196,6 +15201,41 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"id": "S-16982",
+"state": "IL",
+"city": "Elmhurst・247 W FREMONT AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-08",
+"applied": "2026-07-08",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.2M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-009982-2026 Exempt Transfer Stamp",
+"value": 1200000.0,
+"verbatim": "7/8/26 PLEASE SCHEDULE SUMP PUMP INSPECTION / Exempt Transfer Stamp / Exempt Transfer Stamp",
+"gc": null,
+"pin": "0335401038",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -10304,6 +15344,41 @@
 }
 },
 {
+"id": "S-15262",
+"state": "IL",
+"city": "Arlington Heights・1301 E BURR OAK DR ARLINGTON HEIGHTS IL 60004",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-08",
+"applied": "2025-12-15",
+"jp": false,
+"new": false,
+"summary": "Arlington Heights 公園の遊具・遊歩道更新 $1.0M。",
+"infer": null,
+"note": "公共(公園)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 ESD2025-00019 Site Development - Commercial/Industrial/Institutional/Mixed Use",
+"value": 1000000.0,
+"verbatim": "Replacement of existing playground and path facilities and construction of new public walking paths and other park amenities. Review of foundation elements associated with shelter and boardwalk to be reviewed under building permit submittal. / Site Development - Commercial/Industrial/Institutional/Mixed Use / Commercial/Industrial/Institutional",
+"gc": null,
+"pin": "03093020030000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-1018",
 "state": "IL",
 "city": "Rockford・S 4725 ALPINE",
@@ -10409,6 +15484,41 @@
 }
 },
 {
+"id": "S-16919",
+"state": "IL",
+"city": "Elmhurst・254 E SOUTH ST ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-07",
+"applied": "2026-07-06",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $2.8M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-009945-2026 Transfer Stamp",
+"value": 2750000.0,
+"verbatim": "7/7/26 PLEASE SCHEDULE SUMP INSPECTION AND CORRECT BUYERS NAME ON DOCUMENTS\n7/28/26 UTILTIY BILL OWED $713.69 8/11/26 picked up by christine from chicago land title co / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0612118046",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-1304",
 "state": "MI",
 "city": "Detroit・2645 Woodward Ave",
@@ -10476,6 +15586,76 @@
 "batch": "05",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:44:38+00:00"
+}
+},
+{
+"id": "S-19392",
+"state": "IL",
+"city": "Highland Park・1632 SECOND ST HIGHLAND PARK IL 60035",
+"company": "(申請者は原記録参照)",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-07",
+"applied": "2026-06-15",
+"jp": false,
+"new": false,
+"summary": "Highland Park 1632 Second St 'The Walton' の基礎工事のみ $1.5M。",
+"infer": null,
+"note": "集合住宅(基礎)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BCOM-2026-00302 Building Permit - Commercial Construction (including condos & townhomes)",
+"value": 1500000.0,
+"verbatim": "FOUNDATION ONLY - THE WALTON. IMPACT AND COST OF CONSTRUCTION FEES.  / Building Permit - Commercial Construction (including condos & townhomes) / Building - Commercial",
+"gc": null,
+"pin": "16233200270000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-11432",
+"state": "IL",
+"city": "Schaumburg・1450 AMERICAN LN, SCHAUMBURG, SCHAUMBURG, IL 60173",
+"company": "SCHAUMBURG TOWERS OFFICE COMPLEX, LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-07",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Schaumburg Towers オフィス複合の改修 $1.5M。",
+"infer": null,
+"note": "オフィス。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 CBLD-26-200 COMMERCIAL PERMIT",
+"value": 1500000.0,
+"verbatim": "ALTERATION / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY / OTHER REMODELING",
+"gc": null,
+"pin": "07131030130000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -10969,6 +16149,76 @@
 }
 },
 {
+"id": "S-11156",
+"state": "IL",
+"city": "Rolling Meadows・2550 GOLF RD, ROLLING MEADOWS, IL 60008",
+"company": "SUNPEAK",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-02",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Rolling Meadows 2550 Golf Rd に 4,288 kWdc の地上設置太陽光 $5.0M(SunPeak 施工)。",
+"infer": null,
+"note": "太陽光(対象外)。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 ELEC126-0004 COMMERCIAL PERMIT",
+"value": 5035759.0,
+"verbatim": "GROUND-MOUNT, 4288KWDC, PHOTOVOLTAIC SOLAR SYSTEM WORK STARED IN JUNE PER CITY AUTHORIZATION / COMMERCIAL PERMIT / OTHER - MAJOR NEW CONSTRUCTION",
+"gc": null,
+"pin": "08083010410000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-18314",
+"state": "IL",
+"city": "Rolling Meadows・2550 GOLF RD ROLLING MEADOWS IL 60008",
+"company": "SUNPEAK",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-02",
+"applied": "2026-02-13",
+"jp": false,
+"new": false,
+"summary": "同 太陽光の商業許可(重複記録)$5.0M。",
+"infer": null,
+"note": "太陽光(対象外)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 ELEC126-0004 Solar Panels (Commercial) ",
+"value": 5035759.0,
+"verbatim": "ground-mount, 4288kWdc, photovoltaic solar system (work stared in June per City authorization) / Solar Panels (Commercial)  / Solar",
+"gc": null,
+"pin": "08083010410000",
+"owner_source": "applicant:SRC-021"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-38",
 "state": "IL",
 "city": "Chicago・2939 N ELSTON AVE",
@@ -11039,6 +16289,111 @@
 }
 },
 {
+"id": "S-17031",
+"state": "IL",
+"city": "Elmhurst・718 S FAIRVIEW AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-02",
+"applied": "2026-07-01",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.7M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-009911-2026 Transfer Stamp",
+"value": 1725000.0,
+"verbatim": "7/1/26 PLEASE SCHEDULE SUMP PUMP INSPECTION AND UYPLOAD DEED AND MYDEC\n7/6/26 WAITING ON SUMP RESULTS 7/16/26 PICKED UP BY ELIZABETH HASEMAN / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0611326017",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-17588",
+"state": "IL",
+"city": "Elmhurst・305 N CLINTON AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-02",
+"applied": "2026-07-02",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 不動産譲渡印紙 $1.4M(売買・工事ではない)。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 TS-009920-2026 Transfer Stamp",
+"value": 1400000.0,
+"verbatim": "7/7/26 PLEASE SCHEDULE SUMP INSPECTION\n7/21/26 UTILITY BILL OWED $119.75 / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0601202005",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-10880",
+"state": "IL",
+"city": "Naperville・920 PRAIRIE AV",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-02",
+"applied": "2026-05-01",
+"jp": false,
+"new": false,
+"summary": "Naperville 戸建て新築 $1.2M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "ネイパービル市 オープンデータ(ArcGIS)",
+"ref": "許可 RESD-0445-2026 SINGLE FAMILY HOME",
+"value": 1200000.0,
+"verbatim": "Construction of 2 story single family home with attached garage and finished basement. / SINGLE FAMILY HOME / RESIDENTIAL / 6200 SQFT",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:dupage:addr"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
 "id": "S-4",
 "state": "IL",
 "city": "Chicago・400 S LA SALLE ST",
@@ -11106,6 +16461,111 @@
 "batch": "02",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"id": "S-15263",
+"state": "IL",
+"city": "Arlington Heights・727 S BRISTOL LN ARLINGTON HEIGHTS IL 60005",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-01",
+"applied": "2026-03-09",
+"jp": false,
+"new": false,
+"summary": "Arlington Heights 戸建て新築 $2.5M。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 BLDR2026-00230 New Construction - Single Family Residential Structure",
+"value": 2460700.0,
+"verbatim": "New Construction Single Family Home / New Construction - Single Family Residential Structure / New Construction",
+"gc": null,
+"pin": "03324220040000",
+"owner_source": null
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-16971",
+"state": "IL",
+"city": "Elmhurst・554 S BERKLEY AVE ELMHURST IL 60126",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-01",
+"applied": "2026-04-28",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 住宅の浴室改修 $2.3M(金額は誤入力の疑い)。",
+"infer": null,
+"note": "住宅・金額異常。",
+"fact": {
+"src": "Tyler EnerGov CSS 匿名 API(Arlington Hts/Palatine/Elmhurst/Highland Park…)",
+"ref": "許可 RESIR-008810-2026 Interior Remodel - Residential",
+"value": 2317500.0,
+"verbatim": "Remodel 2nd floor hall bath / Interior Remodel - Residential / Interior Remodel (Residential)",
+"gc": null,
+"pin": "0611130010",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"id": "S-10994",
+"state": "IL",
+"city": "Schaumburg・1375 N MEACHAM RD, SCHAUMBUR, SCHAUMBURG, IL 60173",
+"company": "COSTCO #4454-00",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-01",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Schaumburg Costco #4454 の駐車場補修 $1.7M。",
+"infer": null,
+"note": "駐車場。",
+"fact": {
+"src": "Cook 郡 Assessor 許可台帳(1〜2 ヶ月遅延・backstop)",
+"ref": "許可 LAND-26-12 COMMERCIAL PERMIT",
+"value": 1714464.0,
+"verbatim": "SITE  PARKING LOT MAINTENANCE AND REPAIR / COMMERCIAL PERMIT / DRIVEWAYS - PATIOS",
+"gc": null,
+"pin": "07124010060000",
+"owner_source": "applicant"
+},
+"karte": null,
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)",
+"generated_at": "2026-09-03T03:26:26+00:00"
 }
 },
 {
@@ -11893,6 +17353,21 @@
 ]
 },
 {
+"id": "C-178",
+"name": "RIVIAN AUTOMOTIVE LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 10569246.0,
+"states": "IL",
+"latest": "2026-07-23",
+"targets": 2,
+"signal_ids": [
+"S-10253",
+"S-10259"
+]
+},
+{
 "id": "C-49",
 "name": "THE UNIVERSITY OF CHICAGO",
 "entity_type": "corp",
@@ -12010,6 +17485,34 @@
 ]
 },
 {
+"id": "C-180",
+"name": "ELMHURST MEMORIAL HEALTH",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 7233641.0,
+"states": "IL",
+"latest": "2026-07-28",
+"targets": 1,
+"signal_ids": [
+"S-17102"
+]
+},
+{
+"id": "C-181",
+"name": "YORK ST VENTURE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 6700000.0,
+"states": "IL",
+"latest": "2026-08-13",
+"targets": 1,
+"signal_ids": [
+"S-17432"
+]
+},
+{
 "id": "C-139",
 "name": "ABBOTT NUTRITION",
 "entity_type": "corp",
@@ -12077,6 +17580,20 @@
 "targets": 1,
 "signal_ids": [
 "S-1018"
+]
+},
+{
+"id": "C-182",
+"name": "CSM TUBE USA INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 775000.0,
+"states": "IL",
+"latest": "2026-07-31",
+"targets": 1,
+"signal_ids": [
+"S-14116"
 ]
 },
 {
@@ -12162,6 +17679,20 @@
 ]
 },
 {
+"id": "C-183",
+"name": "MORNINGSIDE ELMHURST LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 91250000.0,
+"states": "IL",
+"latest": "2026-08-28",
+"targets": 0,
+"signal_ids": [
+"S-17621"
+]
+},
+{
 "id": "C-6",
 "name": "DEPAUL UNIVERSITY",
 "entity_type": "corp",
@@ -12188,6 +17719,20 @@
 "targets": 0,
 "signal_ids": [
 "S-859"
+]
+},
+{
+"id": "C-177",
+"name": "MCMASTER CARR SUPPLY CO",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 50000000.0,
+"states": "IL",
+"latest": "2026-08-14",
+"targets": 0,
+"signal_ids": [
+"S-17401"
 ]
 },
 {
@@ -12370,6 +17915,20 @@
 ]
 },
 {
+"id": "C-184",
+"name": "VILLAGE OF HOFFMAN ESTATES",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 16000000.0,
+"states": "IL",
+"latest": "2026-07-24",
+"targets": 0,
+"signal_ids": [
+"S-13390"
+]
+},
+{
 "id": "C-18",
 "name": "WESTWOOD JV LLC",
 "entity_type": "spe",
@@ -12468,6 +18027,20 @@
 ]
 },
 {
+"id": "C-221",
+"name": "WILKINS FAMILY LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 12000000.0,
+"states": "IL",
+"latest": "2026-08-14",
+"targets": 0,
+"signal_ids": [
+"S-17391"
+]
+},
+{
 "id": "C-23",
 "name": "BELVIEW PARTNERS II LLC",
 "entity_type": "spe",
@@ -12528,6 +18101,21 @@
 ]
 },
 {
+"id": "C-186",
+"name": "SUNPEAK",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 10071518.0,
+"states": "IL",
+"latest": "2026-07-02",
+"targets": 0,
+"signal_ids": [
+"S-11156",
+"S-18314"
+]
+},
+{
 "id": "C-25",
 "name": "SNB HOLDCO, LLC",
 "entity_type": "spe",
@@ -12567,6 +18155,21 @@
 "targets": 0,
 "signal_ids": [
 "S-791"
+]
+},
+{
+"id": "C-187",
+"name": "BOARD OF EDUCATION DISTRICT 112",
+"entity_type": "public",
+"jp": false,
+"signals": 2,
+"value_total": 9000000.0,
+"states": "IL",
+"latest": "2026-08-20",
+"targets": 0,
+"signal_ids": [
+"S-18927",
+"S-18939"
 ]
 },
 {
@@ -12671,6 +18274,20 @@
 ]
 },
 {
+"id": "C-185",
+"name": "TIMOTHY CHRISTIAN SCHOOLS",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 7000000.0,
+"states": "IL",
+"latest": "2026-07-17",
+"targets": 0,
+"signal_ids": [
+"S-17589"
+]
+},
+{
 "id": "C-46",
 "name": "BALLY'S CHICAGO OPERATING COMPANY, LLC",
 "entity_type": "corp",
@@ -12715,6 +18332,22 @@
 ]
 },
 {
+"id": "C-207",
+"name": "M/I HOMES OF CHICAGO LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": 5636586.0,
+"states": "IL",
+"latest": "2026-07-29",
+"targets": 0,
+"signal_ids": [
+"S-10422",
+"S-10423",
+"S-10618"
+]
+},
+{
 "id": "C-36",
 "name": "1033 CHRISTIANA PROPERTY LLC",
 "entity_type": "spe",
@@ -12726,6 +18359,22 @@
 "targets": 0,
 "signal_ids": [
 "S-601"
+]
+},
+{
+"id": "C-208",
+"name": "175 PROSPECT, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 3,
+"value_total": 5400000.0,
+"states": "IL",
+"latest": "2026-08-14",
+"targets": 0,
+"signal_ids": [
+"S-18776",
+"S-18783",
+"S-19406"
 ]
 },
 {
@@ -12969,6 +18618,49 @@
 ]
 },
 {
+"id": "C-215",
+"name": "EQUITY TRUST COMPANY",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 3600000.0,
+"states": "IL",
+"latest": "2026-08-17",
+"targets": 0,
+"signal_ids": [
+"S-16965",
+"S-17389"
+]
+},
+{
+"id": "C-188",
+"name": "LAKE CENTER INDUSTRIAL, LP",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 3500000.0,
+"states": "IL",
+"latest": "2026-07-09",
+"targets": 0,
+"signal_ids": [
+"S-11788"
+]
+},
+{
+"id": "C-179",
+"name": "TRANSITION PROPERTIES LP",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 3456259.0,
+"states": "IL",
+"latest": "2026-07-24",
+"targets": 0,
+"signal_ids": [
+"S-10249"
+]
+},
+{
 "id": "C-148",
 "name": "LUETZOW INDUSTRIES-AVIATION",
 "entity_type": "corp",
@@ -12994,6 +18686,20 @@
 "targets": 0,
 "signal_ids": [
 "S-370"
+]
+},
+{
+"id": "C-217",
+"name": "TE MCKENNA BUILDERS INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 3250000.0,
+"states": "IL",
+"latest": "2026-08-14",
+"targets": 0,
+"signal_ids": [
+"S-16963"
 ]
 },
 {
@@ -13107,6 +18813,50 @@
 "targets": 0,
 "signal_ids": [
 "S-1270"
+]
+},
+{
+"id": "C-193",
+"name": "KAM DEVELOPMENT IL LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 3000000.0,
+"states": "IL",
+"latest": "2026-07-22",
+"targets": 0,
+"signal_ids": [
+"S-19053",
+"S-19054"
+]
+},
+{
+"id": "C-209",
+"name": "626 FOREST LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 3000000.0,
+"states": "IL",
+"latest": "2026-08-24",
+"targets": 0,
+"signal_ids": [
+"S-18950",
+"S-19441"
+]
+},
+{
+"id": "C-191",
+"name": "FITNESS & SPORTS CLUBS LL",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 2884056.0,
+"states": "IL",
+"latest": "2026-07-15",
+"targets": 0,
+"signal_ids": [
+"S-16967"
 ]
 },
 {
@@ -13293,6 +19043,20 @@
 ]
 },
 {
+"id": "C-190",
+"name": "CITY OF NAPERVILLE",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 2500000.0,
+"states": "IL",
+"latest": "2026-07-17",
+"targets": 0,
+"signal_ids": [
+"S-10608"
+]
+},
+{
 "id": "C-67",
 "name": "CARL SANDBURG CONDOMINIUM ASSOCIATION NO. 2",
 "entity_type": "corp",
@@ -13307,6 +19071,21 @@
 ]
 },
 {
+"id": "C-214",
+"name": "MOUNT NUGENT CONSTRUCTION",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 2420000.0,
+"states": "IL",
+"latest": "2026-08-10",
+"targets": 0,
+"signal_ids": [
+"S-17206",
+"S-17258"
+]
+},
+{
 "id": "C-68",
 "name": "500 NMA AQUISTION CO.LLC",
 "entity_type": "spe",
@@ -13318,6 +19097,34 @@
 "targets": 0,
 "signal_ids": [
 "S-789"
+]
+},
+{
+"id": "C-189",
+"name": "HIGHPOINT INVESTMENTS",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 2400000.0,
+"states": "IL",
+"latest": "2026-07-09",
+"targets": 0,
+"signal_ids": [
+"S-10736"
+]
+},
+{
+"id": "C-219",
+"name": "MC KENNA HOMES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 2350000.0,
+"states": "IL",
+"latest": "2026-07-24",
+"targets": 0,
+"signal_ids": [
+"S-17175"
 ]
 },
 {
@@ -13629,6 +19436,62 @@
 ]
 },
 {
+"id": "C-210",
+"name": "756 FAIRFIELD LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1800000.0,
+"states": "IL",
+"latest": "2026-07-10",
+"targets": 0,
+"signal_ids": [
+"S-16911"
+]
+},
+{
+"id": "C-218",
+"name": "GREAT OAKS CONSTRUCTION I",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1800000.0,
+"states": "IL",
+"latest": "2026-07-08",
+"targets": 0,
+"signal_ids": [
+"S-17123"
+]
+},
+{
+"id": "C-195",
+"name": "COSTCO #4454-00",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1714464.0,
+"states": "IL",
+"latest": "2026-07-01",
+"targets": 0,
+"signal_ids": [
+"S-10994"
+]
+},
+{
+"id": "C-220",
+"name": "CGJ DEVELOPMENT INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1700000.0,
+"states": "IL",
+"latest": "2026-07-24",
+"targets": 0,
+"signal_ids": [
+"S-17197"
+]
+},
+{
 "id": "C-89",
 "name": "SHRINERS HOSPITAL FOR CHILDREN",
 "entity_type": "corp",
@@ -13640,6 +19503,34 @@
 "targets": 0,
 "signal_ids": [
 "S-656"
+]
+},
+{
+"id": "C-196",
+"name": "MANEVAL CONSTRUCTION CO. INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1695158.0,
+"states": "IL",
+"latest": "2026-07-15",
+"targets": 0,
+"signal_ids": [
+"S-12381"
+]
+},
+{
+"id": "C-197",
+"name": "MARTIN PETERSEN COMPANY, INC.",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1688660.0,
+"states": "IL",
+"latest": "2026-07-14",
+"targets": 0,
+"signal_ids": [
+"S-12274"
 ]
 },
 {
@@ -13710,6 +19601,20 @@
 "targets": 0,
 "signal_ids": [
 "S-1987"
+]
+},
+{
+"id": "C-198",
+"name": "SCHAUMBURG TOWERS OFFICE COMPLEX, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1500000.0,
+"states": "IL",
+"latest": "2026-07-07",
+"targets": 0,
+"signal_ids": [
+"S-11432"
 ]
 },
 {
@@ -13867,6 +19772,20 @@
 ]
 },
 {
+"id": "C-216",
+"name": "THE HERITAGE RESI TRUST",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1365000.0,
+"states": "IL",
+"latest": "2026-07-15",
+"targets": 0,
+"signal_ids": [
+"S-16921"
+]
+},
+{
 "id": "C-172",
 "name": "SS ANDREW AND BENEDICT PARISH DET",
 "entity_type": "corp",
@@ -13878,6 +19797,34 @@
 "targets": 0,
 "signal_ids": [
 "S-1271"
+]
+},
+{
+"id": "C-192",
+"name": "UNITED AIRLINES",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1320906.0,
+"states": "IL",
+"latest": "2026-07-31",
+"targets": 0,
+"signal_ids": [
+"S-14585"
+]
+},
+{
+"id": "C-194",
+"name": "AILEY SOLAR ELECTRIC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1310831.0,
+"states": "IL",
+"latest": "2026-07-22",
+"targets": 0,
+"signal_ids": [
+"S-13142"
 ]
 },
 {
@@ -13951,6 +19898,20 @@
 ]
 },
 {
+"id": "C-206",
+"name": "21800S CICERO HOLDING",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1250000.0,
+"states": "IL",
+"latest": "2026-07-30",
+"targets": 0,
+"signal_ids": [
+"S-14042"
+]
+},
+{
 "id": "C-112",
 "name": "ONE EAST SCOTT CONDO ASSOC",
 "entity_type": "corp",
@@ -14018,6 +19979,20 @@
 "targets": 0,
 "signal_ids": [
 "S-1201"
+]
+},
+{
+"id": "C-211",
+"name": "MOUNT NUGENT BUILDERS",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1200000.0,
+"states": "IL",
+"latest": "2026-07-28",
+"targets": 0,
+"signal_ids": [
+"S-17514"
 ]
 },
 {
@@ -14091,6 +20066,20 @@
 ]
 },
 {
+"id": "C-199",
+"name": "ORLAND TOWNE CNTR 106",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1089143.0,
+"states": "IL",
+"latest": "2026-07-13",
+"targets": 0,
+"signal_ids": [
+"S-12143"
+]
+},
+{
 "id": "C-120",
 "name": "CHICAGO HOUSING AUTHORITY",
 "entity_type": "public",
@@ -14130,6 +20119,20 @@
 "targets": 0,
 "signal_ids": [
 "S-67"
+]
+},
+{
+"id": "C-222",
+"name": "VALLETT RENTAL",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1047600.0,
+"states": "IL",
+"latest": "2026-08-12",
+"targets": 0,
+"signal_ids": [
+"S-17448"
 ]
 },
 {
@@ -14217,6 +20220,48 @@
 ]
 },
 {
+"id": "C-200",
+"name": "CIMA DEVELOPERS LP",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1000000.0,
+"states": "IL",
+"latest": "2026-08-04",
+"targets": 0,
+"signal_ids": [
+"S-16968"
+]
+},
+{
+"id": "C-212",
+"name": "611 W FAY LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1000000.0,
+"states": "IL",
+"latest": "2026-08-25",
+"targets": 0,
+"signal_ids": [
+"S-17373"
+]
+},
+{
+"id": "C-213",
+"name": "DOHERTY CUSTOM HOMES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1000000.0,
+"states": "IL",
+"latest": "2026-08-18",
+"targets": 0,
+"signal_ids": [
+"S-17609"
+]
+},
+{
 "id": "C-131",
 "name": "AGI CARGO, LLC",
 "entity_type": "corp",
@@ -14229,6 +20274,20 @@
 "signal_ids": [
 "S-17",
 "S-186"
+]
+},
+{
+"id": "C-202",
+"name": "RWE MANAGEMENT COMPANY DBA RWE DESIGN BUILD",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 900000.0,
+"states": "IL",
+"latest": "2026-07-16",
+"targets": 0,
+"signal_ids": [
+"S-12556"
 ]
 },
 {
@@ -14288,6 +20347,20 @@
 ]
 },
 {
+"id": "C-201",
+"name": "LEOPARDO CONSTRUCTION",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 546000.0,
+"states": "IL",
+"latest": "2026-07-22",
+"targets": 0,
+"signal_ids": [
+"S-13119"
+]
+},
+{
 "id": "C-130",
 "name": "ADAMS RE MGMT LLC",
 "entity_type": "spe",
@@ -14302,6 +20375,34 @@
 ]
 },
 {
+"id": "C-204",
+"name": "RAVISLOE COUNTRY CLUB",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 500000.0,
+"states": "IL",
+"latest": "2026-07-28",
+"targets": 0,
+"signal_ids": [
+"S-13722"
+]
+},
+{
+"id": "C-203",
+"name": "RL BISHOP & ASSOCIATES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 381498.0,
+"states": "IL",
+"latest": "2026-07-14",
+"targets": 0,
+"signal_ids": [
+"S-12290"
+]
+},
+{
 "id": "C-132",
 "name": "2FM FLEET AND FACILITY MANAGEMENT",
 "entity_type": "public",
@@ -14313,6 +20414,20 @@
 "targets": 0,
 "signal_ids": [
 "S-734"
+]
+},
+{
+"id": "C-205",
+"name": "SONG FAMILY ORD LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 265000.0,
+"states": "IL",
+"latest": "2026-07-28",
+"targets": 0,
+"signal_ids": [
+"S-13679"
 ]
 },
 {
