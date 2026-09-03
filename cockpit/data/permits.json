@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-03T21:07:45+00:00",
+"generated_at": "2026-09-03T21:27:29+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,12 +15,12 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 23856,
-"candidates": 498,
+"signals_total": 24188,
+"candidates": 499,
 "enriched": 21671,
 "targets": 63,
 "unclassified": 21608,
-"unevaluated": 2185,
+"unevaluated": 2517,
 "by_category": {
 "データセンター建設": 5,
 "未分類": 21608,
@@ -364,6 +364,20 @@
 "date_min": "2026-07-01",
 "date_max": "2026-08-31",
 "owner_coverage": 243,
+"targets": 0
+},
+{
+"source_id": "SRC-048",
+"state": "IL",
+"jurisdiction": "Elmwood Park",
+"label": "エルムウッドパーク村 建築許可(FOIA 回答・CSV・所有者欄なし)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-03T21:27:29Z",
+"last_run_note": "ingested from elmwoodpark.json",
+"signals": 332,
+"date_min": "2026-07-01",
+"date_max": "2026-08-31",
+"owner_coverage": 0,
 "targets": 0
 }
 ],
