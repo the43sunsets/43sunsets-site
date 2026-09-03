@@ -98,6 +98,9 @@ main{padding:18px 28px 60px; min-width:0;}
 .pager button:hover{border-color:var(--ai-accent); color:var(--ai-accent);}
 .pager button[disabled]{opacity:.35; cursor:default;}
 .pager button.cur{background:var(--ink); color:var(--paper); border-color:var(--ink); cursor:default;}
+.pager .gap{color:var(--sub); padding:0 2px;}
+.pager .pinfo{font-size:12.5px; color:var(--sub); margin-left:10px;}
+.pager{flex-wrap:wrap;}
 .empty{padding:60px 20px; text-align:center; color:var(--sub); font-size:14px;}
 
 footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5px; color:var(--sub);}
@@ -338,9 +341,20 @@ function render(){
       b.addEventListener("click", ()=>{ page = target; render(); document.querySelector("main").scrollIntoView({behavior:"smooth"}); });
       pager.appendChild(b);
     };
+    // ページ番号は窓表示(1 … p-2 p-1 [p] p+1 p+2 … N)。全件読みで数千ページになるため(9/3 CEO 指摘: 横に伸びる)
+    mk("«", 1, {disabled:page===1});
     mk("‹", Math.max(1,page-1), {disabled:page===1});
-    for(let p=1;p<=pages;p++) mk(String(p), p, {cur:p===page});
+    const win = new Set([1, pages, page-2, page-1, page, page+1, page+2].filter(x=>x>=1 && x<=pages));
+    let last = 0;
+    for(const p of Array.from(win).sort((a,b)=>a-b)){
+      if(p - last > 1){ const gap = document.createElement("span"); gap.className = "gap"; gap.textContent = "…"; pager.appendChild(gap); }
+      mk(String(p), p, {cur:p===page}); last = p;
+    }
     mk("›", Math.min(pages,page+1), {disabled:page===pages});
+    mk("»", pages, {disabled:page===pages});
+    const info = document.createElement("span"); info.className = "pinfo";
+    info.innerHTML = `<span class="mono">${page.toLocaleString()}</span> / <span class="mono">${pages.toLocaleString()}</span> ページ`;
+    pager.appendChild(info);
   }
 }
 document.getElementById("jponly").addEventListener("change", ()=>{ page=1; render(); });
