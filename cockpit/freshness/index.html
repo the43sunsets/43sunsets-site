@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ja" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>データの鮮度と網羅 — 自治体別の更新状況 | 43 Sunsets Cockpit</title>
+<meta name="description" content="コックピット(建設許可シグナル)が見ている自治体の一覧と、それぞれの最終更新日・最終データ日・次回更新予定。郡別ヒートマップで網羅の現在地を毎日更新。">
+<link rel="canonical" href="https://43sunsets.com/cockpit/freshness/">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="データの鮮度と網羅 — 43 Sunsets Cockpit">
+<meta property="og:description" content="自治体ごとの最終更新日・次回更新・郡別ヒートマップ。毎日更新。">
+<meta property="og:url" content="https://43sunsets.com/cockpit/freshness/">
+<meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E;
+  --accent:#2F5D8A; --line:#D9DDD9; --line-soft:#E7EAE6; --chip-bg:#EDF0F3; --stamp:#B54434;
+  --fresh:#2E6E4E; --fresh-bg:#EEF5F0; --stale:#8A5A2F; --stale-bg:#F7F1E8; --over:#B54434; --over-bg:#F8ECEA; --never:#5A636E; --never-bg:#EDF0F3; --na:#9AA4AE; --na-bg:#F3F4F3;
+  --map-0:#ECEFF2; --map-1:#D7E6DC; --map-2:#B7D3C1; --map-3:#8FBBA0; --map-4:#5F9C78; --map-5:#3B7D58; --map-6:#245C3D;
+  --map-out:#F0F1F0; --map-border:#FFFFFF; --map-state:#20262E;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#161A1F; --card:#1E242B; --ink:#E4E7EA; --sub:#9AA4AE;
+    --accent:#7FA8D0; --line:#333B44; --line-soft:#2A313A; --chip-bg:#2A313A; --stamp:#D07360;
+    --fresh:#7CC49C; --fresh-bg:#20302A; --stale:#D8A96B; --stale-bg:#332A1E; --over:#D07360; --over-bg:#3A2622; --never:#9AA4AE; --never-bg:#2A313A; --na:#6B7580; --na-bg:#222830;
+    --map-0:#2E353D; --map-1:#1F4A34; --map-2:#25643F; --map-3:#2F824F; --map-4:#3EA264; --map-5:#63C285; --map-6:#A6E4BC;
+    --map-out:#1A1E23; --map-border:#0F1215; --map-state:#E4E7EA;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#161A1F; --card:#1E242B; --ink:#E4E7EA; --sub:#9AA4AE;
+  --accent:#7FA8D0; --line:#333B44; --line-soft:#2A313A; --chip-bg:#2A313A; --stamp:#D07360;
+  --fresh:#7CC49C; --fresh-bg:#20302A; --stale:#D8A96B; --stale-bg:#332A1E; --over:#D07360; --over-bg:#3A2622; --never:#9AA4AE; --never-bg:#2A313A; --na:#6B7580; --na-bg:#222830;
+  --map-0:#2E353D; --map-1:#1F4A34; --map-2:#25643F; --map-3:#2F824F; --map-4:#3EA264; --map-5:#63C285; --map-6:#A6E4BC;
+  --map-out:#1A1E23; --map-border:#0F1215; --map-state:#E4E7EA;
+}
+.side .note{margin-top:12px; padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:var(--card); font-size:12px; color:var(--sub); line-height:1.55;}
+.side .note b{color:var(--ink);}
+th.sortable{cursor:pointer; user-select:none;}
+th.sortable:hover{color:var(--ink);}
+th.sortable .arr{opacity:.35; margin-left:3px;}
+th.sortable[aria-sort="ascending"] .arr,th.sortable[aria-sort="descending"] .arr{opacity:1; color:var(--ink);}
+svg.map path.scope-out{stroke-dasharray:2 2;}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper); color:var(--ink); font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif; margin:0; line-height:1.6; font-size:14px;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;}
+a{color:var(--accent)}
+header{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:16px 28px 13px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; background:var(--card); position:sticky; top:0; z-index:40;}
+.hdr-right{display:flex; align-items:center; gap:14px; flex:none;}
+.theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;}
+.theme-btn:hover{color:var(--ink); border-color:var(--ink);}
+th{top:var(--headh,0px);}
+.masthead h1{font-family:"Shippori Mincho",serif; font-size:21px; font-weight:700; margin:0; letter-spacing:.02em;}
+.masthead .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
+.masthead .kicker a{color:inherit; text-decoration:none}
+.masthead .meta{font-size:12px; color:var(--sub); margin-top:4px;}
+.beta{flex:none; border:2.5px solid var(--stamp); color:var(--stamp); font-family:"Shippori Mincho",serif; font-weight:700; font-size:15px; padding:5px 8px; letter-spacing:.2em; transform:rotate(-4deg);}
+main{max-width:1180px; margin:0 auto; padding:18px 28px 60px;}
+h2{font-family:"Shippori Mincho",serif; font-size:17px; margin:34px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--line);}
+h2 .sub{font-family:"Zen Kaku Gothic New",sans-serif; font-size:12px; color:var(--sub); font-weight:400; margin-left:10px;}
+.lede{color:var(--sub); font-size:13px; margin:6px 0 0;}
+.tabs{display:flex; gap:6px; margin:16px 0 4px; flex-wrap:wrap;}
+.tabs button{border:1px solid var(--line); background:var(--card); color:var(--ink); padding:6px 14px; border-radius:999px; cursor:pointer; font:inherit; font-size:13px;}
+.tabs button[aria-selected="true"]{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+.tabs button .n{color:inherit; opacity:.65; font-size:11px; margin-left:4px;}
+.kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(118px,1fr)); gap:10px; margin:14px 0 6px;}
+.kpi{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+.kpi .l{font-size:11px; letter-spacing:.12em; color:var(--sub); text-transform:uppercase;}
+.kpi .v{font-size:24px; font-weight:700; margin-top:2px; font-family:"IBM Plex Mono",monospace;}
+.kpi .s{font-size:12px; color:var(--sub);}
+.kpi.fresh .v{color:var(--fresh)} .kpi.stale .v{color:var(--stale)} .kpi.over .v{color:var(--over)} .kpi.never .v{color:var(--never)} .kpi.na .v{color:var(--na)}
+.goal{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin:10px 0 0;}
+.goal .bar{position:relative; height:14px; background:var(--chip-bg); border-radius:7px; overflow:hidden; margin:8px 0 4px;}
+.goal .bar .f{position:absolute; left:0; top:0; bottom:0; background:var(--fresh);}
+.goal .bar .s{position:absolute; top:0; bottom:0; background:var(--stale);}
+.goal .bar .t{position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--stamp);}
+.goal .cap{font-size:12px; color:var(--sub); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+.mapwrap{display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:18px; align-items:start;}
+@media (max-width:860px){.mapwrap{grid-template-columns:1fr}}
+.mapcard{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:10px;}
+svg.map{width:100%; height:auto; display:block;}
+.legend{display:flex; gap:4px; align-items:center; font-size:11px; color:var(--sub); margin:8px 4px 2px; flex-wrap:wrap;}
+.legend i{display:inline-block; width:22px; height:12px; border:1px solid var(--line);}
+.side{font-size:13px;}
+.side h3{font-size:12px; letter-spacing:.14em; color:var(--sub); text-transform:uppercase; margin:6px 0 6px;}
+.side ol{margin:0; padding-left:20px;}
+.side li{margin:2px 0;}
+.side .share{font-family:"IBM Plex Mono",monospace; color:var(--sub); margin-left:6px;}
+.tip{position:fixed; z-index:9; pointer-events:none; background:var(--card); border:1px solid var(--line); border-radius:6px; padding:8px 10px; font-size:12px; max-width:290px; box-shadow:0 6px 18px rgba(0,0,0,.12);}
+.tip b{display:block; margin-bottom:2px;}
+.tip .k{color:var(--sub);}
+.toolbar{display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:10px 0;}
+.chip{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer;}
+.chip[aria-pressed="true"]{background:var(--chip-bg); border-color:var(--ink);}
+.toolbar input{margin-left:auto; border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:6px; padding:6px 10px; font:inherit; font-size:13px; min-width:220px;}
+.tablewrap{overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--card);}
+table{border-collapse:collapse; width:100%; font-size:12.5px;}
+th,td{padding:7px 10px; border-bottom:1px solid var(--line-soft); text-align:left; vertical-align:top; white-space:nowrap;}
+th{font-size:11px; letter-spacing:.1em; color:var(--sub); text-transform:uppercase; position:sticky; top:0; background:var(--card);}
+td.num{text-align:right; font-family:"IBM Plex Mono",monospace;}
+td.reason{white-space:normal; color:var(--sub); max-width:300px; font-size:12px;}
+.st{display:inline-block; padding:1px 8px; border-radius:999px; font-size:11px; font-weight:700; letter-spacing:.04em;}
+.st.fresh{color:var(--fresh); background:var(--fresh-bg)} .st.stale{color:var(--stale); background:var(--stale-bg)} .st.overdue{color:var(--over); background:var(--over-bg)} .st.never{color:var(--never); background:var(--never-bg)} .st.na{color:var(--na); background:var(--na-bg)}
+.more{margin:10px 0 0; text-align:center;}
+.more button{border:1px solid var(--line); background:var(--card); color:var(--ink); padding:7px 18px; border-radius:6px; cursor:pointer; font:inherit;}
+.defs{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px;}
+.def{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px; font-size:13px;}
+.def h3{margin:0 0 6px; font-size:13px;}
+.def p{margin:0; color:var(--sub);}
+.cycle{width:100%; border-collapse:collapse; font-size:13px; background:var(--card); border:1px solid var(--line); border-radius:8px;}
+.cycle td,.cycle th{padding:8px 12px; border-bottom:1px solid var(--line-soft); vertical-align:top;}
+footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px; color:var(--sub); max-width:1180px; margin:0 auto;}
+.err{border:1px solid var(--stamp); color:var(--stamp); padding:10px 12px; border-radius:6px; margin:16px 0;}
+</style>
+</head>
+<body>
+<header>
+  <div class="masthead">
+    <div class="kicker"><a href="https://43sunsets.com/">43 SUNSETS</a> — COCKPIT — <a href="../permits/">建設許可シグナル</a></div>
+    <h1>データの鮮度と網羅</h1>
+    <div class="meta" id="metaline">自治体ごとに「いつ取れたか・データはいつのものか・次はいつ動くか」を毎日再計算して表示します。読み込み中…</div>
+  </div>
+  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
+</header>
+<script>
+/* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
+(function(){
+  const K = "cockpit-theme"; let t = null;
+  try { t = localStorage.getItem(K); } catch (e) {}
+  if (t !== "dark" && t !== "light") t = "light";
+  const apply = n => { document.documentElement.setAttribute("data-theme", n); try { localStorage.setItem(K, n); } catch (e) {}
+    const b = document.getElementById("themebtn"); if (b) b.textContent = n === "dark" ? "☀️ ライト" : "🌙 ダーク";
+    window.dispatchEvent(new CustomEvent("themechange", {detail: n})); };
+  document.documentElement.setAttribute("data-theme", t);
+  window.__setTheme = apply;
+  const b = document.getElementById("themebtn");
+  if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
+  const setH = () => document.documentElement.style.setProperty("--headh", document.querySelector("header").offsetHeight + "px");
+  setH(); window.addEventListener("resize", setH);
+})();
+</script>
+
+<main>
+  <div id="err" class="err" hidden></div>
+
+  <div class="tabs" id="tabs" role="tablist"></div>
+
+  <div class="kpis" id="kpis"></div>
+  <div class="goal" id="goal"></div>
+
+  <h2>郡別ヒートマップ<span class="sub">色 = その郡の対象自治体のうち、最新データが取れている自治体の人口比(fresh)。灰色 = 製造業 80% 線の外(今回のスコープ外)</span></h2>
+  <div class="mapwrap">
+    <div class="mapcard">
+      <svg class="map" id="map" viewBox="0 0 900 640" role="img" aria-label="郡別の鮮度ヒートマップ"></svg>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="side" id="side"></div>
+  </div>
+  <div class="tip" id="tip" hidden></div>
+
+  <h2>自治体の一覧<span class="sub">人口順。「最終取得」= 当社が最後に記録を受け取った日時(米中部時間)/「最終データ日」= その記録に含まれる最新の許可日</span></h2>
+  <div class="toolbar" id="toolbar"></div>
+  <div class="tablewrap">
+    <table id="table">
+      <thead><tr id="thead-row">
+        <th class="sortable" data-k="name">自治体<span class="arr">↕</span></th><th class="sortable" data-k="population">人口<span class="arr">↕</span></th><th class="sortable" data-k="route">経路<span class="arr">↕</span></th><th class="sortable" data-k="method">取得方法<span class="arr">↕</span></th>
+        <th class="sortable" data-k="last_fetch_at">最終取得<span class="arr">↕</span></th><th class="sortable" data-k="last_record_date">最終データ日<span class="arr">↕</span></th><th class="sortable" data-k="records_60d">直近 60 日<span class="arr">↕</span></th>
+        <th class="sortable" data-k="status">判定<span class="arr">↕</span></th><th class="sortable" data-k="next_due_at">次回<span class="arr">↕</span></th><th class="sortable" data-k="_why">備考<span class="arr">↕</span></th></tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div class="more" id="more"></div>
+
+  <h2>この面の読み方</h2>
+  <div class="defs">
+    <div class="def"><h3><span class="st fresh">fresh</span> 最新</h3><p>取得が周期どおりに続いていて、最新の許可日が 45 日以内。小規模な自治体で件数が少ないだけの場合も、源全体が新しければ fresh と判定します。</p></div>
+    <div class="def"><h3><span class="st stale">stale</span> データが古い</h3><p>取得そのものは成功しているのに、源が出す記録が 45 日より古い(自治体側の公開遅延)。取れていないのではなく、まだ出ていない状態です。</p></div>
+    <div class="def"><h3><span class="st overdue">overdue</span> 取得が止まっている</h3><p>期待周期の 2 倍以上、取得に成功していない。または FOIA の次回予定日を過ぎている。当社側で手当てが要る状態です。</p></div>
+    <div class="def"><h3><span class="st never">never</span> まだ一度も</h3><p>経路は決まっているが記録が一件も入っていない。FOIA 依頼の送信待ち、州 DB の障害中、配線したが 0 件、など。</p></div>
+    <div class="def"><h3><span class="st na">n/a</span> 経路なし</h3><p>公開ポータルが無い、または閲覧にログインが要るなどの理由で、まだ取得経路を決めていない自治体。網羅の穴として数えます。</p></div>
+    <div class="def"><h3>取得日とデータ日を分ける理由</h3><p>毎日取りに行っても、自治体が月末にまとめて公開する源では「取得は今日・データは先月」になります。タイムリーさは最終データ日で読んでください。</p></div>
+  </div>
+
+  <h2>更新の周期<span class="sub">経路ごとに違います</span></h2>
+  <table class="cycle">
+    <tr><th>経路</th><th>周期</th><th>説明</th></tr>
+    <tr><td>公開ポータル・州 DB(source)</td><td>毎日 12:00 UTC(米中部 07:00)</td><td>市・郡・州が公開している許可記録を自動取得。取得日は毎日更新され、データ日は源の公開頻度に従います。</td></tr>
+    <tr><td>郡の課税台帳(backstop)</td><td>約 1〜2 ヶ月遅れ</td><td>市に公開ポータルが無い場合、Cook 郡 Assessor の台帳から許可を拾います。工事内容の粒度は市の記録より粗い。</td></tr>
+    <tr><td>情報公開請求(FOIA)</td><td>毎月 1 日に前月分を依頼 → 5 営業日で回答</td><td>ポータルの無い自治体には Illinois FOIA(5 ILCS 140)で「発行済み許可の一覧」を請求。PDF・Excel の回答を取り込みます。月次配信に加えてくれた自治体は依頼不要になります。</td></tr>
+    <tr><td>AI 読み(分類)</td><td>週次(セッション枠)</td><td>保存した記録を AI が読み、4 分類(新設・増設・設備・移転)へ割り当てます。読了前の行は「未評価」として建設許可面に残ります。</td></tr>
+  </table>
+</main>
+
+<footer>
+  <b>43 Sunsets Cockpit(BETA)</b> — この面は <span class="mono">coverage.json</span>(毎日 12:00 UTC に VPS が再生成)をそのまま描画しています。数字は当社の収集記録から機械的に計算したもので、自治体の公式な統計ではありません。
+  郡の形状は米国 Census の境界データ、対象郡は Census CBP 2022 の製造業事業所数・従業者数の上位 80% 線で選んでいます。
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+(async function(){
+  const NAMES = {IL:"イリノイ", IN:"インディアナ", MI:"ミシガン", OH:"オハイオ", WI:"ウィスコンシン"};
+  const ORDER = ["IL","IN","MI","OH","WI"];
+  const ROUTE = {source:"公開記録", backstop:"郡台帳", foia:"FOIA", parcel:"地番", none:"—"};
+  const METHOD = {curl:"自動取得", browser:"ブラウザ取得", "actions-relay":"中継取得", pdf:"PDF 月報", foia:"FOIA 回答(月次)", email:"メール依頼", form:"フォーム依頼", portal:"ポータル依頼", phone:"電話/郵送", "login-required":"ログイン必須", unknown:"未調査"};
+  const PLATFORM = {"none-found":"ポータルなし", "bsa-online":"BS&A", opengov:"OpenGov", cityview:"CityView", cloudpermit:"Cloudpermit", communitycore:"CommunityCore", iworq:"iWorQ", "pdf-report":"PDF 報告", citizenserve:"Citizenserve", energov:"EnerGov", etrakit:"eTRAKiT", lama:"LAMA", "safebuilt-community-core":"CommunityCore", smartgov:"SmartGov", accela:"Accela", socrata:"Socrata", unknown:"未調査"};
+  const STATUS_JA = {fresh:"最新", stale:"データが古い", overdue:"取得停止", never:"未取得", "n/a":"経路なし"};
+  const fmtN = v => (v == null ? "—" : Number(v).toLocaleString("en-US"));
+  const fmtD = s => s ? s.slice(0,10) : "—";
+  const fmtDT = s => s ? s.slice(0,16).replace("T"," ") + "Z" : "—";
+  const cls = s => s === "n/a" ? "na" : s;
+
+  let COV, GEO;
+  try {
+    [COV, GEO] = await Promise.all([
+      fetch("../data/coverage.json", {cache:"no-store"}).then(r => { if(!r.ok) throw new Error("coverage.json " + r.status); return r.json(); }),
+      fetch("../assets/counties-5states.json", {cache:"no-store"}).then(r => { if(!r.ok) throw new Error("counties " + r.status); return r.json(); }),
+    ]);
+  } catch (e) {
+    const el = document.getElementById("err"); el.textContent = "データを読み込めませんでした: " + e.message; el.hidden = false; return;
+  }
+
+  // ---- 見出し: 最終更新と次回更新(生成時刻の次の 12:00 UTC)
+  const gen = new Date(COV.meta.generated_at);
+  const next = new Date(Date.UTC(gen.getUTCFullYear(), gen.getUTCMonth(), gen.getUTCDate(), 12, 0, 0));
+  if (next <= gen) next.setUTCDate(next.getUTCDate() + 1);
+  const ct = d => {
+    const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", {timeZone:"America/Chicago", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hour12:false}).formatToParts(d).filter(x => x.type !== "literal").map(x => [x.type, x.value]));
+    return `${p.year}-${p.month}-${p.day} ${p.hour === "24" ? "00" : p.hour}:${p.minute}`;
+  };
+  const utc = d => d.toISOString().slice(11,16) + " UTC";
+  document.getElementById("metaline").innerHTML =
+    `最終更新 <span class="mono">${ct(gen)}</span> 米中部時間(${utc(gen)})・次回更新 <span class="mono">${ct(next)}</span> 米中部時間(${utc(next)})・対象 <span class="mono">${fmtN(COV.rows.length)}</span> 自治体・判定基準: データ日 ${COV.meta.stale_days} 日 / 集計窓 ${COV.meta.window_days} 日`;
+  window.addEventListener("themechange", () => drawMap());
+
+  // ---- 州タブ(IL を先頭・既定)
+  let state = (location.hash.replace("#","") || "IL").toUpperCase();
+  if (!ORDER.includes(state)) state = "IL";
+  const tabs = document.getElementById("tabs");
+  for (const st of ORDER) {
+    const b = document.createElement("button"); b.setAttribute("role","tab"); b.dataset.st = st;
+    const bs = COV.by_state[st];
+    b.innerHTML = `${NAMES[st]}<span class="n">${bs ? fmtN(bs.munis) : 0}</span>`;
+    b.onclick = () => { state = st; location.hash = st; render(); };
+    tabs.appendChild(b);
+  }
+
+  // ---- 地図の下ごしらえ
+  const svg = d3.select("#map"), W = 900, H = 640;
+  const proj = d3.geoConicConformal().parallels([40, 45]).rotate([86, 0]);
+  const path = d3.geoPath(proj);
+  const gC = svg.append("g"), gS = svg.append("g");
+  const tip = document.getElementById("tip");
+  const cssVar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const ramp = () => [0,1,2,3,4,5,6].map(i => cssVar("--map-" + i));
+  const breaks = [0.0001, 0.2, 0.4, 0.6, 0.8, 0.95];  // fresh 人口比
+  const color = v => { const c = ramp(); if (v == null) return cssVar("--map-out"); let i = 0; while (i < breaks.length && v >= breaks[i]) i++; return c[i]; };
+
+  function drawMap(){
+    const feats = GEO.features.filter(f => f.properties.st === state);
+    proj.fitExtent([[16,16],[W-16,H-16]], {type:"FeatureCollection", features:feats});
+    const bc = COV.by_county;
+    const sel = gC.selectAll("path").data(feats, f => f.id);
+    sel.exit().remove();
+    sel.enter().append("path").merge(sel)
+      .attr("d", path)
+      .attr("fill", f => { const c = bc[f.id]; return color(c ? c.fresh_pop_share : null); })
+      .attr("class", f => bc[f.id] ? "" : "scope-out")
+      .attr("stroke", cssVar("--map-border")).attr("stroke-width", 1)
+      .style("cursor", f => bc[f.id] ? "pointer" : "default")
+      .on("mousemove", (ev, f) => showTip(ev, f))
+      .on("mouseleave", () => { tip.hidden = true; })
+      .on("click", (ev, f) => { if (bc[f.id]) { document.getElementById("q").value = ""; countyFilter = f.id; renderTable(); document.getElementById("table").scrollIntoView({behavior:"smooth", block:"start"}); } });
+    const s2 = gS.selectAll("path").data([{type:"FeatureCollection", features:feats}]);
+    s2.enter().append("path").merge(s2).attr("d", path).attr("fill","none").attr("stroke", cssVar("--map-state")).attr("stroke-width", 1.2);
+    // 凡例
+    const cols = ramp();
+    const labels = ["スコープ外/0%", "〜20%", "20〜40%", "40〜60%", "60〜80%", "80〜95%", "95%〜"];
+    document.getElementById("legend").innerHTML = `<span>fresh の人口比:</span>` + cols.map((c, i) => `<i style="background:${c}"></i><span>${labels[i]}</span>`).join("") + `<i style="background:${cssVar("--map-out")}"></i><span>スコープ外</span>`;
+  }
+  function showTip(ev, f){
+    const c = COV.by_county[f.id];
+    const p = f.properties;
+    if (!c) { tip.innerHTML = `<b>${p.n} 郡</b><span class="k">製造業 80% 線の外 — 今回のスコープ外</span>`; }
+    else {
+      const bs = c.by_status;
+      tip.innerHTML = `<b>${p.n} 郡</b>
+        <div><span class="k">対象自治体:</span> ${c.munis}(人口 ${fmtN(c.pop)})</div>
+        <div><span class="k">fresh 人口比:</span> <span class="mono">${(100*c.fresh_pop_share).toFixed(0)}%</span></div>
+        <div><span class="k">内訳:</span> 最新 ${bs.fresh||0} / 古い ${bs.stale||0} / 停止 ${bs.overdue||0} / 未取得 ${bs.never||0} / 経路なし ${bs["n/a"]||0}</div>
+        <div class="k">クリックで一覧をこの郡に絞る</div>`;
+    }
+    tip.style.left = Math.min(ev.clientX + 14, window.innerWidth - 300) + "px";
+    tip.style.top = Math.min(ev.clientY + 14, window.innerHeight - 150) + "px";
+    tip.hidden = false;
+  }
+
+  // ---- KPI と目標バー
+  function renderKpis(){
+    const bs = COV.by_state[state] || {munis:0, pop:0, by_status:{}, pop_by_status:{}, pop_share_by_status:{}};
+    const k = (key, label, sub) => `<div class="kpi ${cls(key)}"><div class="l">${label}</div><div class="v">${fmtN(bs.by_status[key]||0)}</div><div class="s">${sub}</div></div>`;
+    const share = key => ((bs.pop_share_by_status[key]||0)*100).toFixed(1) + "% の人口";
+    document.getElementById("kpis").innerHTML =
+      `<div class="kpi"><div class="l">対象自治体</div><div class="v">${fmtN(bs.munis)}</div><div class="s">人口 ${fmtN(bs.pop)}</div></div>` +
+      k("fresh", "最新", share("fresh")) + k("stale", "データが古い", share("stale")) + k("overdue", "取得停止", share("overdue")) + k("never", "未取得", share("never")) + k("n/a", "経路なし", share("n/a"));
+    const f = (bs.pop_share_by_status.fresh||0)*100, s = (bs.pop_share_by_status.stale||0)*100;
+    document.getElementById("goal").innerHTML =
+      `<div><b>80% 目標に対する現在地</b> <span class="mono">${f.toFixed(1)}%</span> の人口で最新データが取れています(データが古い分を足すと <span class="mono">${(f+s).toFixed(1)}%</span>)。</div>
+       <div class="bar"><div class="f" style="width:${f}%"></div><div class="s" style="left:${f}%; width:${s}%"></div><div class="t" style="left:80%"></div></div>
+       <div class="cap"><span>0%</span><span>目標 80%(赤線)= 製造業の所在を人口ではなく事業所で測ると別の値になります。この面の人口比は「自治体の網羅」の目安です</span><span>100%</span></div>`;
+  }
+
+  // ---- サイド: 郡の順位
+  function renderSide(){
+    const list = Object.entries(COV.by_county).filter(([,c]) => c.state === state).sort((a,b) => b[1].pop - a[1].pop);
+    const name = fips => (GEO.features.find(f => f.id === fips)||{properties:{n:fips}}).properties.n;
+    const nCounties = list.length, nAll = GEO.features.filter(f => f.properties.st === state).length;
+    document.getElementById("side").innerHTML = `<h3>${NAMES[state]} — 対象 ${nCounties} 郡(人口順)</h3><ol>` +
+      list.map(([fips, c]) => `<li>${name(fips)} 郡 <span class="share">${(100*c.fresh_pop_share).toFixed(0)}%</span> <span class="share">${c.munis} 自治体</span></li>`).join("") + `</ol>` +
+      `<div class="note">上記 ${nCounties} 郡は、${NAMES[state]}の製造業の 8 割以上が集まっている郡です。米 Census の 2022 年の郡別統計で、工場・作業所の数で見ても、そこで働く人の数で見ても上位に入る郡を選びました。この ${nCounties} 郡を見れば、州の製造業のほぼ全体を見たことになる、という考え方です。地図の灰色は対象外の郡(全 ${nAll} 郡のうち残り ${nAll - nCounties} 郡)です。<br><br>
+      郡名の横の % はデータ取得率です。100% なら、その郡についてコックピット上で全てのデータが取れていることを意味します(町の人口で重み付け)。「N 自治体」は、その郡で当社が見ている町の数です。</div>`;
+  }
+
+  // ---- 一覧
+  let statusFilter = null, countyFilter = null, limit = 60;
+  let sortKey = "population", sortDir = -1;   // 既定 = 人口の降順
+  const STATUS_RANK = {fresh:0, stale:1, overdue:2, never:3, "n/a":4};
+  document.querySelectorAll("th.sortable").forEach(th => th.onclick = () => {
+    const k = th.dataset.k;
+    if (sortKey === k) sortDir = -sortDir; else { sortKey = k; sortDir = (k === "name" || k === "route" || k === "method" || k === "status" || k === "_why") ? 1 : -1; }
+    limit = 60; renderTable();
+  });
+  function cmp(a, b){
+    let x = a[sortKey], y = b[sortKey];
+    if (sortKey === "status") { x = STATUS_RANK[x]; y = STATUS_RANK[y]; }
+    const nx = x == null || x === "", ny = y == null || y === "";
+    if (nx && ny) return 0; if (nx) return 1; if (ny) return -1;   // 空欄は常に末尾
+    if (typeof x === "number" && typeof y === "number") return (x - y) * sortDir;
+    return String(x).localeCompare(String(y), "ja") * sortDir;
+  }
+  const toolbar = document.getElementById("toolbar");
+  toolbar.innerHTML = ["fresh","stale","overdue","never","n/a"].map(s => `<button class="chip" data-s="${s}" aria-pressed="false">${STATUS_JA[s]}</button>`).join("") +
+    `<button class="chip" id="clearcounty" hidden>郡の絞り込みを解除</button><input id="q" placeholder="自治体名で検索">`;
+  toolbar.querySelectorAll(".chip[data-s]").forEach(b => b.onclick = () => { statusFilter = statusFilter === b.dataset.s ? null : b.dataset.s; limit = 60; renderTable(); });
+  document.getElementById("clearcounty").onclick = () => { countyFilter = null; renderTable(); };
+  document.getElementById("q").oninput = () => { limit = 60; renderTable(); };
+
+  const why = r => {
+    if (r.status === "n/a" && r.route === "none") return (PLATFORM[r.platform] || r.platform || "未調査") + (r.access === "login-required" ? "・ログイン必須" : "");
+    if (r.route === "foia" && r.method === "phone") return "窓口がメール/フォームでない";
+    return r.reason || "";
+  };
+  function renderTable(){
+    const q = document.getElementById("q").value.trim().toLowerCase();
+    toolbar.querySelectorAll(".chip[data-s]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.s === statusFilter)));
+    document.getElementById("clearcounty").hidden = !countyFilter;
+    let rows = COV.rows.filter(r => r.state === state);
+    if (statusFilter) rows = rows.filter(r => r.status === statusFilter);
+    if (countyFilter) rows = rows.filter(r => r.county_fips === countyFilter);
+    if (q) rows = rows.filter(r => r.name.toLowerCase().includes(q));
+    rows.forEach(r => { r._why = why(r); });
+    rows.sort(cmp);
+    document.querySelectorAll("th.sortable").forEach(th => {
+      const on = th.dataset.k === sortKey;
+      th.setAttribute("aria-sort", on ? (sortDir > 0 ? "ascending" : "descending") : "none");
+      th.querySelector(".arr").textContent = on ? (sortDir > 0 ? "↑" : "↓") : "↕";
+    });
+    const show = rows.slice(0, limit);
+    document.getElementById("tbody").innerHTML = show.map(r => `<tr>
+      <td>${r.name}</td><td class="num">${fmtN(r.population)}</td><td>${ROUTE[r.route]||r.route}${r.program && r.route !== "foia" ? ` <span class="mono" style="color:var(--sub)">${r.program}</span>` : ""}</td>
+      <td>${r.route === "none" ? "—" : (METHOD[r.method]||r.method||"—")}</td><td class="mono">${r.last_fetch_at ? ct(new Date(r.last_fetch_at)) : "—"}</td><td class="mono">${fmtD(r.last_record_date)}</td>
+      <td class="num">${r.records_60d ? fmtN(r.records_60d) : "—"}</td><td><span class="st ${cls(r.status)}">${STATUS_JA[r.status]||r.status}</span></td>
+      <td class="mono">${r.next_due_at || (r.cadence_days === 1 ? "毎日" : r.cadence_days ? `${r.cadence_days} 日周期` : "—")}</td><td class="reason">${r._why}</td></tr>`).join("") ||
+      `<tr><td colspan="10" style="color:var(--sub)">条件に一致する自治体はありません。</td></tr>`;
+    const more = document.getElementById("more");
+    more.innerHTML = rows.length > limit ? `<button id="morebtn">さらに表示(残り ${fmtN(rows.length - limit)} 自治体)</button>` : `<span style="color:var(--sub); font-size:12px">${fmtN(rows.length)} 自治体を表示</span>`;
+    const mb = document.getElementById("morebtn"); if (mb) mb.onclick = () => { limit += 100; renderTable(); };
+  }
+
+  function render(){
+    tabs.querySelectorAll("button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.st === state)));
+    countyFilter = null;
+    renderKpis(); drawMap(); renderSide(); renderTable();
+  }
+  render();
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => drawMap());
+})();
+</script>
+</body>
+</html>

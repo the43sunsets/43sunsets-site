@@ -50,6 +50,9 @@ header{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); pad
 .masthead .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
 .masthead .meta{font-size:12px; color:var(--sub); margin-top:4px;}
 .stamp{flex:none; border:2.5px solid var(--stamp); color:var(--stamp); font-family:"Shippori Mincho",serif; font-weight:700; font-size:15px; padding:5px 6px 5px 10px; transform:rotate(-6deg); border-radius:4px; letter-spacing:.3em; opacity:.85; margin-top:4px;}
+.hdr-right{display:flex; align-items:center; gap:14px; flex:none;}
+.theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;}
+.theme-btn:hover{color:var(--ink); border-color:var(--ink);}
 
 .app{display:grid; grid-template-columns:264px minmax(0,1fr); gap:0; align-items:start; min-height:70vh;}
 
@@ -159,9 +162,25 @@ a{color:var(--ai-accent);}
     <div class="kicker"><a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a> — COCKPIT</div>
     <h1>中西部・設備投資検出面</h1>
     <div class="meta" id="metaline">建設許可シグナル 5 州(IL・IN・MI・OH・WI)/ データ読み込み中…</div>
+    <div class="meta"><a href="../freshness/">データの鮮度と網羅 — 自治体ごとの最終更新日・次回更新・郡別ヒートマップ →</a></div>
   </div>
-  <div class="beta">BETA</div>
+  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
 </header>
+<script>
+/* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
+(function(){
+  const K = "cockpit-theme"; let t = null;
+  try { t = localStorage.getItem(K); } catch (e) {}
+  if (t !== "dark" && t !== "light") t = "light";
+  const apply = n => { document.documentElement.setAttribute("data-theme", n); try { localStorage.setItem(K, n); } catch (e) {}
+    const b = document.getElementById("themebtn"); if (b) b.textContent = n === "dark" ? "☀️ ライト" : "🌙 ダーク";
+    window.dispatchEvent(new CustomEvent("themechange", {detail: n})); };
+  document.documentElement.setAttribute("data-theme", t);
+  window.__setTheme = apply;
+  const b = document.getElementById("themebtn");
+  if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
+})();
+</script>
 
 <div class="app">
 <aside>
@@ -200,7 +219,7 @@ a{color:var(--ai-accent);}
     <summary>収集網の健全性と射程 — この面が「見ているもの」と「見ていないもの」</summary>
     <div id="scopebox">読み込み中…</div>
     <ul id="scopenotes">
-      <li>本面は 5 州(Census East North Central)の悉皆ではありません。各州の主要な市・郡・州の公開許可記録を配線しており、郊外・小規模自治体の一部は未配線です(配線状況は「収集網の現在地」ページ)。網羅は自治体数でなく許可ボリュームで測る方針です。</li>
+      <li>本面は 5 州(Census East North Central)の悉皆ではありません。各州の主要な市・郡・州の公開許可記録を配線しており、郊外・小規模自治体の一部は未配線です(自治体ごとの状態は「<a href="../freshness/">データの鮮度と網羅</a>」ページ)。網羅は自治体数でなく許可ボリュームで測る方針です。</li>
       <li>「未評価」= 全件保存済みだが AI がまだ読んでいない行。「未分類」= 読んだが 4 分類のどれでもない、または確信度が低い行(トグルで表示可)。</li>
       <li>所有者名は許可記録にあればそれ、無い市は課税台帳(公開)を地番・住所で引いて補っています(カードに出所を表示)。課税台帳の名義は土地所有者で、テナントの投資は SPE・家主名で出ることがあります。</li>
       <li>金額の定義は市により異なります(申告工事費/評価額)。Express 許可の申告額は工事規模を表さないことがあり、その旨を注記しています。</li>
@@ -517,10 +536,18 @@ function renderScope(){
   document.getElementById("scopebox").innerHTML = `
     <div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>
       保存 <span class="mono">${f.signals_total.toLocaleString()}</span> 件 → AI 読取候補 <span class="mono">${f.candidates}</span> 件(方針 ${m.policy.id}) → 読了 <span class="mono">${f.enriched}</span> 件 → 設備投資シグナル <span class="mono">${f.targets}</span> 件 / 未分類 <span class="mono">${f.unclassified}</span> 件 / 未評価 <span class="mono">${f.unevaluated.toLocaleString()}</span> 件。
-      書き出し <span class="mono">${m.generated_at.slice(0,16).replace("T"," ")} UTC</span>・読み手: ${m.reader}</div>
+      書き出し <span class="mono">${fmtCT(m.generated_at)}</span>(米中部時間・UTC ${m.generated_at.slice(0,16).replace("T"," ")})・読み手: ${m.reader}</div>
     <div class="tblwrap"><table>
       <tr><th>州</th><th>源</th><th>保存件数</th><th>記録日の範囲(実測)</th><th>所有者名あり</th><th>シグナル</th><th>状態</th></tr>${rows}
     </table></div>`;
+}
+/* 時刻は米中部時間(America/Chicago)を主に表示する — 読者は中西部にいる */
+function fmtCT(iso, withTime=true){
+  const d = new Date(iso);
+  const o = {timeZone:"America/Chicago", year:"numeric", month:"2-digit", day:"2-digit"};
+  if (withTime) Object.assign(o, {hour:"2-digit", minute:"2-digit", hour12:false});
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", o).formatToParts(d).filter(x => x.type !== "literal").map(x => [x.type, x.value]));
+  return withTime ? `${p.year}-${p.month}-${p.day} ${p.hour === "24" ? "00" : p.hour}:${p.minute}` : `${p.year}-${p.month}-${p.day}`;
 }
 function setHeadH(){ const h=document.querySelector('header'); if(h) document.documentElement.style.setProperty('--headh', h.offsetHeight+'px'); }
 window.addEventListener('resize', setHeadH);
@@ -533,7 +560,7 @@ async function boot(){
     META = d.meta; SIGNALS = d.signals; COMPANIES = d.companies || [];
     document.getElementById("unccnt").textContent = (META.funnel.unclassified||0).toLocaleString();
     const f = META.funnel;
-    document.getElementById("metaline").innerHTML = `建設許可シグナル 5 州(IL・IN・MI・OH・WI)/ 保存 <span class="mono">${f.signals_total.toLocaleString()}</span> 件・AI 読了 <span class="mono">${f.enriched}</span> 件・設備投資シグナル <span class="mono">${f.targets}</span> 件 / データ書き出し <span class="mono">${META.generated_at.slice(0,10)}</span>`;
+    document.getElementById("metaline").innerHTML = `建設許可シグナル 5 州(IL・IN・MI・OH・WI)/ 保存 <span class="mono">${f.signals_total.toLocaleString()}</span> 件・AI 読了 <span class="mono">${f.enriched}</span> 件・設備投資シグナル <span class="mono">${f.targets}</span> 件 / データ書き出し <span class="mono">${fmtCT(META.generated_at)}</span> 米中部時間`;
     renderFilters(); render(); renderScope();
   }catch(err){
     document.getElementById("metaline").textContent = "データの読み込みに失敗しました(" + err.message + ")。";
