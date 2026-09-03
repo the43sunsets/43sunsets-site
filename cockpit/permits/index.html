@@ -45,7 +45,7 @@
 body{background:var(--paper); color:var(--ink); font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif; margin:0; line-height:1.7; font-size:14.5px;}
 .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;}
 
-header{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:16px 28px 13px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; background:var(--card);}
+header{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:16px 28px 13px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; background:var(--card); position:sticky; top:0; z-index:40;}
 .masthead h1{font-family:"Shippori Mincho",serif; font-size:21px; font-weight:700; margin:0; letter-spacing:.02em;}
 .masthead .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
 .masthead .meta{font-size:12px; color:var(--sub); margin-top:4px;}
@@ -54,8 +54,9 @@ header{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); pad
 .app{display:grid; grid-template-columns:264px minmax(0,1fr); gap:0; align-items:start; min-height:70vh;}
 
 /* ---- 左: フィルタ ---- */
-aside{border-right:1px solid var(--line); padding:20px 20px 40px; position:sticky; top:0; max-height:100vh; overflow-y:auto;}
+aside{border-right:1px solid var(--line); padding:20px 20px 40px; position:sticky; top:var(--headh,96px); max-height:calc(100vh - var(--headh,96px)); overflow-y:auto;}
 .fgroup{margin-bottom:22px;}
+.fitem.zero{opacity:.45;}
 .fgroup h2{font-size:11px; letter-spacing:.2em; color:var(--sub); font-weight:700; margin:0 0 8px; text-transform:uppercase; border-bottom:1px solid var(--line-soft); padding-bottom:5px;}
 .fitem{display:flex; align-items:center; gap:8px; padding:3px 2px; font-size:13.5px; cursor:pointer; border-radius:4px;}
 .fitem:hover{background:var(--chip-bg);}
@@ -234,9 +235,29 @@ function visibleBase(){
   return unc ? SIGNALS : SIGNALS.filter(s=>s.category!=="未分類");
 }
 function countBy(field){
+  // ファセット件数: この項目「以外」の選択(州・種類・業種・日系)を適用した母集団で数える。
+  // 例: IL にチェック → 種類・業種の数字は IL の中の件数に変わる(逆も同様)。
+  const jp = document.getElementById("jponly").checked;
   const c = {};
-  for(const s of visibleBase()) c[s[field]] = (c[s[field]]||0)+1;
+  for(const s of visibleBase()){
+    if(field!=="state"    && sel.state.size    && !sel.state.has(s.state))       continue;
+    if(field!=="category" && sel.category.size && !sel.category.has(s.category)) continue;
+    if(field!=="industry" && sel.industry.size && !sel.industry.has(s.industry)) continue;
+    if(jp && !s.jp) continue;
+    c[s[field]] = (c[s[field]]||0)+1;
+  }
   return c;
+}
+function refreshCounts(){
+  for(const field of ["state","category","industry"]){
+    const counts = countBy(field);
+    document.querySelectorAll(`.fitem input[data-field="${field}"]`).forEach(cb=>{
+      const n = counts[cb.value]||0;
+      const span = cb.parentElement.querySelector(".cnt");
+      if(span) span.textContent = n;
+      cb.parentElement.classList.toggle("zero", n===0 && !cb.checked);
+    });
+  }
 }
 function renderFilters(){
   const defs = [["f-state","state",STATES],["f-category","category",CATEGORIES],["f-industry","industry",INDUSTRIES]];
@@ -292,6 +313,7 @@ function cardHtml(s){
   </article>`;
 }
 function render(){
+  refreshCounts();
   const list = filtered();
   const pages = Math.max(1, Math.ceil(list.length/PAGE_SIZE));
   if(page>pages) page = pages;
@@ -459,7 +481,10 @@ function renderScope(){
       <tr><th>州</th><th>源</th><th>保存件数</th><th>記録日の範囲(実測)</th><th>所有者名あり</th><th>シグナル</th><th>状態</th></tr>${rows}
     </table></div>`;
 }
+function setHeadH(){ const h=document.querySelector('header'); if(h) document.documentElement.style.setProperty('--headh', h.offsetHeight+'px'); }
+window.addEventListener('resize', setHeadH);
 async function boot(){
+  setHeadH();
   try{
     const r = await fetch("../data/permits.json", {cache:"no-store"});
     if(!r.ok) throw new Error("HTTP "+r.status);
