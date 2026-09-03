@@ -280,7 +280,9 @@ function renderFilters(){
     cb.addEventListener("change", ()=>{
       const set = sel[cb.dataset.field];
       cb.checked ? set.add(cb.value) : set.delete(cb.value);
-      page = 1; render();
+      page = 1;
+      if(cb.dataset.field === "state"){ ensureMore().then(()=>{ renderFilters(); render(); }); return; }
+      render();
     });
   });
 }
@@ -358,22 +360,30 @@ function render(){
   }
 }
 document.getElementById("jponly").addEventListener("change", ()=>{ page=1; render(); });
-let MORE_LOADED = false;
-async function loadMore(){
-  // 未分類行は別ファイル(permits-more.json)。トグルを初めて入れたときだけ読み込む(全件読みで 2 万行超になるため)。
-  if(MORE_LOADED) return;
-  try{
-    const r = await fetch("../data/permits-more.json", {cache:"no-store"});
-    if(!r.ok) throw new Error("HTTP "+r.status);
-    const d = await r.json();
-    SIGNALS = SIGNALS.concat(d.signals || []);
-    MORE_LOADED = true;
-  }catch(err){
-    document.getElementById("unccnt").textContent = "読込失敗";
+const MORE_LOADED = new Set();   // 読み込み済みの州
+async function loadMore(states){
+  // 未分類行は州別ファイル(meta.more_files)。「未分類も表示」で、選択中の州(未選択なら全州)の分だけ読み込む。
+  const files = (META && META.more_files) || {};
+  const want = (states && states.length ? states : Object.keys(files)).filter(st => files[st] && !MORE_LOADED.has(st));
+  for(const st of want){
+    try{
+      const r = await fetch("../data/" + files[st], {cache:"no-store"});
+      if(!r.ok) throw new Error("HTTP "+r.status);
+      const d = await r.json();
+      SIGNALS = SIGNALS.concat(d.signals || []);
+      MORE_LOADED.add(st);
+    }catch(err){
+      document.getElementById("unccnt").textContent = "読込失敗(" + st + ")";
+    }
   }
 }
-document.getElementById("showunc").addEventListener("change", async (e)=>{
-  if(e.target.checked){ e.target.disabled = true; await loadMore(); e.target.disabled = false; }
+async function ensureMore(){
+  if(!document.getElementById("showunc").checked) return;
+  const e = document.getElementById("showunc"); e.disabled = true;
+  await loadMore(Array.from(sel.state)); e.disabled = false;
+}
+document.getElementById("showunc").addEventListener("change", async ()=>{
+  await ensureMore();
   page=1; renderFilters(); render();
 });
 document.getElementById("clear").addEventListener("click", ()=>{
