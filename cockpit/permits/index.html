@@ -272,7 +272,7 @@ function renderFilters(){
       const n = counts[v]||0;
       const lab = document.createElement("label");
       lab.className = "fitem";
-      lab.innerHTML = `<input type="checkbox" data-field="${field}" value="${v}"><span>${v}</span><span class="cnt">${n}</span>`;
+      lab.innerHTML = `<input type="checkbox" data-field="${field}" value="${v}"${sel[field].has(v) ? " checked" : ""}><span>${v}</span><span class="cnt">${n}</span>`;
       el.appendChild(lab);
     }
   }
@@ -281,7 +281,7 @@ function renderFilters(){
       const set = sel[cb.dataset.field];
       cb.checked ? set.add(cb.value) : set.delete(cb.value);
       page = 1;
-      if(cb.dataset.field === "state"){ ensureMore().then(()=>{ renderFilters(); render(); }); return; }
+      if(cb.dataset.field === "state"){ ensureMore().then(render); return; }
       render();
     });
   });
