@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-03T21:01:09+00:00",
+"generated_at": "2026-09-03T21:07:45+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,12 +15,12 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 23613,
-"candidates": 495,
+"signals_total": 23856,
+"candidates": 498,
 "enriched": 21671,
 "targets": 63,
 "unclassified": 21608,
-"unevaluated": 1942,
+"unevaluated": 2185,
 "by_category": {
 "データセンター建設": 5,
 "未分類": 21608,
@@ -316,8 +316,8 @@
 "jurisdiction": "North Chicago",
 "label": "ノースシカゴ市 建築許可(FOIA 回答・金額欄なし)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-03T21:01:09Z",
-"last_run_note": "ingested from northchicago.json",
+"last_run_at": "2026-09-03T21:07:45Z",
+"last_run_note": "ingested from northchicago-xlsx.json",
 "signals": 160,
 "date_min": "2026-07-01",
 "date_max": "2026-08-31",
@@ -350,6 +350,20 @@
 "date_min": "2026-07-01",
 "date_max": "2026-08-31",
 "owner_coverage": 170,
+"targets": 0
+},
+{
+"source_id": "SRC-047",
+"state": "IL",
+"jurisdiction": "Vernon Hills",
+"label": "バーノンヒルズ村 建築許可(FOIA 回答・Excel)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-03T21:07:45Z",
+"last_run_note": "ingested from vernonhills.json",
+"signals": 243,
+"date_min": "2026-07-01",
+"date_max": "2026-08-31",
+"owner_coverage": 243,
 "targets": 0
 }
 ],
