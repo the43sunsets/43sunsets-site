@@ -197,7 +197,7 @@ a{color:var(--ai-accent);}
     <summary>収集網の健全性と射程 — この面が「見ているもの」と「見ていないもの」</summary>
     <div id="scopebox">読み込み中…</div>
     <ul id="scopenotes">
-      <li>本面は 5 州(Census East North Central)の悉皆ではありません。各州の主要市の公開許可 API+インディアナ州 DB を配線しており、郊外・小規模自治体(ブラウザ専用ポータル)は未走査です。網羅は自治体数でなく許可ボリュームで測る方針です。</li>
+      <li>本面は 5 州(Census East North Central)の悉皆ではありません。各州の主要な市・郡・州の公開許可記録を配線しており、郊外・小規模自治体の一部は未配線です(配線状況は「収集網の現在地」ページ)。網羅は自治体数でなく許可ボリュームで測る方針です。</li>
       <li>「未評価」= 全件保存済みだが AI がまだ読んでいない行。「未分類」= 読んだが 4 分類のどれでもない、または確信度が低い行(トグルで表示可)。</li>
       <li>所有者名は許可記録にあればそれ、無い市は課税台帳(公開)を地番・住所で引いて補っています(カードに出所を表示)。課税台帳の名義は土地所有者で、テナントの投資は SPE・家主名で出ることがあります。</li>
       <li>金額の定義は市により異なります(申告工事費/評価額)。Express 許可の申告額は工事規模を表さないことがあり、その旨を注記しています。</li>
@@ -344,7 +344,24 @@ function render(){
   }
 }
 document.getElementById("jponly").addEventListener("change", ()=>{ page=1; render(); });
-document.getElementById("showunc").addEventListener("change", ()=>{ page=1; renderFilters(); render(); });
+let MORE_LOADED = false;
+async function loadMore(){
+  // 未分類行は別ファイル(permits-more.json)。トグルを初めて入れたときだけ読み込む(全件読みで 2 万行超になるため)。
+  if(MORE_LOADED) return;
+  try{
+    const r = await fetch("../data/permits-more.json", {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json();
+    SIGNALS = SIGNALS.concat(d.signals || []);
+    MORE_LOADED = true;
+  }catch(err){
+    document.getElementById("unccnt").textContent = "読込失敗";
+  }
+}
+document.getElementById("showunc").addEventListener("change", async (e)=>{
+  if(e.target.checked){ e.target.disabled = true; await loadMore(); e.target.disabled = false; }
+  page=1; renderFilters(); render();
+});
 document.getElementById("clear").addEventListener("click", ()=>{
   for(const k in sel) sel[k].clear();
   document.querySelectorAll('.fitem input').forEach(cb=>cb.checked=false);
@@ -490,8 +507,7 @@ async function boot(){
     if(!r.ok) throw new Error("HTTP "+r.status);
     const d = await r.json();
     META = d.meta; SIGNALS = d.signals; COMPANIES = d.companies || [];
-    const unc = SIGNALS.filter(s=>s.category==="未分類").length;
-    document.getElementById("unccnt").textContent = unc;
+    document.getElementById("unccnt").textContent = (META.funnel.unclassified||0).toLocaleString();
     const f = META.funnel;
     document.getElementById("metaline").innerHTML = `建設許可シグナル 5 州(IL・IN・MI・OH・WI)/ 保存 <span class="mono">${f.signals_total.toLocaleString()}</span> 件・AI 読了 <span class="mono">${f.enriched}</span> 件・設備投資シグナル <span class="mono">${f.targets}</span> 件 / データ書き出し <span class="mono">${META.generated_at.slice(0,10)}</span>`;
     renderFilters(); render(); renderScope();
