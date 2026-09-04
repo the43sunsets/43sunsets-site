@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-04T01:43:44+00:00",
+"generated_at": "2026-09-04T03:25:12+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,12 +15,12 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 24192,
+"signals_total": 24194,
 "candidates": 499,
 "enriched": 24192,
 "targets": 67,
 "unclassified": 24125,
-"unevaluated": 0,
+"unevaluated": 2,
 "by_category": {
 "データセンター建設": 5,
 "未分類": 24125,
@@ -55,7 +55,7 @@
 "signals": 147,
 "date_min": "2026-07-01",
 "date_max": "2026-08-31",
-"owner_coverage": 147,
+"owner_coverage": 0,
 "targets": 2
 },
 {
@@ -167,7 +167,7 @@
 "signals": 3309,
 "date_min": "2026-07-01",
 "date_max": "2026-11-20",
-"owner_coverage": 3307,
+"owner_coverage": 0,
 "targets": 4
 },
 {
@@ -181,7 +181,7 @@
 "signals": 5221,
 "date_min": "2026-07-01",
 "date_max": "2026-09-02",
-"owner_coverage": 2663,
+"owner_coverage": 2111,
 "targets": 10
 },
 {
@@ -246,12 +246,12 @@
 "jurisdiction": "Cook 郡 BS&A 利用自治体(Skokie 他)",
 "label": "Cook 郡 BS&A 利用自治体(Skokie 他) 建築許可(公開記録)",
 "last_run_status": "running",
-"last_run_at": "2026-09-04T01:23:07Z",
+"last_run_at": "2026-09-04T03:07:59Z",
 "last_run_note": "",
-"signals": 9,
-"date_min": "2026-07-10",
+"signals": 11,
+"date_min": "2026-07-08",
 "date_max": "2026-08-10",
-"owner_coverage": 9,
+"owner_coverage": 11,
 "targets": 0
 },
 {
@@ -265,7 +265,7 @@
 "signals": 40,
 "date_min": "2025-09-24",
 "date_max": "2026-07-31",
-"owner_coverage": 40,
+"owner_coverage": 0,
 "targets": 0
 },
 {
@@ -307,7 +307,7 @@
 "signals": 323,
 "date_min": "2025-10-01",
 "date_max": "2026-08-28",
-"owner_coverage": 323,
+"owner_coverage": 0,
 "targets": 0
 },
 {
@@ -397,6 +397,18 @@
 },
 "signals": [
 {
+"investor": {
+"name": "HENRY FORD HEALTH SYSTEM",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "HENRY FORD HEALTH SYSTEM",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-8975",
 "state": "MI",
 "city": "Detroit・2799 W Grand Blvd, #13K",
@@ -432,6 +444,18 @@
 }
 },
 {
+"investor": {
+"name": "UNILEVER",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "UNILEVER",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "HAYES PLANT SERVICES LLC"
+},
 "id": "S-6935",
 "state": "IL",
 "city": "Chicago・2816 S KILBOURN AVE",
@@ -467,6 +491,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "HARPER COURT HOLDINGS II",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
 "id": "S-949",
 "state": "IL",
 "city": "Chicago・5207 S HARPER AVE",
@@ -502,6 +538,18 @@
 }
 },
 {
+"investor": {
+"name": "VHS HARPER-HUTZEL HOSPITAL INC",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "VHS HARPER-HUTZEL HOSPITAL INC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-1204",
 "state": "MI",
 "city": "Detroit・3990 John R St",
@@ -537,6 +585,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "ARMITAGE PLACE II LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "ZIGLIFT MATERIAL HANDELING"
+},
 "id": "S-21985",
 "state": "IL",
 "city": "Melrose Park・2100 N 15TH AVE",
@@ -572,6 +632,18 @@
 }
 },
 {
+"investor": {
+"name": "OHIOHEALTH CORP",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "OHIOHEALTH CORP",
+"gc": null
+},
 "id": "S-1542",
 "state": "OH",
 "city": "Columbus・3420 OHIOHEALTH PKWY",
@@ -607,6 +679,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-14874",
 "state": "IL",
 "city": "Arlington Heights・800 W CENTRAL RD ARLINGTON HEIGHTS IL 60005",
@@ -642,6 +726,18 @@
 }
 },
 {
+"investor": {
+"name": "UNIVERSITY OF CHICAGO",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "UNIVERSITY OF CHICAGO",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "BULLEY & ANDREWS, L.L.C."
+},
 "id": "S-745",
 "state": "IL",
 "city": "Chicago・6045 S KENWOOD AVE",
@@ -677,6 +773,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-16009",
 "state": "IL",
 "city": "Palatine・2252 N RAND RD Palatine IL 60074",
@@ -712,6 +820,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-19587",
 "state": "IL",
 "city": "Machesney Park・7180 GREENLEE DR",
@@ -747,6 +867,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "YORK ST VENTURE LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
 "id": "S-17432",
 "state": "IL",
 "city": "Elmhurst・107 N YORK ST ELMHURST IL 60126",
@@ -782,6 +914,18 @@
 }
 },
 {
+"investor": {
+"name": "ZARMINALI PEDIATRICS",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-14857",
 "state": "IL",
 "city": "Arlington Heights・111 W RAND RD ARLINGTON HEIGHTS IL 60004",
@@ -817,6 +961,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "Archall Architects",
+"gc": null
+},
 "id": "S-1724",
 "state": "OH",
 "city": "Columbus・6725 SCHIESER FARMS RD",
@@ -852,6 +1008,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "Area Energy & Electric Inc.",
+"gc": null
+},
 "id": "S-1725",
 "state": "OH",
 "city": "Columbus・6725 SCHIESER FARMS RD",
@@ -887,6 +1055,18 @@
 }
 },
 {
+"investor": {
+"name": "LEGACY INVESTING",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "LEGACY INVESTING",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-683",
 "state": "IL",
 "city": "Chicago・400 S LA SALLE ST",
@@ -922,6 +1102,18 @@
 }
 },
 {
+"investor": {
+"name": "Rockford Electric Motor",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "ROCKFORD ELECTRIC MOTOR - WAREHOUSE ADDITION",
+"gc": "ELDER TROY"
+},
 "id": "S-1027",
 "state": "IL",
 "city": "Rockford・2010 HARRISON",
@@ -946,7 +1138,7 @@
 "verbatim": "ROCKFORD ELECTRIC MOTOR - WAREHOUSE ADDITION / 24' X 79' METAL BUILDING ADDITION / ADDCOMM",
 "gc": "ELDER TROY",
 "pin": null,
-"owner_source": "permit"
+"owner_source": null
 },
 "karte": null,
 "provenance": {
@@ -957,6 +1149,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-16848",
 "state": "IL",
 "city": "Park Ridge・1700 LUTHER LN PARK RIDGE IL 60068",
@@ -992,6 +1196,18 @@
 }
 },
 {
+"investor": {
+"name": "MICH EMPLOYMENT & TRAINING PLUS",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "MICH EMPLOYMENT & TRAINING PLUS",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-9304",
 "state": "MI",
 "city": "Detroit・8330 W Chicago St",
@@ -1027,6 +1243,18 @@
 }
 },
 {
+"investor": {
+"name": "SLK GLOBAL SOLUTIONS AMER",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "SLK GLOBAL SOLUTIONS AMER",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-19937",
 "state": "IL",
 "city": "Lombard・2050 S Finley RD 50",
@@ -1062,6 +1290,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "8700 MILITARY LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
 "id": "S-9351",
 "state": "MI",
 "city": "Detroit・8700 Military",
@@ -1097,6 +1337,18 @@
 }
 },
 {
+"investor": {
+"name": "RYAN COMPANIES US, INC.",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "RYAN COMPANIES US, INC.",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "RYAN COMPANIES US, INC."
+},
 "id": "S-599",
 "state": "IL",
 "city": "Chicago・10310 S WOODLAWN AVE",
@@ -1132,6 +1384,18 @@
 }
 },
 {
+"investor": {
+"name": "NATIONWIDE CHILDRENS HOSPITAL",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "NATIONWIDE CHILDRENS HOSPITAL",
+"gc": null
+},
 "id": "S-1903",
 "state": "OH",
 "city": "Columbus・700 CHILDREN'S DR",
@@ -1167,6 +1431,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "Red Architecture",
+"gc": null
+},
 "id": "S-1927",
 "state": "OH",
 "city": "Columbus・1669 ROHR RD",
@@ -1202,6 +1478,18 @@
 }
 },
 {
+"investor": {
+"name": "DIGITAL REALTY",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "DIGITAL REALTY",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "CLUNE CONSTRUCTION COMPANY, L.P."
+},
 "id": "S-563",
 "state": "IL",
 "city": "Chicago・350 E CERMAK RD",
@@ -1237,6 +1525,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-19531",
 "state": "IL",
 "city": "Machesney Park・10400 N 2ND ST",
@@ -1272,6 +1572,18 @@
 }
 },
 {
+"investor": {
+"name": "CSM TUBE USA INC",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "CSM TUBE USA INC",
+"gc": null
+},
 "id": "S-14116",
 "state": "IL",
 "city": "Elk Grove Village・1599 LUNT AVE, ELK GROVE VILLAGE, IL 60007",
@@ -1296,7 +1608,7 @@
 "verbatim": "INDUSTRIAL RENOVATION / COMMERCIAL PERMIT / REMODELING - INTERIOR ONLY",
 "gc": null,
 "pin": "08342030300000",
-"owner_source": "applicant"
+"owner_source": null
 },
 "karte": null,
 "provenance": {
@@ -1307,6 +1619,18 @@
 }
 },
 {
+"investor": {
+"name": "UNIVERSITY OF CHICAGO",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "UNIVERSITY OF CHICAGO",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "HYLAND A. NOLAN CONTRACTORS, INC."
+},
 "id": "S-488",
 "state": "IL",
 "city": "Chicago・929 E 57TH ST",
@@ -1342,6 +1666,18 @@
 }
 },
 {
+"investor": {
+"name": "TETRA PAK",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": "CP LOGISTICS VERNON HILLS, LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "WOLTER"
+},
 "id": "S-23710",
 "state": "IL",
 "city": "Vernon Hills・620 DARLING DRIVE",
@@ -1377,6 +1713,18 @@
 }
 },
 {
+"investor": {
+"name": "SAINT JOSEPH HOSPITAL CHICAGO",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "SAINT JOSEPH HOSPITAL CHICAGO",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
 "id": "S-460",
 "state": "IL",
 "city": "Chicago・2900 N LAKE SHORE DR",
@@ -1412,6 +1760,18 @@
 }
 },
 {
+"investor": {
+"name": "ELMHURST MEMORIAL HEALTH",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "ELMHURST MEMORIAL HEALTH",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-17102",
 "state": "IL",
 "city": "Elmhurst・1100 S YORK ST ELMHURST IL 60126",
@@ -1447,6 +1807,18 @@
 }
 },
 {
+"investor": {
+"name": "ELMHURST MEMORIAL HEALTH",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "ELMHURST MEMORIAL HEALTH",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-17079",
 "state": "IL",
 "city": "Elmhurst・1100 S YORK ST ELMHURST IL 60126",
@@ -1482,6 +1854,18 @@
 }
 },
 {
+"investor": {
+"name": "ELMHURST MEMORIAL HEALTH",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "ELMHURST MEMORIAL HEALTH",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-17172",
 "state": "IL",
 "city": "Elmhurst・1100 S YORK ST ELMHURST IL 60126",
@@ -1517,6 +1901,18 @@
 }
 },
 {
+"investor": {
+"name": "ABBOTT NUTRITION",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "Abbott Nutrition",
+"gc": null
+},
 "id": "S-2209",
 "state": "OH",
 "city": "Columbus・625 CLEVELAND AVE",
@@ -1552,6 +1948,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "HARPER COURT HOLDINGS II",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
 "id": "S-407",
 "state": "IL",
 "city": "Chicago・5207 S HARPER AVE",
@@ -1587,6 +1995,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "HARPER COURT HOLDINGS II",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
 "id": "S-423",
 "state": "IL",
 "city": "Chicago・5207 S HARPER AVE",
@@ -1622,6 +2042,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "HARPER COURT HOLDINGS II",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
 "id": "S-419",
 "state": "IL",
 "city": "Chicago・5207 S HARPER AVE",
@@ -1657,6 +2089,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "NAPERVILLE MOB OWNER LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
 "id": "S-10483",
 "state": "IL",
 "city": "Naperville・1331 W 75TH ST",
@@ -1692,6 +2136,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "HAYWOOD DEVELOPMENT LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
 "id": "S-1273",
 "state": "MI",
 "city": "Detroit・1326 Saint Antoine St",
@@ -1727,6 +2183,18 @@
 }
 },
 {
+"investor": {
+"name": "RIVIAN AUTOMOTIVE LLC",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": "P.J. HOERR"
+},
 "id": "S-10253",
 "state": "IL",
 "city": "Normal・121 N Rivian Mtwy",
@@ -1762,6 +2230,18 @@
 }
 },
 {
+"investor": {
+"name": "PARTEC INC",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "PARTEC INC",
+"gc": null
+},
 "id": "S-13268",
 "state": "IL",
 "city": "Franklin Park・9335 BELMONT AVE, FRANKLIN PARK, IL 60131",
@@ -1786,7 +2266,7 @@
 "verbatim": "ELECTRICAL FOR 7500 SQT WARHOUSE ADDITION / COMMERCIAL PERMIT / ADDITIONS",
 "gc": null,
 "pin": "12271050050000",
-"owner_source": "applicant"
+"owner_source": null
 },
 "karte": null,
 "provenance": {
@@ -1797,6 +2277,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "KAMALISARVESTANI",
+"gc": null
+},
 "id": "S-13124",
 "state": "IL",
 "city": "Park Ridge・27 N NORTHWEST HWY   PARK RI, PARK RIDGE, IL 60068",
@@ -1821,7 +2313,7 @@
 "verbatim": "INTERIOR REMODEL OF EXISTING COMMERCIAL SPACE / COMMERCIAL PERMIT / OTHER REMODELING",
 "gc": null,
 "pin": "09264250450000",
-"owner_source": "applicant"
+"owner_source": null
 },
 "karte": null,
 "provenance": {
@@ -1832,6 +2324,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "KAMALISARVESTANI",
+"gc": null
+},
 "id": "S-16837",
 "state": "IL",
 "city": "Park Ridge・27 N NORTHWEST HWY PARK RIDGE IL 60068",
@@ -1856,7 +2360,7 @@
 "verbatim": "Interior remodel of existing commercial space to accommodate new rooms for clinic use. Work includes reconfiguration of non-load-bearing partitions, replacement of existing suspended ceiling system, and modifications to mechanical, electrical, and plumbing systems. No structural work is proposed. / Commercial Remodel / Remodel",
 "gc": null,
 "pin": "09264250450000",
-"owner_source": "applicant:SRC-021"
+"owner_source": null
 },
 "karte": null,
 "provenance": {
@@ -1867,6 +2371,18 @@
 }
 },
 {
+"investor": {
+"name": "RIVIAN AUTOMOTIVE LLC",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "RIVIAN AUTOMOTIVE LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "P.J. HOERR"
+},
 "id": "S-10259",
 "state": "IL",
 "city": "Normal・100 N Rivian Mtwy",
@@ -1902,6 +2418,18 @@
 }
 },
 {
+"investor": {
+"name": "ABBOTT NUTRITION",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "CAPITAL FIRE PROTECTION CO",
+"gc": null
+},
 "id": "S-2330",
 "state": "OH",
 "city": "Columbus・625 CLEVELAND AVE",
@@ -1937,6 +2465,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "PICTOR 4435 S WESTERN BOULEVARD LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "ARCO/MURRAY NATIONAL CONSTRUCTION COMPANY LLC"
+},
 "id": "S-254",
 "state": "IL",
 "city": "Chicago・2260 W 47TH ST",
@@ -1972,6 +2512,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "MAUREEN BLOSSFELD",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
 "id": "S-220",
 "state": "IL",
 "city": "Chicago・1969 W OGDEN AVE",
@@ -2007,6 +2559,18 @@
 }
 },
 {
+"investor": {
+"name": "PALOS COMMUNITY HOSPIT",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "PALOS COMMUNITY HOSPIT",
+"gc": null
+},
 "id": "S-12397",
 "state": "IL",
 "city": "Palos Heights・12251 S 80TH AVE, PALOS HEIGHTS, IL 60463",
@@ -2031,7 +2595,7 @@
 "verbatim": "1ST FLOOR FIRE ALARMS FOR MRI ADDITION TO EXISTING ALARM VOICE / COMMERCIAL PERMIT / OTHER REMODELING",
 "gc": null,
 "pin": "23251060180000",
-"owner_source": "applicant"
+"owner_source": null
 },
 "karte": null,
 "provenance": {
@@ -2042,6 +2606,18 @@
 }
 },
 {
+"investor": {
+"name": "ABBOTT NUTRITION",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "JD Platinum Electric, LLC",
+"gc": null
+},
 "id": "S-2481",
 "state": "OH",
 "city": "Columbus・625 CLEVELAND AVE",
@@ -2077,6 +2653,18 @@
 }
 },
 {
+"investor": {
+"name": "TETRA PAK",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": "CP LOGISTICS VERNON HILLS, LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "WOLTER"
+},
 "id": "S-23712",
 "state": "IL",
 "city": "Vernon Hills・620 DARLING DRIVE 102",
@@ -2112,6 +2700,18 @@
 }
 },
 {
+"investor": {
+"name": "AMYLU FOODS, LLC",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "AMYLU FOODS, LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "MERIDIAN DESIGN BUILD, INC"
+},
 "id": "S-148",
 "state": "IL",
 "city": "Chicago・1400 W 44TH ST",
@@ -2147,6 +2747,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "3733 EAST 87TH STREET LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "CLAYCO INC."
+},
 "id": "S-118",
 "state": "IL",
 "city": "Chicago・3733 E 87TH ST",
@@ -2182,6 +2794,18 @@
 }
 },
 {
+"investor": {
+"name": "RYAN COMPANIES US, INC.",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "RYAN COMPANIES US, INC.",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "RYAN COMPANIES US, INC."
+},
 "id": "S-128",
 "state": "IL",
 "city": "Chicago・10310 S WOODLAWN AVE",
@@ -2217,6 +2841,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "PICTOR 4435 S WESTERN BOULEVARD LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "ARCO/MURRAY NATIONAL CONSTRUCTION COMPANY LLC"
+},
 "id": "S-102",
 "state": "IL",
 "city": "Chicago・2260 W 47TH ST",
@@ -2252,6 +2888,18 @@
 }
 },
 {
+"investor": {
+"name": "PCI Pharma Services",
+"basis": "operator",
+"label": "操業事業者"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": "PCI CLINICAL BUILDING 3 - INSTALL RACKING",
+"gc": "Cord Construction Cord Construction"
+},
 "id": "S-1018",
 "state": "IL",
 "city": "Rockford・S 4725 ALPINE",
@@ -2276,7 +2924,7 @@
 "verbatim": "PCI CLINICAL BUILDING 3 - INSTALL RACKING / Install pallet racking in the West side of the building / REMALTCOMM",
 "gc": "Cord Construction Cord Construction",
 "pin": "16-08-326-002",
-"owner_source": "permit"
+"owner_source": null
 },
 "karte": null,
 "provenance": {
@@ -2287,6 +2935,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "LEGACY GI TC 400 LASALLE, LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
 "id": "S-66",
 "state": "IL",
 "city": "Chicago・400 S LA SALLE ST",
@@ -2322,6 +2982,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "NAPERVILLE MOB OWNER LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
 "id": "S-10785",
 "state": "IL",
 "city": "Naperville・1331 W 75TH ST",
@@ -2357,6 +3029,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "STAALSEN CONSTRUCTION CO., INC."
+},
 "id": "S-3105",
 "state": "IL",
 "city": "Chicago・613 W 47TH ST",
@@ -2392,6 +3076,18 @@
 }
 },
 {
+"investor": {
+"name": "NORTHWESTERN MEMORIAL HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "NORTHWESTERN MEMORIAL HOSPITAL",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "SKENDER CONSTRUCTION LLC"
+},
 "id": "S-51",
 "state": "IL",
 "city": "Chicago・710 N FAIRBANKS CT",
@@ -2427,6 +3123,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "LEGACY GI TC 400 LASALLE LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "ARCO/MURRAY NATIONAL CONSTRUCTION COMPANY LLC"
+},
 "id": "S-61",
 "state": "IL",
 "city": "Chicago・400 S LA SALLE ST",
@@ -2462,6 +3170,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "ARMITAGE PLACE II LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "DEVELOPMENT SOLUTIONS, INC."
+},
 "id": "S-21980",
 "state": "IL",
 "city": "Melrose Park・2100 N 15TH AVE",
@@ -2497,6 +3217,18 @@
 }
 },
 {
+"investor": {
+"name": "ELMHURST MEMORIAL HEALTH",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "ELMHURST MEMORIAL HEALTH",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-16991",
 "state": "IL",
 "city": "Elmhurst・155 E BRUSH HILL RD ELMHURST IL 60126",
@@ -2532,6 +3264,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "LEGACY GI TC 400 LASALLE LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "ARCO/MURRAY NATIONAL CONSTRUCTION COMPANY LLC"
+},
 "id": "S-4",
 "state": "IL",
 "city": "Chicago・400 S LA SALLE ST",
@@ -2567,6 +3311,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": "M3 CONSTRUCTION  (GC)"
+},
 "id": "S-20250",
 "state": "IL",
 "city": "Woodridge・2500 107TH ST",
@@ -2602,6 +3358,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "RUUK INC DBA MAXYM DEMOLITION"
+},
 "id": "S-2",
 "state": "IL",
 "city": "Chicago・2900 N WESTERN AVE",
@@ -2637,6 +3405,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "4519 W. HADDON, LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "NOVELLI CONSTRUCTION, INC."
+},
 "id": "S-2836",
 "state": "IL",
 "city": "Chicago・4519 W HADDON AVE",
@@ -2672,6 +3452,18 @@
 }
 },
 {
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定"
+},
+"parties": {
+"owner_of_record": "555 WEST LAYTON AVE LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
 "id": "S-1343",
 "state": "WI",
 "city": "Milwaukee・4848 S 6TH ST, MILWAUKEE, WI 532212462",
@@ -2707,6 +3499,18 @@
 }
 },
 {
+"investor": {
+"name": "TENNECO PACKAGING INC #367",
+"basis": "owner_occupier",
+"label": "自社所有"
+},
+"parties": {
+"owner_of_record": "TENNECO PACKAGING INC #367",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
 "id": "S-10072",
 "state": "WI",
 "city": "Milwaukee・5600 W GOOD HOPE RD, MILWAUKEE, WI 532234734",
