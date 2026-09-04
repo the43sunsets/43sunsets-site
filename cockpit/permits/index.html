@@ -88,6 +88,12 @@ main{padding:18px 28px 60px; min-width:0;}
 .chip{display:inline-block; font-size:10.5px; color:var(--sub); background:var(--chip-bg); border-radius:3px; padding:0 7px; margin-right:5px;}
 .chip.jp{color:var(--jp); background:var(--jp-bg); font-weight:700;}
 .chip.newchip{color:var(--stamp); background:transparent; border:1.5px solid var(--stamp); font-weight:700; letter-spacing:.1em; font-size:10px;}
+.chip.inv{font-weight:700;}
+.chip.inv.operator,.chip.inv.owner_occupier{color:var(--fact); background:var(--fact-bg);}
+.chip.inv.public{color:var(--ai-accent); background:var(--chip-bg);}
+.chip.inv.unknown{color:var(--warn); background:var(--warn-bg);}
+.unknown-inv{color:var(--sub); font-weight:500;}
+.parties{font-size:11.5px; color:var(--sub); margin:2px 0 0; line-height:1.5;}
 .card .loc{font-size:12px; color:var(--sub);}
 .card .summary{font-size:13px;}
 .fact{border-left:3px solid var(--fact); background:var(--fact-bg); padding:7px 11px; border-radius:0 4px 4px 0; font-size:12.5px;}
@@ -315,20 +321,35 @@ function filtered(){
   ).sort((a,b)=> b.date.localeCompare(a.date));
 }
 function fmtUsd(v){ return v==null ? "" : "$"+v.toLocaleString("en-US"); }
+const INV_TIP = {
+  operator: "操業事業者 = 記録の本文に出てくる、そこで事業を営む会社(投資の意思決定者)",
+  owner_occupier: "自社所有 = 登記名義が事業会社そのもの(自社の工場・施設への投資)",
+  public: "公共 = 自治体・学区・公的機関",
+  unknown: "未特定 = 名義が箱会社(SPE)・個人・施工者しか分からない。住所からの事業者照会(第三ホップ)で埋まり次第更新",
+};
 function cardHtml(s){
   const val = s.fact.value!=null ? `・評価額 <span class="mono">${fmtUsd(s.fact.value)}</span>` : "";
   const jp  = s.jp ? `<span class="chip jp">日系</span>` : "";
   const inf = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${s.infer}</div>` : "";
-  const name = s.karte
-    ? `<button class="companylink" data-karte="${s.karte}" title="企業カルテを開く">${s.company} ›</button>`
-    : s.company;
+  // 投資主体(9/3 CEO 裁定 ①: 未特定でもカードに出す)。旧 s.company は後方互換(カルテのリンク用)
+  const inv = s.investor || {name: s.company, basis: "unknown", label: "未特定"};
+  const invName = inv.name ? (s.karte ? `<button class="companylink" data-karte="${s.karte}" title="企業カルテを開く">${inv.name} ›</button>` : inv.name)
+                           : `<span class="unknown-inv">投資主体 未特定</span>`;
+  const invChip = `<span class="chip inv ${inv.basis}" title="${INV_TIP[inv.basis] || ''}">${inv.label}</span>`;
+  const p = s.parties || {};
+  const partyBits = [];
+  if (p.owner_of_record) partyBits.push(`${p.owner_kind || "登記名義"}: ${p.owner_of_record}${p.owner_is_spe ? "(箱会社)" : ""}`);
+  if (p.applicant) partyBits.push(`申請者: ${p.applicant}`);
+  if (p.gc) partyBits.push(`施工者: ${p.gc}`);
+  const parties = partyBits.length ? `<div class="parties">${partyBits.join("・")}</div>` : "";
   const nw = s.new ? `<span class="chip newchip" title="${META ? META.new_rule : ''}">NEW</span>` : "";
   const note = s.note ? `<div class="loc" style="margin-top:4px">注記: ${s.note}</div>` : "";
-  const src = s.fact.owner_source && s.fact.owner_source.startsWith("parcel") ? `・所有者名は課税台帳から` : "";
+  const src = "";
   const unc = s.category==="未分類" ? `<span class="chip" title="4 分類のどれでもない、または確信度が低い">未分類</span>` : `<span class="chip">${s.category}</span>`;
   return `<article class="card">
-    <div class="head"><span class="state">${s.state}</span><h3>${name}</h3></div>
-    <div>${nw}${jp}${unc}<span class="chip">${s.industry}</span></div>
+    <div class="head"><span class="state">${s.state}</span><h3>${invName}</h3></div>
+    <div>${invChip}${nw}${jp}${unc}<span class="chip">${s.industry}</span></div>
+    ${parties}
     <div class="loc">${s.city}</div>
     <div class="summary">${s.summary}</div>
     ${note}
@@ -415,8 +436,8 @@ document.getElementById("clear").addEventListener("click", ()=>{
 function csvEscape(v){ v = String(v==null?"":v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
 document.getElementById("export").addEventListener("click", ()=>{
   const list = filtered();
-  const head = ["id","州","市・所在","会社","名義の種別","所有者の出所","業種","設備投資の種類","確信度","日付","申請日","評価額USD","日系","サマリー(AI付与)","注記(AI付与)","事実_出典","事実_参照","事実_逐語","推論(AI付与)"];
-  const rows = list.map(s=>[s.id,s.state,s.city,s.company,s.entity_type??"",s.fact.owner_source??"",s.industry,s.category,s.confidence??"",s.date,s.applied??"",s.fact.value??"",s.jp?"1":"",s.summary,s.note??"",s.fact.src,s.fact.ref,s.fact.verbatim,s.infer??""]);
+  const head = ["id","州","市・所在","投資主体","投資主体の根拠","登記名義","登記名義の出所","名義は箱会社","申請者","施工者","名義の種別(AI)","業種","設備投資の種類","確信度","日付","申請日","評価額USD","日系","サマリー(AI付与)","注記(AI付与)","事実_出典","事実_参照","事実_逐語","推論(AI付与)"];
+  const rows = list.map(s=>{ const inv=s.investor||{}, p=s.parties||{}; return [s.id,s.state,s.city,inv.name??"",inv.label??"",p.owner_of_record??"",p.owner_kind??"",p.owner_is_spe?"1":"",p.applicant??"",p.gc??"",s.entity_type??"",s.industry,s.category,s.confidence??"",s.date,s.applied??"",s.fact.value??"",s.jp?"1":"",s.summary,s.note??"",s.fact.src,s.fact.ref,s.fact.verbatim,s.infer??""]; });
   const csv = "﻿" + [head, ...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n");
   const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
   const a = document.createElement("a");
