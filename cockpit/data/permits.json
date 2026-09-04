@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-04T18:35:05+00:00",
+"generated_at": "2026-09-04T19:13:34+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,12 +15,12 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 25862,
+"signals_total": 25929,
 "candidates": 535,
 "enriched": 24338,
 "targets": 71,
 "unclassified": 24267,
-"unevaluated": 1524,
+"unevaluated": 1591,
 "by_category": {
 "データセンター建設": 5,
 "未分類": 24267,
@@ -546,6 +546,62 @@
 "date_min": "2026-07-01",
 "date_max": "2026-08-31",
 "owner_coverage": 0,
+"targets": 0
+},
+{
+"source_id": "SRC-061",
+"state": "IL",
+"jurisdiction": "Volo",
+"label": "ボロ村 建築許可(FOIA 回答・Excel・金額/所有者欄なし)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-04T19:13:14Z",
+"last_run_note": "ingested from foia-volo.json",
+"signals": 41,
+"date_min": "2025-08-11",
+"date_max": "2026-08-27",
+"owner_coverage": 0,
+"targets": 0
+},
+{
+"source_id": "SRC-062",
+"state": "IL",
+"jurisdiction": "Glasford",
+"label": "グラスフォード村 建築許可(FOIA 回答・Excel 台帳・金額は説明欄)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-04T19:13:14Z",
+"last_run_note": "ingested from foia-glasford.json",
+"signals": 11,
+"date_min": "2026-01-06",
+"date_max": "2026-07-17",
+"owner_coverage": 11,
+"targets": 0
+},
+{
+"source_id": "SRC-063",
+"state": "IL",
+"jurisdiction": "Golf",
+"label": "ゴルフ村 建築許可(FOIA 回答・Excel・所有者欄なし)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-04T19:13:14Z",
+"last_run_note": "ingested from foia-golf.json",
+"signals": 11,
+"date_min": "2026-07-01",
+"date_max": "2026-08-26",
+"owner_coverage": 0,
+"targets": 0
+},
+{
+"source_id": "SRC-064",
+"state": "IL",
+"jurisdiction": "Colfax",
+"label": "コルファックス村 建築許可(FOIA 回答・Excel・番号/交付日なし)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-04T19:13:14Z",
+"last_run_note": "ingested from foia-colfax.json",
+"signals": 4,
+"date_min": "2026-08-31",
+"date_max": "2026-08-31",
+"owner_coverage": 4,
 "targets": 0
 }
 ],

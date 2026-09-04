@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-09-04T18:35:07+00:00",
+  "generated_at": "2026-09-04T19:13:35+00:00",
   "stale_days": 45,
   "window_days": 60,
   "seeded_plan_rows": 0,
@@ -12,18 +12,18 @@
    "pop": 9552895,
    "by_status": {
     "n/a": 184,
-    "never": 235,
-    "fresh": 86
+    "never": 231,
+    "fresh": 90
    },
    "pop_by_status": {
     "n/a": 2420473,
-    "never": 2220391,
-    "fresh": 4912031
+    "never": 2211705,
+    "fresh": 4920717
    },
    "pop_share_by_status": {
     "n/a": 0.2534,
-    "never": 0.2324,
-    "fresh": 0.5142
+    "never": 0.2315,
+    "fresh": 0.5151
    }
   },
   "IN": {
@@ -146,16 +146,16 @@
    "pop": 5025293,
    "by_status": {
     "n/a": 20,
-    "fresh": 50,
-    "never": 49
+    "fresh": 51,
+    "never": 48
    },
    "pop_by_status": {
     "n/a": 324879,
-    "fresh": 4013808,
-    "never": 686606
+    "fresh": 4014356,
+    "never": 686058
    },
-   "fresh_pop": 4013808,
-   "fresh_pop_share": 0.7987
+   "fresh_pop": 4014356,
+   "fresh_pop_share": 0.7988
   },
   "17113": {
    "state": "IL",
@@ -163,16 +163,16 @@
    "pop": 152266,
    "by_status": {
     "n/a": 7,
-    "never": 13,
-    "fresh": 1
+    "never": 12,
+    "fresh": 2
    },
    "pop_by_status": {
     "n/a": 87028,
-    "never": 12330,
-    "fresh": 52908
+    "never": 11375,
+    "fresh": 53863
    },
-   "fresh_pop": 52908,
-   "fresh_pop_share": 0.3475
+   "fresh_pop": 53863,
+   "fresh_pop_share": 0.3537
   },
   "17161": {
    "state": "IL",
@@ -194,17 +194,17 @@
    "munis": 46,
    "pop": 633582,
    "by_status": {
-    "never": 26,
-    "fresh": 6,
+    "never": 25,
+    "fresh": 7,
     "n/a": 14
    },
    "pop_by_status": {
-    "never": 285948,
-    "fresh": 138497,
+    "never": 279550,
+    "fresh": 144895,
     "n/a": 209137
    },
-   "fresh_pop": 138497,
-   "fresh_pop_share": 0.2186
+   "fresh_pop": 144895,
+   "fresh_pop_share": 0.2287
   },
   "17115": {
    "state": "IL",
@@ -278,16 +278,16 @@
    "pop": 145837,
    "by_status": {
     "n/a": 5,
-    "fresh": 2,
-    "never": 8
+    "fresh": 3,
+    "never": 7
    },
    "pop_by_status": {
     "n/a": 13717,
-    "fresh": 4090,
-    "never": 128030
+    "fresh": 4875,
+    "never": 127245
    },
-   "fresh_pop": 4090,
-   "fresh_pop_share": 0.028
+   "fresh_pop": 4875,
+   "fresh_pop_share": 0.0334
   },
   "17197": {
    "state": "IL",
@@ -2699,6 +2699,62 @@
    "date_max": "2026-08-31",
    "owner_coverage": 0,
    "targets": 0
+  },
+  {
+   "source_id": "SRC-061",
+   "state": "IL",
+   "jurisdiction": "Volo",
+   "label": "ボロ村 建築許可(FOIA 回答・Excel・金額/所有者欄なし)",
+   "last_run_status": "ok",
+   "last_run_at": "2026-09-04T19:13:14Z",
+   "last_run_note": "ingested from foia-volo.json",
+   "signals": 41,
+   "date_min": "2025-08-11",
+   "date_max": "2026-08-27",
+   "owner_coverage": 0,
+   "targets": 0
+  },
+  {
+   "source_id": "SRC-062",
+   "state": "IL",
+   "jurisdiction": "Glasford",
+   "label": "グラスフォード村 建築許可(FOIA 回答・Excel 台帳・金額は説明欄)",
+   "last_run_status": "ok",
+   "last_run_at": "2026-09-04T19:13:14Z",
+   "last_run_note": "ingested from foia-glasford.json",
+   "signals": 11,
+   "date_min": "2026-01-06",
+   "date_max": "2026-07-17",
+   "owner_coverage": 11,
+   "targets": 0
+  },
+  {
+   "source_id": "SRC-063",
+   "state": "IL",
+   "jurisdiction": "Golf",
+   "label": "ゴルフ村 建築許可(FOIA 回答・Excel・所有者欄なし)",
+   "last_run_status": "ok",
+   "last_run_at": "2026-09-04T19:13:14Z",
+   "last_run_note": "ingested from foia-golf.json",
+   "signals": 11,
+   "date_min": "2026-07-01",
+   "date_max": "2026-08-26",
+   "owner_coverage": 0,
+   "targets": 0
+  },
+  {
+   "source_id": "SRC-064",
+   "state": "IL",
+   "jurisdiction": "Colfax",
+   "label": "コルファックス村 建築許可(FOIA 回答・Excel・番号/交付日なし)",
+   "last_run_status": "ok",
+   "last_run_at": "2026-09-04T19:13:14Z",
+   "last_run_note": "ingested from foia-colfax.json",
+   "signals": 4,
+   "date_min": "2026-08-31",
+   "date_max": "2026-08-31",
+   "owner_coverage": 4,
+   "targets": 0
   }
  ],
  "rows": [
@@ -2826,11 +2882,11 @@
    "program": "foia",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": null,
+   "last_fetch_at": "2026-09-04T17:56Z",
    "last_record_date": null,
    "records_60d": 0,
    "status": "never",
-   "reason": "FOIA sent",
+   "reason": "FOIA acked",
    "county_fips": "17161",
    "platform": "none-found",
    "access": "unknown"
@@ -4327,11 +4383,11 @@
    "program": "foia",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": null,
-   "last_record_date": null,
+   "last_fetch_at": "2026-09-04T19:00Z",
+   "last_record_date": "2026-08-31",
    "records_60d": 0,
-   "status": "never",
-   "reason": "FOIA sent",
+   "status": "fresh",
+   "reason": "FOIA records",
    "county_fips": "17113",
    "platform": "none-found",
    "access": "unknown"
@@ -5600,11 +5656,11 @@
    "program": "foia",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": null,
-   "last_record_date": null,
+   "last_fetch_at": "2026-09-04T18:20Z",
+   "last_record_date": "2026-08-31",
    "records_60d": 0,
-   "status": "never",
-   "reason": "FOIA sent",
+   "status": "fresh",
+   "reason": "FOIA records",
    "county_fips": "17143",
    "platform": "none-found",
    "access": "unknown"
@@ -5790,11 +5846,11 @@
    "program": "foia",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": null,
-   "last_record_date": null,
+   "last_fetch_at": "2026-09-04T18:45Z",
+   "last_record_date": "2026-08-31",
    "records_60d": 0,
-   "status": "never",
-   "reason": "FOIA sent",
+   "status": "fresh",
+   "reason": "FOIA records",
    "county_fips": "17031",
    "platform": "none-found",
    "access": "unknown"
@@ -6797,11 +6853,11 @@
    "program": "foia",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": null,
+   "last_fetch_at": "2026-09-04T18:08Z",
    "last_record_date": null,
    "records_60d": 0,
    "status": "never",
-   "reason": "FOIA sent",
+   "reason": "FOIA acked",
    "county_fips": "17111",
    "platform": "none-found",
    "access": "unknown"
@@ -11623,11 +11679,11 @@
    "program": "foia",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": null,
-   "last_record_date": null,
+   "last_fetch_at": "2026-09-04T18:12Z",
+   "last_record_date": "2026-08-31",
    "records_60d": 0,
-   "status": "never",
-   "reason": "FOIA sent",
+   "status": "fresh",
+   "reason": "FOIA records",
    "county_fips": "17097",
    "platform": "none-found",
    "access": "unknown"
