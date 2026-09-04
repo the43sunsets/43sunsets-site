@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-04T17:36:23+00:00",
+"generated_at": "2026-09-04T18:18:13+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,12 +15,12 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 25604,
-"candidates": 533,
+"signals_total": 25862,
+"candidates": 535,
 "enriched": 24192,
 "targets": 67,
 "unclassified": 24125,
-"unevaluated": 1412,
+"unevaluated": 1670,
 "by_category": {
 "データセンター建設": 5,
 "未分類": 24125,
@@ -517,6 +517,34 @@
 "signals": 36,
 "date_min": "2026-06-25",
 "date_max": "2026-08-26",
+"owner_coverage": 0,
+"targets": 0
+},
+{
+"source_id": "SRC-059",
+"state": "IL",
+"jurisdiction": "Sugar Grove",
+"label": "シュガーグローブ村 建築許可(FOIA 回答・Permits Summary Report PDF)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-04T18:18:13Z",
+"last_run_note": "ingested from foia-sugargrove.json",
+"signals": 182,
+"date_min": "2026-07-01",
+"date_max": "2026-08-31",
+"owner_coverage": 180,
+"targets": 0
+},
+{
+"source_id": "SRC-060",
+"state": "IL",
+"jurisdiction": "East St. Louis",
+"label": "イーストセントルイス市 建築許可(FOIA 回答・Excel・申請者欄のみ)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-04T18:18:13Z",
+"last_run_note": "ingested from foia-eaststlouis.json",
+"signals": 76,
+"date_min": "2026-07-01",
+"date_max": "2026-08-31",
 "owner_coverage": 0,
 "targets": 0
 }
