@@ -334,12 +334,14 @@ function cardHtml(s){
   const inf = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${s.infer}</div>` : "";
   // 投資主体(9/3 CEO 裁定 ①: 未特定でもカードに出す)。旧 s.company は後方互換(カルテのリンク用)
   const inv = s.investor || {name: s.company, basis: "unknown", label: "未特定"};
-  const invName = inv.name ? (s.karte ? `<button class="companylink" data-karte="${s.karte}" title="企業カルテを開く">${inv.name} ›</button>` : inv.name)
+  const p = s.parties || {};
+  // 出所は色や札で主張しない(9/3 CEO): 自社所有の名前にだけツールチップで「登記名義(課税台帳/許可記録)から」
+  const srcNote = inv.basis === "owner_occupier" ? (p.owner_kind === "課税台帳" ? "登記名義(郡の課税台帳)から" : "登記名義(許可記録の所有者欄)から") : "";
+  const invName = inv.name ? (s.karte ? `<button class="companylink" data-karte="${s.karte}" title="企業カルテを開く${srcNote ? "・" + srcNote : ""}">${inv.name} ›</button>` : `<span title="${srcNote}">${inv.name}</span>`)
                            : `<span class="unknown-inv">投資主体 未特定</span>`;
   const invChip = `<span class="chip inv ${inv.basis}" title="${INV_TIP[inv.basis] || ''}">${inv.label}</span>`;
-  const p = s.parties || {};
   const partyBits = [];
-  if (p.owner_of_record) partyBits.push(`${p.owner_kind || "登記名義"}: ${p.owner_of_record}${p.owner_is_spe ? "(箱会社)" : ""}`);
+  if (p.owner_of_record) partyBits.push(`登記名義: ${p.owner_of_record}${p.owner_is_spe ? "(箱会社)" : ""}${p.owner_kind === "課税台帳" ? "(課税台帳)" : ""}`);
   if (p.applicant) partyBits.push(`申請者: ${p.applicant}`);
   if (p.gc) partyBits.push(`施工者: ${p.gc}`);
   const parties = partyBits.length ? `<div class="parties">${partyBits.join("・")}</div>` : "";
