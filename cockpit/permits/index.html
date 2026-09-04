@@ -192,7 +192,7 @@ a{color:var(--ai-accent);}
 <div class="app">
 <aside>
   <label class="fitem jp-toggle"><input type="checkbox" id="jponly">日系関連のみ表示</label>
-  <label class="fitem jp-toggle"><input type="checkbox" id="showunc">未分類も表示 <span class="cnt" id="unccnt"></span></label>
+  <label class="fitem jp-toggle" title="未分類 = AI が読んだ結果、設備投資の 4 分類(製造能力の増強・物流倉庫の新設・データセンター建設・研究医療航空宇宙)のどれにも当てはまらなかった記録、または用途が読めず判定できなかった記録。大半は住宅の屋根・フェンス・太陽光や小売の改装。「未評価」(まだ読んでいない行)とは別。"><input type="checkbox" id="showunc">未分類も表示 <span class="cnt" id="unccnt"></span></label>
 
   <div class="fgroup">
     <h2>州</h2>
@@ -348,7 +348,7 @@ function cardHtml(s){
   const nw = s.new ? `<span class="chip newchip" title="${META ? META.new_rule : ''}">NEW</span>` : "";
   const note = s.note ? `<div class="loc" style="margin-top:4px">注記: ${s.note}</div>` : "";
   const src = "";
-  const unc = s.category==="未分類" ? `<span class="chip" title="4 分類のどれでもない、または確信度が低い">未分類</span>` : `<span class="chip">${s.category}</span>`;
+  const unc = s.category==="未分類" ? `<span class="chip" title="未分類 = AI が読んだ結果、設備投資の 4 分類のどれにも当てはまらない、または用途が読めず判定できない記録">未分類</span>` : `<span class="chip">${s.category}</span>`;
   return `<article class="card">
     <div class="head"><span class="state">${s.state}</span><h3>${invName}</h3>${invChip}</div>
     <div>${nw}${jp}${unc}<span class="chip">${s.industry}</span></div>
