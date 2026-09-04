@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-09-04T19:16:41+00:00",
+  "generated_at": "2026-09-04T20:22:09+00:00",
   "stale_days": 45,
   "window_days": 60,
   "seeded_plan_rows": 1987,
@@ -12,20 +12,20 @@
    "pop": 9552895,
    "by_status": {
     "n/a": 184,
-    "never": 231,
-    "fresh": 89,
+    "never": 228,
+    "fresh": 92,
     "stale": 1
    },
    "pop_by_status": {
     "n/a": 2420473,
-    "never": 2211705,
-    "fresh": 4919932,
+    "never": 2205137,
+    "fresh": 4926500,
     "stale": 785
    },
    "pop_share_by_status": {
     "n/a": 0.2534,
-    "never": 0.2315,
-    "fresh": 0.515,
+    "never": 0.2308,
+    "fresh": 0.5157,
     "stale": 0.0001
    }
   },
@@ -149,16 +149,16 @@
    "pop": 5025293,
    "by_status": {
     "n/a": 20,
-    "fresh": 51,
-    "never": 48
+    "fresh": 52,
+    "never": 47
    },
    "pop_by_status": {
     "n/a": 324879,
-    "fresh": 4014356,
-    "never": 686058
+    "fresh": 4020227,
+    "never": 680187
    },
-   "fresh_pop": 4014356,
-   "fresh_pop_share": 0.7988
+   "fresh_pop": 4020227,
+   "fresh_pop_share": 0.8
   },
   "17113": {
    "state": "IL",
@@ -166,16 +166,16 @@
    "pop": 152266,
    "by_status": {
     "n/a": 7,
-    "never": 12,
-    "fresh": 2
+    "never": 11,
+    "fresh": 3
    },
    "pop_by_status": {
     "n/a": 87028,
-    "never": 11375,
-    "fresh": 53863
+    "never": 11146,
+    "fresh": 54092
    },
-   "fresh_pop": 53863,
-   "fresh_pop_share": 0.3537
+   "fresh_pop": 54092,
+   "fresh_pop_share": 0.3552
   },
   "17161": {
    "state": "IL",
@@ -315,14 +315,16 @@
    "pop": 19279,
    "by_status": {
     "n/a": 6,
-    "never": 3
+    "fresh": 1,
+    "never": 2
    },
    "pop_by_status": {
     "n/a": 16565,
-    "never": 2714
+    "fresh": 468,
+    "never": 2246
    },
-   "fresh_pop": 0,
-   "fresh_pop_share": 0.0
+   "fresh_pop": 468,
+   "fresh_pop_share": 0.0243
   },
   "17163": {
    "state": "IL",
@@ -2760,6 +2762,48 @@
    "date_max": "2026-08-31",
    "owner_coverage": 4,
    "targets": 0
+  },
+  {
+   "source_id": "SRC-065",
+   "state": "IL",
+   "jurisdiction": "Hometown",
+   "label": "ホームタウン市 建築許可(FOIA 回答・Excel・所有者/施工者あり)",
+   "last_run_status": "ok",
+   "last_run_at": "2026-09-04T20:22:07Z",
+   "last_run_note": "ingested from foia-hometown.json",
+   "signals": 117,
+   "date_min": "2026-07-01",
+   "date_max": "2026-08-28",
+   "owner_coverage": 117,
+   "targets": 0
+  },
+  {
+   "source_id": "SRC-066",
+   "state": "IL",
+   "jurisdiction": "Willow Springs",
+   "label": "ウィローズスプリングス村 建築許可(FOIA 回答・Permits Summary Report PDF・所有者欄なし・7 月分は番号の先頭桁欠落)",
+   "last_run_status": "ok",
+   "last_run_at": "2026-09-04T20:22:07Z",
+   "last_run_note": "ingested from foia-willowsprings.json",
+   "signals": 81,
+   "date_min": "2026-07-01",
+   "date_max": "2026-08-31",
+   "owner_coverage": 0,
+   "targets": 0
+  },
+  {
+   "source_id": "SRC-067",
+   "state": "IL",
+   "jurisdiction": "Bonnie",
+   "label": "ボニー村 建築許可(FOIA 回答・申請書スキャン転記)",
+   "last_run_status": "ok",
+   "last_run_at": "2026-09-04T20:22:07Z",
+   "last_run_note": "ingested from foia-bonnie.json",
+   "signals": 1,
+   "date_min": "2026-07-21",
+   "date_max": "2026-07-21",
+   "owner_coverage": 1,
+   "targets": 0
   }
  ],
  "rows": [
@@ -3566,16 +3610,16 @@
    "state": "IL",
    "name": "Bonnie village",
    "population": 468,
-   "route": "foia",
-   "method": "email",
-   "program": "foia",
+   "route": "source",
+   "method": "foia",
+   "program": "SRC-067",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": null,
-   "last_record_date": null,
-   "records_60d": 0,
-   "status": "never",
-   "reason": "FOIA sent",
+   "last_fetch_at": "2026-09-04T20:22:07Z",
+   "last_record_date": "2026-07-21",
+   "records_60d": 1,
+   "status": "fresh",
+   "reason": "",
    "county_fips": "17081",
    "platform": "none-found",
    "access": "unknown"
@@ -4943,7 +4987,7 @@
    "last_record_date": null,
    "records_60d": 0,
    "status": "never",
-   "reason": "FOIA acked",
+   "reason": "FOIA sent",
    "county_fips": "17099",
    "platform": "none-found",
    "access": "unknown"
@@ -5167,11 +5211,11 @@
    "program": "foia",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": null,
-   "last_record_date": null,
+   "last_fetch_at": "2026-09-04T18:46Z",
+   "last_record_date": "2026-08-31",
    "records_60d": 0,
-   "status": "never",
-   "reason": "FOIA sent",
+   "status": "fresh",
+   "reason": "FOIA records",
    "county_fips": "17113",
    "platform": "none-found",
    "access": "unknown"
@@ -6587,16 +6631,16 @@
    "state": "IL",
    "name": "Hometown city",
    "population": 4244,
-   "route": "backstop",
-   "method": "curl",
-   "program": "SRC-021",
+   "route": "source",
+   "method": "foia",
+   "program": "SRC-065",
    "cadence_days": 31,
-   "next_due_at": null,
-   "last_fetch_at": "2026-09-04T12:03:19Z",
-   "last_record_date": "2026-07-07",
-   "records_60d": 1,
+   "next_due_at": "2026-10-01",
+   "last_fetch_at": "2026-09-04T20:22:07Z",
+   "last_record_date": "2026-08-28",
+   "records_60d": 105,
    "status": "fresh",
-   "reason": "低頻度(最終 2026-07-07・源全体は 2026-08-31)",
+   "reason": "",
    "county_fips": "17031",
    "platform": "none-found",
    "access": "unknown"
@@ -12059,16 +12103,16 @@
    "state": "IL",
    "name": "Willow Springs village",
    "population": 5871,
-   "route": "foia",
-   "method": "email",
-   "program": "foia",
+   "route": "source",
+   "method": "foia",
+   "program": "SRC-066",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": null,
-   "last_record_date": null,
-   "records_60d": 0,
-   "status": "never",
-   "reason": "FOIA sent",
+   "last_fetch_at": "2026-09-04T20:22:07Z",
+   "last_record_date": "2026-08-31",
+   "records_60d": 77,
+   "status": "fresh",
+   "reason": "",
    "county_fips": "17031",
    "platform": "none-found",
    "access": "unknown"

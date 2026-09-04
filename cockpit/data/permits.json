@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-04T19:13:34+00:00",
+"generated_at": "2026-09-04T20:22:07+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,15 +15,15 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 25929,
+"signals_total": 26128,
 "candidates": 535,
-"enriched": 24338,
+"enriched": 24358,
 "targets": 71,
-"unclassified": 24267,
-"unevaluated": 1591,
+"unclassified": 24287,
+"unevaluated": 1770,
 "by_category": {
 "データセンター建設": 5,
-"未分類": 24267,
+"未分類": 24287,
 "物流・倉庫の新設": 14,
 "研究・医療・航空宇宙": 34,
 "製造能力の増強": 18
@@ -603,6 +603,48 @@
 "date_max": "2026-08-31",
 "owner_coverage": 4,
 "targets": 0
+},
+{
+"source_id": "SRC-065",
+"state": "IL",
+"jurisdiction": "Hometown",
+"label": "ホームタウン市 建築許可(FOIA 回答・Excel・所有者/施工者あり)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-04T20:22:07Z",
+"last_run_note": "ingested from foia-hometown.json",
+"signals": 117,
+"date_min": "2026-07-01",
+"date_max": "2026-08-28",
+"owner_coverage": 117,
+"targets": 0
+},
+{
+"source_id": "SRC-066",
+"state": "IL",
+"jurisdiction": "Willow Springs",
+"label": "ウィローズスプリングス村 建築許可(FOIA 回答・Permits Summary Report PDF・所有者欄なし・7 月分は番号の先頭桁欠落)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-04T20:22:07Z",
+"last_run_note": "ingested from foia-willowsprings.json",
+"signals": 81,
+"date_min": "2026-07-01",
+"date_max": "2026-08-31",
+"owner_coverage": 0,
+"targets": 0
+},
+{
+"source_id": "SRC-067",
+"state": "IL",
+"jurisdiction": "Bonnie",
+"label": "ボニー村 建築許可(FOIA 回答・申請書スキャン転記)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-04T20:22:07Z",
+"last_run_note": "ingested from foia-bonnie.json",
+"signals": 1,
+"date_min": "2026-07-21",
+"date_max": "2026-07-21",
+"owner_coverage": 1,
+"targets": 0
 }
 ],
 "reader": "v0 = Claude Fable 5.1(2026-09-02・候補 487 件を手動バッチで読了)。v1 = Claude Sonnet 5(2026-09-02 夜から全件を並列読み・語彙検証つき)。",
@@ -613,7 +655,7 @@
 "WI": "permits-more-WI.json"
 },
 "unclassified_by_state": {
-"IL": 19548,
+"IL": 19568,
 "MI": 1200,
 "OH": 3371,
 "WI": 148
@@ -6224,6 +6266,22 @@
 ]
 },
 {
+"id": "C-1743",
+"name": "CALATLANTIC GROUP INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": 2522448.0,
+"states": "IL",
+"latest": "2026-08-05",
+"targets": 0,
+"signal_ids": [
+"S-12406",
+"S-25626",
+"S-25756"
+]
+},
+{
 "id": "C-65",
 "name": "CHICAGO PARK DISTRICT",
 "entity_type": "public",
@@ -7427,6 +7485,24 @@
 "S-1214",
 "S-1294",
 "S-1301"
+]
+},
+{
+"id": "C-3060",
+"name": "NVR/RYAN HOMES",
+"entity_type": "corp",
+"jp": false,
+"signals": 5,
+"value_total": 1335000.0,
+"states": "IL",
+"latest": "2026-08-31",
+"targets": 0,
+"signal_ids": [
+"S-25664",
+"S-25665",
+"S-25683",
+"S-25684",
+"S-25716"
 ]
 },
 {
@@ -8778,6 +8854,20 @@
 ]
 },
 {
+"id": "C-3062",
+"name": "MCCUE BUILDERS",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 800000.0,
+"states": "IL",
+"latest": "2026-08-27",
+"targets": 0,
+"signal_ids": [
+"S-25661"
+]
+},
+{
 "id": "C-267",
 "name": "1308 NELSON LLC",
 "entity_type": "spe",
@@ -9044,6 +9134,22 @@
 "targets": 0,
 "signal_ids": [
 "S-332"
+]
+},
+{
+"id": "C-3059",
+"name": "CalAtlantic Group, LL",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": 735880.0,
+"states": "IL",
+"latest": "2026-08-03",
+"targets": 0,
+"signal_ids": [
+"S-25754",
+"S-25755",
+"S-25757"
 ]
 },
 {
@@ -10722,6 +10828,21 @@
 "signal_ids": [
 "S-3",
 "S-194"
+]
+},
+{
+"id": "C-3061",
+"name": "CALATLANTIC GR",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 477731.0,
+"states": "IL",
+"latest": "2026-08-25",
+"targets": 0,
+"signal_ids": [
+"S-25658",
+"S-25760"
 ]
 },
 {
@@ -13573,6 +13694,20 @@
 "signal_ids": [
 "S-1217",
 "S-1226"
+]
+},
+{
+"id": "C-3063",
+"name": "TRG Venture Two, L",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 250000.0,
+"states": "IL",
+"latest": "2026-07-09",
+"targets": 0,
+"signal_ids": [
+"S-25685"
 ]
 },
 {
@@ -33058,20 +33193,6 @@
 "targets": 0,
 "signal_ids": [
 "S-14099"
-]
-},
-{
-"id": "C-1743",
-"name": "CALATLANTIC GROUP INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 9118.0,
-"states": "IL",
-"latest": "2026-07-15",
-"targets": 0,
-"signal_ids": [
-"S-12406"
 ]
 },
 {
