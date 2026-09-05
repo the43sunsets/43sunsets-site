@@ -1,7 +1,10 @@
 // 43 Sunsets Cockpit — health meter(ヘッダー右上・9/5 CEO 発案)。/cockpit/data/health.json(VPS が毎サイクル生成)を読み、
 // 「今日の日付・当日の予定収集が済んだか・最終収集の日時・最終実行の新規件数」を 1 つのピルで示す。描画時に AI は動かない。
 (function(){
-  const el = document.getElementById("healthbar"); if(!el) return;
+  const els = Array.from(document.querySelectorAll(".hb[data-check], #healthbar")); if(!els.length) return;
+  els.forEach(el => run(el));
+})();
+function run(el){
   const KEY = el.dataset.check || "permits_update_vps";
   const TZ = "America/Chicago";
   const fmt = (iso, withTime) => { if(!iso) return "—"; const d = new Date(iso); const o = {timeZone:TZ, year:"numeric", month:"2-digit", day:"2-digit"}; if(withTime) Object.assign(o,{hour:"2-digit",minute:"2-digit",hour12:false});
@@ -22,4 +25,4 @@
     el.className = "hb " + cls; el.title = title;
     el.innerHTML = `<span class="hb-dot"></span><span class="hb-txt"><span class="hb-k">今日</span> <span class="mono">${todayCT}</span><span class="hb-sep">·</span><span class="hb-k">${label}</span><span class="hb-sep">·</span><span class="hb-k">最終収集</span> <span class="mono">${lastCT}</span>${n!=null?`<span class="hb-sep">·</span><span class="hb-k">新規</span> <span class="mono">${n>=0?"+":""}${n}</span> 件`:""}</span>`;
   }).catch(err=>{ el.className = "hb hb-fail"; el.title = "health.json を読めません: "+err.message; el.innerHTML = `<span class="hb-dot"></span><span class="hb-txt">今日 <span class="mono">${todayCT}</span>・運行状態 不明(${err.message})</span>`; });
-})();
+}

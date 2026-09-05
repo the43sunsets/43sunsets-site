@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>43 Sunsets Cockpit — 中西部の設備投資を、公的記録から先に</title>
+<meta name="description" content="中西部で、今、工場や機械に投資している会社を、建設許可と動産担保登記(UCC)から先に見つける無料の面。今週の動き・景況の帯・2 つの検出面。">
+<link rel="canonical" href="https://43sunsets.com/cockpit/">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="43 Sunsets Cockpit — 中西部の設備投資を、公的記録から先に">
+<meta property="og:description" content="公的記録から設備投資の動きを検出。報道より早いターゲット発掘の材料に。">
+<meta property="og:url" content="https://43sunsets.com/cockpit/">
+<meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E;
+  --ai-accent:#2F5D8A; --line:#D9DDD9; --line-soft:#E7EAE6;
+  --fact:#2E6E4E; --fact-bg:#EEF5F0; --infer:#8A5A2F; --infer-bg:#F7F1E8; --infer-line:#D9C6A8;
+  --stamp:#B54434; --chip-bg:#EDF0F3;
+  --warn:#9A4A1F; --warn-bg:#F6EDE6;
+  --jp:#8A2F55; --jp-bg:#F5E9EF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#161A1F; --card:#1E242B; --ink:#E4E7EA; --sub:#9AA4AE;
+    --ai-accent:#7FA8D0; --line:#333B44; --line-soft:#2A313A;
+    --fact:#7CC49C; --fact-bg:#20302A; --infer:#D8A96B; --infer-bg:#332A1E; --infer-line:#5A4A32;
+    --stamp:#D07360; --chip-bg:#2A313A;
+    --warn:#D0885C; --warn-bg:#33261C;
+    --jp:#D07FA5; --jp-bg:#33202A;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#161A1F; --card:#1E242B; --ink:#E4E7EA; --sub:#9AA4AE;
+  --ai-accent:#7FA8D0; --line:#333B44; --line-soft:#2A313A;
+  --fact:#7CC49C; --fact-bg:#20302A; --infer:#D8A96B; --infer-bg:#332A1E; --infer-line:#5A4A32;
+  --stamp:#D07360; --chip-bg:#2A313A;
+  --warn:#D0885C; --warn-bg:#33261C;
+  --jp:#D07FA5; --jp-bg:#33202A;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper); color:var(--ink); font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif; margin:0; line-height:1.7; font-size:14.5px;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;}
+
+header{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:16px 28px 13px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; background:var(--card); position:sticky; top:0; z-index:40;}
+.masthead h1{font-family:"Shippori Mincho",serif; font-size:21px; font-weight:700; margin:0; letter-spacing:.02em;}
+.masthead .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
+.masthead .meta{font-size:12px; color:var(--sub); margin-top:4px;}
+.stamp{flex:none; border:2.5px solid var(--stamp); color:var(--stamp); font-family:"Shippori Mincho",serif; font-weight:700; font-size:15px; padding:5px 6px 5px 10px; transform:rotate(-6deg); border-radius:4px; letter-spacing:.3em; opacity:.85; margin-top:4px;}
+.hdr-right{display:flex; align-items:center; gap:14px; flex:none;}
+.theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;}
+.theme-btn:hover{color:var(--ink); border-color:var(--ink);}
+
+.app{display:grid; grid-template-columns:264px minmax(0,1fr); gap:0; align-items:start; min-height:70vh;}
+
+/* ---- 左: フィルタ ---- */
+aside{border-right:1px solid var(--line); padding:20px 20px 40px; position:sticky; top:var(--headh,96px); max-height:calc(100vh - var(--headh,96px)); overflow-y:auto;}
+.fgroup{margin-bottom:22px;}
+.fitem.zero{opacity:.45;}
+.fgroup h2{font-size:11px; letter-spacing:.2em; color:var(--sub); font-weight:700; margin:0 0 8px; text-transform:uppercase; border-bottom:1px solid var(--line-soft); padding-bottom:5px;}
+.fitem{display:flex; align-items:center; gap:8px; padding:3px 2px; font-size:13.5px; cursor:pointer; border-radius:4px;}
+.fitem:hover{background:var(--chip-bg);}
+.fitem input{accent-color:var(--ai-accent); width:15px; height:15px; cursor:pointer;}
+.fitem .cnt{margin-left:auto; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11.5px; color:var(--sub);}
+.fitem.jp-toggle{background:var(--jp-bg); color:var(--jp); font-weight:500; padding:6px 8px; margin-bottom:4px;}
+.fitem.jp-toggle input{accent-color:var(--jp);}
+.clearbtn{width:100%; border:1px solid var(--line); background:var(--card); color:var(--sub); font-family:inherit; font-size:12.5px; padding:7px; border-radius:5px; cursor:pointer; margin-top:4px;}
+.clearbtn:hover{color:var(--ink); border-color:var(--sub);}
+.fnote{font-size:11px; color:var(--sub); margin-top:18px; line-height:1.6; border-top:1px solid var(--line-soft); padding-top:10px;}
+
+/* ---- 右: 結果 ---- */
+main{padding:18px 28px 60px; min-width:0;}
+.toolbar{display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding-bottom:12px; border-bottom:2px solid var(--ink); margin-bottom:16px;}
+.hitcount{font-family:"Shippori Mincho",serif; font-size:17px; font-weight:700;}
+.hitcount .num{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:19px;}
+.hitsub{font-size:12px; color:var(--sub);}
+.exportbtn{margin-left:auto; border:1.5px solid var(--ai-accent); color:var(--ai-accent); background:transparent; font-family:inherit; font-weight:700; font-size:13px; padding:7px 16px; border-radius:5px; cursor:pointer;}
+.exportbtn:hover{background:var(--ai-accent); color:var(--paper);}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px;}
+.card{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:15px 17px 13px; display:flex; flex-direction:column; gap:7px;}
+.card .head{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;}
+.card .head .chip.inv{margin-left:2px; align-self:center;}
+.card h3{margin:0; font-size:14.5px; font-weight:700; line-height:1.5; flex:1;}
+.state{display:inline-block; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px; font-weight:500; color:var(--paper); background:var(--ink); border-radius:3px; padding:0 6px; letter-spacing:.08em; flex:none; margin-top:3px;}
+.chip{display:inline-block; font-size:10.5px; color:var(--sub); background:var(--chip-bg); border-radius:3px; padding:0 7px; margin-right:5px;}
+.chip.jp{color:var(--jp); background:var(--jp-bg); font-weight:700;}
+.chip.newchip{color:var(--stamp); background:transparent; border:1.5px solid var(--stamp); font-weight:700; letter-spacing:.1em; font-size:10px;}
+.chip.inv{font-weight:700;}
+.chip.inv.operator,.chip.inv.owner_occupier{color:var(--fact); background:var(--fact-bg);}
+.chip.inv.public{color:var(--ai-accent); background:var(--chip-bg);}
+.chip.inv.unknown{color:var(--warn); background:var(--warn-bg);}
+.unknown-inv{color:var(--sub); font-weight:500;}
+.parties{font-size:11.5px; color:var(--sub); margin:2px 0 0; line-height:1.5;}
+.card .loc{font-size:12px; color:var(--sub);}
+.card .summary{font-size:13px;}
+.fact{border-left:3px solid var(--fact); background:var(--fact-bg); padding:7px 11px; border-radius:0 4px 4px 0; font-size:12.5px;}
+.fact .flabel{font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--fact); display:block; margin-bottom:1px;}
+.fact .verbatim{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; display:block; margin-top:3px; word-break:break-word; color:var(--sub);}
+.infer{border:1px dashed var(--infer-line); background:var(--infer-bg); padding:7px 11px; border-radius:4px; font-size:12.5px;}
+.badge-infer{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--infer); border:1px solid var(--infer); border-radius:3px; padding:0 5px; margin-right:6px; vertical-align:1px;}
+
+.pager{display:flex; align-items:center; justify-content:center; gap:6px; margin-top:24px;}
+.pager button{border:1px solid var(--line); background:var(--card); color:var(--ink); font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:13px; min-width:34px; padding:5px 8px; border-radius:5px; cursor:pointer;}
+.pager button:hover{border-color:var(--ai-accent); color:var(--ai-accent);}
+.pager button[disabled]{opacity:.35; cursor:default;}
+.pager button.cur{background:var(--ink); color:var(--paper); border-color:var(--ink); cursor:default;}
+.pager .gap{color:var(--sub); padding:0 2px;}
+.pager .pinfo{font-size:12.5px; color:var(--sub); margin-left:10px;}
+.pager{flex-wrap:wrap;}
+.empty{padding:60px 20px; text-align:center; color:var(--sub); font-size:14px;}
+
+footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5px; color:var(--sub);}
+
+/* ---- 企業カルテ ---- */
+.companylink{background:none; border:none; padding:0; font:inherit; font-weight:700; color:var(--ai-accent); cursor:pointer; text-align:left; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;}
+.companylink:hover{text-decoration-thickness:2px;}
+.karte-bg{position:fixed; inset:0; background:var(--paper); z-index:60; overflow-y:auto;}
+.karte{max-width:880px; margin:0 auto; padding:28px 24px 80px;}
+.karte-top{display:flex; justify-content:space-between; align-items:flex-start; gap:14px; border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:14px 0 12px; margin-bottom:18px;}
+.karte-top .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
+.karte-top h2{font-family:"Shippori Mincho",serif; font-size:22px; margin:0;}
+.karte-top .ksub{font-size:12.5px; color:var(--sub); margin-top:4px;}
+.karte-close{border:1px solid var(--line); background:var(--card); color:var(--ink); font-family:inherit; font-size:13px; padding:7px 14px; border-radius:5px; cursor:pointer; flex:none;}
+.karte-close:hover{border-color:var(--ai-accent); color:var(--ai-accent);}
+.karte h3{font-size:13px; letter-spacing:.14em; color:var(--sub); font-weight:700; border-bottom:2px solid var(--ink); padding-bottom:5px; margin:26px 0 12px;}
+.timeline{border-left:2px solid var(--line); margin-left:6px; padding-left:18px; display:flex; flex-direction:column; gap:14px;}
+.tl-item{position:relative;}
+.tl-item::before{content:""; position:absolute; left:-24px; top:6px; width:9px; height:9px; border-radius:50%; background:var(--fact);}
+.tl-item .tl-date{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px; color:var(--sub);}
+.tl-item .tl-title{font-weight:700; font-size:14px;}
+.tl-item .tl-body{font-size:12.5px; color:var(--sub);}
+.kv{display:grid; grid-template-columns:max-content 1fr; gap:4px 16px; font-size:13px;}
+.kv dt{color:var(--sub); font-size:12px; padding-top:1px;}
+.kv dd{margin:0;}
+.karte .fact,.karte .infer{font-size:13px;}
+.karte-note{font-size:11.5px; color:var(--sub); border-top:1px solid var(--line-soft); margin-top:28px; padding-top:10px;}
+
+button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accent); outline-offset:2px;}
+.scope-details{margin:26px 0 0;}
+.scope-details summary{cursor:pointer; font-weight:700; font-size:13px; color:var(--sub); letter-spacing:.06em; padding:8px 0; border-top:1px solid var(--line);}
+.scope-details summary:hover{color:var(--ink);}
+.scope-details table{width:100%; border-collapse:collapse; font-size:12.5px; background:var(--card); border:1px solid var(--line); border-radius:6px; overflow:hidden; margin:10px 0;}
+.scope-details th{font-size:10.5px; letter-spacing:.12em; color:var(--sub); text-align:left; font-weight:500; padding:7px 10px; border-bottom:1px solid var(--line); background:var(--chip-bg);}
+.scope-details td{padding:7px 10px; border-bottom:1px solid var(--line-soft); vertical-align:top;}
+.scope-details tr:last-child td{border-bottom:none;}
+.scope-details .ok{color:var(--fact); font-weight:700;}
+.scope-details .ng{color:var(--stamp); font-weight:700;}
+.scope-details ul{margin:6px 0 0; padding-left:18px; font-size:12.5px; color:var(--sub);}
+.scope-details li{margin-bottom:4px;}
+.tblwrap{overflow-x:auto;}
+.beta{flex:none; border:2px solid var(--ai-accent); color:var(--ai-accent); font-family:"IBM Plex Mono",ui-monospace,monospace; font-weight:700; font-size:12px; padding:2px 9px; border-radius:4px; letter-spacing:.14em; margin-top:8px;}
+.brandlink{color:var(--sub); text-decoration:none;}
+.brandlink:hover{color:var(--ai-accent);}
+a{color:var(--ai-accent);}
+@media (max-width:760px){
+  .app{grid-template-columns:1fr;}
+  aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
+}
+
+/* ---- health meter(ヘッダー右上・9/5) ---- */
+.hb{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); background:var(--card); border-radius:999px; padding:4px 12px 4px 8px; font-size:11.5px; color:var(--sub); white-space:nowrap; cursor:help;}
+.hb .hb-k{color:var(--ink);} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;}
+.hb-dot{width:9px; height:9px; border-radius:50%; background:var(--line); flex:none; box-shadow:0 0 0 0 rgba(0,0,0,0);}
+.hb.hb-ok .hb-dot{background:var(--fact); animation:hbpulse 2.4s ease-out infinite;} .hb.hb-ok{border-color:var(--fact);}
+.hb.hb-wait .hb-dot{background:var(--infer);} .hb.hb-wait{border-color:var(--infer-line);}
+.hb.hb-fail .hb-dot{background:var(--stamp);} .hb.hb-fail{border-color:var(--stamp); color:var(--stamp);} .hb.hb-fail .hb-k{color:var(--stamp);}
+@keyframes hbpulse{0%{box-shadow:0 0 0 0 rgba(46,110,78,.45)} 70%{box-shadow:0 0 0 7px rgba(46,110,78,0)} 100%{box-shadow:0 0 0 0 rgba(46,110,78,0)}}
+@media (max-width:820px){ .hb .hb-txt{max-width:46vw; overflow:hidden; text-overflow:ellipsis;} }
+
+/* ---- 期間の段(9/5 CEO 合意: 軸 = 申請日[無ければ発行日]・決め打ち・件数つき・既定 すべて) ---- */
+.seg{display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; background:var(--card);}
+.seg button{border:0; background:transparent; color:var(--sub); font:inherit; font-size:12px; padding:5px 12px; cursor:pointer; white-space:nowrap;}
+.seg button .cnt{font-family:"IBM Plex Mono",ui-monospace,monospace; margin-left:5px; color:var(--sub); font-size:11px;}
+.seg button.cur{background:var(--ink); color:var(--card);} .seg button.cur .cnt{color:var(--card);}
+.toolbar .left{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
+
+/* ---- トップ(新聞寄り・9/5 CEO 裁定 C) ---- */
+.paper{max-width:1180px; margin:0 auto; padding:26px 28px 60px;}
+.lede{font-family:"Shippori Mincho",serif; font-size:30px; line-height:1.35; font-weight:700; letter-spacing:.01em; margin:6px 0 10px; max-width:900px;}
+.dek{font-size:14.5px; color:var(--sub); max-width:820px; line-height:1.7;}
+.dateline{display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin:16px 0 6px; font-size:12px; color:var(--sub);}
+.rule{border:0; border-top:2px solid var(--ink); margin:14px 0 18px;}
+.rule.soft{border-top:1px solid var(--line);}
+.sec-h{display:flex; align-items:baseline; gap:12px; margin:0 0 12px;}
+.sec-h h2{font-family:"Shippori Mincho",serif; font-size:19px; margin:0;} .sec-h .sub{font-size:12px; color:var(--sub);}
+.picks{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px;}
+.pick{border:1px solid var(--line); background:var(--card); border-radius:8px; padding:14px 16px; display:flex; flex-direction:column; gap:6px;}
+.pick .tag{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ai-accent); font-weight:700;}
+.pick h3{font-family:"Shippori Mincho",serif; font-size:16.5px; line-height:1.4; margin:0;}
+.pick p{margin:0; font-size:13px; line-height:1.65; color:var(--ink);}
+.pick .go{font-size:12px; color:var(--ai-accent); margin-top:auto;}
+.macro{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:10px;}
+.tile{border:1px solid var(--line); background:var(--card); border-radius:8px; padding:11px 12px; position:relative;}
+.tile .g{font-size:10px; letter-spacing:.12em; color:var(--sub); text-transform:uppercase;}
+.tile .n{font-size:12.5px; font-weight:700; margin:2px 0 4px; color:var(--ink); line-height:1.3;}
+.tile .v{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:20px; font-weight:700; display:flex; align-items:baseline; gap:8px;}
+.tile .v .u{font-size:11px; font-weight:400; color:var(--sub); font-family:inherit;}
+.tile .chg{font-size:12px; font-family:"IBM Plex Mono",ui-monospace,monospace;} .chg.up{color:var(--fact);} .chg.down{color:var(--stamp);} .chg.flat{color:var(--sub);}
+.tile svg{display:block; width:100%; height:34px; margin:6px 0 4px;}
+.tile .d{font-size:10.5px; color:var(--sub);}
+.tile .how{font-size:12px; line-height:1.55; color:var(--ink); margin-top:6px; border-top:1px dashed var(--line-soft); padding-top:6px;}
+.tile .src{font-size:10.5px; color:var(--sub); margin-top:4px;} .tile .src a{color:var(--ai-accent);}
+.states{display:grid; grid-template-columns:repeat(5,1fr); gap:4px; margin-top:6px;} .states div{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; text-align:center; border:1px solid var(--line-soft); border-radius:4px; padding:3px 0;}
+.faces{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:14px;}
+.face{border:1px solid var(--line); background:var(--card); border-radius:8px; padding:16px 18px; display:flex; flex-direction:column; gap:8px;}
+.face h3{font-family:"Shippori Mincho",serif; font-size:18px; margin:0;} .face h3 a{color:var(--ink); text-decoration:none;} .face h3 a:hover{color:var(--ai-accent);}
+.face .nums{display:flex; gap:16px; flex-wrap:wrap; font-size:12.5px; color:var(--sub);} .face .nums b{font-family:"IBM Plex Mono",ui-monospace,monospace; color:var(--ink); font-weight:700;}
+.face .go{font-size:13px; color:var(--ai-accent);}
+.notes{font-size:12px; color:var(--sub); line-height:1.7; max-width:900px;}
+@media (max-width:820px){ .lede{font-size:23px;} .states{grid-template-columns:repeat(5,1fr);} }
+</style>
+</head>
+<body>
+<header>
+  <div class="masthead">
+    <div class="kicker"><a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a> — COCKPIT</div>
+    <h1>中西部・設備投資の検出面</h1>
+    <div class="meta" id="metaline">公的記録から、工場と機械の動きを毎日集めています。</div>
+  </div>
+  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
+</header>
+<script>
+/* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
+(function(){
+  const K = "cockpit-theme"; let t = null;
+  try { t = localStorage.getItem(K); } catch (e) {}
+  if (t !== "dark" && t !== "light") t = "light";
+  const apply = n => { document.documentElement.setAttribute("data-theme", n); try { localStorage.setItem(K, n); } catch (e) {}
+    const b = document.getElementById("themebtn"); if (b) b.textContent = n === "dark" ? "☀️ ライト" : "🌙 ダーク";
+    window.dispatchEvent(new CustomEvent("themechange", {detail: n})); };
+  document.documentElement.setAttribute("data-theme", t);
+  window.__setTheme = apply;
+  const b = document.getElementById("themebtn");
+  if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
+})();
+</script>
+<main class="paper">
+  <div class="lede">中西部で、今、工場や機械に投資している会社を、公的記録から先に見つける。</div>
+  <div class="dek">建設許可(イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシン)と動産担保登記(UCC・オハイオから先行)を毎日集め、AI が読み、事実と推論を分けて並べています。金額も社名も記録の逐語です。読みには必ず「推論」の札を付けます。</div>
+  <div class="dateline"><span id="edition">読み込み中…</span><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(VPS・毎日 07:00 CT)"></div><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div></div>
+  <hr class="rule">
+
+  <div class="sec-h"><h2>今週の動き</h2><span class="sub" id="picks-sub">直近 90 日の記録から、固定の規則で機械的に選んでいます(AI の文章ではありません)。</span></div>
+  <div class="picks" id="picks"></div>
+  <hr class="rule soft">
+
+  <div class="sec-h"><h2>景況の帯</h2><span class="sub">中西部の工場が設備に金を使う気分か — セントルイス連銀(FRED)の公開データ 10 本。数字は毎日取得、「読み方」は固定の一言。</span></div>
+  <div class="macro" id="macro"></div>
+  <hr class="rule soft">
+
+  <div class="sec-h"><h2>2 つの検出面</h2><span class="sub">絞り込み・CSV・企業カルテはそれぞれの面で。</span></div>
+  <div class="faces">
+    <div class="face"><h3><a href="permits/">建設許可 →</a></h3><div class="nums" id="permits-nums">読み込み中…</div><div>新築・増築・改修の許可から、製造能力の増強・物流倉庫・データセンター・研究医療の 4 分類を検出。投資主体(自社所有/操業事業者)まで名寄せ。</div><a class="go" href="permits/">許可面を開く →</a></div>
+    <div class="face"><h3><a href="ucc/">動産担保登記(UCC)→</a></h3><div class="nums" id="ucc-nums">読み込み中…</div><div>機械を買った・リースしたという登記から、設備の種類(9 領域)・メーカー・型式・製番まで。会社の業種は自社サイトから、日系は総領事館名簿で確定。</div><a class="go" href="ucc/">UCC 面を開く →</a></div>
+  </div>
+  <p class="notes" style="margin-top:14px">取れている範囲と鮮度は <a href="freshness/">データの鮮度と網羅</a> で毎日公開しています。本面は 5 州の悉皆ではありません。</p>
+</main>
+<footer>
+  <b>43 Sunsets Cockpit(BETA)</b> — 公的記録から中西部の設備投資シグナルを検出する無料の実験的サービスです。出典: 各市・州の建設許可の公開記録、オハイオ州務長官 UCC 公開検索、セントルイス連銀 FRED。事実欄はすべて記録の逐語転記、推論欄は当社 AI の読みで、必ず「推論」バッジを付けて分離表示しています。情報の正確性・完全性を保証するものではなく、投資・法務等の助言でもありません。個人名義の記録は個人名を表示しません。ご意見・掲載に関するご連絡は <span class="mono">hello@43sunsets.com</span> まで。© 43 Sunsets
+</footer>
+<script>
+function esc(v){ return String(v==null?"":v).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function fmtCT(iso, withTime){ const d = new Date(iso); const o = {timeZone:"America/Chicago", year:"numeric", month:"2-digit", day:"2-digit"}; if(withTime) Object.assign(o,{hour:"2-digit",minute:"2-digit",hour12:false});
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US",o).formatToParts(d).filter(x=>x.type!=="literal").map(x=>[x.type,x.value])); return withTime ? `${p.year}-${p.month}-${p.day} ${p.hour==="24"?"00":p.hour}:${p.minute}` : `${p.year}-${p.month}-${p.day}`; }
+const WD = ["日","月","火","水","木","金","土"];
+function spark(series){ if(!series || series.length < 2) return ""; const vs = series.map(p=>p.v); const min = Math.min(...vs), max = Math.max(...vs); const w = 200, h = 34;
+  const pts = vs.map((v,i)=>[i*(w/(vs.length-1)), max===min ? h/2 : h - ((v-min)/(max-min))*(h-4) - 2]);
+  const d = pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+","+p[1].toFixed(1)).join(" "); const last = pts[pts.length-1];
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><path d="${d}" fill="none" stroke="var(--ai-accent)" stroke-width="1.6"/><circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2.4" fill="var(--ai-accent)"/></svg>`; }
+function fmtVal(t){ const v = t.latest.value; if(t.id==="ICSA") return Math.round(v).toLocaleString("en-US"); if(t.unit==="$M" || t.unit==="$M(年率)") return "$"+(v/1000).toFixed(1)+"B"; if(t.id==="PCOPPUSDM") return "$"+Math.round(v).toLocaleString("en-US"); if(Math.abs(v) >= 1000) return v.toLocaleString("en-US",{maximumFractionDigits:1}); return (+v).toFixed(2).replace(/\.?0+$/,""); }
+function chgHtml(t){ if(t.change==null) return ""; const c = t.change; const cls = c > 0 ? "up" : c < 0 ? "down" : "flat"; const arrow = c > 0 ? "▲" : c < 0 ? "▼" : "→";
+  const lab = t.change_mode==="pct" ? `${arrow} ${Math.abs(c).toFixed(2)}%` : t.change_mode==="diff" ? `${arrow} ${Math.abs(c).toFixed(2)}${t.unit==="%"||t.unit==="%pt" ? "pt" : ""}` : `${arrow} ${Math.abs(c).toFixed(2)}`;
+  const per = t.frequency==="W" ? "前週比" : t.frequency==="D" ? "前日比" : "前月比"; return `<span class="chg ${cls}" title="${per}">${lab}</span>`; }
+function tileHtml(t){
+  const states = t.states ? `<div class="states">${t.states.map(s=>`<div title="${s.state} 製造業雇用 ${s.latest.value.toLocaleString()} 千人・前月比 ${s.mom_k>0?"+":""}${s.mom_k} 千人・前年比 ${s.yoy_pct==null?"—":s.yoy_pct+"%"}">${s.state}<br>${s.mom_k>0?"+":""}${s.mom_k}</div>`).join("")}</div>` : spark(t.series);
+  const unit = t.unit==="$M"||t.unit==="$M(年率)" ? (t.unit==="$M(年率)" ? "年率" : "") : t.unit;
+  return `<div class="tile"><div class="g">${esc(t.group)}</div><div class="n">${esc(t.name)}</div><div class="v">${fmtVal(t)}<span class="u">${esc(unit)}</span>${chgHtml(t)}</div>${states}<div class="d">最新 ${esc(t.latest.date)}${t.yoy_pct!=null ? `・前年比 ${t.yoy_pct>0?"+":""}${t.yoy_pct}%` : ""}</div><div class="how">${esc(t.howto)}</div><div class="src"><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.source.split("(")[0])}</a></div></div>`; }
+async function boot(){
+  const get = async (u) => { const r = await fetch(u, {cache:"no-store"}); if(!r.ok) throw new Error(u+" HTTP "+r.status); return r.json(); };
+  const now = new Date(); const ct = fmtCT(now.toISOString(), false); const wd = WD[new Date(now.toLocaleString("en-US",{timeZone:"America/Chicago"})).getDay()];
+  document.getElementById("edition").innerHTML = `<b>${ct}(${wd})版</b>・米中部時間`;
+  try{ const top = await get("data/top.json");
+    const picks = top.picks || [];
+    document.getElementById("picks").innerHTML = picks.length ? picks.map(p=>`<article class="pick"><div class="tag">${esc(p.tag)}・${esc(p.face)}</div><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p><a class="go" href="${esc(p.link)}">${esc(p.face)}の面で見る →</a></article>`).join("") : `<div class="pick"><p>直近 90 日に規則に当たる記録がありません。</p></div>`;
+    document.getElementById("picks-sub").textContent = `${top.week_start} の週・直近 ${top.window_days} 日の記録から固定の規則で選定(AI の文章ではありません)。規則: ${top.rule}`;
+    const pf = top.permits_meta.funnel, uf = top.ucc_meta.funnel, uc = top.ucc_meta.catalog || {};
+    document.getElementById("permits-nums").innerHTML = `<span>保存 <b>${pf.signals_total.toLocaleString()}</b> 件</span><span>AI 読了 <b>${pf.enriched.toLocaleString()}</b></span><span>設備投資シグナル <b>${pf.targets}</b></span><span>直近 90 日 <b>${top.counts.permits_new90}</b></span><span>更新 <b>${fmtCT(top.permits_meta.generated_at, true)}</b></span>`;
+    document.getElementById("ucc-nums").innerHTML = `<span>登記 <b>${uf.filings_total}</b> 件</span><span>AI 読了 <b>${uf.read}</b></span><span>会社 <b>${top.counts.ucc_companies}</b></span><span>設備カタログ <b>${uc.equipment_rows||0}</b> 型式</span><span>直近 90 日 <b>${top.counts.ucc_new90}</b></span><span>更新 <b>${fmtCT(top.ucc_meta.generated_at, true)}</b></span>`;
+  }catch(e){ document.getElementById("picks").innerHTML = `<div class="pick"><p>今週の動きを読み込めませんでした(${esc(e.message)})。</p></div>`; }
+  try{ const m = await get("data/macro.json"); document.getElementById("macro").innerHTML = m.tiles.map(tileHtml).join(""); }
+  catch(e){ document.getElementById("macro").innerHTML = `<div class="tile"><div class="n">景況の帯を読み込めませんでした(${esc(e.message)})</div></div>`; }
+}
+boot();
+</script>
+<script src="/cockpit/assets/health.js" defer></script>
+<script src="/cockpit/assets/hit.js" defer></script>
+</body>
+</html>
