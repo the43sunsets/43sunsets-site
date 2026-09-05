@@ -1,4 +1,4 @@
-// GET /cockpit/stats — daily instrument for the 10/6 buyer gate (v5 §3): U (unique visitors by source), R (visitors seen on 2+ days), D (visitor-days).
+// GET /cockpit/stats — daily instrument for the 10/6 buyer gate (v5 §7/§11): U (unique visitors), R (visitors seen on 2+ days), D (visitor-days), per source; "list" = list-attributed (utm_source=list|w1|w2…).
 // Aggregates "hit:<day>:<vid>" keys written by /cockpit/hit. PII-free. Optional ?since=YYYY-MM-DD (default: 90 days back).
 export async function onRequestGet({ request, env }) {
   if (!env.BEACON_REQUESTS) return json({ ok: false, error: "no store bound" }, 503);
@@ -24,10 +24,16 @@ export async function onRequestGet({ request, env }) {
     if (day < since) continue;
     try { const v = JSON.parse(await env.BEACON_REQUESTS.get(k.name)); if (v && v.src && !srcOfVid[vid]) srcOfVid[vid] = v.src; } catch {}
   }
-  for (const vid of Object.keys(byVid)) { const s = srcOfVid[vid] || "unknown"; bySrc[s] = (bySrc[s] || 0) + 1; }
+  // per-source U (unique visitors) and R (visitors seen on 2+ distinct days) — "list" = wave 1/2 recipients (utm_source), v5 §7 U/R
+  for (const vid of Object.keys(byVid)) {
+    const s = srcOfVid[vid] || "unknown";
+    (bySrc[s] ||= { U: 0, R: 0 }).U += 1;
+    if (byVid[vid].size >= 2) bySrc[s].R += 1;
+  }
   const U = Object.keys(byVid).length;
   const R = Object.values(byVid).filter(s => s.size >= 2).length;
-  return json({ ok: true, since, U, R, D: keys, bySrc, byDay: days, sampledForSrc: recent.keys.length, retentionDays: 90 });
+  const list = Object.entries(bySrc).filter(([k]) => /^(list|w\d+)/.test(k)).reduce((a, [, v]) => ({ U: a.U + v.U, R: a.R + v.R }), { U: 0, R: 0 });
+  return json({ ok: true, since, U, R, D: keys, list, bySrc, byDay: days, sampledForSrc: recent.keys.length, retentionDays: 90 });
 }
 function json(obj, status = 200) {
   return new Response(JSON.stringify(obj), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
