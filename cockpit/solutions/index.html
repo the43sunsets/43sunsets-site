@@ -3,104 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>個社向けの開発 — 43 Sunsets Cockpit</title>
-<meta name="description" content="狙う顧客像(ICP)の定義、シグナルのカスタマイズ、CRM・MA の導入とシグナル連携、マーケティング活動の自走まで。オープンソースを土台に、固定額で、走りながら結果で判断する開発。">
+<title>会いに行くべき会社が、先に分かる営業へ — 43 Sunsets</title>
+<meta name="description" content="狙う顧客像の定義、公的記録のシグナル、CRM とマーケティングオートメーション(MA)の連携で、営業活動が自分で回る仕組みを、オープンソース土台・固定額・2 週間単位で作ります。">
 <link rel="canonical" href="https://43sunsets.com/cockpit/solutions/">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
-<meta property="og:title" content="個社向けの開発 — 43 Sunsets Cockpit">
+<meta property="og:title" content="会いに行くべき会社が、先に分かる営業へ — 43 Sunsets">
 <meta property="og:url" content="https://43sunsets.com/cockpit/solutions/">
 <meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
-/* A(明)= 経済紙の一面 / B(暗)= 航空図 — 9/5 CEO 裁定。切り替えは cockpit 共通(localStorage "cockpit-theme") */
-:root{ --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E; --line:#D9DDD9; --line-soft:#E7EAE6; --accent:#2F5D8A; --fact:#2E6E4E; --infer:#8A5A2F; --infer-bg:#F7F1E8; --infer-line:#D9C6A8; --warn:#B54434; --rule:#20262E; --rule-h:2px; --pill:#FFFFFF; --tile:#FFFFFF; --tile-line:#E7EAE6; --head-border:3px solid #20262E; --bg-extra:none; --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace; --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif; --sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif; }
-:root[data-theme="dark"]{ --paper:#12161C; --card:#1A2028; --ink:#E8EBEE; --sub:#9AA4AE; --line:#2A323B; --line-soft:#232A33; --accent:#8FB4DA; --fact:#7CC49C; --infer:#D8A96B; --infer-bg:#241F17; --infer-line:#5A4A32; --warn:#E08A78; --rule:#2A323B; --rule-h:1px; --pill:#1A2028; --tile:#1A2028; --tile-line:#2A323B; --head-border:1px solid #2A323B; --bg-extra:radial-gradient(circle at 20% 0%, rgba(143,180,218,.10), transparent 40%); }
-*{box-sizing:border-box}
-html,body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; text-wrap:pretty;}
-body{background-image:var(--bg-extra); background-repeat:no-repeat;}
-a{color:var(--accent);} a:hover{color:var(--ink);}
-.mono{font-family:var(--mono);}
-header{display:flex; justify-content:space-between; align-items:center; padding:16px 56px; border-bottom:var(--head-border); background:var(--paper); position:sticky; top:0; z-index:40;}
-header .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.24em; color:var(--ink);} header .kicker a{color:var(--ink); text-decoration:none;}
-.hdr-right{display:flex; align-items:center; gap:14px;}
-.theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;} .theme-btn:hover{color:var(--ink); border-color:var(--ink);}
-.beta{font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--ink); border:1.5px solid var(--ink); border-radius:4px; padding:2px 8px;}
-main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
-.lede{display:flex; flex-direction:column; gap:14px; max-width:980px;}
-.lede h1{margin:0; font-family:var(--serif); font-size:40px; line-height:1.32; font-weight:800; letter-spacing:.005em; color:var(--ink);}
-.lede p{margin:0; font-size:15.5px; line-height:1.75; color:var(--sub); max-width:760px;}
-.dateline{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:4px;} .dateline .ed{font-family:var(--mono); font-size:12px; color:var(--ink); font-weight:600;}
-.hb{display:inline-flex; align-items:center; gap:7px; border:1px solid var(--line); border-radius:999px; padding:4px 11px 4px 8px; font-size:11.5px; color:var(--sub); background:var(--pill); white-space:nowrap; cursor:help;}
-.hb .hb-k{color:var(--ink);} .hb .hb-lbl{font-weight:700; color:var(--ink); letter-spacing:.04em;} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:var(--mono);}
-.hb-dot{width:9px; height:9px; border-radius:50%; background:var(--line); flex:none;}
-.hb.hb-ok .hb-dot{background:var(--fact); animation:hbpulse 2.4s ease-out infinite;} .hb.hb-ok{border-color:var(--fact);}
-.hb.hb-wait .hb-dot{background:var(--infer);} .hb.hb-wait{border-color:var(--infer-line);}
-.hb.hb-fail .hb-dot{background:var(--warn);} .hb.hb-fail{border-color:var(--warn); color:var(--warn);} .hb.hb-fail .hb-k{color:var(--warn);}
-@keyframes hbpulse{0%{box-shadow:0 0 0 0 rgba(46,110,78,.45)} 70%{box-shadow:0 0 0 7px rgba(46,110,78,0)} 100%{box-shadow:0 0 0 0 rgba(46,110,78,0)}}
-.rule{height:var(--rule-h); background:var(--rule); margin:28px 0;}
-.sec{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin:0 0 14px;} .sec h2{margin:0; font-family:var(--serif); font-size:21px; color:var(--ink); letter-spacing:.02em;} .sec span{font-size:12px; color:var(--sub);}
-.picks{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px;}
-.pick{display:flex; flex-direction:column; gap:8px; padding:16px 18px; background:var(--card); border:1px solid var(--line); border-radius:6px;}
-.pick .tag{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:700; font-family:var(--mono);}
-.pick h3{margin:0; font-family:var(--serif); font-size:17px; line-height:1.42; color:var(--ink); font-weight:700;}
-.pick p{margin:0; font-size:13px; line-height:1.7; color:var(--sub);}
-.ai{display:flex; gap:14px; align-items:flex-start; padding:18px 22px; background:var(--infer-bg); border:1px solid var(--infer-line); border-radius:6px;}
-.ai .badge{flex:none; font-size:10.5px; letter-spacing:.14em; font-weight:700; color:var(--infer); border:1px solid var(--infer); border-radius:4px; padding:3px 7px; font-family:var(--mono); margin-top:2px;}
-.ai p{margin:0; font-size:14.5px; line-height:1.8; color:var(--ink); font-family:var(--serif);} .ai .d{font-size:11px; color:var(--sub); margin-top:6px; font-family:var(--mono);}
-.macro{display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:10px; margin-top:12px;}
-.tile{display:flex; flex-direction:column; gap:4px; padding:12px 13px; background:var(--tile); border:1px solid var(--tile-line); border-radius:6px;}
-.tile .g{font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--sub); font-family:var(--mono);} .tile .n{font-size:12.5px; font-weight:700; color:var(--ink);}
-.tile .v{display:flex; align-items:baseline; gap:8px;} .tile .v b{font-family:var(--mono); font-size:19px; font-weight:600; color:var(--ink);} .tile .v .u{font-size:11px; color:var(--sub);}
-.chg{font-family:var(--mono); font-size:11.5px;} .chg.up{color:var(--fact);} .chg.down{color:var(--warn);} .chg.flat{color:var(--sub);}
-.tile svg{display:block; width:100%; height:30px;} .tile .d{font-size:10.5px; color:var(--sub);}
-.tile .how{display:none; font-size:12px; line-height:1.55; color:var(--ink); border-top:1px dashed var(--line-soft); padding-top:6px; margin-top:4px;} .tile:hover .how, .tile:focus-within .how{display:block;}
-.tile .src{font-size:10.5px; margin-top:2px;} .tile .src a{color:var(--accent); text-decoration:none;}
-.states{display:grid; grid-template-columns:repeat(5,1fr); gap:4px; margin-top:4px;} .states div{font-family:var(--mono); font-size:11px; text-align:center; border:1px solid var(--line-soft); border-radius:4px; padding:3px 0; line-height:1.3;}
-.faces{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px;}
-.face{display:flex; flex-direction:column; gap:10px; padding:24px 26px; background:var(--card); border:1px solid var(--line); border-radius:6px; text-decoration:none; color:var(--ink);}
-.face:hover{border-color:var(--accent);} .face .top{display:flex; justify-content:space-between; align-items:baseline; gap:12px;}
-.face h3{margin:0; font-family:var(--serif); font-size:22px; color:var(--ink);} .face .upd{font-size:11px; color:var(--sub); font-family:var(--mono);}
-.face .nums{font-size:12.5px; color:var(--sub); font-family:var(--mono);} .face p{margin:0; font-size:13.5px; line-height:1.7; color:var(--ink);}
-.face .go{display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700; color:var(--accent);}
-.note{font-size:12px; color:var(--sub); line-height:1.7; margin-top:14px;}
-footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px; line-height:1.7; color:var(--sub); max-width:1280px; margin:0 auto;}
-@media (max-width:900px){ .picks{grid-template-columns:repeat(2,minmax(0,1fr));} .macro{grid-template-columns:repeat(3,minmax(0,1fr));} .faces{grid-template-columns:1fr;} .lede h1{font-size:30px;} header,main,footer{padding-left:24px; padding-right:24px;} }
-@media (max-width:600px){ .picks{grid-template-columns:1fr;} .macro{grid-template-columns:repeat(2,minmax(0,1fr));} .lede h1{font-size:26px;} header,main,footer{padding-left:18px; padding-right:18px;} main{padding-top:20px;} .rule{margin:22px 0;} .tile .how{display:block;} }
-
-.cta{margin-top:34px; padding:26px 28px; border:1px solid var(--line); border-radius:6px; background:var(--card); display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:24px; align-items:center;}
-.cta h2{margin:0 0 8px; font-family:var(--serif); font-size:22px; color:var(--ink);} .cta p{margin:0; font-size:14px; line-height:1.75; color:var(--ink);}
-.cta ul{margin:10px 0 0; padding-left:18px; font-size:13.5px; line-height:1.75; color:var(--sub);}
-.cta .act{display:flex; flex-direction:column; gap:10px; align-items:flex-start;}
-.btn{display:inline-flex; align-items:center; gap:8px; padding:11px 16px; border-radius:6px; font-size:14px; font-weight:700; text-decoration:none; border:1.5px solid var(--ink); color:var(--ink); background:transparent;} .btn:hover{background:var(--ink); color:var(--paper);}
-.btn.primary{background:var(--ink); color:var(--paper);} .btn.primary:hover{background:var(--accent); border-color:var(--accent); color:#fff;}
-.cta .mail{font-family:var(--mono); font-size:12.5px; color:var(--sub);}
-@media (max-width:820px){ .cta{grid-template-columns:1fr; padding:20px 18px;} }
-
-.cta{margin-top:34px; padding:26px 28px; border:1px solid var(--line); border-radius:6px; background:var(--card); display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:24px; align-items:center;}
-.cta h2{margin:0 0 8px; font-family:var(--serif); font-size:22px; color:var(--ink);} .cta p{margin:0; font-size:14px; line-height:1.75; color:var(--ink);}
-.cta ul{margin:10px 0 0; padding-left:18px; font-size:13.5px; line-height:1.75; color:var(--sub);}
-.cta .act{display:flex; flex-direction:column; gap:10px; align-items:flex-start;}
-.btn{display:inline-flex; align-items:center; gap:8px; padding:11px 16px; border-radius:6px; font-size:14px; font-weight:700; text-decoration:none; border:1.5px solid var(--ink); color:var(--ink); background:transparent;} .btn:hover{background:var(--ink); color:var(--paper);}
-.btn.primary{background:var(--ink); color:var(--paper);} .btn.primary:hover{background:var(--accent); border-color:var(--accent); color:#fff;}
-.cta .mail{font-family:var(--mono); font-size:12.5px; color:var(--sub);}
-@media (max-width:820px){ .cta{grid-template-columns:1fr; padding:20px 18px;} }
-
-.lp-lede{max-width:900px;} .lp-lede h1{margin:0; font-family:var(--serif); font-size:36px; line-height:1.35; font-weight:800; color:var(--ink);} .lp-lede p{margin:12px 0 0; font-size:15.5px; line-height:1.8; color:var(--sub);}
+:root{ --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E; --line:#D9DDD9; --line-soft:#E7EAE6; --accent:#2F5D8A; --fact:#2E6E4E; --infer:#8A5A2F; --infer-bg:#F7F1E8; --infer-line:#D9C6A8; --warn:#B54434; --navy:#12161C; --navy2:#1A2028; --glow:#8FB4DA; --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace; --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif; --sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif; }
+:root[data-theme="dark"]{ --paper:#12161C; --card:#1A2028; --ink:#E8EBEE; --sub:#9AA4AE; --line:#2A323B; --line-soft:#232A33; --accent:#8FB4DA; --fact:#7CC49C; --infer:#D8A96B; --infer-bg:#241F17; --infer-line:#5A4A32; --warn:#E08A78; }
+*{box-sizing:border-box} html,body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; text-wrap:pretty;}
+a{color:var(--accent);} .mono{font-family:var(--mono);}
+header{display:flex; justify-content:space-between; align-items:center; padding:14px 56px; position:absolute; top:0; left:0; right:0; z-index:40; color:#fff;}
+header .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.24em; color:#fff; display:flex; gap:12px; align-items:center;} header .kicker a{color:#fff; text-decoration:none;} header .kicker a.top{letter-spacing:.04em; font-family:var(--sans); font-size:12px; color:var(--glow);}
+.hdr-right{display:flex; align-items:center; gap:12px;} .theme-btn{border:1px solid rgba(255,255,255,.35); background:transparent; color:#fff; border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer;}
+/* ---- hero: 写真(CC BY)を濃紺で覆い、光る数字と明朝の見出し ---- */
+.hero{position:relative; min-height:640px; display:flex; align-items:flex-end; color:#fff; overflow:hidden; background:var(--navy);}
+.hero .ph{position:absolute; inset:0; background:url(/cockpit/assets/laser-trulaser3530.jpg) center/cover no-repeat; filter:saturate(.35) contrast(1.05); opacity:.55;}
+.hero .veil{position:absolute; inset:0; background:linear-gradient(180deg, rgba(18,22,28,.55) 0%, rgba(18,22,28,.35) 40%, rgba(18,22,28,.92) 100%), radial-gradient(circle at 78% 30%, rgba(143,180,218,.25), transparent 45%);}
+.hero .in{position:relative; padding:120px 56px 56px; max-width:1180px; margin:0 auto; width:100%; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); gap:40px; align-items:end;}
+.hero .eyebrow{font-family:var(--mono); font-size:11.5px; letter-spacing:.22em; color:var(--glow); margin-bottom:14px;}
+.hero h1{margin:0; font-family:var(--serif); font-size:46px; line-height:1.28; font-weight:800; letter-spacing:.005em;}
+.hero p{margin:16px 0 0; font-size:16px; line-height:1.8; color:rgba(232,235,238,.9); max-width:640px;}
+.hero .acts{display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:12px 18px; border-radius:6px; font-size:14px; font-weight:700; text-decoration:none; border:1.5px solid currentColor; color:#fff; background:transparent;} .btn:hover{background:rgba(255,255,255,.12);}
+.btn.primary{background:#fff; color:var(--navy); border-color:#fff;} .btn.primary:hover{background:var(--glow); border-color:var(--glow);}
+.stat{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px;} .stat div{border:1px solid rgba(255,255,255,.18); border-radius:8px; padding:14px 14px 12px; background:rgba(26,32,40,.55); backdrop-filter:blur(6px);}
+.stat b{display:block; font-family:var(--mono); font-size:26px; font-weight:600; color:#fff; line-height:1.1;} .stat span{display:block; font-size:11.5px; color:rgba(232,235,238,.8); margin-top:6px; line-height:1.5;}
+.credit{position:absolute; right:14px; bottom:10px; font-size:10px; color:rgba(232,235,238,.55); font-family:var(--mono);} .credit a{color:inherit;}
+main{max-width:1180px; margin:0 auto; padding:0 56px 64px;}
+.rule{height:2px; background:var(--ink); margin:34px 0 24px;} .rule.soft{height:1px; background:var(--line);}
+.sec{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin:0 0 16px;} .sec h2{margin:0; font-family:var(--serif); font-size:24px; color:var(--ink); letter-spacing:.02em;} .sec span{font-size:12.5px; color:var(--sub);}
+.lead{font-family:var(--serif); font-size:22px; line-height:1.6; color:var(--ink); max-width:900px; margin:0;}
 .grid3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px;} .grid2{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px;}
-.box{padding:18px 20px; border:1px solid var(--line); border-radius:6px; background:var(--card); display:flex; flex-direction:column; gap:8px;} .box h3{margin:0; font-family:var(--serif); font-size:17px; color:var(--ink);} .box p{margin:0; font-size:13.5px; line-height:1.75; color:var(--sub);} .box .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; color:var(--accent); font-weight:700;}
-.steps{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px;} .step{padding:14px; border:1px solid var(--line); border-radius:6px; background:var(--card);} .step .n{font-family:var(--mono); font-size:22px; font-weight:600; color:var(--accent);} .step h4{margin:4px 0; font-size:14px; color:var(--ink);} .step p{margin:0; font-size:12.5px; line-height:1.65; color:var(--sub);}
-.proof{display:flex; gap:14px; flex-wrap:wrap;} .proof a{flex:1 1 260px; text-decoration:none;}
-.contact{margin-top:8px; padding:26px 28px; border:1.5px solid var(--ink); border-radius:6px; display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:24px; align-items:center;} .contact h2{margin:0 0 6px; font-family:var(--serif); font-size:22px;} .contact p{margin:0; font-size:14px; line-height:1.75; color:var(--sub);}
-@media (max-width:900px){ .grid3,.steps{grid-template-columns:repeat(2,minmax(0,1fr));} .lp-lede h1{font-size:28px;} } @media (max-width:600px){ .grid3,.grid2,.steps{grid-template-columns:1fr;} .contact,.cta{grid-template-columns:1fr;} }
+.box{padding:20px 22px; border:1px solid var(--line); border-radius:8px; background:var(--card); display:flex; flex-direction:column; gap:8px;} .box h3{margin:0; font-family:var(--serif); font-size:18px; color:var(--ink);} .box p{margin:0; font-size:13.5px; line-height:1.75; color:var(--sub);} .box .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; color:var(--accent); font-weight:700;}
+.ma{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:28px; align-items:center; padding:26px 28px; border:1px solid var(--line); border-radius:8px; background:var(--card);}
+.ma h3{margin:0 0 8px; font-family:var(--serif); font-size:20px;} .ma p{margin:0 0 8px; font-size:14px; line-height:1.8; color:var(--ink);} .ma .q{font-size:12.5px; color:var(--sub);}
+.flow{display:flex; flex-direction:column; gap:8px;} .flow div{display:flex; align-items:center; gap:10px; font-size:13px; padding:10px 12px; border:1px solid var(--line); border-radius:6px; background:var(--paper);} .flow div b{font-family:var(--mono); color:var(--accent); font-size:12px; min-width:22px;}
+.steps{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px;} .step{padding:16px 14px; border:1px solid var(--line); border-radius:8px; background:var(--card);} .step .n{font-family:var(--mono); font-size:24px; font-weight:600; color:var(--accent);} .step h4{margin:6px 0 4px; font-size:14px; color:var(--ink);} .step p{margin:0; font-size:12.5px; line-height:1.65; color:var(--sub);}
+.proof{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px;} .proof a{text-decoration:none;}
+.band{position:relative; margin:34px -56px; padding:56px; background:var(--navy); color:#fff; overflow:hidden;} .band .ph{position:absolute; inset:0; background:url(/cockpit/assets/laser-trulaser3530.jpg) center 40%/cover no-repeat; opacity:.18; filter:saturate(.2);} .band .in{position:relative; max-width:1180px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:30px; align-items:center;}
+.band h2{margin:0 0 10px; font-family:var(--serif); font-size:28px; line-height:1.4;} .band p{margin:0; font-size:14.5px; line-height:1.8; color:rgba(232,235,238,.85);} .band .mail{font-family:var(--mono); font-size:12.5px; color:rgba(232,235,238,.7); margin-top:8px;}
+footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px; line-height:1.7; color:var(--sub); max-width:1180px; margin:0 auto;}
+@media (max-width:900px){ .hero .in{grid-template-columns:1fr; padding:96px 24px 40px;} .hero h1{font-size:32px;} header{padding:12px 20px;} main{padding:0 24px 48px;} .grid3,.proof,.steps{grid-template-columns:repeat(2,minmax(0,1fr));} .ma,.grid2{grid-template-columns:1fr;} .band{margin:28px -24px; padding:36px 24px;} .band .in{grid-template-columns:1fr;} footer{padding:16px 24px 28px;} }
+@media (max-width:600px){ .grid3,.proof,.steps,.stat{grid-template-columns:1fr;} .hero h1{font-size:27px;} }
 </style>
-
 </head>
 <body>
 <header>
-  <div class="kicker"><a href="https://43sunsets.com/">43 SUNSETS</a> — COCKPIT <a href="/cockpit/" style="margin-left:10px;letter-spacing:.04em;text-transform:none;font-family:inherit;font-size:12px;color:var(--accent)">← トップへ</a></div>
-  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
+  <div class="kicker"><a href="https://43sunsets.com/">43 SUNSETS</a><span>— COCKPIT</span><a class="top" href="/cockpit/">← トップへ</a></div>
+  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button></div>
 </header>
 <script>
 /* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
@@ -117,20 +73,53 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
   if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
 })();
 </script>
-<main>
-  <div class="lp-lede">
-    <h1>この面の仕組みを、御社の営業に合わせて作り込みます。</h1>
-    <p>誰を狙うか(ICP)を一緒に決め、そこに効くシグナルだけを集め、CRM や MA につないで、日々の営業活動が自分で回る状態まで。オープンソースを土台に、固定額で、走りながら結果で判断する開発です。</p>
+<section class="hero">
+  <div class="ph"></div><div class="veil"></div>
+  <div class="in">
+    <div>
+      <div class="eyebrow">個社向けの開発 — 43 SUNSETS</div>
+      <h1>会いに行くべき会社が、<br>先に分かる営業へ。</h1>
+      <p>狙う顧客像を決め、公的記録の兆しを拾い、CRM とマーケティングオートメーションにつないで、日々の営業活動が自分で回る状態まで。オープンソースを土台に、固定額で、2 週間ごとに結果を見ながら作ります。</p>
+      <div class="acts"><a class="btn primary" href="mailto:hello@43sunsets.com?subject=%E5%80%8B%E7%A4%BE%E5%90%91%E3%81%91%E9%96%8B%E7%99%BA%E3%81%AE%E7%9B%B8%E8%AB%87">まずはメールで相談する</a><a class="btn" href="#how">進め方を見る</a></div>
+    </div>
+    <div class="stat">
+      <div><b>5%→34%</b><span>インサイドセールス起点の案件比率(年間 2,000 件超のリードのうち)</span></div>
+      <div><b>3 か月</b><span>MA をゼロから立ち上げ、インサイドセールスの運用設計まで</span></div>
+      <div><b>半年</b><span>リード数を大きく伸ばし、売上につながる形にした期間</span></div>
+    </div>
   </div>
+  <div class="credit">写真: <a href="https://commons.wikimedia.org/wiki/File:CNC_Laser_Cutting_Machine.jpg" target="_blank" rel="noopener">S zillayali / Wikimedia Commons</a>, CC BY 3.0</div>
+</section>
+<main>
   <div class="rule"></div>
+  <p class="lead">「リードを増やす」のではなく、「会いに行く理由がある会社」を先に見つけ、そこにだけ、タイミングよく届ける。この面(建設許可・UCC)で毎日やっていることを、御社の製品と営業に合わせて作り込みます。</p>
+
+  <div class="rule soft"></div>
+  <div class="sec"><h2>マーケティングオートメーション(MA)とは</h2><span>初めての方へ、一言で。</span></div>
+  <div class="ma">
+    <div>
+      <h3>「誰が、いつ、何に関心を持ったか」を自動で捉え、ちょうどいい時に届ける仕組み。</h3>
+      <p>MA は、御社のサイトを訪れた人がどの会社の誰で、どのページを何回見たかを記録し、その動きに合わせてメールや案内を自動で送り分けるソフトウェアです。名刺を集めて一斉送信するのとは違い、<b>関心の高まった瞬間に、その人にだけ届く</b>ので、営業が会いに行った時には話が早い状態になっています。</p>
+      <p class="q">つまり、数だけのリードではなく「質の良いリード」を作る道具です。当社は Mautic(オープンソースの MA)を使い、ライセンス費をかけずに導入します。</p>
+    </div>
+    <div class="flow">
+      <div><b>01</b>公的記録のシグナル(許可・登記)で「動いている会社」を知る</div>
+      <div><b>02</b>その会社にだけ案内を送り、サイトの動きを MA が記録</div>
+      <div><b>03</b>関心が高まった人を特定し、営業がタイミングよく連絡</div>
+      <div><b>04</b>反応・商談・受注を CRM に残し、次の一手を提案</div>
+    </div>
+  </div>
+
+  <div class="rule soft"></div>
   <div class="sec"><h2>できること</h2><span>3 つの段階。どこからでも始められます。</span></div>
   <div class="grid3">
-    <div class="box"><div class="k">01 · ICP とシグナル</div><h3>狙う顧客像の定義と、シグナルのカスタマイズ</h3><p>御社の製品が刺さる工程・業種・地域・規模を、当社の会社マスターと設備カタログの語彙で定義します。建設許可・UCC 登記・その他の公的記録から、その ICP に効くシグナルだけを選び、しきい値と通知の形を御社向けに調整します。</p></div>
-    <div class="box"><div class="k">02 · CRM・MA と連携</div><h3>CRM・MA の導入と、シグナルの流し込み</h3><p>Mautic などのオープンソース MA、または御社の既存 CRM に、検出した会社と出来事を自動で流し込みます。名寄せ、担当者の割り当て、フォローの記録まで一本の流れにします。</p></div>
+    <div class="box"><div class="k">01 · ICP とシグナル</div><h3>狙う顧客像の定義と、シグナルの調整</h3><p>御社の製品が刺さる工程・業種・地域・規模を、当社の会社マスターと設備カタログの語彙で定義します。建設許可・UCC 登記(今後は採用・補助金)から、その顧客像に効くシグナルだけを選び、通知の形を御社向けに調整します。</p></div>
+    <div class="box"><div class="k">02 · CRM・MA と連携</div><h3>CRM・MA の導入と、シグナルの流し込み</h3><p>Mautic の導入、または御社の既存 CRM・MA への接続。検出した会社と出来事を自動で流し込み、名寄せ、担当者の割り当て、フォローの記録まで一本の流れにします。インサイドセールスの運用設計(誰が・いつ・何を)も一緒に。</p></div>
     <div class="box"><div class="k">03 · 自走</div><h3>マーケティング活動の自走</h3><p>新しいシグナルが出たら、案内文の下書き、送信、反応の記録、次のアクションの提案までが人手なしで回る状態を作ります。人が押すのは送信と判断だけ。当社の面はこの形で毎日動いています。</p></div>
   </div>
-  <div class="rule"></div>
-  <div class="sec"><h2>進め方</h2><span>2 週間ごとに結果を見て、続けるかを決めます。</span></div>
+
+  <div class="rule soft"></div>
+  <div class="sec" id="how"><h2>進め方</h2><span>2 週間ごとに結果を見て、続けるかを決めます。</span></div>
   <div class="steps">
     <div class="step"><div class="n">1</div><h4>相談</h4><p>メールで現状と狙いを一言。返信は翌営業日まで。</p></div>
     <div class="step"><div class="n">2</div><h4>聞き取り 30 分</h4><p>誰に何を売りたいか、今の CRM・MA の状態を伺います(無料)。</p></div>
@@ -138,25 +127,29 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
     <div class="step"><div class="n">4</div><h4>走りながら作る</h4><p>2 週間で動くものを出し、御社のデータで結果を見ます。</p></div>
     <div class="step"><div class="n">5</div><h4>結果で判断</h4><p>続けるか、止めるかを結果で決めます。止めても作ったものは御社のものです。</p></div>
   </div>
-  <div class="rule"></div>
+
+  <div class="rule soft"></div>
   <div class="sec"><h2>なぜ安くできるか</h2><span>過度に高くなりがちな領域を、土台の選び方で抑えます。</span></div>
   <div class="grid2">
     <div class="box"><h3>オープンソースを土台にする</h3><p>MA は Mautic、自動化は n8n、データは SQLite/PostgreSQL、配信は Cloudflare。ライセンス費がほぼゼロなので、費用は設計と開発の工数だけです。御社のアカウントに置くので、当社に依存しない形で残ります。</p></div>
-    <div class="box"><h3>固定額 × アジャイル</h3><p>大きな要件定義を先に固めず、2 週間の単位で動くものを出し続けます。固定額なので途中で膨らまず、結果が出なければその時点で止められます。結果ドリブンが安さの理由です。</p></div>
+    <div class="box"><h3>固定額 × 走りながら作る</h3><p>大きな要件定義を先に固めず、2 週間の単位で動くものを出し続けます。固定額なので途中で膨らまず、結果が出なければその時点で止められます。結果で判断することが、安さの理由です。</p></div>
   </div>
-  <div class="rule"></div>
+
+  <div class="band"><div class="ph"></div><div class="in">
+    <div><h2>やってきたこと。</h2><p>米国中西部の日系産業機器メーカーで、営業開発部門の責任者として、展示会起点だった営業を、デジタルとインサイドセールス起点に作り替えました。MA をゼロから 3 か月で立ち上げ、インサイドセールスの運用を設計し、半年でリード数を大きく伸ばし、売上につながる形にしました(インサイドセールス起点の案件比率 5%→34%、年間 2,000 件超のリード)。その前は、製造業の ERP 導入やオペレーション設計を 15 年。技術と営業の両方を、自分の手で回してきた人間が作ります。</p><p class="mail">Kentaroh Yao — 43 Sunsets(イリノイ州)</p></div>
+    <div class="stat"><div><b>15 年</b><span>米国の産業 B2B(ERP 導入・運営計画・EC・CRM)</span></div><div><b>20+ 名</b><span>インサイドセールス・CS・デジタルを統合した組織を新設・運営</span></div><div><b>毎日</b><span>この面の収集・読み・公開が自走(実物)</span></div></div>
+  </div></div>
+
   <div class="sec"><h2>実物</h2><span>この面そのものが実例です。収集から公開まで、毎日自走しています。</span></div>
   <div class="proof">
     <a class="box" href="/cockpit/permits/"><h3>建設許可の検出面 →</h3><p>5 州の許可を毎日集め、AI が 4 分類に読み、投資主体まで名寄せ。</p></a>
     <a class="box" href="/cockpit/ucc/"><h3>動産担保登記(UCC)の検出面 →</h3><p>機械の登記から設備の種類・メーカー・型式まで。会社の業種は自社サイトから。</p></a>
     <a class="box" href="/cockpit/"><h3>トップの運行状態 →</h3><p>今日の収集が済んだか、最終収集と新規件数を、面の上に毎日出しています。</p></a>
   </div>
+
   <div class="rule"></div>
-  <section class="contact" id="contact">
-    <div><h2>まずは一言、メールで。</h2><p>「うちの製品はこういう工程の会社に刺さる」「CRM はこれを使っている」程度で十分です。翌営業日までに返信します。日本語で対応します。</p></div>
-    <div class="act" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><a class="btn primary" href="mailto:hello@43sunsets.com?subject=%E3%82%B3%E3%83%83%E3%82%AF%E3%83%94%E3%83%83%E3%83%88%E3%81%AE%E7%9B%B8%E8%AB%87">hello@43sunsets.com に相談する</a><span class="mail" style="font-family:var(--mono);font-size:12.5px;color:var(--sub)">43 Sunsets(イリノイ州)・Kentaroh Yao</span></div>
-  </section>
+  <div class="ma" id="contact"><div><h3>まずは一言、メールで。</h3><p>「うちの製品はこういう工程の会社に刺さる」「CRM はこれを使っている」程度で十分です。翌営業日までに返信します。日本語で対応します。</p></div><div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><a class="btn primary" style="color:var(--paper);background:var(--ink);border-color:var(--ink)" href="mailto:hello@43sunsets.com?subject=%E5%80%8B%E7%A4%BE%E5%90%91%E3%81%91%E9%96%8B%E7%99%BA%E3%81%AE%E7%9B%B8%E8%AB%87">hello@43sunsets.com に相談する</a><span class="mono" style="font-size:12.5px;color:var(--sub)">43 Sunsets(イリノイ州)・Kentaroh Yao</span></div></div>
 </main>
-<footer>43 Sunsets — 公的記録から中西部の設備投資シグナルを検出する面を運営し、その仕組みの個社向け開発を承ります。本ページの内容は提供内容の概要で、見積は個別に書面でお出しします。© 43 Sunsets</footer>
+<footer>43 Sunsets — 公的記録から中西部の設備投資シグナルを検出する面を運営し、その仕組みの個社向け開発を承ります。本ページの内容は提供内容の概要で、見積は個別に書面でお出しします。写真: S zillayali(Wikimedia Commons・CC BY 3.0)。© 43 Sunsets</footer>
 </body>
 </html>
