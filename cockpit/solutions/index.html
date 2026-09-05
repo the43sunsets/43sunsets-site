@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>個社向けの開発 — 43 Sunsets Cockpit</title>
+<meta name="description" content="狙う顧客像(ICP)の定義、シグナルのカスタマイズ、CRM・MA の導入とシグナル連携、マーケティング活動の自走まで。オープンソースを土台に、固定額で、走りながら結果で判断する開発。">
+<link rel="canonical" href="https://43sunsets.com/cockpit/solutions/">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="個社向けの開発 — 43 Sunsets Cockpit">
+<meta property="og:url" content="https://43sunsets.com/cockpit/solutions/">
+<meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* A(明)= 経済紙の一面 / B(暗)= 航空図 — 9/5 CEO 裁定。切り替えは cockpit 共通(localStorage "cockpit-theme") */
+:root{ --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E; --line:#D9DDD9; --line-soft:#E7EAE6; --accent:#2F5D8A; --fact:#2E6E4E; --infer:#8A5A2F; --infer-bg:#F7F1E8; --infer-line:#D9C6A8; --warn:#B54434; --rule:#20262E; --rule-h:2px; --pill:#FFFFFF; --tile:#FFFFFF; --tile-line:#E7EAE6; --head-border:3px solid #20262E; --bg-extra:none; --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace; --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif; --sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif; }
+:root[data-theme="dark"]{ --paper:#12161C; --card:#1A2028; --ink:#E8EBEE; --sub:#9AA4AE; --line:#2A323B; --line-soft:#232A33; --accent:#8FB4DA; --fact:#7CC49C; --infer:#D8A96B; --infer-bg:#241F17; --infer-line:#5A4A32; --warn:#E08A78; --rule:#2A323B; --rule-h:1px; --pill:#1A2028; --tile:#1A2028; --tile-line:#2A323B; --head-border:1px solid #2A323B; --bg-extra:radial-gradient(circle at 20% 0%, rgba(143,180,218,.10), transparent 40%); }
+*{box-sizing:border-box}
+html,body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; text-wrap:pretty;}
+body{background-image:var(--bg-extra); background-repeat:no-repeat;}
+a{color:var(--accent);} a:hover{color:var(--ink);}
+.mono{font-family:var(--mono);}
+header{display:flex; justify-content:space-between; align-items:center; padding:16px 56px; border-bottom:var(--head-border); background:var(--paper); position:sticky; top:0; z-index:40;}
+header .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.24em; color:var(--ink);} header .kicker a{color:var(--ink); text-decoration:none;}
+.hdr-right{display:flex; align-items:center; gap:14px;}
+.theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;} .theme-btn:hover{color:var(--ink); border-color:var(--ink);}
+.beta{font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--ink); border:1.5px solid var(--ink); border-radius:4px; padding:2px 8px;}
+main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
+.lede{display:flex; flex-direction:column; gap:14px; max-width:980px;}
+.lede h1{margin:0; font-family:var(--serif); font-size:40px; line-height:1.32; font-weight:800; letter-spacing:.005em; color:var(--ink);}
+.lede p{margin:0; font-size:15.5px; line-height:1.75; color:var(--sub); max-width:760px;}
+.dateline{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:4px;} .dateline .ed{font-family:var(--mono); font-size:12px; color:var(--ink); font-weight:600;}
+.hb{display:inline-flex; align-items:center; gap:7px; border:1px solid var(--line); border-radius:999px; padding:4px 11px 4px 8px; font-size:11.5px; color:var(--sub); background:var(--pill); white-space:nowrap; cursor:help;}
+.hb .hb-k{color:var(--ink);} .hb .hb-lbl{font-weight:700; color:var(--ink); letter-spacing:.04em;} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:var(--mono);}
+.hb-dot{width:9px; height:9px; border-radius:50%; background:var(--line); flex:none;}
+.hb.hb-ok .hb-dot{background:var(--fact); animation:hbpulse 2.4s ease-out infinite;} .hb.hb-ok{border-color:var(--fact);}
+.hb.hb-wait .hb-dot{background:var(--infer);} .hb.hb-wait{border-color:var(--infer-line);}
+.hb.hb-fail .hb-dot{background:var(--warn);} .hb.hb-fail{border-color:var(--warn); color:var(--warn);} .hb.hb-fail .hb-k{color:var(--warn);}
+@keyframes hbpulse{0%{box-shadow:0 0 0 0 rgba(46,110,78,.45)} 70%{box-shadow:0 0 0 7px rgba(46,110,78,0)} 100%{box-shadow:0 0 0 0 rgba(46,110,78,0)}}
+.rule{height:var(--rule-h); background:var(--rule); margin:28px 0;}
+.sec{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin:0 0 14px;} .sec h2{margin:0; font-family:var(--serif); font-size:21px; color:var(--ink); letter-spacing:.02em;} .sec span{font-size:12px; color:var(--sub);}
+.picks{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px;}
+.pick{display:flex; flex-direction:column; gap:8px; padding:16px 18px; background:var(--card); border:1px solid var(--line); border-radius:6px;}
+.pick .tag{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:700; font-family:var(--mono);}
+.pick h3{margin:0; font-family:var(--serif); font-size:17px; line-height:1.42; color:var(--ink); font-weight:700;}
+.pick p{margin:0; font-size:13px; line-height:1.7; color:var(--sub);}
+.ai{display:flex; gap:14px; align-items:flex-start; padding:18px 22px; background:var(--infer-bg); border:1px solid var(--infer-line); border-radius:6px;}
+.ai .badge{flex:none; font-size:10.5px; letter-spacing:.14em; font-weight:700; color:var(--infer); border:1px solid var(--infer); border-radius:4px; padding:3px 7px; font-family:var(--mono); margin-top:2px;}
+.ai p{margin:0; font-size:14.5px; line-height:1.8; color:var(--ink); font-family:var(--serif);} .ai .d{font-size:11px; color:var(--sub); margin-top:6px; font-family:var(--mono);}
+.macro{display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:10px; margin-top:12px;}
+.tile{display:flex; flex-direction:column; gap:4px; padding:12px 13px; background:var(--tile); border:1px solid var(--tile-line); border-radius:6px;}
+.tile .g{font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--sub); font-family:var(--mono);} .tile .n{font-size:12.5px; font-weight:700; color:var(--ink);}
+.tile .v{display:flex; align-items:baseline; gap:8px;} .tile .v b{font-family:var(--mono); font-size:19px; font-weight:600; color:var(--ink);} .tile .v .u{font-size:11px; color:var(--sub);}
+.chg{font-family:var(--mono); font-size:11.5px;} .chg.up{color:var(--fact);} .chg.down{color:var(--warn);} .chg.flat{color:var(--sub);}
+.tile svg{display:block; width:100%; height:30px;} .tile .d{font-size:10.5px; color:var(--sub);}
+.tile .how{display:none; font-size:12px; line-height:1.55; color:var(--ink); border-top:1px dashed var(--line-soft); padding-top:6px; margin-top:4px;} .tile:hover .how, .tile:focus-within .how{display:block;}
+.tile .src{font-size:10.5px; margin-top:2px;} .tile .src a{color:var(--accent); text-decoration:none;}
+.states{display:grid; grid-template-columns:repeat(5,1fr); gap:4px; margin-top:4px;} .states div{font-family:var(--mono); font-size:11px; text-align:center; border:1px solid var(--line-soft); border-radius:4px; padding:3px 0; line-height:1.3;}
+.faces{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px;}
+.face{display:flex; flex-direction:column; gap:10px; padding:24px 26px; background:var(--card); border:1px solid var(--line); border-radius:6px; text-decoration:none; color:var(--ink);}
+.face:hover{border-color:var(--accent);} .face .top{display:flex; justify-content:space-between; align-items:baseline; gap:12px;}
+.face h3{margin:0; font-family:var(--serif); font-size:22px; color:var(--ink);} .face .upd{font-size:11px; color:var(--sub); font-family:var(--mono);}
+.face .nums{font-size:12.5px; color:var(--sub); font-family:var(--mono);} .face p{margin:0; font-size:13.5px; line-height:1.7; color:var(--ink);}
+.face .go{display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700; color:var(--accent);}
+.note{font-size:12px; color:var(--sub); line-height:1.7; margin-top:14px;}
+footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px; line-height:1.7; color:var(--sub); max-width:1280px; margin:0 auto;}
+@media (max-width:900px){ .picks{grid-template-columns:repeat(2,minmax(0,1fr));} .macro{grid-template-columns:repeat(3,minmax(0,1fr));} .faces{grid-template-columns:1fr;} .lede h1{font-size:30px;} header,main,footer{padding-left:24px; padding-right:24px;} }
+@media (max-width:600px){ .picks{grid-template-columns:1fr;} .macro{grid-template-columns:repeat(2,minmax(0,1fr));} .lede h1{font-size:26px;} header,main,footer{padding-left:18px; padding-right:18px;} main{padding-top:20px;} .rule{margin:22px 0;} .tile .how{display:block;} }
+
+.cta{margin-top:34px; padding:26px 28px; border:1px solid var(--line); border-radius:6px; background:var(--card); display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:24px; align-items:center;}
+.cta h2{margin:0 0 8px; font-family:var(--serif); font-size:22px; color:var(--ink);} .cta p{margin:0; font-size:14px; line-height:1.75; color:var(--ink);}
+.cta ul{margin:10px 0 0; padding-left:18px; font-size:13.5px; line-height:1.75; color:var(--sub);}
+.cta .act{display:flex; flex-direction:column; gap:10px; align-items:flex-start;}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:11px 16px; border-radius:6px; font-size:14px; font-weight:700; text-decoration:none; border:1.5px solid var(--ink); color:var(--ink); background:transparent;} .btn:hover{background:var(--ink); color:var(--paper);}
+.btn.primary{background:var(--ink); color:var(--paper);} .btn.primary:hover{background:var(--accent); border-color:var(--accent); color:#fff;}
+.cta .mail{font-family:var(--mono); font-size:12.5px; color:var(--sub);}
+@media (max-width:820px){ .cta{grid-template-columns:1fr; padding:20px 18px;} }
+
+.cta{margin-top:34px; padding:26px 28px; border:1px solid var(--line); border-radius:6px; background:var(--card); display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:24px; align-items:center;}
+.cta h2{margin:0 0 8px; font-family:var(--serif); font-size:22px; color:var(--ink);} .cta p{margin:0; font-size:14px; line-height:1.75; color:var(--ink);}
+.cta ul{margin:10px 0 0; padding-left:18px; font-size:13.5px; line-height:1.75; color:var(--sub);}
+.cta .act{display:flex; flex-direction:column; gap:10px; align-items:flex-start;}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:11px 16px; border-radius:6px; font-size:14px; font-weight:700; text-decoration:none; border:1.5px solid var(--ink); color:var(--ink); background:transparent;} .btn:hover{background:var(--ink); color:var(--paper);}
+.btn.primary{background:var(--ink); color:var(--paper);} .btn.primary:hover{background:var(--accent); border-color:var(--accent); color:#fff;}
+.cta .mail{font-family:var(--mono); font-size:12.5px; color:var(--sub);}
+@media (max-width:820px){ .cta{grid-template-columns:1fr; padding:20px 18px;} }
+
+.lp-lede{max-width:900px;} .lp-lede h1{margin:0; font-family:var(--serif); font-size:36px; line-height:1.35; font-weight:800; color:var(--ink);} .lp-lede p{margin:12px 0 0; font-size:15.5px; line-height:1.8; color:var(--sub);}
+.grid3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px;} .grid2{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px;}
+.box{padding:18px 20px; border:1px solid var(--line); border-radius:6px; background:var(--card); display:flex; flex-direction:column; gap:8px;} .box h3{margin:0; font-family:var(--serif); font-size:17px; color:var(--ink);} .box p{margin:0; font-size:13.5px; line-height:1.75; color:var(--sub);} .box .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; color:var(--accent); font-weight:700;}
+.steps{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px;} .step{padding:14px; border:1px solid var(--line); border-radius:6px; background:var(--card);} .step .n{font-family:var(--mono); font-size:22px; font-weight:600; color:var(--accent);} .step h4{margin:4px 0; font-size:14px; color:var(--ink);} .step p{margin:0; font-size:12.5px; line-height:1.65; color:var(--sub);}
+.proof{display:flex; gap:14px; flex-wrap:wrap;} .proof a{flex:1 1 260px; text-decoration:none;}
+.contact{margin-top:8px; padding:26px 28px; border:1.5px solid var(--ink); border-radius:6px; display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:24px; align-items:center;} .contact h2{margin:0 0 6px; font-family:var(--serif); font-size:22px;} .contact p{margin:0; font-size:14px; line-height:1.75; color:var(--sub);}
+@media (max-width:900px){ .grid3,.steps{grid-template-columns:repeat(2,minmax(0,1fr));} .lp-lede h1{font-size:28px;} } @media (max-width:600px){ .grid3,.grid2,.steps{grid-template-columns:1fr;} .contact,.cta{grid-template-columns:1fr;} }
+</style>
+
+</head>
+<body>
+<header>
+  <div class="kicker"><a href="https://43sunsets.com/">43 SUNSETS</a> — COCKPIT <a href="/cockpit/" style="margin-left:10px;letter-spacing:.04em;text-transform:none;font-family:inherit;font-size:12px;color:var(--accent)">← トップへ</a></div>
+  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
+</header>
+<script>
+/* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
+(function(){
+  const K = "cockpit-theme"; let t = null;
+  try { t = localStorage.getItem(K); } catch (e) {}
+  if (t !== "dark" && t !== "light") t = "light";
+  const apply = n => { document.documentElement.setAttribute("data-theme", n); try { localStorage.setItem(K, n); } catch (e) {}
+    const b = document.getElementById("themebtn"); if (b) b.textContent = n === "dark" ? "☀️ ライト" : "🌙 ダーク";
+    window.dispatchEvent(new CustomEvent("themechange", {detail: n})); };
+  document.documentElement.setAttribute("data-theme", t);
+  window.__setTheme = apply;
+  const b = document.getElementById("themebtn");
+  if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
+})();
+</script>
+<main>
+  <div class="lp-lede">
+    <h1>この面の仕組みを、御社の営業に合わせて作り込みます。</h1>
+    <p>誰を狙うか(ICP)を一緒に決め、そこに効くシグナルだけを集め、CRM や MA につないで、日々の営業活動が自分で回る状態まで。オープンソースを土台に、固定額で、走りながら結果で判断する開発です。</p>
+  </div>
+  <div class="rule"></div>
+  <div class="sec"><h2>できること</h2><span>3 つの段階。どこからでも始められます。</span></div>
+  <div class="grid3">
+    <div class="box"><div class="k">01 · ICP とシグナル</div><h3>狙う顧客像の定義と、シグナルのカスタマイズ</h3><p>御社の製品が刺さる工程・業種・地域・規模を、当社の会社マスターと設備カタログの語彙で定義します。建設許可・UCC 登記・その他の公的記録から、その ICP に効くシグナルだけを選び、しきい値と通知の形を御社向けに調整します。</p></div>
+    <div class="box"><div class="k">02 · CRM・MA と連携</div><h3>CRM・MA の導入と、シグナルの流し込み</h3><p>Mautic などのオープンソース MA、または御社の既存 CRM に、検出した会社と出来事を自動で流し込みます。名寄せ、担当者の割り当て、フォローの記録まで一本の流れにします。</p></div>
+    <div class="box"><div class="k">03 · 自走</div><h3>マーケティング活動の自走</h3><p>新しいシグナルが出たら、案内文の下書き、送信、反応の記録、次のアクションの提案までが人手なしで回る状態を作ります。人が押すのは送信と判断だけ。当社の面はこの形で毎日動いています。</p></div>
+  </div>
+  <div class="rule"></div>
+  <div class="sec"><h2>進め方</h2><span>2 週間ごとに結果を見て、続けるかを決めます。</span></div>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h4>相談</h4><p>メールで現状と狙いを一言。返信は翌営業日まで。</p></div>
+    <div class="step"><div class="n">2</div><h4>聞き取り 30 分</h4><p>誰に何を売りたいか、今の CRM・MA の状態を伺います(無料)。</p></div>
+    <div class="step"><div class="n">3</div><h4>固定額の見積</h4><p>第 1 スプリント(2 週間)の範囲と金額を書面で。着手前に確定し、途中で増えません。</p></div>
+    <div class="step"><div class="n">4</div><h4>走りながら作る</h4><p>2 週間で動くものを出し、御社のデータで結果を見ます。</p></div>
+    <div class="step"><div class="n">5</div><h4>結果で判断</h4><p>続けるか、止めるかを結果で決めます。止めても作ったものは御社のものです。</p></div>
+  </div>
+  <div class="rule"></div>
+  <div class="sec"><h2>なぜ安くできるか</h2><span>過度に高くなりがちな領域を、土台の選び方で抑えます。</span></div>
+  <div class="grid2">
+    <div class="box"><h3>オープンソースを土台にする</h3><p>MA は Mautic、自動化は n8n、データは SQLite/PostgreSQL、配信は Cloudflare。ライセンス費がほぼゼロなので、費用は設計と開発の工数だけです。御社のアカウントに置くので、当社に依存しない形で残ります。</p></div>
+    <div class="box"><h3>固定額 × アジャイル</h3><p>大きな要件定義を先に固めず、2 週間の単位で動くものを出し続けます。固定額なので途中で膨らまず、結果が出なければその時点で止められます。結果ドリブンが安さの理由です。</p></div>
+  </div>
+  <div class="rule"></div>
+  <div class="sec"><h2>実物</h2><span>この面そのものが実例です。収集から公開まで、毎日自走しています。</span></div>
+  <div class="proof">
+    <a class="box" href="/cockpit/permits/"><h3>建設許可の検出面 →</h3><p>5 州の許可を毎日集め、AI が 4 分類に読み、投資主体まで名寄せ。</p></a>
+    <a class="box" href="/cockpit/ucc/"><h3>動産担保登記(UCC)の検出面 →</h3><p>機械の登記から設備の種類・メーカー・型式まで。会社の業種は自社サイトから。</p></a>
+    <a class="box" href="/cockpit/"><h3>トップの運行状態 →</h3><p>今日の収集が済んだか、最終収集と新規件数を、面の上に毎日出しています。</p></a>
+  </div>
+  <div class="rule"></div>
+  <section class="contact" id="contact">
+    <div><h2>まずは一言、メールで。</h2><p>「うちの製品はこういう工程の会社に刺さる」「CRM はこれを使っている」程度で十分です。翌営業日までに返信します。日本語で対応します。</p></div>
+    <div class="act" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><a class="btn primary" href="mailto:hello@43sunsets.com?subject=%E3%82%B3%E3%83%83%E3%82%AF%E3%83%94%E3%83%83%E3%83%88%E3%81%AE%E7%9B%B8%E8%AB%87">hello@43sunsets.com に相談する</a><span class="mail" style="font-family:var(--mono);font-size:12.5px;color:var(--sub)">43 Sunsets(イリノイ州)・Kentaroh Yao</span></div>
+  </section>
+</main>
+<footer>43 Sunsets — 公的記録から中西部の設備投資シグナルを検出する面を運営し、その仕組みの個社向け開発を承ります。本ページの内容は提供内容の概要で、見積は個別に書面でお出しします。© 43 Sunsets</footer>
+</body>
+</html>
