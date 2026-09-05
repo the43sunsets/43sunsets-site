@@ -214,7 +214,7 @@ a{color:var(--ai-accent);}
 
 <div class="app">
 <aside>
-  <label class="fitem jp-toggle"><input type="checkbox" id="jponly">日系関連のみ表示</label>
+  <label class="fitem jp-toggle" title="日系 = 在シカゴ総領事館 2025 名簿(中西部 10 州)または人の確認で確定した会社。AI 判定だけの会社は「日系?」と表示し、このトグルには入りません"><input type="checkbox" id="jponly">日系のみ表示(名簿で確定)</label>
   <label class="fitem jp-toggle" title="雑音 = 個人名義・車両 1 台の割賦・住宅・農業リーエン・公共財務。未分類 = 本文が汎用文のみで種別を決められなかった記録"><input type="checkbox" id="showunc">雑音・未分類も表示(<span id="unccnt">0</span> 件)</label>
   <div class="fgroup"><h2>州</h2><div id="f-state"></div></div>
   <div class="fgroup"><h2>設備の種類(領域)</h2><div id="f-domain"></div></div>
@@ -300,7 +300,7 @@ function eqHtml(eq){
   return `<div class="fact" style="margin-top:6px"><span class="flabel">設備(担保物欄の逐語+カタログ)</span><ul class="eqlist">${items}</ul></div>`;
 }
 function cardHtml(s){
-  const jp  = s.jp ? `<span class="chip jp">日系</span>` : ""; const nw = s.new ? `<span class="chip newchip" title="${META ? META.new_rule : ''}">NEW</span>` : "";
+  const jp  = s.jp ? `<span class="chip jp" title="${s.jp_basis==="roster" ? "総領事館 2025 名簿で確定" : "人の確認で確定"}">日系</span>` : (s.jp_candidate ? `<span class="chip" title="AI 判定のみ(名簿・人の確認なし)= 候補">日系?</span>` : ""); const nw = s.new ? `<span class="chip newchip" title="${META ? META.new_rule : ''}">NEW</span>` : "";
   const kind = NOISE.has(s.kind) ? `<span class="chip">${s.kind}</span>` : "";
   const ind = `<span class="chip" title="${s.industry_basis==="master" ? "会社マスター(自社サイト)から" : "登記の読みから(会社マスター未調査)"}">${esc(s.industry)}${s.industry_basis==="master" ? "" : "?"}</span>`;
   const inf = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${esc(s.infer)}</div>` : "";
@@ -340,10 +340,10 @@ document.getElementById("clear").addEventListener("click", ()=>{ for(const k in 
 function csvEscape(v){ v = String(v==null?"":v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
 document.getElementById("export").addEventListener("click", ()=>{
   const list = filtered();
-  const head = ["登記id","州","会社","市","業種(マスター)","業種の根拠","作っている物","自社サイト","日系","担保権者","貸し手の種類","担保の範囲","提出日","失効日","領域","工程","機種","メーカー(判定)","メーカー(逐語)","型式","製番","台数","自動化","出典URL","調べた日","確信度","人の確認","要約","推論","出典","登記番号"];
+  const head = ["登記id","州","会社","市","業種(マスター)","業種の根拠","作っている物","自社サイト","日系(名簿/人の確認=1・AI候補=?)","担保権者","貸し手の種類","担保の範囲","提出日","失効日","領域","工程","機種","メーカー(判定)","メーカー(逐語)","型式","製番","台数","自動化","出典URL","調べた日","確信度","人の確認","要約","推論","出典","登記番号"];
   const rows = [];
   for(const s of list){ const eq = (s.equipment && s.equipment.length) ? s.equipment : [{}];
-    for(const e of eq){ rows.push([s.id,s.state,s.company,s.city,s.industry,s.industry_basis==="master"?"会社マスター":"登記の読み",s.made??"",s.website??"",s.jp?"1":"",s.secured_party??"",s.lender_label??"",s.scope??"",s.date,s.lapse??"",
+    for(const e of eq){ rows.push([s.id,s.state,s.company,s.city,s.industry,s.industry_basis==="master"?"会社マスター":"登記の読み",s.made??"",s.website??"",s.jp?"1":(s.jp_candidate?"?":""),s.secured_party??"",s.lender_label??"",s.scope??"",s.date,s.lapse??"",
       e.domain??"",e.process??"",e.type??"",e.maker??"",e.maker_raw??"",e.model??"",e.serial??"",e.qty??"",e.automation?"1":"",e.source_url??"",e.checked_at??"",e.confidence??"",e.verified?"済":"未",s.summary??"",s.infer??"",s.fact.src,s.fact.ref]); } }
   const csv = "\ufeff" + [head, ...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n");
   const blob = new Blob([csv], {type:"text/csv;charset=utf-8"}); const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
@@ -352,7 +352,7 @@ document.getElementById("export").addEventListener("click", ()=>{
 /* ---- 企業カルテ(最小形): 登記と許可の時系列 ---- */
 function karteHtml(c){
   const tl = c.timeline.map(t=>`<div class="tl-item ${t.kind}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title">${esc(t.title)}</div><div class="tl-body">${esc(t.summary||"")}${t.ref ? ` <span class="mono">${esc(t.ref)}</span>` : ""}</div></div>`).join("");
-  return `<div class="karte"><div class="karte-top"><div><div class="kicker">43 SUNSETS COCKPIT — COMPANY KARTE(BETA・最小形)</div><h2>${esc(c.name)}</h2><div class="ksub">${esc(c.city||"")}${c.jp ? "・日系" : ""}</div></div><button class="karte-close" id="kclose">‹ 検出面に戻る</button></div>
+  return `<div class="karte"><div class="karte-top"><div><div class="kicker">43 SUNSETS COCKPIT — COMPANY KARTE(BETA・最小形)</div><h2>${esc(c.name)}</h2><div class="ksub">${esc(c.city||"")}${c.jp ? "・日系(" + (c.jp_basis==="roster" ? "名簿" : "人の確認") + ")" : (c.jp_candidate ? "・日系?(AI 候補)" : "")}</div></div><button class="karte-close" id="kclose">‹ 検出面に戻る</button></div>
     <dl class="kv"><dt>業種</dt><dd>${esc(c.industry)}</dd><dt>事業</dt><dd>${esc(c.made||"(会社マスター未調査)")}</dd><dt>規模</dt><dd>${esc(c.size||"—")}</dd><dt>サイト</dt><dd>${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website)}</a>` : "—"}</dd>
     <dt>登記</dt><dd>${c.filings} 件・機械 ${c.machines} 台(${esc((c.makers||[]).join("・"))})・${esc(c.earliest)} 〜 ${esc(c.latest)}</dd><dt>建設許可</dt><dd>${c.permits} 件${c.permits ? "(同じ会社マスター)" : "(この会社の許可は当社の網に無い)"}</dd></dl>
     <h3>時系列(登記+許可)</h3><div class="timeline">${tl}</div>
