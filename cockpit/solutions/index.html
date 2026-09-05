@@ -23,8 +23,8 @@ header .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.24em; co
 .hdr-right{display:flex; align-items:center; gap:12px;} .theme-btn{border:1px solid rgba(255,255,255,.35); background:transparent; color:#fff; border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer;}
 /* ---- hero: 写真(CC BY)を濃紺で覆い、光る数字と明朝の見出し ---- */
 .hero{position:relative; min-height:640px; display:flex; align-items:flex-end; color:#fff; overflow:hidden; background:var(--navy);}
-.hero .ph{position:absolute; inset:0; background:url(/cockpit/assets/laser-trulaser3530.jpg) center/cover no-repeat; filter:saturate(.35) contrast(1.05); opacity:.55;}
-.hero .veil{position:absolute; inset:0; background:linear-gradient(180deg, rgba(18,22,28,.55) 0%, rgba(18,22,28,.35) 40%, rgba(18,22,28,.92) 100%), radial-gradient(circle at 78% 30%, rgba(143,180,218,.25), transparent 45%);}
+.hero .ph{position:absolute; inset:0; background:url(/cockpit/assets/hero-laser.jpg) center/cover no-repeat; opacity:.9;} .hero video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9;} @media (prefers-reduced-motion:reduce){ .hero video{display:none;} }
+.hero .veil{position:absolute; inset:0; background:linear-gradient(180deg, rgba(18,22,28,.35) 0%, rgba(18,22,28,.25) 45%, rgba(18,22,28,.94) 100%);}
 .hero .in{position:relative; padding:120px 56px 56px; max-width:1180px; margin:0 auto; width:100%; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); gap:40px; align-items:end;}
 .hero .eyebrow{font-family:var(--mono); font-size:11.5px; letter-spacing:.22em; color:var(--glow); margin-bottom:14px;}
 .hero h1{margin:0; font-family:var(--serif); font-size:46px; line-height:1.28; font-weight:800; letter-spacing:.005em;}
@@ -46,7 +46,7 @@ main{max-width:1180px; margin:0 auto; padding:0 56px 64px;}
 .flow{display:flex; flex-direction:column; gap:8px;} .flow div{display:flex; align-items:center; gap:10px; font-size:13px; padding:10px 12px; border:1px solid var(--line); border-radius:6px; background:var(--paper);} .flow div b{font-family:var(--mono); color:var(--accent); font-size:12px; min-width:22px;}
 .steps{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px;} .step{padding:16px 14px; border:1px solid var(--line); border-radius:8px; background:var(--card);} .step .n{font-family:var(--mono); font-size:24px; font-weight:600; color:var(--accent);} .step h4{margin:6px 0 4px; font-size:14px; color:var(--ink);} .step p{margin:0; font-size:12.5px; line-height:1.65; color:var(--sub);}
 .proof{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px;} .proof a{text-decoration:none;}
-.band{position:relative; margin:34px -56px; padding:56px; background:var(--navy); color:#fff; overflow:hidden;} .band .ph{position:absolute; inset:0; background:url(/cockpit/assets/laser-trulaser3530.jpg) center 40%/cover no-repeat; opacity:.18; filter:saturate(.2);} .band .in{position:relative; max-width:1180px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:30px; align-items:center;}
+.band{position:relative; margin:34px -56px; padding:56px; background:var(--navy); color:#fff; overflow:hidden;} .band .ph{position:absolute; inset:0; background:url(/cockpit/assets/band-parts.jpg) center/cover no-repeat; opacity:.28;} .band video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.28;} @media (prefers-reduced-motion:reduce){ .band video{display:none;} } .band .in{position:relative; max-width:1180px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:30px; align-items:center;}
 .band h2{margin:0 0 10px; font-family:var(--serif); font-size:28px; line-height:1.4;} .band p{margin:0; font-size:14.5px; line-height:1.8; color:rgba(232,235,238,.85);} .band .mail{font-family:var(--mono); font-size:12.5px; color:rgba(232,235,238,.7); margin-top:8px;}
 footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px; line-height:1.7; color:var(--sub); max-width:1180px; margin:0 auto;}
 @media (max-width:900px){ .hero .in{grid-template-columns:1fr; padding:96px 24px 40px;} .hero h1{font-size:32px;} header{padding:12px 20px;} main{padding:0 24px 48px;} .grid3,.proof,.steps{grid-template-columns:repeat(2,minmax(0,1fr));} .ma,.grid2{grid-template-columns:1fr;} .band{margin:28px -24px; padding:36px 24px;} .band .in{grid-template-columns:1fr;} footer{padding:16px 24px 28px;} }
@@ -74,7 +74,7 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 })();
 </script>
 <section class="hero">
-  <div class="ph"></div><div class="veil"></div>
+  <div class="ph"></div><video autoplay muted loop playsinline preload="metadata" poster="/cockpit/assets/hero-laser.jpg" aria-hidden="true"><source src="/cockpit/assets/hero-laser.mp4" type="video/mp4"></video><div class="veil"></div>
   <div class="in">
     <div>
       <div class="eyebrow">個社向けの開発 — 43 SUNSETS</div>
@@ -88,7 +88,6 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
       <div><b>半年</b><span>リード数を大きく伸ばし、売上につながる形にした期間</span></div>
     </div>
   </div>
-  <div class="credit">写真: <a href="https://commons.wikimedia.org/wiki/File:CNC_Laser_Cutting_Machine.jpg" target="_blank" rel="noopener">S zillayali / Wikimedia Commons</a>, CC BY 3.0</div>
 </section>
 <main>
   <div class="rule"></div>
@@ -135,7 +134,7 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
     <div class="box"><h3>固定額 × 走りながら作る</h3><p>大きな要件定義を先に固めず、2 週間の単位で動くものを出し続けます。固定額なので途中で膨らまず、結果が出なければその時点で止められます。結果で判断することが、安さの理由です。</p></div>
   </div>
 
-  <div class="band"><div class="ph"></div><div class="in">
+  <div class="band"><div class="ph"></div><video autoplay muted loop playsinline preload="metadata" poster="/cockpit/assets/band-parts.jpg" aria-hidden="true"><source src="/cockpit/assets/band-parts.mp4" type="video/mp4"></video><div class="in">
     <div><h2>やってきたこと。</h2><p>当社の代表は、日系の産業機器メーカーの営業開発部門を率い、展示会起点だった営業を、デジタルとインサイドセールス起点に作り替えてきました。MA をゼロから 3 か月で立ち上げ、インサイドセールスの運用を設計し、半年でリード数を大きく伸ばし、売上につながる形にしました(インサイドセールス起点の案件比率 5%→34%、年間 2,000 件超のリード)。その前は、製造業の ERP 導入やオペレーション設計を 15 年。技術と営業の両方を、自分の手で回してきた人間が作ります。</p><p class="mail">43 Sunsets(イリノイ州)</p></div>
     <div class="stat"><div><b>15 年</b><span>米国の産業 B2B(ERP 導入・運営計画・EC・CRM)</span></div><div><b>20+ 名</b><span>インサイドセールス・CS・デジタルを統合した組織を新設・運営</span></div><div><b>毎日</b><span>この面の収集・読み・公開が自走(実物)</span></div></div>
   </div></div>
@@ -150,6 +149,6 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
   <div class="rule"></div>
   <div class="ma" id="contact"><div><h3>まずは一言、メールで。</h3><p>「うちの製品はこういう工程の会社に刺さる」「CRM はこれを使っている」程度で十分です。翌営業日までに返信します。日本語で対応します。</p></div><div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><a class="btn primary" style="color:var(--paper);background:var(--ink);border-color:var(--ink)" href="mailto:hello@43sunsets.com?subject=%E5%80%8B%E7%A4%BE%E5%90%91%E3%81%91%E9%96%8B%E7%99%BA%E3%81%AE%E7%9B%B8%E8%AB%87">hello@43sunsets.com に相談する</a><span class="mono" style="font-size:12.5px;color:var(--sub)">43 Sunsets(イリノイ州)・返信は代表本人から</span></div></div>
 </main>
-<footer>43 Sunsets — 公的記録から中西部の設備投資シグナルを検出する面を運営し、その仕組みの個社向け開発を承ります。本ページの内容は提供内容の概要で、見積は個別に書面でお出しします。写真: S zillayali(Wikimedia Commons・CC BY 3.0)。© 43 Sunsets</footer>
+<footer>43 Sunsets — 公的記録から中西部の設備投資シグナルを検出する面を運営し、その仕組みの個社向け開発を承ります。本ページの内容は提供内容の概要で、見積は個別に書面でお出しします。映像: 生成(Higgsfield・Seedance 2.5)。© 43 Sunsets</footer>
 </body>
 </html>
