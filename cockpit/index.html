@@ -97,7 +97,7 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
     <div class="dateline"><span class="ed" id="edition">読み込み中…</span><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(毎日 07:00 CT)"></div><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div></div>
   </div>
   <div class="rule"></div>
-  <div class="sec"><h2>今週の動き</h2><span id="picks-sub">この 3 か月で、中西部の工場が何に投資したか。</span></div>
+  <div class="sec"><h2>今週の動き</h2><span id="picks-sub">中西部の工場の目立つ投資。毎週月曜に入れ替え。</span><span id="picks-date" class="mono"></span></div>
   <div class="picks" id="picks"></div>
   <div class="rule"></div>
   <div class="sec"><h2>景況の帯</h2><span>中西部の製造業が設備投資に前向きかどうか。連銀の公開データ 10 本を毎日更新。</span></div>
@@ -135,6 +135,8 @@ async function boot(){
   try{ const top = await get("data/top.json"); const picks = top.picks || [];
     document.getElementById("picks").innerHTML = picks.length ? picks.map(p=>`<article class="pick"><div class="tag">${esc(p.tag)}</div><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p></article>`).join("") : `<div class="pick"><p>直近 90 日に目立つ動きはありません。</p></div>`;
     if(top.intro) document.getElementById("picks-sub").textContent = top.intro;
+    const wdOf = d => WD[new Date(d + "T12:00:00-05:00").getDay()];
+    if(top.updated_ct) document.getElementById("picks-date").textContent = `更新 ${top.updated_ct}(${wdOf(top.updated_ct)})・次回 ${top.next_update_ct}(${wdOf(top.next_update_ct)})`;
     const pf = top.permits_meta.funnel, uf = top.ucc_meta.funnel, uc = top.ucc_meta.catalog || {};
     document.getElementById("permits-nums").textContent = `保存 ${pf.signals_total.toLocaleString()} 件・設備投資シグナル ${pf.targets} 件・直近 90 日 ${top.counts.permits_new90} 件`;
     document.getElementById("permits-upd").textContent = "更新 " + fmtCT(top.permits_meta.generated_at, true);
