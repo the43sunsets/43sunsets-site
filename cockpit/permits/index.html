@@ -163,7 +163,7 @@ a{color:var(--ai-accent);}
 
 /* ---- health meter(ヘッダー右上・9/5) ---- */
 .hb{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); background:var(--card); border-radius:999px; padding:4px 12px 4px 8px; font-size:11.5px; color:var(--sub); white-space:nowrap; cursor:help;}
-.hb .hb-k{color:var(--ink);} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;}
+.hb .hb-k{color:var(--ink);} .hb .hb-lbl{font-weight:700; color:var(--ink); letter-spacing:.04em;} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;}
 .hb-dot{width:9px; height:9px; border-radius:50%; background:var(--line); flex:none; box-shadow:0 0 0 0 rgba(0,0,0,0);}
 .hb.hb-ok .hb-dot{background:var(--fact); animation:hbpulse 2.4s ease-out infinite;} .hb.hb-ok{border-color:var(--fact);}
 .hb.hb-wait .hb-dot{background:var(--infer);} .hb.hb-wait{border-color:var(--infer-line);}
@@ -624,7 +624,7 @@ async function boot(){
 }
 boot();
 </script>
-<script src="/cockpit/assets/health.js?v=20260905b" defer></script>
-<script src="/cockpit/assets/hit.js?v=20260905b" defer></script>
+<script src="/cockpit/assets/health.js?v=20260905c" defer></script>
+<script src="/cockpit/assets/hit.js?v=20260905c" defer></script>
 </body>
 </html>
