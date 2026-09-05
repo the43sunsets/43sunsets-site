@@ -204,13 +204,22 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   .hb .hb-txt{display:none;} .hb{padding:4px 6px;} .theme-btn{padding:4px 8px;}
 }
 :root[data-theme="dark"]{ --paper:#12161C; --card:#1A2028; --ink:#E8EBEE; --sub:#9AA4AE; --ai-accent:#8FB4DA; --line:#2A323B; --line-soft:#232A33; --fact:#7CC49C; --fact-bg:#1F2A24; --infer:#D8A96B; --infer-bg:#241F17; --infer-line:#5A4A32; --stamp:#E08A78; --chip-bg:#232A33; }
+
+/* ---- モバイル(9/5): 肩書きを 1 行に・絞り込みは折り畳み ---- */
+.filt-toggle{display:none;}
+@media (max-width:820px){
+  .masthead .kicker{white-space:nowrap; letter-spacing:.12em; gap:8px;} .masthead .kicker .cock{display:none;}
+  .filt-toggle{display:flex; width:100%; justify-content:space-between; align-items:center; border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:6px; padding:10px 12px; font:inherit; font-size:13px; font-weight:700; cursor:pointer; margin-bottom:10px;}
+  aside > *:not(.filt-toggle){display:none;} aside.open > *{display:block;} aside.open > .filt-toggle{display:flex;} aside.open > label.fitem{display:flex;}
+  aside{padding:12px 14px 4px;}
+}
 </style>
 </head>
 <body>
 
 <header>
   <div class="masthead">
-    <div class="kicker"><a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a><span>— COCKPIT</span><a class="toplink" href="/cockpit/">← トップへ</a></div>
+    <div class="kicker"><a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a><span class="cock">— COCKPIT</span><a class="toplink" href="/cockpit/">← トップへ</a></div>
     <h1>動産担保登記(UCC)</h1>
     <div class="meta" id="metaline">UCC 登記シグナル(オハイオ先行)— データ読み込み中…</div>
   </div>
@@ -234,6 +243,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 
 <div class="app">
 <aside>
+  <button class="filt-toggle" id="filttoggle" type="button">絞り込み ▾</button>
   <label class="fitem jp-toggle" title="日系 = 在シカゴ総領事館 2025 名簿(中西部 10 州)または人の確認で確定した会社。AI 判定だけの会社は「日系?」と表示し、このトグルには入りません"><input type="checkbox" id="jponly">日系のみ表示(名簿で確定)</label>
   <label class="fitem jp-toggle" title="雑音 = 個人名義・車両 1 台の割賦・住宅・農業リーエン・公共財務。未分類 = 本文が汎用文のみで種別を決められなかった記録"><input type="checkbox" id="showunc">雑音・未分類も表示(<span id="unccnt">0</span> 件)</label>
   <div class="fgroup"><h2>州</h2><div id="f-state"></div></div>
@@ -408,6 +418,11 @@ async function boot(){
   }catch(err){ document.getElementById("metaline").textContent = "データの読み込みに失敗しました(" + err.message + ")。"; document.getElementById("empty").hidden = false; document.getElementById("empty").textContent = "データ(ucc.json)を読み込めませんでした。時間をおいて再読み込みしてください。"; }
 }
 boot();
+</script>
+
+<script>
+(function(){ const a=document.querySelector("aside"); const b=document.getElementById("filttoggle"); if(!a||!b) return;
+  b.addEventListener("click", ()=>{ a.classList.toggle("open"); b.textContent = a.classList.contains("open") ? "絞り込みを閉じる ▴" : "絞り込み ▾"; }); })();
 </script>
 <script src="/cockpit/assets/health.js?v=20260905c" defer></script>
 <script src="/cockpit/assets/hit.js?v=20260905c" defer></script>
