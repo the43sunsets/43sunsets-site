@@ -177,16 +177,36 @@ a{color:var(--ai-accent);}
 .seg button .cnt{font-family:"IBM Plex Mono",ui-monospace,monospace; margin-left:5px; color:var(--sub); font-size:11px;}
 .seg button.cur{background:var(--ink); color:var(--card);} .seg button.cur .cnt{color:var(--card);}
 .toolbar .left{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
+
+/* ---- ヘッダー(9/5 CEO: トップと同じ意匠・重複なし・トップへ戻る・モバイルで縦に伸びない) ---- */
+header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; display:flex; justify-content:space-between; align-items:center; gap:16px; background:var(--card); position:sticky; top:0; z-index:40;}
+.masthead{display:flex; flex-direction:column; gap:2px; min-width:0;}
+.masthead .kicker{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin:0; display:flex; align-items:center; gap:10px;}
+.masthead .kicker a.brandlink{color:var(--sub); text-decoration:none;} .masthead .kicker a.brandlink:hover{color:var(--ink);}
+.masthead .kicker a.toplink{color:var(--ai-accent); text-decoration:none; letter-spacing:.04em; text-transform:none; font-family:inherit; font-size:12px;} .masthead .kicker a.toplink:hover{text-decoration:underline;}
+.masthead h1{font-family:"Shippori Mincho",serif; font-size:20px; font-weight:700; margin:0; letter-spacing:.02em; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.masthead .meta{font-size:12px; color:var(--sub); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.hdr-right{display:flex; align-items:center; gap:10px; flex:none;}
+.beta{border:1.5px solid var(--ink); color:var(--ink); font-family:"IBM Plex Mono",ui-monospace,monospace; font-weight:400; font-size:11px; padding:2px 8px; border-radius:4px; letter-spacing:.16em; margin:0; transform:none;}
+.hb .hb-lbl{font-weight:700; color:var(--ink); letter-spacing:.04em;}
+@media (max-width:820px){
+  header{padding:10px 14px; gap:10px;}
+  .masthead h1{font-size:17px;} .masthead .meta{display:none;}
+  .hb .hb-txt{max-width:38vw; overflow:hidden; text-overflow:ellipsis;} .beta{display:none;}
+}
+@media (max-width:600px){
+  .hb .hb-txt{display:none;} .hb{padding:4px 6px;} .theme-btn{padding:4px 8px;}
+}
+:root[data-theme="dark"]{ --paper:#12161C; --card:#1A2028; --ink:#E8EBEE; --sub:#9AA4AE; --ai-accent:#8FB4DA; --line:#2A323B; --line-soft:#232A33; --fact:#7CC49C; --fact-bg:#1F2A24; --infer:#D8A96B; --infer-bg:#241F17; --infer-line:#5A4A32; --stamp:#E08A78; --chip-bg:#232A33; }
 </style>
 </head>
 <body>
 
 <header>
   <div class="masthead">
-    <div class="kicker"><a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a> — COCKPIT</div>
-    <h1>中西部・設備投資検出面</h1>
-    <div class="meta" id="metaline">建設許可シグナル 5 州(IL・IN・MI・OH・WI)/ データ読み込み中…</div>
-    <div class="meta"><a href="../freshness/">データの鮮度と網羅 — 自治体ごとの最終更新日・次回更新・郡別ヒートマップ →</a></div>
+    <div class="kicker"><a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a><span>— COCKPIT</span><a class="toplink" href="/cockpit/">← トップへ</a></div>
+    <h1>建設許可</h1>
+    <div class="meta" id="metaline">建設許可シグナル 5 州 — データ読み込み中…</div>
   </div>
   <div class="hdr-right"><div class="hb hb-wait" id="healthbar" data-check="permits_update_vps"></div><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
 </header>
@@ -614,7 +634,7 @@ async function boot(){
     META = d.meta; SIGNALS = d.signals; COMPANIES = d.companies || [];
     document.getElementById("unccnt").textContent = (META.funnel.unclassified||0).toLocaleString();
     const f = META.funnel;
-    document.getElementById("metaline").innerHTML = `建設許可シグナル 5 州(IL・IN・MI・OH・WI)/ 保存 <span class="mono">${f.signals_total.toLocaleString()}</span> 件・AI 読了 <span class="mono">${f.enriched}</span> 件・設備投資シグナル <span class="mono">${f.targets}</span> 件 / データ書き出し <span class="mono">${fmtCT(META.generated_at)}</span> 米中部時間`;
+    document.getElementById("metaline").innerHTML = `IL・IN・MI・OH・WI / 保存 <span class="mono">${f.signals_total.toLocaleString()}</span> 件・設備投資シグナル <span class="mono">${f.targets}</span> 件・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     renderFilters(); render(); renderScope();
   }catch(err){
     document.getElementById("metaline").textContent = "データの読み込みに失敗しました(" + err.message + ")。";
