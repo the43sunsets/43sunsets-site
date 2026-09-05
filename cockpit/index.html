@@ -97,10 +97,10 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
     <div class="dateline"><span class="ed" id="edition">読み込み中…</span><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(毎日 07:00 CT)"></div><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div></div>
   </div>
   <div class="rule"></div>
-  <div class="sec"><h2>今週の動き</h2><span id="picks-sub">この 3 か月で、中西部の工場が何に金を使ったか。5 つだけ。</span></div>
+  <div class="sec"><h2>今週の動き</h2><span id="picks-sub">この 3 か月で、中西部の工場が何に投資したか。</span></div>
   <div class="picks" id="picks"></div>
   <div class="rule"></div>
-  <div class="sec"><h2>景況の帯</h2><span>中西部の工場が設備に金を使う気分か。連銀の公開データ 10 本を毎日。</span></div>
+  <div class="sec"><h2>景況の帯</h2><span>中西部の製造業が設備投資に前向きかどうか。連銀の公開データ 10 本を毎日更新。</span></div>
   <div id="ai"></div>
   <div class="macro" id="macro"></div>
   <div class="rule"></div>
@@ -111,7 +111,7 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
   </div>
   <p class="note">取れている範囲と鮮度は <a href="freshness/">データの鮮度と網羅</a> で毎日公開しています。本面は 5 州の悉皆ではありません。</p>
 </main>
-<footer>43 Sunsets Cockpit(BETA)— 公的記録から中西部の設備投資シグナルを検出する無料の面。出典: 各市・州の建設許可の公開記録、オハイオ州務長官 UCC 公開検索、セントルイス連銀 FRED。事実欄は記録の逐語、推論欄は当社 AI の読み(必ず「AI 推論」の札)。情報の正確性・完全性を保証するものではなく、投資・法務等の助言でもありません。個人名義の記録は個人名を表示しません。ご意見・掲載に関するご連絡は <span class="mono">hello@43sunsets.com</span> まで。© 43 Sunsets</footer>
+<footer>43 Sunsets Cockpit(BETA)— 公的記録から中西部の設備投資シグナルを検出する無料の面。出典: 各市・州の建設許可の公開記録、オハイオ州務長官 UCC 公開検索、セントルイス連銀 FRED。事実欄は記録の逐語、AI が書いた文には必ず「AI のまとめ」の札。情報の正確性・完全性を保証するものではなく、投資・法務等の助言でもありません。個人名義の記録は個人名を表示しません。ご意見・掲載に関するご連絡は <span class="mono">hello@43sunsets.com</span> まで。© 43 Sunsets</footer>
 <script>
 function esc(v){ return String(v==null?"":v).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 function fmtCT(iso, withTime){ const d = new Date(iso); const o = {timeZone:"America/Chicago", year:"numeric", month:"2-digit", day:"2-digit"}; if(withTime) Object.assign(o,{hour:"2-digit",minute:"2-digit",hour12:false});
@@ -142,13 +142,13 @@ async function boot(){
     document.getElementById("ucc-upd").textContent = "更新 " + fmtCT(top.ucc_meta.generated_at, true);
   }catch(e){ document.getElementById("picks").innerHTML = `<div class="pick"><p>今週の動きを読み込めませんでした(${esc(e.message)})。</p></div>`; }
   try{ const m = await get("data/macro.json");
-    if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><span class="badge">AI 推論</span><div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は下の 10 本のみ</div></div></div>`;
+    if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><span class="badge">AI のまとめ</span><div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は下の 10 本のみ</div></div></div>`;
     document.getElementById("macro").innerHTML = m.tiles.map(tileHtml).join(""); }
   catch(e){ document.getElementById("macro").innerHTML = `<div class="tile"><div class="n">景況の帯を読み込めませんでした(${esc(e.message)})</div></div>`; }
 }
 boot();
 </script>
-<script src="/cockpit/assets/health.js" defer></script>
-<script src="/cockpit/assets/hit.js" defer></script>
+<script src="/cockpit/assets/health.js?v=20260905b" defer></script>
+<script src="/cockpit/assets/hit.js?v=20260905b" defer></script>
 </body>
 </html>
