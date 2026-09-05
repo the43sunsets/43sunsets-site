@@ -170,6 +170,13 @@ a{color:var(--ai-accent);}
 .hb.hb-fail .hb-dot{background:var(--stamp);} .hb.hb-fail{border-color:var(--stamp); color:var(--stamp);} .hb.hb-fail .hb-k{color:var(--stamp);}
 @keyframes hbpulse{0%{box-shadow:0 0 0 0 rgba(46,110,78,.45)} 70%{box-shadow:0 0 0 7px rgba(46,110,78,0)} 100%{box-shadow:0 0 0 0 rgba(46,110,78,0)}}
 @media (max-width:820px){ .hb .hb-txt{max-width:46vw; overflow:hidden; text-overflow:ellipsis;} }
+
+/* ---- 期間の段(9/5 CEO 合意: 軸 = 申請日[無ければ発行日]・決め打ち・件数つき・既定 すべて) ---- */
+.seg{display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; background:var(--card);}
+.seg button{border:0; background:transparent; color:var(--sub); font:inherit; font-size:12px; padding:5px 12px; cursor:pointer; white-space:nowrap;}
+.seg button .cnt{font-family:"IBM Plex Mono",ui-monospace,monospace; margin-left:5px; color:var(--sub); font-size:11px;}
+.seg button.cur{background:var(--ink); color:var(--card);} .seg button.cur .cnt{color:var(--card);}
+.toolbar .left{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
 </style>
 </head>
 <body>
@@ -222,9 +229,10 @@ a{color:var(--ai-accent);}
 
 <main>
   <div class="toolbar">
-    <div>
+    <div class="left">
       <span class="hitcount"><span class="num" id="hitnum">0</span> 件</span>
       <span class="hitsub" id="hitsub"></span>
+      <div class="seg" id="seg-period" title="期間 = 申請日(無い源は発行日)。件数は他のフィルタ適用後"></div>
     </div>
     <button class="exportbtn" id="export">CSV エクスポート</button>
   </div>
@@ -268,6 +276,11 @@ const PAGE_SIZE = 8;
 let page = 1;
 
 const sel = {state:new Set(), category:new Set(), industry:new Set()};
+const PERIODS = [["90d","直近 90 日",90],["1y","直近 1 年",365],["2y","直近 2 年",730],["all","すべて",null]];
+let period = "all";
+const cutoff = days => { if(!days) return null; return new Date(Date.now() - days*864e5).toISOString().slice(0,10); };
+const axisDate = s => s.applied || s.date || "";
+function inPeriod(s, p){ const c = cutoff((PERIODS.find(x=>x[0]===p)||[])[2]); return !c || (axisDate(s) >= c); }
 
 function visibleBase(){
   const unc = document.getElementById("showunc").checked;
@@ -283,11 +296,21 @@ function countBy(field){
     if(field!=="category" && sel.category.size && !sel.category.has(s.category)) continue;
     if(field!=="industry" && sel.industry.size && !sel.industry.has(s.industry)) continue;
     if(jp && !s.jp) continue;
+    if(!inPeriod(s, period)) continue;
     c[s[field]] = (c[s[field]]||0)+1;
   }
   return c;
 }
+function refreshPeriod(){
+  const jp = document.getElementById("jponly").checked;
+  const base = visibleBase().filter(s=> (sel.state.size===0||sel.state.has(s.state)) && (sel.category.size===0||sel.category.has(s.category)) && (sel.industry.size===0||sel.industry.has(s.industry)) && (!jp||s.jp));
+  const seg = document.getElementById("seg-period");
+  if(!seg.children.length){ seg.innerHTML = PERIODS.map(([k,l])=>`<button type="button" data-p="${k}">${l}<span class="cnt">0</span></button>`).join("");
+    seg.querySelectorAll("button").forEach(b=>b.addEventListener("click", ()=>{ period = b.dataset.p; page = 1; render(); })); }
+  seg.querySelectorAll("button").forEach(b=>{ b.querySelector(".cnt").textContent = base.filter(s=>inPeriod(s, b.dataset.p)).length; b.classList.toggle("cur", b.dataset.p===period); });
+}
 function refreshCounts(){
+  refreshPeriod();
   for(const field of ["state","category","industry"]){
     const counts = countBy(field);
     document.querySelectorAll(`.fitem input[data-field="${field}"]`).forEach(cb=>{
@@ -328,7 +351,7 @@ function filtered(){
     (sel.state.size===0    || sel.state.has(s.state)) &&
     (sel.category.size===0 || sel.category.has(s.category)) &&
     (sel.industry.size===0 || sel.industry.has(s.industry)) &&
-    (!jp || s.jp)
+    (!jp || s.jp) && inPeriod(s, period)
   ).sort((a,b)=> b.date.localeCompare(a.date));
 }
 function fmtUsd(v){ return v==null ? "" : "$"+v.toLocaleString("en-US"); }
@@ -444,7 +467,7 @@ document.getElementById("showunc").addEventListener("change", async ()=>{
   page=1; renderFilters(); render();
 });
 document.getElementById("clear").addEventListener("click", ()=>{
-  for(const k in sel) sel[k].clear();
+  for(const k in sel) sel[k].clear(); period = "all";
   document.querySelectorAll('.fitem input').forEach(cb=>cb.checked=false);
   page = 1; render();
 });
