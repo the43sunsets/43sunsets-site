@@ -1,0 +1,2312 @@
+{
+"meta": {
+"generated_at": "2026-09-05T17:17:07+00:00",
+"states": [
+"OH"
+],
+"funnel": {
+"filings_total": 752,
+"with_collateral": 439,
+"read": 40,
+"unread": 399,
+"no_text_yet": 313,
+"by_kind": {
+"設備投資": 40
+}
+},
+"makers_searched": {
+"MAZAK": 295,
+"TRUMPF": 270,
+"MAKINO": 76,
+"MIDWEST MANUFACTURING RESOURCES": 72,
+"NUMEREQUIP": 24,
+"HARTWIG": 10,
+"KUBOTA": 3,
+"BYSTRONIC": 2
+},
+"kind_order": [
+"設備投資",
+"与信枠の新設",
+"資金繰り警戒",
+"完済・解消",
+"雑音",
+"未分類"
+],
+"policy": {
+"id": "ucc-v0-2026-09-05-original-with-collateral",
+"text": "担保権者名(機械メーカー)で検索した Original 登記のうち、書類のテキスト層から担保物の逐語が取れたものを AI が読む。"
+},
+"reader": "Claude Sonnet 5(Batch API・ucc-v0・2026-09-05〜)",
+"new_rule": "提出日が書き出し日から 90 日以内"
+},
+"signals": [
+{
+"id": "U-539",
+"state": "OH",
+"company": "BLUE CHIP TOOL, INC.",
+"entity_type": "corp",
+"city": "CINCINNATI, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "356793",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-09-04",
+"lapse": "2031-09-04",
+"new": true,
+"summary": "BLUE CHIP TOOL, INC.(Cincinnati, OH)が Mazak Corporation を担保権者として MAZAK MACHINE(製番 356793)を登記(2026-09-04)。",
+"infer": "工作機械の新規導入・生産能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00301520561 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-264",
+"state": "OH",
+"company": "Staber Industries, Inc.",
+"entity_type": "corp",
+"city": "Groveport, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruBend 3130 (3.2m) (B38)",
+"serial": "B2202L0005",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-08-24",
+"lapse": "2031-08-24",
+"new": true,
+"summary": "Staber Industries, Inc.(Groveport, OH)が TRUMPF Inc. を担保権者として TruBend 3130 (3.2m) ベンディングマシン 1 台(製番 B2202L0005)を登記(2026-08-24)。",
+"infer": "板金加工ラインの曲げ工程強化の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00301218944 Original",
+"verbatim": "One (1) new TRUMPF TruBend 3130 (3.2m) (B38) Machine, Serial Number B2202L0005",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-262",
+"state": "OH",
+"company": "Hynes Industries, Inc.",
+"entity_type": "corp",
+"city": "Youngstown, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruLaser Tube 7000 fiber 12.5 m (T12) Machine with Transfluid - Fanuc Robotic Stacking solution",
+"serial": "A2441L0035",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-08-19",
+"lapse": "2031-08-19",
+"new": true,
+"summary": "Hynes Industries, Inc.(Youngstown, OH)が TRUMPF Inc. を担保権者として TruLaser Tube 7000 fiber 12.5 m (T12) チューブレーザー加工機(Transfluid - Fanuc ロボットスタッキングソリューション付)1台(製番 A2441L0035)を登記(2026-08-19)。",
+"infer": "パイプ・チューブ加工能力の増強、自動化ラインの新設の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00301127153 Original",
+"verbatim": "One (1) new TRUMPF TruLaser Tube 7000 fiber 12.5 m (T12) Machine with Transfluid - Fanuc Robotic Stacking solution, Serial Number A2441L0035",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-638",
+"state": "OH",
+"company": "VELOCITY CONCEPT DEVELOPMENT GROUP, LLC",
+"entity_type": "corp",
+"city": "MASON, OH",
+"secured_party": "MAKINO INC.",
+"secured_party_city": "MASON, OH",
+"maker_query": "MAKINO",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAKINO",
+"model": null,
+"serial": "E050056",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-08-18",
+"lapse": "2031-08-18",
+"new": true,
+"summary": "VELOCITY CONCEPT DEVELOPMENT GROUP, LLC(Mason, OH)が MAKINO INC. を担保権者として MAKINO 製工作機械 1 台(製番 E050056)を登記(2026-08-18)。設備設置場所は Cambridge, Ohio。",
+"infer": "Cambridge, Ohio 拠点への新規設備導入または加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00301099354 Original",
+"verbatim": "ONE (1) MAKINO MACHINE WITH SERIAL NUMBER: E050056, ALONG WITH ALL ATTACHMENTS AND ACCESSORIES. EQUIPMENT LOCATION: 9344 SUNRISE ROAD, CAMBRIDGE, OHIO 43725.",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-530",
+"state": "OH",
+"company": "ARIEL CORPORATION",
+"entity_type": "corp",
+"city": "MOUNT VERNON, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "365844",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-08-13",
+"lapse": "2031-08-13",
+"new": true,
+"summary": "ARIEL CORPORATION(Mount Vernon, OH)が Mazak Corporation を担保権者として MAZAK 製工作機械 1 台(製番 365844)を登記(2026-08-13)。",
+"infer": "工作機械の新規導入または更新の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00300841176 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-260",
+"state": "OH",
+"company": "Hickey Metal Fabrication and Roofing Co.",
+"entity_type": "corp",
+"city": "Salem, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruLaser Tube 7000 (T12)",
+"serial": "A2441L0031",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-08-10",
+"lapse": "2031-08-10",
+"new": true,
+"summary": "Hickey Metal Fabrication and Roofing Co.(Salem, OH)が TRUMPF Inc. を担保権者として TruLaser Tube 7000 (T12) 機 1 台(製番 A2441L0031、設置先: Ohio Laser, Plain City, OH)を登記(2026-08-10)。",
+"infer": "チューブレーザー加工能力の増強、または関連会社 Ohio Laser への設備導入の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00300741053 Original",
+"verbatim": "One (1) new TRUMPF TruLaser Tube 7000 (T12) Machine, Serial Number A2441L0031 Installation Address: Ohio Laser; 8400 Rausch Drive; Plain City, OH 43064",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-258",
+"state": "OH",
+"company": "Last Arrow Manufacturing",
+"entity_type": "corp",
+"city": "Orrvile, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruBend 5320 (B23)",
+"serial": "B1509I0604",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-07-27",
+"lapse": "2031-07-27",
+"new": true,
+"summary": "Last Arrow Manufacturing(Orrville, OH)が TRUMPF Inc. を担保権者として TruBend 5320 (B23) ベンディングマシン 1 台(製番 B1509I0604)を登記(2026-07-27)。",
+"infer": "板金加工における曲げ加工能力の増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00300415032 Original",
+"verbatim": "One (1) TRUMPF TruBend 5320 (B23) Machine, Serial Number B1509I0604",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-752",
+"state": "OH",
+"company": "Kinetic Vision",
+"entity_type": "corp",
+"city": "10651 Aerohub Blvd., Cincinnati, OHIO, 45215, United States",
+"secured_party": "Midwest Manufacturing Resources, Inc.",
+"secured_party_city": "1993 Case Parkway North, Twinsburg, OHIO, 44087, United States",
+"maker_query": "MIDWEST MANUFACTURING RESOURCES",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "other",
+"lender_label": "その他",
+"equipment": [
+{
+"maker": "HAAS",
+"model": "TL-2P",
+"serial": "3134861",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-07-24",
+"lapse": "2031-07-24",
+"new": true,
+"summary": "Kinetic Vision(Cincinnati, OH)が Midwest Manufacturing Resources, Inc. を担保権者として HAAS TL-2P 旋盤 1 台(製番 3134861)を登記(2026-07-24)。",
+"infer": "加工能力の増強・新規設備導入の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00300382172 Original",
+"verbatim": "HAAS TL-2P (SN #3134861)",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-564",
+"state": "OH",
+"company": "FAXON MACHINING, LLC",
+"entity_type": "corp",
+"city": "Cincinnati, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "365685",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-07-20",
+"lapse": "2031-07-20",
+"new": true,
+"summary": "FAXON MACHINING, LLC(Cincinnati, OH)が Mazak Corporation を担保権者として MAZAK 製工作機械(製番 365685)を登記(2026-07-20)。",
+"infer": "機械加工能力の増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00300244928 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-562",
+"state": "OH",
+"company": "XTEK, INC",
+"entity_type": "corp",
+"city": "CINCINNATI, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "370368",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-07-09",
+"lapse": "2031-07-09",
+"new": true,
+"summary": "XTEK, INC(Cincinnati, OH)が Mazak Corporation を担保権者として MAZAK MACHINE(製番 370368)を登記(2026-07-09)。",
+"infer": "工作機械の新規導入・加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00300038597 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-256",
+"state": "OH",
+"company": "LASERCRAFT INC.",
+"entity_type": "corp",
+"city": "North Ridgeville, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruBend 1150 (B45)",
+"serial": "B0121R0011",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-07-09",
+"lapse": "2031-07-09",
+"new": true,
+"summary": "LASERCRAFT INC.(North Ridgeville, OH)が TRUMPF Inc. を担保権者として TruBend 1150 (B45) ベンディングマシン 1 台(製番 B0121R0011)を登記(2026-07-09)。",
+"infer": "板金曲げ加工能力の増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00300036573 Original",
+"verbatim": "One (1) new TRUMPF TruBend 1150 (B45) Machine, Serial Number B0121R0011",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-558",
+"state": "OH",
+"company": "FAXON MACHINING, LLC",
+"entity_type": "corp",
+"city": "Cincinnati, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "370950",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-07-06",
+"lapse": "2031-07-06",
+"new": true,
+"summary": "FAXON MACHINING, LLC(Cincinnati, OH)が Mazak Corporation を担保権者として MAZAK MACHINE(製番 370950)を登記(2026-07-06)。",
+"infer": "工作機械の新規導入による加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299955103 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-254",
+"state": "OH",
+"company": "Coulter ventures, LLC dba Rogue Fitness",
+"entity_type": "corp",
+"city": "Columbus, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruLaser Tube 5000 fiber (T11)",
+"serial": "A3440D0096",
+"qty": 1
+},
+{
+"maker": "TRUMPF",
+"model": "TruLaser Tube 5000 fiber (T11)",
+"serial": "A3440D0098",
+"qty": 1
+},
+{
+"maker": "TRUMPF",
+"model": "TruLaser fiber 5030 (L76)",
+"serial": "A3231L0155",
+"qty": 1
+}
+],
+"industry": "その他製造",
+"jp": false,
+"confidence": "high",
+"date": "2026-06-30",
+"lapse": "2031-06-30",
+"new": true,
+"summary": "Coulter ventures, LLC dba Rogue Fitness(Columbus, OH)が TRUMPF Inc. を担保権者として TruLaser Tube 5000 fiber (T11) 2台・TruLaser fiber 5030 (L76) 1台を登記(2026-06-30)。",
+"infer": "フィットネス器具製造向けチューブ・板金レーザー加工ラインの増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299829328 Original",
+"verbatim": "One (1) new TRUMPF TruLaser Tube 5000 fiber (T11) Machine, Serial Number A3440D0096 One (1) new TRUMPF TruLaser Tube 5000 fiber (T11) Machine, Serial Number A3440D0098 One (1) new TRUMPF TruLaser Laser fiber 5030 (L76) Machine, Serial Number A3231L0155 Installation Address: 511 East 5th Avenue, Columbus, OH 43201 USA",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-557",
+"state": "OH",
+"company": "Fluid Handling, LLC / Material Management Services, Inc.",
+"entity_type": "corp",
+"city": "Cheektowaga, NY",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "370960",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-06-29",
+"lapse": "2031-06-29",
+"new": true,
+"summary": "Fluid Handling, LLC 及び Material Management Services, Inc.(Cheektowaga, NY)が Mazak Corporation を担保権者として MAZAK MACHINE(製番 370960)を登記(2026-06-29)。",
+"infer": "工作機械の新規導入による加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299787570 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-555",
+"state": "OH",
+"company": "QP MFG GROUP LLC",
+"entity_type": "corp",
+"city": "CHARDON, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "370788",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-06-25",
+"lapse": "2031-06-25",
+"new": true,
+"summary": "QP MFG GROUP LLC(Chardon, OH)が Mazak Corporation を担保権者として MAZAK 製工作機械(製番 370788)を登記(2026-06-25)。",
+"infer": "工作機械導入による加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299693086 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-636",
+"state": "OH",
+"company": "J M MOLD SOUTH, INC.",
+"entity_type": "corp",
+"city": "EASLEY, SC",
+"secured_party": "MAKINO INC.",
+"secured_party_city": "MASON, OH",
+"maker_query": "MAKINO",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAKINO",
+"model": null,
+"serial": "V221210",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-06-25",
+"lapse": "2031-06-25",
+"new": true,
+"summary": "J M MOLD SOUTH, INC.(Easley, SC)が MAKINO INC. を担保権者として MAKINO 製機械 1 台(製番 V221210)を登記(2026-06-25)。",
+"infer": "金型加工設備の更新・増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299690616 Original",
+"verbatim": "ONE (1) MAKINO MACHINE WITH SERIAL NUMBER: V221210, ALONG WITH ALL ATTACHMENTS AND ACCESSORIES.",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-251",
+"state": "OH",
+"company": "Last Arrow Manufacturing, LLC",
+"entity_type": "corp",
+"city": "Orrville, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruLaser 5030 fiber (L76)",
+"serial": "A3231L0150",
+"qty": 1
+},
+{
+"maker": "TRUMPF",
+"model": "LiftMaster Compact",
+"serial": "N1063L0402",
+"qty": 1
+},
+{
+"maker": "TRUMPF",
+"model": "TruStore 3030 (A22)",
+"serial": "C3030L0015",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-06-19",
+"lapse": "2031-06-19",
+"new": true,
+"summary": "Last Arrow Manufacturing, LLC(Orrville, OH)が TRUMPF Inc. を担保権者として TruLaser 5030 fiber レーザー加工機 1 台(製番 A3231L0150)、LiftMaster Compact(製番 N1063L0402)、TruStore 3030(製番 C3030L0015)を登記(2026-06-19、設置先 Wooster, Ohio)。",
+"infer": "板金加工ラインの新設・増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299550004 Original",
+"verbatim": "One (1) new TRUMPF TruLaser 5030 fiber (L76) Machine, Serial Number A3231L0150 with the LiftMaster Compact_N1063L0402 and TruStore 3030 (A22)_C3030L0015 Installation Address: 1785 N. Geyers Chapel Rd, Wooster, Ohio 44691",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-248",
+"state": "OH",
+"company": "Hidaka USA, Inc.",
+"entity_type": "corp",
+"city": "Dublin, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruLaser 1030 fiber",
+"serial": "A1217L0262",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": true,
+"confidence": "high",
+"date": "2026-06-17",
+"lapse": "2031-06-17",
+"new": true,
+"summary": "Hidaka USA, Inc.(Dublin, OH)が TRUMPF Inc. を担保権者として TruLaser 1030 fiber レーザー加工機 1 台(製番 A1217L0262)を登記(2026-06-17)。",
+"infer": "日系部品メーカーによる板金加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299490581 Original",
+"verbatim": "One (1) new TRUMPF TruLaser 1030 fiber machine, serial number A1217L0262",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-553",
+"state": "OH",
+"company": "THE DRIVESHAFT SHOP, LLC",
+"entity_type": "corp",
+"city": "SALISBURY, NC",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "370388",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-06-11",
+"lapse": "2031-06-11",
+"new": true,
+"summary": "THE DRIVESHAFT SHOP, LLC(Salisbury, NC)が Mazak Corporation を担保権者として MAZAK 製工作機械(製番 370388)を登記(2026-06-11)。",
+"infer": "駆動系部品加工の生産能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299352660 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-551",
+"state": "OH",
+"company": "WRIGHT TOOL COMPANY",
+"entity_type": "corp",
+"city": "BARBERTON, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "370724",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-06-05",
+"lapse": "2031-06-05",
+"new": false,
+"summary": "WRIGHT TOOL COMPANY(Barberton, OH)が Mazak Corporation を担保権者として MAZAK 製工作機械(製番 370724)を登記(2026-06-05)。",
+"infer": "工具製造ラインの設備更新・増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299220045 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-548",
+"state": "OH",
+"company": "Anchor Flange Company",
+"entity_type": "corp",
+"city": "Cincinnati, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "363294",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-06-05",
+"lapse": "2031-06-05",
+"new": false,
+"summary": "Anchor Flange Company(Cincinnati, OH)が Mazak Corporation を担保権者として MAZAK 製機械(製番 363294)を登記(2026-06-05)。",
+"infer": "工作機械の新規導入による加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299212270 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-245",
+"state": "OH",
+"company": "Harris Welding and Machine Company",
+"entity_type": "corp",
+"city": "Ashland, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruMatic 5000 fiber (K11)",
+"serial": "A0101D0117",
+"qty": 1
+},
+{
+"maker": "TRUMPF",
+"model": "Sheetmaster",
+"serial": "N2112G0117",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-29",
+"lapse": "2031-05-29",
+"new": false,
+"summary": "Harris Welding and Machine Company(Ashland, OH)が TRUMPF Inc. を担保権者として TruMatic 5000 fiber (K11) 機械 1 台(製番 A0101D0117)と Sheetmaster 機械 1 台(製番 N2112G0117)を登記(2026-05-29)。",
+"infer": "板金加工能力の増強・自動化ラインの新設の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00299018107 Original",
+"verbatim": "One (1) new TRUMPF TruMatic 5000 fiber (K11) Machine, Serial Number A0101D0117 One (1) new TRUMPF Sheetmaster Machine, Serial Number N2112G0117",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-242",
+"state": "OH",
+"company": "Codonics, Inc",
+"entity_type": "corp",
+"city": "Middleburg Heights, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruBend 7036 (B28)",
+"serial": "B1702I0480",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-28",
+"lapse": "2031-05-28",
+"new": false,
+"summary": "Codonics, Inc(Middleburg Heights, OH)が TRUMPF Inc. を担保権者として TruBend 7036 (B28) ベンディングマシン 1 台(製番 B1702I0480)を登記(2026-05-28)。",
+"infer": "板金加工・曲げ工程の増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298991865 Original",
+"verbatim": "One (1) TRUMPF TruBend 7036 (B28) machine, serial number B1702I0480",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-545",
+"state": "OH",
+"company": "King Luminaire Company, Inc.",
+"entity_type": "corp",
+"city": "Jefferson, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "367137",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-28",
+"lapse": "2031-05-28",
+"new": false,
+"summary": "King Luminaire Company, Inc.(Jefferson, OH)が Mazak Corporation を担保権者として MAZAK製機械1台(製番 367137)を登記(2026-05-28)。",
+"infer": "工作機械導入による加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298979263 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-542",
+"state": "OH",
+"company": "OEM Manufacturing, LLC",
+"entity_type": "corp",
+"city": "Moraine, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "370356",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-26",
+"lapse": "2031-05-26",
+"new": false,
+"summary": "OEM Manufacturing, LLC(Moraine, OH)が Mazak Corporation を担保権者として MAZAK 製工作機械(製番 370356)を登記(2026-05-26)。",
+"infer": "工作機械の新規導入による加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298924824 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-541",
+"state": "OH",
+"company": "OEM Manufacturing, LLC",
+"entity_type": "corp",
+"city": "Moraine, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "367196",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-26",
+"lapse": "2031-05-26",
+"new": false,
+"summary": "OEM Manufacturing, LLC(Moraine, OH)が Mazak Corporation を担保権者として MAZAK MACHINE(製番367196)を登記(2026-05-26)。",
+"infer": "工作機械の新規導入による加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298924268 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-537",
+"state": "OH",
+"company": "Precision Details, Inc.",
+"entity_type": "corp",
+"city": "Jackson Center, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "370335",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-22",
+"lapse": "2031-05-22",
+"new": false,
+"summary": "Precision Details, Inc.(Jackson Center, OH)が Mazak Corporation を担保権者として MAZAK MACHINE(製番 370335)を登記(2026-05-22)。",
+"infer": "工作機械の新規導入・生産能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298878461 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-534",
+"state": "OH",
+"company": "HICKOK WAEKON, LLC",
+"entity_type": "corp",
+"city": "GREENWOOD, MS",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "367184",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-20",
+"lapse": "2031-05-20",
+"new": false,
+"summary": "HICKOK WAEKON, LLC(Greenwood, MS)が Mazak Corporation を担保権者として MAZAK MACHINE(製番 367184)を登記(2026-05-20)。",
+"infer": "工作機械導入による加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298800852 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-634",
+"state": "OH",
+"company": "PARKER HANNIFIN CORPORATION",
+"entity_type": "corp",
+"city": "GREENVILLE, TN",
+"secured_party": "MAKINO INC.",
+"secured_party_city": "MASON, OH",
+"maker_query": "MAKINO",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAKINO",
+"model": null,
+"serial": "2916",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-20",
+"lapse": "2031-05-20",
+"new": false,
+"summary": "PARKER HANNIFIN CORPORATION(Greenville, TN)が MAKINO INC. を担保権者として MAKINO 製工作機械 1 台(製番 2916)を登記(2026-05-20)。",
+"infer": "工場の加工設備更新・増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298784533 Original",
+"verbatim": "ONE (1) MAKINO MACHINE WITH SERIAL NUMBER: 2916, ALONG WITH ALL ATTACHMENTS AND ACCESSORIES.",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-270",
+"state": "OH",
+"company": "LINCOLN ELECTRIC AUTOMATION, INC.",
+"entity_type": "corp",
+"city": "Fort Loramie, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruFiber 8001",
+"serial": "L6635M0045",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-18",
+"lapse": "2031-05-18",
+"new": false,
+"summary": "LINCOLN ELECTRIC AUTOMATION, INC.(Fort Loramie, OH)が TRUMPF Inc. を担保権者として TruFiber 8001 マシン 1 台(製番 L6635M0045)を登記(2026-05-18)。",
+"infer": "レーザー加工・溶接関連の生産能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298728060 Original",
+"verbatim": "One TRUMPF TruFiber 8001 Machine serial number L6635M0045 .",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-269",
+"state": "OH",
+"company": "Enterprise Welding And Fabricating, Inc",
+"entity_type": "corp",
+"city": "Mentor, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruMatic 5000 fiber (K11) LF Machine with SheetMaster",
+"serial": "A0101D0118",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-13",
+"lapse": "2031-05-13",
+"new": false,
+"summary": "Enterprise Welding And Fabricating, Inc(Mentor, OH)が TRUMPF Inc. を担保権者として TruMatic 5000 fiber (K11) LF Machine with SheetMaster 1台(製番 A0101D0118)を登記(2026-05-13)。",
+"infer": "板金加工能力の増強・新規ライン導入の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298629060 Original",
+"verbatim": "One (1) new TRUMPF TruMatic 5000 fiber (K11) LF Machine, Serial Number A0101D0118 with SheetMaster.",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-531",
+"state": "OH",
+"company": "CONCEPT MACHINE & TOOL, LLC",
+"entity_type": "corp",
+"city": "Covington, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAZAK",
+"model": null,
+"serial": "363046",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-08",
+"lapse": "2031-05-08",
+"new": false,
+"summary": "CONCEPT MACHINE & TOOL, LLC(Covington, OH)が Mazak Corporation を担保権者として MAZAK MACHINE(製番 363046)を登記(2026-05-08)。",
+"infer": "工作機械の新規導入による加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298516011 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-268",
+"state": "OH",
+"company": "Ripley Metalworks, LLC",
+"entity_type": "corp",
+"city": "Ripley, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruBend 5170 (B23)",
+"serial": "B1505I0970",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-08",
+"lapse": "2031-05-08",
+"new": false,
+"summary": "Ripley Metalworks, LLC(Ripley, OH)が TRUMPF Inc. を担保権者として TruBend 5170 (B23) ベンディングマシン 1 台(製番 B1505I0970)を登記(2026-05-08)。",
+"infer": "板金加工ラインの増強・新設の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298507012 Original",
+"verbatim": "One (1) new TRUMPF TruBend 5170 (B23) Machine, Serial Number B1505I0970",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-267",
+"state": "OH",
+"company": "Laser Craft, Inc.,",
+"entity_type": "corp",
+"city": "North Ridgeville, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruMatic 5000 fiber (K11) LF with SheetMaster",
+"serial": "A0101D0120",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-05-06",
+"lapse": "2031-05-06",
+"new": false,
+"summary": "Laser Craft, Inc.(North Ridgeville, OH)が TRUMPF Inc. を担保権者として TruMatic 5000 fiber (K11) LF Machine(SheetMaster付き)1台(製番 A0101D0120)を登記(2026-05-06)。",
+"infer": "板金加工・打ち抜き加工能力の増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298459968 Original",
+"verbatim": "One (1) new TRUMPF TruMatic 5000 fiber (K11) LF Machine, Serial Number A0101D0120 with SheetMaster.",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-266",
+"state": "OH",
+"company": "Technibus, Inc.",
+"entity_type": "corp",
+"city": "Canton, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruBend 1225",
+"serial": "B0122R0010",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-04-30",
+"lapse": "2031-04-30",
+"new": false,
+"summary": "Technibus, Inc.(Canton, OH)が TRUMPF Inc. を担保権者として TruBend 1225 ベンディングマシン 1 台(製番 B0122R0010)を登記(2026-04-30)。",
+"infer": "板金加工の曲げ工程増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298278621 Original",
+"verbatim": "One (1) TRUMPF TruBend 1225 machine, serial number B0122R0010",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-265",
+"state": "OH",
+"company": "Hickey Metal Fabrication and Roofing Co.",
+"entity_type": "corp",
+"city": "Salem, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruBend 1225 (B45)",
+"serial": "B0122R0023",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-04-28",
+"lapse": "2031-04-28",
+"new": false,
+"summary": "Hickey Metal Fabrication and Roofing Co.(Salem, OH)が TRUMPF Inc. を担保権者として TruBend 1225 (B45) ベンディングマシン 1 台(製番 B0122R0023)を登記(2026-04-28)。設備は Ohio Laser Inc.(Columbus, OH)の拠点に設置予定。",
+"infer": "板金加工の外部委託先(Ohio Laser)での曲げ加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298205284 Original",
+"verbatim": "One (1) new TRUMPF TruBend 1225 (B45) Machine, Serial Number B0122R0023 Equipment will be located at Ohio Laser Inc., 8260 Estate Parkway, Columbus, OH, 43064.",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-263",
+"state": "OH",
+"company": "Bard Manufacturing Company, Inc.",
+"entity_type": "corp",
+"city": "Bryan, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruBend Cell 7000",
+"serial": "B0403A0418",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-04-22",
+"lapse": "2031-04-22",
+"new": false,
+"summary": "Bard Manufacturing Company, Inc.(Bryan, OH)が TRUMPF Inc. を担保権者として TruBend Cell 7000 ベンディングセル 1 台(製番 B0403A0418)を登記(2026-04-22)。",
+"infer": "板金曲げ加工能力の増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298069375 Original",
+"verbatim": "One (1) new TRUMPF TruBend Cell 7000 machine serial number B0403A0418",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-261",
+"state": "OH",
+"company": "Precision Laser and Forming, Inc.",
+"entity_type": "corp",
+"city": "Leipsic, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruLaser 3030 fiber",
+"serial": "A2221L0179",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-04-22",
+"lapse": "2031-04-22",
+"new": false,
+"summary": "Precision Laser and Forming, Inc.(Leipsic, OH)が TRUMPF Inc. を担保権者として TruLaser 3030 fiber レーザー加工機 1 台(製番 A2221L0179)を登記(2026-04-22)。",
+"infer": "板金加工能力の増強・稼働開始の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298067684 Original",
+"verbatim": "One (1) new TRUMPF TruLaser 3030 fiber machine, serial number A2221L0179",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-259",
+"state": "OH",
+"company": "Staber Industries Inc.",
+"entity_type": "corp",
+"city": "Groveport, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"model": "TruArc Weld 1000",
+"serial": "A0459L0146",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-04-21",
+"lapse": "2031-04-21",
+"new": false,
+"summary": "Staber Industries Inc.(Groveport, OH)が TRUMPF Inc. を担保権者として TruArc Weld 1000 溶接機 1 台(製番 A0459L0146)を登記(2026-04-21)。",
+"infer": "溶接工程の自動化・増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00298025171 Original",
+"verbatim": "One (1) TRUMPF TruArc Weld 1000 machine, serial number A0459L0146",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
+"id": "U-632",
+"state": "OH",
+"company": "PARKER HANNIFIN CORPORATION",
+"entity_type": "corp",
+"city": "IRVINE, CA",
+"secured_party": "MAKINO INC.",
+"secured_party_city": "MASON, OH",
+"maker_query": "MAKINO",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "MAKINO",
+"model": null,
+"serial": "W151540",
+"qty": 1
+}
+],
+"industry": "機械・金属",
+"jp": false,
+"confidence": "high",
+"date": "2026-04-16",
+"lapse": "2031-04-16",
+"new": false,
+"summary": "PARKER HANNIFIN CORPORATION(Irvine, CA)が MAKINO INC. を担保権者として MAKINO 製工作機械 1 台(製番 W151540)を登記(2026-04-16)。",
+"infer": "工作機械の新規導入による加工能力増強の可能性(推論)。",
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00297914913 Original",
+"verbatim": "ONE (1) MAKINO MACHINE WITH SERIAL NUMBER: W151540, ALONG WITH ALL ATTACHMENTS AND ACCESSORIES.",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+}
+],
+"companies": [
+{
+"id": "UC-7",
+"name": "Last Arrow Manufacturing",
+"city": "Orrvile, OH",
+"filings": 2,
+"equipment": 4,
+"kinds": {
+"設備投資": 2
+},
+"latest": "2026-07-27",
+"jp": false,
+"card_ids": [
+"U-258",
+"U-251"
+]
+},
+{
+"id": "UC-12",
+"name": "Coulter ventures, LLC dba Rogue Fitness",
+"city": "Columbus, OH",
+"filings": 1,
+"equipment": 3,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-06-30",
+"jp": false,
+"card_ids": [
+"U-254"
+]
+},
+{
+"id": "UC-2",
+"name": "Staber Industries, Inc.",
+"city": "Groveport, OH",
+"filings": 2,
+"equipment": 2,
+"kinds": {
+"設備投資": 2
+},
+"latest": "2026-08-24",
+"jp": false,
+"card_ids": [
+"U-264",
+"U-259"
+]
+},
+{
+"id": "UC-6",
+"name": "Hickey Metal Fabrication and Roofing Co.",
+"city": "Salem, OH",
+"filings": 2,
+"equipment": 2,
+"kinds": {
+"設備投資": 2
+},
+"latest": "2026-08-10",
+"jp": false,
+"card_ids": [
+"U-260",
+"U-265"
+]
+},
+{
+"id": "UC-9",
+"name": "FAXON MACHINING, LLC",
+"city": "Cincinnati, OH",
+"filings": 2,
+"equipment": 2,
+"kinds": {
+"設備投資": 2
+},
+"latest": "2026-07-20",
+"jp": false,
+"card_ids": [
+"U-564",
+"U-558"
+]
+},
+{
+"id": "UC-23",
+"name": "OEM Manufacturing, LLC",
+"city": "Moraine, OH",
+"filings": 2,
+"equipment": 2,
+"kinds": {
+"設備投資": 2
+},
+"latest": "2026-05-26",
+"jp": false,
+"card_ids": [
+"U-542",
+"U-541"
+]
+},
+{
+"id": "UC-26",
+"name": "PARKER HANNIFIN CORPORATION",
+"city": "GREENVILLE, TN",
+"filings": 2,
+"equipment": 2,
+"kinds": {
+"設備投資": 2
+},
+"latest": "2026-05-20",
+"jp": false,
+"card_ids": [
+"U-634",
+"U-632"
+]
+},
+{
+"id": "UC-20",
+"name": "Harris Welding and Machine Company",
+"city": "Ashland, OH",
+"filings": 1,
+"equipment": 2,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-05-29",
+"jp": false,
+"card_ids": [
+"U-245"
+]
+},
+{
+"id": "UC-1",
+"name": "BLUE CHIP TOOL, INC.",
+"city": "CINCINNATI, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-09-04",
+"jp": false,
+"card_ids": [
+"U-539"
+]
+},
+{
+"id": "UC-3",
+"name": "Hynes Industries, Inc.",
+"city": "Youngstown, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-08-19",
+"jp": false,
+"card_ids": [
+"U-262"
+]
+},
+{
+"id": "UC-4",
+"name": "VELOCITY CONCEPT DEVELOPMENT GROUP, LLC",
+"city": "MASON, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-08-18",
+"jp": false,
+"card_ids": [
+"U-638"
+]
+},
+{
+"id": "UC-5",
+"name": "ARIEL CORPORATION",
+"city": "MOUNT VERNON, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-08-13",
+"jp": false,
+"card_ids": [
+"U-530"
+]
+},
+{
+"id": "UC-8",
+"name": "Kinetic Vision",
+"city": "10651 Aerohub Blvd., Cincinnati, OHIO, 45215, United States",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-07-24",
+"jp": false,
+"card_ids": [
+"U-752"
+]
+},
+{
+"id": "UC-10",
+"name": "XTEK, INC",
+"city": "CINCINNATI, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-07-09",
+"jp": false,
+"card_ids": [
+"U-562"
+]
+},
+{
+"id": "UC-11",
+"name": "LASERCRAFT INC.",
+"city": "North Ridgeville, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-07-09",
+"jp": false,
+"card_ids": [
+"U-256"
+]
+},
+{
+"id": "UC-13",
+"name": "Fluid Handling, LLC / Material Management Services, Inc.",
+"city": "Cheektowaga, NY",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-06-29",
+"jp": false,
+"card_ids": [
+"U-557"
+]
+},
+{
+"id": "UC-14",
+"name": "QP MFG GROUP LLC",
+"city": "CHARDON, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-06-25",
+"jp": false,
+"card_ids": [
+"U-555"
+]
+},
+{
+"id": "UC-15",
+"name": "J M MOLD SOUTH, INC.",
+"city": "EASLEY, SC",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-06-25",
+"jp": false,
+"card_ids": [
+"U-636"
+]
+},
+{
+"id": "UC-16",
+"name": "Hidaka USA, Inc.",
+"city": "Dublin, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-06-17",
+"jp": true,
+"card_ids": [
+"U-248"
+]
+},
+{
+"id": "UC-17",
+"name": "THE DRIVESHAFT SHOP, LLC",
+"city": "SALISBURY, NC",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-06-11",
+"jp": false,
+"card_ids": [
+"U-553"
+]
+},
+{
+"id": "UC-18",
+"name": "WRIGHT TOOL COMPANY",
+"city": "BARBERTON, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-06-05",
+"jp": false,
+"card_ids": [
+"U-551"
+]
+},
+{
+"id": "UC-19",
+"name": "Anchor Flange Company",
+"city": "Cincinnati, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-06-05",
+"jp": false,
+"card_ids": [
+"U-548"
+]
+},
+{
+"id": "UC-21",
+"name": "Codonics, Inc",
+"city": "Middleburg Heights, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-05-28",
+"jp": false,
+"card_ids": [
+"U-242"
+]
+},
+{
+"id": "UC-22",
+"name": "King Luminaire Company, Inc.",
+"city": "Jefferson, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-05-28",
+"jp": false,
+"card_ids": [
+"U-545"
+]
+},
+{
+"id": "UC-24",
+"name": "Precision Details, Inc.",
+"city": "Jackson Center, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-05-22",
+"jp": false,
+"card_ids": [
+"U-537"
+]
+},
+{
+"id": "UC-25",
+"name": "HICKOK WAEKON, LLC",
+"city": "GREENWOOD, MS",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-05-20",
+"jp": false,
+"card_ids": [
+"U-534"
+]
+},
+{
+"id": "UC-27",
+"name": "LINCOLN ELECTRIC AUTOMATION, INC.",
+"city": "Fort Loramie, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-05-18",
+"jp": false,
+"card_ids": [
+"U-270"
+]
+},
+{
+"id": "UC-28",
+"name": "Enterprise Welding And Fabricating, Inc",
+"city": "Mentor, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-05-13",
+"jp": false,
+"card_ids": [
+"U-269"
+]
+},
+{
+"id": "UC-29",
+"name": "CONCEPT MACHINE & TOOL, LLC",
+"city": "Covington, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-05-08",
+"jp": false,
+"card_ids": [
+"U-531"
+]
+},
+{
+"id": "UC-30",
+"name": "Ripley Metalworks, LLC",
+"city": "Ripley, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-05-08",
+"jp": false,
+"card_ids": [
+"U-268"
+]
+},
+{
+"id": "UC-31",
+"name": "Laser Craft, Inc.,",
+"city": "North Ridgeville, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-05-06",
+"jp": false,
+"card_ids": [
+"U-267"
+]
+},
+{
+"id": "UC-32",
+"name": "Technibus, Inc.",
+"city": "Canton, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-04-30",
+"jp": false,
+"card_ids": [
+"U-266"
+]
+},
+{
+"id": "UC-33",
+"name": "Bard Manufacturing Company, Inc.",
+"city": "Bryan, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-04-22",
+"jp": false,
+"card_ids": [
+"U-263"
+]
+},
+{
+"id": "UC-34",
+"name": "Precision Laser and Forming, Inc.",
+"city": "Leipsic, OH",
+"filings": 1,
+"equipment": 1,
+"kinds": {
+"設備投資": 1
+},
+"latest": "2026-04-22",
+"jp": false,
+"card_ids": [
+"U-261"
+]
+}
+]
+}

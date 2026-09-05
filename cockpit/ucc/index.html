@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中西部・設備投資検出面 — 動産担保登記(UCC) | 43 Sunsets Cockpit</title>
+<meta name="description" content="州務長官の UCC(動産担保)登記から、製造業の機械・設備の取得(購入・リース)を検出する実験面。オハイオ州から先行。">
+<link rel="canonical" href="https://43sunsets.com/cockpit/ucc/">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="中西部・設備投資検出面 — 動産担保登記(UCC)">
+<meta property="og:description" content="公的記録から設備投資の動きを検出。報道より早いターゲット発掘の材料に。">
+<meta property="og:url" content="https://43sunsets.com/cockpit/ucc/">
+<meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E;
+  --ai-accent:#2F5D8A; --line:#D9DDD9; --line-soft:#E7EAE6;
+  --fact:#2E6E4E; --fact-bg:#EEF5F0; --infer:#8A5A2F; --infer-bg:#F7F1E8; --infer-line:#D9C6A8;
+  --stamp:#B54434; --chip-bg:#EDF0F3;
+  --warn:#9A4A1F; --warn-bg:#F6EDE6;
+  --jp:#8A2F55; --jp-bg:#F5E9EF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#161A1F; --card:#1E242B; --ink:#E4E7EA; --sub:#9AA4AE;
+    --ai-accent:#7FA8D0; --line:#333B44; --line-soft:#2A313A;
+    --fact:#7CC49C; --fact-bg:#20302A; --infer:#D8A96B; --infer-bg:#332A1E; --infer-line:#5A4A32;
+    --stamp:#D07360; --chip-bg:#2A313A;
+    --warn:#D0885C; --warn-bg:#33261C;
+    --jp:#D07FA5; --jp-bg:#33202A;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#161A1F; --card:#1E242B; --ink:#E4E7EA; --sub:#9AA4AE;
+  --ai-accent:#7FA8D0; --line:#333B44; --line-soft:#2A313A;
+  --fact:#7CC49C; --fact-bg:#20302A; --infer:#D8A96B; --infer-bg:#332A1E; --infer-line:#5A4A32;
+  --stamp:#D07360; --chip-bg:#2A313A;
+  --warn:#D0885C; --warn-bg:#33261C;
+  --jp:#D07FA5; --jp-bg:#33202A;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper); color:var(--ink); font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif; margin:0; line-height:1.7; font-size:14.5px;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;}
+
+header{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:16px 28px 13px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; background:var(--card); position:sticky; top:0; z-index:40;}
+.masthead h1{font-family:"Shippori Mincho",serif; font-size:21px; font-weight:700; margin:0; letter-spacing:.02em;}
+.masthead .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
+.masthead .meta{font-size:12px; color:var(--sub); margin-top:4px;}
+.stamp{flex:none; border:2.5px solid var(--stamp); color:var(--stamp); font-family:"Shippori Mincho",serif; font-weight:700; font-size:15px; padding:5px 6px 5px 10px; transform:rotate(-6deg); border-radius:4px; letter-spacing:.3em; opacity:.85; margin-top:4px;}
+.hdr-right{display:flex; align-items:center; gap:14px; flex:none;}
+.theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;}
+.theme-btn:hover{color:var(--ink); border-color:var(--ink);}
+
+.app{display:grid; grid-template-columns:264px minmax(0,1fr); gap:0; align-items:start; min-height:70vh;}
+
+/* ---- 左: フィルタ ---- */
+aside{border-right:1px solid var(--line); padding:20px 20px 40px; position:sticky; top:var(--headh,96px); max-height:calc(100vh - var(--headh,96px)); overflow-y:auto;}
+.fgroup{margin-bottom:22px;}
+.fitem.zero{opacity:.45;}
+.fgroup h2{font-size:11px; letter-spacing:.2em; color:var(--sub); font-weight:700; margin:0 0 8px; text-transform:uppercase; border-bottom:1px solid var(--line-soft); padding-bottom:5px;}
+.fitem{display:flex; align-items:center; gap:8px; padding:3px 2px; font-size:13.5px; cursor:pointer; border-radius:4px;}
+.fitem:hover{background:var(--chip-bg);}
+.fitem input{accent-color:var(--ai-accent); width:15px; height:15px; cursor:pointer;}
+.fitem .cnt{margin-left:auto; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11.5px; color:var(--sub);}
+.fitem.jp-toggle{background:var(--jp-bg); color:var(--jp); font-weight:500; padding:6px 8px; margin-bottom:4px;}
+.fitem.jp-toggle input{accent-color:var(--jp);}
+.clearbtn{width:100%; border:1px solid var(--line); background:var(--card); color:var(--sub); font-family:inherit; font-size:12.5px; padding:7px; border-radius:5px; cursor:pointer; margin-top:4px;}
+.clearbtn:hover{color:var(--ink); border-color:var(--sub);}
+.fnote{font-size:11px; color:var(--sub); margin-top:18px; line-height:1.6; border-top:1px solid var(--line-soft); padding-top:10px;}
+
+/* ---- 右: 結果 ---- */
+main{padding:18px 28px 60px; min-width:0;}
+.toolbar{display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding-bottom:12px; border-bottom:2px solid var(--ink); margin-bottom:16px;}
+.hitcount{font-family:"Shippori Mincho",serif; font-size:17px; font-weight:700;}
+.hitcount .num{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:19px;}
+.hitsub{font-size:12px; color:var(--sub);}
+.exportbtn{margin-left:auto; border:1.5px solid var(--ai-accent); color:var(--ai-accent); background:transparent; font-family:inherit; font-weight:700; font-size:13px; padding:7px 16px; border-radius:5px; cursor:pointer;}
+.exportbtn:hover{background:var(--ai-accent); color:var(--paper);}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px;}
+.card{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:15px 17px 13px; display:flex; flex-direction:column; gap:7px;}
+.card .head{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;}
+.card .head .chip.inv{margin-left:2px; align-self:center;}
+.card h3{margin:0; font-size:14.5px; font-weight:700; line-height:1.5; flex:1;}
+.state{display:inline-block; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px; font-weight:500; color:var(--paper); background:var(--ink); border-radius:3px; padding:0 6px; letter-spacing:.08em; flex:none; margin-top:3px;}
+.chip{display:inline-block; font-size:10.5px; color:var(--sub); background:var(--chip-bg); border-radius:3px; padding:0 7px; margin-right:5px;}
+.chip.jp{color:var(--jp); background:var(--jp-bg); font-weight:700;}
+.chip.newchip{color:var(--stamp); background:transparent; border:1.5px solid var(--stamp); font-weight:700; letter-spacing:.1em; font-size:10px;}
+.chip.inv{font-weight:700;}
+.chip.inv.operator,.chip.inv.owner_occupier{color:var(--fact); background:var(--fact-bg);}
+.chip.inv.public{color:var(--ai-accent); background:var(--chip-bg);}
+.chip.inv.unknown{color:var(--warn); background:var(--warn-bg);}
+.unknown-inv{color:var(--sub); font-weight:500;}
+.parties{font-size:11.5px; color:var(--sub); margin:2px 0 0; line-height:1.5;}
+.card .loc{font-size:12px; color:var(--sub);}
+.card .summary{font-size:13px;}
+.fact{border-left:3px solid var(--fact); background:var(--fact-bg); padding:7px 11px; border-radius:0 4px 4px 0; font-size:12.5px;}
+.fact .flabel{font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--fact); display:block; margin-bottom:1px;}
+.fact .verbatim{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; display:block; margin-top:3px; word-break:break-word; color:var(--sub);}
+.infer{border:1px dashed var(--infer-line); background:var(--infer-bg); padding:7px 11px; border-radius:4px; font-size:12.5px;}
+.badge-infer{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--infer); border:1px solid var(--infer); border-radius:3px; padding:0 5px; margin-right:6px; vertical-align:1px;}
+
+.pager{display:flex; align-items:center; justify-content:center; gap:6px; margin-top:24px;}
+.pager button{border:1px solid var(--line); background:var(--card); color:var(--ink); font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:13px; min-width:34px; padding:5px 8px; border-radius:5px; cursor:pointer;}
+.pager button:hover{border-color:var(--ai-accent); color:var(--ai-accent);}
+.pager button[disabled]{opacity:.35; cursor:default;}
+.pager button.cur{background:var(--ink); color:var(--paper); border-color:var(--ink); cursor:default;}
+.pager .gap{color:var(--sub); padding:0 2px;}
+.pager .pinfo{font-size:12.5px; color:var(--sub); margin-left:10px;}
+.pager{flex-wrap:wrap;}
+.empty{padding:60px 20px; text-align:center; color:var(--sub); font-size:14px;}
+
+footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5px; color:var(--sub);}
+
+/* ---- 企業カルテ ---- */
+.companylink{background:none; border:none; padding:0; font:inherit; font-weight:700; color:var(--ai-accent); cursor:pointer; text-align:left; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;}
+.companylink:hover{text-decoration-thickness:2px;}
+.karte-bg{position:fixed; inset:0; background:var(--paper); z-index:60; overflow-y:auto;}
+.karte{max-width:880px; margin:0 auto; padding:28px 24px 80px;}
+.karte-top{display:flex; justify-content:space-between; align-items:flex-start; gap:14px; border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:14px 0 12px; margin-bottom:18px;}
+.karte-top .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
+.karte-top h2{font-family:"Shippori Mincho",serif; font-size:22px; margin:0;}
+.karte-top .ksub{font-size:12.5px; color:var(--sub); margin-top:4px;}
+.karte-close{border:1px solid var(--line); background:var(--card); color:var(--ink); font-family:inherit; font-size:13px; padding:7px 14px; border-radius:5px; cursor:pointer; flex:none;}
+.karte-close:hover{border-color:var(--ai-accent); color:var(--ai-accent);}
+.karte h3{font-size:13px; letter-spacing:.14em; color:var(--sub); font-weight:700; border-bottom:2px solid var(--ink); padding-bottom:5px; margin:26px 0 12px;}
+.timeline{border-left:2px solid var(--line); margin-left:6px; padding-left:18px; display:flex; flex-direction:column; gap:14px;}
+.tl-item{position:relative;}
+.tl-item::before{content:""; position:absolute; left:-24px; top:6px; width:9px; height:9px; border-radius:50%; background:var(--fact);}
+.tl-item .tl-date{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px; color:var(--sub);}
+.tl-item .tl-title{font-weight:700; font-size:14px;}
+.tl-item .tl-body{font-size:12.5px; color:var(--sub);}
+.kv{display:grid; grid-template-columns:max-content 1fr; gap:4px 16px; font-size:13px;}
+.kv dt{color:var(--sub); font-size:12px; padding-top:1px;}
+.kv dd{margin:0;}
+.karte .fact,.karte .infer{font-size:13px;}
+.karte-note{font-size:11.5px; color:var(--sub); border-top:1px solid var(--line-soft); margin-top:28px; padding-top:10px;}
+
+button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accent); outline-offset:2px;}
+.scope-details{margin:26px 0 0;}
+.scope-details summary{cursor:pointer; font-weight:700; font-size:13px; color:var(--sub); letter-spacing:.06em; padding:8px 0; border-top:1px solid var(--line);}
+.scope-details summary:hover{color:var(--ink);}
+.scope-details table{width:100%; border-collapse:collapse; font-size:12.5px; background:var(--card); border:1px solid var(--line); border-radius:6px; overflow:hidden; margin:10px 0;}
+.scope-details th{font-size:10.5px; letter-spacing:.12em; color:var(--sub); text-align:left; font-weight:500; padding:7px 10px; border-bottom:1px solid var(--line); background:var(--chip-bg);}
+.scope-details td{padding:7px 10px; border-bottom:1px solid var(--line-soft); vertical-align:top;}
+.scope-details tr:last-child td{border-bottom:none;}
+.scope-details .ok{color:var(--fact); font-weight:700;}
+.scope-details .ng{color:var(--stamp); font-weight:700;}
+.scope-details ul{margin:6px 0 0; padding-left:18px; font-size:12.5px; color:var(--sub);}
+.scope-details li{margin-bottom:4px;}
+.tblwrap{overflow-x:auto;}
+.beta{flex:none; border:2px solid var(--ai-accent); color:var(--ai-accent); font-family:"IBM Plex Mono",ui-monospace,monospace; font-weight:700; font-size:12px; padding:2px 9px; border-radius:4px; letter-spacing:.14em; margin-top:8px;}
+.brandlink{color:var(--sub); text-decoration:none;}
+.brandlink:hover{color:var(--ai-accent);}
+a{color:var(--ai-accent);}
+@media (max-width:760px){
+  .app{grid-template-columns:1fr;}
+  aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="masthead">
+    <div class="kicker"><a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a> — COCKPIT</div>
+    <h1>中西部・設備投資検出面 — 動産担保登記(UCC)</h1>
+    <div class="meta" id="metaline">UCC 登記シグナル(オハイオ州から先行)/ データ読み込み中…</div>
+    <div class="meta"><a href="../permits/">建設許可の検出面 →</a>・<a href="../freshness/">データの鮮度と網羅 →</a></div>
+  </div>
+  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA・先行版</div></div>
+</header>
+<script>
+/* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
+(function(){
+  const K = "cockpit-theme"; let t = null;
+  try { t = localStorage.getItem(K); } catch (e) {}
+  if (t !== "dark" && t !== "light") t = "light";
+  const apply = n => { document.documentElement.setAttribute("data-theme", n); try { localStorage.setItem(K, n); } catch (e) {}
+    const b = document.getElementById("themebtn"); if (b) b.textContent = n === "dark" ? "☀️ ライト" : "🌙 ダーク";
+    window.dispatchEvent(new CustomEvent("themechange", {detail: n})); };
+  document.documentElement.setAttribute("data-theme", t);
+  window.__setTheme = apply;
+  const b = document.getElementById("themebtn");
+  if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
+})();
+</script>
+
+<div class="app">
+<aside>
+  <label class="fitem jp-toggle"><input type="checkbox" id="jponly">日系関連のみ表示</label>
+  <label class="fitem jp-toggle" title="雑音 = 個人名義・自動車 1 台の割賦・住宅・農業リーエン・公共財務。未分類 = 本文が汎用文のみで種別を決められなかった記録"><input type="checkbox" id="showunc">雑音・未分類も表示(<span id="unccnt">0</span> 件)</label>
+
+  <div class="fgroup">
+    <h2>種別(担保の意味)</h2>
+    <div id="f-kind"></div>
+  </div>
+  <div class="fgroup">
+    <h2>担保権者(検索した機械メーカー)</h2>
+    <div id="f-maker"></div>
+  </div>
+  <div class="fgroup">
+    <h2>貸し手の種類</h2>
+    <div id="f-lender"></div>
+  </div>
+  <button class="clearbtn" id="clear">フィルタをすべて解除</button>
+  <div class="fnote">種別・貸し手の種類は固定の分類語彙への AI 割り当てです(DB に保存・出所つき)。設備(メーカー・型式・製番)は登記書類の担保物欄の逐語から抜いています。雑音・未分類は既定で表示しません。</div>
+</aside>
+
+<main>
+  <div class="toolbar">
+    <div>
+      <span class="hitcount"><span class="num" id="hitnum">0</span> 件</span>
+      <span class="hitsub" id="hitsub"></span>
+    </div>
+    <button class="exportbtn" id="export">CSV エクスポート</button>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>条件に一致する登記はありません。フィルタを緩めてください。</div>
+  <div class="pager" id="pager"></div>
+
+  <details class="scope-details">
+    <summary>この面の読み方 — 数字の定義と、見ていないもの</summary>
+    <div id="scopebox">読み込み中…</div>
+    <ul id="scopenotes">
+      <li>UCC-1 登記は「債務者がその設備を担保にお金を借りた(購入・リースした)」という公的記録です。金額は載りません。大きさは担保物の逐語(機械の型式・台数)と貸し手の種類で読みます。</li>
+      <li>先行版はオハイオ州のみ・担保権者(機械メーカー)名で検索した登記のみです。銀行・リース会社を担保権者とする登記は網に入っていません(= 網羅ではなく、機械メーカー経由の設備取得の切り口)。</li>
+      <li>「未評価」= 書類の担保物欄がまだ取れていない、または AI が未読の登記。</li>
+      <li>建設許可面の会社と同じ会社が出た場合(許可 → 数か月後に機械の担保登記 = 稼働間近)は、次の版でカルテに束ねます。</li>
+    </ul>
+  </details>
+</main>
+</div>
+
+<footer>
+  <b>43 Sunsets Cockpit(BETA・先行版)</b> — 公的記録から中西部の設備投資シグナルを検出する無料の実験的サービスです。
+  出典: オハイオ州務長官 UCC 公開検索(ucc.ohiosos.gov)・登記書類の担保物欄。事実欄はすべて記録の逐語転記、推論欄は当社 AI の読みで、必ず「推論」バッジを付けて分離表示しています。
+  情報は公的記録に基づきますが、正確性・完全性を保証するものではなく、投資・法務・与信等の助言でもありません。個人名義の記録は個人名を表示しません。
+  ご意見・掲載に関するご連絡(掲載内容の訂正・削除のご依頼を含む)は <span class="mono">hello@43sunsets.com</span> まで。
+  © 43 Sunsets
+</footer>
+
+<script>
+let SIGNALS = [], META = null, COMPANIES = [];
+const KINDS = ["設備投資","与信枠の新設","資金繰り警戒","完済・解消","雑音","未分類"];
+const NOISE = new Set(["雑音","未分類"]);
+const PAGE_SIZE = 8; let page = 1;
+const sel = {kind:new Set(), maker:new Set(), lender_label:new Set()};
+let MAKERS = [], LENDERS = [];
+function visibleBase(){ return document.getElementById("showunc").checked ? SIGNALS : SIGNALS.filter(s=>!NOISE.has(s.kind)); }
+function fval(s, field){ return field==="maker" ? (s.maker_query||"") : s[field]; }
+function countBy(field){
+  const jp = document.getElementById("jponly").checked; const c = {};
+  for(const s of visibleBase()){
+    let skip = false;
+    for(const f of Object.keys(sel)){ if(f!==field && sel[f].size && !sel[f].has(fval(s,f))) { skip = true; break; } }
+    if(skip || (jp && !s.jp)) continue;
+    const v = fval(s, field); c[v] = (c[v]||0)+1;
+  }
+  return c;
+}
+function refreshCounts(){
+  for(const field of Object.keys(sel)){
+    const counts = countBy(field);
+    document.querySelectorAll(`.fitem input[data-field="${field}"]`).forEach(cb=>{
+      const n = counts[cb.value]||0; const span = cb.parentElement.querySelector(".cnt"); if(span) span.textContent = n;
+      cb.parentElement.classList.toggle("zero", n===0 && !cb.checked);
+    });
+  }
+}
+function renderFilters(){
+  const defs = [["f-kind","kind",KINDS],["f-maker","maker",MAKERS],["f-lender","lender_label",LENDERS]];
+  for(const [elId, field, vocab] of defs){
+    const counts = countBy(field); const el = document.getElementById(elId); el.innerHTML = "";
+    for(const v of vocab){
+      const n = counts[v]||0; const lab = document.createElement("label"); lab.className = "fitem";
+      lab.innerHTML = `<input type="checkbox" data-field="${field}" value="${v}"${sel[field].has(v) ? " checked" : ""}><span>${v}</span><span class="cnt">${n}</span>`;
+      el.appendChild(lab);
+    }
+  }
+  document.querySelectorAll('.fitem input[data-field]').forEach(cb=>{ cb.addEventListener("change", ()=>{ const set = sel[cb.dataset.field]; cb.checked ? set.add(cb.value) : set.delete(cb.value); page = 1; render(); }); });
+}
+function filtered(){
+  const jp = document.getElementById("jponly").checked;
+  return visibleBase().filter(s=> Object.keys(sel).every(f => sel[f].size===0 || sel[f].has(fval(s,f))) && (!jp || s.jp)).sort((a,b)=> b.date.localeCompare(a.date));
+}
+function esc(v){ return String(v==null?"":v).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function eqHtml(eq){
+  if(!eq || !eq.length) return "";
+  const items = eq.map(e=>{ const bits=[]; if(e.qty) bits.push(`${e.qty} 台`); if(e.maker) bits.push(esc(e.maker)); if(e.model) bits.push(esc(e.model)); if(e.serial) bits.push(`<span class="mono">S/N ${esc(e.serial)}</span>`); return `<li>${bits.join(" ")}</li>`; }).join("");
+  return `<div class="fact" style="margin-top:6px"><span class="flabel">設備(担保物欄の逐語)</span><ul style="margin:4px 0 0 18px;padding:0">${items}</ul></div>`;
+}
+function cardHtml(s){
+  const jp  = s.jp ? `<span class="chip jp">日系</span>` : "";
+  const nw = s.new ? `<span class="chip newchip" title="${META ? META.new_rule : ''}">NEW</span>` : "";
+  const kind = NOISE.has(s.kind) ? `<span class="chip">${s.kind}</span>` : `<span class="chip inv owner_occupier">${s.kind}</span>`;
+  const inf = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${esc(s.infer)}</div>` : "";
+  const sp = s.secured_party ? `<div class="parties">担保権者: ${esc(s.secured_party)}${s.secured_party_city ? "(" + esc(s.secured_party_city) + ")" : ""}・${esc(s.lender_label)}${s.scope==="all_assets" ? "・包括担保" : s.scope==="mixed" ? "・特定設備+包括" : ""}</div>` : "";
+  return `<article class="card">
+    <div class="head"><span class="state">${s.state}</span><h3>${esc(s.company)}</h3></div>
+    <div>${nw}${jp}${kind}<span class="chip">${esc(s.industry)}</span></div>
+    ${sp}
+    <div class="loc">${esc(s.city)}</div>
+    <div class="summary">${esc(s.summary)}</div>
+    ${eqHtml(s.equipment)}
+    <div class="fact"><span class="flabel">事実(公的記録)</span>${esc(s.fact.src)}・${esc(s.fact.ref)}・提出 <span class="mono">${s.date}</span>${s.lapse ? `・失効 <span class="mono">${s.lapse}</span>` : ""}・${esc(s.fact.status||"")}</div>
+    ${inf}
+  </article>`;
+}
+function render(){
+  refreshCounts(); const list = filtered();
+  const pages = Math.max(1, Math.ceil(list.length/PAGE_SIZE)); if(page>pages) page = pages;
+  const slice = list.slice((page-1)*PAGE_SIZE, page*PAGE_SIZE);
+  document.getElementById("hitnum").textContent = list.length;
+  document.getElementById("hitsub").textContent = `(表示集合 ${visibleBase().length} 件・提出日の新しい順)`;
+  document.getElementById("grid").innerHTML = slice.map(cardHtml).join("");
+  document.getElementById("empty").hidden = list.length>0;
+  const pager = document.getElementById("pager"); pager.innerHTML = "";
+  if(pages>1){
+    const mk = (label, target, opts={})=>{ const b = document.createElement("button"); b.textContent = label; if(opts.cur) b.className = "cur"; if(opts.disabled) b.disabled = true;
+      b.addEventListener("click", ()=>{ page = target; render(); document.querySelector("main").scrollIntoView({behavior:"smooth"}); }); pager.appendChild(b); };
+    mk("«", 1, {disabled:page===1}); mk("‹", Math.max(1,page-1), {disabled:page===1});
+    const win = new Set([1, pages, page-2, page-1, page, page+1, page+2].filter(x=>x>=1 && x<=pages)); let last = 0;
+    for(const p of Array.from(win).sort((a,b)=>a-b)){ if(p - last > 1){ const gap = document.createElement("span"); gap.className = "gap"; gap.textContent = "…"; pager.appendChild(gap); } mk(String(p), p, {cur:p===page}); last = p; }
+    mk("›", Math.min(pages,page+1), {disabled:page===pages}); mk("»", pages, {disabled:page===pages});
+    const info = document.createElement("span"); info.className = "pinfo"; info.innerHTML = `<span class="mono">${page}</span> / <span class="mono">${pages}</span> ページ`; pager.appendChild(info);
+  }
+}
+document.getElementById("jponly").addEventListener("change", ()=>{ page=1; render(); });
+document.getElementById("showunc").addEventListener("change", ()=>{ page=1; renderFilters(); render(); });
+document.getElementById("clear").addEventListener("click", ()=>{ for(const k in sel) sel[k].clear(); document.querySelectorAll('.fitem input[data-field]').forEach(cb=>cb.checked=false); page = 1; render(); });
+function csvEscape(v){ v = String(v==null?"":v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
+document.getElementById("export").addEventListener("click", ()=>{
+  const list = filtered();
+  const head = ["id","州","債務者","市","担保権者","貸し手の種類","種別","担保の範囲","業種","日系","提出日","失効日","設備(メーカー/型式/製番/台数)","要約","推論","確信度","出典","登記番号"];
+  const rows = list.map(s=>[s.id,s.state,s.company,s.city,s.secured_party??"",s.lender_label??"",s.kind,s.scope??"",s.industry,s.jp?"1":"",s.date,s.lapse??"",(s.equipment||[]).map(e=>[e.maker,e.model,e.serial,e.qty].filter(Boolean).join(" ")).join(" | "),s.summary??"",s.infer??"",s.confidence,s.fact.src,s.fact.ref]);
+  const csv = "﻿" + [head, ...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n");
+  const blob = new Blob([csv], {type:"text/csv;charset=utf-8"}); const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = `43sunsets-cockpit-ucc-${new Date().toISOString().slice(0,10)}.csv`; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+});
+function fmtCT(iso){ const d = new Date(iso); const o = {timeZone:"America/Chicago", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hour12:false};
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", o).formatToParts(d).filter(x => x.type !== "literal").map(x => [x.type, x.value])); return `${p.year}-${p.month}-${p.day} ${p.hour === "24" ? "00" : p.hour}:${p.minute}`; }
+function renderScope(){
+  const m = META; if(!m) return; const f = m.funnel;
+  const byk = Object.entries(f.by_kind||{}).map(([k,v])=>`${k} <span class="mono">${v}</span>`).join("・") || "—";
+  document.getElementById("scopebox").innerHTML = `
+    <div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>
+      登記 <span class="mono">${f.filings_total}</span> 件(担保権者名で検索: ${Object.entries(m.makers_searched||{}).map(([k,v])=>`${k} ${v}`).join("・")})→ 担保物の逐語あり <span class="mono">${f.with_collateral}</span> 件 → AI 読了 <span class="mono">${f.read}</span> 件(${byk})・未評価 <span class="mono">${f.unread + f.no_text_yet}</span> 件(担保物欄の未取得 ${f.no_text_yet}・未読 ${f.unread})<br>
+      書き出し <span class="mono">${fmtCT(m.generated_at)}</span>(米中部時間)・読み手: ${m.reader}・方針: ${m.policy.text}</div>`;
+}
+function setHeadH(){ const h=document.querySelector('header'); if(h) document.documentElement.style.setProperty('--headh', h.offsetHeight+'px'); }
+window.addEventListener('resize', setHeadH);
+async function boot(){
+  setHeadH();
+  try{
+    const r = await fetch("../data/ucc.json", {cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json(); META = d.meta; SIGNALS = d.signals; COMPANIES = d.companies || [];
+    MAKERS = Object.keys(META.makers_searched||{}); LENDERS = Array.from(new Set(SIGNALS.map(s=>s.lender_label))).sort();
+    document.getElementById("unccnt").textContent = SIGNALS.filter(s=>NOISE.has(s.kind)).length;
+    const f = META.funnel;
+    document.getElementById("metaline").innerHTML = `UCC 登記シグナル(${(META.states||[]).join("・")}・先行版)/ 登記 <span class="mono">${f.filings_total}</span> 件・AI 読了 <span class="mono">${f.read}</span> 件・設備投資 <span class="mono">${(f.by_kind||{})["設備投資"]||0}</span> 件・未評価 <span class="mono">${f.unread+f.no_text_yet}</span> 件・会社 <span class="mono">${COMPANIES.length}</span> 社`;
+    renderFilters(); render(); renderScope();
+  }catch(err){
+    document.getElementById("metaline").textContent = "データの読み込みに失敗しました(" + err.message + ")。";
+    document.getElementById("empty").hidden = false; document.getElementById("empty").textContent = "データ(ucc.json)を読み込めませんでした。時間をおいて再読み込みしてください。";
+  }
+}
+boot();
+</script>
+<script src="/cockpit/assets/hit.js" defer></script>
+</body>
+</html>
