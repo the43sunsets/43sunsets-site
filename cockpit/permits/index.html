@@ -160,6 +160,16 @@ a{color:var(--ai-accent);}
   .app{grid-template-columns:1fr;}
   aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
 }
+
+/* ---- health meter(ヘッダー右上・9/5) ---- */
+.hb{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); background:var(--card); border-radius:999px; padding:4px 12px 4px 8px; font-size:11.5px; color:var(--sub); white-space:nowrap; cursor:help;}
+.hb .hb-k{color:var(--ink);} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;}
+.hb-dot{width:9px; height:9px; border-radius:50%; background:var(--line); flex:none; box-shadow:0 0 0 0 rgba(0,0,0,0);}
+.hb.hb-ok .hb-dot{background:var(--fact); animation:hbpulse 2.4s ease-out infinite;} .hb.hb-ok{border-color:var(--fact);}
+.hb.hb-wait .hb-dot{background:var(--infer);} .hb.hb-wait{border-color:var(--infer-line);}
+.hb.hb-fail .hb-dot{background:var(--stamp);} .hb.hb-fail{border-color:var(--stamp); color:var(--stamp);} .hb.hb-fail .hb-k{color:var(--stamp);}
+@keyframes hbpulse{0%{box-shadow:0 0 0 0 rgba(46,110,78,.45)} 70%{box-shadow:0 0 0 7px rgba(46,110,78,0)} 100%{box-shadow:0 0 0 0 rgba(46,110,78,0)}}
+@media (max-width:820px){ .hb .hb-txt{max-width:46vw; overflow:hidden; text-overflow:ellipsis;} }
 </style>
 </head>
 <body>
@@ -171,7 +181,7 @@ a{color:var(--ai-accent);}
     <div class="meta" id="metaline">建設許可シグナル 5 州(IL・IN・MI・OH・WI)/ データ読み込み中…</div>
     <div class="meta"><a href="../freshness/">データの鮮度と網羅 — 自治体ごとの最終更新日・次回更新・郡別ヒートマップ →</a></div>
   </div>
-  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
+  <div class="hdr-right"><div class="hb hb-wait" id="healthbar" data-check="permits_update_vps"></div><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
 </header>
 <script>
 /* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
@@ -591,6 +601,7 @@ async function boot(){
 }
 boot();
 </script>
+<script src="/cockpit/assets/health.js" defer></script>
 <script src="/cockpit/assets/hit.js" defer></script>
 </body>
 </html>
