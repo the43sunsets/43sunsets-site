@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 2,
+"count": 3,
 "value_total": 15000.0,
-"latest": "2026-07-21",
+"latest": "2026-08-26",
 "items": [
+{
+"id": "S-41317",
+"date": "2026-08-26",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Brecksville",
+"address": "9341 HIGHLAND DR",
+"permit_no": "25120013",
+"permit_type": "Commercial/Industrial Building Permit",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "AT&T が Brecksville 9341 Highland Dr 付近で直接指向ボーリングにより光ファイバー・コンジット28,972フィートを敷設(ペデスタル・ハンドホール設置含む)。金額記載なし。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "AT&T WILL INSTALL 28,972' OF FIBER & CONDUIT BY MEANS OF DIRECTIONAL BORING. PEDESTALS & HANDHOLES WILL BE INSTALLED ALONG THE ROUTE. AT&T PROJECT #A05AA86 / Commercial/Industrial Building Permit / Utility Installation",
+"source_id": "SRC-023",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-25404",
 "date": "2026-07-21",
@@ -88,6 +112,13 @@
 },
 "timeline": [
 {
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Brecksville): 未分類",
+"ref": "S-41317",
+"summary": "AT&T が Brecksville 9341 Highland Dr 付近で直接指向ボーリングにより光ファイバー・コンジット28,972フィートを敷設(ペデスタル・ハンドホール設置含む)。金額記載なし。"
+},
+{
 "date": "2026-07-21",
 "face": "permits",
 "title": "建設許可(Kildeer): 未分類",
@@ -102,6 +133,6 @@
 "summary": "Cleveland 10600 St Clair Ave の建物屋上に AT&T の携帯アンテナ・マウントを設置/交換 $15k。"
 }
 ],
-"generated_at": "2026-09-06T16:31:09+00:00",
+"generated_at": "2026-09-06T16:34:40+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
