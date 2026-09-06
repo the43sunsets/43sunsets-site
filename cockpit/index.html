@@ -12,7 +12,7 @@
 <meta property="og:title" content="Signal by 43 Sunsets — 中西部の設備投資を、公的記録から先に">
 <meta property="og:url" content="https://43sunsets.com/cockpit/">
 <meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&family=Caveat:wght@500;700&display=swap">
 <style>
 /* A(明)= 経済紙の一面 / B(暗)= 航空図 — 9/5 CEO 裁定。切り替えは cockpit 共通(localStorage "cockpit-theme") */
 :root{ --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E; --line:#D9DDD9; --line-soft:#E7EAE6; --accent:#2F5D8A; --fact:#2E6E4E; --infer:#8A5A2F; --infer-bg:#F7F1E8; --infer-line:#D9C6A8; --warn:#B54434; --rule:#20262E; --rule-h:2px; --pill:#FFFFFF; --tile:#FFFFFF; --tile-line:#E7EAE6; --head-border:3px solid #20262E; --bg-extra:none; --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace; --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif; --sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif; }
@@ -34,6 +34,9 @@ header .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.24em; co
 .theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;} .theme-btn:hover{color:var(--ink); border-color:var(--ink);}
 .beta{font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--ink); border:1.5px solid var(--ink); border-radius:4px; padding:2px 8px;}
 main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
+.lede-wrap{display:grid; grid-template-columns:minmax(0,1fr) 420px; gap:36px; align-items:center;}
+.sigmap{margin:0;} .sigmap svg{width:100%; height:auto; display:block;}
+@media (max-width:900px){ .lede-wrap{grid-template-columns:1fr; gap:14px;} .sigmap{max-width:440px;} }
 .lede{display:flex; flex-direction:column; gap:14px; max-width:980px;}
 .lede .brandline{display:flex; align-items:center; gap:12px; margin-bottom:4px;} .lede .pmark{width:44px; height:44px; flex:none;} .lede .pby{align-self:flex-end; margin-bottom:6px;} .lede .pname{font-family:var(--serif); font-size:34px; font-weight:700; letter-spacing:.01em; color:var(--ink);} .lede .pby{font-family:var(--mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--sub);}
 .lede .tagline{margin:0 0 14px; font-size:14px; letter-spacing:.02em; color:var(--sub);}
@@ -115,10 +118,32 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 })();
 </script>
 <main>
+  <div class="lede-wrap">
   <div class="lede">
     <h1>中西部で、次に動く会社が先に分かる。</h1>
     <p>イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの製造業について、投資・採用・補助金の兆しを公的記録から毎日拾い、会いに行くべき会社と、その理由を並べます。今は建設許可と動産担保登記(UCC)から。事実と推論は分けています。</p>
     <div class="dateline"><span class="ed" id="edition">読み込み中…</span><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(毎日 07:00 CT)"></div><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div></div>
+  </div>
+  <figure class="sigmap" aria-label="People, assets and capital line up, and the business expands. We see it first.">
+<svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs><filter id="wob" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
+  <g filter="url(#wob)" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="150" cy="110" r="70"/><circle cx="100" cy="190" r="70"/><circle cx="200" cy="190" r="70"/>
+    <path d="M186 160 C 250 150, 300 120, 372 66" stroke="var(--accent)" stroke-width="3.2"/>
+    <path d="M190 172 C 256 164, 312 134, 380 82" stroke="var(--accent)" stroke-width="1.6" opacity=".55"/>
+    <path d="M352 62 L374 64 L370 86" stroke="var(--accent)" stroke-width="3.2"/>
+    <path d="M392 40 c 14 -10, 30 2, 22 16 c -8 12, -26 6, -20 -6" stroke="var(--accent)" stroke-width="1.8" opacity=".8"/>
+  </g>
+  <g fill="var(--ink)" font-weight="700" text-anchor="middle" font-family="Caveat, 'Segoe Script', cursive">
+    <text x="150" y="86" font-size="21">PEOPLE</text><text x="150" y="104" font-size="12" font-weight="500" fill="var(--sub)">hiring</text>
+    <text x="80" y="210" font-size="21">ASSETS</text><text x="80" y="228" font-size="12" font-weight="500" fill="var(--sub)">permits · machines</text>
+    <text x="222" y="212" font-size="21">CAPITAL</text><text x="222" y="230" font-size="12" font-weight="500" fill="var(--sub)">grants</text>
+    <text x="330" y="46" font-size="24" fill="var(--accent)" transform="rotate(-9 330 46)">EXPANSION</text>
+    <text x="150" y="292" font-size="14" font-weight="500" fill="var(--sub)">all three line up → the business grows</text>
+    <text x="398" y="130" font-size="14" font-weight="500" fill="var(--sub)" transform="rotate(-9 398 130)">we see it first</text>
+  </g>
+</svg>
+</figure>
   </div>
   <div class="rule"></div>
   <div class="sec"><h2>今週の動き</h2><span id="picks-sub">中西部の工場の目立つ投資。毎週月曜に入れ替え。</span><span id="picks-date" class="mono"></span></div>
