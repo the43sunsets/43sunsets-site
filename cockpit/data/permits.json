@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-06T19:02:13+00:00",
+"generated_at": "2026-09-06T21:00:19+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,16 +17,16 @@
 "funnel": {
 "signals_total": 46064,
 "candidates": 686,
-"enriched": 28860,
-"targets": 105,
-"unclassified": 28755,
-"unevaluated": 17204,
+"enriched": 29349,
+"targets": 113,
+"unclassified": 29236,
+"unevaluated": 16715,
 "by_category": {
 "データセンター建設": 7,
-"未分類": 28755,
+"未分類": 29236,
 "物流・倉庫の新設": 17,
-"研究・医療・航空宇宙": 54,
-"製造能力の増強": 27
+"研究・医療・航空宇宙": 60,
+"製造能力の増強": 29
 }
 },
 "sources": [
@@ -70,7 +70,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-09-03",
 "owner_coverage": 1853,
-"targets": 0
+"targets": 1
 },
 {
 "source_id": "SRC-017",
@@ -84,7 +84,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-09-04",
 "owner_coverage": 1663,
-"targets": 6
+"targets": 13
 },
 {
 "source_id": "SRC-068",
@@ -301,8 +301,8 @@
 "state": "MI",
 "jurisdiction": "Ottawa 郡 BS&A 利用自治体(Holland・Zeeland 他 22)",
 "label": "Ottawa 郡 BS&A 利用自治体(Holland・Zeeland 他 22) 建築許可(公開記録・郡地番台帳の工業地番から)",
-"last_run_status": "empty",
-"last_run_at": "2026-09-06T12:40:15Z",
+"last_run_status": "running",
+"last_run_at": "2026-09-06T20:46:22Z",
 "last_run_note": "",
 "signals": 0,
 "date_min": null,
@@ -713,18 +713,18 @@
 "permits-more-IL-2.json",
 "permits-more-IL-3.json"
 ],
-"MI": [
-"permits-more-MI-1.json"
-],
 "WI": [
 "permits-more-WI-1.json"
+],
+"MI": [
+"permits-more-MI-1.json"
 ]
 },
 "unclassified_by_state": {
-"OH": 5228,
-"IL": 21780,
-"MI": 1589,
-"WI": 158
+"OH": 5263,
+"IL": 21819,
+"WI": 570,
+"MI": 1584
 }
 },
 "signals": [
@@ -1480,6 +1480,56 @@
 },
 {
 "investor": {
+"name": "NATIONWIDE CHILDRENS HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "NATIONWIDE CHILDRENS HOSPITAL",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "NBBJ",
+"gc": null
+},
+"id": "S-1468",
+"state": "OH",
+"city": "Columbus・757 MOOBERRY ST",
+"company": "NATIONWIDE CHILDRENS HOSPITAL",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・医療・航空宇宙",
+"category_raw": "研究・医療・航空宇宙",
+"confidence": "high",
+"date": "2026-08-25",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "Nationwide Children's Hospital(757 Mooberry St)で構造改修 $1M(1,500 SQFT・商業その他区分)。",
+"infer": "病院施設内の小規模改修 = 医療設備・機器の入替に伴う工事の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 ALTC2615557 Alteration",
+"value": 1000000.0,
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 1500 SQFT",
+"gc": "NBBJ",
+"pin": "010082628",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-140",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -1576,6 +1626,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": "OHIOHEALTH CORP",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "OHIOHEALTH CORP",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "OHIOHEALTH CORP",
+"gc": null
+},
+"id": "S-1542",
+"state": "OH",
+"city": "Columbus・3420 OHIOHEALTH PKWY",
+"company": "OHIOHEALTH CORP",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・医療・航空宇宙",
+"category_raw": "研究・医療・航空宇宙",
+"confidence": "high",
+"date": "2026-08-21",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)で 467,645 SQFT の増築工事 $115M。",
+"infer": "病院法人による大規模増築 = 医療機器・画像診断・特殊空調設備の調達が竣工まで続く窓(推論)。",
+"note": null,
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 ADDC2605078 Addition",
+"value": 115000000.0,
+"verbatim": "Commercial - Other / Addition / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 467645 SQFT",
+"gc": "OHIOHEALTH CORP",
+"pin": "010183740",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-138",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T21:00:18+00:00"
 }
 },
 {
@@ -2280,6 +2380,56 @@
 },
 {
 "investor": {
+"name": "OHIOHEALTH CORPORATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "OHIOHEALTH CORPORATION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "OHM Advisors",
+"gc": null
+},
+"id": "S-1737",
+"state": "OH",
+"city": "Columbus・111 S GRANT AVE",
+"company": "OHIOHEALTH CORPORATION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・医療・航空宇宙",
+"category_raw": "研究・医療・航空宇宙",
+"confidence": "high",
+"date": "2026-08-12",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "OhioHealth 所有の医療施設(111 S Grant Ave)で構造改修 $1.0M(1,304 SQFT)。",
+"infer": "病院法人による小規模な構造改修 = 医療施設の設備更新の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 ALTC2627989 Alteration",
+"value": 1000000.0,
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 1304 SQFT",
+"gc": "OHM Advisors",
+"pin": "010001595",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-138",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
 "name": "Rockford Electric Motor",
 "basis": "operator",
 "label": "操業事業者",
@@ -2326,6 +2476,56 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"investor": {
+"name": "GREEN OAKS OF WALNUT CREEK",
+"basis": "operator",
+"label": "操業事業者",
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
+},
+"parties": {
+"owner_of_record": "GREEN OAKS OF WALNUT CREEK LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": "WJW Architects",
+"gc": null
+},
+"id": "S-1789",
+"state": "OH",
+"city": "Columbus・4000 WESTERVILLE RD",
+"company": "GREEN OAKS OF WALNUT CREEK LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・医療・航空宇宙",
+"category_raw": "研究・医療・航空宇宙",
+"confidence": "high",
+"date": "2026-08-11",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Columbus 4000 Westerville Rd に病院・施設系新築 96,351 SF $19.8M。",
+"infer": "所有名義は SPE(不動産保有会社)であり、実際の運営事業者(医療法人等)は記録からは特定できない(推論)。",
+"note": null,
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 NEWC2602802 New Structure",
+"value": 19810550.0,
+"verbatim": "Commercial - New Structure / New Structure / Hospitals and Institutional Buildings / Structural / 96351 SQFT",
+"gc": "WJW Architects",
+"pin": "010104571",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-3754",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T21:00:18+00:00"
 }
 },
 {
@@ -2680,6 +2880,56 @@
 },
 {
 "investor": {
+"name": "NATIONWIDE CHILDRENS HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "NATIONWIDE CHILDRENS HOSPITAL",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "NATIONWIDE CHILDRENS HOSPITAL",
+"gc": null
+},
+"id": "S-1903",
+"state": "OH",
+"city": "Columbus・700 CHILDREN'S DR",
+"company": "NATIONWIDE CHILDRENS HOSPITAL",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・医療・航空宇宙",
+"category_raw": "研究・医療・航空宇宙",
+"confidence": "high",
+"date": "2026-08-06",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Nationwide Children's Hospital(700 Children's Dr)で 25,790 SQFT の構造改修 $3M。",
+"infer": "病院施設内の改修であり、医療機器・設備の更新を伴う可能性(推論)。",
+"note": null,
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 ALTC2622865 Alteration",
+"value": 3000000.0,
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 25790 SQFT",
+"gc": "NATIONWIDE CHILDRENS HOSPITAL",
+"pin": "010082628",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-140",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
 "name": "CRITTENTON HOSPITAL MEDICAL CENTER",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -2826,6 +3076,56 @@
 "batch": "01",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:40:38+00:00"
+}
+},
+{
+"investor": {
+"name": "ISG COLUMBUS COATINGS INC",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "ISG COLUMBUS COATINGS INC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "Ferguson Construction Company",
+"gc": null
+},
+"id": "S-1980",
+"state": "OH",
+"city": "Columbus・1800 WATKINS RD",
+"company": "ISG COLUMBUS COATINGS INC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "機械・金属",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-08-04",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "ISG Columbus Coatings Inc の Columbus 1800 Watkins Rd に工業用建物(3,200 SQFT)を新築 $375k。",
+"infer": "社名(Coatings)から金属表面処理・コーティング関連の生産設備増設の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 NEWC2620099 New Structure",
+"value": 375000.0,
+"verbatim": "Commercial - New Structure / New Structure / Industrial Buildings / Structural / 3200 SQFT",
+"gc": "Ferguson Construction Company",
+"pin": "010112497",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-3753",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T21:00:18+00:00"
 }
 },
 {
@@ -4430,6 +4730,56 @@
 },
 {
 "investor": {
+"name": "OHIOHEALTH CORPORATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "OHIOHEALTH CORPORATION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "Trinity",
+"gc": null
+},
+"id": "S-2446",
+"state": "OH",
+"city": "Columbus・285 E STATE ST",
+"company": "OHIOHEALTH CORPORATION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・医療・航空宇宙",
+"category_raw": "研究・医療・航空宇宙",
+"confidence": "high",
+"date": "2026-07-16",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "OhioHealth Corporation による商業用建物(285 E State St)の構造改修 $2.0M(4,130 SF)。",
+"infer": "医療法人所有の施設改修であり、医療関連の設備更新に伴う可能性(推論)。",
+"note": null,
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 ALTC2621758 Alteration",
+"value": 2000000.0,
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 4130 SQFT",
+"gc": "Trinity",
+"pin": "010012730",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-138",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -5176,6 +5526,56 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"investor": {
+"name": "CCBCC OPERATIONS LLC",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CCBCC OPERATIONS LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "FREIJE ENGINEERED SOLUTIONS CO"
+},
+"id": "S-1046",
+"state": "OH",
+"city": "Cincinnati・5100 DUCK CREEK RD",
+"company": "CCBCC OPERATIONS LLC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "食品・素材加工",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-07-09",
+"applied": "2026-05-11",
+"jp": false,
+"new": false,
+"summary": "Cincinnati 5100 Duck Creek Rd の F-1(工場)用途施設での HVAC 工事 $500k。",
+"infer": "CCBCC は Coca-Cola Consolidated の関連会社と読める(推論)。飲料製造施設の空調更新 = 生産環境の維持・増強に関わる設備投資の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "シンシナティ市 建築許可(公開記録)",
+"ref": "許可 2026P04358 HVAC",
+"value": 500000.0,
+"verbatim": "HVAC / HVAC / F-1",
+"gc": "FREIJE ENGINEERED SOLUTIONS CO",
+"pin": "005100110069",
+"owner_source": "parcel:hamilton_oh"
+},
+"karte": null,
+"company_id": "C-3746",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T21:00:18+00:00"
 }
 },
 {
@@ -5981,6 +6381,25 @@
 ],
 "companies": [
 {
+"id": "C-138",
+"name": "OHIOHEALTH CORP",
+"entity_type": "corp",
+"jp": false,
+"signals": 6,
+"value_total": 235500000.0,
+"states": "OH",
+"latest": "2026-09-04",
+"targets": 5,
+"signal_ids": [
+"S-1542",
+"S-1542",
+"S-1737",
+"S-1855",
+"S-2446",
+"S-36659"
+]
+},
+{
 "id": "C-51",
 "name": "HARPER COURT HOLDINGS II",
 "entity_type": "spe",
@@ -6032,6 +6451,22 @@
 "S-4",
 "S-61",
 "S-66"
+]
+},
+{
+"id": "C-140",
+"name": "NATIONWIDE CHILDRENS HOSPITAL",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": 7000000.0,
+"states": "OH",
+"latest": "2026-08-25",
+"targets": 3,
+"signal_ids": [
+"S-1468",
+"S-1903",
+"S-1903"
 ]
 },
 {
@@ -6145,6 +6580,23 @@
 ]
 },
 {
+"id": "C-139",
+"name": "ABBOTT NUTRITION",
+"entity_type": "corp",
+"jp": false,
+"signals": 4,
+"value_total": 4770000.0,
+"states": "OH",
+"latest": "2026-09-04",
+"targets": 2,
+"signal_ids": [
+"S-2209",
+"S-2330",
+"S-2481",
+"S-36626"
+]
+},
+{
 "id": "C-107",
 "name": "RYAN COMPANIES US, INC.",
 "entity_type": "corp",
@@ -6229,23 +6681,6 @@
 ]
 },
 {
-"id": "C-139",
-"name": "ABBOTT NUTRITION",
-"entity_type": "corp",
-"jp": false,
-"signals": 3,
-"value_total": 70000.0,
-"states": "OH",
-"latest": "2026-09-04",
-"targets": 2,
-"signal_ids": [
-"S-2209",
-"S-2330",
-"S-2481",
-"S-36626"
-]
-},
-{
 "id": "C-177",
 "name": "MCMASTER CARR SUPPLY CO",
 "entity_type": "corp",
@@ -6287,6 +6722,20 @@
 "targets": 1,
 "signal_ids": [
 "S-1273"
+]
+},
+{
+"id": "C-3754",
+"name": "GREEN OAKS OF WALNUT CREEK LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 19810550.0,
+"states": "OH",
+"latest": "2026-08-11",
+"targets": 1,
+"signal_ids": [
+"S-1789"
 ]
 },
 {
@@ -6437,18 +6886,17 @@
 ]
 },
 {
-"id": "C-138",
-"name": "OHIOHEALTH CORP",
+"id": "C-3746",
+"name": "CCBCC OPERATIONS LLC",
 "entity_type": "corp",
 "jp": false,
 "signals": 1,
 "value_total": 500000.0,
 "states": "OH",
-"latest": "2026-09-04",
+"latest": "2026-07-09",
 "targets": 1,
 "signal_ids": [
-"S-1542",
-"S-36659"
+"S-1046"
 ]
 },
 {
@@ -6479,6 +6927,20 @@
 "signal_ids": [
 "S-1343",
 "S-10105"
+]
+},
+{
+"id": "C-3753",
+"name": "ISG COLUMBUS COATINGS INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 375000.0,
+"states": "OH",
+"latest": "2026-08-04",
+"targets": 1,
+"signal_ids": [
+"S-1980"
 ]
 },
 {
@@ -6911,20 +7373,6 @@
 ]
 },
 {
-"id": "C-3658",
-"name": "CORE SPACES, LLC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 93000000.0,
-"states": "MI",
-"latest": "2026-08-31",
-"targets": 0,
-"signal_ids": [
-"S-32068"
-]
-},
-{
 "id": "C-183",
 "name": "MORNINGSIDE ELMHURST LLC",
 "entity_type": "spe",
@@ -6987,6 +7435,23 @@
 "S-5713",
 "S-6792",
 "S-6852"
+]
+},
+{
+"id": "C-3731",
+"name": "AMERICAN ELECTRIC POWER SERVICE CORP",
+"entity_type": "corp",
+"jp": false,
+"signals": 4,
+"value_total": 51000000.0,
+"states": "OH",
+"latest": "2026-08-10",
+"targets": 0,
+"signal_ids": [
+"S-1817",
+"S-1818",
+"S-1976",
+"S-2585"
 ]
 },
 {
@@ -7214,6 +7679,21 @@
 ]
 },
 {
+"id": "C-3730",
+"name": "CITY OF COLUMBUS OHIO",
+"entity_type": "public",
+"jp": false,
+"signals": 2,
+"value_total": 16400000.0,
+"states": "OH",
+"latest": "2026-07-17",
+"targets": 0,
+"signal_ids": [
+"S-2426",
+"S-2486"
+]
+},
+{
 "id": "C-184",
 "name": "VILLAGE OF HOFFMAN ESTATES",
 "entity_type": "public",
@@ -7418,6 +7898,25 @@
 ]
 },
 {
+"id": "C-3732",
+"name": "CINCINNATI CITY OF",
+"entity_type": "public",
+"jp": false,
+"signals": 6,
+"value_total": 11657238.99,
+"states": "OH",
+"latest": "2026-09-01",
+"targets": 0,
+"signal_ids": [
+"S-1088",
+"S-1098",
+"S-1099",
+"S-1166",
+"S-24379",
+"S-24380"
+]
+},
+{
 "id": "C-23",
 "name": "BELVIEW PARTNERS II LLC",
 "entity_type": "spe",
@@ -7516,6 +8015,20 @@
 "targets": 0,
 "signal_ids": [
 "S-262"
+]
+},
+{
+"id": "C-3750",
+"name": "PIZZUTI STELZER LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 10000000.0,
+"states": "OH",
+"latest": "2026-08-03",
+"targets": 0,
+"signal_ids": [
+"S-2048"
 ]
 },
 {
@@ -7673,6 +8186,20 @@
 ]
 },
 {
+"id": "C-3741",
+"name": "AAA CLUB ALLIANCE INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 8000000.0,
+"states": "OH",
+"latest": "2026-08-14",
+"targets": 0,
+"signal_ids": [
+"S-1158"
+]
+},
+{
 "id": "C-73",
 "name": "VOLO HOLDINGS LLC-1501 OAKLEY SERIES",
 "entity_type": "spe",
@@ -7807,6 +8334,20 @@
 ]
 },
 {
+"id": "C-3744",
+"name": "1480 DOTEN AVE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 5500000.0,
+"states": "OH",
+"latest": "2026-09-02",
+"targets": 0,
+"signal_ids": [
+"S-24422"
+]
+},
+{
 "id": "C-2706",
 "name": "ALBERTSONS PROP TAX",
 "entity_type": "corp",
@@ -7930,6 +8471,20 @@
 ]
 },
 {
+"id": "C-3726",
+"name": "ABBOTT MANUFACTURING INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 4700000.0,
+"states": "OH",
+"latest": "2026-07-27",
+"targets": 0,
+"signal_ids": [
+"S-2209"
+]
+},
+{
 "id": "C-40",
 "name": "222 NLS PROPERTIES LLC",
 "entity_type": "spe",
@@ -7984,6 +8539,20 @@
 "targets": 0,
 "signal_ids": [
 "S-511"
+]
+},
+{
+"id": "C-3735",
+"name": "GEORGETOWN WAY I LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 4145000.0,
+"states": "OH",
+"latest": "2026-08-25",
+"targets": 0,
+"signal_ids": [
+"S-1473"
 ]
 },
 {
@@ -8064,6 +8633,20 @@
 "targets": 0,
 "signal_ids": [
 "S-487"
+]
+},
+{
+"id": "C-3757",
+"name": "UNITED STATES POSTAL SERVICE",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 4000000.0,
+"states": "OH",
+"latest": "2026-07-21",
+"targets": 0,
+"signal_ids": [
+"S-2350"
 ]
 },
 {
@@ -8158,6 +8741,36 @@
 ]
 },
 {
+"id": "C-141",
+"name": "THE FRANKLIN PARK CONSERVATORY",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 3630000.0,
+"states": "OH",
+"latest": "2026-07-21",
+"targets": 0,
+"signal_ids": [
+"S-2347",
+"S-2497"
+]
+},
+{
+"id": "C-3729",
+"name": "THE FRANKLIN PARK CONSERVATORY JOINT RECREATION DISTRICT",
+"entity_type": "public",
+"jp": false,
+"signals": 2,
+"value_total": 3630000.0,
+"states": "OH",
+"latest": "2026-07-21",
+"targets": 0,
+"signal_ids": [
+"S-2347",
+"S-2497"
+]
+},
+{
 "id": "C-215",
 "name": "EQUITY TRUST COMPANY",
 "entity_type": "corp",
@@ -8218,6 +8831,20 @@
 "targets": 0,
 "signal_ids": [
 "S-11788"
+]
+},
+{
+"id": "C-3745",
+"name": "K&J INVESTMENTS XLIII LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 3500000.0,
+"states": "OH",
+"latest": "2026-07-10",
+"targets": 0,
+"signal_ids": [
+"S-2613"
 ]
 },
 {
@@ -8442,6 +9069,34 @@
 "signal_ids": [
 "S-19053",
 "S-19054"
+]
+},
+{
+"id": "C-3733",
+"name": "PROLOGIS TAX COORDINATOR",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 3000000.0,
+"states": "IL",
+"latest": "2026-08-25",
+"targets": 0,
+"signal_ids": [
+"S-23414"
+]
+},
+{
+"id": "C-3748",
+"name": "302 WEST THIRD TEI INVESTORS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 3000000.0,
+"states": "OH",
+"latest": "2026-07-23",
+"targets": 0,
+"signal_ids": [
+"S-1093"
 ]
 },
 {
@@ -8794,6 +9449,20 @@
 ]
 },
 {
+"id": "C-3755",
+"name": "SCARBOROUGH TENNIS LIMITED",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 2303096.0,
+"states": "OH",
+"latest": "2026-07-30",
+"targets": 0,
+"signal_ids": [
+"S-2100"
+]
+},
+{
 "id": "C-168",
 "name": "DOWNTOWN DEVELOPMENT AUTHORITY",
 "entity_type": "public",
@@ -9025,6 +9694,35 @@
 ]
 },
 {
+"id": "C-143",
+"name": "PREMIER TRAILERS LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 2000000.0,
+"states": "OH",
+"latest": "2026-07-17",
+"targets": 0,
+"signal_ids": [
+"S-2433",
+"S-2433"
+]
+},
+{
+"id": "C-3739",
+"name": "BOARD OF EDUCATION OF WORTHINGTON CITY SCHOOL DISTRICT",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 2000000.0,
+"states": "OH",
+"latest": "2026-07-06",
+"targets": 0,
+"signal_ids": [
+"S-2756"
+]
+},
+{
 "id": "C-117",
 "name": "VM SRG DEVELOPMENT LLC",
 "entity_type": "spe",
@@ -9071,6 +9769,20 @@
 "S-685",
 "S-5686",
 "S-24294"
+]
+},
+{
+"id": "C-3751",
+"name": "LOCKARD LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1929000.0,
+"states": "OH",
+"latest": "2026-07-28",
+"targets": 0,
+"signal_ids": [
+"S-1105"
 ]
 },
 {
@@ -9189,6 +9901,20 @@
 "targets": 0,
 "signal_ids": [
 "S-1306"
+]
+},
+{
+"id": "C-3738",
+"name": "CINCINNATI MUSEUM CENTER",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 1816000.0,
+"states": "OH",
+"latest": "2026-08-18",
+"targets": 0,
+"signal_ids": [
+"S-1161"
 ]
 },
 {
@@ -9317,6 +10043,20 @@
 "S-94",
 "S-107",
 "S-889"
+]
+},
+{
+"id": "C-3758",
+"name": "NATIONWIDE MUTUAL INSURANCE CO",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1770852.0,
+"states": "OH",
+"latest": "2026-07-02",
+"targets": 0,
+"signal_ids": [
+"S-2763"
 ]
 },
 {
@@ -9606,6 +10346,20 @@
 ]
 },
 {
+"id": "C-3742",
+"name": "YOUNG MENS CHRISTIAN ASSOCIATION",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1515238.0,
+"states": "OH",
+"latest": "2026-08-19",
+"targets": 0,
+"signal_ids": [
+"S-1587"
+]
+},
+{
 "id": "C-93",
 "name": "IL WESTERN LOUNGE INVESTORS, LLC",
 "entity_type": "spe",
@@ -9617,6 +10371,20 @@
 "targets": 0,
 "signal_ids": [
 "S-726"
+]
+},
+{
+"id": "C-142",
+"name": "Express Wash Concepts",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1500000.0,
+"states": "OH",
+"latest": "2026-08-04",
+"targets": 0,
+"signal_ids": [
+"S-1987"
 ]
 },
 {
@@ -9645,6 +10413,34 @@
 "targets": 0,
 "signal_ids": [
 "S-26259"
+]
+},
+{
+"id": "C-3737",
+"name": "810 GRANDVIEW LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1500000.0,
+"states": "OH",
+"latest": "2026-08-04",
+"targets": 0,
+"signal_ids": [
+"S-1987"
+]
+},
+{
+"id": "C-3759",
+"name": "TREE OF LIFE CHRISTIAN SCHOOLS",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1500000.0,
+"states": "OH",
+"latest": "2026-07-10",
+"targets": 0,
+"signal_ids": [
+"S-2594"
 ]
 },
 {
@@ -10064,6 +10860,20 @@
 ]
 },
 {
+"id": "C-3740",
+"name": "WEBO LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1300000.0,
+"states": "OH",
+"latest": "2026-08-05",
+"targets": 0,
+"signal_ids": [
+"S-1967"
+]
+},
+{
 "id": "C-3059",
 "name": "CalAtlantic Group, LL",
 "entity_type": "corp",
@@ -10214,6 +11024,20 @@
 ]
 },
 {
+"id": "C-3728",
+"name": "SAINT STEPHEN COMMUNITY SERVICES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1212014.67,
+"states": "OH",
+"latest": "2026-07-06",
+"targets": 0,
+"signal_ids": [
+"S-2732"
+]
+},
+{
 "id": "C-113",
 "name": "NORTH AVENUE VENTURE LLC",
 "entity_type": "spe",
@@ -10267,6 +11091,76 @@
 "targets": 0,
 "signal_ids": [
 "S-17514"
+]
+},
+{
+"id": "C-3734",
+"name": "23 W COURT HOLDINGS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1200000.0,
+"states": "OH",
+"latest": "2026-08-20",
+"targets": 0,
+"signal_ids": [
+"S-1167"
+]
+},
+{
+"id": "C-3736",
+"name": "PUBLIC EMPLOYEES RETIREMENT BOARD OF OHIO",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 1200000.0,
+"states": "OH",
+"latest": "2026-07-27",
+"targets": 0,
+"signal_ids": [
+"S-2230"
+]
+},
+{
+"id": "C-3743",
+"name": "HUNTINGTON CENTER OWNER LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1200000.0,
+"states": "OH",
+"latest": "2026-07-17",
+"targets": 0,
+"signal_ids": [
+"S-2406"
+]
+},
+{
+"id": "C-3756",
+"name": "HH21 LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1200000.0,
+"states": "OH",
+"latest": "2026-09-02",
+"targets": 0,
+"signal_ids": [
+"S-24415"
+]
+},
+{
+"id": "C-3760",
+"name": "COLUMBUS MONTESSORI EDUCATION CENTER INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1200000.0,
+"states": "OH",
+"latest": "2026-08-12",
+"targets": 0,
+"signal_ids": [
+"S-1748"
 ]
 },
 {
@@ -10472,6 +11366,20 @@
 "targets": 0,
 "signal_ids": [
 "S-25365"
+]
+},
+{
+"id": "C-3752",
+"name": "AR-BRICE PARK LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1100000.0,
+"states": "OH",
+"latest": "2026-08-26",
+"targets": 0,
+"signal_ids": [
+"S-1452"
 ]
 },
 {
@@ -10719,6 +11627,34 @@
 "targets": 0,
 "signal_ids": [
 "S-21977"
+]
+},
+{
+"id": "C-3727",
+"name": "EJ GRAY PROPERTY MANAGEMENT LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1000000.0,
+"states": "OH",
+"latest": "2026-08-10",
+"targets": 0,
+"signal_ids": [
+"S-1827"
+]
+},
+{
+"id": "C-3747",
+"name": "MOTORIST MUTUAL INSURANCE CO",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1000000.0,
+"states": "OH",
+"latest": "2026-08-04",
+"targets": 0,
+"signal_ids": [
+"S-1972"
 ]
 },
 {
@@ -16216,6 +17152,20 @@
 "signal_ids": [
 "S-6533",
 "S-24260"
+]
+},
+{
+"id": "C-3749",
+"name": "KINGSTON HOLDINGS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 265381.0,
+"states": "OH",
+"latest": "2026-07-17",
+"targets": 0,
+"signal_ids": [
+"S-1065"
 ]
 },
 {

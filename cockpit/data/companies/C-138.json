@@ -14,8 +14,8 @@
 "master_checked_at": "2026-09-06",
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 115500000.0,
+"count": 5,
+"value_total": 120500000.0,
 "latest": "2026-09-04",
 "items": [
 {
@@ -52,15 +52,91 @@
 "permit_no": "ADDC2605078",
 "permit_type": "Addition",
 "value": 115000000.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
+"category": "研究・医療・航空宇宙",
+"confidence": "high",
+"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)で 467,645 SQFT の増築工事 $115M。",
+"infer": "病院法人による大規模増築 = 医療機器・画像診断・特殊空調設備の調達が竣工まで続く窓(推論)。",
 "role": "applicant",
 "role_label": "申請者(許可記録)",
 "verbatim": "Commercial - Other / Addition / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 467645 SQFT",
 "source_id": "SRC-017",
-"provenance": null
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-1737",
+"date": "2026-08-12",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "111 S GRANT AVE",
+"permit_no": "ALTC2627989",
+"permit_type": "Alteration",
+"value": 1000000.0,
+"category": "研究・医療・航空宇宙",
+"confidence": "high",
+"summary": "OhioHealth 所有の医療施設(111 S Grant Ave)で構造改修 $1.0M(1,304 SQFT)。",
+"infer": "病院法人による小規模な構造改修 = 医療施設の設備更新の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 1304 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-1855",
+"date": "2026-08-07",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "111 S GRANT AVE",
+"permit_no": "ALTC2629458",
+"permit_type": "Alteration",
+"value": 2000000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "OhioHealth の建物(111 S Grant Ave)で 12,000 SF の構造的改修 $2M。",
+"infer": "病院法人の施設改修であり、用途詳細は記録上不明だが医療関連設備の更新の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 12000 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-2446",
+"date": "2026-07-16",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "285 E STATE ST",
+"permit_no": "ALTC2621758",
+"permit_type": "Alteration",
+"value": 2000000.0,
+"category": "研究・医療・航空宇宙",
+"confidence": "high",
+"summary": "OhioHealth Corporation による商業用建物(285 E State St)の構造改修 $2.0M(4,130 SF)。",
+"infer": "医療法人所有の施設改修であり、医療関連の設備更新に伴う可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 4130 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 }
 ]
 },
@@ -93,11 +169,32 @@
 {
 "date": "2026-08-21",
 "face": "permits",
-"title": "建設許可(Columbus): 未評価",
+"title": "建設許可(Columbus): 研究・医療・航空宇宙",
 "ref": "S-1542",
-"summary": null
+"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)で 467,645 SQFT の増築工事 $115M。"
+},
+{
+"date": "2026-08-12",
+"face": "permits",
+"title": "建設許可(Columbus): 研究・医療・航空宇宙",
+"ref": "S-1737",
+"summary": "OhioHealth 所有の医療施設(111 S Grant Ave)で構造改修 $1.0M(1,304 SQFT)。"
+},
+{
+"date": "2026-08-07",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1855",
+"summary": "OhioHealth の建物(111 S Grant Ave)で 12,000 SF の構造的改修 $2M。"
+},
+{
+"date": "2026-07-16",
+"face": "permits",
+"title": "建設許可(Columbus): 研究・医療・航空宇宙",
+"ref": "S-2446",
+"summary": "OhioHealth Corporation による商業用建物(285 E State St)の構造改修 $2.0M(4,130 SF)。"
 }
 ],
-"generated_at": "2026-09-06T19:02:15+00:00",
+"generated_at": "2026-09-06T21:00:21+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
