@@ -28,6 +28,9 @@ header .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.24em; co
 .theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;} .theme-btn:hover{color:var(--ink); border-color:var(--ink);}
 .beta{font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--ink); border:1.5px solid var(--ink); border-radius:4px; padding:2px 8px;}
 main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
+.lede-wrap{display:grid; grid-template-columns:minmax(0,1fr) 400px; gap:32px; align-items:center;}
+.sigmap{margin:0; color:var(--ink);} .sigmap svg{width:100%; height:auto; display:block;}
+@media (max-width:900px){ .lede-wrap{grid-template-columns:1fr; gap:18px;} .sigmap{max-width:460px;} }
 .lede{display:flex; flex-direction:column; gap:14px; max-width:980px;}
 .lede .brandline{display:flex; align-items:baseline; gap:10px; margin-bottom:4px;} .lede .pname{font-family:var(--serif); font-size:34px; font-weight:700; letter-spacing:.01em; color:var(--ink);} .lede .pby{font-family:var(--mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--sub);}
 .lede .tagline{margin:0 0 14px; font-size:14px; letter-spacing:.02em; color:var(--sub);}
@@ -105,12 +108,49 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 })();
 </script>
 <main>
+  <div class="lede-wrap">
   <div class="lede">
     <div class="brandline"><span class="pname">Signal</span><span class="pby">by 43 Sunsets</span></div>
     <p class="tagline">Turn market activity into action.</p>
     <h1>中西部で、次に動く会社が先に分かる。</h1>
     <p>イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの製造業について、投資・採用・補助金の兆しを公的記録から毎日拾い、会いに行くべき会社と、その理由を並べます。今は建設許可と動産担保登記(UCC)から。事実と推論は分けています。</p>
     <div class="dateline"><span class="ed" id="edition">読み込み中…</span><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(毎日 07:00 CT)"></div><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div></div>
+  </div>
+  <figure class="sigmap" aria-label="3 つのシグナル(投資・採用・補助金)が、会いに行くべき会社を指す">
+<svg viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+  <g font-family="'Zen Kaku Gothic New',system-ui,sans-serif" fill="currentColor">
+    <!-- 3 signals -->
+    <g class="sig">
+      <rect x="8" y="14" width="128" height="52" rx="6" fill="var(--card)" stroke="currentColor" stroke-width="1.2"/>
+      <text x="20" y="35" font-size="14" font-weight="700">投資</text>
+      <text x="20" y="54" font-size="10.5" fill="var(--sub)">建設許可・UCC 登記</text>
+      <rect x="8" y="98" width="128" height="52" rx="6" fill="var(--card)" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/>
+      <text x="20" y="119" font-size="14" font-weight="700">採用</text>
+      <text x="20" y="138" font-size="10.5" fill="var(--sub)">求人の出方(開発中)</text>
+      <rect x="8" y="182" width="128" height="52" rx="6" fill="var(--card)" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/>
+      <text x="20" y="203" font-size="14" font-weight="700">補助金</text>
+      <text x="20" y="222" font-size="10.5" fill="var(--sub)">政府補助金・税控除(開発中)</text>
+    </g>
+    <!-- converging lines -->
+    <g fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#ah)">
+      <path d="M136 40 C 175 40, 175 124, 206 124"/>
+      <path d="M136 124 L 206 124"/>
+      <path d="M136 208 C 175 208, 175 124, 206 124"/>
+    </g>
+    <!-- company node -->
+    <circle cx="256" cy="124" r="42" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+    <text x="256" y="120" font-size="14" font-weight="700" text-anchor="middle">会社</text>
+    <text x="256" y="138" font-size="9.5" text-anchor="middle" fill="var(--sub)">記録の逐語 + AI の読み</text>
+    <!-- action -->
+    <path d="M300 124 L 336 124" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#ah)"/>
+    <rect x="340" y="98" width="74" height="52" rx="6" fill="var(--accent)"/>
+    <text x="377" y="121" font-size="13" font-weight="700" text-anchor="middle" fill="var(--paper)">会いに行く</text>
+    <text x="377" y="138" font-size="9.5" text-anchor="middle" fill="var(--paper)" opacity=".85">次の一手へ</text>
+    <text x="256" y="236" font-size="9.5" text-anchor="middle" fill="var(--sub)">公的記録から、報道より数か月早く</text>
+  </g>
+</svg>
+</figure>
   </div>
   <div class="rule"></div>
   <div class="sec"><h2>今週の動き</h2><span id="picks-sub">中西部の工場の目立つ投資。毎週月曜に入れ替え。</span><span id="picks-date" class="mono"></span></div>
