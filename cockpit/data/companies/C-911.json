@@ -1,0 +1,138 @@
+{
+"id": "C-911",
+"name": "THE HOME DEPOT USA",
+"city": null,
+"state": "IL",
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"faces": {
+"permits": {
+"count": 3,
+"value_total": 108732.0,
+"latest": "2026-08-13",
+"items": [
+{
+"id": "S-5819",
+"date": "2026-08-13",
+"applied": "2026-05-01",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1232 W NORTH AVE",
+"permit_no": "101081985",
+"permit_type": "PERMIT - NEW CONSTRUCTION",
+"value": 75000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "THE HOME DEPOT USA(所在地 Chicago 1232 W NORTH AVE)で内装改修工事 $75k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "DDS 2019 CBC: INTERIOR ALTERATION FOR 1 STORY HOME DEPOT BUILDING INCLUDES RECONFIGURATION OF THE SELF-CHECKOUT PAYMENT KIOSKS. CLOSING OF EGRESS DOORS ON THE LEFT ENTRY VESTIBULE,& A DOUBLE DOOR NEAR THE RIGHT ENTRY VESTIBULE & ADD AN EGRESS DOOR AT THE GARDEN CENTER (OCC: M,B,S-1; TYPE IIB CONSTRU",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-009",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-23017",
+"date": "2026-07-31",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Geneva",
+"address": "2309 Sudbury Ln",
+"permit_no": "2026-00001131",
+"permit_type": "Histrc-Wndw-Res - Historic Window Residential",
+"value": 22818.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "歴史地区住宅の窓交換 $22.8k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Histrc-Wndw-Res - Historic Window Residential",
+"source_id": "SRC-043",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0903-002",
+"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
+}
+},
+{
+"id": "S-13179",
+"date": "2026-07-22",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Tinley Park",
+"address": "8568 SCHEER DR, TINLEY PARK, IL 60487",
+"permit_no": "BP2026-07-1198",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 10914.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Tinley Park 8568 SCHEER DR, TINLEY PARK, IL 60487 で窓・ドア交換 $10.9k(申請者/所有者: HOME DEPOT USA)。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "REMOVING AND REPLACING 5 WINDOWS, REPLACING LIKE WITH LIKE, NO STRUCTURAL CHANGES. / RESIDENTIAL PERMIT / OTHER - REMODELING",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-035",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "未収集",
+"count": 0,
+"note": "採用面は開発中(Coming soon)。この会社の求人は当社の網にまだ無い。"
+},
+"grants": {
+"status": "未収集",
+"count": 0,
+"note": "政府補助金面は開発中(Coming soon)。この会社の補助金・税額控除は当社の網にまだ無い。"
+}
+},
+"timeline": [
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-5819",
+"summary": "THE HOME DEPOT USA(所在地 Chicago 1232 W NORTH AVE)で内装改修工事 $75k。"
+},
+{
+"date": "2026-07-31",
+"face": "permits",
+"title": "建設許可(Geneva): 未分類",
+"ref": "S-23017",
+"summary": "歴史地区住宅の窓交換 $22.8k。"
+},
+{
+"date": "2026-07-22",
+"face": "permits",
+"title": "建設許可(Tinley Park): 未分類",
+"ref": "S-13179",
+"summary": "Tinley Park 8568 SCHEER DR, TINLEY PARK, IL 60487 で窓・ドア交換 $10.9k(申請者/所有者: HOME DEPOT USA)。"
+}
+],
+"generated_at": "2026-09-06T01:20:55+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

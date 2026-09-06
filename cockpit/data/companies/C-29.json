@@ -1,0 +1,138 @@
+{
+"id": "C-29",
+"name": "DIGITAL REALTY",
+"city": null,
+"state": "IL",
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"faces": {
+"permits": {
+"count": 3,
+"value_total": 9099280.0,
+"latest": "2026-08-28",
+"items": [
+{
+"id": "S-967",
+"date": "2026-08-28",
+"applied": "2026-08-04",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "600 S FEDERAL ST",
+"permit_no": "101086734",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 299280.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 600 S Federal St(Digital Realty 保有物件)の1階セキュリティタニケット(回転式ゲート)更新工事 $299.3k。",
+"infer": "所有者 Digital Realty はデータセンター専業の不動産事業者であり、本件はデータセンター施設内のセキュリティ改修と読める(推論)。新設・電源増強ではない。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF CERT 2019 CBRC: REMOVE AND REPLACE EXISTING SECURITY TURNSTILES ON GROUND FLOOR AT BOTH THE NORTH MAIN ENTRANCE AND SOUTH REAR ENTRANCE CORRIDOR. INSTALL NEW SECURITY -CIRCLELOCK- TURNSTILE AND HOLLOW METAL EGRESS DOOR AT NORTH ENTRANCE. INSTALL NEW PAIRS OF HOLLOW METAL SWING DOORS AT THE SOUT",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-004",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-563",
+"date": "2026-08-05",
+"applied": "2026-04-07",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "350 E CERMAK RD",
+"permit_no": "101081831",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 8400000.0,
+"category": "データセンター建設",
+"confidence": "high",
+"summary": "既存データセンター(350 E Cermak)6 階の電気室・支援スペース改修 $8.4M。",
+"infer": "稼働中 DC の電気室更新 = 電源増強・冷却更新の周辺需要が続く読み。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SPR 2019 CBRC: TENANT IMPROVEMENT TO REMODEL ELECTRICAL ROOMS AND SUPPORT SPACES ON THE 6TH FLOOR SUITES S600A & S600B OF AN EXISTING DATA CENTER. WORK TO INCLUDE UPDATES TO THE MECHANICAL, ELECTRICAL, FIRE PROTECTION AND OTHER AFFECTED SYSTEMS. EXTERIOR WORK IS LIMITED TO THE REMOVAL AND REPLACEMEN",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "01",
+"model": "claude-fable-5-1 (manual batch, sparring session)"
+}
+},
+{
+"id": "S-39",
+"date": "2026-07-02",
+"applied": "2026-06-19",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "780 S FEDERAL ST",
+"permit_no": "B200475500",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 400000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 780 S Federal St(Digital Realty 所有ビル)の外壁タックポインティング・組積補修 $400k(南・西面、19,100 SQ.FT.)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "TUCKPOINTING AND UNIT MASONRY REPAIR / REPLACEMENT: 19100 SQ. FT., LINTEL QTY. 0, MAX. LENGTH 0. LOCATION: SOUTH & WEST EXTERIOR FACADE.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-003",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "未収集",
+"count": 0,
+"note": "採用面は開発中(Coming soon)。この会社の求人は当社の網にまだ無い。"
+},
+"grants": {
+"status": "未収集",
+"count": 0,
+"note": "政府補助金面は開発中(Coming soon)。この会社の補助金・税額控除は当社の網にまだ無い。"
+}
+},
+"timeline": [
+{
+"date": "2026-08-28",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-967",
+"summary": "Chicago 600 S Federal St(Digital Realty 保有物件)の1階セキュリティタニケット(回転式ゲート)更新工事 $299.3k。"
+},
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Chicago): データセンター建設",
+"ref": "S-563",
+"summary": "既存データセンター(350 E Cermak)6 階の電気室・支援スペース改修 $8.4M。"
+},
+{
+"date": "2026-07-02",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-39",
+"summary": "Chicago 780 S Federal St(Digital Realty 所有ビル)の外壁タックポインティング・組積補修 $400k(南・西面、19,100 SQ.FT.)。"
+}
+],
+"generated_at": "2026-09-06T01:20:55+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

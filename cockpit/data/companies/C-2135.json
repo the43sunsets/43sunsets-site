@@ -1,0 +1,107 @@
+{
+"id": "C-2135",
+"name": "1 ITALIAN CONTRACTOR INC",
+"city": null,
+"state": "IL",
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"faces": {
+"permits": {
+"count": 2,
+"value_total": 5000.0,
+"latest": "2026-07-31",
+"items": [
+{
+"id": "S-14161",
+"date": "2026-07-31",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "204 KENTUCKY ST, PARK FOREST, IL 60466",
+"permit_no": "PB26-0880",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 2000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "204 KENTUCKY ST, PARK FOREST, IL 60466(Park Forest)で窓10箇所の交換。$2,000(許可種別: RESIDENTIAL PERMIT)。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "REPLACE 10 WINDOWS / RESIDENTIAL PERMIT / OTHER - REMODELING",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-059",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-14039",
+"date": "2026-07-30",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "204 KENTUCKY ST, PARK FOREST, IL 60466",
+"permit_no": "PB26-0877",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 3000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Park Forest 204 KENTUCKY ST, PARK FOREST, IL 60466: 住宅の屋根・外壁・軒天・雨樋の葺き替え/張替え $3.0k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "TEAR OFF AND REPLACE ROOF, SIDING, SOFFIT, GUTTERS AND FASCIA ON HOUSE AND GARAGE / RESIDENTIAL PERMIT / REMODELING - EXTERIOR ONLY",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-055",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "未収集",
+"count": 0,
+"note": "採用面は開発中(Coming soon)。この会社の求人は当社の網にまだ無い。"
+},
+"grants": {
+"status": "未収集",
+"count": 0,
+"note": "政府補助金面は開発中(Coming soon)。この会社の補助金・税額控除は当社の網にまだ無い。"
+}
+},
+"timeline": [
+{
+"date": "2026-07-31",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-14161",
+"summary": "204 KENTUCKY ST, PARK FOREST, IL 60466(Park Forest)で窓10箇所の交換。$2,000(許可種別: RESIDENTIAL PERMIT)。"
+},
+{
+"date": "2026-07-30",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-14039",
+"summary": "Park Forest 204 KENTUCKY ST, PARK FOREST, IL 60466: 住宅の屋根・外壁・軒天・雨樋の葺き替え/張替え $3.0k。"
+}
+],
+"generated_at": "2026-09-06T01:20:55+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

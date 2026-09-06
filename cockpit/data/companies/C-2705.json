@@ -1,0 +1,169 @@
+{
+"id": "C-2705",
+"name": "BCU",
+"city": null,
+"state": "IL",
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"faces": {
+"permits": {
+"count": 4,
+"value_total": 9204791.0,
+"latest": "2026-08-27",
+"items": [
+{
+"id": "S-23697",
+"date": "2026-08-27",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Vernon Hills",
+"address": "340 NORTH MILWAUKEE AVE",
+"permit_no": "MU15560",
+"permit_type": "FIRE SPR",
+"value": 36000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "オフィスビル1〜4階のスプリンクラー設置・移設 $36k(BCU)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "FIRE SPRINKLER / INSTALL & RELOCATE SPRINKLERS ON THE 1ST-4TH FLOOR/BCU CR UN",
+"source_id": "SRC-047",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0903-002",
+"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
+}
+},
+{
+"id": "S-23812",
+"date": "2026-08-19",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Vernon Hills",
+"address": "340 NORTH MILWAUKEE AVE",
+"permit_no": "MU15535",
+"permit_type": "REROOF",
+"value": 696791.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Vernon Hills 340 North Milwaukee Ave の BCU 拠点で屋根工事(REROOF) $697k。信号23704と同一所在地の関連許可。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "REROOF / RE-ROOF",
+"source_id": "SRC-047",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0903-001",
+"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
+}
+},
+{
+"id": "S-23709",
+"date": "2026-08-17",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Vernon Hills",
+"address": "340 NORTH MILWAUKEE AVE",
+"permit_no": "MU15526",
+"permit_type": "MISC COMM",
+"value": 72000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Vernon Hills 340 North Milwaukee Ave の BCU 拠点で既存 CRAC(サーバー室用空調)ユニット2基を撤去し、新規スプリットシステム2基を設置 $72k。",
+"infer": "CRACユニットの更新はサーバールーム(小規模データセンター機能)の存在を示唆(推論)。規模は小さくデータセンター建設カテゴリの基準には満たない。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "MISC COMMERCIAL / DEMO AND REMOVE (2) EXISTING CRAC UNITS, INSTALL(2) NEW SPLIT SYSTEMS.",
+"source_id": "SRC-047",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0903-001",
+"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
+}
+},
+{
+"id": "S-23704",
+"date": "2026-08-05",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Vernon Hills",
+"address": "340 NORTH MILWAUKEE AVE",
+"permit_no": "MU15470",
+"permit_type": "MISC COMM",
+"value": 8400000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Vernon Hills 340 North Milwaukee Ave の BCU(信用組合)拠点でオフィス内装改修(照明・電気・トイレ改修) $8.4M。",
+"infer": "同一所在地で複数の関連許可(再屋根・CRAC更新)が続く=本部施設の大規模改修プロジェクトの一部と推定(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "MISC COMMERCIAL / INTERIOR OFFICE RENOVATION W/ LIGHT FIXTURES, ELECTRIC, & BATHROOM REFRESH",
+"source_id": "SRC-047",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0903-001",
+"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "未収集",
+"count": 0,
+"note": "採用面は開発中(Coming soon)。この会社の求人は当社の網にまだ無い。"
+},
+"grants": {
+"status": "未収集",
+"count": 0,
+"note": "政府補助金面は開発中(Coming soon)。この会社の補助金・税額控除は当社の網にまだ無い。"
+}
+},
+"timeline": [
+{
+"date": "2026-08-27",
+"face": "permits",
+"title": "建設許可(Vernon Hills): 未分類",
+"ref": "S-23697",
+"summary": "オフィスビル1〜4階のスプリンクラー設置・移設 $36k(BCU)。"
+},
+{
+"date": "2026-08-19",
+"face": "permits",
+"title": "建設許可(Vernon Hills): 未分類",
+"ref": "S-23812",
+"summary": "Vernon Hills 340 North Milwaukee Ave の BCU 拠点で屋根工事(REROOF) $697k。信号23704と同一所在地の関連許可。"
+},
+{
+"date": "2026-08-17",
+"face": "permits",
+"title": "建設許可(Vernon Hills): 未分類",
+"ref": "S-23709",
+"summary": "Vernon Hills 340 North Milwaukee Ave の BCU 拠点で既存 CRAC(サーバー室用空調)ユニット2基を撤去し、新規スプリットシステム2基を設置 $72k。"
+},
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Vernon Hills): 未分類",
+"ref": "S-23704",
+"summary": "Vernon Hills 340 North Milwaukee Ave の BCU(信用組合)拠点でオフィス内装改修(照明・電気・トイレ改修) $8.4M。"
+}
+],
+"generated_at": "2026-09-06T01:20:55+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

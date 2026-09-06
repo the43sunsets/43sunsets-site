@@ -1,0 +1,138 @@
+{
+"id": "C-177",
+"name": "MCMASTER CARR SUPPLY CO",
+"city": null,
+"state": "IL",
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"faces": {
+"permits": {
+"count": 3,
+"value_total": 50407215.0,
+"latest": "2026-09-03",
+"items": [
+{
+"id": "S-25091",
+"date": "2026-09-03",
+"applied": "2026-07-23",
+"state": "IL",
+"jurisdiction": "Elmhurst",
+"address": "600 N COUNTY LINE RD ELMHURST IL 60126",
+"permit_no": "FIRE-010232-2026",
+"permit_type": "Fire Alarm Permit",
+"value": 7215.0,
+"category": "データセンター建設",
+"confidence": "high",
+"summary": "McMaster-Carr の Elmhurst 拠点で、データホール向け新設 CRAC ユニットを保護するダクト検知器2台と連動リレーを既設火災報知回路に追加する副許可 $7,215。",
+"infer": "CRAC(データホール空調)= 社内データセンター/サーバー室の新設・増強が親案件で進行中と読める(推論)。同一拠点の別許可(オフィス改修)と関連する可能性。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Addition of two duct detectors + shutdown relays to protect new CRAC units for data hall. Tying to existing fire alarm circuits. All existing devices to remain. / Fire Alarm Permit / Fire Alarm",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-17401",
+"date": "2026-08-14",
+"applied": "2026-04-14",
+"state": "IL",
+"jurisdiction": "Elmhurst",
+"address": "600 N COUNTY LINE RD ELMHURST IL 60126",
+"permit_no": "CR-008540-2026",
+"permit_type": "Interior Remodel (Over 2000 Sq Ft) - Commercial",
+"value": 50000000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "McMaster-Carr(産業用品通販)の Elmhurst 拠点で、既存ハイベイ倉庫 83,600 SF を 2 層のオフィスへ改修 $50M。",
+"infer": "倉庫を事務所へ転用 = 物流能力ではなく本社機能の拡張(推論)。設備面では空調・電気・昇降機の大型調達が伴う。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "The project consists of the renovation of approximately 83,600 SF of existing high-bay single story warehouse space into a two-level office with the construction of a new steel framed composite deck floor and interior finish out. The office space will include private offices, open office space, and ",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)"
+}
+},
+{
+"id": "S-16984",
+"date": "2026-07-23",
+"applied": "2026-06-03",
+"state": "IL",
+"jurisdiction": "Elmhurst",
+"address": "600 N COUNTY LINE RD ELMHURST IL 60126",
+"permit_no": "ELEC-009448-2026",
+"permit_type": "Electrical - Commercial",
+"value": 400000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Elmhurst 600 N COUNTY LINE RD ELMHURST IL 60126 での「Electrical - Commercial」$400k、申請者/所有者は MCMASTER CARR SUPPLY CO。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "New lighting and exiting for installation of new racks \"parcel longs\" / Electrical - Commercial / Electrical (Commercial)",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-003",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "未収集",
+"count": 0,
+"note": "採用面は開発中(Coming soon)。この会社の求人は当社の網にまだ無い。"
+},
+"grants": {
+"status": "未収集",
+"count": 0,
+"note": "政府補助金面は開発中(Coming soon)。この会社の補助金・税額控除は当社の網にまだ無い。"
+}
+},
+"timeline": [
+{
+"date": "2026-09-03",
+"face": "permits",
+"title": "建設許可(Elmhurst): データセンター建設",
+"ref": "S-25091",
+"summary": "McMaster-Carr の Elmhurst 拠点で、データホール向け新設 CRAC ユニットを保護するダクト検知器2台と連動リレーを既設火災報知回路に追加する副許可 $7,215。"
+},
+{
+"date": "2026-08-14",
+"face": "permits",
+"title": "建設許可(Elmhurst): 未分類",
+"ref": "S-17401",
+"summary": "McMaster-Carr(産業用品通販)の Elmhurst 拠点で、既存ハイベイ倉庫 83,600 SF を 2 層のオフィスへ改修 $50M。"
+},
+{
+"date": "2026-07-23",
+"face": "permits",
+"title": "建設許可(Elmhurst): 未分類",
+"ref": "S-16984",
+"summary": "Elmhurst 600 N COUNTY LINE RD ELMHURST IL 60126 での「Electrical - Commercial」$400k、申請者/所有者は MCMASTER CARR SUPPLY CO。"
+}
+],
+"generated_at": "2026-09-06T01:20:55+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

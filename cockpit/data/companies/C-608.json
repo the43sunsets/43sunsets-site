@@ -1,0 +1,138 @@
+{
+"id": "C-608",
+"name": "ADVOCATE LUTHERAN GENERAL HOSPITAL",
+"city": null,
+"state": "IL",
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"faces": {
+"permits": {
+"count": 3,
+"value_total": 430000.0,
+"latest": "2026-08-21",
+"items": [
+{
+"id": "S-16775",
+"date": "2026-08-21",
+"applied": "2026-04-28",
+"state": "IL",
+"jurisdiction": "Park Ridge",
+"address": "1925 DEMPSTER ST PARK RIDGE IL 60068",
+"permit_no": "CM-26-0116",
+"permit_type": "Commercial Demolition",
+"value": 30000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Park Ridge 1925 DEMPSTER ST PARK RIDGE IL 60068 で既存建物(がんサバイバーシップセンター)の解体(駐車場拡張計画の準備工事) $30.0k。 名義: ADVOCATE LUTHERAN GENERAL HOSPITAL。",
+"infer": "「ALGH West Parking Garage Expansion Project」の一部と明記されており、駐車場拡張の準備解体(推論)。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "ALGH West Parking Garage Expansion Project – Permit 1 of 3 for DEMOLITION of the existing Cancer Survivorship Center building      \n[ Demolition of a 1-story brick building concrete foundation. ] / Commercial Demolition / Demolition",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-017",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-11022",
+"date": "2026-07-01",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Park Ridge",
+"address": "1775 DEMPSTER ST   PARK RIDG, PARK RIDGE, IL 60068",
+"permit_no": "CM-26-0073",
+"permit_type": "EXEMPT PERMIT",
+"value": 200000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Park Ridge 1775 Dempster St、同一プロジェクトの副許可(EXEMPT PERMIT) $200k。新規MRIモバイルユニット受入のための改修(親案件: Commercial Remodel許可 signal 16869 と同一案件、Advocate Lutheran General Hospital)。申請者: ADAMSON。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "REMODEL NEW MRI MOBILE UNIT / EXEMPT PERMIT / EXEMPT PROPERTIES",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-005",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-16869",
+"date": "2026-07-01",
+"applied": "2026-03-10",
+"state": "IL",
+"jurisdiction": "Park Ridge",
+"address": "1775 DEMPSTER ST PARK RIDGE IL 60068",
+"permit_no": "CM-26-0073",
+"permit_type": "Commercial Remodel",
+"value": 200000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Park Ridge 1775 Dempster St の Advocate Lutheran General Hospital 本館で、モバイルMRIトレーラーの受入路確保のための軽微な改修 $200k(申請者: TUTEN)。",
+"infer": "一時的なモバイルMRIトレーラーの受入 = 恒久的なMRI室アップグレード計画の前段階の可能性(推論)。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Mobile MRI  -light renovation to accommodate a new MRI Mobile Unit. \nPER PLAN PAGE ALS.01: The project scope is located on the ground level of Advocate Lutheran General Hospital's main campus in Park Ridge, Illinois. The main objective of the renovation is to create access to a temporary mobile MRI ",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-005",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "未収集",
+"count": 0,
+"note": "採用面は開発中(Coming soon)。この会社の求人は当社の網にまだ無い。"
+},
+"grants": {
+"status": "未収集",
+"count": 0,
+"note": "政府補助金面は開発中(Coming soon)。この会社の補助金・税額控除は当社の網にまだ無い。"
+}
+},
+"timeline": [
+{
+"date": "2026-08-21",
+"face": "permits",
+"title": "建設許可(Park Ridge): 未分類",
+"ref": "S-16775",
+"summary": "Park Ridge 1925 DEMPSTER ST PARK RIDGE IL 60068 で既存建物(がんサバイバーシップセンター)の解体(駐車場拡張計画の準備工事) $30.0k。 名義: ADVOCATE LUTHERAN GENERAL HOSPITAL。"
+},
+{
+"date": "2026-07-01",
+"face": "permits",
+"title": "建設許可(Park Ridge): 未分類",
+"ref": "S-11022",
+"summary": "Park Ridge 1775 Dempster St、同一プロジェクトの副許可(EXEMPT PERMIT) $200k。新規MRIモバイルユニット受入のための改修(親案件: Commercial Remodel許可 signal 16869 と同一案件、Advocate Lutheran General Hospital)。申請者: ADAMSON。"
+},
+{
+"date": "2026-07-01",
+"face": "permits",
+"title": "建設許可(Park Ridge): 未分類",
+"ref": "S-16869",
+"summary": "Park Ridge 1775 Dempster St の Advocate Lutheran General Hospital 本館で、モバイルMRIトレーラーの受入路確保のための軽微な改修 $200k(申請者: TUTEN)。"
+}
+],
+"generated_at": "2026-09-06T01:20:55+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

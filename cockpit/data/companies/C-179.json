@@ -1,0 +1,107 @@
+{
+"id": "C-179",
+"name": "TRANSITION PROPERTIES LP",
+"city": null,
+"state": "IL",
+"entity_type": "spe",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"faces": {
+"permits": {
+"count": 2,
+"value_total": 3756259.0,
+"latest": "2026-08-18",
+"items": [
+{
+"id": "S-10182",
+"date": "2026-08-18",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Normal",
+"address": "2219 W College Ave",
+"permit_no": "BLDC2026-4303",
+"permit_type": "Commercial Building",
+"value": 300000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Normal 2219 W College Ave の「Rivian PDC Facility」商業建物リモデル $300k。",
+"infer": "PDC = Parts Distribution Center(部品配送拠点)の可能性(推論)。既存施設の小規模改修のため物流新設カテゴリには該当しない。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Rivian PDC Facility / Commercial Building / REMODEL",
+"source_id": "SRC-018",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-003",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-10249",
+"date": "2026-07-24",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Normal",
+"address": "2219 W College Ave",
+"permit_no": "BLDC2026-4100",
+"permit_type": "Commercial Building",
+"value": 3456259.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Normal の倉庫を Rivian サービスセンターへ改修 $3.5M(所有者 Transition Properties LP)。",
+"infer": "販売・整備拠点であり生産設備ではない。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Renovation of warehouse into new Rivian Service Center / Commercial Building / REMODEL",
+"source_id": "SRC-018",
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "未収集",
+"count": 0,
+"note": "採用面は開発中(Coming soon)。この会社の求人は当社の網にまだ無い。"
+},
+"grants": {
+"status": "未収集",
+"count": 0,
+"note": "政府補助金面は開発中(Coming soon)。この会社の補助金・税額控除は当社の網にまだ無い。"
+}
+},
+"timeline": [
+{
+"date": "2026-08-18",
+"face": "permits",
+"title": "建設許可(Normal): 未分類",
+"ref": "S-10182",
+"summary": "Normal 2219 W College Ave の「Rivian PDC Facility」商業建物リモデル $300k。"
+},
+{
+"date": "2026-07-24",
+"face": "permits",
+"title": "建設許可(Normal): 未分類",
+"ref": "S-10249",
+"summary": "Normal の倉庫を Rivian サービスセンターへ改修 $3.5M(所有者 Transition Properties LP)。"
+}
+],
+"generated_at": "2026-09-06T01:20:55+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

@@ -1,0 +1,138 @@
+{
+"id": "C-828",
+"name": "KEELEY CONSTRUCTION",
+"city": null,
+"state": "IL",
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"faces": {
+"permits": {
+"count": 3,
+"value_total": 15090670.0,
+"latest": "2026-08-04",
+"items": [
+{
+"id": "S-26471",
+"date": "2026-08-04",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Woodridge",
+"address": "11231 KATHERINES XING KEELEY CONSTRUCTION INC (GC)",
+"permit_no": null,
+"permit_type": "TEMPORARY TRAILER",
+"value": 1000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Woodridge 11231 Katherines Xing に工事用仮設トレーラーを設置 $1,000。GC = Keeley Construction Inc。",
+"infer": "近隣で本体工事が進行中である可能性(推論)だが、本記録単体では対象施設の用途が不明。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "CONSTRUCTION TRAILER / TEMPORARY TRAILER",
+"source_id": "SRC-025",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-26462",
+"date": "2026-08-03",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Woodridge",
+"address": "11231 KATHERINES XING KEELEY CONSTRUCTION INC (GC)",
+"permit_no": null,
+"permit_type": "COMMERCIAL NEW",
+"value": 15000000.0,
+"category": "物流・倉庫の新設",
+"confidence": "high",
+"summary": "Woodridge 11231 Katherines Xing に新築の商業倉庫 $15M。GC = Keeley Construction Inc。",
+"infer": "所有者・入居事業者は記録上不明(推論不可)。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "NEW COMMERCIAL WAREHOUSE / COMMERCIAL NEW",
+"source_id": "SRC-025",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-13301",
+"date": "2026-07-23",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Orland Park",
+"address": "15601 LAGRANGE ROAD, ORLAND PARK, IL 60462",
+"permit_no": "BPC-26-0343",
+"permit_type": "COMMERCIAL PERMIT",
+"value": 89670.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Orland Parkの15601 LAGRANGE ROAD, ORLAND PARK, IL 60462で改修工事を実施(詳細不明) $89.7k。申請者/所有者: KEELEY CONSTRUCTION。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "DEMO AND REBUILD DAMAGED CMU COLUMN PER ENGINEER DESIGNED PLANS-INSTALL VERTICAL REINFORCEMENT AND FILL BLOCKS WITH MORTAR. REFINISH AND PAINT COLUMN / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-008",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "未収集",
+"count": 0,
+"note": "採用面は開発中(Coming soon)。この会社の求人は当社の網にまだ無い。"
+},
+"grants": {
+"status": "未収集",
+"count": 0,
+"note": "政府補助金面は開発中(Coming soon)。この会社の補助金・税額控除は当社の網にまだ無い。"
+}
+},
+"timeline": [
+{
+"date": "2026-08-04",
+"face": "permits",
+"title": "建設許可(Woodridge): 未分類",
+"ref": "S-26471",
+"summary": "Woodridge 11231 Katherines Xing に工事用仮設トレーラーを設置 $1,000。GC = Keeley Construction Inc。"
+},
+{
+"date": "2026-08-03",
+"face": "permits",
+"title": "建設許可(Woodridge): 物流・倉庫の新設",
+"ref": "S-26462",
+"summary": "Woodridge 11231 Katherines Xing に新築の商業倉庫 $15M。GC = Keeley Construction Inc。"
+},
+{
+"date": "2026-07-23",
+"face": "permits",
+"title": "建設許可(Orland Park): 未分類",
+"ref": "S-13301",
+"summary": "Orland Parkの15601 LAGRANGE ROAD, ORLAND PARK, IL 60462で改修工事を実施(詳細不明) $89.7k。申請者/所有者: KEELEY CONSTRUCTION。"
+}
+],
+"generated_at": "2026-09-06T01:20:55+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

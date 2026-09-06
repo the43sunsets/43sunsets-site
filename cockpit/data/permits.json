@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-05T23:10:24+00:00",
+"generated_at": "2026-09-06T01:20:51+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,12 +15,12 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 27627,
+"signals_total": 35732,
 "candidates": 575,
 "enriched": 26668,
 "targets": 75,
 "unclassified": 26593,
-"unevaluated": 959,
+"unevaluated": 9064,
 "by_category": {
 "データセンター建設": 7,
 "未分類": 26593,
@@ -215,12 +215,12 @@
 {
 "source_id": "SRC-022",
 "state": "IL",
-"jurisdiction": "IL 12 自治体(Arlington Heights・Palatine・Elmhurst・Highland Park 他)",
-"label": "IL 12 自治体(Arlington Heights・Palatine・Elmhurst・Highland Park 他) 建築許可(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-09-05T12:08:06Z",
+"jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
+"label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-06T00:05:09Z",
 "last_run_note": "",
-"signals": 5500,
+"signals": 11057,
 "date_min": "2026-07-01",
 "date_max": "2026-09-06",
 "owner_coverage": 2255,
@@ -243,14 +243,14 @@
 {
 "source_id": "SRC-024",
 "state": "IL",
-"jurisdiction": "Evanston",
-"label": "エバンストン市 建築許可(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-09-05T12:08:33Z",
-"last_run_note": "",
-"signals": 1066,
+"jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
+"label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
+"last_run_status": "error",
+"last_run_at": "2026-09-06T01:07:25Z",
+"last_run_note": "TimeoutError: Locator.inner_text: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"tr\").nth(15).locator(\"td\").nth(26)\n",
+"signals": 3614,
 "date_min": "2026-07-01",
-"date_max": "2026-09-04",
+"date_max": "2026-09-05",
 "owner_coverage": 0,
 "targets": 0
 },
@@ -288,7 +288,7 @@
 "jurisdiction": "Cook 郡 BS&A 利用自治体(Skokie 他)",
 "label": "Cook 郡 BS&A 利用自治体(Skokie 他) 建築許可(公開記録)",
 "last_run_status": "running",
-"last_run_at": "2026-09-05T22:12:54Z",
+"last_run_at": "2026-09-05T23:58:22Z",
 "last_run_note": "",
 "signals": 13,
 "date_min": "2026-07-08",
@@ -754,6 +754,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-177",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
@@ -801,6 +802,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-3198",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
@@ -848,6 +850,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-3037",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-0904-hv",
@@ -895,6 +898,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-3",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-0904-hv",
@@ -942,6 +946,7 @@
 "owner_source": "parcel:detroit"
 },
 "karte": null,
+"company_id": "C-171",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "05",
@@ -989,6 +994,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-964",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-010",
@@ -1036,6 +1042,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-51",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "02",
@@ -1083,6 +1090,7 @@
 "owner_source": "parcel:detroit"
 },
 "karte": null,
+"company_id": "C-244",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-001",
@@ -1130,6 +1138,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-2711",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-0903-001",
@@ -1177,6 +1186,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-138",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "04",
@@ -1224,6 +1234,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-065",
@@ -1271,6 +1282,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-3028",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-0904-hv",
@@ -1318,6 +1330,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-49",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "03",
@@ -1365,6 +1378,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "batch-v0-06",
@@ -1412,6 +1426,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-071",
@@ -1459,6 +1474,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-181",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "batch-v0-06",
@@ -1506,6 +1522,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-469",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-003",
@@ -1553,6 +1570,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-072",
@@ -1600,6 +1618,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-072",
@@ -1647,6 +1666,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-102",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "03",
@@ -1694,6 +1714,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-136",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "04",
@@ -1741,6 +1762,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "batch-v0-06",
@@ -1788,6 +1810,7 @@
 "owner_source": "parcel:detroit"
 },
 "karte": null,
+"company_id": "C-1099",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-013",
@@ -1835,6 +1858,7 @@
 "owner_source": "parcel:dupage:addr"
 },
 "karte": null,
+"company_id": "C-2416",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-073",
@@ -1882,6 +1906,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-3158",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
@@ -1929,6 +1954,7 @@
 "owner_source": "parcel:detroit"
 },
 "karte": null,
+"company_id": "C-1038",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-012",
@@ -1976,6 +2002,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-107",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "03",
@@ -2023,6 +2050,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-3028",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-0904-hv",
@@ -2070,6 +2098,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-140",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "04",
@@ -2117,6 +2146,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-074",
@@ -2164,6 +2194,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-29",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "01",
@@ -2211,6 +2242,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-828",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
@@ -2258,6 +2290,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-075",
@@ -2305,6 +2338,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-182",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "batch-v0-06",
@@ -2352,6 +2386,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-49",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "03",
@@ -2399,6 +2434,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-2712",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-0903-001",
@@ -2446,6 +2482,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-536",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-004",
@@ -2493,6 +2530,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-180",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "batch-v0-06",
@@ -2540,6 +2578,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-180",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-077",
@@ -2587,6 +2626,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-180",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-077",
@@ -2634,6 +2674,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-139",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "04",
@@ -2681,6 +2722,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-51",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "02",
@@ -2728,6 +2770,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-51",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "02",
@@ -2775,6 +2818,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-51",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "02",
@@ -2822,6 +2866,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-518",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-004",
@@ -2869,6 +2914,7 @@
 "owner_source": "parcel:detroit"
 },
 "karte": null,
+"company_id": "C-155",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "05",
@@ -2916,6 +2962,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-178",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "batch-v0-06",
@@ -2963,6 +3010,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-374",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-049",
@@ -3010,6 +3058,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-004",
@@ -3057,6 +3106,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-004",
@@ -3104,6 +3154,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-178",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "batch-v0-06",
@@ -3151,6 +3202,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-139",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-079",
@@ -3198,6 +3250,7 @@
 "owner_source": "permit"
 },
 "karte": "C-001",
+"company_id": "C-28",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "01",
@@ -3245,6 +3298,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-003",
@@ -3292,6 +3346,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-1713",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-037",
@@ -3339,6 +3394,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-139",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-081",
@@ -3386,6 +3442,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-2712",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-0903-001",
@@ -3433,6 +3490,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-7",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "01",
@@ -3480,6 +3538,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-9",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "01",
@@ -3527,6 +3586,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-107",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "03",
@@ -3574,6 +3634,7 @@
 "owner_source": "permit"
 },
 "karte": "C-001",
+"company_id": "C-28",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "03",
@@ -3621,6 +3682,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": "C-135",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "04",
@@ -3668,6 +3730,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-4",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-004",
@@ -3715,6 +3778,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-518",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-004",
@@ -3762,6 +3826,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-066",
@@ -3809,6 +3874,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-3",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "01",
@@ -3856,6 +3922,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-4",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "01",
@@ -3903,6 +3970,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-2711",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-0903-001",
@@ -3950,6 +4018,7 @@
 "owner_source": "parcel:dupage"
 },
 "karte": null,
+"company_id": "C-180",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-003",
@@ -3997,6 +4066,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-4",
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "02",
@@ -4044,6 +4114,7 @@
 "owner_source": null
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-001",
@@ -4091,6 +4162,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": null,
 "provenance": {
 "policy": "v0-2026-09-02",
 "batch": "03",
@@ -4138,6 +4210,7 @@
 "owner_source": "permit"
 },
 "karte": null,
+"company_id": "C-1059",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-012",
@@ -4185,6 +4258,7 @@
 "owner_source": "parcel:milwaukee"
 },
 "karte": null,
+"company_id": "C-452",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-003",
@@ -4232,6 +4306,7 @@
 "owner_source": "parcel:milwaukee"
 },
 "karte": null,
+"company_id": "C-938",
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-009",

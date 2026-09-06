@@ -1,0 +1,107 @@
+{
+"id": "C-192",
+"name": "UNITED AIRLINES",
+"city": null,
+"state": "IL",
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"faces": {
+"permits": {
+"count": 2,
+"value_total": 1375906.0,
+"latest": "2026-08-05",
+"items": [
+{
+"id": "S-5214",
+"date": "2026-08-05",
+"applied": "2026-08-04",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "10000 W OHARE ST",
+"permit_no": "B200481370",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 55000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "シカゴオヘア空港ターミナル5(United Airlines)で800Aサービスへの回路追加など小規模電気工事 $55k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. ADD 1 CIRCUITS TO EXISTING 800 AMP SERVICE DISCONNECTING MEANS. RECEPTACLE OUTLETS: 5 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: TERMINAL 5.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-011",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-14585",
+"date": "2026-07-31",
+"applied": "2026-04-30",
+"state": "IL",
+"jurisdiction": "Arlington Heights",
+"address": "1421 W SHURE DR ARLINGTON HEIGHTS IL 60004",
+"permit_no": "BLDC2026-00097",
+"permit_type": "Alteration, Remodel, Repair - Commercial/Industrial/Multi-Family",
+"value": 1320906.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Arlington Heights 1421 W Shure Dr の United Airlines オフィス 1 階西側の内装改修 $1.3M。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "UNITED AIRLINES Interior renovation on the west area of the first floor of the building.  Work includes select demolition of partitions, lighting, and installation of new partition walls, ceilings, doors, lighting, finishes, related mep/fp, and the upgrade to the existing BAS system. / Alteration, R",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "未収集",
+"count": 0,
+"note": "採用面は開発中(Coming soon)。この会社の求人は当社の網にまだ無い。"
+},
+"grants": {
+"status": "未収集",
+"count": 0,
+"note": "政府補助金面は開発中(Coming soon)。この会社の補助金・税額控除は当社の網にまだ無い。"
+}
+},
+"timeline": [
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-5214",
+"summary": "シカゴオヘア空港ターミナル5(United Airlines)で800Aサービスへの回路追加など小規模電気工事 $55k。"
+},
+{
+"date": "2026-07-31",
+"face": "permits",
+"title": "建設許可(Arlington Heights): 未分類",
+"ref": "S-14585",
+"summary": "Arlington Heights 1421 W Shure Dr の United Airlines オフィス 1 階西側の内装改修 $1.3M。"
+}
+],
+"generated_at": "2026-09-06T01:20:55+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}
