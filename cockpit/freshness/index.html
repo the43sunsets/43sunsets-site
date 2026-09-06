@@ -384,6 +384,9 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
     document.getElementById("srcsum").innerHTML = list.length
       ? `源の健全性(${NAMES[state]}): ${list.length} 源のうち 生 ${(n.ok||0) + (n.empty||0)}${n.empty ? `(うち新着なし ${n.empty})` : ""}・<span class="${bad.length ? "bad" : ""}">源障害 ${n.error||0}</span>${bad.length ? `(${bad.join("・")})` : ""}。源が止まっている町は「源の状態」列に出ます。`
       : `${NAMES[state]}に自動取得の源はまだありません。`;
+    // 9/5: 郡発行(広域)の源 = 郡の建築課が未編入地域+契約自治体の許可を出す型。自治体単位への割当は未実装なので郡単位で示す
+    const cs = (COV.county_sources || []).filter(c => c.state === state);
+    if (cs.length) document.getElementById("srcsum").innerHTML += `<div style="margin-top:6px">郡発行(広域)の源 ${cs.length}: ` + cs.map(c => `<span class="mono">${c.county} 郡</span>(${c.status === "fresh" ? "生" : c.status === "stale" ? "古い" : "空"}・60 日 ${fmtN(c.records_60d)} 件・最終データ日 ${c.last_record_date || "—"})`).join("・") + `<span class="sub" style="margin-left:6px">※ 郡が契約する自治体への割当は未実装(下の一覧には出ない)</span></div>`;
   }
   function renderTable(){
     const q = document.getElementById("q").value.trim().toLowerCase();
