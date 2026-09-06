@@ -273,14 +273,14 @@ function permitItem(i){
   return `<div class="kitem" id="${esc(i.id)}"><div class="khead"><span class="kdate">${esc(i.date || i.applied || "")}</span><span class="kloc">${esc(i.jurisdiction)}</span><span>${esc(i.address || "")}</span>${cat}<span class="kchip role">${esc(i.role_label)}</span>${i.value ? `<span class="kchip">工事費 ${usd(i.value)}</span>` : ""}</div>
     ${i.summary ? `<div class="ksum">${esc(i.summary)}</div>` : ""}${i.infer ? `<div class="ksum"><span class="badge-infer">推論</span>${esc(i.infer)}</div>` : ""}
     ${i.verbatim ? `<div class="kfact"><span class="badge-fact">事実</span>${esc(i.verbatim)}</div>` : ""}
-    <div class="kref">${esc([i.permit_no ? "許可 " + i.permit_no : null, i.permit_type, i.source_id, i.id].filter(Boolean).join(" · "))} · <a href="/cockpit/permits/">建設許可の面へ</a></div></div>`;
+    <div class="kref">${esc([i.permit_no ? "許可 " + i.permit_no : null, i.permit_type, i.source_id, i.id].filter(Boolean).join(" · "))}</div></div>`;
 }
 function uccItem(u){
   const eq = (u.equipment || []).map(e => `<li>${esc([e.type, e.maker, e.model].filter(Boolean).join(" · "))}${e.qty ? ` × ${esc(e.qty)}` : ""}${e.domain ? ` <span class="kchip">${esc(e.domain)}</span>` : ""}</li>`).join("");
   return `<div class="kitem" id="${esc(u.id)}"><div class="khead"><span class="kdate">${esc(u.date)}</span><span class="kloc">${esc(u.kind)}</span>${u.lender ? `<span class="kchip">${esc(u.lender)}</span>` : ""}<span class="kchip role">${esc(u.role_label)}</span>${u.status ? `<span class="kchip">${esc(u.status)}</span>` : ""}</div>
     ${eq ? `<ul class="keq">${eq}</ul>` : ""}${u.summary ? `<div class="ksum">${esc(u.summary)}</div>` : ""}${u.infer ? `<div class="ksum"><span class="badge-infer">推論</span>${esc(u.infer)}</div>` : ""}
     ${u.secured_party ? `<div class="kfact"><span class="badge-fact">事実</span>担保権者: ${esc(u.secured_party)}${u.lapse ? ` · 失効 ${esc(u.lapse)}` : ""}</div>` : ""}
-    <div class="kref">${esc([u.ref, u.id].filter(Boolean).join(" · "))} · <a href="/cockpit/ucc/">UCC の面へ</a></div></div>`;
+    <div class="kref">${esc([u.ref, u.id].filter(Boolean).join(" · "))}</div></div>`;
 }
 function render(c){
   document.title = `${c.name} — 企業カルテ | 43 Sunsets Cockpit`;
