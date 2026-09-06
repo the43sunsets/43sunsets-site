@@ -19,6 +19,13 @@
 *{box-sizing:border-box} html,body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; text-wrap:pretty;}
 a{color:var(--accent);} .mono{font-family:var(--mono);}
 header{display:flex; justify-content:space-between; align-items:center; padding:14px 56px; position:absolute; top:0; left:0; right:0; z-index:40; color:#fff;}
+header .brand{display:flex; align-items:baseline; gap:10px; text-decoration:none; color:#fff; white-space:nowrap; min-width:0; letter-spacing:0;}
+header .brand .bmark{width:30px; height:30px; align-self:center; flex:none;}
+header .brand .bword{font-family:var(--serif); font-size:24px; font-weight:700; letter-spacing:.01em; line-height:1;}
+header .brand .bby{font-family:var(--mono); font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:rgba(232,235,238,.75);}
+header .brand .btag{font-family:inherit; font-size:12.5px; color:rgba(232,235,238,.75); letter-spacing:.02em; margin-left:14px; padding-left:14px; border-left:1px solid rgba(232,235,238,.3);}
+header .kicker a.top{margin-left:auto;}
+@media (max-width:700px){ header .brand .btag{display:none;} header .brand .bword{font-size:20px;} header .brand .bby{font-size:9px; letter-spacing:.14em;} header .brand .bmark{width:24px; height:24px;} }
 header .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.24em; color:#fff; display:flex; gap:12px; align-items:center;} header .kicker a{color:#fff; text-decoration:none;} header .kicker a.top{letter-spacing:.04em; font-family:var(--sans); font-size:12px; color:var(--glow);}
 .hdr-right{display:flex; align-items:center; gap:12px;} .theme-btn{border:1px solid rgba(255,255,255,.35); background:transparent; color:#fff; border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer;}
 /* ---- hero: 写真(CC BY)を濃紺で覆い、光る数字と明朝の見出し ---- */
@@ -55,7 +62,14 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 </head>
 <body>
 <header>
-  <div class="kicker"><a href="/cockpit/"><svg class="kmark" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent, var(--ai-accent))" stroke-width="4" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent, var(--ai-accent))" stroke-width="4" stroke-linecap="round" opacity=".62"/><path d="M4 50 H60" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>SIGNAL</a><span>by <a href="https://43sunsets.com/">43 SUNSETS</a></span><a class="top" href="/cockpit/">← トップへ</a></div>
+  <div class="kicker">
+    <a class="brand" href="/cockpit/" aria-label="Signal by 43 Sunsets">
+      <svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="#8FB4DA" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="#8FB4DA" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="#8FB4DA" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="#F6F7F5" stroke-width="3.2" stroke-linecap="round"/></svg>
+      <span class="bword">Signal</span><span class="bby">by 43 Sunsets</span>
+      <span class="btag">Turn market activity into action.</span>
+    </a>
+    <a class="top" href="/cockpit/">← トップへ</a>
+  </div>
   <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button></div>
 </header>
 <script>
