@@ -603,16 +603,18 @@ function openKarte(id){
     bg.hidden = false;
     bg.scrollTop = 0;
     const close = document.getElementById("kclose");
-    close.addEventListener("click", ()=>{ bg.hidden = true; });
+    close.addEventListener("click", ()=>{ if(history.state && history.state.karte){ history.back(); } else { bg.hidden = true; } });
     close.focus();
+    history.pushState({karte:id}, "", "#karte=" + encodeURIComponent(id));   // 9/5: 覆いを開いたら履歴を積む(「戻る」で覆いだけ閉じる)
   }
 }
+window.addEventListener("popstate", (e)=>{ const bg = document.getElementById("kartebg"); if(!(e.state && e.state.karte)) bg.hidden = true; });
 document.getElementById("grid").addEventListener("click", (e)=>{
   const btn = e.target.closest(".companylink");
   if(btn) openKarte(btn.dataset.karte);
 });
 document.addEventListener("keydown", (e)=>{
-  if(e.key==="Escape"){ document.getElementById("kartebg").hidden = true; }
+  if(e.key==="Escape" && !document.getElementById("kartebg").hidden){ if(history.state && history.state.karte){ history.back(); } else { document.getElementById("kartebg").hidden = true; } }
 });
 
 function renderScope(){

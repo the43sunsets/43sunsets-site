@@ -388,9 +388,15 @@ function karteHtml(c){
     <h3>時系列(登記+許可)</h3><div class="timeline">${tl}</div>
     <div class="karte-note">事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。情報の正確性・完全性は保証しません。</div></div>`;
 }
-function openKarte(id){ const c = CO[id]; if(!c) return; const bg = document.getElementById("kartebg"); bg.setAttribute("role","dialog"); bg.setAttribute("aria-modal","true"); bg.innerHTML = karteHtml(c); bg.hidden = false; bg.scrollTop = 0; document.getElementById("kclose").addEventListener("click", ()=>{ bg.hidden = true; }); }
+/* カルテは同じ面の上に被せる覆い。9/5 CEO 指摘: 開いても履歴が積まれず、ブラウザの「戻る」が UCC 面ごと前のページへ戻っていた →
+   開くときに履歴を 1 つ積み(#karte=ID)、「戻る」(popstate)・閉じるボタン・Esc はその履歴を 1 つ戻す。#karte=ID 付きの URL は直接開ける(共有可)。 */
+function showKarte(id){ const c = CO[id]; if(!c) return false; const bg = document.getElementById("kartebg"); bg.setAttribute("role","dialog"); bg.setAttribute("aria-modal","true"); bg.innerHTML = karteHtml(c); bg.hidden = false; bg.scrollTop = 0; document.getElementById("kclose").addEventListener("click", closeKarte); return true; }
+function hideKarte(){ const bg = document.getElementById("kartebg"); bg.hidden = true; bg.innerHTML = ""; }
+function closeKarte(){ if(history.state && history.state.karte){ history.back(); } else { hideKarte(); } }
+function openKarte(id){ if(!showKarte(id)) return; history.pushState({karte:id}, "", "#karte=" + encodeURIComponent(id)); }
+window.addEventListener("popstate", (e)=>{ if(e.state && e.state.karte){ showKarte(e.state.karte); } else { hideKarte(); } });
 document.getElementById("grid").addEventListener("click", (e)=>{ const btn = e.target.closest(".companylink"); if(btn) openKarte(btn.dataset.karte); });
-document.addEventListener("keydown", (e)=>{ if(e.key==="Escape"){ document.getElementById("kartebg").hidden = true; } });
+document.addEventListener("keydown", (e)=>{ if(e.key==="Escape" && !document.getElementById("kartebg").hidden){ closeKarte(); } });
 function fmtCT(iso){ const d = new Date(iso); const o = {timeZone:"America/Chicago", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hour12:false};
   const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", o).formatToParts(d).filter(x => x.type !== "literal").map(x => [x.type, x.value])); return `${p.year}-${p.month}-${p.day} ${p.hour === "24" ? "00" : p.hour}:${p.minute}`; }
 function renderScope(){
@@ -415,6 +421,7 @@ async function boot(){
     const f = META.funnel;
     document.getElementById("metaline").innerHTML = `${(META.states_present||[]).join("・")} 先行 / 登記 <span class="mono">${f.filings_total}</span> 件・会社 <span class="mono">${COMPANIES.length}</span> 社・機械 <span class="mono">${SIGNALS.reduce((a,s)=>a+Math.max(1,(s.equipment||[]).length),0)}</span> 台・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     renderFilters(); render(); renderScope();
+    const km = location.hash.match(/^#karte=(.+)$/); if(km){ const kid = decodeURIComponent(km[1]); if(showKarte(kid)) history.replaceState({karte:kid}, "", location.hash); }
   }catch(err){ document.getElementById("metaline").textContent = "データの読み込みに失敗しました(" + err.message + ")。"; document.getElementById("empty").hidden = false; document.getElementById("empty").textContent = "データ(ucc.json)を読み込めませんでした。時間をおいて再読み込みしてください。"; }
 }
 boot();
