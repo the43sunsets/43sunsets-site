@@ -23,6 +23,12 @@ body{background-image:var(--bg-extra); background-repeat:no-repeat;}
 a{color:var(--accent);} a:hover{color:var(--ink);}
 .mono{font-family:var(--mono);}
 header{display:flex; justify-content:space-between; align-items:center; padding:16px 56px; border-bottom:var(--head-border); background:var(--paper); position:sticky; top:0; z-index:40;}
+header .brand{display:flex; align-items:baseline; gap:10px; text-decoration:none; color:var(--ink); flex-wrap:wrap;}
+header .brand .bmark{width:30px; height:30px; align-self:center; flex:none;}
+header .brand .bword{font-family:var(--serif); font-size:24px; font-weight:700; letter-spacing:.01em; line-height:1;}
+header .brand .bby{font-family:var(--mono); font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--sub);}
+header .brand .btag{font-size:12.5px; color:var(--sub); letter-spacing:.02em; margin-left:14px; padding-left:14px; border-left:1px solid var(--line);}
+@media (max-width:700px){ header .brand .btag{display:none;} header .brand .bword{font-size:20px;} }
 header .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.24em; color:var(--ink);} header .kicker a{color:var(--ink); text-decoration:none;}
 .hdr-right{display:flex; align-items:center; gap:14px;}
 .theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;} .theme-btn:hover{color:var(--ink); border-color:var(--ink);}
@@ -86,7 +92,11 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 </head>
 <body>
 <header>
-  <div class="kicker"><a href="/cockpit/"><svg class="kmark" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent, var(--ai-accent))" stroke-width="4" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent, var(--ai-accent))" stroke-width="4" stroke-linecap="round" opacity=".62"/><path d="M4 50 H60" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>SIGNAL</a> <span style="opacity:.7">by</span> <a href="https://43sunsets.com/">43 SUNSETS</a></div>
+  <a class="brand" href="/cockpit/" aria-label="Signal by 43 Sunsets">
+    <svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg>
+    <span class="bword">Signal</span><span class="bby">by 43 Sunsets</span>
+    <span class="btag">Turn market activity into action.</span>
+  </a>
   <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
@@ -106,8 +116,6 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 </script>
 <main>
   <div class="lede">
-    <div class="brandline"><svg class="pmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg><span class="pname">Signal</span><span class="pby">by 43 Sunsets</span></div>
-    <p class="tagline">Turn market activity into action.</p>
     <h1>中西部で、次に動く会社が先に分かる。</h1>
     <p>イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの製造業について、投資・採用・補助金の兆しを公的記録から毎日拾い、会いに行くべき会社と、その理由を並べます。今は建設許可と動産担保登記(UCC)から。事実と推論は分けています。</p>
     <div class="dateline"><span class="ed" id="edition">読み込み中…</span><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(毎日 07:00 CT)"></div><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div></div>
