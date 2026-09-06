@@ -6,7 +6,8 @@
   if(!vid){vid=Array.from(crypto.getRandomValues(new Uint8Array(12)),function(b){return b.toString(16).padStart(2,'0')}).join('');localStorage.setItem('c43_vid',vid);}
   var q=new URLSearchParams(location.search),src=q.get('utm_source')||q.get('src');
   if(src){localStorage.setItem('c43_src',src);}else{src=localStorage.getItem('c43_src')||(document.referrer?'ref':'direct');}
-  var body=JSON.stringify({vid:vid,src:src,path:location.pathname});
+  var path=location.pathname+(location.pathname.indexOf('/cockpit/company/')===0?location.search:'');   // 9/5: company card views carry ?id=C-<n> (no personal data)
+  var body=JSON.stringify({vid:vid,src:src,path:path});
   if(navigator.sendBeacon){navigator.sendBeacon('/cockpit/hit',new Blob([body],{type:'application/json'}));}
   else{fetch('/cockpit/hit',{method:'POST',headers:{'content-type':'application/json'},body:body,keepalive:true});}
 }catch(e){}})();

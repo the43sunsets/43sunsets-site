@@ -45,6 +45,7 @@ main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
 .pick{display:flex; flex-direction:column; gap:8px; padding:16px 18px; background:var(--card); border:1px solid var(--line); border-radius:6px;}
 .pick .tag{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:700; font-family:var(--mono);}
 .pick h3{margin:0; font-family:var(--serif); font-size:17px; line-height:1.42; color:var(--ink); font-weight:700;}
+.pick h3 .companylink{color:var(--accent); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;} .pick h3 .companylink:hover{text-decoration-thickness:2px;}
 .pick p{margin:0; font-size:13px; line-height:1.7; color:var(--sub);}
 .ai{display:flex; gap:14px; align-items:flex-start; padding:18px 22px; background:var(--infer-bg); border:1px solid var(--infer-line); border-radius:6px;}
 .ai .badge{flex:none; font-size:10.5px; letter-spacing:.14em; font-weight:700; color:var(--infer); border:1px solid var(--infer); border-radius:4px; padding:3px 7px; font-family:var(--mono); margin-top:2px;}
@@ -155,7 +156,8 @@ async function boot(){
   const now = new Date(); const ct = fmtCT(now.toISOString(), false); const wd = WD[new Date(now.toLocaleString("en-US",{timeZone:"America/Chicago"})).getDay()];
   document.getElementById("edition").textContent = `${ct}(${wd})版`;
   try{ const top = await get("data/top.json"); const picks = top.picks || [];
-    document.getElementById("picks").innerHTML = picks.length ? picks.map(p=>`<article class="pick"><div class="tag">${esc(p.tag)}</div><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p></article>`).join("") : `<div class="pick"><p>直近 90 日に目立つ動きはありません。</p></div>`;
+    const pickTitle = p => { if(p.karte && p.company && p.title.startsWith(p.company)){ return `<a class="companylink" href="/cockpit/company/?id=${esc(p.karte)}" title="企業カルテを開く">${esc(p.company)}</a>${esc(p.title.slice(p.company.length))}`; } return esc(p.title); };   // 9/5 CEO: 社名からカルテへ
+    document.getElementById("picks").innerHTML = picks.length ? picks.map(p=>`<article class="pick"><div class="tag">${esc(p.tag)}</div><h3>${pickTitle(p)}</h3><p>${esc(p.body)}</p></article>`).join("") : `<div class="pick"><p>直近 90 日に目立つ動きはありません。</p></div>`;
     if(top.intro) document.getElementById("picks-sub").textContent = top.intro;
     const wdOf = d => WD[new Date(d + "T12:00:00-05:00").getDay()];
     if(top.updated_ct) document.getElementById("picks-date").textContent = `更新 ${top.updated_ct}(${wdOf(top.updated_ct)})・次回 ${top.next_update_ct}(${wdOf(top.next_update_ct)})`;
@@ -173,6 +175,6 @@ async function boot(){
 boot();
 </script>
 <script src="/cockpit/assets/health.js?v=20260905d" defer></script>
-<script src="/cockpit/assets/hit.js?v=20260905d" defer></script>
+<script src="/cockpit/assets/hit.js?v=20260905e" defer></script>
 </body>
 </html>

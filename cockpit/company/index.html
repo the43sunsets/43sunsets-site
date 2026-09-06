@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>企業カルテ | 43 Sunsets Cockpit</title>
+<meta name="description" content="会社ごとに、建設許可・UCC 登記・採用・政府補助金の 4 面の出来事を 1 枚に束ねた企業カルテ(BETA)。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E;
+  --ai-accent:#2F5D8A; --line:#D9DDD9; --line-soft:#E7EAE6;
+  --fact:#2E6E4E; --fact-bg:#EEF5F0; --infer:#8A5A2F; --infer-bg:#F7F1E8; --infer-line:#D9C6A8;
+  --stamp:#B54434; --chip-bg:#EDF0F3;
+  --warn:#9A4A1F; --warn-bg:#F6EDE6;
+  --jp:#8A2F55; --jp-bg:#F5E9EF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#161A1F; --card:#1E242B; --ink:#E4E7EA; --sub:#9AA4AE;
+    --ai-accent:#7FA8D0; --line:#333B44; --line-soft:#2A313A;
+    --fact:#7CC49C; --fact-bg:#20302A; --infer:#D8A96B; --infer-bg:#332A1E; --infer-line:#5A4A32;
+    --stamp:#D07360; --chip-bg:#2A313A;
+    --warn:#D0885C; --warn-bg:#33261C;
+    --jp:#D07FA5; --jp-bg:#33202A;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#161A1F; --card:#1E242B; --ink:#E4E7EA; --sub:#9AA4AE;
+  --ai-accent:#7FA8D0; --line:#333B44; --line-soft:#2A313A;
+  --fact:#7CC49C; --fact-bg:#20302A; --infer:#D8A96B; --infer-bg:#332A1E; --infer-line:#5A4A32;
+  --stamp:#D07360; --chip-bg:#2A313A;
+  --warn:#D0885C; --warn-bg:#33261C;
+  --jp:#D07FA5; --jp-bg:#33202A;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper); color:var(--ink); font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif; margin:0; line-height:1.7; font-size:14.5px;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;}
+
+header{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:16px 28px 13px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; background:var(--card); position:sticky; top:0; z-index:40;}
+.masthead h1{font-family:"Shippori Mincho",serif; font-size:21px; font-weight:700; margin:0; letter-spacing:.02em;}
+.masthead .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
+.masthead .meta{font-size:12px; color:var(--sub); margin-top:4px;}
+.stamp{flex:none; border:2.5px solid var(--stamp); color:var(--stamp); font-family:"Shippori Mincho",serif; font-weight:700; font-size:15px; padding:5px 6px 5px 10px; transform:rotate(-6deg); border-radius:4px; letter-spacing:.3em; opacity:.85; margin-top:4px;}
+.hdr-right{display:flex; align-items:center; gap:14px; flex:none;}
+.theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;}
+.theme-btn:hover{color:var(--ink); border-color:var(--ink);}
+
+.app{display:grid; grid-template-columns:264px minmax(0,1fr); gap:0; align-items:start; min-height:70vh;}
+
+/* ---- 左: フィルタ ---- */
+aside{border-right:1px solid var(--line); padding:20px 20px 40px; position:sticky; top:var(--headh,96px); max-height:calc(100vh - var(--headh,96px)); overflow-y:auto;}
+.fgroup{margin-bottom:22px;}
+.fitem.zero{opacity:.45;}
+.fgroup h2{font-size:11px; letter-spacing:.2em; color:var(--sub); font-weight:700; margin:0 0 8px; text-transform:uppercase; border-bottom:1px solid var(--line-soft); padding-bottom:5px;}
+.fitem{display:flex; align-items:center; gap:8px; padding:3px 2px; font-size:13.5px; cursor:pointer; border-radius:4px;}
+.fitem:hover{background:var(--chip-bg);}
+.fitem input{accent-color:var(--ai-accent); width:15px; height:15px; cursor:pointer;}
+.fitem .cnt{margin-left:auto; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11.5px; color:var(--sub);}
+.fitem.jp-toggle{background:var(--jp-bg); color:var(--jp); font-weight:500; padding:6px 8px; margin-bottom:4px;}
+.fitem.jp-toggle input{accent-color:var(--jp);}
+.clearbtn{width:100%; border:1px solid var(--line); background:var(--card); color:var(--sub); font-family:inherit; font-size:12.5px; padding:7px; border-radius:5px; cursor:pointer; margin-top:4px;}
+.clearbtn:hover{color:var(--ink); border-color:var(--sub);}
+.fnote{font-size:11px; color:var(--sub); margin-top:18px; line-height:1.6; border-top:1px solid var(--line-soft); padding-top:10px;}
+
+/* ---- 右: 結果 ---- */
+main{padding:18px 28px 60px; min-width:0;}
+.toolbar{display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding-bottom:12px; border-bottom:2px solid var(--ink); margin-bottom:16px;}
+.hitcount{font-family:"Shippori Mincho",serif; font-size:17px; font-weight:700;}
+.hitcount .num{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:19px;}
+.hitsub{font-size:12px; color:var(--sub);}
+.exportbtn{margin-left:auto; border:1.5px solid var(--ai-accent); color:var(--ai-accent); background:transparent; font-family:inherit; font-weight:700; font-size:13px; padding:7px 16px; border-radius:5px; cursor:pointer;}
+.exportbtn:hover{background:var(--ai-accent); color:var(--paper);}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px;}
+.card{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:15px 17px 13px; display:flex; flex-direction:column; gap:7px;}
+.card .head{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;}
+.card .head .chip.inv{margin-left:2px; align-self:center;}
+.card h3{margin:0; font-size:14.5px; font-weight:700; line-height:1.5; flex:1;}
+.state{display:inline-block; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px; font-weight:500; color:var(--paper); background:var(--ink); border-radius:3px; padding:0 6px; letter-spacing:.08em; flex:none; margin-top:3px;}
+.chip{display:inline-block; font-size:10.5px; color:var(--sub); background:var(--chip-bg); border-radius:3px; padding:0 7px; margin-right:5px;}
+.chip.jp{color:var(--jp); background:var(--jp-bg); font-weight:700;}
+.chip.newchip{color:var(--stamp); background:transparent; border:1.5px solid var(--stamp); font-weight:700; letter-spacing:.1em; font-size:10px;}
+.chip.inv{font-weight:700;}
+.chip.inv.operator,.chip.inv.owner_occupier{color:var(--fact); background:var(--fact-bg);}
+.chip.inv.public{color:var(--ai-accent); background:var(--chip-bg);}
+.chip.inv.unknown{color:var(--warn); background:var(--warn-bg);}
+.unknown-inv{color:var(--sub); font-weight:500;}
+.parties{font-size:11.5px; color:var(--sub); margin:2px 0 0; line-height:1.5;}
+.card .loc{font-size:12px; color:var(--sub);}
+.card .summary{font-size:13px;}
+.fact{border-left:3px solid var(--fact); background:var(--fact-bg); padding:7px 11px; border-radius:0 4px 4px 0; font-size:12.5px;}
+.fact .flabel{font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--fact); display:block; margin-bottom:1px;}
+.fact .verbatim{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; display:block; margin-top:3px; word-break:break-word; color:var(--sub);}
+.infer{border:1px dashed var(--infer-line); background:var(--infer-bg); padding:7px 11px; border-radius:4px; font-size:12.5px;}
+.badge-infer{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--infer); border:1px solid var(--infer); border-radius:3px; padding:0 5px; margin-right:6px; vertical-align:1px;}
+
+.pager{display:flex; align-items:center; justify-content:center; gap:6px; margin-top:24px;}
+.pager button{border:1px solid var(--line); background:var(--card); color:var(--ink); font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:13px; min-width:34px; padding:5px 8px; border-radius:5px; cursor:pointer;}
+.pager button:hover{border-color:var(--ai-accent); color:var(--ai-accent);}
+.pager button[disabled]{opacity:.35; cursor:default;}
+.pager button.cur{background:var(--ink); color:var(--paper); border-color:var(--ink); cursor:default;}
+.pager .gap{color:var(--sub); padding:0 2px;}
+.pager .pinfo{font-size:12.5px; color:var(--sub); margin-left:10px;}
+.pager{flex-wrap:wrap;}
+.empty{padding:60px 20px; text-align:center; color:var(--sub); font-size:14px;}
+
+footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5px; color:var(--sub);}
+
+/* ---- 企業カルテ ---- */
+.companylink{background:none; border:none; padding:0; font:inherit; font-weight:700; color:var(--ai-accent); cursor:pointer; text-align:left; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;}
+.companylink:hover{text-decoration-thickness:2px;}
+.karte-bg{position:fixed; inset:0; background:var(--paper); z-index:60; overflow-y:auto;}
+.karte{max-width:880px; margin:0 auto; padding:28px 24px 80px;}
+.karte-top{display:flex; justify-content:space-between; align-items:flex-start; gap:14px; border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:14px 0 12px; margin-bottom:18px;}
+.karte-top .kicker{font-size:10.5px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin-bottom:3px;}
+.karte-top h2{font-family:"Shippori Mincho",serif; font-size:22px; margin:0;}
+.karte-top .ksub{font-size:12.5px; color:var(--sub); margin-top:4px;}
+.karte-close{border:1px solid var(--line); background:var(--card); color:var(--ink); font-family:inherit; font-size:13px; padding:7px 14px; border-radius:5px; cursor:pointer; flex:none;}
+.karte-close:hover{border-color:var(--ai-accent); color:var(--ai-accent);}
+.karte h3{font-size:13px; letter-spacing:.14em; color:var(--sub); font-weight:700; border-bottom:2px solid var(--ink); padding-bottom:5px; margin:26px 0 12px;}
+.timeline{border-left:2px solid var(--line); margin-left:6px; padding-left:18px; display:flex; flex-direction:column; gap:14px;}
+.tl-item{position:relative;}
+.tl-item::before{content:""; position:absolute; left:-24px; top:6px; width:9px; height:9px; border-radius:50%; background:var(--fact);}
+.tl-item .tl-date{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px; color:var(--sub);}
+.tl-item .tl-title{font-weight:700; font-size:14px;}
+.tl-item .tl-body{font-size:12.5px; color:var(--sub);}
+.kv{display:grid; grid-template-columns:max-content 1fr; gap:4px 16px; font-size:13px;}
+.kv dt{color:var(--sub); font-size:12px; padding-top:1px;}
+.kv dd{margin:0;}
+.karte .fact,.karte .infer{font-size:13px;}
+.karte-note{font-size:11.5px; color:var(--sub); border-top:1px solid var(--line-soft); margin-top:28px; padding-top:10px;}
+
+button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accent); outline-offset:2px;}
+.scope-details{margin:26px 0 0;}
+.scope-details summary{cursor:pointer; font-weight:700; font-size:13px; color:var(--sub); letter-spacing:.06em; padding:8px 0; border-top:1px solid var(--line);}
+.scope-details summary:hover{color:var(--ink);}
+.scope-details table{width:100%; border-collapse:collapse; font-size:12.5px; background:var(--card); border:1px solid var(--line); border-radius:6px; overflow:hidden; margin:10px 0;}
+.scope-details th{font-size:10.5px; letter-spacing:.12em; color:var(--sub); text-align:left; font-weight:500; padding:7px 10px; border-bottom:1px solid var(--line); background:var(--chip-bg);}
+.scope-details td{padding:7px 10px; border-bottom:1px solid var(--line-soft); vertical-align:top;}
+.scope-details tr:last-child td{border-bottom:none;}
+.scope-details .ok{color:var(--fact); font-weight:700;}
+.scope-details .ng{color:var(--stamp); font-weight:700;}
+.scope-details ul{margin:6px 0 0; padding-left:18px; font-size:12.5px; color:var(--sub);}
+.scope-details li{margin-bottom:4px;}
+.tblwrap{overflow-x:auto;}
+.beta{flex:none; border:2px solid var(--ai-accent); color:var(--ai-accent); font-family:"IBM Plex Mono",ui-monospace,monospace; font-weight:700; font-size:12px; padding:2px 9px; border-radius:4px; letter-spacing:.14em; margin-top:8px;}
+.brandlink{color:var(--sub); text-decoration:none;}
+.brandlink:hover{color:var(--ai-accent);}
+a{color:var(--ai-accent);}
+@media (max-width:760px){
+  .app{grid-template-columns:1fr;}
+  aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
+}
+
+/* ---- health meter(ヘッダー右上・9/5) ---- */
+.hb{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); background:var(--card); border-radius:999px; padding:4px 12px 4px 8px; font-size:11.5px; color:var(--sub); white-space:nowrap; cursor:help;}
+.hb .hb-k{color:var(--ink);} .hb .hb-lbl{font-weight:700; color:var(--ink); letter-spacing:.04em;} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;}
+.hb-dot{width:9px; height:9px; border-radius:50%; background:var(--line); flex:none; box-shadow:0 0 0 0 rgba(0,0,0,0);}
+.hb.hb-ok .hb-dot{background:var(--fact); animation:hbpulse 2.4s ease-out infinite;} .hb.hb-ok{border-color:var(--fact);}
+.hb.hb-wait .hb-dot{background:var(--infer);} .hb.hb-wait{border-color:var(--infer-line);}
+.hb.hb-fail .hb-dot{background:var(--stamp);} .hb.hb-fail{border-color:var(--stamp); color:var(--stamp);} .hb.hb-fail .hb-k{color:var(--stamp);}
+@keyframes hbpulse{0%{box-shadow:0 0 0 0 rgba(46,110,78,.45)} 70%{box-shadow:0 0 0 7px rgba(46,110,78,0)} 100%{box-shadow:0 0 0 0 rgba(46,110,78,0)}}
+@media (max-width:820px){ .hb .hb-txt{max-width:46vw; overflow:hidden; text-overflow:ellipsis;} }
+
+/* ---- 期間の段(9/5 CEO 合意: 決め打ち・件数つき・既定 すべて) ---- */
+.seg{display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; background:var(--card);}
+.seg button{border:0; background:transparent; color:var(--sub); font:inherit; font-size:12px; padding:5px 12px; cursor:pointer; white-space:nowrap;}
+.seg button .cnt{font-family:"IBM Plex Mono",ui-monospace,monospace; margin-left:5px; color:var(--sub); font-size:11px;}
+.seg button.cur{background:var(--ink); color:var(--card);} .seg button.cur .cnt{color:var(--card);}
+.toolbar .left{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
+.eqlist{margin:6px 0 0; padding:0; list-style:none;} .eqlist li{font-size:12.5px; margin:2px 0;}
+.eqlist .dom{display:inline-block; font-size:10.5px; border:1px solid var(--line); border-radius:4px; padding:0 6px; margin-right:6px; color:var(--sub);}
+.eqlist .src{color:var(--sub); font-size:11px; margin-left:6px;} .eqlist .src a{color:var(--ai-accent);}
+.companylink{background:none; border:0; padding:0; font:inherit; color:var(--ink); cursor:pointer; text-align:left;} .companylink:hover{color:var(--ai-accent); text-decoration:underline;}
+.karte .tl-item.ucc .tl-title::before{content:"登記 "; color:var(--fact); font-size:11px;} .karte .tl-item.permit .tl-title::before{content:"許可 "; color:var(--infer); font-size:11px;}
+
+/* ---- ヘッダー(9/5 CEO: トップと同じ意匠・重複なし・トップへ戻る・モバイルで縦に伸びない) ---- */
+header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; display:flex; justify-content:space-between; align-items:center; gap:16px; background:var(--card); position:sticky; top:0; z-index:40;}
+.masthead{display:flex; flex-direction:column; gap:2px; min-width:0;}
+.masthead .kicker{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; letter-spacing:.22em; color:var(--sub); text-transform:uppercase; margin:0; display:flex; align-items:center; gap:10px;}
+.masthead .kicker a.brandlink{color:var(--sub); text-decoration:none;} .masthead .kicker a.brandlink:hover{color:var(--ink);}
+.masthead .kicker a.toplink{color:var(--ai-accent); text-decoration:none; letter-spacing:.04em; text-transform:none; font-family:inherit; font-size:12px;} .masthead .kicker a.toplink:hover{text-decoration:underline;}
+.masthead h1{font-family:"Shippori Mincho",serif; font-size:20px; font-weight:700; margin:0; letter-spacing:.02em; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.masthead .meta{font-size:12px; color:var(--sub); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.hdr-right{display:flex; align-items:center; gap:10px; flex:none;}
+.beta{border:1.5px solid var(--ink); color:var(--ink); font-family:"IBM Plex Mono",ui-monospace,monospace; font-weight:400; font-size:11px; padding:2px 8px; border-radius:4px; letter-spacing:.16em; margin:0; transform:none;}
+.hb .hb-lbl{font-weight:700; color:var(--ink); letter-spacing:.04em;}
+@media (max-width:820px){
+  header{padding:10px 14px; gap:10px;}
+  .masthead h1{font-size:17px;} .masthead .meta{display:none;}
+  .hb{padding:4px 9px 4px 7px;} .hb .hb-txt > :not(.hb-lbl){display:none;} .beta{display:none;}
+}
+@media (max-width:600px){
+  .theme-btn{padding:4px 8px;}
+}
+:root[data-theme="dark"]{ --paper:#12161C; --card:#1A2028; --ink:#E8EBEE; --sub:#9AA4AE; --ai-accent:#8FB4DA; --line:#2A323B; --line-soft:#232A33; --fact:#7CC49C; --fact-bg:#1F2A24; --infer:#D8A96B; --infer-bg:#241F17; --infer-line:#5A4A32; --stamp:#E08A78; --chip-bg:#232A33; }
+
+/* ---- モバイル(9/5): 肩書きを 1 行に・絞り込みは折り畳み ---- */
+.filt-toggle{display:none;}
+@media (max-width:820px){
+  .masthead .kicker{white-space:nowrap; letter-spacing:.12em; gap:8px;} .masthead .kicker .cock{display:none;}
+  .filt-toggle{display:flex; width:100%; justify-content:space-between; align-items:center; border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:6px; padding:10px 12px; font:inherit; font-size:13px; font-weight:700; cursor:pointer; margin-bottom:10px;}
+  aside > *:not(.filt-toggle){display:none;} aside.open > *{display:block;} aside.open > .filt-toggle{display:flex;} aside.open > label.fitem{display:flex;}
+  aside{padding:12px 14px 4px;}
+}
+</style>
+<style>
+/* 企業カルテ専用(9/5 CEO 裁定: 4 面が同じカルテを参照) */
+.kwrap{max-width:940px; margin:0 auto; padding:26px 24px 80px;}
+.kprof{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:16px 0 14px; margin-bottom:18px; display:flex; justify-content:space-between; gap:16px; align-items:flex-start; flex-wrap:wrap;}
+.kprof h2{font-family:"Shippori Mincho",serif; font-size:24px; margin:0 0 4px;}
+.kprof .ksub{font-size:13px; color:var(--sub);}
+.kprof .kback a{font-size:12.5px; color:var(--sub); text-decoration:none; border:1px solid var(--line); border-radius:5px; padding:6px 10px; margin-left:6px; display:inline-block;}
+.kprof .kback a:hover{color:var(--ai-accent); border-color:var(--ai-accent);}
+.faces4{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:14px 0 24px;}
+.face4{display:block; text-decoration:none; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:6px; padding:12px 14px;}
+.face4 .fl{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--sub); font-family:"IBM Plex Mono",monospace;}
+.face4 .fn{font-family:"Shippori Mincho",serif; font-size:22px; margin-top:4px;}
+.face4 .fs{font-size:12px; color:var(--sub); margin-top:2px;}
+.face4.soon{border-style:dashed; color:var(--sub);}
+.face4.soon .fn{font-size:15px; margin-top:8px;}
+.ksec h3{font-size:13px; letter-spacing:.14em; color:var(--sub); font-weight:700; border-bottom:2px solid var(--ink); padding-bottom:5px; margin:28px 0 12px;}
+.kitem{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:12px 14px; margin-bottom:10px;}
+.kitem .khead{display:flex; flex-wrap:wrap; gap:8px; align-items:baseline; font-size:13px;}
+.kitem .kdate{font-family:"IBM Plex Mono",monospace; color:var(--sub);}
+.kitem .kloc{font-weight:700;}
+.kitem .kchip{font-size:11px; border:1px solid var(--line); border-radius:999px; padding:1px 8px; color:var(--sub); background:var(--chip-bg);}
+.kitem .kchip.role{border-color:var(--infer-line); color:var(--infer);}
+.kitem .ksum{font-size:13px; margin-top:6px; line-height:1.7;}
+.kitem .kfact{font-size:12px; color:var(--sub); background:var(--fact-bg); border-left:3px solid var(--fact); padding:6px 10px; margin-top:8px; line-height:1.6; word-break:break-word;}
+.kitem .kref{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--sub); margin-top:6px;}
+.kitem .keq{font-size:13px; margin-top:6px;} .kitem .keq li{margin:2px 0;}
+.kempty{font-size:13px; color:var(--sub); border:1px dashed var(--line); border-radius:6px; padding:12px 14px;}
+.knote{font-size:11.5px; color:var(--sub); border-top:1px solid var(--line-soft); margin-top:28px; padding-top:10px; line-height:1.7;}
+@media (max-width:760px){ .faces4{grid-template-columns:repeat(2,minmax(0,1fr));} .kwrap{padding:18px 16px 60px;} .kprof h2{font-size:20px;} }
+</style>
+</head>
+<body>
+<header>
+  <div class="masthead">
+    <div class="kicker"><a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a><span class="cock">— COCKPIT</span><a class="toplink" href="/cockpit/">← トップへ</a></div>
+    <h1>企業カルテ</h1>
+    <div class="meta" id="metaline">会社ごとに 4 面(建設許可・UCC・採用・政府補助金)の出来事を 1 枚に — 読み込み中…</div>
+  </div>
+  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
+</header>
+<script>
+/* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
+(function(){
+  const K = "cockpit-theme"; let t = null;
+  try { t = localStorage.getItem(K); } catch (e) {}
+  if (t !== "dark" && t !== "light") t = "light";
+  const apply = n => { document.documentElement.setAttribute("data-theme", n); try { localStorage.setItem(K, n); } catch (e) {}
+    const b = document.getElementById("themebtn"); if (b) b.textContent = n === "dark" ? "☀️ ライト" : "🌙 ダーク";
+    window.dispatchEvent(new CustomEvent("themechange", {detail: n})); };
+  document.documentElement.setAttribute("data-theme", t);
+  window.__setTheme = apply;
+  const b = document.getElementById("themebtn");
+  if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
+})();
+</script>
+<main class="kwrap" id="main"><div class="kempty" id="loading">読み込み中…</div></main>
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const usd = v => v == null ? "" : (v >= 1e6 ? "$" + (v/1e6).toFixed(1) + "M" : "$" + Math.round(v/1e3) + "k");
+function faceTile(href, label, n, sub, soon){ return `<a class="face4${soon ? " soon" : ""}" href="${href}"><div class="fl">${label}</div><div class="fn">${soon ? "Coming soon" : n}</div><div class="fs">${esc(sub)}</div></a>`; }
+function permitItem(i){
+  const cat = i.category === "未評価" ? `<span class="kchip">未評価(AI 読み待ち)</span>` : `<span class="kchip">${esc(i.category)}${i.confidence === "low" ? "・低確度" : ""}</span>`;
+  return `<div class="kitem" id="${esc(i.id)}"><div class="khead"><span class="kdate">${esc(i.date || i.applied || "")}</span><span class="kloc">${esc(i.jurisdiction)}</span><span>${esc(i.address || "")}</span>${cat}<span class="kchip role">${esc(i.role_label)}</span>${i.value ? `<span class="kchip">工事費 ${usd(i.value)}</span>` : ""}</div>
+    ${i.summary ? `<div class="ksum">${esc(i.summary)}</div>` : ""}${i.infer ? `<div class="ksum"><span class="badge-infer">推論</span>${esc(i.infer)}</div>` : ""}
+    ${i.verbatim ? `<div class="kfact"><span class="badge-fact">事実</span>${esc(i.verbatim)}</div>` : ""}
+    <div class="kref">${esc([i.permit_no ? "許可 " + i.permit_no : null, i.permit_type, i.source_id, i.id].filter(Boolean).join(" · "))} · <a href="/cockpit/permits/">建設許可の面へ</a></div></div>`;
+}
+function uccItem(u){
+  const eq = (u.equipment || []).map(e => `<li>${esc([e.type, e.maker, e.model].filter(Boolean).join(" · "))}${e.qty ? ` × ${esc(e.qty)}` : ""}${e.domain ? ` <span class="kchip">${esc(e.domain)}</span>` : ""}</li>`).join("");
+  return `<div class="kitem" id="${esc(u.id)}"><div class="khead"><span class="kdate">${esc(u.date)}</span><span class="kloc">${esc(u.kind)}</span>${u.lender ? `<span class="kchip">${esc(u.lender)}</span>` : ""}<span class="kchip role">${esc(u.role_label)}</span>${u.status ? `<span class="kchip">${esc(u.status)}</span>` : ""}</div>
+    ${eq ? `<ul class="keq">${eq}</ul>` : ""}${u.summary ? `<div class="ksum">${esc(u.summary)}</div>` : ""}${u.infer ? `<div class="ksum"><span class="badge-infer">推論</span>${esc(u.infer)}</div>` : ""}
+    ${u.secured_party ? `<div class="kfact"><span class="badge-fact">事実</span>担保権者: ${esc(u.secured_party)}${u.lapse ? ` · 失効 ${esc(u.lapse)}` : ""}</div>` : ""}
+    <div class="kref">${esc([u.ref, u.id].filter(Boolean).join(" · "))} · <a href="/cockpit/ucc/">UCC の面へ</a></div></div>`;
+}
+function render(c){
+  document.title = `${c.name} — 企業カルテ | 43 Sunsets Cockpit`;
+  const f = c.faces; const jp = c.jp ? `<span class="chip jp">日系(${c.jp_basis === "roster" ? "名簿" : "人の確認"})</span>` : (c.jp_candidate ? `<span class="chip">日系?(AI 候補)</span>` : "");
+  document.getElementById("metaline").innerHTML = `${esc(c.name)} · 建設許可 <span class="mono">${f.permits.count}</span> 件 · UCC 登記 <span class="mono">${f.ucc.count}</span> 件 · 書き出し <span class="mono">${esc((c.generated_at || "").slice(0,10))}</span>`;
+  const back = document.referrer && /43sunsets\.com\/cockpit\//.test(document.referrer) ? `<a href="javascript:history.back()">‹ 戻る</a>` : "";
+  document.getElementById("main").innerHTML = `
+    <div class="kprof"><div><div class="kicker">43 SUNSETS COCKPIT — COMPANY KARTE(BETA)</div><h2>${esc(c.name)}</h2>
+      <div class="ksub">${esc([c.city, c.state].filter(Boolean).join(", "))} ${jp} ${c.industry ? `<span class="chip">${esc(c.industry)}</span>` : ""}</div>
+      <div class="ksub" style="margin-top:6px">${c.made ? esc(c.made) + " · " : ""}${c.size ? "規模 " + esc(c.size) + " · " : ""}${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website)}</a>` : "サイト —"}${c.master_checked_at ? ` · 会社マスター調査 ${esc(c.master_checked_at)}` : " · 会社マスター未調査"}</div></div>
+      <div class="kback">${back}<a href="/cockpit/">トップ</a></div></div>
+    <div class="faces4">
+      ${faceTile("#permits", "建設許可", f.permits.count + " 件", f.permits.count ? (f.permits.value_total ? "工事費 合計 " + usd(f.permits.value_total) : "最新 " + (f.permits.latest || "")) : "当社の網に無い", false)}
+      ${faceTile("#ucc", "UCC 登記", f.ucc.count + " 件", f.ucc.count ? "機械 " + f.ucc.machines + " 台 · " + (f.ucc.makers || []).join("・") : "当社の網に無い", false)}
+      ${faceTile("#hiring", "採用", "", "開発中", true)}
+      ${faceTile("#grants", "政府補助金", "", "開発中", true)}
+    </div>
+    <section class="ksec" id="permits"><h3>建設許可(${f.permits.count})</h3>${f.permits.items.length ? f.permits.items.map(permitItem).join("") : `<div class="kempty">この会社の建設許可は当社の網に無い(未収集の自治体か、名義が別会社)。</div>`}</section>
+    <section class="ksec" id="ucc"><h3>UCC 登記(${f.ucc.count})</h3>${f.ucc.items.length ? f.ucc.items.map(uccItem).join("") : `<div class="kempty">この会社の UCC 登記は当社の網に無い(オハイオ先行・担保権者名で検索した範囲)。</div>`}</section>
+    <section class="ksec" id="hiring"><h3>採用</h3><div class="kempty">${esc(f.hiring.note)}</div></section>
+    <section class="ksec" id="grants"><h3>政府補助金</h3><div class="kempty">${esc(f.grants.note)}</div></section>
+    <section class="ksec"><h3>時系列(4 面を合流)</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : "permit"}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
+    <div class="knote">${esc(c.note)}</div>`;
+}
+async function boot(){
+  const id = new URLSearchParams(location.search).get("id") || "";
+  const main = document.getElementById("main");
+  if(!/^C-\d+$/.test(id)){ main.innerHTML = `<div class="kempty">会社 ID が指定されていません。検出面(<a href="/cockpit/permits/">建設許可</a>・<a href="/cockpit/ucc/">UCC</a>)の社名から開いてください。</div>`; document.getElementById("metaline").textContent = "会社 ID なし"; return; }
+  try{
+    const r = await fetch(`../data/companies/${id}.json`, {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    render(await r.json());
+  }catch(err){ main.innerHTML = `<div class="kempty">このカルテ(${esc(id)})は見つかりません(${esc(err.message)})。会社マスターの更新で ID が変わった可能性があります。検出面から開き直してください。</div>`; document.getElementById("metaline").textContent = "見つかりません"; }
+}
+boot();
+</script>
+<script src="/cockpit/assets/hit.js?v=20260905e" defer></script>
+</body>
+</html>
