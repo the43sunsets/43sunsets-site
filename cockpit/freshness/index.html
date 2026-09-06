@@ -122,6 +122,15 @@ table{table-layout:auto;}
 .cycle td,.cycle th{padding:8px 12px; border-bottom:1px solid var(--line-soft); vertical-align:top;}
 footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px; color:var(--sub); max-width:1180px; margin:0 auto;}
 .err{border:1px solid var(--stamp); color:var(--stamp); padding:10px 12px; border-radius:6px; margin:16px 0;}
+.dateline{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:8px;}
+.hb{display:inline-flex; align-items:center; gap:7px; border:1px solid var(--line); border-radius:999px; padding:4px 11px 4px 8px; font-size:11.5px; color:var(--sub); background:var(--pill, var(--bg)); white-space:nowrap; cursor:help;}
+.hb .hb-k{color:var(--ink);} .hb .hb-lbl{font-weight:700; color:var(--ink); letter-spacing:.04em;} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:var(--mono);}
+.hb-dot{width:9px; height:9px; border-radius:50%; background:var(--line); flex:none;}
+.hb.hb-ok .hb-dot{background:var(--fact); animation:hbpulse 2.4s ease-out infinite;} .hb.hb-ok{border-color:var(--fact);}
+.hb.hb-wait .hb-dot{background:var(--infer);} .hb.hb-wait{border-color:var(--infer-line);}
+.hb.hb-fail .hb-dot{background:var(--warn);} .hb.hb-fail{border-color:var(--warn); color:var(--warn);} .hb.hb-fail .hb-k{color:var(--warn);}
+@keyframes hbpulse{0%{box-shadow:0 0 0 0 rgba(46,110,78,.45)} 70%{box-shadow:0 0 0 7px rgba(46,110,78,0)} 100%{box-shadow:0 0 0 0 rgba(46,110,78,0)}}
+@media (max-width:820px){ .hb{padding:4px 9px 4px 7px;} .hb .hb-txt > :not(.hb-lbl){display:none;} .hb .hb-lbl{font-size:11px;} }
 </style>
 </head>
 <body>
@@ -130,6 +139,7 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
     <div class="kicker"><a href="/cockpit/"><svg class="kmark" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent, var(--ai-accent))" stroke-width="4" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent, var(--ai-accent))" stroke-width="4" stroke-linecap="round" opacity=".62"/><path d="M4 50 H60" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>SIGNAL</a> <span style="opacity:.7">by</span> <a href="https://43sunsets.com/">43 SUNSETS</a> — <a href="../permits/">建設許可シグナル</a></div>
     <h1>データの鮮度と網羅</h1>
     <div class="meta" id="metaline">自治体ごとに「いつ取れたか・データはいつのものか・次はいつ動くか」を毎日再計算して表示します。読み込み中…</div>
+    <div class="dateline"><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(毎日 02:00 CT)"></div><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div></div>
   </div>
   <div class="hdr-right"><a class="theme-btn" href="../permits/" style="text-decoration:none">← Signal へ戻る</a><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
 </header>
@@ -196,7 +206,7 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
   <h2>更新の周期<span class="sub">経路ごとに違います</span></h2>
   <table class="cycle">
     <tr><th>経路</th><th>周期</th><th>説明</th></tr>
-    <tr><td>公開ポータル・州 DB(source)</td><td>毎日 12:00 UTC(米中部 07:00)</td><td>市・郡・州が公開している許可記録を自動取得。取得日は毎日更新され、データ日は源の公開頻度に従います。</td></tr>
+    <tr><td>公開ポータル・州 DB(source)</td><td>毎日 02:00 米中部時間に収集(公開は 04:00 までに・AI 読みの回収時にも再生成)</td><td>市・郡・州が公開している許可記録を自動取得。取得日は毎日更新され、データ日は源の公開頻度に従います。</td></tr>
     <tr><td>郡の課税台帳(backstop)</td><td>約 1〜2 ヶ月遅れ</td><td>市に公開ポータルが無い場合、Cook 郡 Assessor の台帳から許可を拾います。工事内容の粒度は市の記録より粗い。</td></tr>
     <tr><td>情報公開請求(FOIA)</td><td>毎月 1 日に前月分を依頼 → 5 営業日で回答</td><td>ポータルの無い自治体には Illinois FOIA(5 ILCS 140)で「発行済み許可の一覧」を請求。PDF・Excel の回答を取り込みます。月次配信に加えてくれた自治体は依頼不要になります。</td></tr>
     <tr><td>AI 読み(分類)</td><td>週次(セッション枠)</td><td>保存した記録を AI が読み、4 分類(新設・増設・設備・移転)へ割り当てます。読了前の行は「未評価」として建設許可面に残ります。</td></tr>
@@ -204,7 +214,7 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
 </main>
 
 <footer>
-  <b>Signal by 43 Sunsets(BETA)</b> — この面は <span class="mono">coverage.json</span>(毎日 12:00 UTC に VPS が再生成)をそのまま描画しています。数字は当社の収集記録から機械的に計算したもので、自治体の公式な統計ではありません。
+  <b>Signal by 43 Sunsets(BETA)</b> — この面は <span class="mono">coverage.json</span>(毎日 02:00 米中部時間の収集後と、データを公開するたびに VPS が再生成)をそのまま描画しています。数字は当社の収集記録から機械的に計算したもので、自治体の公式な統計ではありません。
   郡の形状は米国 Census の境界データ、対象郡は Census CBP 2022 の製造業事業所数・従業者数の上位 80% 線で選んでいます。
 </footer>
 
@@ -232,17 +242,20 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
     const el = document.getElementById("err"); el.textContent = "データを読み込めませんでした: " + e.message; el.hidden = false; return;
   }
 
-  // ---- 見出し: 最終更新と次回更新(生成時刻の次の 12:00 UTC)
+  // ---- 見出し: 最終更新と次回収集(生成時刻の次の 02:00 America/Chicago・夏冬時間は CT 表示で判定・9/6 に 12:00 UTC から変更)
   const gen = new Date(COV.meta.generated_at);
-  const next = new Date(Date.UTC(gen.getUTCFullYear(), gen.getUTCMonth(), gen.getUTCDate(), 12, 0, 0));
-  if (next <= gen) next.setUTCDate(next.getUTCDate() + 1);
   const ct = d => {
     const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", {timeZone:"America/Chicago", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hour12:false}).formatToParts(d).filter(x => x.type !== "literal").map(x => [x.type, x.value]));
     return `${p.year}-${p.month}-${p.day} ${p.hour === "24" ? "00" : p.hour}:${p.minute}`;
   };
   const utc = d => d.toISOString().slice(11,16) + " UTC";
+  let next = null;
+  for (let add = 0; add < 3 && !next; add++) for (const h of [7, 8]) {   // 02:00 CDT = 07:00Z / 02:00 CST = 08:00Z
+    const c = new Date(Date.UTC(gen.getUTCFullYear(), gen.getUTCMonth(), gen.getUTCDate() + add, h, 0, 0));
+    if (c > gen && ct(c).slice(11) === "02:00") { next = c; break; }
+  }
   document.getElementById("metaline").innerHTML =
-    `最終更新 <span class="mono">${ct(gen)}</span> 米中部時間(${utc(gen)})・次回更新 <span class="mono">${ct(next)}</span> 米中部時間(${utc(next)})・対象 <span class="mono">${fmtN(COV.rows.length)}</span> 自治体・判定基準: データ日 ${COV.meta.stale_days} 日 / 集計窓 ${COV.meta.window_days} 日`;
+    `最終更新 <span class="mono">${ct(gen)}</span> 米中部時間(${utc(gen)})・次回収集 <span class="mono">${ct(next)}</span> 米中部時間(${utc(next)}・公開は 04:00 までに)・対象 <span class="mono">${fmtN(COV.rows.length)}</span> 自治体・判定基準: データ日 ${COV.meta.stale_days} 日 / 集計窓 ${COV.meta.window_days} 日`;
   window.addEventListener("themechange", () => drawMap());
 
   // ---- 州タブ(IL を先頭・既定)
@@ -432,5 +445,6 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
 })();
 </script>
 <script src="/cockpit/assets/hit.js?v=20260905b" defer></script>
+<script src="/cockpit/assets/health.js?v=20260906" defer></script>
 </body>
 </html>
