@@ -1,10 +1,41 @@
 {
  "meta": {
-  "generated_at": "2026-09-06T17:40:42+00:00",
+  "generated_at": "2026-09-06T19:02:17+00:00",
   "stale_days": 45,
   "window_days": 60,
   "seeded_plan_rows": 0,
-  "unmapped_jurisdictions": []
+  "unmapped_jurisdictions": [
+   {
+    "geoid": "3937240",
+    "name": "Independence → Independence city(現在 none)",
+    "source_id": "SRC-022"
+   },
+   {
+    "geoid": "3904720",
+    "name": "Beavercreek → Beavercreek city(現在 none)",
+    "source_id": "SRC-072"
+   },
+   {
+    "geoid": "3931150",
+    "name": "Grafton → Grafton village(現在 none)",
+    "source_id": "SRC-072"
+   },
+   {
+    "geoid": "1743445",
+    "name": "Lima → Lima village(現在 foia)",
+    "source_id": "SRC-072"
+   },
+   {
+    "geoid": "5563300",
+    "name": "Pleasant Prairie → Pleasant Prairie village(現在 none)",
+    "source_id": "SRC-072"
+   },
+   {
+    "geoid": "5584375",
+    "name": "Waupaca → Waupaca city(現在 none)",
+    "source_id": "SRC-072"
+   }
+  ]
  },
  "by_state": {
   "OH": {
@@ -82,17 +113,20 @@
    "pop": 3844059,
    "by_status": {
     "n/a": 354,
-    "fresh": 4,
+    "fresh": 3,
+    "never": 1,
     "stale": 1
    },
    "pop_by_status": {
     "n/a": 2919001,
-    "fresh": 355302,
+    "fresh": 339541,
+    "never": 15761,
     "stale": 569756
    },
    "pop_share_by_status": {
     "n/a": 0.7594,
-    "fresh": 0.0924,
+    "fresh": 0.0883,
+    "never": 0.0041,
     "stale": 0.1482
    }
   }
@@ -2210,14 +2244,14 @@
    "pop": 99936,
    "by_status": {
     "n/a": 7,
-    "fresh": 1
+    "never": 1
    },
    "pop_by_status": {
     "n/a": 84175,
-    "fresh": 15761
+    "never": 15761
    },
-   "fresh_pop": 15761,
-   "fresh_pop_share": 0.1577
+   "fresh_pop": 0,
+   "fresh_pop_share": 0.0
   }
  },
  "county_sources": [
@@ -2252,6 +2286,17 @@
    "last_record_date": "2026-09-04",
    "last_fetch_at": "2026-09-06T00:05:09Z",
    "records_60d": 1839,
+   "status": "fresh"
+  },
+  {
+   "source_id": "SRC-072",
+   "jurisdiction": "Franklin County",
+   "county_fips": "39049",
+   "state": "OH",
+   "county": "Franklin",
+   "last_record_date": "2026-09-04",
+   "last_fetch_at": "2026-09-06T18:40:06Z",
+   "records_60d": 111,
    "status": "fresh"
   },
   {
@@ -2401,7 +2446,7 @@
    "signals": 150,
    "date_min": "2026-04-01",
    "date_max": "2026-06-15",
-   "owner_coverage": 134,
+   "owner_coverage": 136,
    "targets": 2
   },
   {
@@ -2466,12 +2511,12 @@
    "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
    "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
    "last_run_status": "ok",
-   "last_run_at": "2026-09-06T14:08:44Z",
+   "last_run_at": "2026-09-06T18:50:18Z",
    "last_run_note": "",
-   "signals": 13290,
+   "signals": 13436,
    "date_min": "2026-07-01",
    "date_max": "2026-09-07",
-   "owner_coverage": 4039,
+   "owner_coverage": 9457,
    "targets": 13
   },
   {
@@ -2480,9 +2525,9 @@
    "jurisdiction": "IL 3 自治体(Lombard・Machesney Park・Maryville)",
    "label": "IL 3 自治体(Lombard・Machesney Park・Maryville) 建築許可(公開記録)",
    "last_run_status": "ok",
-   "last_run_at": "2026-09-06T14:08:38Z",
-   "last_run_note": "ingested from citizenserve-rosemont-20260906T1346Z.json",
-   "signals": 3694,
+   "last_run_at": "2026-09-06T19:01:52Z",
+   "last_run_note": "ingested from citizenserve-rosemont-20260906T1843Z.json",
+   "signals": 3736,
    "date_min": "2026-07-01",
    "date_max": "2585-06-01",
    "owner_coverage": 2968,
@@ -2493,13 +2538,13 @@
    "state": "IL",
    "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
    "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
-   "last_run_status": "ok",
-   "last_run_at": "2026-09-06T14:52:13Z",
-   "last_run_note": "",
-   "signals": 8147,
+   "last_run_status": "error",
+   "last_run_at": "2026-09-06T18:50:46Z",
+   "last_run_note": "Error: Page.evaluate: TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at evaluate (:311:30), <anonymous>:4:21)\n    at UtilityScript",
+   "signals": 7934,
    "date_min": "2026-07-01",
    "date_max": "2026-09-06",
-   "owner_coverage": 3658,
+   "owner_coverage": 4258,
    "targets": 6
   },
   {
@@ -3152,7 +3197,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-06",
    "records_60d": 1013,
    "status": "fresh",
@@ -4976,7 +5021,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 370,
    "status": "fresh",
@@ -5394,7 +5439,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 771,
    "status": "fresh",
@@ -5907,7 +5952,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 2,
    "status": "fresh",
@@ -6610,7 +6655,7 @@
    "program": "SRC-022",
    "cadence_days": 31,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 735,
    "status": "fresh",
@@ -7826,7 +7871,7 @@
    "program": "SRC-023",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:38Z",
+   "last_fetch_at": "2026-09-06T19:01:52Z",
    "last_record_date": "2026-09-04",
    "records_60d": 514,
    "status": "fresh",
@@ -8073,7 +8118,7 @@
    "program": "SRC-023",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:38Z",
+   "last_fetch_at": "2026-09-06T19:01:52Z",
    "last_record_date": "2026-09-04",
    "records_60d": 217,
    "status": "fresh",
@@ -8377,7 +8422,7 @@
    "program": "SRC-023",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:38Z",
+   "last_fetch_at": "2026-09-06T19:01:52Z",
    "last_record_date": "2026-08-31",
    "records_60d": 34,
    "status": "fresh",
@@ -9004,7 +9049,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 346,
    "status": "fresh",
@@ -9555,7 +9600,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 691,
    "status": "fresh",
@@ -9669,7 +9714,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 412,
    "status": "fresh",
@@ -10448,7 +10493,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 45,
    "status": "fresh",
@@ -10524,7 +10569,7 @@
    "program": "SRC-023",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:38Z",
+   "last_fetch_at": "2026-09-06T19:01:52Z",
    "last_record_date": "2026-09-04",
    "records_60d": 50,
    "status": "fresh",
@@ -12158,7 +12203,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 458,
    "status": "fresh",
@@ -12424,7 +12469,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 154,
    "status": "fresh",
@@ -12658,7 +12703,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18095",
-   "platform": "unknown",
+   "platform": "custom-portal",
    "access": "unknown"
   },
   {
@@ -12734,8 +12779,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18095",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1801612",
@@ -12772,8 +12817,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18151",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "1801954",
@@ -12867,8 +12912,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18033",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1802872",
@@ -12905,8 +12950,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18063",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "browser"
   },
   {
    "geoid": "1803394",
@@ -12924,8 +12969,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18081",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "energov",
+   "access": "curl"
   },
   {
    "geoid": "1803718",
@@ -12962,8 +13007,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18097",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1804888",
@@ -13057,8 +13102,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18105",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "1806634",
@@ -13133,8 +13178,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18099",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "1807750",
@@ -13190,8 +13235,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18063",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "1808470",
@@ -13323,8 +13368,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18057",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "login-required"
   },
   {
    "geoid": "1811062",
@@ -13342,8 +13387,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "1811836",
@@ -13380,8 +13425,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18019",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "1812376",
@@ -13418,8 +13463,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18127",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1812610",
@@ -13456,8 +13501,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18057",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "1812898",
@@ -13494,8 +13539,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18019",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "1813312",
@@ -13646,7 +13691,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18183",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -13665,7 +13710,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18005",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -13722,7 +13767,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18107",
-   "platform": "unknown",
+   "platform": "none-found",
    "access": "unknown"
   },
   {
@@ -13779,8 +13824,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "energov",
+   "access": "curl"
   },
   {
    "geoid": "1816156",
@@ -13836,7 +13881,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18059",
-   "platform": "unknown",
+   "platform": "custom-portal",
    "access": "unknown"
   },
   {
@@ -13893,8 +13938,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18063",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "browser"
   },
   {
    "geoid": "1816840",
@@ -14026,8 +14071,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1819486",
@@ -14045,8 +14090,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1819756",
@@ -14178,8 +14223,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18039",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "1820800",
@@ -14197,8 +14242,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18105",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "1820998",
@@ -14235,8 +14280,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18095",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "cloudpermit",
+   "access": "browser"
   },
   {
    "geoid": "1821502",
@@ -14273,8 +14318,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18163",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "1822396",
@@ -14349,8 +14394,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18057",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "1824250",
@@ -14387,8 +14432,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18059",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "1825000",
@@ -14406,8 +14451,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18003",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "accela",
+   "access": "browser"
   },
   {
    "geoid": "1825090",
@@ -14482,8 +14527,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18023",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1825450",
@@ -14558,7 +14603,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18033",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -14577,8 +14622,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "1827054",
@@ -14672,8 +14717,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18039",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "curl"
   },
   {
    "geoid": "1828494",
@@ -14710,8 +14755,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18059",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "citizenserve",
+   "access": "browser"
   },
   {
    "geoid": "1829718",
@@ -14805,8 +14850,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18081",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "1830042",
@@ -14824,8 +14869,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "curl"
   },
   {
    "geoid": "1830402",
@@ -14881,8 +14926,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1832332",
@@ -14957,8 +15002,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1834114",
@@ -14976,8 +15021,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "1834294",
@@ -15071,8 +15116,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18003",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1835284",
@@ -15090,8 +15135,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18037",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "1835302",
@@ -15109,8 +15154,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18069",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1836306",
@@ -15185,8 +15230,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18037",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1838358",
@@ -15204,8 +15249,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18019",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "1838862",
@@ -15337,8 +15382,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18067",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1840518",
@@ -15413,8 +15458,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18157",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "curl"
   },
   {
    "geoid": "1840860",
@@ -15527,8 +15572,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18091",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "1842282",
@@ -15565,8 +15610,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18097",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "curl"
   },
   {
    "geoid": "1842624",
@@ -15584,8 +15629,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18011",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "browser"
   },
   {
    "geoid": "1842678",
@@ -15736,7 +15781,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18059",
-   "platform": "unknown",
+   "platform": "custom-portal",
    "access": "unknown"
   },
   {
@@ -15774,8 +15819,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18053",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "browser"
   },
   {
    "geoid": "1847160",
@@ -15831,8 +15876,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18109",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "1847592",
@@ -15926,8 +15971,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1848744",
@@ -15964,8 +16009,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18091",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "cloudpermit",
+   "access": "login-required"
   },
   {
    "geoid": "1848816",
@@ -16097,8 +16142,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18141",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1850202",
@@ -16306,8 +16351,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18035",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1851912",
@@ -16325,8 +16370,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "bsa-online",
+   "access": "curl"
   },
   {
    "geoid": "1852020",
@@ -16344,8 +16389,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18039",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "1852326",
@@ -16363,8 +16408,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18043",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "smartgov",
+   "access": "browser"
   },
   {
    "geoid": "1852704",
@@ -16420,8 +16465,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18003",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "curl"
   },
   {
    "geoid": "1853262",
@@ -16534,7 +16579,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18081",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -16553,8 +16598,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18057",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "energov",
+   "access": "login-required"
   },
   {
    "geoid": "1854612",
@@ -16895,8 +16940,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18063",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "browser"
   },
   {
    "geoid": "1860264",
@@ -16933,8 +16978,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18099",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "bsa-online",
+   "access": "browser"
   },
   {
    "geoid": "1861092",
@@ -16952,8 +16997,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18127",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "laserfiche-forms",
+   "access": "curl"
   },
   {
    "geoid": "1861164",
@@ -16971,8 +17016,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18127",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "1861470",
@@ -17028,7 +17073,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18051",
-   "platform": "unknown",
+   "platform": "custom-portal",
    "access": "unknown"
   },
   {
@@ -17047,8 +17092,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18177",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "bsa-online",
+   "access": "curl"
   },
   {
    "geoid": "1864512",
@@ -17237,8 +17282,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "cloudpermit",
+   "access": "browser"
   },
   {
    "geoid": "1867212",
@@ -17275,8 +17320,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1868238",
@@ -17408,8 +17453,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18145",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1869354",
@@ -17522,8 +17567,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18141",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "1871486",
@@ -17769,8 +17814,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18167",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "1875626",
@@ -17940,8 +17985,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18127",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1878470",
@@ -18073,8 +18118,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18085",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "cityworks",
+   "access": "login-required"
   },
   {
    "geoid": "1880504",
@@ -18092,8 +18137,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18027",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "1881278",
@@ -18168,8 +18213,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18057",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "login-required"
   },
   {
    "geoid": "1882862",
@@ -18187,8 +18232,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18157",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "login-required"
   },
   {
    "geoid": "1883276",
@@ -18244,8 +18289,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18091",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "1883816",
@@ -18263,7 +18308,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18081",
-   "platform": "unknown",
+   "platform": "custom-portal",
    "access": "unknown"
   },
   {
@@ -18282,8 +18327,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18011",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "login-required"
   },
   {
    "geoid": "1884086",
@@ -18320,8 +18365,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "1884302",
@@ -18377,8 +18422,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "1884914",
@@ -18415,7 +18460,7 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18085",
-   "platform": "unknown",
+   "platform": "custom-portal",
    "access": "unknown"
   },
   {
@@ -18510,8 +18555,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18035",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "1886372",
@@ -18529,8 +18574,8 @@
    "status": "never",
    "reason": "配線済みだが記録 0 件",
    "county_fips": "18011",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "2600380",
@@ -18675,7 +18720,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-06",
    "records_60d": 3578,
    "status": "fresh",
@@ -23735,8 +23780,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "3901798",
@@ -23868,7 +23913,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39051",
-   "platform": "unknown",
+   "platform": "custom-portal",
    "access": "unknown"
   },
   {
@@ -23963,8 +24008,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39133",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "3903352",
@@ -24192,7 +24237,7 @@
    "reason": "経路なし",
    "county_fips": "39057",
    "platform": "smartgov",
-   "access": "browser"
+   "access": "curl"
   },
   {
    "geoid": "3904752",
@@ -24267,8 +24312,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39057",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "browser"
   },
   {
    "geoid": "3905228",
@@ -24286,7 +24331,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39077",
-   "platform": "unknown",
+   "platform": "none-found",
    "access": "unknown"
   },
   {
@@ -24514,8 +24559,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39003",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3907594",
@@ -24609,8 +24654,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39173",
-   "platform": "unknown",
-   "access": "browser"
+   "platform": "county-issued",
+   "access": "login-required"
   },
   {
    "geoid": "3908084",
@@ -24679,7 +24724,7 @@
    "program": "SRC-023",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:38Z",
+   "last_fetch_at": "2026-09-06T19:01:52Z",
    "last_record_date": "2026-09-04",
    "records_60d": 143,
    "status": "fresh",
@@ -24837,8 +24882,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39113",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "accela",
+   "access": "curl"
   },
   {
    "geoid": "3909680",
@@ -24875,8 +24920,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39171",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3909890",
@@ -25122,8 +25167,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39099",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "3912000",
@@ -25160,8 +25205,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39165",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3912252",
@@ -25274,7 +25319,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39055",
-   "platform": "unknown",
+   "platform": "accela",
    "access": "unknown"
   },
   {
@@ -25293,7 +25338,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39055",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -25312,8 +25357,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "3914226",
@@ -25483,7 +25528,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39143",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -25502,8 +25547,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39029",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3918000",
@@ -25578,8 +25623,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39155",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3918840",
@@ -25806,8 +25851,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3921434",
@@ -25826,7 +25871,7 @@
    "reason": "経路なし",
    "county_fips": "39041",
    "platform": "unknown",
-   "access": "browser"
+   "access": "unknown"
   },
   {
    "geoid": "3921602",
@@ -25844,8 +25889,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39003",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3921616",
@@ -26053,8 +26098,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39029",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3924052",
@@ -26319,8 +26364,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39153",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "bsa-online",
+   "access": "browser"
   },
   {
    "geoid": "3926306",
@@ -26661,7 +26706,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39007",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -26699,8 +26744,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39113",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3930072",
@@ -26737,8 +26782,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39155",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3930380",
@@ -26851,8 +26896,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "3931150",
@@ -26870,8 +26915,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39093",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "3931206",
@@ -26927,8 +26972,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39049",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "3931402",
@@ -26946,8 +26991,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "3931458",
@@ -27022,8 +27067,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3932256",
@@ -27098,8 +27143,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39049",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3933012",
@@ -27383,8 +27428,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39035",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "citizenserve",
+   "access": "browser"
   },
   {
    "geoid": "3935255",
@@ -27630,8 +27675,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39035",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "energov",
+   "access": "curl"
   },
   {
    "geoid": "3938192",
@@ -27763,8 +27808,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "none"
   },
   {
    "geoid": "3939872",
@@ -28004,7 +28049,7 @@
    "program": "SRC-023",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:38Z",
+   "last_fetch_at": "2026-09-06T19:01:52Z",
    "last_record_date": "2026-09-04",
    "records_60d": 627,
    "status": "fresh",
@@ -28124,8 +28169,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39139",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "pdf-report",
+   "access": "curl"
   },
   {
    "geoid": "3943554",
@@ -28144,7 +28189,7 @@
    "reason": "経路なし",
    "county_fips": "39003",
    "platform": "smartgov",
-   "access": "browser"
+   "access": "curl"
   },
   {
    "geoid": "3943722",
@@ -28371,8 +28416,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39151",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3945108",
@@ -28770,8 +28815,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39101",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3948048",
@@ -28808,8 +28853,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39159",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "3948188",
@@ -28960,8 +29005,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39085",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "cloudpermit",
+   "access": "browser"
   },
   {
    "geoid": "3949238",
@@ -29068,9 +29113,9 @@
    "program": "SRC-023",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:38Z",
+   "last_fetch_at": "2026-09-06T19:01:52Z",
    "last_record_date": "2026-09-04",
-   "records_60d": 352,
+   "records_60d": 375,
    "status": "fresh",
    "reason": "",
    "county_fips": "39017",
@@ -29112,8 +29157,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39025",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "none"
   },
   {
    "geoid": "3950218",
@@ -29321,8 +29366,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39153",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "cityworks",
+   "access": "login-required"
   },
   {
    "geoid": "3951310",
@@ -29397,8 +29442,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39171",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3952010",
@@ -29416,8 +29461,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39113",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "accela",
+   "access": "curl"
   },
   {
    "geoid": "3952052",
@@ -29568,8 +29613,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3953312",
@@ -29587,8 +29632,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39153",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "cityworks",
+   "access": "login-required"
   },
   {
    "geoid": "3953634",
@@ -29758,7 +29803,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39023",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -29834,8 +29879,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39113",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3954908",
@@ -29910,8 +29955,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39157",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "login-required"
   },
   {
    "geoid": "3955384",
@@ -29948,7 +29993,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39155",
-   "platform": "unknown",
+   "platform": "none-found",
    "access": "unknown"
   },
   {
@@ -30271,8 +30316,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39173",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "curl"
   },
   {
    "geoid": "3957260",
@@ -30385,8 +30430,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39093",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3957862",
@@ -30404,8 +30449,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39049",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3958422",
@@ -30423,8 +30468,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39035",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3958520",
@@ -30442,8 +30487,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39139",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "3958604",
@@ -30518,8 +30563,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39169",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "3958856",
@@ -30575,7 +30620,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39095",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -30645,9 +30690,9 @@
    "program": "SRC-023",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:38Z",
+   "last_fetch_at": "2026-09-06T19:01:52Z",
    "last_record_date": "2026-09-04",
-   "records_60d": 1694,
+   "records_60d": 1713,
    "status": "fresh",
    "reason": "",
    "county_fips": "39035",
@@ -30765,8 +30810,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39035",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "citizenserve",
+   "access": "browser"
   },
   {
    "geoid": "3961882",
@@ -31145,8 +31190,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "browser"
   },
   {
    "geoid": "3966152",
@@ -31164,8 +31209,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39153",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3966390",
@@ -31202,8 +31247,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39153",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "curl"
   },
   {
    "geoid": "3966894",
@@ -31278,7 +31323,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39169",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -31430,8 +31475,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39173",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "browser"
   },
   {
    "geoid": "3968742",
@@ -31506,8 +31551,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "3969652",
@@ -31544,8 +31589,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39011",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3969834",
@@ -31601,7 +31646,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39099",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -31734,8 +31779,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39093",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3972088",
@@ -31753,8 +31798,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39093",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "communitycore",
+   "access": "login-required"
   },
   {
    "geoid": "3972102",
@@ -31772,8 +31817,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39139",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "3972298",
@@ -31867,8 +31912,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "3972788",
@@ -31981,8 +32026,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39165",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "browser"
   },
   {
    "geoid": "3973684",
@@ -32000,8 +32045,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39055",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "3973796",
@@ -32380,8 +32425,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39041",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "etrakit",
+   "access": "browser"
   },
   {
    "geoid": "3975896",
@@ -32399,7 +32444,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39051",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -32437,8 +32482,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39153",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "cityworks",
+   "access": "curl"
   },
   {
    "geoid": "3976428",
@@ -32475,8 +32520,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "accela",
+   "access": "browser"
   },
   {
    "geoid": "3976764",
@@ -32627,8 +32672,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39113",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "accela",
+   "access": "browser"
   },
   {
    "geoid": "3977588",
@@ -32646,8 +32691,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39109",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "browser"
   },
   {
    "geoid": "3977924",
@@ -32722,8 +32767,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39113",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3978834",
@@ -33064,8 +33109,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39011",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3980892",
@@ -33140,7 +33185,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39095",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -33254,8 +33299,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39093",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3982740",
@@ -33311,8 +33356,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39049",
-   "platform": "unknown",
-   "access": "browser"
+   "platform": "custom-portal",
+   "access": "login-required"
   },
   {
    "geoid": "3983384",
@@ -33406,7 +33451,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39109",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -33501,8 +33546,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39049",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "3984770",
@@ -33520,7 +33565,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39095",
-   "platform": "unknown",
+   "platform": "county-issued",
    "access": "unknown"
   },
   {
@@ -33558,8 +33603,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39077",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3985288",
@@ -33691,8 +33736,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39061",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "county-issued",
+   "access": "curl"
   },
   {
    "geoid": "3986394",
@@ -33761,7 +33806,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 329,
    "status": "fresh",
@@ -33843,8 +33888,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "39057",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "3988000",
@@ -33995,8 +34040,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55087",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "pdf-report",
+   "access": "curl"
   },
   {
    "geoid": "5502500",
@@ -34071,8 +34116,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55009",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "pdf-report",
+   "access": "curl"
   },
   {
    "geoid": "5503550",
@@ -34280,8 +34325,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55027",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5506150",
@@ -34331,7 +34376,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:57Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 22,
    "status": "fresh",
@@ -34356,8 +34401,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55105",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5507200",
@@ -34603,8 +34648,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55133",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "5510375",
@@ -34717,8 +34762,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55101",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5512200",
@@ -35401,8 +35446,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55009",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5520550",
@@ -35515,8 +35560,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55035",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "login-required"
   },
   {
    "geoid": "5522475",
@@ -35857,8 +35902,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55025",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "5526275",
@@ -35876,8 +35921,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55039",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5526350",
@@ -35952,8 +35997,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55139",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "5527000",
@@ -36028,8 +36073,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55079",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "bsa-online",
+   "access": "browser"
   },
   {
    "geoid": "5527500",
@@ -36161,8 +36206,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55131",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5529350",
@@ -36237,8 +36282,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "smartgov",
+   "access": "curl"
   },
   {
    "geoid": "5531000",
@@ -36256,8 +36301,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55009",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5531125",
@@ -36294,8 +36339,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55079",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "bsa-online",
+   "access": "browser"
   },
   {
    "geoid": "5531375",
@@ -36383,13 +36428,13 @@
    "program": "SRC-024",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:52:13Z",
-   "last_record_date": "2026-09-05",
-   "records_60d": 213,
-   "status": "fresh",
-   "reason": "",
+   "last_fetch_at": null,
+   "last_record_date": null,
+   "records_60d": 0,
+   "status": "never",
+   "reason": "配線済みだが記録 0 件",
    "county_fips": "55131",
-   "platform": "unknown",
+   "platform": "none-found",
    "access": "unknown"
   },
   {
@@ -36560,8 +36605,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55009",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5536025",
@@ -36598,8 +36643,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55109",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5536625",
@@ -36807,8 +36852,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55087",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "cloudpermit",
+   "access": "login-required"
   },
   {
    "geoid": "5538900",
@@ -36864,8 +36909,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55059",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "5539300",
@@ -36997,8 +37042,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55063",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "energov",
+   "access": "browser"
   },
   {
    "geoid": "5541300",
@@ -37358,8 +37403,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55071",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "5548750",
@@ -37491,8 +37536,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55141",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "login-required"
   },
   {
    "geoid": "5550200",
@@ -37548,8 +37593,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55139",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5551000",
@@ -37567,8 +37612,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55133",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "bsa-online",
+   "access": "browser"
   },
   {
    "geoid": "5551150",
@@ -37586,8 +37631,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5551325",
@@ -37643,8 +37688,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55025",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "iworq",
+   "access": "browser"
   },
   {
    "geoid": "5551875",
@@ -37833,8 +37878,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55101",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "bsa-online",
+   "access": "login-required"
   },
   {
    "geoid": "5555050",
@@ -37871,8 +37916,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55133",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "5555550",
@@ -37909,8 +37954,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55139",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "5555875",
@@ -37985,8 +38030,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55133",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5556450",
@@ -38194,8 +38239,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55079",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "bsa-online",
+   "access": "browser"
   },
   {
    "geoid": "5558900",
@@ -38232,8 +38277,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55133",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "5559300",
@@ -38403,7 +38448,7 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55139",
-   "platform": "unknown",
+   "platform": "opengov",
    "access": "unknown"
   },
   {
@@ -38517,8 +38562,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55133",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "bsa-online",
+   "access": "login-required"
   },
   {
    "geoid": "5562250",
@@ -38612,8 +38657,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55059",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "smartgov",
+   "access": "curl"
   },
   {
    "geoid": "5563700",
@@ -38802,8 +38847,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55101",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5566150",
@@ -39315,8 +39360,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55089",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "smartgov",
+   "access": "curl"
   },
   {
    "geoid": "5571975",
@@ -39410,8 +39455,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55117",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "browser"
   },
   {
    "geoid": "5573025",
@@ -39562,8 +39607,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55079",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5575400",
@@ -39771,8 +39816,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55025",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "opengov",
+   "access": "browser"
   },
   {
    "geoid": "5578750",
@@ -40132,8 +40177,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55055",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "arcgis",
+   "access": "browser"
   },
   {
    "geoid": "5584250",
@@ -40151,8 +40196,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55133",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "etrakit",
+   "access": "browser"
   },
   {
    "geoid": "5584275",
@@ -40208,8 +40253,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55135",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "smartgov",
+   "access": "curl"
   },
   {
    "geoid": "5584425",
@@ -40246,8 +40291,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55073",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "login-required"
   },
   {
    "geoid": "5584525",
@@ -40278,7 +40323,7 @@
    "program": "SRC-022",
    "cadence_days": 1,
    "next_due_at": null,
-   "last_fetch_at": "2026-09-06T14:08:44Z",
+   "last_fetch_at": "2026-09-06T18:50:18Z",
    "last_record_date": "2026-09-04",
    "records_60d": 205,
    "status": "fresh",
@@ -40341,8 +40386,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55131",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5585875",
@@ -40379,8 +40424,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55073",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "custom-portal",
+   "access": "login-required"
   },
   {
    "geoid": "5586275",
@@ -40493,8 +40538,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55127",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5587200",
@@ -40626,8 +40671,8 @@
    "status": "n/a",
    "reason": "経路なし",
    "county_fips": "55141",
-   "platform": "unknown",
-   "access": "unknown"
+   "platform": "none-found",
+   "access": "none"
   },
   {
    "geoid": "5589025",

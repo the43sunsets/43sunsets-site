@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-06T17:40:27+00:00",
+"generated_at": "2026-09-06T19:02:13+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,15 +15,15 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 45880,
+"signals_total": 46064,
 "candidates": 686,
-"enriched": 28890,
+"enriched": 28860,
 "targets": 105,
-"unclassified": 28785,
-"unevaluated": 16990,
+"unclassified": 28755,
+"unevaluated": 17204,
 "by_category": {
 "データセンター建設": 7,
-"未分類": 28785,
+"未分類": 28755,
 "物流・倉庫の新設": 17,
 "研究・医療・航空宇宙": 54,
 "製造能力の増強": 27
@@ -153,7 +153,7 @@
 "signals": 150,
 "date_min": "2026-04-01",
 "date_max": "2026-06-15",
-"owner_coverage": 134,
+"owner_coverage": 136,
 "targets": 2
 },
 {
@@ -218,12 +218,12 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T14:08:44Z",
+"last_run_at": "2026-09-06T18:50:18Z",
 "last_run_note": "",
-"signals": 13290,
+"signals": 13436,
 "date_min": "2026-07-01",
 "date_max": "2026-09-07",
-"owner_coverage": 4039,
+"owner_coverage": 9457,
 "targets": 13
 },
 {
@@ -232,9 +232,9 @@
 "jurisdiction": "IL 3 自治体(Lombard・Machesney Park・Maryville)",
 "label": "IL 3 自治体(Lombard・Machesney Park・Maryville) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T14:08:38Z",
-"last_run_note": "ingested from citizenserve-rosemont-20260906T1346Z.json",
-"signals": 3694,
+"last_run_at": "2026-09-06T19:01:52Z",
+"last_run_note": "ingested from citizenserve-rosemont-20260906T1843Z.json",
+"signals": 3736,
 "date_min": "2026-07-01",
 "date_max": "2585-06-01",
 "owner_coverage": 2968,
@@ -245,13 +245,13 @@
 "state": "IL",
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-09-06T14:52:13Z",
-"last_run_note": "",
-"signals": 8147,
+"last_run_status": "error",
+"last_run_at": "2026-09-06T18:50:46Z",
+"last_run_note": "Error: Page.evaluate: TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at evaluate (:311:30), <anonymous>:4:21)\n    at UtilityScript",
+"signals": 7934,
 "date_min": "2026-07-01",
 "date_max": "2026-09-06",
-"owner_coverage": 3658,
+"owner_coverage": 4258,
 "targets": 6
 },
 {
@@ -724,7 +724,7 @@
 "OH": 5228,
 "IL": 21780,
 "MI": 1589,
-"WI": 188
+"WI": 158
 }
 },
 "signals": [
@@ -4737,8 +4737,8 @@
 "source_label": "許可記録(本文)"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "MUNSON MEDICAL CENTER - MAIN HOSP.",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": null
@@ -4767,7 +4767,7 @@
 "verbatim": "MINOR DEMO TO EXISTING; NEW NICU ADDITION AT MUNSON HOSPITAL. MAIN LEVEL FLOOR WITH CONNECTOR AND PARTIAL BASEMENT SEPARATED BY FIRE AND SMOKE PARTITIONS.  1-STORY, 20,906SF SCOPE OF WORK AREA. I-2 OCCUPANCY CLASS, 1A CONSTRUCTION. 168 TOTAL OCCUPANTS. NFPA 13 FIRE SUPPRESSION. / Building (Commercial) - Addition / Addition",
 "gc": null,
 "pin": "51-104-076-02",
-"owner_source": null
+"owner_source": "parcel:grandtraverse_mi"
 },
 "karte": null,
 "company_id": "C-3708",
