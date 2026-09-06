@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-06T15:00:01+00:00",
+"generated_at": "2026-09-06T16:29:51+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,12 +15,12 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 44615,
+"signals_total": 45880,
 "candidates": 686,
 "enriched": 28597,
 "targets": 106,
 "unclassified": 28491,
-"unevaluated": 16018,
+"unevaluated": 17283,
 "by_category": {
 "データセンター建設": 7,
 "未分類": 28491,
@@ -69,7 +69,7 @@
 "signals": 1935,
 "date_min": "2026-07-01",
 "date_max": "2026-09-03",
-"owner_coverage": 0,
+"owner_coverage": 140,
 "targets": 0
 },
 {
@@ -83,7 +83,7 @@
 "signals": 1675,
 "date_min": "2026-07-01",
 "date_max": "2026-09-04",
-"owner_coverage": 0,
+"owner_coverage": 1572,
 "targets": 9
 },
 {
@@ -97,7 +97,7 @@
 "signals": 947,
 "date_min": "2026-07-07",
 "date_max": "2026-09-04",
-"owner_coverage": 0,
+"owner_coverage": 884,
 "targets": 21
 },
 {
@@ -245,12 +245,12 @@
 "state": "IL",
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
-"last_run_status": "running",
+"last_run_status": "ok",
 "last_run_at": "2026-09-06T14:52:13Z",
 "last_run_note": "",
-"signals": 6882,
+"signals": 8147,
 "date_min": "2026-07-01",
-"date_max": "2026-09-05",
+"date_max": "2026-09-06",
 "owner_coverage": 0,
 "targets": 2
 },
@@ -287,9 +287,9 @@
 "state": "IL",
 "jurisdiction": "Cook 郡 BS&A 利用自治体(Skokie 他)",
 "label": "Cook 郡 BS&A 利用自治体(Skokie 他) 建築許可(公開記録)",
-"last_run_status": "running",
-"last_run_at": "2026-09-06T14:44:31Z",
-"last_run_note": "",
+"last_run_status": "error",
+"last_run_at": "2026-09-06T15:40:58Z",
+"last_run_note": "RuntimeError: BS&A Wheeling: 10 consecutive errors at 10/792 parcels (last: TimeoutError)",
 "signals": 15,
 "date_min": "2026-07-08",
 "date_max": "2026-08-26",
@@ -735,8 +735,8 @@
 "label": "自社所有"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "OHIOHEALTH CORP",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": "OHIOHEALTH CORP",
 "gc": null
@@ -765,7 +765,7 @@
 "verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 9090 SQFT",
 "gc": "OHIOHEALTH CORP",
 "pin": "010183740",
-"owner_source": null
+"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": "C-138",
@@ -1263,8 +1263,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "CLEVELAND CLINIC FOUNDATION",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "ZENITH SYSTEMS LLC."
@@ -1293,7 +1293,7 @@
 "verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / INSTALL 1391 SQUARE FEET: INTERIOR ELECTRICAL ALTERATIONS TO L BLDG 1 FLOOR ***BUILDING PERMIT NO BCB26-034065***",
 "gc": "ZENITH SYSTEMS LLC.",
 "pin": "11923058",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -1311,8 +1311,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "CASE WESTERN RESERV UNIV",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "ZENITH SYSTEMS LLC."
@@ -1341,7 +1341,7 @@
 "verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / INSTALL 5819 SQUARE FEET ALT - INTERIOR ELECTRICAL RENOVATIONS FOR A 5,819 SF LABORATORY ***BUILDING PERMIT NO BCB26-029682***",
 "gc": "ZENITH SYSTEMS LLC.",
 "pin": "12112052",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -1359,8 +1359,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "WHISPERING MEADOWS REALTY LLC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "LAKEFRONT MECHANICAL SERVICES LLC."
@@ -1389,7 +1389,7 @@
 "verbatim": "Commercial HVAC / B Business / Installing new walk in cooler evaporator and condenser for beef packing room",
 "gc": "LAKEFRONT MECHANICAL SERVICES LLC.",
 "pin": "01604004",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -1455,8 +1455,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "FAIRVIEW PARK HOSPITAL",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "SCHARTON ELECTRIC COMPANY INC"
@@ -1485,7 +1485,7 @@
 "verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / INSTALL 875 SQUARE FEET: ALT - Replacement of existing CT with new, upgrade lighting & power. ***Building Permit #BCB26-030601***",
 "gc": "SCHARTON ELECTRIC COMPANY INC",
 "pin": "02601001",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -1503,8 +1503,8 @@
 "label": "操業事業者"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "OHIOHEALTH CORP",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": "OHIOHEALTH CORP",
 "gc": null
@@ -1533,7 +1533,7 @@
 "verbatim": "Commercial - Other / Addition / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 467645 SQFT",
 "gc": "OHIOHEALTH CORP",
 "pin": "010183740",
-"owner_source": null
+"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": "C-138",
@@ -1551,8 +1551,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "FAIRVIEW PARK HOSPITAL",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "MID-CONTINENT CONSTRUCTION CO."
@@ -1581,7 +1581,7 @@
 "verbatim": "Commercial Building / I-2 Institutional - Hospitals / Nursing Home / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO 875 SF OF EXISTING 1ST FLR, EMERGENCY DEPARTMENT, FOR CT EQUIPMENT INSTALLATION PER APPROVED PLANS. SEPARATE PERMITS REQUIRED FOR PLUMBING, HVAC, AND ELECTRICAL. NO CHANGE OF OCCUPANCY WITH THIS PERMIT. MAINTAIN OBC CHAPTER 33 SAFEGUARDS DURING CONSTRUCTION.",
 "gc": "MID-CONTINENT CONSTRUCTION CO.",
 "pin": "02601001",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -1647,8 +1647,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "KBTB LLC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "GEISEL HEATING & AIR CONDITIONING INC."
@@ -1677,7 +1677,7 @@
 "verbatim": "Commercial HVAC / F-2 Factory Industrial Low Hazard / INSTALL 2 REFRIGERATION SYSTEM 25 TONS OR LESS",
 "gc": "GEISEL HEATING & AIR CONDITIONING INC.",
 "pin": "02113017",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -1791,8 +1791,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "CLEVELAND CLINIC FOUNDATION",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "EINHEIT ELECTRIC CONSTRUCTION COMPANY"
@@ -1821,7 +1821,7 @@
 "verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / INSTALL 32156 SQUARE FEET: building permit #BCB25-041723 - 3rd fl",
 "gc": "EINHEIT ELECTRIC CONSTRUCTION COMPANY",
 "pin": "11916001",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -1887,8 +1887,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "CASE WESTERN RESERV UNIV",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "NEPTUNE PLUMBING & HEATING COMPANY"
@@ -1917,7 +1917,7 @@
 "verbatim": "Commercial Plumbing / B Business / INSTALL 1 LABORATORY GAS MANIFOLD, 4 LAB VACUUM OUTLET, 3 LAB CARBON DIOXIDE OUTLET, 40 LIN. FT. DRAIN, WQASTE, VENT PIPING, 160 LIN. FT. WATER DISTRIBUTION PIPING ***BUILDING PERMIT NO BCB26-029682***",
 "gc": "NEPTUNE PLUMBING & HEATING COMPANY",
 "pin": "12112052",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -1983,8 +1983,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "CLEVELAND CLINIC FOUNDATION",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "REGENCY CONSTRUCTION SERVICES, INC."
@@ -2013,7 +2013,7 @@
 "verbatim": "Commercial Building / I-2 Institutional - Hospitals / Nursing Home / Interior Only Remodel / INTERIOR ALTERATION 32,156 SQ FT SUB-BASEMENT & BASEMENT & 1ST FLOOR OF BUILDING MM, 2ND FLOOR BUILDING M, 3RD FLOOR BUILDING G FOR STERILE PROCESSING DEPARTMENT PER APPROVED PLANS. PERMITS REQUIRED FOR PLUMBING, HVAC, ELECTRICAL AND FIRE PROTECTION SYSTEMS.",
 "gc": "REGENCY CONSTRUCTION SERVICES, INC.",
 "pin": "11916001",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -2127,8 +2127,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "LOCKBOURNE 6 OWNER LLC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": "Archall Architects",
 "gc": null
@@ -2157,7 +2157,7 @@
 "verbatim": "Commercial - New Structure / New Structure / Structural / 475746 SQFT",
 "gc": "Archall Architects",
 "pin": "495263119",
-"owner_source": null
+"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": null,
@@ -2175,8 +2175,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "LOCKBOURNE 6 OWNER LLC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": "Area Energy & Electric Inc.",
 "gc": null
@@ -2205,7 +2205,7 @@
 "verbatim": "Commercial - Other / Electrical / MEP",
 "gc": "Area Energy & Electric Inc.",
 "pin": "495263119",
-"owner_source": null
+"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": null,
@@ -2655,8 +2655,8 @@
 "label": "操業事業者"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "NATIONWIDE CHILDRENS HOSPITAL",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": "NATIONWIDE CHILDRENS HOSPITAL",
 "gc": null
@@ -2685,7 +2685,7 @@
 "verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 25790 SQFT",
 "gc": "NATIONWIDE CHILDRENS HOSPITAL",
 "pin": "010082628",
-"owner_source": null
+"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": "C-140",
@@ -2751,8 +2751,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "TCG OCP CPOZ OWNER LLC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": "Red Architecture",
 "gc": null
@@ -2781,7 +2781,7 @@
 "verbatim": "Commercial - New Structure / New Structure / Other Nonresidential Buildings / Structural / 959579 SQFT",
 "gc": "Red Architecture",
 "pin": "495303785",
-"owner_source": null
+"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": null,
@@ -2847,8 +2847,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "23432 LAKELAND LLC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "GEM INDUSTRIAL INC."
@@ -2877,7 +2877,7 @@
 "verbatim": "Commercial Electrical / F-2 Factory Industrial Low Hazard / INSTALL 7,000 SQUARE FEET: ALT ***BUILDING PERMIT NO BCB26-025167***",
 "gc": "GEM INDUSTRIAL INC.",
 "pin": "10239024",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -2895,8 +2895,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "23432 LAKELAND LLC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "GEM INDUSTRIAL, INC"
@@ -2925,7 +2925,7 @@
 "verbatim": "Commercial Plumbing / F-2 Factory Industrial Low Hazard / INSTALL 3 FLOOR DRIAN, 1 SUMP PUMP, 1 COOLING TOWER, 1 ICE MAKER, 150 LIN. FT. DRAIN, VENT PIPING, 100 LIN. FT. WATER DISTRIBUTION PIPING***BUILDING PERMIT NO BCB26-025167***",
 "gc": "GEM INDUSTRIAL, INC",
 "pin": "10239024",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -2943,8 +2943,8 @@
 "label": "自社所有"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "CLEVELAND CLINIC FOUNDATION",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "D.E. WILLIAMS ELECTRIC, INC."
@@ -2973,7 +2973,7 @@
 "verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / 1,332 SF ALT Food service renovation BUILDING PERMIT NO BCB26-027905",
 "gc": "D.E. WILLIAMS ELECTRIC, INC.",
 "pin": "11916001",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": "C-3629",
@@ -3135,8 +3135,8 @@
 "label": "操業事業者"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "10801 MADISON AVENUE OWNER LLC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "TOYOTA AUTOMATED LOGISTICS AMERICAS, LLC"
@@ -3165,7 +3165,7 @@
 "verbatim": "Commercial Building / S-1 Storage - Moderate Hazard / Interior/Exterior Remodel / INSTALL NEW MACHINERY FOR EXISTING AMAZON WAREHOUSE FACILITY (DCL7). SUBMIT SEPARATE PERMIT FOR ELECTRICAL. NO SPECIAL INSPECTIONS IDENTIFIED. NO C OF O REQUIRED WITH THIS PERMIT.",
 "gc": "TOYOTA AUTOMATED LOGISTICS AMERICAS, LLC",
 "pin": "00505001",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": "C-3642",
@@ -3519,8 +3519,8 @@
 "label": "操業事業者"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "ABBOTT MANUFACTURING INC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": "Abbott Nutrition",
 "gc": null
@@ -3549,7 +3549,7 @@
 "verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 908 SQFT",
 "gc": "Abbott Nutrition",
 "pin": "010000610",
-"owner_source": null
+"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": "C-139",
@@ -3951,8 +3951,8 @@
 "label": "操業事業者"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "SUNOCO PARTNERS MARKETING & TERMINALS L.P.",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "XL INDUSTRIAL SERVICES, INC."
@@ -3981,7 +3981,7 @@
 "verbatim": "Commercial Building / U Utility - Miscellaneous / Foundation / Erect two foundations to support a 60,000 gallon liquefied petroleum gas (lpg) storage vessel at Energy Transfer Cleveland Terminal Butane Blending. No Certificate of Occupancy to be issued with this permit. A separate permit is required from the Fire Dept for the storage vessel.",
 "gc": "XL INDUSTRIAL SERVICES, INC.",
 "pin": "13109001",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": "C-3650",
@@ -4191,8 +4191,8 @@
 "label": "操業事業者"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "ABBOTT MANUFACTURING INC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": "CAPITAL FIRE PROTECTION CO",
 "gc": null
@@ -4221,7 +4221,7 @@
 "verbatim": "Commercial - Other / Fire Suppression / Fire Protection",
 "gc": "CAPITAL FIRE PROTECTION CO",
 "pin": "010000610",
-"owner_source": null
+"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": "C-139",
@@ -4239,8 +4239,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "FAIRVIEW PARK HOSPITAL",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "UNITED MECHANICAL CONTRACTORS, INC."
@@ -4269,7 +4269,7 @@
 "verbatim": "Commercial Plumbing / U Utility - Miscellaneous / INSTALL 12 DIALYSIS BOXES, 1380 LIN. FT. WASTE, VENT PIPING, 1610 LIN. FT. WATER DISTRIBUTION PIPING",
 "gc": "UNITED MECHANICAL CONTRACTORS, INC.",
 "pin": "02601001",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -4287,8 +4287,8 @@
 "label": "操業事業者"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "CLEVELAND CLINIC FOUNDATION",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "RELMEC MECHANICAL, LLC."
@@ -4317,7 +4317,7 @@
 "verbatim": "Commercial Plumbing / I-2 Institutional - Hospitals / Nursing Home / INSTALL 1 SUMP PUMP, 23 LIN. FT. DRAIN, WASTE, VENT PIPING ***Building Permit No. B25018487 - CLEVELAND CLINIC M19-M20***",
 "gc": "RELMEC MECHANICAL, LLC.",
 "pin": "11916001",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": "C-3629",
@@ -4479,8 +4479,8 @@
 "label": "操業事業者"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "ABBOTT MANUFACTURING INC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": "JD Platinum Electric, LLC",
 "gc": null
@@ -4509,7 +4509,7 @@
 "verbatim": "Commercial - Other / Fire Alarm / Mechanical Permits or NA / Fire Protection",
 "gc": "JD Platinum Electric, LLC",
 "pin": "010000610",
-"owner_source": null
+"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": "C-139",
@@ -4719,8 +4719,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "CONTINENTAL PROPERTIES GROUP LLC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "BUTCHKO ELECTRIC, INC."
@@ -4749,7 +4749,7 @@
 "verbatim": "Commercial Electrical / F-1 Factory Industrial Moderate Hazard / Install (20,728) Sq. Ft. Wiring - Panels, Receptacles and Lighting Related Building Permit: BCB26-012209",
 "gc": "BUTCHKO ELECTRIC, INC.",
 "pin": "02322010",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -4767,8 +4767,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "HEALTH HILL HOSPITAL",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "NEXT GENERATION CONSTRUCTION, LLC."
@@ -4797,7 +4797,7 @@
 "verbatim": "Commercial Building / I-2 Institutional - Hospitals / Nursing Home / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO 593 SF, FIRST FLOOR LABRATORY APPROVED PLANS. SEPARATE PLUMBING, HVAC, ELECTRICAL AND FIRE PROTECTION PERMITS ARE REQUIRED. SUBMIT SEPARATE FIRE PROTECTION PLANS TO FIRE PROTECTION BUREAU FOR THEIR REVIEW.",
 "gc": "NEXT GENERATION CONSTRUCTION, LLC.",
 "pin": "12808002",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -5055,8 +5055,8 @@
 "label": "未特定"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "MASSMUTUAL ASSET FINANCE LLC",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "ALBERT M. HIGLEY COMPANY (THE)"
@@ -5085,7 +5085,7 @@
 "verbatim": "Commercial Building / I-2 Institutional - Hospitals / Nursing Home / Add or change existing construction elements / MAKE INTERIOR ALTERATIONS TO 550 SF CONVERTING PATIENT ROOMS INTO ISOLATION ROOMS IN EXISTING 3 STORY, TYPE IIA, I-2 OCCUPANCY. SEPARATE PERMITS FOR ELECTRICAL, MECHANICAL, AND PLUMBING REQUIRED. SUBMIT PERMIT APPLICATIONS TO FPB FOR ANY ALTERATIONS TO EXISTING FIRE ALARM OR SPRINKLE",
 "gc": "ALBERT M. HIGLEY COMPANY (THE)",
 "pin": "12902001",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -5247,8 +5247,8 @@
 "label": "自社所有"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "THE BOARD OF COUNTY HOSPITAL TRUSTEES OF THE",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": "HATZEL & BUEHLER, INC."
@@ -5277,7 +5277,7 @@
 "verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / INSTALL 832 SQUARE FEET: ALT - ELECTRICAL ALTERATIONS TO THE PHARMACY ED ON THE FIRST FLOOR ***BUILDING PERMIT NO BCB26-013337***",
 "gc": "HATZEL & BUEHLER, INC.",
 "pin": "00819003",
-"owner_source": null
+"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": "C-3601",
