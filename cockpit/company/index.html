@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>企業カルテ | 43 Sunsets Cockpit</title>
+<title>企業カルテ | Signal by 43 Sunsets</title>
 <meta name="description" content="会社ごとに、建設許可・UCC 登記・採用・政府補助金の 4 面の出来事を 1 枚に束ねた企業カルテ(BETA)。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon.ico">
@@ -242,7 +242,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 <body>
 <header>
   <div class="masthead">
-    <div class="kicker"><a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a><span class="cock">— COCKPIT</span><a class="toplink" href="/cockpit/">← トップへ</a></div>
+    <div class="kicker"><a class="brandlink" href="/cockpit/">SIGNAL</a><span class="cock">by <a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a></span><a class="toplink" href="/cockpit/">← トップへ</a></div>
     <h1>企業カルテ</h1>
     <div class="meta" id="metaline">会社ごとに 4 面(建設許可・UCC・採用・政府補助金)の出来事を 1 枚に — 読み込み中…</div>
   </div>
@@ -283,12 +283,12 @@ function uccItem(u){
     <div class="kref">${esc([u.ref, u.id].filter(Boolean).join(" · "))}</div></div>`;
 }
 function render(c){
-  document.title = `${c.name} — 企業カルテ | 43 Sunsets Cockpit`;
+  document.title = `${c.name} — 企業カルテ | Signal by 43 Sunsets`;
   const f = c.faces; const jp = c.jp ? `<span class="chip jp">日系(${c.jp_basis === "roster" ? "名簿" : "人の確認"})</span>` : (c.jp_candidate ? `<span class="chip">日系?(AI 候補)</span>` : "");
   document.getElementById("metaline").innerHTML = `${esc(c.name)} · 建設許可 <span class="mono">${f.permits.count}</span> 件 · UCC 登記 <span class="mono">${f.ucc.count}</span> 件 · 書き出し <span class="mono">${esc((c.generated_at || "").slice(0,10))}</span>`;
   const back = document.referrer && /43sunsets\.com\/cockpit\//.test(document.referrer) ? `<a href="javascript:history.back()">‹ 戻る</a>` : "";
   document.getElementById("main").innerHTML = `
-    <div class="kprof"><div><div class="kicker">43 SUNSETS COCKPIT — COMPANY KARTE(BETA)</div><h2>${esc(c.name)}</h2>
+    <div class="kprof"><div><div class="kicker">SIGNAL by 43 SUNSETS — COMPANY KARTE(BETA)</div><h2>${esc(c.name)}</h2>
       <div class="ksub">${esc([c.city, c.state].filter(Boolean).join(", "))} ${jp} ${c.industry ? `<span class="chip">${esc(c.industry)}</span>` : ""}</div>
       <div class="ksub" style="margin-top:6px">${c.made ? esc(c.made) + " · " : ""}${c.size ? "規模 " + esc(c.size) + " · " : ""}${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website)}</a>` : "サイト —"}${c.master_checked_at ? ` · 会社マスター調査 ${esc(c.master_checked_at)}` : " · 会社マスター未調査"}</div></div>
       <div class="kback">${back}</div></div>

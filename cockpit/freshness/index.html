@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>データの鮮度と網羅 — 自治体別の更新状況 | 43 Sunsets Cockpit</title>
-<meta name="description" content="コックピット(建設許可シグナル)が見ている自治体の一覧と、それぞれの最終更新日・最終データ日・次回更新予定。郡別ヒートマップで網羅の現在地を毎日更新。">
+<title>データの鮮度と網羅 — 自治体別の更新状況 | Signal by 43 Sunsets</title>
+<meta name="description" content="Signal(建設許可シグナル)が見ている自治体の一覧と、それぞれの最終更新日・最終データ日・次回更新予定。郡別ヒートマップで網羅の現在地を毎日更新。">
 <link rel="canonical" href="https://43sunsets.com/cockpit/freshness/">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
-<meta property="og:title" content="データの鮮度と網羅 — 43 Sunsets Cockpit">
+<meta property="og:title" content="データの鮮度と網羅 — Signal by 43 Sunsets">
 <meta property="og:description" content="自治体ごとの最終更新日・次回更新・郡別ヒートマップ。毎日更新。">
 <meta property="og:url" content="https://43sunsets.com/cockpit/freshness/">
 <meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
@@ -127,11 +127,11 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
 <body>
 <header>
   <div class="masthead">
-    <div class="kicker"><a href="https://43sunsets.com/">43 SUNSETS</a> — COCKPIT — <a href="../permits/">建設許可シグナル</a></div>
+    <div class="kicker"><a href="/cockpit/">SIGNAL</a> <span style="opacity:.7">by</span> <a href="https://43sunsets.com/">43 SUNSETS</a> — <a href="../permits/">建設許可シグナル</a></div>
     <h1>データの鮮度と網羅</h1>
     <div class="meta" id="metaline">自治体ごとに「いつ取れたか・データはいつのものか・次はいつ動くか」を毎日再計算して表示します。読み込み中…</div>
   </div>
-  <div class="hdr-right"><a class="theme-btn" href="../permits/" style="text-decoration:none">← コックピットへ戻る</a><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
+  <div class="hdr-right"><a class="theme-btn" href="../permits/" style="text-decoration:none">← Signal へ戻る</a><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
 </header>
 <script>
 /* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
@@ -204,7 +204,7 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
 </main>
 
 <footer>
-  <b>43 Sunsets Cockpit(BETA)</b> — この面は <span class="mono">coverage.json</span>(毎日 12:00 UTC に VPS が再生成)をそのまま描画しています。数字は当社の収集記録から機械的に計算したもので、自治体の公式な統計ではありません。
+  <b>Signal by 43 Sunsets(BETA)</b> — この面は <span class="mono">coverage.json</span>(毎日 12:00 UTC に VPS が再生成)をそのまま描画しています。数字は当社の収集記録から機械的に計算したもので、自治体の公式な統計ではありません。
   郡の形状は米国 Census の境界データ、対象郡は Census CBP 2022 の製造業事業所数・従業者数の上位 80% 線で選んでいます。
 </footer>
 
@@ -330,7 +330,7 @@ footer{border-top:1px solid var(--line); padding:18px 28px 40px; font-size:12px;
     document.getElementById("side").innerHTML = `<h3>${NAMES[state]} — 対象 ${nCounties} 郡(人口順)</h3><ol>` +
       list.map(([fips, c]) => `<li>${name(fips)} 郡 <span class="share">${(100*c.fresh_pop_share).toFixed(0)}%</span> <span class="share">${c.munis} 自治体</span></li>`).join("") + `</ol>` +
       `<div class="note">上記 ${nCounties} 郡は、${NAMES[state]}の製造業の 8 割以上が集まっている郡です。米 Census の 2022 年の郡別統計で、工場・作業所の数で見ても、そこで働く人の数で見ても上位に入る郡を選びました。この ${nCounties} 郡を見れば、州の製造業のほぼ全体を見たことになる、という考え方です。地図の灰色は対象外の郡(全 ${nAll} 郡のうち残り ${nAll - nCounties} 郡)です。<br><br>
-      郡名の横の % はデータ取得率です。100% なら、その郡についてコックピット上で全てのデータが取れていることを意味します(町の人口で重み付け)。「N 自治体」は、その郡で当社が見ている町の数です。</div>`;
+      郡名の横の % はデータ取得率です。100% なら、その郡についてSignal 上で全てのデータが取れていることを意味します(町の人口で重み付け)。「N 自治体」は、その郡で当社が見ている町の数です。</div>`;
   }
 
   // ---- 一覧
