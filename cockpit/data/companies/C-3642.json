@@ -1,0 +1,107 @@
+{
+"id": "C-3642",
+"name": "AMAZON",
+"city": null,
+"state": null,
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"faces": {
+"permits": {
+"count": 2,
+"value_total": 200000.0,
+"latest": "2026-07-30",
+"items": [
+{
+"id": "S-26949",
+"date": "2026-07-30",
+"applied": "2026-06-03",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "10801 MADISON AVE, CLEVELAND, OH, 44102",
+"permit_no": "BCB26-022430",
+"permit_type": "Commercial Building",
+"value": 200000.0,
+"category": "製造能力の増強",
+"confidence": "high",
+"summary": "既存 Amazon 倉庫施設(DCL7)への新規機械設備の設置 $200k(S-1 保管用途、電気工事は別許可)。",
+"infer": "既存倉庫内の機械設備追加 = マテハン・搬送機器等の設備投資の可能性(推論)。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Commercial Building / S-1 Storage - Moderate Hazard / Interior/Exterior Remodel / INSTALL NEW MACHINERY FOR EXISTING AMAZON WAREHOUSE FACILITY (DCL7). SUBMIT SEPARATE PERMIT FOR ELECTRICAL. NO SPECIAL INSPECTIONS IDENTIFIED. NO C OF O REQUIRED WITH THIS PERMIT.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-35422",
+"date": "2026-07-24",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Butler County",
+"address": "9309 CINCINNATI DAYTON RD, OH 45069 United States",
+"permit_no": "BLD-RV26-03142",
+"permit_type": "Building/Commercial/Revision/NA",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Butler County の Amazon Delivery Station における電気関連の変更許可(金額不明)。",
+"infer": "既存 Amazon 配送ステーション案件の電気系副許可(変更)と読める(推論)。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "REVISION * ELECTRIC - AMAZON DELIVERY STATION / Building/Commercial/Revision/NA",
+"source_id": "SRC-024",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "未収集",
+"count": 0,
+"note": "採用面は開発中(Coming soon)。この会社の求人は当社の網にまだ無い。"
+},
+"grants": {
+"status": "未収集",
+"count": 0,
+"note": "政府補助金面は開発中(Coming soon)。この会社の補助金・税額控除は当社の網にまだ無い。"
+}
+},
+"timeline": [
+{
+"date": "2026-07-30",
+"face": "permits",
+"title": "建設許可(Cleveland): 製造能力の増強",
+"ref": "S-26949",
+"summary": "既存 Amazon 倉庫施設(DCL7)への新規機械設備の設置 $200k(S-1 保管用途、電気工事は別許可)。"
+},
+{
+"date": "2026-07-24",
+"face": "permits",
+"title": "建設許可(Butler County): 未分類",
+"ref": "S-35422",
+"summary": "Butler County の Amazon Delivery Station における電気関連の変更許可(金額不明)。"
+}
+],
+"generated_at": "2026-09-06T15:00:05+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

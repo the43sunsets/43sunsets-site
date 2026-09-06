@@ -14,10 +14,34 @@
 "master_checked_at": "2026-09-06",
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 39500000.0,
-"latest": "2026-07-13",
+"count": 2,
+"value_total": 39605000.0,
+"latest": "2026-09-04",
 "items": [
+{
+"id": "S-36512",
+"date": "2026-09-04",
+"applied": "2026-08-24",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1400 W 44TH ST",
+"permit_no": "101087504",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 105000.0,
+"category": "製造能力の増強",
+"confidence": "high",
+"summary": "既存の食品加工施設でグリーストラップ(油脂分離器)を交換 $105k(F-1 工場用途)。",
+"infer": "既存施設の維持・衛生設備更新であり、以前の大型拡張工事に付随する小規模改修の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SPR 2019 CBRC: REPLACEMENT OF EXISTING GREASE INTERCEPTOR IN AN EXISTING FOOD PROCESSING FACILITY AS PER PLANS. (OCCUPANCY GROUP: F1; TYPE II-B CONSTRUCTION)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-148",
 "date": "2026-07-13",
@@ -64,6 +88,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-04",
+"face": "permits",
+"title": "建設許可(Chicago): 製造能力の増強",
+"ref": "S-36512",
+"summary": "既存の食品加工施設でグリーストラップ(油脂分離器)を交換 $105k(F-1 工場用途)。"
+},
+{
 "date": "2026-07-13",
 "face": "permits",
 "title": "建設許可(Chicago): 製造能力の増強",
@@ -71,6 +102,6 @@
 "summary": "既存倉庫内に食品加工施設を拡張するテナント工事 $39.5M(F-1 工場用途)。GC = Meridian Design Build。"
 }
 ],
-"generated_at": "2026-09-06T13:58:18+00:00",
+"generated_at": "2026-09-06T15:00:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

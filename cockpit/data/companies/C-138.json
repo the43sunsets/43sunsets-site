@@ -14,10 +14,34 @@
 "master_checked_at": "2026-09-06",
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 115000000.0,
-"latest": "2026-08-21",
+"count": 2,
+"value_total": 115500000.0,
+"latest": "2026-09-04",
 "items": [
+{
+"id": "S-36659",
+"date": "2026-09-04",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3420 OHIOHEALTH PKWY",
+"permit_no": "ALTC2605180",
+"permit_type": "Alteration",
+"value": 500000.0,
+"category": "研究・医療・航空宇宙",
+"confidence": "high",
+"summary": "OhioHealth 本部キャンパス(3420 OhioHealth Pkwy)内で 9,090 SQFT の構造改修 $500k。",
+"infer": "同キャンパスで先行する大型増築($115M)に付随する小規模改修の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 9090 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-1542",
 "date": "2026-08-21",
@@ -64,6 +88,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-04",
+"face": "permits",
+"title": "建設許可(Columbus): 研究・医療・航空宇宙",
+"ref": "S-36659",
+"summary": "OhioHealth 本部キャンパス(3420 OhioHealth Pkwy)内で 9,090 SQFT の構造改修 $500k。"
+},
+{
 "date": "2026-08-21",
 "face": "permits",
 "title": "建設許可(Columbus): 研究・医療・航空宇宙",
@@ -71,6 +102,6 @@
 "summary": "OhioHealth 本部キャンパスに 467,645 SQFT の増築(構造)$115M。"
 }
 ],
-"generated_at": "2026-09-06T13:58:18+00:00",
+"generated_at": "2026-09-06T15:00:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

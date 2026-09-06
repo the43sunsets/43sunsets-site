@@ -14,8 +14,8 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
+"count": 2,
+"value_total": 15000.0,
 "latest": "2026-07-21",
 "items": [
 {
@@ -39,6 +39,30 @@
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-27161",
+"date": "2026-07-14",
+"applied": "2026-06-01",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "10600 ST CLAIR AVE, CLEVELAND, OH, 44108",
+"permit_no": "BCB26-021915",
+"permit_type": "Commercial Building",
+"value": 15000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 10600 St Clair Ave の建物屋上に AT&T の携帯アンテナ・マウントを設置/交換 $15k。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Commercial Building / U Utility - Miscellaneous / Add or change existing construction elements / REPLACE/INSTALL ROOFTOP CELL ANTENNAS AND MOUNTS FOR AT&T PER APPROVED PLANS.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -69,8 +93,15 @@
 "title": "建設許可(Kildeer): 未分類",
 "ref": "S-25404",
 "summary": "Kildeer 21911 N Quentin Rd における AT&T のユーティリティ工事(金額$0、詳細記載なし)。"
+},
+{
+"date": "2026-07-14",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-27161",
+"summary": "Cleveland 10600 St Clair Ave の建物屋上に AT&T の携帯アンテナ・マウントを設置/交換 $15k。"
 }
 ],
-"generated_at": "2026-09-06T13:58:18+00:00",
+"generated_at": "2026-09-06T15:00:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

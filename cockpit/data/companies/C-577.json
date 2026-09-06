@@ -14,10 +14,58 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 225500.0,
-"latest": "2026-09-03",
+"count": 6,
+"value_total": 232500.0,
+"latest": "2026-09-04",
 "items": [
+{
+"id": "S-36572",
+"date": "2026-09-04",
+"applied": "2026-08-17",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2936 N SOUTHPORT AVE",
+"permit_no": "B200507496",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 3500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "既存通信設備(ペントハウス/壁面のタワー1本・機器3ボックス)の改修 $3,500。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 3 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: PENTHOUSE / WALL.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36511",
+"date": "2026-09-04",
+"applied": "2026-08-17",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1706 W MORSE AVE",
+"permit_no": "B200507489",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 3500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "煙突上の通信設備・アンテナ3台の改修 $3,500(Catholic Bishop of Chicago 所有)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 3 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: SMOKESTACK.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-26235",
 "date": "2026-09-03",
@@ -136,6 +184,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-04",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-36572",
+"summary": "既存通信設備(ペントハウス/壁面のタワー1本・機器3ボックス)の改修 $3,500。"
+},
+{
+"date": "2026-09-04",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-36511",
+"summary": "煙突上の通信設備・アンテナ3台の改修 $3,500(Catholic Bishop of Chicago 所有)。"
+},
+{
 "date": "2026-09-03",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -164,6 +226,6 @@
 "summary": "Chicago 4821 S HERMITAGE AVE の屋根工事 $215k。所有者/申請者: CATHOLIC BISHOP OF CHICAGO。"
 }
 ],
-"generated_at": "2026-09-06T13:58:18+00:00",
+"generated_at": "2026-09-06T15:00:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

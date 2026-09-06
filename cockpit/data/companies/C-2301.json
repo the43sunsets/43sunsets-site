@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 9,
-"value_total": 9000.0,
-"latest": "2026-08-24",
+"count": 10,
+"value_total": 10000.0,
+"latest": "2026-09-04",
 "items": [
+{
+"id": "S-36552",
+"date": "2026-09-04",
+"applied": "2026-08-23",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "248 E BALBO DR",
+"permit_no": "B200508544",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 1000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 248 E Balbo Dr にて 100 アンペア電気サービス切断装置を複数新設する簡易電気工事許可 $1,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. NEW PERMANENT 100 AMP SERVICE DISCONNECTING MEANS WITH 1 CIRCUITS. NEW PERMANENT 100 AMP SERVICE DISCONNECTING MEANS WITH 1 CIRCUITS. NEW PERMANENT 100 AMP SERVICE DISCONNECTING MEANS WITH 1 CIRCUITS. NEW PERMANENT 100 AMP SERVICE DISCONNECTING MEANS WITH 1 CIRCUITS. NE",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-6527",
 "date": "2026-08-24",
@@ -256,6 +280,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-04",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-36552",
+"summary": "Chicago 248 E Balbo Dr にて 100 アンペア電気サービス切断装置を複数新設する簡易電気工事許可 $1,000。"
+},
+{
 "date": "2026-08-24",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -319,6 +350,6 @@
 "summary": "Chicago(6401 S Stony Island Ave)でイベント用に100Aサービス断路器を10回線新設$1,000(Chicago Special Events Management申請)。"
 }
 ],
-"generated_at": "2026-09-06T13:58:18+00:00",
+"generated_at": "2026-09-06T15:00:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
