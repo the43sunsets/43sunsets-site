@@ -91,8 +91,12 @@ main{padding:18px 28px 60px; min-width:0;}
 .fact{border-left:3px solid var(--fact); background:var(--fact-bg); padding:7px 11px; border-radius:0 4px 4px 0; font-size:12.5px;}
 .fact .flabel{font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--fact); display:block; margin-bottom:1px;}
 .fact .verbatim{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; display:block; margin-top:3px; word-break:break-word; color:var(--sub);}
-.rule{border:1px dashed var(--infer-line); background:var(--infer-bg); padding:5px 11px; border-radius:4px; font-size:11.5px; color:var(--sub);}
-.badge-rule{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--infer); border:1px solid var(--infer); border-radius:3px; padding:0 5px; margin-right:6px; vertical-align:1px;}
+.infer{border:1px dashed var(--infer-line); background:var(--infer-bg); padding:7px 11px; border-radius:4px; font-size:12.5px;}
+.badge-infer{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--infer); border:1px solid var(--infer); border-radius:3px; padding:0 5px; margin-right:6px; vertical-align:1px;}
+.badge-ai{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.14em; color:var(--ai-accent); border:1px solid var(--ai-accent); border-radius:3px; padding:0 5px; margin-right:6px; vertical-align:1px;}
+.companylink{color:var(--ai-accent); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;}
+.companylink:hover{text-decoration-thickness:2px;}
+.chip[title]{cursor:help;}
 .pager{display:flex; align-items:center; justify-content:center; gap:6px; margin-top:24px; flex-wrap:wrap;}
 .pager button{border:1px solid var(--line); background:var(--card); color:var(--ink); font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:13px; min-width:34px; padding:5px 8px; border-radius:5px; cursor:pointer;}
 .pager button:hover{border-color:var(--ai-accent); color:var(--ai-accent);}
@@ -171,7 +175,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   <div class="fgroup"><h2>業種</h2><div id="f-industry"></div></div>
   <div class="fgroup"><h2>投資規模</h2><div id="f-size"></div></div>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
-  <div class="fnote">段階 = 承認(審議会が決めた・これから建つ)/契約・交付(実行済み)。出し手 = 連邦・州・市郡。投資の種類と業種は<b>規則</b>(制度番号・機関・本文の語)による割り当てで、AI 読みではありません。件数は現在の表示集合の全数。州と市郡の源は順次追加します。</div>
+  <div class="fnote">段階 = 承認(審議会が決めた・これから建つ)/契約・交付(実行済み)。出し手 = 連邦・州・市郡。投資の種類と業種は、AI 読みが付いた案件は AI の割り当て(「AI のまとめ」札)、まだの案件は規則(制度番号・機関・本文の語)による割り当てです(チップにカーソルを当てると出所が出ます)。件数は現在の表示集合の全数。州と市郡の源は順次追加します。</div>
 </aside>
 
 <main>
@@ -193,7 +197,8 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
     <ul id="scopenotes">
       <li>源(現在): USAspending.gov(連邦)— 5 州の事業者への助成(grants / cooperative agreements)と、設備投資に近い融資制度(SBA 504・USDA B&I/REAP・DOE 融資)。直近 365 日に取引のあった案件。</li>
       <li>未収集: 州の誘致インセンティブ(IL EDGE / IN IEDC / OH JobsOhio・Tax Credit Authority / MI Michigan Strategic Fund / WI WEDC)と、市・郡の固定資産税減免。審議会の承認一覧から順次追加します(「段階 = 承認」はその源で埋まります)。</li>
-      <li>SBA 504 融資は公開データに使途の内訳が無いため、受領者名に製造の語がある案件だけを「製造能力の増強」に置き、残りは「未分類」(小さな案件のトグルで表示)。</li>
+      <li>分類の出所: 設備投資に関わる案件は当社 AI(Sonnet 5・Batch)が読み、日本語の要約と投資の種類・業種を付けます(確信度が低いものは「未分類」)。まだ読んでいない案件は規則(制度番号・機関・本文の語)で仮置きしています。SBA 504 融資は公開データに使途の内訳が無く、受領者名に製造の語がある案件だけを読みの対象にしています。</li>
+      <li>受領者名の「›」は企業カルテ(建設許可・UCC・補助金を 1 枚に)へのリンク。同じ会社が許可や登記にも出ていれば、その時系列が並びます。</li>
       <li>日付の軸は「決定日」(連邦が交付を決めて義務化した日 = Base Obligation Date。融資は実行日)。履行期間(開始〜終了)は別に表示します。古い決定日の案件が載るのは、直近 1 年に変更・追加交付があったためです。州の審議会が入ると「承認日」が同じ軸に載ります。</li>
       <li>個人事業(個人名らしい受領者)は名前を表示しません。金額は交付額(助成)または融資額(融資)で、投資総額ではありません。</li>
     </ul>
@@ -270,16 +275,20 @@ function esc(t){ return String(t==null?"":t).replace(/[&<>"]/g, c=>({"&":"&amp;"
 function cardHtml(s){
   const jp = s.jp ? `<span class="chip jp" title="${esc(s.jp_basis||"")}">日系</span>` : "";
   const prog = s.program_name ? `${esc(s.program_name)}(${esc(s.program)})` : (s.program ? `CFDA ${esc(s.program)}` : "");
-  const link = s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">USAspending の記録 ↗</a>` : "";
-  const desc = s.description ? `<div class="summary">${esc(s.description.length>260 ? s.description.slice(0,260)+"…" : s.description)}</div>` : "";
+  const link = s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">記録 ↗</a>` : "";
+  const basisTip = s.basis === "ai" ? `AI の読み(${esc((s.ai&&s.ai.model)||"")}・確信度 ${esc((s.ai&&s.ai.confidence)||"")})。低確信は「未分類」に置く` : "規則(制度番号・機関・本文の語)による割り当て。AI 読みが付き次第、置き換わる";
+  const name = s.company_id ? `<a class="companylink" href="/cockpit/company/?id=${esc(s.company_id)}" title="企業カルテ(建設許可・UCC・補助金を 1 枚に)を開く">${esc(s.recipient)} ›</a>` : esc(s.recipient);
+  const summary = s.summary ? `<div class="summary"><span class="badge-ai" title="当社 AI(${esc((s.ai&&s.ai.model)||"")})が記録を読んで書いた要約。事実は下の欄の逐語">AI のまとめ</span>${esc(s.summary)}</div>` : "";
+  const infer = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${esc(s.infer)}</div>` : "";
+  const verb = s.description ? `<span class="verbatim">${esc(s.description.length>220 ? s.description.slice(0,220)+"…" : s.description)}</span>` : "";
   return `<article class="card">
     <div class="srcline"><span class="chip src" title="出し手の層と機関">${esc(s.issuer_level)}・${esc(s.issuer||"")}</span></div>
-    <div class="head"><span class="state">${esc(s.state)}</span><h3>${esc(s.recipient)}</h3><span class="chip kind">${esc(s.kind_label)}</span></div>
-    <div><span class="chip stage">${esc(s.stage)}</span><span class="chip">${esc(s.category)}</span><span class="chip">${esc(s.industry)}</span>${jp}<span class="amount">${fmtUsd(s.amount)}</span></div>
+    <div class="head"><span class="state">${esc(s.state)}</span><h3>${name}</h3><span class="chip kind" title="助成 = 返済不要の交付 / 融資 = 連邦の融資・保証">${esc(s.kind_label)}</span></div>
+    <div><span class="chip stage" title="承認 = 審議会が決めた(これから建つ)/ 契約・交付 = 実行済み">${esc(s.stage)}</span><span class="chip" title="投資の種類 — ${basisTip}">${esc(s.category)}</span><span class="chip" title="業種 — ${basisTip}">${esc(s.industry)}</span>${jp}<span class="amount">${fmtUsd(s.amount)}</span></div>
     <div class="loc">${esc(s.city||"")}${s.city?"・":""}${prog}</div>
-    ${desc}
-    <div class="fact"><span class="flabel">事実(公的記録)</span>USAspending.gov・決定 <span class="mono">${esc(s.date||"—")}</span>${s.start_date?`・履行期間 <span class="mono">${esc(s.start_date)}</span>〜<span class="mono">${esc(s.end_date||"")}</span>`:""}・${s.kind==="grant"?"交付額":"融資額"} <span class="mono">${s.amount!=null?"$"+Math.round(s.amount).toLocaleString("en-US"):"—"}</span>${link?"・"+link:""}</div>
-    <div class="rule"><span class="badge-rule">規則</span>投資の種類・業種は制度番号と本文の語による割り当て(AI 読みではない)</div>
+    ${summary}
+    <div class="fact"><span class="flabel">事実(公的記録)</span>USAspending.gov・決定 <span class="mono">${esc(s.date||"—")}</span>${s.start_date?`・履行期間 <span class="mono">${esc(s.start_date)}</span>〜<span class="mono">${esc(s.end_date||"")}</span>`:""}・${s.kind==="grant"?"交付額":"融資額"} <span class="mono">${s.amount!=null?"$"+Math.round(s.amount).toLocaleString("en-US"):"—"}</span>${link?"・"+link:""}${verb}</div>
+    ${infer}
   </article>`;
 }
 function render(){
@@ -308,8 +317,8 @@ document.getElementById("clear").addEventListener("click", ()=>{ for(const k in 
 function csvEscape(v){ v = String(v==null?"":v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
 document.getElementById("export").addEventListener("click", ()=>{
   const list = filtered();
-  const head = ["id","州","市","受領者","種別","出し手の層","機関","制度番号","制度名","金額USD","段階","決定日","履行開始","履行終了","投資の種類(規則)","業種(規則)","投資規模","日系","本文(逐語)","URL"];
-  const rows = list.map(s=>[s.id,s.state,s.city??"",s.recipient,s.kind_label,s.issuer_level,s.issuer??"",s.program??"",s.program_name??"",s.amount??"",s.stage,s.date??"",s.start_date??"",s.end_date??"",s.category,s.industry,s.size,s.jp?"1":"",s.description,s.url??""]);
+  const head = ["id","州","市","受領者","企業カルテ","種別","出し手の層","機関","制度番号","制度名","金額USD","段階","決定日","履行開始","履行終了","投資の種類","業種","分類の出所","確信度","投資規模","日系","AI のまとめ","推論(AI)","本文(逐語)","URL"];
+  const rows = list.map(s=>[s.id,s.state,s.city??"",s.recipient,s.company_id??"",s.kind_label,s.issuer_level,s.issuer??"",s.program??"",s.program_name??"",s.amount??"",s.stage,s.date??"",s.start_date??"",s.end_date??"",s.category,s.industry,s.basis==="ai"?"AI":"規則",(s.ai&&s.ai.confidence)||"",s.size,s.jp?"1":"",s.summary??"",s.infer??"",s.description,s.url??""]);
   const csv = "﻿" + [head, ...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n");
   const blob = new Blob([csv], {type:"text/csv;charset=utf-8"}); const a = document.createElement("a");
   a.href = URL.createObjectURL(blob); a.download = `43sunsets-cockpit-subsidies-${new Date().toISOString().slice(0,10)}.csv`; document.body.appendChild(a); a.click();
