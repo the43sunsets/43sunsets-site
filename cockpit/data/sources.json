@@ -1,0 +1,422 @@
+{
+ "generated_at": "2026-09-07T08:19:52+00:00",
+ "status_updated": "2026-09-07",
+ "schedule": "毎日 02:00 America/Chicago",
+ "permits": {
+  "unit": "自治体(郡別に集計)",
+  "health": "OK",
+  "last_run_at": "2026-09-07T08:13:59Z",
+  "munis": 2085,
+  "fresh": 225,
+  "pop_share_fresh": 0.3165184372633432,
+  "states": [
+   {
+    "state": "IL",
+    "name": "イリノイ",
+    "munis": 505,
+    "fresh": 93,
+    "pop_share_fresh": 0.5194
+   },
+   {
+    "state": "IN",
+    "name": "インディアナ",
+    "munis": 314,
+    "fresh": 2,
+    "pop_share_fresh": 0.0137
+   },
+   {
+    "state": "MI",
+    "name": "ミシガン",
+    "munis": 366,
+    "fresh": 9,
+    "pop_share_fresh": 0.1458
+   },
+   {
+    "state": "OH",
+    "name": "オハイオ",
+    "munis": 541,
+    "fresh": 115,
+    "pop_share_fresh": 0.4736
+   },
+   {
+    "state": "WI",
+    "name": "ウィスコンシン",
+    "munis": 359,
+    "fresh": 6,
+    "pop_share_fresh": 0.0988
+   }
+  ]
+ },
+ "ucc": {
+  "unit": "州",
+  "health": "OK",
+  "last_run_at": "2026-09-07T07:00:57+00:00",
+  "filings": 5574,
+  "states_live": [
+   "OH"
+  ],
+  "states": [
+   {
+    "state": "IL",
+    "name": "イリノイ",
+    "status": "inquiry",
+    "label": "照会中",
+    "n": 0,
+    "since": null,
+    "latest": null,
+    "note": "州務長官 UCC 課へ一括データの提供条件を照会(2026-09-07 送信)。回答後に料金と形式を判断。"
+   },
+   {
+    "state": "IN",
+    "name": "インディアナ",
+    "status": "inquiry",
+    "label": "照会中",
+    "n": 0,
+    "since": null,
+    "latest": null,
+    "note": "州務長官へ一括データの提供条件を照会(2026-09-07 送信)。"
+   },
+   {
+    "state": "MI",
+    "name": "ミシガン",
+    "status": "quote",
+    "label": "料金の判断待ち",
+    "n": 0,
+    "since": null,
+    "latest": null,
+    "note": "州から月額 $500 の見積(2026-09-05)。費用対効果を見て採否を決める。"
+   },
+   {
+    "state": "OH",
+    "name": "オハイオ",
+    "status": "live",
+    "label": "収集中",
+    "n": 752,
+    "since": "1984-10-31",
+    "latest": "2026-09-04",
+    "note": "州務長官の公開検索から毎日 02:00 CT に取得(2026-07 分から)。担保物欄の逐語を AI が読み、設備カタログと突き合わせ。"
+   },
+   {
+    "state": "WI",
+    "name": "ウィスコンシン",
+    "status": "partial",
+    "label": "一覧を収集中・本文は照会中",
+    "n": 4822,
+    "since": "2026-07-08",
+    "latest": "2026-09-06",
+    "note": "州金融機関局(DFI)の公開検索 API から登記の一覧と債務者の住所を毎日取得(2026-09-06〜)。担保物の本文は有償データのため提供条件を照会中(2026-09-07 送信)。本文が揃うまでページには出しません。"
+   }
+  ]
+ },
+ "subsidies": {
+  "unit": "出し手(連邦・州・市郡)",
+  "health": "OK",
+  "last_run_at": "2026-09-07T03:55:37Z",
+  "total": 6664,
+  "issuers": [
+   {
+    "id": "SRC-075",
+    "level": "連邦",
+    "label": "USAspending.gov(連邦・助成+設備投資型の融資)",
+    "status": "live",
+    "status_label": "収集中",
+    "n": 1256,
+    "n_shown": 1196,
+    "last": "2026-09-07T03:14",
+    "note": "事業者への助成(grants/cooperative agreements)と、SBA 504・USDA B&I/REAP・DOE 融資。直近 365 日に取引(新規・変更)のあった案件。日付 = 決定日(Base Obligation Date / 融資は Issued Date)。分類は規則(CFDA・機関・本文の語)で AI 読みではない。"
+   },
+   {
+    "id": "SRC-077",
+    "level": "州",
+    "label": "Indiana IEDC — Transparency Portal(州)",
+    "status": "live",
+    "status_label": "収集中",
+    "n": 5000,
+    "n_shown": 1837,
+    "last": "2026-09-07T03:55",
+    "note": "EDGE/HBI/SEF 等の契約(契約日・契約額・予定投資額・雇用)。決定日 = 契約日。段階 = 承認。"
+   },
+   {
+    "id": "SRC-076",
+    "level": "州",
+    "label": "Illinois DCEO — EDGE 契約一覧(州)",
+    "status": "live",
+    "status_label": "収集中",
+    "n": 408,
+    "n_shown": 184,
+    "last": "2026-09-07T03:55",
+    "note": "EDGE 税額控除の契約(2015-01-20 以降・締結から 10 営業日以内に掲示)。決定日 = 締結日。金額 = 控除の見込額。段階 = 承認。"
+   },
+   {
+    "id": null,
+    "level": "州",
+    "label": "Ohio Tax Credit Authority / JobsOhio",
+    "status": "planned",
+    "status_label": "未着手",
+    "n": 0,
+    "n_shown": null,
+    "last": null,
+    "note": "理事会の承認一覧(PDF)。取り込み方法を設計中。"
+   },
+   {
+    "id": null,
+    "level": "州",
+    "label": "Michigan Strategic Fund(MSF)理事会",
+    "status": "planned",
+    "status_label": "未着手",
+    "n": 0,
+    "n_shown": null,
+    "last": null,
+    "note": "理事会資料(PDF)。取り込み方法を設計中。"
+   },
+   {
+    "id": null,
+    "level": "州",
+    "label": "Wisconsin WEDC 受賞一覧",
+    "status": "planned",
+    "status_label": "未着手",
+    "n": 0,
+    "n_shown": null,
+    "last": null,
+    "note": "PDF・年次。取り込み方法を設計中。"
+   },
+   {
+    "id": null,
+    "level": "市郡",
+    "label": "固定資産税の減免(Cook 郡 6b・インディアナ abatement・オハイオ CRA・ミシガン PA 198・ウィスコンシン TIF)",
+    "status": "planned",
+    "status_label": "未着手",
+    "n": 0,
+    "n_shown": null,
+    "last": null,
+    "note": "自治体ごとの議事録・台帳。州層の後に着手。"
+   }
+  ]
+ },
+ "hiring": {
+  "unit": "会社(採用ページ)",
+  "health": "OK",
+  "last_run_at": "2026-09-07T04:28:50Z",
+  "companies": 16,
+  "boards": 17,
+  "ats_types": [
+   "Greenhouse",
+   "Lever",
+   "SmartRecruiters",
+   "Workday"
+  ],
+  "open": 1034,
+  "counted_day": "2026-09-07",
+  "note": "採用ページの公開 API(Greenhouse・Lever・Workday・SmartRecruiters・BambooHR)を持つ会社から順に配線。人材派遣会社は除外。増勢の判定は観測開始から 30 日後。",
+  "list": [
+   {
+    "company_id": "C-139",
+    "name": "ABBOTT NUTRITION",
+    "state": "OH",
+    "city": null,
+    "jp": false,
+    "ats": [
+     "Workday"
+    ],
+    "boards": 1,
+    "open": 42,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-3291",
+    "name": "Coulter ventures, LLC dba Rogue Fitness",
+    "state": "OH",
+    "city": "Columbus",
+    "jp": false,
+    "ats": [
+     "Workday"
+    ],
+    "boards": 1,
+    "open": 0,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-3582",
+    "name": "Designetics, Inc.",
+    "state": "OH",
+    "city": "Holland",
+    "jp": false,
+    "ats": [
+     "Lever"
+    ],
+    "boards": 1,
+    "open": 3,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-180",
+    "name": "ELMHURST MEMORIAL HEALTH",
+    "state": "IL",
+    "city": null,
+    "jp": false,
+    "ats": [
+     "Workday"
+    ],
+    "boards": 1,
+    "open": 46,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-3394",
+    "name": "Fluid Handling, LLC / Material Management Services, Inc.",
+    "state": "NY",
+    "city": "Cheektowaga",
+    "jp": false,
+    "ats": [
+     "Workday"
+    ],
+    "boards": 1,
+    "open": 34,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-171",
+    "name": "HENRY FORD HEALTH SYSTEM",
+    "state": "MI",
+    "city": null,
+    "jp": false,
+    "ats": [
+     "SmartRecruiters"
+    ],
+    "boards": 1,
+    "open": 0,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-3593",
+    "name": "LTA Research and Exploration",
+    "state": "OH",
+    "city": "Akron",
+    "jp": false,
+    "ats": [
+     "Lever"
+    ],
+    "boards": 1,
+    "open": 14,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-140",
+    "name": "NATIONWIDE CHILDRENS HOSPITAL",
+    "state": "OH",
+    "city": null,
+    "jp": false,
+    "ats": [
+     "Workday"
+    ],
+    "boards": 1,
+    "open": 611,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-3",
+    "name": "NORTHWESTERN MEMORIAL HOSPITAL",
+    "state": "IL",
+    "city": null,
+    "jp": false,
+    "ats": [
+     "SmartRecruiters"
+    ],
+    "boards": 1,
+    "open": 0,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-138",
+    "name": "OHIOHEALTH CORP",
+    "state": "OH",
+    "city": null,
+    "jp": false,
+    "ats": [
+     "Workday"
+    ],
+    "boards": 1,
+    "open": 2,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-1713",
+    "name": "PALOS COMMUNITY HOSPIT",
+    "state": "IL",
+    "city": null,
+    "jp": false,
+    "ats": [
+     "SmartRecruiters"
+    ],
+    "boards": 1,
+    "open": 0,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-107",
+    "name": "RYAN COMPANIES US, INC.",
+    "state": "IL",
+    "city": null,
+    "jp": false,
+    "ats": [
+     "Workday"
+    ],
+    "boards": 1,
+    "open": 218,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-3243",
+    "name": "Rogue Fitness",
+    "state": "OH",
+    "city": "Columbus",
+    "jp": false,
+    "ats": [
+     "Workday"
+    ],
+    "boards": 1,
+    "open": 1,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-3572",
+    "name": "University of Akron",
+    "state": "OH",
+    "city": "Akron",
+    "jp": false,
+    "ats": [
+     "Workday"
+    ],
+    "boards": 1,
+    "open": 49,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-3444",
+    "name": "Vega Americas",
+    "state": "OH",
+    "city": "Mason",
+    "jp": false,
+    "ats": [
+     "Greenhouse"
+    ],
+    "boards": 2,
+    "open": 14,
+    "since": "2026-09-07"
+   },
+   {
+    "company_id": "C-3310",
+    "name": "Wabtec Components LLC",
+    "state": "OH",
+    "city": "Salem",
+    "jp": false,
+    "ats": [
+     "SmartRecruiters"
+    ],
+    "boards": 1,
+    "open": 0,
+    "since": "2026-09-07"
+   }
+  ]
+ }
+}

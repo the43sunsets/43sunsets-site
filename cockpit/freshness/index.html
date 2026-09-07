@@ -76,6 +76,7 @@ h2 .sub{font-family:"Zen Kaku Gothic New",sans-serif; font-size:12px; color:var(
 .tabs button[aria-selected="true"]{background:var(--ink); color:var(--paper); border-color:var(--ink);}
 .tabs button .n{color:inherit; opacity:.65; font-size:11px; margin-left:4px;}
 .srch{margin-top:14px !important;}
+.tablewrap.slim{max-height:none;} .srct td.wrap{white-space:normal; max-width:520px; color:var(--sub); font-size:11.5px; line-height:1.55;} .srct td.name{font-weight:500;} .srct td.num{text-align:right; font-family:"IBM Plex Mono",monospace;}
 .srcgrid{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:12px 0 26px;}
 .srccard{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px 12px; display:flex; flex-direction:column; gap:6px; min-height:150px;}
 .srccard .n{font-family:"Shippori Mincho",serif; font-size:16px; font-weight:700; color:var(--ink); display:flex; align-items:center; gap:8px;} .srccard .n a{color:inherit; text-decoration:none;} .srccard .n a:hover{text-decoration:underline; text-underline-offset:3px;}
@@ -228,6 +229,19 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
   </div>
   <div class="more" id="more"></div>
 
+  <section id="sec-ucc" hidden>
+  <h2>動産担保登記(UCC) — 州別の範囲<span class="sub">州ごとに公開のしかたが違うため、州単位で「収集中・照会中・判断待ち」を示します</span></h2>
+  <div class="tablewrap slim"><table class="srct" id="ucc-table"><thead><tr><th>州</th><th>状態</th><th>登記件数</th><th>最新の記録日</th><th>備考</th></tr></thead><tbody></tbody></table></div>
+  </section>
+  <section id="sec-subs" hidden>
+  <h2>政府補助金 — 出し手別の範囲<span class="sub">連邦・州・市郡の順に配線。取得件数のうち、設備投資に関わる案件だけをページに表示します</span></h2>
+  <div class="tablewrap slim"><table class="srct" id="subs-table"><thead><tr><th>出し手</th><th>区分</th><th>状態</th><th>取得件数</th><th>最終取得</th><th>備考</th></tr></thead><tbody></tbody></table></div>
+  </section>
+  <section id="sec-hiring" hidden>
+  <h2>企業採用状況 — 採用ページを配線した会社<span class="sub" id="hiring-sub"></span></h2>
+  <div class="tablewrap slim"><table class="srct" id="hiring-table"><thead><tr><th>会社</th><th>所在</th><th>採用ページ</th><th>開いている求人</th><th>配線日</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
   <h2>更新の周期<span class="sub">経路ごとに違います</span></h2>
   <table class="cycle">
     <tr><th>経路</th><th>周期</th><th>説明</th></tr>
@@ -287,27 +301,59 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
     `最終更新 <span class="mono">${ct(gen)}</span> 米中部時間(${utc(gen)})・次回収集 <span class="mono">${ct(next)}</span> 米中部時間(${utc(next)}・公開は 04:00 までに)・対象 <span class="mono">${fmtN(COV.rows.length)}</span> 自治体・判定基準: データ日 ${COV.meta.stale_days} 日 / 集計窓 ${COV.meta.window_days} 日`;
   window.addEventListener("themechange", () => drawMap());
 
-  // ---- 4 つの情報源の範囲と更新(9/7 CEO 裁定 ②-①)。範囲の文言は当面ここで手入力(②で JSON 生成に移す)。状態と時刻は health.json。
+  // ---- 4 つの情報源の範囲と更新(9/7 CEO 裁定 ②): sources.json(VPS が公開のたびに生成)。無ければ health.json だけで要約カードを出す。
   (async () => {
-    let H = null;
-    try { H = await fetch("../data/health.json", {cache:"no-store"}).then(r => r.ok ? r.json() : null); } catch (e) {}
+    const getJ = async u => { try { const r = await fetch(u, {cache:"no-store"}); return r.ok ? await r.json() : null; } catch (e) { return null; } };
+    const [S, H] = await Promise.all([getJ("../data/sources.json"), getJ("../data/health.json")]);
     const chk = k => (H && H.checks && H.checks[k]) || {};
-    const st = c => c.state === "OK" ? "" : (c.state ? "bad" : "warn");
+    const st = c => c === "OK" || c === undefined ? "" : "bad";
     const when = iso => iso ? `<span class="mono">${ct(new Date(iso))}</span> CT` : "—";
-    const tot = Object.values(COV.by_state || {}).reduce((a, b) => ({munis:a.munis+(b.munis||0), pop:a.pop+(b.pop||0), fresh:a.fresh+((b.by_status||{}).fresh||0), fpop:a.fpop+((b.pop_by_status||{}).fresh||0)}), {munis:0,pop:0,fresh:0,fpop:0});
-    const pu = chk("permits_update_vps"), uc = chk("ucc_sync_mac"), su = chk("subsidies_update_vps"), hi = chk("hiring_update_vps");
-    const cards = [
-      {href:"../permits/", name:"建設許可", unit:"自治体(郡別に集計)", dot:st(pu), last:pu.last_run_at || COV.meta.generated_at,
-       range:`5 州の ${fmtN(tot.munis)} 自治体を対象。最新データが取れている自治体 ${fmtN(tot.fresh)}(人口の ${tot.pop ? (tot.fpop/tot.pop*100).toFixed(1) : "—"}%)。`},
-      {href:"../ucc/", name:"動産担保登記(UCC)", unit:"州", dot:st(uc), last:uc.raw_db_synced_at,
-       range:`5 州のうち <b>オハイオ</b>(登記 ${fmtN((uc.last_status||{}).filings)} 件)。イリノイ・インディアナ・ウィスコンシンは州へ一括データを照会中、ミシガンは料金の判断待ち。`},
-      {href:"../subsidies/", name:"政府補助金", unit:"出し手(連邦・州・市郡)", dot:st(su), last:su.last_run_at,
-       range:`連邦(USAspending)と州 2(イリノイ EDGE・インディアナ IEDC)= ${fmtN(su.total)} 件。オハイオ・ミシガン・ウィスコンシンの州、市郡の減免は未着手。`},
-      {href:"../hiring/", name:"企業採用状況", unit:"会社(採用ページ)", dot:st(hi), last:hi.last_run_at,
-       range:`採用ページの公開 API を配線した 17 社(ATS 5 種)。開いている製造職の求人 ${fmtN(hi.open)} 件。増勢の判定は観測 30 日後から。`},
-    ];
+    const pct = v => v == null ? "—" : (v * 100).toFixed(1) + "%";
+    const chip = (status, label) => `<span class="st ${status === "live" ? "fresh" : status === "planned" ? "na" : "stale"}">${esc(label)}</span>`;
+    const esc = v => String(v == null ? "" : v).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+    let cards;
+    if (S) {
+      const P = S.permits, U = S.ucc, B = S.subsidies, R = S.hiring;
+      const liveNames = U.states.filter(x => x.status === "live").map(x => x.name);
+      const others = {}; U.states.filter(x => x.status !== "live").forEach(x => (others[x.label] = others[x.label] || []).push(x.name));
+      const otherTxt = Object.entries(others).map(([lab, ns]) => `${ns.join("・")}は${lab}`).join("、");
+      const liveIss = B.issuers.filter(x => x.status === "live");
+      cards = [
+        {href:"../permits/", name:"建設許可", unit:P.unit, dot:st(P.health), last:P.last_run_at,
+         range:`5 州の ${fmtN(P.munis)} 自治体を対象。最新データが取れている自治体 ${fmtN(P.fresh)}(人口の ${pct(P.pop_share_fresh)})。州ごとの内訳は下の節。`},
+        {href:"../ucc/", name:"動産担保登記(UCC)", unit:U.unit, dot:st(U.health), last:U.last_run_at,
+         range:`5 州のうち <b>${liveNames.join("・") || "—"}</b>(登記 ${fmtN(U.states.filter(x => x.status === "live").reduce((a, x) => a + (x.n || 0), 0))} 件)。${otherTxt}。`},
+        {href:"../subsidies/", name:"政府補助金", unit:B.unit, dot:st(B.health), last:B.last_run_at,
+         range:`${liveIss.map(x => x.level === "連邦" ? "連邦(USAspending)" : x.label.split(" — ")[0]).join("・")}= 取得 ${fmtN(B.total)} 件。未着手 ${B.issuers.filter(x => x.status === "planned").length} 群は下の節。`},
+        {href:"../hiring/", name:"企業採用状況", unit:R.unit, dot:st(R.health), last:R.last_run_at,
+         range:`採用ページの公開 API を配線した ${fmtN(R.companies)} 社・${fmtN(R.boards)} ページ(${R.ats_types.join("・")})。開いている求人 ${fmtN(R.open)} 件。増勢の判定は観測 30 日後から。`},
+      ];
+    } else {
+      const pu = chk("permits_update_vps"), uc = chk("ucc_sync_mac"), su = chk("subsidies_update_vps"), hi = chk("hiring_update_vps");
+      cards = [
+        {href:"../permits/", name:"建設許可", unit:"自治体(郡別に集計)", dot:st(pu.state), last:pu.last_run_at || COV.meta.generated_at, range:`5 州の自治体を対象(内訳は下の節)。`},
+        {href:"../ucc/", name:"動産担保登記(UCC)", unit:"州", dot:st(uc.state), last:uc.raw_db_synced_at, range:`登記 ${fmtN((uc.last_status||{}).filings)} 件。`},
+        {href:"../subsidies/", name:"政府補助金", unit:"出し手(連邦・州・市郡)", dot:st(su.state), last:su.last_run_at, range:`取得 ${fmtN(su.total)} 件。`},
+        {href:"../hiring/", name:"企業採用状況", unit:"会社(採用ページ)", dot:st(hi.state), last:hi.last_run_at, range:`開いている求人 ${fmtN(hi.open)} 件。`},
+      ];
+    }
     document.getElementById("srcgrid").innerHTML = cards.map(c =>
       `<div class="srccard"><div class="n"><span class="dot ${c.dot}" title="${c.dot ? "収集に問題あり" : "収集は正常"}"></span><a href="${c.href}">${c.name} ›</a></div><div class="u">単位: ${c.unit}</div><div class="r">${c.range}</div><div class="t">最終更新 ${when(c.last)}・次回 毎日 02:00 CT</div></div>`).join("");
+    if (!S) return;
+    // ---- UCC 州別
+    document.querySelector("#ucc-table tbody").innerHTML = S.ucc.states.map(x =>
+      `<tr><td class="name">${esc(x.name)} <span class="mono" style="color:var(--sub)">${x.state}</span></td><td>${chip(x.status, x.label)}</td><td class="num">${x.n ? fmtN(x.n) : "—"}</td><td>${x.latest ? `<span class="mono">${x.latest}</span>` : "—"}</td><td class="wrap">${esc(x.note)}</td></tr>`).join("");
+    document.getElementById("sec-ucc").hidden = false;
+    // ---- 補助金 出し手別
+    document.querySelector("#subs-table tbody").innerHTML = S.subsidies.issuers.map(x =>
+      `<tr><td class="name">${esc(x.label)}</td><td>${esc(x.level)}</td><td>${chip(x.status, x.status_label)}</td><td class="num">${x.n ? fmtN(x.n) + (x.n_shown != null && x.n_shown !== x.n ? `<span style="color:var(--sub)">(表示 ${fmtN(x.n_shown)})</span>` : "") : "—"}</td><td>${x.last ? `<span class="mono">${x.last.replace("T"," ")}Z</span>` : "—"}</td><td class="wrap">${esc(x.note)}</td></tr>`).join("");
+    document.getElementById("sec-subs").hidden = false;
+    // ---- 採用 会社別
+    const R = S.hiring;
+    document.getElementById("hiring-sub").textContent = `${fmtN(R.companies)} 社・${fmtN(R.boards)} ページ。求人数は ${R.counted_day || "—"} 時点の重複除去後。${R.note || ""}`;
+    document.querySelector("#hiring-table tbody").innerHTML = R.list.map(x =>
+      `<tr><td class="name"><a href="../company/?id=${esc(x.company_id)}" target="_blank" rel="noopener">${esc(x.name)}</a>${x.jp ? ' <span class="st fresh">日系</span>' : ""}</td><td>${esc([x.city, x.state].filter(Boolean).join(", "))}</td><td>${esc(x.ats.join("・"))}${x.boards > 1 ? ` × ${x.boards}` : ""}</td><td class="num">${fmtN(x.open)}</td><td><span class="mono">${esc(x.since || "—")}</span></td></tr>`).join("");
+    document.getElementById("sec-hiring").hidden = false;
   })();
 
   // ---- 州タブ(IL を先頭・既定)
