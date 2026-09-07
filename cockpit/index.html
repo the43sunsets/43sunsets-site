@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Signal by 43 Sunsets — 次の営業先が、理由とともに見つかる</title>
-<meta name="description" content="次の営業先が、理由とともに見つかる。米国中西部 5 州(IL・IN・MI・OH・WI)の製造業について、工場を増やす・設備に投資する・人を採用する動きを公的な記録(建設許可・動産担保登記・政府補助金・求人)から毎日調べ、会社ごとに理由つきで並べます。">
+<title>Signal by 43 Sunsets — 中西部で、次に動く会社が先に分かる</title>
+<meta name="description" content="中西部で、次に動く会社が先に分かる。米国中西部 5 州(IL・IN・MI・OH・WI)の製造業について、工場を増やす・設備に投資する・人を採用する動きを公的な記録(建設許可・動産担保登記・政府補助金・求人)から毎日調べ、会社ごとに理由つきで並べます。">
 <link rel="canonical" href="https://43sunsets.com/cockpit/">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Signal by 43 Sunsets — 次の営業先が、理由とともに見つかる">
+<meta property="og:title" content="Signal by 43 Sunsets — 中西部で、次に動く会社が先に分かる">
 <meta property="og:url" content="https://43sunsets.com/cockpit/">
 <meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&family=Caveat:wght@500;700&display=swap">
@@ -34,14 +34,19 @@ header .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.24em; co
 .theme-btn{border:1px solid var(--line); background:var(--card); color:var(--sub); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap;} .theme-btn:hover{color:var(--ink); border-color:var(--ink);}
 .beta{font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--ink); border:1.5px solid var(--ink); border-radius:4px; padding:2px 8px;}
 main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
-.lede-wrap{display:grid; grid-template-columns:minmax(0,1fr) 380px; gap:32px; align-items:center;}
-.sigmap{margin:0;} .sigmap svg{width:100%; height:auto; display:block;}
-@media (max-width:900px){ .lede-wrap{grid-template-columns:1fr; gap:14px;} .sigmap{max-width:440px;} }
+/* ヒーロー(9/7 CEO 承認: Higgsfield 生成の背景 = ライト hero-a / ダーク hero-b・文字側に紙色の覆い) */
+.hero{position:relative; isolation:isolate; background:var(--paper) url(/cockpit/assets/hero/hero-a.webp) no-repeat right center; background-size:cover; min-height:600px; display:flex; align-items:center;}
+:root[data-theme="dark"] .hero{background-image:url(/cockpit/assets/hero/hero-b.webp);}
+.hero::before{content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 92%, transparent) 34%, color-mix(in srgb, var(--paper) 55%, transparent) 50%, color-mix(in srgb, var(--paper) 0%, transparent) 66%);}
+.hero-in{max-width:1280px; margin:0 auto; padding:56px 56px 60px; width:100%; box-sizing:border-box;}
+.hero .lede{max-width:600px;}
+@media (max-width:900px){ .hero{min-height:0; background-size:auto 250px; background-position:right -30px bottom; padding-bottom:230px; align-items:flex-start;} .hero::before{background:linear-gradient(180deg, var(--paper) 0%, var(--paper) 55%, color-mix(in srgb, var(--paper) 0%, transparent) 100%);} .hero-in{padding:30px 24px 0;} }
+@media (max-width:600px){ .hero{background-size:auto 210px; padding-bottom:200px;} .hero-in{padding:24px 18px 0;} }
 .lede{display:flex; flex-direction:column; gap:14px; max-width:980px;}
 .lede .brandline{display:flex; align-items:center; gap:12px; margin-bottom:4px;} .lede .pmark{width:44px; height:44px; flex:none;} .lede .pby{align-self:flex-end; margin-bottom:6px;} .lede .pname{font-family:var(--serif); font-size:34px; font-weight:700; letter-spacing:.01em; color:var(--ink);} .lede .pby{font-family:var(--mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--sub);}
 .lede .tagline{margin:0 0 14px; font-size:14px; letter-spacing:.02em; color:var(--sub);}
 .lede h1{margin:0; font-family:var(--serif); font-size:clamp(22px, 2.55vw, 40px); line-height:1.32; font-weight:800; letter-spacing:.005em; color:var(--ink); white-space:nowrap;}   /* 9/5 CEO: 1 行に固定(幅に応じて縮む) */
-.lede p{margin:0; font-size:15.5px; line-height:1.75; color:var(--sub); max-width:760px;} .lede p b{color:var(--ink); font-weight:700;} .lede p.srcs{font-size:12.5px; color:var(--sub); letter-spacing:.02em;} .lede{gap:10px;}
+.lede p{margin:0; font-size:15.5px; line-height:1.75; color:var(--sub); max-width:760px;} .lede p.lead{font-family:var(--serif); font-size:clamp(17px, 1.5vw, 21px); font-weight:700; color:var(--ink); letter-spacing:.02em; line-height:1.5; margin-top:2px;} .lede p b{color:var(--ink); font-weight:700;} .lede p.srcs{font-size:12.5px; color:var(--sub); letter-spacing:.02em;} .lede{gap:10px;}
 .dateline{display:flex; flex-direction:column; align-items:flex-start; gap:8px; margin-top:4px;} .dateline .pills{display:flex; align-items:center; gap:10px; flex-wrap:wrap;} .hb-link{text-decoration:none; color:inherit;} .hb-link .hb{cursor:pointer;} .hb-link:hover .hb{border-color:var(--accent); box-shadow:0 0 0 2px rgba(47,93,138,.12);} .dateline .ed{font-family:var(--mono); font-size:12px; color:var(--ink); font-weight:600;}
 .hb{display:inline-flex; align-items:center; gap:7px; border:1px solid var(--line); border-radius:999px; padding:4px 11px 4px 8px; font-size:11.5px; color:var(--sub); background:var(--pill); white-space:nowrap; cursor:help;}
 .hb .hb-k{color:var(--ink);} .hb .hb-lbl{font-weight:700; color:var(--ink); letter-spacing:.04em;} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:var(--mono);}
@@ -115,36 +120,20 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
   if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
 })();
 </script>
-<main>
-  <div class="lede-wrap">
+<section class="hero" aria-label="Signal の紹介">
+  <div class="hero-in">
   <div class="lede">
-    <h1>次の営業先が、理由とともに見つかる。</h1>
-    <p>工場を増やす、設備に投資する、人を採用する。そんな製造業の動きを毎日調べ、新たな取引につながる可能性のある会社を見つけます。</p>
-    <p>会社名だけでなく、<b>「どんな動きがあり、なぜ今、声をかけるのか」</b>まで分かるので、情報収集に時間をかけず、営業先を絞り込めます。</p>
-    <p>対象は、イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの 5 州。公開情報で確認した企業の動きに、営業に役立つヒントを添えてお届けします。予測を含む内容は、確認済みの情報と混同しないよう、分けて表示します。</p>
+    <h1>中西部で、次に動く会社が先に分かる。</h1>
+    <p class="lead">工場を増やす。設備を買う。人を採る。</p>
+    <p>そんな製造業の動きを毎日調べ、今、営業する理由がある会社を見つけます。</p>
+    <p><b>「どの会社に」「何が起きていて」「なぜ今、声をかけるのか」</b>まで分かるので、営業先を探す時間を減らせます。</p>
+    <p>対象は、イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの 5 州。</p>
+    <p>公開情報で確認できた企業の動きと、そこから考えられる営業のヒントは分けて表示します。</p>
     <p class="srcs">情報源: 建設許可、動産担保登記(UCC)、政府補助金、求人情報。</p>
   </div>
-  <figure class="sigmap" aria-label="People, assets and capital line up, and the business expands. We see it first.">
-<svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img">
-  <defs><filter id="wob" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
-  <g filter="url(#wob)" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="150" cy="110" r="70"/><circle cx="100" cy="190" r="70"/><circle cx="200" cy="190" r="70"/>
-    <path d="M186 160 C 250 150, 300 120, 372 66" stroke="var(--accent)" stroke-width="3.2"/>
-    <path d="M190 172 C 256 164, 312 134, 380 82" stroke="var(--accent)" stroke-width="1.6" opacity=".55"/>
-    <path d="M352 62 L374 64 L370 86" stroke="var(--accent)" stroke-width="3.2"/>
-    <path d="M392 40 c 14 -10, 30 2, 22 16 c -8 12, -26 6, -20 -6" stroke="var(--accent)" stroke-width="1.8" opacity=".8"/>
-  </g>
-  <g fill="var(--ink)" font-weight="700" text-anchor="middle" font-family="Caveat, 'Segoe Script', cursive">
-    <text x="150" y="86" font-size="21">PEOPLE</text><text x="150" y="104" font-size="12" font-weight="500" fill="var(--sub)">hiring</text>
-    <text x="80" y="210" font-size="21">ASSETS</text><text x="80" y="228" font-size="12" font-weight="500" fill="var(--sub)">permits · machines</text>
-    <text x="222" y="212" font-size="21">CAPITAL</text><text x="222" y="230" font-size="12" font-weight="500" fill="var(--sub)">grants</text>
-    <text x="330" y="46" font-size="24" fill="var(--accent)" transform="rotate(-9 330 46)">EXPANSION</text>
-    <text x="150" y="292" font-size="14" font-weight="500" fill="var(--sub)">all three line up → the business grows</text>
-    <text x="398" y="130" font-size="14" font-weight="500" fill="var(--sub)" transform="rotate(-9 398 130)">we see it first</text>
-  </g>
-</svg>
-</figure>
   </div>
+</section>
+<main>
   <div class="tiles-cap"><span class="ed" id="edition">読み込み中…</span><span>収集の状態 — 毎日 02:00 CT に更新</span></div>
   <div class="tiles"><a class="hb-link" href="permits/"><div class="hb hb-tile hb-wait" data-check="permits_update_vps" title="建設許可の収集"></div></a><a class="hb-link" href="ucc/"><div class="hb hb-tile hb-wait" data-check="ucc_sync_mac" title="UCC の収集"></div></a><a class="hb-link" href="subsidies/"><div class="hb hb-tile hb-wait" data-check="subsidies_update_vps" title="政府補助金の収集"></div></a><a class="hb-link" href="hiring/"><div class="hb hb-tile hb-wait" data-check="hiring_update_vps" title="採用ページの収集"></div></a></div>
   <div class="rule"></div>
