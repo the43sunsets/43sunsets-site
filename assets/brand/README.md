@@ -8,3 +8,4 @@
 - 色: ライト 紙 #F6F7F5 / 墨 #20262E / 青 #2F5D8A、ダーク 紙 #12161C / 墨 #E8EBEE / 青 #8FB4DA
 - 設計キャンバス(3 案の比較・編集可): https://claude.ai/code/artifact/ef82b65b-7f4d-4260-b425-9d216c2f7ea5
 - 制約: 星の王子さまの要素は使わない。名前は常に「Signal by 43 Sunsets」と修飾つきで出す。
+- OG 画像(Signal 7 ページ共用): `/assets/og-signal.png` 1200×630。原稿 = `cockpit/assets/brand/og-signal.html`(B-2 ロックアップ+見出し+hero-a)。再生成は headless Chrome の `--screenshot --window-size=1200,630`(2026-09-07)
