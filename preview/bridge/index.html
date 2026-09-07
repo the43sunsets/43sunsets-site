@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>43 Sunsets — 中西部の日系製造拠点の、営業と本社報告に残る手作業を一業務ずつ</title>
+<meta name="description" content="シカゴ近郊の一人会社。日本の本社の言葉が分かり、米国の現場を回し、自分で組みます。いま提供しているのは Signal。次に動く会社を公開情報から先に見つける営業の照準器です。">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/slat-sun-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{ --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E; --line:#D9DDD9; --line-soft:#E7EAE6; --accent:#2F5D8A; --fact:#2E6E4E; --infer:#8A5A2F; --infer-bg:#F7F1E8; --gold:#E0A64B; --ember:#D9714A;
+  --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif; --sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace; }
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+/* header */
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-soft)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{display:block}
+.brand .w{font-family:var(--serif);font-weight:700;font-size:21px;letter-spacing:.06em}
+nav{display:flex;gap:28px;font-family:var(--serif);font-weight:700;font-size:15px;letter-spacing:.06em}
+nav a{text-decoration:none;color:var(--ink);padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--ink)}
+nav a.lang{color:var(--sub);font-family:var(--mono);font-weight:600;letter-spacing:.08em;font-size:13px}
+/* sunset rule = ブランドの夕日を細い線で */
+.sunrule{height:3px;background:linear-gradient(90deg,var(--gold),var(--ember) 45%,var(--accent))}
+/* block 1 */
+.herowrap{position:relative;isolation:isolate;background:var(--paper) url(/assets/hero/corp-a.webp) no-repeat right center;background-size:cover;min-height:620px;display:flex;align-items:center}
+.herowrap.b{background-image:url(/assets/hero/corp-b.webp)}
+.herowrap::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--paper) 0%,color-mix(in srgb,var(--paper) 90%,transparent) 36%,color-mix(in srgb,var(--paper) 45%,transparent) 54%,transparent 70%)}
+.hero{padding:72px 0 64px;max-width:680px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts > div{padding:26px 28px 28px;border-right:1px solid var(--line);font-size:15px;color:var(--sub)}
+.facts > div:last-child{border-right:0}
+.facts h3{font-family:var(--serif);font-size:14px;letter-spacing:.12em;color:var(--ink);margin:0 0 10px;font-weight:700}
+.facts p{margin:0}
+.kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;color:var(--sub);margin:0 0 22px}
+.kicker b{color:var(--accent);font-weight:600}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,4.2vw,50px);line-height:1.32;letter-spacing:.01em;margin:0 0 26px}
+.lead{font-size:17.5px;color:var(--ink);margin:0 0 34px;max-width:640px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:4px;text-decoration:none;font-weight:700;font-size:15px;border:1.5px solid var(--ink);transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.pri{background:var(--ink);color:var(--paper)}
+.btn.sec{background:transparent;color:var(--ink)}
+.btn small{font-weight:500;color:inherit;opacity:.7;font-size:12.5px}
+.states{margin:28px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--sub);letter-spacing:.06em}
+/* section common */
+section{padding:72px 0;border-top:1px solid var(--line)}
+.sec-h{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;margin-bottom:40px}
+.num{font-family:var(--mono);font-size:13px;letter-spacing:.14em;color:var(--sub);padding-top:10px}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(24px,2.6vw,32px);line-height:1.4;margin:0 0 12px}
+.sec-h p{margin:0;color:var(--sub);max-width:720px}
+/* block 2 evidence */
+.evi{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px}
+.ledger{border-top:3px solid var(--ink)}
+.pick{display:grid;grid-template-columns:56px minmax(0,1fr) 180px;gap:18px;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.pick:hover .t{text-decoration:underline}
+.pick .n{font-family:var(--mono);font-size:26px;font-weight:600;color:var(--ink);line-height:1}
+.pick .t{font-family:var(--serif);font-weight:700;font-size:18px;line-height:1.5;margin:0 0 6px}
+.pick .b{margin:0;color:var(--sub);font-size:14.5px}
+.pick .m{font-family:var(--mono);font-size:12px;color:var(--sub);text-align:right;letter-spacing:.04em}
+.pick .m b{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:2px 8px;font-weight:600;color:var(--fact);margin-bottom:8px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px 24px}
+.stat h3{font-family:var(--serif);font-size:14px;letter-spacing:.1em;margin:0 0 14px}
+.stat dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:10px 16px;font-size:14px}
+.stat dt{color:var(--sub)} .stat dd{margin:0;font-family:var(--mono);font-weight:600;text-align:right}
+.stat .upd{margin:16px 0 0;font-family:var(--mono);font-size:12px;color:var(--sub)}
+.stat .go{display:block;margin-top:18px;font-weight:700;text-decoration:none;color:var(--accent)}
+.note{margin:26px 0 0;padding:16px 20px;background:var(--infer-bg);border-left:3px solid var(--infer);font-size:14px;color:var(--infer)}
+/* block 3 */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:0 0 40px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px 22px 24px;position:relative}
+.step i{font-family:var(--mono);font-style:normal;font-size:12px;color:var(--sub);letter-spacing:.14em}
+.step h3{font-family:var(--serif);font-size:19px;margin:8px 0 10px}
+.step p{margin:0;font-size:14.5px;color:var(--sub)}
+.bounds{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.bounds h3{font-family:var(--serif);font-size:16px;letter-spacing:.06em;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.bounds ul{margin:0;padding:0;list-style:none;font-size:15px}
+.bounds li{padding:8px 0;border-bottom:1px solid var(--line-soft);display:flex;gap:12px}
+.bounds li::before{content:"—";color:var(--sub);flex:none}
+.bounds .no li::before{content:"×";color:var(--ember)}
+/* block 4 */
+.who{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+.who .name{font-family:var(--serif);font-size:26px;font-weight:800;margin:0 0 4px}
+.who .rom{font-family:var(--mono);font-size:13px;color:var(--sub);letter-spacing:.08em;margin:0 0 22px}
+.who ul{margin:0 0 24px;padding:0;list-style:none;font-size:15.5px}
+.who li{padding:10px 0;border-top:1px solid var(--line-soft)}
+.who li:last-child{border-bottom:1px solid var(--line-soft)}
+.contact{background:var(--ink);color:var(--paper);border-radius:6px;padding:32px 34px}
+.contact h3{font-family:var(--serif);font-size:22px;margin:0 0 12px}
+.contact p{margin:0 0 18px;color:#C9D0D8;font-size:15px}
+.contact a.mail{font-family:var(--mono);font-size:18px;color:#fff;text-decoration:none;border-bottom:1px solid #6b7683}
+.contact .sm{margin:22px 0 0;font-size:13px;color:#9AA4AE}
+footer{border-top:1px solid var(--line);padding:34px 0 48px;font-size:13.5px;color:var(--sub)}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--sub);text-decoration:none;margin-right:18px}
+footer a:hover{color:var(--ink)}
+@media (max-width:900px){ .wrap{padding:0 22px} .herowrap{min-height:520px;background-position:right -120px center} .hero{padding:48px 0 40px} .facts{grid-template-columns:1fr} .facts > div{border-right:0;border-bottom:1px solid var(--line-soft)} .sec-h{grid-template-columns:1fr;gap:8px} .evi{grid-template-columns:1fr} .steps{grid-template-columns:1fr 1fr} .who{grid-template-columns:1fr} nav{gap:18px;font-size:14px} }
+@media (max-width:600px){ .herowrap{min-height:auto;background-size:auto 46%;background-position:right bottom} .hero{padding:40px 0 200px} nav a:not(.lang):not(.keep){display:none} .steps{grid-template-columns:1fr} .bounds{grid-template-columns:1fr} .pick{grid-template-columns:44px minmax(0,1fr)} .pick .m{grid-column:2;text-align:left} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="/" aria-label="43 Sunsets">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M4 22 A13 13 0 0 1 30 22" fill="none" stroke="var(--ember)" stroke-width="2.4" stroke-linecap="round"/><path d="M9 22 A8 8 0 0 1 25 22" fill="none" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" opacity=".8"/><path d="M3 26 H31" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span class="w">43 Sunsets</span>
+    </a>
+    <nav>
+      <a href="#signal">Signal</a>
+      <a href="#pilot">進め方</a>
+      <a href="#who" class="keep">責任者</a>
+      <a href="/studio/">Studio</a>
+      <a class="lang" href="/en/" hreflang="en" lang="en">EN</a>
+    </nav>
+  </div>
+  <div class="sunrule"></div>
+</header>
+
+<main>
+<!-- 1. 誰の、どの仕事 -->
+<div class="herowrap" id="herowrap">
+  <div class="wrap">
+    <div class="hero">
+      <p class="kicker">中西部 · <b>日系製造業の米国拠点</b>のために</p>
+      <h1>営業と本社報告に残る<br>手作業を、一業務ずつなくす。</h1>
+      <p class="lead">シカゴ近郊の一人会社です。日本の本社の言葉が分かり、米国の現場を回し、自分で組みます。いま提供しているのは <b>Signal</b>。次に動く会社を公開情報から先に見つける、営業の照準器です。</p>
+      <div class="cta">
+        <a class="btn pri" href="/signal/">Signal を見る <small>無料・登録なし</small></a>
+        <a class="btn sec" href="mailto:hello@43sunsets.com?subject=30%20分の相談">30 分の相談 <small>無料</small></a>
+      </div>
+      <p class="states">IL · IN · MI · OH · WI</p>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="facts">
+    <div><h3>やること</h3><p>営業先の照準(Signal)。本社報告・営業・顧客対応に残る手作業を、一業務ずつ試作して実地で検証します。</p></div>
+    <div><h3>やらないこと</h3><p>ERP や生産制御の置き換え。24 時間の運用監視。法務・会計の判断。</p></div>
+    <div><h3>いまの状態</h3><p>Signal は毎日更新の無料公開。個社向けの試作は、同時に 1 件だけ受けています。</p></div>
+  </div>
+</div>
+
+<!-- 2. Signal の証拠 -->
+<section id="signal">
+  <div class="wrap">
+    <div class="sec-h">
+      <div class="num">01 — 証拠</div>
+      <div>
+        <h2>Signal は、中西部で次に動く会社を先に示します。</h2>
+        <p>建設許可・動産担保登記(UCC)・政府補助金・求人の公開情報を毎日調べ、「どの会社に」「何が起きていて」「なぜ今、声をかけるのか」まで示します。下は今週の実物です。</p>
+      </div>
+    </div>
+    <div class="evi">
+      <div>
+        <div class="ledger" id="picks"><p style="padding:22px 0;color:var(--sub)">今週の動きを読み込んでいます…</p></div>
+        <p class="note">公開情報で確認できた<b>事実</b>と、そこから考えられる営業の<b>ヒント</b>は分けて表示しています。誤りに気づかれたら hello@43sunsets.com へ。確認して直します。</p>
+      </div>
+      <div class="stat" id="stat">
+        <h3>いまの規模</h3>
+        <dl id="counts"><dt>読み込み中</dt><dd>…</dd></dl>
+        <p class="upd" id="upd"></p>
+        <a class="go" href="/signal/">Signal の全体を見る →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 限定パイロットと境界 -->
+<section id="pilot">
+  <div class="wrap">
+    <div class="sec-h">
+      <div class="num">02 — 進め方と境界</div>
+      <div>
+        <h2>いま受けているのは、一業務の限定パイロットです。</h2>
+        <p>「バックオフィス全般」は約束しません。一番痛い一業務を、小さく作って、使う人が実際の仕事で試してから引き渡します。</p>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step"><i>STEP 1</i><h3>診断</h3><p>無料・1 時間。困りごとと、いま使っている道具・台帳を見せていただきます。</p></div>
+      <div class="step"><i>STEP 2</i><h3>試作</h3><p>2〜4 週間で一業務を一つ。固定価格。既存の Microsoft・ERP 環境はそのまま使います。</p></div>
+      <div class="step"><i>STEP 3</i><h3>実地検証</h3><p>使う人が実際の仕事で試し、導入前の数字と比べます。作った本人だけの判定では出荷しません。</p></div>
+      <div class="step"><i>STEP 4</i><h3>引き渡し</h3><p>手順書・設定・データはすべてお客様のもの。私が不在でも引き継げる形で納めます。</p></div>
+    </div>
+    <div class="bounds">
+      <div>
+        <h3>お約束すること</h3>
+        <ul>
+          <li>パスワードはお預かりしません。触る前に控えを取り、何を変えたかを書き残します。</li>
+          <li>AI に渡すデータは事前に合意した範囲だけ。学習には使いません。</li>
+          <li>成果物の所有権と移管の手順を、納品時に文書で渡します。</li>
+          <li>返信は 1 営業日以内(月〜金・米中部時間)。</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3>対象外</h3>
+        <ul>
+          <li>ERP・生産制御システムの置き換え</li>
+          <li>24 時間の運用監視・オンコール</li>
+          <li>法務・会計・税務の判断</li>
+          <li>個人の医療情報など、規制の強いデータ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 責任者と問い合わせ -->
+<section id="who">
+  <div class="wrap">
+    <div class="sec-h">
+      <div class="num">03 — 責任者</div>
+      <div><h2>作る人と、責任を持つ人は同じです。</h2></div>
+    </div>
+    <div class="who">
+      <div>
+        <p class="name">八尾 健太郎</p>
+        <p class="rom">KENTAROH YAO · 43 Sunsets 代表 · シカゴ近郊</p>
+        <ul>
+          <li>日本で IT コンサルとして、大手保険会社のプロジェクト管理ツールを一から作り、現場に定着させた。</li>
+          <li>日米の製造業で 20 年以上、営業とオペレーションの仕組みを作ってきた。経営企画・社長補佐・GM として、インサイドセールス・カスタマーサクセス・カスタマーサービス・DX を経営側から見た。</li>
+          <li>いまはシカゴ近郊で一人、Signal を毎日動かしている。</li>
+        </ul>
+        <p style="margin:0;color:var(--sub);font-size:14.5px">これまでに公開した n8n テンプレートや AI エージェント用スキルは <a href="/studio/">Studio</a> にあります。同じ考え方で作ったものです。</p>
+      </div>
+      <div class="contact">
+        <h3>まず 30 分、話しませんか。</h3>
+        <p>困りごとを 2〜3 行で。いま使っている道具の名前があれば添えてください。売り込みはしません。合わなければそう言います。</p>
+        <a class="mail" href="mailto:hello@43sunsets.com">hello@43sunsets.com</a>
+        <p class="sm">返信は 1 営業日以内(月〜金・米中部時間)。日本語・英語どちらでも。</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div><a href="/signal/">Signal</a><a href="/studio/">Studio</a><a href="/legal/">利用規約・プライバシー</a><a href="/en/" hreflang="en">English</a></div>
+    <div>© 2026 43 Sunsets · Chicago, Illinois</div>
+  </div>
+</footer>
+
+<script>
+if(new URLSearchParams(location.search).get("hero")==="b") document.getElementById("herowrap").classList.add("b");
+(async () => {
+  const jaFace = {UCC:"動産担保登記", "建設許可":"建設許可", "補助金":"補助金", "採用":"採用"};
+  try {
+    const r = await fetch("/cockpit/data/top.json", {cache:"no-store"}); const t = await r.json();
+    const picks = (t.picks || []).slice(0, 3);
+    document.getElementById("picks").innerHTML = picks.map((p, i) => `
+      <a class="pick" href="/signal/company/?id=${encodeURIComponent(p.karte || "")}" target="_blank" rel="noopener">
+        <div class="n">${String(i + 1).padStart(2, "0")}</div>
+        <div><p class="t">${p.move || p.title || ""}</p><p class="b">${p.body || ""}</p></div>
+        <div class="m"><b>${jaFace[p.face] || p.face || ""}</b><br>${p.date || ""}</div>
+      </a>`).join("") || `<p style="padding:22px 0;color:var(--sub)">今週の動きはまだありません。</p>`;
+    const c = t.counts || {};
+    const rows = [["設備投資シグナル(建設許可)", c.permits_targets], ["うち直近 90 日", c.permits_new90], ["動産担保登記(UCC)の読み", c.ucc_read], ["UCC で見えた会社", c.ucc_companies]].filter(x => x[1] != null);
+    document.getElementById("counts").innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd>${Number(v).toLocaleString("ja-JP")} 件</dd>`).join("") || "<dt>集計</dt><dd>—</dd>";
+    document.getElementById("upd").textContent = "更新 " + (t.updated_ct || "") + (t.next_update_ct ? " · 次回 " + t.next_update_ct : "");
+  } catch (e) {
+    document.getElementById("picks").innerHTML = `<p style="padding:22px 0;color:var(--sub)">いま読み込めません。<a href="/signal/">Signal 本体</a>をご覧ください。</p>`;
+  }
+})();
+</script>
+</body>
+</html>
