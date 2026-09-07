@@ -1,8 +1,8 @@
 {
-"generated_at": "2026-09-06T01:20:55+00:00",
-"updated_ct": "2026-09-05",
-"week_start": "2026-08-31",
-"next_update_ct": "2026-09-07",
+"generated_at": "2026-09-07T06:50:58+00:00",
+"updated_ct": "2026-09-07",
+"week_start": "2026-09-07",
+"next_update_ct": "2026-09-14",
 "window_days": 90,
 "rule": "直近 90 日の記録から、目立つ投資の動きを 5 つ(建屋と設備の両方/日系/大型の建設/続けて機械を入れた会社/自動化つきの導入)。同じ会社は 1 回。",
 "intro": "中西部の工場の目立つ投資。毎週月曜に入れ替え。",
@@ -20,11 +20,23 @@
 "company": "Hidaka USA, Inc."
 },
 {
+"kind": "jp",
+"tag": "日系",
+"title": "FANUC ROBOTICS CORPORATION(日系)が 工場を増強",
+"body": "Rochester Hills。8月に建設許可(工事費 $90k)。",
+"move": "FANUC ROBOTICS CORPORATION(日系)が 工場を増強",
+"link": "permits/",
+"face": "許可",
+"date": "2026-08-31",
+"karte": "C-3703",
+"company": "FANUC ROBOTICS CORPORATION"
+},
+{
 "kind": "permit",
 "tag": "大型",
-"title": "OHIOHEALTH CORP が 研究・医療施設を建設(工事費 $115.0M)",
-"body": "Columbus。8月に建設許可。OhioHealth 本部キャンパスに 467,645 SQFT の増築(構造)$115M。",
-"move": "OHIOHEALTH CORP が 研究・医療施設を建設(工事費 $115.0M)",
+"title": "OHIOHEALTH CORP が 医療施設を建設(工事費 $115.0M)",
+"body": "Columbus。8月に建設許可。OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)で 467,645 SQFT の増築工事 $115M。",
+"move": "OHIOHEALTH CORP が 医療施設を建設(工事費 $115.0M)",
 "link": "permits/",
 "face": "許可",
 "date": "2026-08-21",
@@ -34,14 +46,14 @@
 {
 "kind": "permit",
 "tag": "大型",
-"title": "KEELEY CONSTRUCTION INC が 倉庫を新設(工事費 $15.0M)",
-"body": "Woodridge。8月に建設許可。Woodridge 11231 Katherines Xing に新築の商業倉庫 $15M。",
-"move": "KEELEY CONSTRUCTION INC が 倉庫を新設(工事費 $15.0M)",
+"title": "GREEN OAKS OF WALNUT CREEK が 医療施設を建設(工事費 $19.8M)",
+"body": "Columbus。8月に建設許可。Columbus 4000 Westerville Rd に病院・施設系新築 96,351 SF $19.8M。",
+"move": "GREEN OAKS OF WALNUT CREEK が 医療施設を建設(工事費 $19.8M)",
 "link": "permits/",
 "face": "許可",
-"date": "2026-08-03",
-"karte": "C-828",
-"company": "KEELEY CONSTRUCTION INC"
+"date": "2026-08-11",
+"karte": "C-3754",
+"company": "GREEN OAKS OF WALNUT CREEK"
 },
 {
 "kind": "multi",
@@ -54,43 +66,32 @@
 "date": "2026-07-20",
 "karte": "C-3336",
 "company": "FAXON MACHINING, LLC"
-},
-{
-"kind": "auto",
-"tag": "自動化",
-"title": "Hynes Industries, Inc. が自動化つきのファイバーレーザー切断機[パイプ・profile]を導入",
-"body": "Youngstown, OH。8月に登記。搬入出やロボットまで含めた導入 = 省人化と量産化の動き。",
-"move": "Hynes Industries, Inc. が自動化つきのファイバーレーザー切断機[パイプ・profile]を導入",
-"link": "ucc/",
-"face": "UCC",
-"date": "2026-08-19",
-"karte": "C-3295",
-"company": "Hynes Industries, Inc."
 }
 ],
 "counts": {
-"permits_targets": 75,
-"permits_new90": 49,
+"permits_targets": 113,
+"permits_new90": 81,
 "ucc_read": 736,
 "ucc_new90": 19,
 "ucc_companies": 393,
-"jp_companies": 3
+"jp_companies": 4
 },
 "permits_meta": {
-"generated_at": "2026-09-06T01:20:51+00:00",
+"generated_at": "2026-09-07T02:17:42+00:00",
 "funnel": {
-"signals_total": 35732,
-"candidates": 575,
-"enriched": 26668,
-"targets": 75,
-"unclassified": 26593,
-"unevaluated": 9064,
+"signals_total": 46068,
+"candidates": 686,
+"enriched": 29349,
+"targets": 113,
+"unclassified": 29236,
+"unevaluated": 16719,
 "by_category": {
 "データセンター建設": 7,
-"未分類": 26593,
-"物流・倉庫の新設": 15,
-"研究・医療・航空宇宙": 35,
-"製造能力の増強": 18
+"医療施設": 45,
+"未分類": 29236,
+"物流・倉庫の新設": 17,
+"研究・ラボ施設": 15,
+"製造能力の増強": 29
 }
 },
 "states": [
@@ -102,7 +103,7 @@
 ]
 },
 "ucc_meta": {
-"generated_at": "2026-09-06T01:20:54+00:00",
+"generated_at": "2026-09-06T21:00:33+00:00",
 "funnel": {
 "filings_total": 752,
 "with_collateral": 737,
@@ -116,10 +117,10 @@
 }
 },
 "catalog": {
-"equipment_rows": 137,
-"equipment_hits": 674,
-"equipment_misses": 104,
-"companies_checked": 255,
+"equipment_rows": 199,
+"equipment_hits": 755,
+"equipment_misses": 23,
+"companies_checked": 449,
 "companies_total": 393
 }
 }
