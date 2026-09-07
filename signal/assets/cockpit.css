@@ -178,3 +178,7 @@ body .karte-top h2, body .kprof h2{ font-size:24px; }
 .card .head{ flex-wrap:nowrap; }
 .card h3{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; }
 .card h3 .companylink{ white-space:nowrap; }
+/* 9/7 CEO: Signal から会社サイト(/)へ戻るリンク */
+.hdr-right .corp, .kbar .corp{ font-family:var(--serif, "Shippori Mincho", serif); font-weight:700; font-size:13.5px; letter-spacing:.06em; color:var(--sub); text-decoration:none; margin-right:8px; white-space:nowrap; }
+.hdr-right .corp:hover, .kbar .corp:hover{ color:var(--ink); }
+@media (max-width:600px){ .hdr-right .corp{ display:none; } }

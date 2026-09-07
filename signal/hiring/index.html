@@ -76,7 +76,7 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
   aside > *:not(.filt-toggle){display:none;} aside.open > *{display:block;} aside.open > .filt-toggle{display:flex;} aside.open > label.fitem{display:flex;} aside{padding:12px 14px 4px;} }
 @media (max-width:760px){ .app{grid-template-columns:1fr;} aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);} }
 </style>
-<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260907x">
+<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260907y">
 <script src="/signal/assets/favi.js?v=20260907t"></script>
 <script src="/signal/assets/nav.js?v=20260907n" defer></script>
 <script src="/signal/assets/cards.js?v=20260907q"></script>
@@ -85,7 +85,7 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
 <header class="site-head">
   <a class="logo" href="/signal/" aria-label="Signal by 43 Sunsets"><svg class="lockup" viewBox="0 8 300 62" role="img" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M14 40 A22 22 0 0 1 58 40" stroke="var(--accent)"/><path d="M23 40 A13 13 0 0 1 49 40" stroke="var(--accent)" opacity=".62"/><path d="M31 40 A5 5 0 0 1 41 40" stroke="var(--accent)" opacity=".38"/></g><path d="M10 46 H172" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" fill="none"/><text x="70" y="41" font-family="Shippori Mincho, serif" font-weight="700" font-size="36" fill="var(--ink)">Signal</text><text x="172" y="64" text-anchor="end" font-family="Shippori Mincho, serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="var(--sub)">by 43 Sunsets</text></svg></a>
   <nav class="cnav" aria-label="ページ"><a href="/signal/">トップ</a><a href="/signal/permits/">建設許可</a><a href="/signal/ucc/">UCC</a><a href="/signal/subsidies/">補助金</a><a href="/signal/hiring/" aria-current="page">企業採用状況</a><a href="/signal/macro/">景気の状況</a><a href="/signal/freshness/">データの範囲と鮮度</a><a href="/signal/solutions/">ソリューション</a></nav>
-  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
+  <div class="hdr-right"><a class="corp" href="/" title="43 Sunsets(会社サイト)">43 Sunsets ↗</a><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
 (function(){ const K="cockpit-theme"; let t=null; try{t=localStorage.getItem(K);}catch(e){} if(t!=="dark"&&t!=="light") t="light";
@@ -123,7 +123,7 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
   </details>
 </main>
 </div>
-<footer><b>Signal by 43 Sunsets(BETA)</b> — 公的記録と各社の公開情報から中西部の設備投資シグナルを検出する無料の実験的サービスです。出典: 各社の採用ページ(ATS の公開 API)。事実欄は求人の題名の逐語、型は規則による割り当てで分離表示しています。情報の正確性・完全性を保証するものではなく、投資・法務・雇用等の助言でもありません。ご意見・掲載に関するご連絡は <span class="mono">hello@43sunsets.com</span> まで。© 43 Sunsets</footer>
+<footer><b>Signal by 43 Sunsets(BETA)</b> — 公的記録と各社の公開情報から中西部の設備投資シグナルを検出する無料の実験的サービスです。出典: 各社の採用ページ(ATS の公開 API)。事実欄は求人の題名の逐語、型は規則による割り当てで分離表示しています。情報の正確性・完全性を保証するものではなく、投資・法務・雇用等の助言でもありません。ご意見・掲載に関するご連絡は <span class="mono">hello@43sunsets.com</span> まで。© <a href="/" style="color:inherit">43 Sunsets</a></footer>
 <script>
 let SIGNALS=[], META=null;
 const STATES=["IL","IN","MI","OH","WI"]; const TYPES=["新設備の立ち上げ","一気に増員","新拠点の開設","じわり増員"]; const TYPE_JA={"立ち上げ職種":"新設備の立ち上げ","大量採用":"一気に増員","新拠点":"新拠点の開設","増勢":"じわり増員"}; const ROLES=["生産","設備保全","生産技術","品質","物流"];
