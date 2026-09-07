@@ -121,8 +121,8 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
   <div class="lede-wrap">
   <div class="lede">
     <h1>中西部で、次に動く会社が先に分かる。</h1>
-    <p>イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの製造業について、投資・採用・補助金の兆しを公的記録から毎日拾い、会いに行くべき会社と、その理由を並べます。今は建設許可・動産担保登記(UCC)・政府補助金(連邦と IL・IN の州)から。事実と推論は分けています。</p>
-    <div class="dateline"><span class="ed" id="edition">読み込み中…</span><div class="pills"><a class="hb-link" href="permits/" title="面を開く"><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(毎日 02:00 CT)"></div></a><a class="hb-link" href="ucc/" title="面を開く"><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div></a><a class="hb-link" href="subsidies/" title="面を開く"><div class="hb hb-wait" data-check="subsidies_update_vps" title="政府補助金の収集(毎日 02:00 CT・USAspending)"></div></a></div></div>
+    <p>イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの製造業について、投資・採用・補助金の兆しを公的記録から毎日拾い、会いに行くべき会社と、その理由を並べます。建設許可・動産担保登記(UCC)・政府補助金(連邦と IL・IN の州)・採用の 4 面。事実と推論は分けています。</p>
+    <div class="dateline"><span class="ed" id="edition">読み込み中…</span><div class="pills"><a class="hb-link" href="permits/" title="面を開く"><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(毎日 02:00 CT)"></div></a><a class="hb-link" href="ucc/" title="面を開く"><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div></a><a class="hb-link" href="subsidies/" title="面を開く"><div class="hb hb-wait" data-check="subsidies_update_vps" title="政府補助金の収集(毎日 02:00 CT・USAspending)"></div></a><a class="hb-link" href="hiring/" title="面を開く"><div class="hb hb-wait" data-check="hiring_update_vps" title="採用ページの収集(毎日 02:00 CT・各社の ATS)"></div></a></div></div>
   </div>
   <figure class="sigmap" aria-label="People, assets and capital line up, and the business expands. We see it first.">
 <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img">
@@ -153,12 +153,12 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
   <div id="ai"></div>
   <div class="macro" id="macro"></div>
   <div class="rule"></div>
-  <div class="sec"><h2>検出面</h2><span>絞り込み・CSV・企業カルテはそれぞれの面で。開発中の 1 面は準備ができ次第。</span></div>
+  <div class="sec"><h2>検出面</h2><span>絞り込み・CSV・企業カルテはそれぞれの面で。4 面が揃いました(採用は観測開始直後)。</span></div>
   <div class="faces">
     <a class="face" href="permits/"><div class="top"><h3>建設許可</h3><span class="upd" id="permits-upd"></span></div><div class="nums" id="permits-nums">読み込み中…</div><p>新築・増築・改修の許可から、工場の増強・倉庫・データセンター・医療施設・研究ラボの 5 分類を検出。投資主体まで名寄せ。</p><div class="go"><span>面を開く</span><svg viewBox="0 0 20 20" width="16" height="16"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></a>
     <a class="face" href="ucc/"><div class="top"><h3>動産担保登記(UCC)</h3><span class="upd" id="ucc-upd"></span></div><div class="nums" id="ucc-nums">読み込み中…</div><p>機械を買った・リースした登記から、設備の種類・メーカー・型式まで。業種は自社サイト、日系は名簿で確定。</p><div class="go"><span>面を開く</span><svg viewBox="0 0 20 20" width="16" height="16"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></a>
     <a class="face" href="subsidies/"><div class="top"><h3>政府補助金</h3><span class="upd" id="subsidies-upd"></span></div><div class="nums" id="subsidies-nums">読み込み中…</div><p>連邦の助成・融資(USAspending)から、設備投資に関わる案件を段階・出し手・投資の種類・規模で。州・郡の誘致インセンティブは順次追加。</p><div class="go"><span>面を開く</span><svg viewBox="0 0 20 20" width="16" height="16"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></a>
-    <div class="face soon"><div class="top"><h3>採用</h3><span class="upd">Coming soon</span></div><div class="nums">開発中</div><p>製造職・設備保全・生産技術の求人の増え方から、稼働と増産の兆しを捉えます。</p><div class="go"><span>準備中</span></div></div>
+    <a class="face" href="hiring/"><div class="top"><h3>採用</h3><span class="upd" id="hiring-upd"></span></div><div class="nums" id="hiring-nums">読み込み中…</div><p>各社の採用ページから製造職(生産・設備保全・生産技術・品質・物流)の求人を毎日数え、立ち上げ職種・大量採用・新拠点・増勢の兆しを検出。</p><div class="go"><span>面を開く</span><svg viewBox="0 0 20 20" width="16" height="16"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></a>
   </div>
 
   <section class="cta" id="solutions">
@@ -208,6 +208,8 @@ async function boot(){
     document.getElementById("subsidies-nums").textContent = `保存 ${sd.meta.n.toLocaleString()} 件・設備投資に関わる案件 ${major} 件・連邦(州・市郡は順次)`;
     document.getElementById("subsidies-upd").textContent = "更新 " + fmtCT(sd.meta.generated_at, true);
   }catch(e){ document.getElementById("subsidies-nums").textContent = "補助金の面を読み込めませんでした"; }
+  try{ const hd = await get("data/hiring.json"); document.getElementById("hiring-nums").textContent = `会社 ${hd.meta.companies} 社・拠点カード ${hd.meta.n} 件・採用ページ ${hd.meta.sources[0].n_boards} 面(観測開始 ${hd.meta.observed_since||"—"})`; document.getElementById("hiring-upd").textContent = "更新 " + fmtCT(hd.meta.generated_at, true);
+  }catch(e){ document.getElementById("hiring-nums").textContent = "採用の面を読み込めませんでした"; }
   try{ const m = await get("data/macro.json");
     if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><span class="badge">AI のまとめ</span><div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は下の 10 本のみ</div></div></div>`;
     document.getElementById("macro").innerHTML = m.tiles.map(tileHtml).join(""); }
@@ -215,7 +217,7 @@ async function boot(){
 }
 boot();
 </script>
-<script src="/cockpit/assets/health.js?v=20260907a" defer></script>
+<script src="/cockpit/assets/health.js?v=20260907b" defer></script>
 <script src="/cockpit/assets/hit.js?v=20260905e" defer></script>
 </body>
 </html>
