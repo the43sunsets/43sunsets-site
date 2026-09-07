@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>景況 — 連銀の公開データ 10 本 | Signal by 43 Sunsets</title>
+<title>景気の状況 — 連銀の公開データ 10 本 | Signal by 43 Sunsets</title>
 <meta name="description" content="中西部の製造業が設備投資に前向きかどうか。セントルイス連銀 FRED の公開データ 10 本を毎日更新し、AI のまとめを添えます。">
 <link rel="canonical" href="https://43sunsets.com/cockpit/macro/">
 <meta name="robots" content="noindex,nofollow">
@@ -88,17 +88,13 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 .cta .mail{font-family:var(--mono); font-size:12.5px; color:var(--sub);}
 @media (max-width:820px){ .cta{grid-template-columns:1fr; padding:20px 18px;} }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907d">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907e">
 <style>body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); } @media (max-width:900px){ body .macro{ grid-template-columns:repeat(2,minmax(0,1fr)); } } .lede-m h1{ margin:0 0 8px; font-family:var(--serif); font-size:28px; } .lede-m p{ margin:0; color:var(--ink-2); max-width:62ch; }</style>
 </head>
 <body>
-<header>
-  <a class="brand" href="/cockpit/" aria-label="Signal by 43 Sunsets">
-    <svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg>
-    <span class="bword">Signal</span><span class="bby">by 43 Sunsets</span>
-    <span class="btag">Turn market activity into action.</span>
-  </a>
-  <nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">採用</a><a href="/cockpit/macro/" aria-current="page">景況</a><a href="/cockpit/freshness/">鮮度と網羅</a><a class="sol" href="/cockpit/solutions/">ソリューション</a></nav>
+<header class="site-head">
+  <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg><span class="bword">Signal</span><span class="bby">by 43 Sunsets</span></a>
+  <nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/" aria-current="page">景気の状況</a><a href="/cockpit/freshness/">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
   <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
@@ -117,7 +113,7 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 })();
 </script>
 <main>
-  <div class="lede-m"><h1>景況</h1><p>中西部の製造業が設備投資に前向きかどうか。セントルイス連銀 FRED の公開データ 10 本を毎日更新し、AI が 10 本だけを根拠にまとめます。各板の「↗」が出典です。</p></div>
+  <div class="lede-m"><h1>景気の状況</h1><p>中西部の製造業が設備投資に前向きかどうか。セントルイス連銀 FRED の公開データ 10 本を毎日更新し、AI が 10 本だけを根拠にまとめます。各板の「↗」が出典です。</p></div>
   <div class="rule"></div>
   <div class="sec"><h2>AI のまとめ</h2><span>根拠は下の 10 本のみ</span></div>
   <div id="ai"></div>

@@ -59,19 +59,13 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 @media (max-width:900px){ .hero .in{grid-template-columns:1fr; padding:96px 24px 40px;} .hero h1{font-size:32px;} header{padding:12px 20px;} main{padding:0 24px 48px;} .grid3,.proof,.steps{grid-template-columns:repeat(2,minmax(0,1fr));} .ma,.grid2{grid-template-columns:1fr;} .band{margin:28px -24px; padding:36px 24px;} .band .in{grid-template-columns:1fr;} footer{padding:16px 24px 28px;} }
 @media (max-width:600px){ .grid3,.proof,.steps,.stat{grid-template-columns:1fr;} .hero h1{font-size:27px;} }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907d">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907e">
 </head>
 <body>
-<header>
-  <div class="kicker">
-    <a class="brand" href="/cockpit/" aria-label="Signal by 43 Sunsets">
-      <svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="#8FB4DA" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="#8FB4DA" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="#8FB4DA" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="#F6F7F5" stroke-width="3.2" stroke-linecap="round"/></svg>
-      <span class="bword">Signal</span><span class="bby">by 43 Sunsets</span>
-      <span class="btag">Turn market activity into action.</span>
-    </a><nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">採用</a><a href="/cockpit/macro/">景況</a><a href="/cockpit/freshness/">鮮度と網羅</a><a class="sol" href="/cockpit/solutions/" aria-current="page">ソリューション</a></nav>
-    <a class="top" href="/cockpit/">← トップへ</a>
-  </div>
-  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button></div>
+<header class="site-head">
+  <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg><span class="bword">Signal</span><span class="bby">by 43 Sunsets</span></a>
+  <nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの鮮度と網羅</a><a href="/cockpit/solutions/" aria-current="page">ソリューション</a></nav>
+  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
 /* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */

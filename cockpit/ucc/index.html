@@ -214,17 +214,14 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   aside{padding:12px 14px 4px;}
 }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907d">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907e">
 </head>
 <body>
 
-<header>
-  <div class="masthead">
-    <div class="kicker"><a class="brandlink" href="/cockpit/"><svg class="kmark" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent, var(--ai-accent))" stroke-width="4" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent, var(--ai-accent))" stroke-width="4" stroke-linecap="round" opacity=".62"/><path d="M4 50 H60" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>SIGNAL</a><span class="cock">by <a class="brandlink" href="https://43sunsets.com/">43 SUNSETS</a></span><nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/" aria-current="page">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">採用</a><a href="/cockpit/macro/">景況</a><a href="/cockpit/freshness/">鮮度と網羅</a><a class="sol" href="/cockpit/solutions/">ソリューション</a></nav></div>
-    <h1>動産担保登記(UCC)</h1>
-    <div class="meta" id="metaline">UCC 登記シグナル(オハイオ先行)— データ読み込み中…</div>
-  </div>
-  <div class="hdr-right"><div class="hb hb-wait" id="healthbar" data-check="ucc_sync_mac"></div><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><div class="beta">BETA</div></div>
+<header class="site-head">
+  <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg><span class="bword">Signal</span><span class="bby">by 43 Sunsets</span></a>
+  <nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/" aria-current="page">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
+  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
 /* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
@@ -256,6 +253,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 </aside>
 
 <main>
+  <div class="facehead"><div class="meta" id="metaline">UCC 登記シグナル(オハイオ先行)— データ読み込み中…</div><div class="hb hb-wait" id="healthbar" data-check="ucc_sync_mac"></div></div>
   <div class="toolbar">
     <div class="left">
       <span class="hitcount"><span class="num" id="hitnum">0</span> 件</span>
@@ -415,7 +413,7 @@ boot();
 (function(){ const a=document.querySelector("aside"); const b=document.getElementById("filttoggle"); if(!a||!b) return;
   b.addEventListener("click", ()=>{ a.classList.toggle("open"); b.textContent = a.classList.contains("open") ? "絞り込みを閉じる ▴" : "絞り込み ▾"; }); })();
 </script>
-<script src="/cockpit/assets/health.js?v=20260907d" defer></script>
+<script src="/cockpit/assets/health.js?v=20260907e" defer></script>
 <script src="/cockpit/assets/hit.js?v=20260905e" defer></script>
 </body>
 </html>
