@@ -207,6 +207,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   aside > *:not(.filt-toggle){display:none;} aside.open > *{display:block;} aside.open > .filt-toggle{display:flex;} aside.open > label.fitem{display:flex;}
   aside{padding:12px 14px 4px;}
 }
+.tl-item.grant::before{background:var(--ai-accent);}
 </style>
 <style>
 /* 企業カルテ専用(9/5 CEO 裁定: 4 面が同じカルテを参照) */
@@ -282,10 +283,19 @@ function uccItem(u){
     ${u.secured_party ? `<div class="kfact"><span class="badge-fact">事実</span>担保権者: ${esc(u.secured_party)}${u.lapse ? ` · 失効 ${esc(u.lapse)}` : ""}</div>` : ""}
     <div class="kref">${esc([u.ref, u.id].filter(Boolean).join(" · "))}</div></div>`;
 }
+function grantItem(g){
+  const cat = `<span class="kchip">${esc(g.category)}${g.confidence === "low" ? "・低確度" : ""}</span>`;
+  const prov = g.provenance && g.provenance.policy === "rule" ? `<span class="kchip" title="AI 読み前の規則による仮置き">規則</span>` : "";
+  return `<div class="kitem" id="${esc(g.id)}"><div class="khead"><span class="kdate">${esc(g.date || "")}</span><span class="kloc">${esc(g.kind_label)}・${esc(g.issuer_level)}</span><span>${esc(g.issuer || "")}</span>${cat}${prov}<span class="kchip role">${esc(g.role_label)}</span>${g.amount != null ? `<span class="kchip">${g.kind === "grant" ? "交付額" : "融資額"} ${usd(g.amount)}</span>` : ""}</div>
+    ${g.summary ? `<div class="ksum">${esc(g.summary)}</div>` : ""}${g.infer ? `<div class="ksum"><span class="badge-infer">推論</span>${esc(g.infer)}</div>` : ""}
+    ${g.verbatim ? `<div class="kfact"><span class="badge-fact">事実</span>${esc(g.verbatim)}</div>` : ""}
+    <div class="kref">${esc([g.program_name || (g.program ? "CFDA " + g.program : null), g.start ? "履行 " + g.start + "〜" + (g.end || "") : null, g.id].filter(Boolean).join(" · "))}${g.url ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener">USAspending ↗</a>` : ""}</div></div>`;
+}
 function render(c){
   document.title = `${c.name} — 企業カルテ | Signal by 43 Sunsets`;
   const f = c.faces; const jp = c.jp ? `<span class="chip jp">日系(${c.jp_basis === "roster" ? "名簿" : "人の確認"})</span>` : (c.jp_candidate ? `<span class="chip">日系?(AI 候補)</span>` : "");
-  document.getElementById("metaline").innerHTML = `${esc(c.name)} · 建設許可 <span class="mono">${f.permits.count}</span> 件 · UCC 登記 <span class="mono">${f.ucc.count}</span> 件 · 書き出し <span class="mono">${esc((c.generated_at || "").slice(0,10))}</span>`;
+  const gcount = (f.grants && f.grants.count) || 0; const gitems = (f.grants && f.grants.items) || [];
+  document.getElementById("metaline").innerHTML = `${esc(c.name)} · 建設許可 <span class="mono">${f.permits.count}</span> 件 · UCC 登記 <span class="mono">${f.ucc.count}</span> 件 · 補助金 <span class="mono">${gcount}</span> 件 · 書き出し <span class="mono">${esc((c.generated_at || "").slice(0,10))}</span>`;
   const back = document.referrer && /43sunsets\.com\/cockpit\//.test(document.referrer) ? `<a href="javascript:history.back()">‹ 戻る</a>` : "";
   document.getElementById("main").innerHTML = `
     <div class="kprof"><div><div class="kicker">SIGNAL by 43 SUNSETS — COMPANY KARTE(BETA)</div><h2>${esc(c.name)}</h2>
@@ -296,13 +306,13 @@ function render(c){
       ${faceTile("#permits", "建設許可", f.permits.count + " 件", f.permits.count ? (f.permits.value_total ? "工事費 合計 " + usd(f.permits.value_total) : "最新 " + (f.permits.latest || "")) : "当社の網に無い", false)}
       ${faceTile("#ucc", "UCC 登記", f.ucc.count + " 件", f.ucc.count ? "機械 " + f.ucc.machines + " 台 · " + (f.ucc.makers || []).join("・") : "当社の網に無い", false)}
       ${faceTile("#hiring", "採用", "", "開発中", true)}
-      ${faceTile("#grants", "政府補助金", "", "開発中", true)}
+      ${faceTile("#grants", "政府補助金", gcount + " 件", gcount ? (f.grants.amount_total ? "交付・融資 合計 " + usd(f.grants.amount_total) : "最新 " + (f.grants.latest || "")) : "連邦の網に無い(州・市郡は順次)", false)}
     </div>
     <section class="ksec" id="permits"><h3>建設許可(${f.permits.count})</h3>${f.permits.items.length ? f.permits.items.map(permitItem).join("") : `<div class="kempty">この会社の建設許可は当社の網に無い(未収集の自治体か、名義が別会社)。</div>`}</section>
     <section class="ksec" id="ucc"><h3>UCC 登記(${f.ucc.count})</h3>${f.ucc.items.length ? f.ucc.items.map(uccItem).join("") : `<div class="kempty">この会社の UCC 登記は当社の網に無い(オハイオ先行・担保権者名で検索した範囲)。</div>`}</section>
     <section class="ksec" id="hiring"><h3>採用</h3><div class="kempty">${esc(f.hiring.note)}</div></section>
-    <section class="ksec" id="grants"><h3>政府補助金</h3><div class="kempty">${esc(f.grants.note)}</div></section>
-    <section class="ksec"><h3>時系列(4 面を合流)</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : "permit"}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
+    <section class="ksec" id="grants"><h3>政府補助金(${gcount})</h3>${gitems.length ? gitems.map(grantItem).join("") : `<div class="kempty">${esc((f.grants && f.grants.note) || "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。")}</div>`}</section>
+    <section class="ksec"><h3>時系列(4 面を合流)</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : (t.face === "grants" ? "grant" : "permit")}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
     <div class="knote">${esc(c.note)}</div>`;
 }
 async function boot(){
