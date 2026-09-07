@@ -31,9 +31,12 @@
     var n = String(name||"").trim();
     for (var i = 0; i < 2; i++) n = n.replace(SUFFIX, "").replace(/[,\s]+$/, "");   // "XYZ HOLDINGS, LLC" → "XYZ HOLDINGS"・二重の法人格にも対応
     if (n && n === n.toUpperCase() && /[A-Z]/.test(n)) {
+      var first = true;
       n = n.split(/(\s+|-|\/)/).map(function(w){
         if (!/[A-Z]/.test(w)) return w;
-        if (/^(OF|AND|THE|FOR|DE|LA|DU|DEL|VON|VAN|&)$/.test(w)) return w.toLowerCase();   // 接続語は小文字
+        var isFirst = first; first = false;
+        if (!isFirst && /^(OF|AND|THE|FOR|DE|LA|DU|DEL|VON|VAN|&)$/.test(w)) return w.toLowerCase();   // 接続語は小文字(先頭は除く)
+        if (isFirst && /^(THE|OF|AND|FOR)$/.test(w)) return w[0] + w.slice(1).toLowerCase();
         if (w.replace(/[^A-Z]/g,"").length <= 3) return w;            // USA・GI・TC・OH などは大文字のまま
         if (/^(MC|MAC)[A-Z]/.test(w)) return w[0] + w.slice(1,2).toLowerCase() + w.slice(2,3) + w.slice(3).toLowerCase();   // MCMASTER → McMaster
         return w[0] + w.slice(1).toLowerCase();
