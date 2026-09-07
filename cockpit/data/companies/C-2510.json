@@ -14,8 +14,8 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 0,
+"count": 3,
+"value_total": 6700000.0,
 "latest": "2026-09-02",
 "items": [
 {
@@ -39,6 +39,30 @@
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-17432",
+"date": "2026-08-13",
+"applied": "2025-12-23",
+"state": "IL",
+"jurisdiction": "Elmhurst",
+"address": "107 N YORK ST ELMHURST IL 60126",
+"permit_no": "BLDC-007104-2025",
+"permit_type": "Building New Construction - Commercial",
+"value": 6700000.0,
+"category": "医療施設",
+"confidence": "high",
+"summary": "Elmhurst 107 N York St に地上3階・約24,000 sfの医療オフィス building(Core/Shell)を新築 $6.7M。第3ホップ情報では Rush University Medical Center の医療オフィス棟(HFSRB 26-007・20,764 GSF・$27.2M・2028年夏完成予定)とされる。",
+"infer": "本許可額 $6.7M はコア&シェル段階のみで、テナント内装(医療機器・画像診断・診察室設備等)の別許可が後続する可能性(推論)。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Core/Shell - Permit\nThree story medical office building of approximately 24,000 sf.\nPermit Terms\n**PERMITS ARE GOOD FOR 18 MONTHS FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 90DAYS. AFTE",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012w1NAk87Fitgz4HzsVSvJH",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 },
@@ -95,6 +119,13 @@
 "summary": "Rush University Medical Center のエレベーター(#83, 3000LB, 10階建て)のホイストケーブル交換許可、金額 $0。"
 },
 {
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Elmhurst): 医療施設",
+"ref": "S-17432",
+"summary": "Elmhurst 107 N York St に地上3階・約24,000 sfの医療オフィス building(Core/Shell)を新築 $6.7M。第3ホップ情報では Rush University Medical Center の医療オフィス棟(HFSRB 26-007・20,764 GSF・$27.2M・2028年夏完成予定)とされる。"
+},
+{
 "date": "2026-08-03",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -102,6 +133,6 @@
 "summary": "Chicago 1520 W Harrison St(Rush University Medical Center)で11階建・3500lb旅客用エレベーター#301の巻上ベルトを交換。"
 }
 ],
-"generated_at": "2026-09-07T15:13:05+00:00",
+"generated_at": "2026-09-07T17:49:16+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
