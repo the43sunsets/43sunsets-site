@@ -98,6 +98,9 @@ main{padding:18px 28px 60px; min-width:0;}
 .parties{font-size:11.5px; color:var(--sub); margin:2px 0 0; line-height:1.5;}
 .card .loc{font-size:12px; color:var(--sub);}
 .card .summary{font-size:13px;}
+.card .meta{font-size:12px; color:var(--sub); display:flex; flex-wrap:wrap; gap:2px 10px; align-items:baseline;} .card .meta .mono{color:var(--ink);}
+/* 9/7 CEO: 重複を畳む — 初見は「誰が・何を・いつ・推論」、担保権者・要約・登記番号は details へ */
+.card details.more{font-size:12.5px; margin-top:2px;} .card details.more>summary{cursor:pointer; color:var(--sub); font-size:11.5px; letter-spacing:.04em; list-style:none; user-select:none;} .card details.more>summary::-webkit-details-marker{display:none;} .card details.more>summary::before{content:"▸ "; color:var(--sub);} .card details.more[open]>summary::before{content:"▾ ";} .card details.more>summary:hover{color:var(--ink);} .card details.more>*+*{margin-top:6px;} .card details.more .parties{margin:0;}
 .fact{border-left:3px solid var(--fact); background:var(--fact-bg); padding:7px 11px; border-radius:0 4px 4px 0; font-size:12.5px;}
 .fact .flabel{font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--fact); display:block; margin-bottom:1px;}
 .fact .verbatim{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; display:block; margin-top:3px; word-break:break-word; color:var(--sub);}
@@ -326,7 +329,7 @@ function eqHtml(eq){
     const t = e.type ? ` — ${esc(e.type)}${e.process ? "(" + esc(e.process) + ")" : ""}${e.automation ? "・自動化" : ""}` : "";
     const src = e.source_url ? `<span class="src"><a href="${esc(e.source_url)}" target="_blank" rel="noopener">出典</a>${e.checked_at ? " " + e.checked_at : ""}${e.confidence==="low" ? "・低確信" : ""}${e.verified ? "・確認済" : ""}</span>` : (e.checked_at ? `<span class="src">${e.checked_at}・出典なし</span>` : "");
     return `<li><span class="dom">${esc(e.domain)}</span>${bits.join(" ")}${t}${src}</li>`; }).join("");
-  return `<div class="fact" style="margin-top:6px"><span class="flabel">設備(担保物欄の逐語+カタログ)</span><ul class="eqlist">${items}</ul></div>`;
+  return `<div class="fact" style="margin-top:6px"><span class="flabel" title="担保物欄の逐語+設備カタログ">設備</span><ul class="eqlist">${items}</ul></div>`;
 }
 function cardHtml(s){
   const jp  = s.jp ? `<span class="chip jp" title="${s.jp_basis==="roster" ? "総領事館 2025 名簿で確定" : "人の確認で確定"}">日系</span>` : (s.jp_candidate ? `<span class="chip" title="AI 判定のみ(名簿・人の確認なし)= 候補">日系?</span>` : ""); const nw = s.new ? `<span class="chip newchip" title="${META ? META.new_rule : ''}">NEW</span>` : "";
@@ -334,16 +337,19 @@ function cardHtml(s){
   const ind = `<span class="chip" title="${s.industry_basis==="master" ? "会社マスター(自社サイト)から" : "登記の読みから(会社マスター未調査)"}">${esc(s.industry)}${s.industry_basis==="master" ? "" : "?"}</span>`;
   const inf = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${esc(s.infer)}</div>` : "";
   const sp = s.secured_party ? `<div class="parties">担保権者: ${esc(s.secured_party)}${s.secured_party_city ? "(" + esc(s.secured_party_city) + ")" : ""}・${esc(s.lender_label)}${s.scope==="all_assets" ? "・包括担保" : s.scope==="mixed" ? "・特定設備+包括" : ""}</div>` : "";
-  const made = s.made ? `<div class="loc">${esc(s.made)}${s.website ? ` · <a href="${esc(s.website)}" target="_blank" rel="noopener">サイト</a>` : ""}</div>` : "";
+  const made = s.made ? `${esc(s.made)}${s.website ? ` · <a href="${esc(s.website)}" target="_blank" rel="noopener">サイト</a>` : ""}` : "";
   const name = s.karte ? `<a class="companylink" href="/cockpit/company/?id=${esc(s.karte)}" title="企業カルテ(4 つの情報源の出来事を 1 枚に)を開く">${esc(s.company)} ›</a>` : esc(s.company);   // 9/5 CEO: カルテは会社 ID で 1 枚(/cockpit/company/)
+  const eq = eqHtml(s.equipment);
+  const fact = `<div class="fact"><span class="flabel">事実(公的記録)</span>${esc(s.fact.src)}・${esc(s.fact.ref)}・提出 <span class="mono">${s.date}</span>${s.lapse ? `・失効 <span class="mono">${s.lapse}</span>` : ""}・${esc(s.fact.status||"")}</div>`;
+  const summ = `<div class="summary">${esc(s.summary)}</div>`;
+  // 9/7 CEO: 重複を畳む。設備の箱があれば要約は details へ(要約は担保権者・設備・日付の言い直しのため)。
   return `<article class="card">
     <div class="head"><span class="state">${s.state}</span><h3>${name}</h3></div>
     <div>${nw}${jp}${kind}${ind}</div>
-    ${sp}<div class="loc">${esc(s.city)}</div>${made}
-    <div class="summary">${esc(s.summary)}</div>
-    ${eqHtml(s.equipment)}
-    <div class="fact"><span class="flabel">事実(公的記録)</span>${esc(s.fact.src)}・${esc(s.fact.ref)}・提出 <span class="mono">${s.date}</span>${s.lapse ? `・失効 <span class="mono">${s.lapse}</span>` : ""}・${esc(s.fact.status||"")}</div>
+    <div class="meta"><span>${esc(s.city)}</span>${made ? `<span>${made}</span>` : ""}<span>提出 <span class="mono">${s.date}</span>${s.lapse ? `・失効 <span class="mono">${s.lapse}</span>` : ""}${s.fact.status ? `・${esc(s.fact.status)}` : ""}</span></div>
+    ${eq || summ}
     ${inf}
+    <details class="more"><summary>登記の詳細(担保権者・要約・登記番号)</summary>${sp}${eq ? summ : ""}${fact}</details>
   </article>`;
 }
 function render(){
