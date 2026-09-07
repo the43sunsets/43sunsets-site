@@ -115,8 +115,8 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 .cta .mail{font-family:var(--mono); font-size:12.5px; color:var(--sub);}
 @media (max-width:820px){ .cta{grid-template-columns:1fr; padding:20px 18px;} }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907p">
-<script src="/cockpit/assets/favi.js?v=20260907o"></script>
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907q">
+<script src="/cockpit/assets/favi.js?v=20260907q"></script>
 <script src="/cockpit/assets/nav.js?v=20260907n" defer></script>
 </head>
 <body>
@@ -207,7 +207,7 @@ async function boot(){
   document.getElementById("edition").textContent = `${ct}(${wd})版`;
   try{ const top = await get("data/top.json"); const picks = top.picks || [];
     const stripJp = t => t.replace("(日系)", "");
-    const pickTitle = p => { const t = stripJp(p.title); if(p.karte && p.company && t.startsWith(p.company)){ return `<a class="companylink" href="/cockpit/company/?id=${esc(p.karte)}" target="_blank" rel="noopener" title="企業カルテを新しいタブで開く">${esc(p.company)}</a>${esc(t.slice(p.company.length))}`; } return esc(t); };   // 9/5 CEO: 社名からカルテへ
+    const pickTitle = p => { const t = stripJp(p.title); if(p.karte && p.company && t.startsWith(p.company)){ return `<a class="companylink" href="/cockpit/company/?id=${esc(p.karte)}" target="_blank" rel="noopener" title="企業カルテを新しいタブで開く: ${esc(p.company)}">${esc(window.displayName ? displayName(p.company) : p.company)}</a>${esc(t.slice(p.company.length))}`; } return esc(t); };   // 9/7 CEO: 表示形(法人格の省略・頭文字大文字)   // 9/5 CEO: 社名からカルテへ
     const WHY = {"日系":"日本企業の米国拠点の投資","大型":"工事費の大きい建設","連続投資":"続けて設備を入れている会社","建屋と設備":"建屋と設備の両方に投資","自動化":"自動化設備つきの導入"};
     const FACE = {"許可":"建設許可","UCC":"動産担保登記(UCC)"};
     const pickHtml = (p, i) => `<article class="pick kind-${esc(p.kind||"")}"><div class="no">${String(i+1).padStart(2,"0")}</div><div class="main"><div class="tagrow"><span class="tag">${esc(p.tag)}</span>${WHY[p.tag] ? `<span class="why">${esc(WHY[p.tag])}</span>` : ""}</div><h3><span class="favi-slot" data-karte="${esc(p.karte||"")}" data-name="${esc(p.company||p.title)}"></span>${pickTitle(p)}</h3><p>${esc(p.body)}</p></div><div class="meta"><div><span class="k">根拠</span><span class="v">${esc(FACE[p.face]||p.face||"")}</span></div><div><span class="k">記録日</span><span class="v">${esc(p.date||"")}</span></div>${p.karte ? `<a class="cta" href="/cockpit/company/?id=${esc(p.karte)}" target="_blank" rel="noopener">企業カルテを開く ↗</a>` : ""}${p.link ? `<a class="srcl" href="${esc(p.link)}">${esc(FACE[p.face]||"出所")}のページで見る →</a>` : ""}</div></article>`;

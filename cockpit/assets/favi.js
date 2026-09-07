@@ -22,3 +22,23 @@
     });
   };
 })();
+
+/* 社名の表示形(9/7 CEO: カードの文字サイズは統一・省略で 1 行に): 法人格を省き、全部大文字の名前は頭文字だけ大文字に(3 文字以下の語 = USA・GI などは大文字のまま)。
+   正式名は title と企業カルテに残す。 */
+(function(){
+  var SUFFIX = /[,\s]+(L\.?L\.?C\.?|INC\.?|INCORPORATED|CORP\.?|CORPORATION|CO\.?|COMPANY|LTD\.?|LIMITED|L\.?P\.?|LLP|PLC|P\.?C\.?|N\.?A\.?)\s*$/i;
+  window.displayName = function(name){
+    var n = String(name||"").trim();
+    for (var i = 0; i < 2; i++) n = n.replace(SUFFIX, "").replace(/[,\s]+$/, "");   // "XYZ HOLDINGS, LLC" → "XYZ HOLDINGS"・二重の法人格にも対応
+    if (n && n === n.toUpperCase() && /[A-Z]/.test(n)) {
+      n = n.split(/(\s+|-|\/)/).map(function(w){
+        if (!/[A-Z]/.test(w)) return w;
+        if (/^(OF|AND|THE|FOR|DE|LA|DU|DEL|VON|VAN|&)$/.test(w)) return w.toLowerCase();   // 接続語は小文字
+        if (w.replace(/[^A-Z]/g,"").length <= 3) return w;            // USA・GI・TC・OH などは大文字のまま
+        if (/^(MC|MAC)[A-Z]/.test(w)) return w[0] + w.slice(1,2).toLowerCase() + w.slice(2,3) + w.slice(3).toLowerCase();   // MCMASTER → McMaster
+        return w[0] + w.slice(1).toLowerCase();
+      }).join("");
+    }
+    return n || String(name||"");
+  };
+})();
