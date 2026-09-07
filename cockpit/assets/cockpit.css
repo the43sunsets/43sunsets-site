@@ -19,9 +19,13 @@ body header .kicker .cnav{ margin-left:14px; letter-spacing:0; text-transform:no
 @media (max-width:1100px){ .cnav{ gap:12px; font-size:12.5px; } .cnav a.sol{ padding-left:12px; } }
 @media (max-width:820px){ .cnav{ display:none; } }
 /* ── 固定ヘッダー(全ページ同一・9/7 CEO) ── */
-body header.site-head{ display:flex; align-items:center; gap:24px; padding:14px 40px; position:sticky; top:0; z-index:40; background:var(--paper); border-top:0; border-bottom:1px solid var(--line); box-shadow:0 1px 0 rgba(32,38,46,.06), 0 8px 24px -18px rgba(0,0,0,.35); }   /* 9/7 CEO: 重厚感 — 帯を少し高く、下に薄い影 */
+body header.site-head{ display:flex; align-items:center; gap:24px; padding:10px 40px; position:sticky; top:0; z-index:40; background:var(--paper); border-top:0; border-bottom:1px solid var(--line); box-shadow:0 1px 0 rgba(32,38,46,.06), 0 8px 24px -18px rgba(0,0,0,.35); }   /* 9/7 CEO: 重厚感 — 帯を少し高く、下に薄い影 */
 .site-head .logo{ display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); flex:none; }
 .site-head .bmark{ width:42px; height:42px; }
+/* 9/7 CEO 採択: ロゴタイプ B-2(印+Signal・線の下段に by 43 Sunsets を右端揃え)。高さ 50px = 語が約 29px(旧 27px より一回り大) */
+.site-head .logo svg.lockup{ height:50px; width:auto; display:block; overflow:visible; }
+@media (max-width:900px){ .site-head .logo svg.lockup{ height:42px; } }
+@media (max-width:600px){ .site-head .logo svg.lockup{ height:38px; } }
 .site-head .bword{ font-family:var(--serif, "Shippori Mincho", serif); font-size:27px; font-weight:700; letter-spacing:.01em; line-height:1; }
 .site-head .bby{ font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--sub); align-self:flex-end; margin-bottom:2px; }
 /* 9/7 CEO「細字のメニューでなく重厚感・高級感を」: 見出しと同じ明朝の太字・字間を広げ・墨色。現在地は墨の下線 */
