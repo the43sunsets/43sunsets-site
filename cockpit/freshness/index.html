@@ -88,12 +88,12 @@ h2 .sub{font-family:"Zen Kaku Gothic New",sans-serif; font-size:12px; color:var(
 .goal .bar .t{position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--stamp);}
 .goal .cap{font-size:12px; color:var(--sub); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
 .mapwrap{display:grid; grid-template-columns:minmax(0,560px) minmax(300px,1fr); gap:24px; align-items:start;}
-@media (max-width:860px){.mapwrap{grid-template-columns:1fr}}
+@media (max-width:860px){.mapwrap{grid-template-columns:1fr} .side{height:auto; min-height:0; max-height:360px;}}
 .mapcard{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:10px;}
 svg.map{width:100%; height:auto; display:block;}
 .legend{display:flex; gap:4px; align-items:center; font-size:11px; color:var(--sub); margin:8px 4px 2px; flex-wrap:wrap;}
 .legend i{display:inline-block; width:22px; height:12px; border:1px solid var(--line);}
-.side{font-size:13px; background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 16px; align-self:stretch;}
+.side{font-size:13px; background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 16px; align-self:stretch; height:0; min-height:100%; overflow:auto; box-sizing:border-box;}   /* 高さは地図カードに揃え、郡が多い州は内側でスクロール(9/7) */
 .side h3{font-size:12px; letter-spacing:.14em; color:var(--sub); text-transform:uppercase; margin:6px 0 6px;}
 .side ol{margin:0; padding-left:22px; columns:2; column-gap:28px;}
 .side li{margin:2px 0; break-inside:avoid; padding-right:6px;}
