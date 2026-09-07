@@ -139,3 +139,24 @@ body .karte-top h2, body .kprof h2{ font-size:24px; }
 @keyframes cardIn{ from{ opacity:0; transform:translateY(12px) scale(.965); } to{ opacity:1; transform:none; } }
 @keyframes cardOut{ to{ opacity:0; transform:scale(.965); } }
 @media (prefers-reduced-motion: reduce){ .grid.is-leaving > *, .grid > .enter{ animation:none; } }
+
+/* ---- 携帯(9/7 CEO「携帯の確認は?」の点検で 4 件): ヘッダー右の収まり・折り畳み導線・期間ボタンの折返し ---- */
+.site-head .menu-btn{ display:none; font-size:12.5px; border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:999px; padding:4px 11px; font-family:inherit; cursor:pointer; white-space:nowrap; }
+@media (max-width:900px){
+  body header.site-head{ position:sticky; }
+  .site-head .menu-btn{ display:inline-flex; align-items:center; }
+  .site-head.nav-open .cnav{ display:flex; position:absolute; left:0; right:0; top:100%; margin:0; flex-direction:column; gap:0; padding:6px 16px 10px; background:var(--card); border-bottom:1px solid var(--line); box-shadow:0 12px 24px rgba(0,0,0,.10); }
+  .site-head.nav-open .cnav a{ display:block; padding:11px 4px; font-size:15px; border-bottom:1px solid var(--line-soft); transform:none !important; }
+  .site-head.nav-open .cnav a::after{ display:none; }
+  .site-head.nav-open .cnav a:last-child{ border-bottom:0; }
+  .site-head.nav-open .cnav a.sol{ margin:0; padding-left:4px; border-left:0; }
+  .site-head.nav-open .cnav a[aria-current="page"]{ border-bottom:1px solid var(--line-soft); color:var(--accent); }
+}
+@media (max-width:600px){
+  body header.site-head{ padding:10px 16px; gap:12px; }
+  .site-head .bby, .site-head .beta{ display:none; }
+  .site-head .hdr-right{ gap:8px; }
+  .site-head .theme-btn, .site-head .menu-btn{ padding:4px 9px; font-size:12px; }
+  .seg{ flex-wrap:wrap; border-radius:12px; }
+  .seg button{ padding:4px 9px; font-size:11.5px; }
+}
