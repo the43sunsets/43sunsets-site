@@ -4,6 +4,7 @@ window.swapCards = function (grid, html) {
   const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   const apply = () => {
     grid.classList.remove("is-leaving"); grid.innerHTML = html;
+    if (window.faviFill) window.faviFill(grid);   // 9/7: 社名の左のファビコン
     if (!reduce) [...grid.children].forEach((c, i) => { c.style.setProperty("--i", Math.min(i, 24)); c.classList.add("enter"); });
   };
   if (reduce || !grid.children.length || grid.dataset.busy) { apply(); return; }

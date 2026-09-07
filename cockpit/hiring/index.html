@@ -73,7 +73,8 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
   aside > *:not(.filt-toggle){display:none;} aside.open > *{display:block;} aside.open > .filt-toggle{display:flex;} aside.open > label.fitem{display:flex;} aside{padding:12px 14px 4px;} }
 @media (max-width:760px){ .app{grid-template-columns:1fr;} aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);} }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907n">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907o">
+<script src="/cockpit/assets/favi.js?v=20260907o"></script>
 <script src="/cockpit/assets/nav.js?v=20260907n" defer></script>
 <script src="/cockpit/assets/cards.js?v=20260907k"></script>
 </head>
@@ -143,7 +144,7 @@ function cardHtml(s){
   const titles=(s.titles||[]).map(t=>`<li>${t.url?`<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.t)}</a>`:esc(t.t)}${t.posted?` <span>(${esc(t.posted)})</span>`:""}</li>`).join("");
   const prev=s.prev30!=null?`・30 日前 <span class="mono">${s.prev30}</span>`:"";
   return `<article class="card"><div class="srcline"><span class="chip src" title="採用ページの公開 API">${esc(s.source)}</span></div>
-    <div class="head"><span class="state">${esc(s.state)}</span><h3><a class="companylink" href="/cockpit/company/?id=${esc(s.company_id)}" target="_blank" rel="noopener" title="企業カルテを開く">${esc(s.company)} ›</a></h3></div>
+    <div class="head"><span class="state">${esc(s.state)}</span><h3>${window.faviSlot ? faviSlot(s.company_id, s.company) : ""}<a class="companylink" href="/cockpit/company/?id=${esc(s.company_id)}" target="_blank" rel="noopener" title="企業カルテを開く">${esc(s.company)} ›</a></h3></div>
     <div>${types}${jp}${cross}<span class="chip">${esc(s.industry)}</span></div>
     <div class="loc">${esc(s.city||"拠点不明")}・製造職の求人 <span class="num">${s.open_mfg}</span> 件(全 ${s.open_all})・直近 30 日の新規 <span class="mono">${s.new30}</span>${prev}</div>
     <div class="roles">${roles}</div>

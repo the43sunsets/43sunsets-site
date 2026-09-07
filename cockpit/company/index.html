@@ -239,7 +239,8 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 .knote{font-size:11.5px; color:var(--sub); border-top:1px solid var(--line-soft); margin-top:28px; padding-top:10px; line-height:1.7;}
 @media (max-width:760px){ .faces4{grid-template-columns:repeat(2,minmax(0,1fr));} .kwrap{padding:18px 16px 60px;} .kprof h2{font-size:20px;} }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907n">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907o">
+<script src="/cockpit/assets/favi.js?v=20260907o"></script>
 </head>
 <body>
 <div class="kbar">
@@ -296,7 +297,7 @@ function render(c){
   document.getElementById("metaline").innerHTML = `${esc(c.name)} · 建設許可 <span class="mono">${f.permits.count}</span> 件 · UCC 登記 <span class="mono">${f.ucc.count}</span> 件 · 補助金 <span class="mono">${gcount}</span> 件 · 採用 <span class="mono">${hcount}</span> 件 · 書き出し <span class="mono">${esc((c.generated_at || "").slice(0,10))}</span>`;
   // 9/7 CEO: カルテは新しいタブで開く仕様のため「‹ 戻る」は置かない(閉じるは上部の ✕)
   document.getElementById("main").innerHTML = `
-    <div class="kprof"><div><div class="kicker">SIGNAL by 43 SUNSETS — COMPANY KARTE(BETA)</div><h2>${esc(c.name)}</h2>
+    <div class="kprof"><div><div class="kicker">SIGNAL by 43 SUNSETS — COMPANY KARTE(BETA)</div><h2>${window.faviFromWebsite ? faviFromWebsite(c.website, c.name) : ""}${esc(c.name)}</h2>
       <div class="ksub">${esc([c.city, c.state].filter(Boolean).join(", "))} ${jp} ${c.industry ? `<span class="chip">${esc(c.industry)}</span>` : ""}</div>
       <div class="ksub" style="margin-top:6px">${c.made ? esc(c.made) + " · " : ""}${c.size ? "規模 " + esc(c.size) + " · " : ""}${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website)}</a>` : "サイト —"}${c.master_checked_at ? ` · 会社マスター調査 ${esc(c.master_checked_at)}` : " · 会社マスター未調査"}</div></div>
       </div>

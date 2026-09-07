@@ -210,7 +210,8 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   aside{padding:12px 14px 4px;}
 }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907n">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907o">
+<script src="/cockpit/assets/favi.js?v=20260907o"></script>
 <script src="/cockpit/assets/nav.js?v=20260907n" defer></script>
 <script src="/cockpit/assets/cards.js?v=20260907k"></script>
 </head>
@@ -422,7 +423,7 @@ function cardHtml(s){
   const unc = s.category==="未分類" ? `<span class="chip" title="未分類 = AI が読んだ結果、設備投資の 5 分類のどれにも当てはまらない、または用途が読めず判定できない記録">未分類</span>` : `<span class="chip">${s.category}</span>`;
   return `<article class="card">
     ${srcChip ? `<div class="srcline">${srcChip}</div>` : ""}
-    <div class="head"><span class="state">${s.state}</span><h3>${invName}</h3>${invChip}</div>
+    <div class="head"><span class="state">${s.state}</span><h3>${inv.name && window.faviSlot ? faviSlot(/^C-\d+$/.test(s.company_id||"") ? s.company_id : "", inv.name) : ""}${invName}</h3>${invChip}</div>
     <div>${nw}${jp}${unc}<span class="chip">${s.industry}</span></div>
     ${parties}
     <div class="loc">${s.city}</div>
