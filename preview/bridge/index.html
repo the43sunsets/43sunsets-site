@@ -63,6 +63,14 @@ h2{font-family:var(--serif);font-weight:800;font-size:clamp(26px,2.8vw,36px);lin
 .stat .go{display:inline-block;margin-top:22px;font-family:var(--serif);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:2px}
 .note{margin:28px 0 0;font-size:14px;color:var(--sub);max-width:720px}
 .note b{color:var(--ink);font-weight:600}
+/* Signal shots */
+.shots{display:grid;grid-template-columns:1.15fr 1fr;gap:32px;align-items:start}
+.shot{margin:0}
+.shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px;box-shadow:0 18px 50px -24px rgba(20,24,29,.35)}
+.shot figcaption{margin:12px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--sub)}
+.more{margin:36px 0 0;display:flex;align-items:baseline;gap:22px;flex-wrap:wrap}
+.more a{font-family:var(--serif);font-weight:700;font-size:18px;text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:2px}
+.more span{font-size:13.5px;color:var(--sub)}
 /* 進め方 */
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink);margin:0 0 56px}
 .step{padding:24px 28px 30px 0;border-right:1px solid var(--line);margin-right:28px}
@@ -90,7 +98,7 @@ h2{font-family:var(--serif);font-weight:800;font-size:clamp(26px,2.8vw,36px);lin
 footer{border-top:1px solid var(--line);padding:34px 0 52px;font-size:13px;color:var(--sub)}
 footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover{color:var(--ink)}
-@media (max-width:1000px){ .wrap{padding:0 28px} .hd{padding:22px 28px} .hero .txt{grid-template-columns:1fr;gap:24px;padding:0 28px 48px} .sec-h{grid-template-columns:1fr;gap:6px} .evi{grid-template-columns:1fr} .steps{grid-template-columns:1fr 1fr} .step{margin-right:20px} .step:nth-child(2){border-right:0} .who{grid-template-columns:1fr;gap:40px} }
+@media (max-width:1000px){ .wrap{padding:0 28px} .hd{padding:22px 28px} .hero .txt{grid-template-columns:1fr;gap:24px;padding:0 28px 48px} .sec-h{grid-template-columns:1fr;gap:6px} .evi{grid-template-columns:1fr} .shots{grid-template-columns:1fr} .steps{grid-template-columns:1fr 1fr} .step{margin-right:20px} .step:nth-child(2){border-right:0} .who{grid-template-columns:1fr;gap:40px} }
 @media (max-width:640px){
   nav a:not(.lang){display:none}
   /* 携帯: 写真は上に短く・言葉は紙の面に */
@@ -148,21 +156,14 @@ footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover
       <div class="num">01 — いま提供しているもの</div>
       <div>
         <h2>Signal — 次に動く会社が、先に分かる。</h2>
-        <p>建設許可・動産担保登記(UCC)・政府補助金・求人の公開情報を毎日調べ、「どの会社に」「何が起きていて」「なぜ今、声をかけるのか」まで示す、営業の照準器です。イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの 5 州。無料・登録なし。下は今週の実物です。</p>
+        <p>中西部 5 州の建設許可・設備の担保登記・補助金・求人を毎日読み、「どの会社が、何を始めたか」を一覧にします。会社ごとの一枚(企業カルテ)で、事実と、そこから考えられる営業のヒントを分けて示します。無料・登録なし。</p>
       </div>
     </div>
-    <div class="evi">
-      <div>
-        <div class="ledger" id="picks"><p style="padding:22px 0;color:var(--sub)">今週の動きを読み込んでいます…</p></div>
-        <p class="note">公開情報で確認できた<b>事実</b>と、そこから考えられる営業の<b>ヒント</b>は分けて表示しています。誤りに気づかれたら hello@43sunsets.com へ。確認して直します。</p>
-      </div>
-      <div class="stat">
-        <h3>いまの規模</h3>
-        <dl id="counts"><div class="r"><dt>読み込み中</dt><dd>…</dd></div></dl>
-        <p class="upd" id="upd"></p>
-        <a class="go" href="/signal/">Signal を開く →</a>
-      </div>
+    <div class="shots">
+      <figure class="shot"><img src="/assets/shots/shot-permits.webp" alt="Signal の建設許可の一覧画面" loading="lazy"><figcaption>建設許可の一覧 — 州・業種・投資の種類で絞り込み</figcaption></figure>
+      <figure class="shot"><img src="/assets/shots/shot-karte.webp" alt="Signal の企業カルテ画面" loading="lazy"><figcaption>企業カルテ — 一社の動きを一枚に、事実と推論を分けて</figcaption></figure>
     </div>
+    <p class="more"><a href="/signal/">Signal を開く →</a><span>建設許可 113 社・担保登記 736 件を毎日更新(2026-09-07 時点)</span></p>
   </div>
 </section>
 
@@ -239,29 +240,5 @@ footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover
   </div>
 </footer>
 
-<script src="/signal/assets/favi.js?v=20260907t"></script>
-<script>
-(async () => {
-  const jaFace = {UCC:"動産担保登記", "許可":"建設許可", "建設許可":"建設許可", "補助金":"補助金", "採用":"採用"};
-  try {
-    const r = await fetch("/cockpit/data/top.json", {cache:"no-store"}); const t = await r.json();
-    const picks = (t.picks || []).slice(0, 3);
-    document.getElementById("picks").innerHTML = picks.map((p, i) => {
-      const name = p.company || ""; const disp = (typeof displayName === "function" && name) ? displayName(name) : name;
-      const title = (p.move || p.title || "").replace(name || " ", disp);
-      return `<a class="pick" href="/signal/company/?id=${encodeURIComponent(p.karte || "")}" target="_blank" rel="noopener">
-        <div class="n">${String(i + 1).padStart(2, "0")}</div>
-        <div><p class="t">${title}</p><p class="b">${p.body || ""}</p></div>
-        <div class="m"><b>${jaFace[p.face] || p.face || ""}</b>${p.date || ""}</div></a>`; }).join("")
-      || `<p style="padding:22px 0;color:var(--sub)">今週の動きはまだありません。</p>`;
-    const c = t.counts || {};
-    const rows = [["設備投資シグナル(建設許可)", c.permits_targets], ["うち直近 90 日", c.permits_new90], ["動産担保登記(UCC)の読み", c.ucc_read], ["UCC で見えた会社", c.ucc_companies]].filter(x => x[1] != null);
-    document.getElementById("counts").innerHTML = rows.map(([k, v]) => `<div class="r"><dt>${k}</dt><dd>${Number(v).toLocaleString("ja-JP")}<span style="font-size:13px;font-weight:500;color:var(--sub)"> 件</span></dd></div>`).join("");
-    document.getElementById("upd").textContent = "更新 " + (t.updated_ct || "") + (t.next_update_ct ? " · 次回 " + t.next_update_ct : "");
-  } catch (e) {
-    document.getElementById("picks").innerHTML = `<p style="padding:22px 0;color:var(--sub)">いま読み込めません。<a href="/signal/">Signal 本体</a>をご覧ください。</p>`;
-  }
-})();
-</script>
 </body>
 </html>
