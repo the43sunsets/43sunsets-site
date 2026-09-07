@@ -232,7 +232,8 @@ const PERIODS = [["90d","直近 90 日",90],["1y","直近 1 年",365],["2y","直
 let period = "all";
 const cutoff = days => days ? new Date(Date.now() - days*864e5).toISOString().slice(0,10) : null;
 function inPeriod(s, p){ const c = cutoff((PERIODS.find(x=>x[0]===p)||[])[2]); return !c || ((s.date||"") >= c); }
-function visibleBase(){ const m = document.getElementById("showminor").checked; return m ? SIGNALS : SIGNALS.filter(s=>!MINOR.has(s.category)); }
+const isMinor = s => MINOR.has(s.category) && s.issuer_level === "連邦";   // 9/7: 州・市郡の契約(承認)は AI 読み前でも表示する
+function visibleBase(){ const m = document.getElementById("showminor").checked; return m ? SIGNALS : SIGNALS.filter(s=>!isMinor(s)); }
 function pass(s, except){
   const jp = document.getElementById("jponly").checked;
   for(const f of FIELDS){ if(f!==except && sel[f].size && !sel[f].has(s[f])) return false; }
@@ -339,8 +340,8 @@ async function boot(){
   try{
     const r = await fetch("../data/subsidies.json", {cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status);
     const d = await r.json(); META = d.meta; SIGNALS = d.signals;
-    document.getElementById("minorcnt").textContent = SIGNALS.filter(s=>MINOR.has(s.category)).length.toLocaleString();
-    const major = SIGNALS.filter(s=>!MINOR.has(s.category)).length;
+    document.getElementById("minorcnt").textContent = SIGNALS.filter(isMinor).length.toLocaleString();
+    const major = SIGNALS.filter(s=>!isMinor(s)).length;
     document.getElementById("metaline").innerHTML = `IL・IN・MI・OH・WI / 保存 <span class="mono">${META.n.toLocaleString()}</span> 件・設備投資に関わる案件 <span class="mono">${major}</span> 件・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     renderFilters(); render(); renderScope();
   }catch(err){

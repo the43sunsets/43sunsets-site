@@ -204,7 +204,7 @@ async function boot(){
     document.getElementById("ucc-nums").textContent = `登記 ${uf.filings_total} 件・会社 ${top.counts.ucc_companies} 社・設備カタログ ${uc.equipment_rows||0} 型式`;
     document.getElementById("ucc-upd").textContent = "更新 " + fmtCT(top.ucc_meta.generated_at, true);
   }catch(e){ document.getElementById("picks").innerHTML = `<div class="pick"><p>今週の動きを読み込めませんでした(${esc(e.message)})。</p></div>`; }
-  try{ const sd = await get("data/subsidies.json"); const MINOR = new Set(["訓練・インフラ・その他","未分類"]); const major = sd.signals.filter(x=>!MINOR.has(x.category)).length;
+  try{ const sd = await get("data/subsidies.json"); const MINOR = new Set(["訓練・インフラ・その他","未分類"]); const major = sd.signals.filter(x=>!(MINOR.has(x.category) && x.issuer_level === "連邦")).length;
     document.getElementById("subsidies-nums").textContent = `保存 ${sd.meta.n.toLocaleString()} 件・設備投資に関わる案件 ${major} 件・連邦(州・市郡は順次)`;
     document.getElementById("subsidies-upd").textContent = "更新 " + fmtCT(sd.meta.generated_at, true);
   }catch(e){ document.getElementById("subsidies-nums").textContent = "補助金の面を読み込めませんでした"; }
