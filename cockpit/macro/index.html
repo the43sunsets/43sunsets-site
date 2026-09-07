@@ -93,8 +93,8 @@ footer{padding:18px 40px 30px; border-top:1px solid var(--line); font-size:11px;
 </style>
 <link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907j">
 <style>
-body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:minmax(0,1fr); gap:14px; margin-top:0; height:calc(100vh - var(--headh,70px) - 118px); min-height:520px; }
-.body{ min-height:calc(100vh - var(--headh,70px)); }
+body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:minmax(0,1fr); gap:14px; margin-top:0; height:calc(100vh - var(--headh,70px) - var(--footh,120px) - 118px); min-height:480px; }
+.body{ min-height:calc(100vh - var(--headh,70px) - var(--footh,120px)); }
 .tile{ padding:14px 15px; gap:6px; min-height:0; }
 .tile .n{ font-size:13.5px; } .tile .v b{ font-size:22px; } .tile svg{ flex:1 1 auto; height:auto; min-height:40px; margin:4px 0; }
 .tile .how{ display:none; } .tile:hover .how, .tile:focus-within .how{ display:block; }
@@ -148,7 +148,7 @@ const WD = ["日","月","火","水","木","金","土"];
 function spark(series){ if(!series || series.length < 2) return ""; const vs = series.map(p=>p.v); const min = Math.min(...vs), max = Math.max(...vs); const w = 160, h = 30;
   const pts = vs.map((v,i)=>[i*(w/(vs.length-1)), max===min ? h/2 : h - 2 - ((v-min)/(max-min))*(h-4)]);
   const d = pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+","+p[1].toFixed(1)).join(" "); const last = pts[pts.length-1];
-  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><path d="${d}" fill="none" stroke="var(--accent)" stroke-width="1.6"/><circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2.4" fill="var(--accent)"/></svg>`; }
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><path d="${d}" fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke"/><path d="M${last[0].toFixed(1)},${last[1].toFixed(1)} v0" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>`; }
 function fmtVal(t){ const v = t.latest.value; if(t.id==="ICSA") return Math.round(v).toLocaleString("en-US"); if(t.unit==="$M" || t.unit==="$M(年率)") return "$"+(v/1000).toFixed(1)+"B"; if(t.id==="PCOPPUSDM") return "$"+Math.round(v).toLocaleString("en-US"); if(Math.abs(v) >= 1000) return v.toLocaleString("en-US",{maximumFractionDigits:1}); return (+v).toFixed(2).replace(/\.?0+$/,""); }
 function chgHtml(t){ if(t.change==null) return ""; const c = t.change; const cls = c > 0 ? "up" : c < 0 ? "down" : "flat"; const arrow = c > 0 ? "▲" : c < 0 ? "▼" : "→";
   const lab = t.change_mode==="pct" ? `${arrow} ${Math.abs(c).toFixed(2)}%` : `${arrow} ${Math.abs(c).toFixed(2)}${t.unit==="%"||t.unit==="%pt" ? "pt" : ""}`; const per = t.frequency==="W" ? "前週比" : t.frequency==="D" ? "前日比" : "前月比"; return `<span class="chg ${cls}" title="${per}">${lab}</span>`; }
@@ -157,7 +157,7 @@ function tileHtml(t){ const unit = t.unit==="$M"||t.unit==="$M(年率)" ? (t.uni
   const states = t.states ? `<div class="states">${t.states.map(s=>`<div title="${s.state} 製造業雇用 ${s.latest.value.toLocaleString()} 千人・前月比 ${s.mom_k>0?"+":""}${s.mom_k} 千人・前年比 ${s.yoy_pct==null?"—":s.yoy_pct+"%"}">${s.state}<br>${s.mom_k>0?"+":""}${s.mom_k}</div>`).join("")}</div>` : spark(t.series);
   return `<div class="tile" tabindex="0"><div class="g">${esc(t.group)}</div><div class="n">${esc(SHORT[t.name]||t.name)}</div><div class="v"><b>${fmtVal(t)}</b><span class="u">${esc(unit)}</span>${chgHtml(t)}</div>${states}<div class="d">最新 ${esc(t.latest.date)}${t.yoy_pct!=null ? `・前年比 ${t.yoy_pct>0?"+":""}${t.yoy_pct}%` : ""}</div><div class="how">${esc(t.howto)}</div><div class="src"><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.source.split("(")[0])} ↗</a></div></div>`; }
 
-const setHeadH=()=>document.documentElement.style.setProperty("--headh", (document.querySelector("header")?.offsetHeight||70)+"px"); setHeadH(); addEventListener("resize", setHeadH);
+const setHeadH=()=>{ document.documentElement.style.setProperty("--headh", (document.querySelector("header")?.offsetHeight||70)+"px"); document.documentElement.style.setProperty("--footh", (document.querySelector("footer")?.offsetHeight||120)+"px"); }; setHeadH(); addEventListener("resize", setHeadH);
 async function boot(){
   const get = async (u) => { const r = await fetch(u, {cache:"no-store"}); if(!r.ok) throw new Error(u+" HTTP "+r.status); return r.json(); };
   try{ const m = await get("../data/macro.json");
