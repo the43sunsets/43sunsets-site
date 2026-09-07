@@ -32,7 +32,7 @@ nav a.lang{color:var(--sub);font-family:var(--mono);font-weight:600;letter-spaci
 .herowrap{position:relative;isolation:isolate;background:var(--paper) url(/assets/hero/corp-a.webp) no-repeat right center;background-size:cover;min-height:620px;display:flex;align-items:center}
 .herowrap.b{background-image:url(/assets/hero/corp-b.webp)}
 .herowrap::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--paper) 0%,color-mix(in srgb,var(--paper) 90%,transparent) 36%,color-mix(in srgb,var(--paper) 45%,transparent) 54%,transparent 70%)}
-.hero{padding:72px 0 64px;max-width:680px}
+.hero{padding:72px 0 64px;max-width:720px}
 .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .facts > div{padding:26px 28px 28px;border-right:1px solid var(--line);font-size:15px;color:var(--sub)}
 .facts > div:last-child{border-right:0}
@@ -40,7 +40,7 @@ nav a.lang{color:var(--sub);font-family:var(--mono);font-weight:600;letter-spaci
 .facts p{margin:0}
 .kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;color:var(--sub);margin:0 0 22px}
 .kicker b{color:var(--accent);font-weight:600}
-h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,4.2vw,50px);line-height:1.32;letter-spacing:.01em;margin:0 0 26px}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.32;letter-spacing:.01em;margin:0 0 26px}
 .lead{font-size:17.5px;color:var(--ink);margin:0 0 34px;max-width:640px}
 .cta{display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:4px;text-decoration:none;font-weight:700;font-size:15px;border:1.5px solid var(--ink);transition:transform .15s ease}
@@ -246,6 +246,7 @@ footer a:hover{color:var(--ink)}
   </div>
 </footer>
 
+<script src="/signal/assets/favi.js?v=20260907t"></script>
 <script>
 if(new URLSearchParams(location.search).get("hero")==="b") document.getElementById("herowrap").classList.add("b");
 (async () => {
@@ -256,7 +257,7 @@ if(new URLSearchParams(location.search).get("hero")==="b") document.getElementBy
     document.getElementById("picks").innerHTML = picks.map((p, i) => `
       <a class="pick" href="/signal/company/?id=${encodeURIComponent(p.karte || "")}" target="_blank" rel="noopener">
         <div class="n">${String(i + 1).padStart(2, "0")}</div>
-        <div><p class="t">${p.move || p.title || ""}</p><p class="b">${p.body || ""}</p></div>
+        <div><p class="t">${(p.move || p.title || "").replace(p.company || "\u0000", (typeof displayName==="function" && p.company) ? displayName(p.company) : (p.company||""))}</p><p class="b">${p.body || ""}</p></div>
         <div class="m"><b>${jaFace[p.face] || p.face || ""}</b><br>${p.date || ""}</div>
       </a>`).join("") || `<p style="padding:22px 0;color:var(--sub)">今週の動きはまだありません。</p>`;
     const c = t.counts || {};
