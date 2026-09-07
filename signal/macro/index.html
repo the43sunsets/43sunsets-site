@@ -162,7 +162,7 @@ function tileHtml(t){ const unit = t.unit==="$M"||t.unit==="$M(年率)" ? (t.uni
 const setHeadH=()=>{ document.documentElement.style.setProperty("--headh", (document.querySelector("header")?.offsetHeight||70)+"px"); document.documentElement.style.setProperty("--footh", (document.querySelector("footer")?.offsetHeight||120)+"px"); }; setHeadH(); addEventListener("resize", setHeadH);
 async function boot(){
   const get = async (u) => { const r = await fetch(u, {cache:"no-store"}); if(!r.ok) throw new Error(u+" HTTP "+r.status); return r.json(); };
-  try{ const m = await get("../data/macro.json");
+  try{ const m = await get("/cockpit/data/macro.json");
     if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><span class="badge">AI のまとめ</span><div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は下の 10 指標のみ</div></div></div>`;
     document.getElementById("macro").innerHTML = m.tiles.map(tileHtml).join(""); }
   catch(e){ document.getElementById("macro").innerHTML = `<div class="tile"><div class="n">景気の指標を読み込めませんでした(${esc(e.message)})</div></div>`; }

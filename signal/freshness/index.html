@@ -282,7 +282,7 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
   let COV, GEO;
   try {
     [COV, GEO] = await Promise.all([
-      fetch("../data/coverage.json", {cache:"no-store"}).then(r => { if(!r.ok) throw new Error("coverage.json " + r.status); return r.json(); }),
+      fetch("/cockpit/data/coverage.json", {cache:"no-store"}).then(r => { if(!r.ok) throw new Error("coverage.json " + r.status); return r.json(); }),
       fetch("../assets/counties-5states.json", {cache:"no-store"}).then(r => { if(!r.ok) throw new Error("counties " + r.status); return r.json(); }),
     ]);
   } catch (e) {
@@ -308,7 +308,7 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
   // ---- 4 つの情報源の範囲と更新(9/7 CEO 裁定 ②): sources.json(VPS が公開のたびに生成)。無ければ health.json だけで要約カードを出す。
   (async () => {
     const getJ = async u => { try { const r = await fetch(u, {cache:"no-store"}); return r.ok ? await r.json() : null; } catch (e) { return null; } };
-    const [S, H] = await Promise.all([getJ("../data/sources.json"), getJ("../data/health.json")]);
+    const [S, H] = await Promise.all([getJ("/cockpit/data/sources.json"), getJ("/cockpit/data/health.json")]);
     const chk = k => (H && H.checks && H.checks[k]) || {};
     const st = c => c === "OK" || c === undefined ? "" : "bad";
     const when = iso => iso ? `<span class="mono">${ct(new Date(iso))}</span> CT` : "—";

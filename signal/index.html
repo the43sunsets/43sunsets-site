@@ -208,7 +208,7 @@ async function boot(){
   const get = async (u) => { const r = await fetch(u, {cache:"no-store"}); if(!r.ok) throw new Error(u+" HTTP "+r.status); return r.json(); };
   const now = new Date(); const ct = fmtCT(now.toISOString(), false); const wd = WD[new Date(now.toLocaleString("en-US",{timeZone:"America/Chicago"})).getDay()];
   document.getElementById("edition").textContent = `${ct}(${wd})版`;
-  try{ const top = await get("data/top.json"); const picks = top.picks || [];
+  try{ const top = await get("/cockpit/data/top.json"); const picks = top.picks || [];
     const stripJp = t => t.replace("(日系)", "");
     const pickTitle = p => { const t = stripJp(p.title); if(p.karte && p.company && t.startsWith(p.company)){ return `<a class="companylink" href="/signal/company/?id=${esc(p.karte)}" target="_blank" rel="noopener" title="企業カルテを新しいタブで開く: ${esc(p.company)}">${esc(window.displayName ? displayName(p.company) : p.company)}</a>${esc(t.slice(p.company.length))}`; } return esc(t); };   // 9/7 CEO: 表示形(法人格の省略・頭文字大文字)   // 9/5 CEO: 社名からカルテへ
     const WHY = {"日系":"日本企業の米国拠点の投資","大型":"工事費の大きい建設","連続投資":"続けて設備を入れている会社","建屋と設備":"建屋と設備の両方に投資","自動化":"自動化設備つきの導入"};
@@ -226,13 +226,13 @@ async function boot(){
     document.getElementById("ucc-nums").textContent = `登記 ${uf.filings_total} 件・会社 ${top.counts.ucc_companies} 社・設備カタログ ${uc.equipment_rows||0} 型式`;
     document.getElementById("ucc-upd").textContent = "更新 " + fmtCT(top.ucc_meta.generated_at, true);
   }catch(e){ document.getElementById("picks").innerHTML = `<div class="pick-empty">今週の動きを読み込めませんでした(${esc(e.message)})。</div>`; }
-  try{ const sd = await get("data/subsidies.json"); const MINOR = new Set(["訓練・インフラ・その他","未分類"]); const major = sd.signals.filter(x=>!(MINOR.has(x.category) && x.issuer_level === "連邦")).length;
+  try{ const sd = await get("/cockpit/data/subsidies.json"); const MINOR = new Set(["訓練・インフラ・その他","未分類"]); const major = sd.signals.filter(x=>!(MINOR.has(x.category) && x.issuer_level === "連邦")).length;
     document.getElementById("subsidies-nums").textContent = `保存 ${sd.meta.n.toLocaleString()} 件・設備投資に関わる案件 ${major} 件・連邦(州・市郡は順次)`;
     document.getElementById("subsidies-upd").textContent = "更新 " + fmtCT(sd.meta.generated_at, true);
   }catch(e){ document.getElementById("subsidies-nums").textContent = "補助金のデータを読み込めませんでした"; }
-  try{ const hd = await get("data/hiring.json"); document.getElementById("hiring-nums").textContent = `会社 ${hd.meta.companies} 社・拠点カード ${hd.meta.n} 件・採用ページ ${hd.meta.sources[0].n_boards} 件(観測開始 ${hd.meta.observed_since||"—"})`; document.getElementById("hiring-upd").textContent = "更新 " + fmtCT(hd.meta.generated_at, true);
+  try{ const hd = await get("/cockpit/data/hiring.json"); document.getElementById("hiring-nums").textContent = `会社 ${hd.meta.companies} 社・拠点カード ${hd.meta.n} 件・採用ページ ${hd.meta.sources[0].n_boards} 件(観測開始 ${hd.meta.observed_since||"—"})`; document.getElementById("hiring-upd").textContent = "更新 " + fmtCT(hd.meta.generated_at, true);
   }catch(e){ document.getElementById("hiring-nums").textContent = "採用のデータを読み込めませんでした"; }
-  try{ const m = await get("data/macro.json");
+  try{ const m = await get("/cockpit/data/macro.json");
     if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><span class="badge">AI のまとめ</span><div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は下の 10 本のみ</div></div></div>`;
     const KEY3 = ["NEWORDER","TCU","TLMFGCONS"]; const top3 = m.tiles.filter(t=>KEY3.includes(t.id)); document.getElementById("macro").innerHTML = (top3.length ? top3 : m.tiles.slice(0,3)).map(tileHtml).join(""); }
   catch(e){ document.getElementById("macro").innerHTML = `<div class="tile"><div class="n">景況の帯を読み込めませんでした(${esc(e.message)})</div></div>`; }

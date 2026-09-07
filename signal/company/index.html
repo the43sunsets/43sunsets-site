@@ -319,7 +319,7 @@ async function boot(){
   const main = document.getElementById("main");
   if(!/^C-\d+$/.test(id)){ main.innerHTML = `<div class="kempty">会社 ID が指定されていません。一覧(<a href="/signal/permits/">建設許可</a>・<a href="/signal/ucc/">UCC</a>)の社名から開いてください。</div>`; document.getElementById("metaline").textContent = "会社 ID なし"; return; }
   try{
-    const r = await fetch(`../data/companies/${id}.json`, {cache:"no-store"});
+    const r = await fetch(`/cockpit/data/companies/${id}.json`, {cache:"no-store"});
     if(!r.ok) throw new Error("HTTP " + r.status);
     render(await r.json());
   }catch(err){ main.innerHTML = `<div class="kempty">このカルテ(${esc(id)})は見つかりません(${esc(err.message)})。会社マスターの更新で ID が変わった可能性があります。一覧から開き直してください。</div>`; document.getElementById("metaline").textContent = "見つかりません"; }
