@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>建設許可 — 中西部の設備投資シグナル | Signal by 43 Sunsets</title>
 <meta name="description" content="米国中西部 5 州(IL・IN・MI・OH・WI)の建設許可・州建築審査記録から、製造業の設備投資シグナルを検出して一覧化。事実は公的記録の逐語、推論はバッジで分離表示。">
-<link rel="canonical" href="https://43sunsets.com/cockpit/permits/">
+<link rel="canonical" href="https://43sunsets.com/signal/permits/">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
 <meta property="og:title" content="建設許可 — 中西部の設備投資シグナル">
 <meta property="og:description" content="公的記録から設備投資の動きを検出。報道より早いターゲット発掘の材料に。">
-<meta property="og:url" content="https://43sunsets.com/cockpit/permits/">
-<meta property="og:image" content="https://43sunsets.com/assets/og-signal.png?v=20260907">
+<meta property="og:url" content="https://43sunsets.com/signal/permits/">
+<meta property="og:image" content="https://43sunsets.com/assets/og-signal.png?v=20260907b">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -213,16 +213,16 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   aside{padding:12px 14px 4px;}
 }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907x">
-<script src="/cockpit/assets/favi.js?v=20260907t"></script>
-<script src="/cockpit/assets/nav.js?v=20260907n" defer></script>
-<script src="/cockpit/assets/cards.js?v=20260907q"></script>
+<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260907x">
+<script src="/signal/assets/favi.js?v=20260907t"></script>
+<script src="/signal/assets/nav.js?v=20260907n" defer></script>
+<script src="/signal/assets/cards.js?v=20260907q"></script>
 </head>
 <body>
 
 <header class="site-head">
-  <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="lockup" viewBox="0 8 300 62" role="img" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M14 40 A22 22 0 0 1 58 40" stroke="var(--accent)"/><path d="M23 40 A13 13 0 0 1 49 40" stroke="var(--accent)" opacity=".62"/><path d="M31 40 A5 5 0 0 1 41 40" stroke="var(--accent)" opacity=".38"/></g><path d="M10 46 H172" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" fill="none"/><text x="70" y="41" font-family="Shippori Mincho, serif" font-weight="700" font-size="36" fill="var(--ink)">Signal</text><text x="172" y="64" text-anchor="end" font-family="Shippori Mincho, serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="var(--sub)">by 43 Sunsets</text></svg></a>
-  <nav class="cnav" aria-label="ページ"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/" aria-current="page">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの範囲と鮮度</a><a href="/cockpit/solutions/">ソリューション</a></nav>
+  <a class="logo" href="/signal/" aria-label="Signal by 43 Sunsets"><svg class="lockup" viewBox="0 8 300 62" role="img" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M14 40 A22 22 0 0 1 58 40" stroke="var(--accent)"/><path d="M23 40 A13 13 0 0 1 49 40" stroke="var(--accent)" opacity=".62"/><path d="M31 40 A5 5 0 0 1 41 40" stroke="var(--accent)" opacity=".38"/></g><path d="M10 46 H172" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" fill="none"/><text x="70" y="41" font-family="Shippori Mincho, serif" font-weight="700" font-size="36" fill="var(--ink)">Signal</text><text x="172" y="64" text-anchor="end" font-family="Shippori Mincho, serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="var(--sub)">by 43 Sunsets</text></svg></a>
+  <nav class="cnav" aria-label="ページ"><a href="/signal/">トップ</a><a href="/signal/permits/" aria-current="page">建設許可</a><a href="/signal/ucc/">UCC</a><a href="/signal/subsidies/">補助金</a><a href="/signal/hiring/">企業採用状況</a><a href="/signal/macro/">景気の状況</a><a href="/signal/freshness/">データの範囲と鮮度</a><a href="/signal/solutions/">ソリューション</a></nav>
   <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
@@ -407,7 +407,7 @@ function cardHtml(s){
   const p = s.parties || {};
   // 出所は色や札で主張しない(9/3 CEO): 自社所有の名前にだけツールチップで「登記名義(課税台帳/許可記録)から」
   const srcNote = inv.basis === "owner_occupier" ? (p.owner_kind === "課税台帳" ? "登記名義(郡の課税台帳)から" : "登記名義(許可記録の所有者欄)から") : "";
-  const invName = inv.name ? (s.company_id ? `<a class="companylink" href="/cockpit/company/?id=${/^C-\d+$/.test(s.company_id) ? s.company_id : ""}" target="_blank" rel="noopener" title="企業カルテ(4 つの情報源の出来事を 1 枚に)を開く${srcNote ? "・" + srcNote : ""}">${inv.name} ›</a>`
+  const invName = inv.name ? (s.company_id ? `<a class="companylink" href="/signal/company/?id=${/^C-\d+$/.test(s.company_id) ? s.company_id : ""}" target="_blank" rel="noopener" title="企業カルテ(4 つの情報源の出来事を 1 枚に)を開く${srcNote ? "・" + srcNote : ""}">${inv.name} ›</a>`
                              : s.karte ? `<button class="companylink" data-karte="${s.karte}" title="企業カルテを開く${srcNote ? "・" + srcNote : ""}">${inv.name} ›</button>` : `<span title="${srcNote}">${inv.name}</span>`)
                            : `<span class="unknown-inv">投資主体 未特定</span>`;
   const invChip = `<span class="chip inv ${inv.basis}" title="${INV_TIP[inv.basis] || ''}">${inv.label}</span>`;
@@ -677,7 +677,7 @@ boot();
 (function(){ const a=document.querySelector("aside"); const b=document.getElementById("filttoggle"); if(!a||!b) return;
   b.addEventListener("click", ()=>{ a.classList.toggle("open"); b.textContent = a.classList.contains("open") ? "絞り込みを閉じる ▴" : "絞り込み ▾"; }); })();
 </script>
-<script src="/cockpit/assets/health.js?v=20260907e" defer></script>
-<script src="/cockpit/assets/hit.js?v=20260905e" defer></script>
+<script src="/signal/assets/health.js?v=20260907e" defer></script>
+<script src="/signal/assets/hit.js?v=20260905e" defer></script>
 </body>
 </html>

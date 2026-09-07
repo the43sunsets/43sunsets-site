@@ -1,5 +1,5 @@
-// GET /cockpit/stats — daily instrument for the 10/6 buyer gate (v5 §7/§11): U (unique visitors), R (visitors seen on 2+ days), D (visitor-days), per source; "list" = list-attributed (utm_source=list|w1|w2…).
-// Aggregates "hit:<day>:<vid>" keys written by /cockpit/hit. PII-free. Optional ?since=YYYY-MM-DD (default: 90 days back).
+// GET /signal/stats — daily instrument for the 10/6 buyer gate (v5 §7/§11): U (unique visitors), R (visitors seen on 2+ days), D (visitor-days), per source; "list" = list-attributed (utm_source=list|w1|w2…).
+// Aggregates "hit:<day>:<vid>" keys written by /signal/hit. PII-free. Optional ?since=YYYY-MM-DD (default: 90 days back).
 export async function onRequestGet({ request, env }) {
   if (!env.BEACON_REQUESTS) return json({ ok: false, error: "no store bound" }, 503);
   const url = new URL(request.url);

@@ -1,4 +1,4 @@
-// POST /cockpit/hit — PII-free visit beacon for the free cockpit pages (v5 §4 T3: U = unique visitors by source, R = revisits).
+// POST /signal/hit — PII-free visit beacon for the free cockpit pages (v5 §4 T3: U = unique visitors by source, R = revisits).
 // Body: {vid, src, path}. vid = random id the browser keeps in localStorage (no cookie, no IP, no UA stored).
 // Stored in KV BEACON_REQUESTS under "hit:<day>:<vid>" (one key per visitor-day; TTL 90 days). Never read by the page.
 export async function onRequestPost({ request, env }) {

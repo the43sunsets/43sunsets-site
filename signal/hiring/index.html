@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>企業採用状況 — 中西部の設備投資シグナル | Signal by 43 Sunsets</title>
 <meta name="description" content="米国中西部 5 州(IL・IN・MI・OH・WI)の製造業の採用ページから、生産・設備保全・生産技術・品質・物流の求人を毎日数え、新設備の立ち上げ・一気に増員・新拠点の開設・じわり増員の兆しを検出。">
-<link rel="canonical" href="https://43sunsets.com/cockpit/hiring/">
+<link rel="canonical" href="https://43sunsets.com/signal/hiring/">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
 <meta property="og:title" content="企業採用状況 — 中西部の設備投資シグナル">
 <meta property="og:description" content="製造職の求人の増え方から、稼働と増産の兆しを捉える。">
-<meta property="og:url" content="https://43sunsets.com/cockpit/hiring/">
-<meta property="og:image" content="https://43sunsets.com/assets/og-signal.png?v=20260907">
+<meta property="og:url" content="https://43sunsets.com/signal/hiring/">
+<meta property="og:image" content="https://43sunsets.com/assets/og-signal.png?v=20260907b">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -76,15 +76,15 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
   aside > *:not(.filt-toggle){display:none;} aside.open > *{display:block;} aside.open > .filt-toggle{display:flex;} aside.open > label.fitem{display:flex;} aside{padding:12px 14px 4px;} }
 @media (max-width:760px){ .app{grid-template-columns:1fr;} aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);} }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907x">
-<script src="/cockpit/assets/favi.js?v=20260907t"></script>
-<script src="/cockpit/assets/nav.js?v=20260907n" defer></script>
-<script src="/cockpit/assets/cards.js?v=20260907q"></script>
+<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260907x">
+<script src="/signal/assets/favi.js?v=20260907t"></script>
+<script src="/signal/assets/nav.js?v=20260907n" defer></script>
+<script src="/signal/assets/cards.js?v=20260907q"></script>
 </head>
 <body>
 <header class="site-head">
-  <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="lockup" viewBox="0 8 300 62" role="img" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M14 40 A22 22 0 0 1 58 40" stroke="var(--accent)"/><path d="M23 40 A13 13 0 0 1 49 40" stroke="var(--accent)" opacity=".62"/><path d="M31 40 A5 5 0 0 1 41 40" stroke="var(--accent)" opacity=".38"/></g><path d="M10 46 H172" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" fill="none"/><text x="70" y="41" font-family="Shippori Mincho, serif" font-weight="700" font-size="36" fill="var(--ink)">Signal</text><text x="172" y="64" text-anchor="end" font-family="Shippori Mincho, serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="var(--sub)">by 43 Sunsets</text></svg></a>
-  <nav class="cnav" aria-label="ページ"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/" aria-current="page">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの範囲と鮮度</a><a href="/cockpit/solutions/">ソリューション</a></nav>
+  <a class="logo" href="/signal/" aria-label="Signal by 43 Sunsets"><svg class="lockup" viewBox="0 8 300 62" role="img" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M14 40 A22 22 0 0 1 58 40" stroke="var(--accent)"/><path d="M23 40 A13 13 0 0 1 49 40" stroke="var(--accent)" opacity=".62"/><path d="M31 40 A5 5 0 0 1 41 40" stroke="var(--accent)" opacity=".38"/></g><path d="M10 46 H172" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" fill="none"/><text x="70" y="41" font-family="Shippori Mincho, serif" font-weight="700" font-size="36" fill="var(--ink)">Signal</text><text x="172" y="64" text-anchor="end" font-family="Shippori Mincho, serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="var(--sub)">by 43 Sunsets</text></svg></a>
+  <nav class="cnav" aria-label="ページ"><a href="/signal/">トップ</a><a href="/signal/permits/">建設許可</a><a href="/signal/ucc/">UCC</a><a href="/signal/subsidies/">補助金</a><a href="/signal/hiring/" aria-current="page">企業採用状況</a><a href="/signal/macro/">景気の状況</a><a href="/signal/freshness/">データの範囲と鮮度</a><a href="/signal/solutions/">ソリューション</a></nav>
   <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
@@ -147,7 +147,7 @@ function cardHtml(s){
   const titles=(s.titles||[]).map(t=>`<li>${t.url?`<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.t)}</a>`:esc(t.t)}${t.posted?` <span>(${esc(t.posted)})</span>`:""}</li>`).join("");
   const prev=s.prev30!=null?`・30 日前 <span class="mono">${s.prev30}</span>`:"";
   return `<article class="card"><div class="srcline"><span class="chip src" title="採用ページの公開 API">${esc(s.source)}</span></div>
-    <div class="head"><span class="state">${esc(s.state)}</span><h3>${window.faviSlot ? faviSlot(s.company_id, s.company) : ""}<a class="companylink" href="/cockpit/company/?id=${esc(s.company_id)}" target="_blank" rel="noopener" title="企業カルテを開く">${esc(s.company)} ›</a></h3></div>
+    <div class="head"><span class="state">${esc(s.state)}</span><h3>${window.faviSlot ? faviSlot(s.company_id, s.company) : ""}<a class="companylink" href="/signal/company/?id=${esc(s.company_id)}" target="_blank" rel="noopener" title="企業カルテを開く">${esc(s.company)} ›</a></h3></div>
     <div>${types}${jp}${cross}<span class="chip">${esc(s.industry)}</span></div>
     <div class="loc">${esc(s.city||"拠点不明")}・製造職の求人 <span class="num">${s.open_mfg}</span> 件(全 ${s.open_all})・直近 30 日の新規 <span class="mono">${s.new30}</span>${prev}</div>
     <div class="roles">${roles}</div>
@@ -175,7 +175,7 @@ async function boot(){ setHeadH(); try{ const r=await fetch("../data/hiring.json
 boot();
 (function(){ const a=document.querySelector("aside"); const b=document.getElementById("filttoggle"); if(!a||!b) return; b.addEventListener("click",()=>{ a.classList.toggle("open"); b.textContent=a.classList.contains("open")?"絞り込みを閉じる ▴":"絞り込み ▾"; }); })();
 </script>
-<script src="/cockpit/assets/health.js?v=20260907e" defer></script>
-<script src="/cockpit/assets/hit.js?v=20260905e" defer></script>
+<script src="/signal/assets/health.js?v=20260907e" defer></script>
+<script src="/signal/assets/hit.js?v=20260905e" defer></script>
 </body>
 </html>
