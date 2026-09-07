@@ -241,7 +241,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 <aside>
   <button class="filt-toggle" id="filttoggle" type="button">絞り込み ▾</button>
   <label class="fitem jp-toggle"><input type="checkbox" id="jponly">日系関連のみ表示</label>
-  <label class="fitem jp-toggle" title="未分類 = AI が読んだ結果、設備投資の 4 分類(製造能力の増強・物流倉庫の新設・データセンター建設・研究医療航空宇宙)のどれにも当てはまらなかった記録、または用途が読めず判定できなかった記録。大半は住宅の屋根・フェンス・太陽光や小売の改装。"><input type="checkbox" id="showunc">未分類も表示 <span class="cnt" id="unccnt"></span></label>
+  <label class="fitem jp-toggle" title="未分類 = AI が読んだ結果、設備投資の 5 分類(製造能力の増強・物流倉庫の新設・データセンター建設・医療施設・研究ラボ施設)のどれにも当てはまらなかった記録、または用途が読めず判定できなかった記録。大半は住宅の屋根・フェンス・太陽光や小売の改装。"><input type="checkbox" id="showunc">未分類も表示 <span class="cnt" id="unccnt"></span></label>
 
   <div class="fgroup">
     <h2>州</h2>
@@ -256,7 +256,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
     <div id="f-industry"></div>
   </div>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
-  <div class="fnote">業種・投資種類は固定の分類語彙への AI 割り当てです(DB に保存・出所つき)。4 分類のどれでもないもの、確信度が低いものは「未分類」に置き、既定では表示しません — 上のトグルで出せます(誰かにとってはシグナルになりうるため除外はしません)。件数は現在の表示集合の全数。</div>
+  <div class="fnote">業種・投資種類は固定の分類語彙への AI 割り当てです(DB に保存・出所つき)。5 分類のどれでもないもの、確信度が低いものは「未分類」に置き、既定では表示しません — 上のトグルで出せます(誰かにとってはシグナルになりうるため除外はしません)。件数は現在の表示集合の全数。</div>
 </aside>
 
 <main>
@@ -277,7 +277,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
     <div id="scopebox">読み込み中…</div>
     <ul id="scopenotes">
       <li>本面は 5 州の悉皆ではありません。どの自治体をいつ取れているか、源ごとの状態、郡別の網羅は「<a href="../freshness/">データの鮮度と網羅</a>」ページ(毎日更新)をご覧ください。</li>
-      <li>「未評価」= 全件保存済みだが AI がまだ読んでいない行。「未分類」= 読んだが 4 分類のどれでもない、または確信度が低い行(トグルで表示可)。</li>
+      <li>「未評価」= 全件保存済みだが AI がまだ読んでいない行。「未分類」= 読んだが 5 分類のどれでもない、または確信度が低い行(トグルで表示可)。</li>
       <li>所有者名は許可記録にあればそれ、無い市は課税台帳(公開)を地番・住所で引いて補っています(カードに出所を表示)。課税台帳の名義は土地所有者で、テナントの投資は SPE・家主名で出ることがあります。</li>
       <li>金額の定義は市により異なります(申告工事費/評価額)。Express 許可の申告額は工事規模を表さないことがあり、その旨を注記しています。</li>
     </ul>
@@ -302,7 +302,7 @@ let SIGNALS = [];   // 読み込み後に充填
 let META = null;
 let COMPANIES = [];
 const STATES = ["IL","IN","MI","OH","WI"];
-const CATEGORIES = ["製造能力の増強","物流・倉庫の新設","データセンター建設","研究・医療・航空宇宙"];
+const CATEGORIES = ["製造能力の増強","物流・倉庫の新設","データセンター建設","医療施設(病院・クリニック)","研究・ラボ施設"];
 const INDUSTRIES = ["半導体・電子","医薬・ライフサイエンス","航空宇宙","軍事・防衛","自動車部品","機械・金属","食品・素材加工","物流・EC","データセンター","その他製造","未分類"];
 const PAGE_SIZE = 8;
 let page = 1;
@@ -418,7 +418,7 @@ function cardHtml(s){
   const nw = s.new ? `<span class="chip newchip" title="${META ? META.new_rule : ''}">NEW</span>` : "";
   const note = s.note ? `<div class="loc" style="margin-top:4px">注記: ${s.note}</div>` : "";
   const src = "";
-  const unc = s.category==="未分類" ? `<span class="chip" title="未分類 = AI が読んだ結果、設備投資の 4 分類のどれにも当てはまらない、または用途が読めず判定できない記録">未分類</span>` : `<span class="chip">${s.category}</span>`;
+  const unc = s.category==="未分類" ? `<span class="chip" title="未分類 = AI が読んだ結果、設備投資の 5 分類のどれにも当てはまらない、または用途が読めず判定できない記録">未分類</span>` : `<span class="chip">${s.category}</span>`;
   return `<article class="card">
     ${srcChip ? `<div class="srcline">${srcChip}</div>` : ""}
     <div class="head"><span class="state">${s.state}</span><h3>${invName}</h3>${invChip}</div>
