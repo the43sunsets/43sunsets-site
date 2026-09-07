@@ -37,7 +37,8 @@ body header.site-head{ display:flex; align-items:center; gap:24px; padding:12px 
 @media (max-width:900px){ .site-head .cnav{ display:none; } .site-head .bmark{ width:34px; height:34px; } .site-head .bword{ font-size:22px; } }
 .facehead{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:0 0 12px; margin-bottom:16px; border-bottom:1px solid var(--line); }
 .facehead .meta{ font-size:13px; color:var(--sub); }
-.facehead .pagetitle{ margin:0; font-family:var(--serif, "Shippori Mincho", serif); font-size:24px; }
+.facehead .pagetitle{ margin:0; font-family:var(--serif, "Shippori Mincho", serif); font-size:24px; white-space:nowrap; flex:none; }
+.facehead--plain .meta{ flex:1 1 auto; min-width:0; }
 .facehead--plain{ padding:22px 40px 12px; margin:0; }
 /* ── 企業カルテ: ヘッダーなし・本体上部の細い帯(配色切り替え+閉じる) ── */
 .kbar{ max-width:940px; margin:0 auto; padding:16px 24px 0; display:flex; align-items:center; justify-content:space-between; gap:16px; }
