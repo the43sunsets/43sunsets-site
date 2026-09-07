@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 278495.0,
-"latest": "2026-07-13",
+"count": 3,
+"value_total": 26170769.0,
+"latest": "2026-07-15",
 "items": [
+{
+"id": "S-18261",
+"date": "2026-07-15",
+"applied": "2025-12-18",
+"state": "IL",
+"jurisdiction": "Westmont",
+"address": "6015 S CASS AVE WESTMONT IL 60559",
+"permit_no": "Com-001454-2025",
+"permit_type": "Commercial - New Construction",
+"value": 25892274.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Westmont村(自治体)による新築工事 $25.9M(用途詳細不明)。",
+"infer": "所有者が自治体であり公共施設(市庁舎・公共施設等)の新築の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - New Construction / New Construction",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_019XzxWUw7oqJNUjA8R9MHAc",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-17847",
 "date": "2026-07-13",
@@ -88,6 +112,13 @@
 },
 "timeline": [
 {
+"date": "2026-07-15",
+"face": "permits",
+"title": "建設許可(Westmont): 未分類",
+"ref": "S-18261",
+"summary": "Westmont村(自治体)による新築工事 $25.9M(用途詳細不明)。"
+},
+{
 "date": "2026-07-13",
 "face": "permits",
 "title": "建設許可(Westmont): 未分類",
@@ -102,6 +133,6 @@
 "summary": "Westmont 1 S CASS AVE Unit102、Village of Westmont による音響拡声許可。"
 }
 ],
-"generated_at": "2026-09-07T17:49:16+00:00",
+"generated_at": "2026-09-07T21:00:17+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
