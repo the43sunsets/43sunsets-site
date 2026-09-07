@@ -4,156 +4,150 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>43 Sunsets — 中西部の日系製造拠点の、営業と本社報告に残る手作業を一業務ずつ</title>
-<meta name="description" content="シカゴ近郊の一人会社。日本の本社の言葉が分かり、米国の現場を回し、自分で組みます。いま提供しているのは Signal。次に動く会社を公開情報から先に見つける営業の照準器です。">
+<title>43 Sunsets — 米国の日系製造業を、もっと身軽に。</title>
+<meta name="description" content="小さく始めて、早く結果を出す。経営企画、営業、マーケティング、顧客対応。現場に残る手作業や非効率を、AI と自動化で一業務ずつ仕組みに変えます。">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/slat-sun-64.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
-:root{ --paper:#F6F7F5; --card:#FFFFFF; --ink:#20262E; --sub:#5A636E; --line:#D9DDD9; --line-soft:#E7EAE6; --accent:#2F5D8A; --fact:#2E6E4E; --infer:#8A5A2F; --infer-bg:#F7F1E8; --gold:#E0A64B; --ember:#D9714A;
+:root{ --paper:#FBFBF9; --ink:#14181D; --sub:#5A636E; --line:#D6D9D4; --line-soft:#E8EAE5; --accent:#2F5D8A; --fact:#2E6E4E; --infer:#8A5A2F; --gold:#E0A64B; --ember:#D9714A;
   --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif; --sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace; }
 *{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
-/* header */
-header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-soft)}
-.hd{display:flex;align-items:center;justify-content:space-between;height:68px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand svg{display:block}
-.brand .w{font-family:var(--serif);font-weight:700;font-size:21px;letter-spacing:.06em}
-nav{display:flex;gap:28px;font-family:var(--serif);font-weight:700;font-size:15px;letter-spacing:.06em}
-nav a{text-decoration:none;color:var(--ink);padding:6px 0;border-bottom:2px solid transparent}
-nav a:hover{border-color:var(--ink)}
-nav a.lang{color:var(--sub);font-family:var(--mono);font-weight:600;letter-spacing:.08em;font-size:13px}
-/* sunset rule = ブランドの夕日を細い線で */
-.sunrule{height:3px;background:linear-gradient(90deg,var(--gold),var(--ember) 45%,var(--accent))}
-/* block 1 */
-.herowrap{position:relative;isolation:isolate;background:var(--paper) url(/assets/hero/corp-a.webp) no-repeat right center;background-size:cover;min-height:620px;display:flex;align-items:center}
-.herowrap.b{background-image:url(/assets/hero/corp-b.webp)}
-.herowrap::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--paper) 0%,color-mix(in srgb,var(--paper) 90%,transparent) 36%,color-mix(in srgb,var(--paper) 45%,transparent) 54%,transparent 70%)}
-.hero{padding:72px 0 64px;max-width:720px}
-.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.facts > div{padding:26px 28px 28px;border-right:1px solid var(--line);font-size:15px;color:var(--sub)}
-.facts > div:last-child{border-right:0}
-.facts h3{font-family:var(--serif);font-size:14px;letter-spacing:.12em;color:var(--ink);margin:0 0 10px;font-weight:700}
-.facts p{margin:0}
-.kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;color:var(--sub);margin:0 0 22px}
-.kicker b{color:var(--accent);font-weight:600}
-h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,3.8vw,46px);line-height:1.32;letter-spacing:.01em;margin:0 0 26px}
-.lead{font-size:17.5px;color:var(--ink);margin:0 0 34px;max-width:640px}
-.cta{display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:4px;text-decoration:none;font-weight:700;font-size:15px;border:1.5px solid var(--ink);transition:transform .15s ease}
+.wrap{max-width:1200px;margin:0 auto;padding:0 56px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;text-decoration:none;font-weight:700;font-size:14.5px;letter-spacing:.04em;border:1.5px solid currentColor;transition:transform .15s ease}
 .btn:hover{transform:translateY(-1px)}
-.btn.pri{background:var(--ink);color:var(--paper)}
-.btn.sec{background:transparent;color:var(--ink)}
-.btn small{font-weight:500;color:inherit;opacity:.7;font-size:12.5px}
-.states{margin:28px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--sub);letter-spacing:.06em}
-/* section common */
-section{padding:72px 0;border-top:1px solid var(--line)}
-.sec-h{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;margin-bottom:40px}
-.num{font-family:var(--mono);font-size:13px;letter-spacing:.14em;color:var(--sub);padding-top:10px}
-h2{font-family:var(--serif);font-weight:800;font-size:clamp(24px,2.6vw,32px);line-height:1.4;margin:0 0 12px}
-.sec-h p{margin:0;color:var(--sub);max-width:720px}
-/* block 2 evidence */
-.evi{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px}
-.ledger{border-top:3px solid var(--ink)}
-.pick{display:grid;grid-template-columns:56px minmax(0,1fr) 180px;gap:18px;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
-.pick:hover .t{text-decoration:underline}
-.pick .n{font-family:var(--mono);font-size:26px;font-weight:600;color:var(--ink);line-height:1}
-.pick .t{font-family:var(--serif);font-weight:700;font-size:18px;line-height:1.5;margin:0 0 6px}
+.btn small{font-weight:500;opacity:.72;font-size:12px}
+/* ===== hero (V2 光) ===== */
+.hero{position:relative;min-height:92vh;min-height:92svh;background:#9AA6B2 url(/assets/hero/photo-a.webp) center/cover no-repeat;color:#fff;display:flex;flex-direction:column}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,29,.22) 0%,rgba(20,24,29,0) 26%,rgba(20,24,29,0) 52%,rgba(20,24,29,.66) 100%);pointer-events:none}
+.hd{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:26px 56px}
+.brand{font-family:var(--serif);font-size:22px;font-weight:800;letter-spacing:.1em;text-decoration:none;color:#fff}
+nav{display:flex;gap:28px;font-family:var(--serif);font-weight:700;font-size:14.5px;letter-spacing:.08em}
+nav a{color:#fff;text-decoration:none;opacity:.92;border-bottom:1.5px solid transparent;padding-bottom:3px}
+nav a:hover{border-color:#fff;opacity:1}
+nav a.lang{font-family:var(--mono);font-weight:600;letter-spacing:.14em;font-size:12.5px}
+.hero .txt{position:relative;z-index:2;margin-top:auto;padding:0 56px 64px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;align-items:end}
+.hero .k{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.18em;background:rgba(20,24,29,.5);padding:6px 12px;border-radius:2px;margin:0 0 20px}
+.hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(38px,4.6vw,62px);line-height:1.26;margin:0;text-shadow:0 2px 28px rgba(0,0,0,.28)}
+.hero .lead{font-size:15.5px;line-height:1.95;margin:0 0 28px;color:rgba(255,255,255,.94);text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero .lead p{margin:0 0 10px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero .btn{color:#fff}
+.hero .btn.pri{background:#fff;color:var(--ink);border-color:#fff}
+/* ===== sections (V1 の作法: 紙・明朝・罫のみ) ===== */
+section{padding:88px 0 96px;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.sec-h{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px;margin-bottom:44px}
+.num{font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;color:var(--sub);padding-top:12px}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(26px,2.8vw,36px);line-height:1.4;margin:0 0 14px;letter-spacing:.005em}
+.sec-h p{margin:0;color:var(--sub);max-width:760px}
+/* Signal */
+.evi{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:56px}
+.ledger{border-top:2px solid var(--ink)}
+.pick{display:grid;grid-template-columns:60px minmax(0,1fr) 170px;gap:20px;padding:24px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.pick:hover .t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.pick .n{font-family:var(--serif);font-size:30px;font-weight:800;line-height:1;color:var(--ink)}
+.pick .t{font-family:var(--serif);font-weight:700;font-size:19px;line-height:1.5;margin:0 0 6px}
 .pick .b{margin:0;color:var(--sub);font-size:14.5px}
-.pick .m{font-family:var(--mono);font-size:12px;color:var(--sub);text-align:right;letter-spacing:.04em}
-.pick .m b{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:2px 8px;font-weight:600;color:var(--fact);margin-bottom:8px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px 24px}
-.stat h3{font-family:var(--serif);font-size:14px;letter-spacing:.1em;margin:0 0 14px}
-.stat dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:10px 16px;font-size:14px}
-.stat dt{color:var(--sub)} .stat dd{margin:0;font-family:var(--mono);font-weight:600;text-align:right}
-.stat .upd{margin:16px 0 0;font-family:var(--mono);font-size:12px;color:var(--sub)}
-.stat .go{display:block;margin-top:18px;font-weight:700;text-decoration:none;color:var(--accent)}
-.note{margin:26px 0 0;padding:16px 20px;background:var(--infer-bg);border-left:3px solid var(--infer);font-size:14px;color:var(--infer)}
-/* block 3 */
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:0 0 40px}
-.step{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px 22px 24px;position:relative}
-.step i{font-family:var(--mono);font-style:normal;font-size:12px;color:var(--sub);letter-spacing:.14em}
-.step h3{font-family:var(--serif);font-size:19px;margin:8px 0 10px}
+.pick .m{font-family:var(--mono);font-size:12px;color:var(--sub);text-align:right;letter-spacing:.04em;line-height:1.7}
+.pick .m b{color:var(--fact);font-weight:600;display:block}
+.stat{border-top:2px solid var(--ink);padding-top:18px}
+.stat h3{font-family:var(--serif);font-size:14px;letter-spacing:.12em;margin:0 0 14px;font-weight:700}
+.stat dl{margin:0}
+.stat .r{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:14px}
+.stat dt{color:var(--sub)} .stat dd{margin:0;font-family:var(--serif);font-weight:800;font-size:22px}
+.stat .upd{margin:14px 0 0;font-family:var(--mono);font-size:11.5px;color:var(--sub);letter-spacing:.04em}
+.stat .go{display:inline-block;margin-top:22px;font-family:var(--serif);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:2px}
+.note{margin:28px 0 0;font-size:14px;color:var(--sub);max-width:720px}
+.note b{color:var(--ink);font-weight:600}
+/* 進め方 */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink);margin:0 0 56px}
+.step{padding:24px 28px 30px 0;border-right:1px solid var(--line);margin-right:28px}
+.step:last-child{border-right:0;margin-right:0}
+.step i{font-family:var(--mono);font-style:normal;font-size:11.5px;color:var(--sub);letter-spacing:.16em}
+.step h3{font-family:var(--serif);font-size:22px;margin:10px 0 10px;font-weight:800}
 .step p{margin:0;font-size:14.5px;color:var(--sub)}
-.bounds{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.bounds h3{font-family:var(--serif);font-size:16px;letter-spacing:.06em;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.bounds{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.bounds h3{font-family:var(--serif);font-size:15px;letter-spacing:.1em;margin:0 0 6px;padding-bottom:10px;border-bottom:2px solid var(--ink);font-weight:700}
 .bounds ul{margin:0;padding:0;list-style:none;font-size:15px}
-.bounds li{padding:8px 0;border-bottom:1px solid var(--line-soft);display:flex;gap:12px}
+.bounds li{padding:11px 0;border-bottom:1px solid var(--line-soft);display:flex;gap:14px}
 .bounds li::before{content:"—";color:var(--sub);flex:none}
 .bounds .no li::before{content:"×";color:var(--ember)}
-/* block 4 */
-.who{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
-.who .name{font-family:var(--serif);font-size:26px;font-weight:800;margin:0 0 4px}
-.who .rom{font-family:var(--mono);font-size:13px;color:var(--sub);letter-spacing:.08em;margin:0 0 22px}
+/* 責任者 */
+.who{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:64px;align-items:start;border-top:2px solid var(--ink);padding-top:28px}
+.who .name{font-family:var(--serif);font-size:30px;font-weight:800;margin:0 0 4px}
+.who .rom{font-family:var(--mono);font-size:12px;color:var(--sub);letter-spacing:.12em;margin:0 0 24px}
 .who ul{margin:0 0 24px;padding:0;list-style:none;font-size:15.5px}
-.who li{padding:10px 0;border-top:1px solid var(--line-soft)}
+.who li{padding:12px 0;border-top:1px solid var(--line-soft)}
 .who li:last-child{border-bottom:1px solid var(--line-soft)}
-.contact{background:var(--ink);color:var(--paper);border-radius:6px;padding:32px 34px}
-.contact h3{font-family:var(--serif);font-size:22px;margin:0 0 12px}
-.contact p{margin:0 0 18px;color:#C9D0D8;font-size:15px}
-.contact a.mail{font-family:var(--mono);font-size:18px;color:#fff;text-decoration:none;border-bottom:1px solid #6b7683}
-.contact .sm{margin:22px 0 0;font-size:13px;color:#9AA4AE}
-footer{border-top:1px solid var(--line);padding:34px 0 48px;font-size:13.5px;color:var(--sub)}
+.contact h3{font-family:var(--serif);font-size:24px;margin:0 0 14px;font-weight:800}
+.contact p{margin:0 0 20px;color:var(--sub);font-size:15px}
+.contact a.mail{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:2px}
+.contact .sm{margin:22px 0 0;font-size:13px;color:var(--sub)}
+footer{border-top:1px solid var(--line);padding:34px 0 52px;font-size:13px;color:var(--sub)}
 footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-footer a{color:var(--sub);text-decoration:none;margin-right:18px}
-footer a:hover{color:var(--ink)}
-@media (max-width:900px){ .wrap{padding:0 22px} .herowrap{min-height:520px;background-position:right -120px center} .hero{padding:48px 0 40px} .facts{grid-template-columns:1fr} .facts > div{border-right:0;border-bottom:1px solid var(--line-soft)} .sec-h{grid-template-columns:1fr;gap:8px} .evi{grid-template-columns:1fr} .steps{grid-template-columns:1fr 1fr} .who{grid-template-columns:1fr} nav{gap:18px;font-size:14px} }
-@media (max-width:600px){ .herowrap{min-height:auto;background-size:auto 46%;background-position:right bottom} .hero{padding:40px 0 200px} nav a:not(.lang):not(.keep){display:none} .steps{grid-template-columns:1fr} .bounds{grid-template-columns:1fr} .pick{grid-template-columns:44px minmax(0,1fr)} .pick .m{grid-column:2;text-align:left} }
+footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover{color:var(--ink)}
+@media (max-width:1000px){ .wrap{padding:0 28px} .hd{padding:22px 28px} .hero .txt{grid-template-columns:1fr;gap:24px;padding:0 28px 48px} .sec-h{grid-template-columns:1fr;gap:6px} .evi{grid-template-columns:1fr} .steps{grid-template-columns:1fr 1fr} .step{margin-right:20px} .step:nth-child(2){border-right:0} .who{grid-template-columns:1fr;gap:40px} }
+@media (max-width:640px){
+  nav a:not(.lang){display:none}
+  /* 携帯: 写真は上に短く・言葉は紙の面に */
+  .hero{min-height:auto;background-size:cover;background-position:center 40%;color:var(--ink);padding-top:44vh;padding-top:44svh}
+  .hero::after{display:none}
+  .hero .hd{position:absolute;top:0;left:0;right:0;color:#fff} .hero .hd .brand,.hero .hd nav a{color:#fff}
+  .hero .txt{background:var(--paper);padding:32px 22px 40px;margin-top:0}
+  .hero h1{text-shadow:none;font-size:34px}
+  .hero .k{background:var(--ink);color:#fff}
+  .hero .lead{color:var(--ink);text-shadow:none}
+  .hero .btn{color:var(--ink)} .hero .btn.pri{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .wrap{padding:0 22px} section{padding:56px 0 64px}
+  .steps{grid-template-columns:1fr} .step{border-right:0;margin-right:0;border-bottom:1px solid var(--line-soft)}
+  .bounds{grid-template-columns:1fr;gap:32px}
+  .pick{grid-template-columns:44px minmax(0,1fr)} .pick .m{grid-column:2;text-align:left}
+}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap hd">
-    <a class="brand" href="/" aria-label="43 Sunsets">
-      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M4 22 A13 13 0 0 1 30 22" fill="none" stroke="var(--ember)" stroke-width="2.4" stroke-linecap="round"/><path d="M9 22 A8 8 0 0 1 25 22" fill="none" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" opacity=".8"/><path d="M3 26 H31" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/></svg>
-      <span class="w">43 Sunsets</span>
-    </a>
+
+<header class="hero" id="top">
+  <div class="hd">
+    <a class="brand" href="/">43 Sunsets</a>
     <nav>
       <a href="#signal">Signal</a>
-      <a href="#pilot">進め方</a>
-      <a href="#who" class="keep">責任者</a>
+      <a href="#how">進め方</a>
+      <a href="#who">責任者</a>
       <a href="/studio/">Studio</a>
       <a class="lang" href="/en/" hreflang="en" lang="en">EN</a>
     </nav>
   </div>
-  <div class="sunrule"></div>
+  <div class="txt">
+    <div>
+      <p class="k">小さく始めて、早く結果を出す。</p>
+      <h1>米国の日系製造業を、<br>もっと身軽に。</h1>
+    </div>
+    <div>
+      <div class="lead">
+        <p>経営企画、営業、マーケティング、顧客対応。現場に残る手作業や非効率を、AI と自動化で一業務ずつ仕組みに変えます。</p>
+        <p>大きなシステム導入から始める必要はありません。いま一番困っている仕事から、まず変える。</p>
+        <p>経営と現場を知る本人が、話を聞き、つくり、実際の業務の中で直していきます。</p>
+      </div>
+      <div class="ctas">
+        <a class="btn pri" href="#signal">いま提供しているもの</a>
+        <a class="btn" href="mailto:hello@43sunsets.com?subject=30%20分の相談">30 分の相談 <small>無料</small></a>
+      </div>
+    </div>
+  </div>
 </header>
 
 <main>
-<!-- 1. 誰の、どの仕事 -->
-<div class="herowrap" id="herowrap">
-  <div class="wrap">
-    <div class="hero">
-      <p class="kicker">中西部 · <b>日系製造業の米国拠点</b>のために</p>
-      <h1>営業と本社報告に残る<br>手作業を、一業務ずつなくす。</h1>
-      <p class="lead">シカゴ近郊の一人会社です。日本の本社の言葉が分かり、米国の現場を回し、自分で組みます。いま提供しているのは <b>Signal</b>。次に動く会社を公開情報から先に見つける、営業の照準器です。</p>
-      <div class="cta">
-        <a class="btn pri" href="/signal/">Signal を見る <small>無料・登録なし</small></a>
-        <a class="btn sec" href="mailto:hello@43sunsets.com?subject=30%20分の相談">30 分の相談 <small>無料</small></a>
-      </div>
-      <p class="states">IL · IN · MI · OH · WI</p>
-    </div>
-  </div>
-</div>
-<div class="wrap">
-  <div class="facts">
-    <div><h3>やること</h3><p>営業先の照準(Signal)。本社報告・営業・顧客対応に残る手作業を、一業務ずつ試作して実地で検証します。</p></div>
-    <div><h3>やらないこと</h3><p>ERP や生産制御の置き換え。24 時間の運用監視。法務・会計の判断。</p></div>
-    <div><h3>いまの状態</h3><p>Signal は毎日更新の無料公開。個社向けの試作は、同時に 1 件だけ受けています。</p></div>
-  </div>
-</div>
-
-<!-- 2. Signal の証拠 -->
 <section id="signal">
   <div class="wrap">
     <div class="sec-h">
-      <div class="num">01 — 証拠</div>
+      <div class="num">01 — いま提供しているもの</div>
       <div>
-        <h2>Signal は、中西部で次に動く会社を先に示します。</h2>
-        <p>建設許可・動産担保登記(UCC)・政府補助金・求人の公開情報を毎日調べ、「どの会社に」「何が起きていて」「なぜ今、声をかけるのか」まで示します。下は今週の実物です。</p>
+        <h2>Signal — 次に動く会社が、先に分かる。</h2>
+        <p>建設許可・動産担保登記(UCC)・政府補助金・求人の公開情報を毎日調べ、「どの会社に」「何が起きていて」「なぜ今、声をかけるのか」まで示す、営業の照準器です。イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの 5 州。無料・登録なし。下は今週の実物です。</p>
       </div>
     </div>
     <div class="evi">
@@ -161,31 +155,30 @@ footer a:hover{color:var(--ink)}
         <div class="ledger" id="picks"><p style="padding:22px 0;color:var(--sub)">今週の動きを読み込んでいます…</p></div>
         <p class="note">公開情報で確認できた<b>事実</b>と、そこから考えられる営業の<b>ヒント</b>は分けて表示しています。誤りに気づかれたら hello@43sunsets.com へ。確認して直します。</p>
       </div>
-      <div class="stat" id="stat">
+      <div class="stat">
         <h3>いまの規模</h3>
-        <dl id="counts"><dt>読み込み中</dt><dd>…</dd></dl>
+        <dl id="counts"><div class="r"><dt>読み込み中</dt><dd>…</dd></div></dl>
         <p class="upd" id="upd"></p>
-        <a class="go" href="/signal/">Signal の全体を見る →</a>
+        <a class="go" href="/signal/">Signal を開く →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 3. 限定パイロットと境界 -->
-<section id="pilot">
+<section id="how">
   <div class="wrap">
     <div class="sec-h">
       <div class="num">02 — 進め方と境界</div>
       <div>
-        <h2>いま受けているのは、一業務の限定パイロットです。</h2>
-        <p>「バックオフィス全般」は約束しません。一番痛い一業務を、小さく作って、使う人が実際の仕事で試してから引き渡します。</p>
+        <h2>一番困っている仕事から、一つずつ。</h2>
+        <p>「全部まとめて」は引き受けません。一業務を小さく作り、使う人が実際の仕事の中で試してから引き渡します。同時に受けるのは 1 件です。</p>
       </div>
     </div>
     <div class="steps">
-      <div class="step"><i>STEP 1</i><h3>診断</h3><p>無料・1 時間。困りごとと、いま使っている道具・台帳を見せていただきます。</p></div>
-      <div class="step"><i>STEP 2</i><h3>試作</h3><p>2〜4 週間で一業務を一つ。固定価格。既存の Microsoft・ERP 環境はそのまま使います。</p></div>
-      <div class="step"><i>STEP 3</i><h3>実地検証</h3><p>使う人が実際の仕事で試し、導入前の数字と比べます。作った本人だけの判定では出荷しません。</p></div>
-      <div class="step"><i>STEP 4</i><h3>引き渡し</h3><p>手順書・設定・データはすべてお客様のもの。私が不在でも引き継げる形で納めます。</p></div>
+      <div class="step"><i>01</i><h3>話を聞く</h3><p>無料・1 時間。困りごとと、いま使っている道具・台帳を見せていただきます。</p></div>
+      <div class="step"><i>02</i><h3>つくる</h3><p>2〜4 週間で一業務を一つ。固定価格。既存の Microsoft・ERP 環境はそのまま使います。</p></div>
+      <div class="step"><i>03</i><h3>業務の中で直す</h3><p>使う人が実際の仕事で試し、導入前の数字と比べます。作った本人だけの判定では出荷しません。</p></div>
+      <div class="step"><i>04</i><h3>引き渡す</h3><p>手順書・設定・データはすべてお客様のもの。私が不在でも引き継げる形で納めます。</p></div>
     </div>
     <div class="bounds">
       <div>
@@ -210,27 +203,26 @@ footer a:hover{color:var(--ink)}
   </div>
 </section>
 
-<!-- 4. 責任者と問い合わせ -->
 <section id="who">
   <div class="wrap">
     <div class="sec-h">
       <div class="num">03 — 責任者</div>
-      <div><h2>作る人と、責任を持つ人は同じです。</h2></div>
+      <div><h2>つくる人と、責任を持つ人は同じです。</h2></div>
     </div>
     <div class="who">
       <div>
         <p class="name">八尾 健太郎</p>
-        <p class="rom">KENTAROH YAO · 43 Sunsets 代表 · シカゴ近郊</p>
+        <p class="rom">KENTAROH YAO · 43 SUNSETS · CHICAGO</p>
         <ul>
           <li>日本で IT コンサルとして、大手保険会社のプロジェクト管理ツールを一から作り、現場に定着させた。</li>
           <li>日米の製造業で 20 年以上、営業とオペレーションの仕組みを作ってきた。経営企画・社長補佐・GM として、インサイドセールス・カスタマーサクセス・カスタマーサービス・DX を経営側から見た。</li>
           <li>いまはシカゴ近郊で一人、Signal を毎日動かしている。</li>
         </ul>
-        <p style="margin:0;color:var(--sub);font-size:14.5px">これまでに公開した n8n テンプレートや AI エージェント用スキルは <a href="/studio/">Studio</a> にあります。同じ考え方で作ったものです。</p>
+        <p style="margin:0;color:var(--sub);font-size:14.5px">これまでに公開した n8n テンプレートや AI エージェント用スキルは <a href="/studio/">Studio</a> に。同じ考え方で作ったものです。</p>
       </div>
       <div class="contact">
         <h3>まず 30 分、話しませんか。</h3>
-        <p>困りごとを 2〜3 行で。いま使っている道具の名前があれば添えてください。売り込みはしません。合わなければそう言います。</p>
+        <p>困りごとを 2〜3 行で。いま使っている道具の名前があれば添えてください。売り込みはしません。合わなければ、そう言います。</p>
         <a class="mail" href="mailto:hello@43sunsets.com">hello@43sunsets.com</a>
         <p class="sm">返信は 1 営業日以内(月〜金・米中部時間)。日本語・英語どちらでも。</p>
       </div>
@@ -248,21 +240,22 @@ footer a:hover{color:var(--ink)}
 
 <script src="/signal/assets/favi.js?v=20260907t"></script>
 <script>
-if(new URLSearchParams(location.search).get("hero")==="b") document.getElementById("herowrap").classList.add("b");
 (async () => {
-  const jaFace = {UCC:"動産担保登記", "建設許可":"建設許可", "補助金":"補助金", "採用":"採用"};
+  const jaFace = {UCC:"動産担保登記", "許可":"建設許可", "建設許可":"建設許可", "補助金":"補助金", "採用":"採用"};
   try {
     const r = await fetch("/cockpit/data/top.json", {cache:"no-store"}); const t = await r.json();
     const picks = (t.picks || []).slice(0, 3);
-    document.getElementById("picks").innerHTML = picks.map((p, i) => `
-      <a class="pick" href="/signal/company/?id=${encodeURIComponent(p.karte || "")}" target="_blank" rel="noopener">
+    document.getElementById("picks").innerHTML = picks.map((p, i) => {
+      const name = p.company || ""; const disp = (typeof displayName === "function" && name) ? displayName(name) : name;
+      const title = (p.move || p.title || "").replace(name || " ", disp);
+      return `<a class="pick" href="/signal/company/?id=${encodeURIComponent(p.karte || "")}" target="_blank" rel="noopener">
         <div class="n">${String(i + 1).padStart(2, "0")}</div>
-        <div><p class="t">${(p.move || p.title || "").replace(p.company || "\u0000", (typeof displayName==="function" && p.company) ? displayName(p.company) : (p.company||""))}</p><p class="b">${p.body || ""}</p></div>
-        <div class="m"><b>${jaFace[p.face] || p.face || ""}</b><br>${p.date || ""}</div>
-      </a>`).join("") || `<p style="padding:22px 0;color:var(--sub)">今週の動きはまだありません。</p>`;
+        <div><p class="t">${title}</p><p class="b">${p.body || ""}</p></div>
+        <div class="m"><b>${jaFace[p.face] || p.face || ""}</b>${p.date || ""}</div></a>`; }).join("")
+      || `<p style="padding:22px 0;color:var(--sub)">今週の動きはまだありません。</p>`;
     const c = t.counts || {};
     const rows = [["設備投資シグナル(建設許可)", c.permits_targets], ["うち直近 90 日", c.permits_new90], ["動産担保登記(UCC)の読み", c.ucc_read], ["UCC で見えた会社", c.ucc_companies]].filter(x => x[1] != null);
-    document.getElementById("counts").innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd>${Number(v).toLocaleString("ja-JP")} 件</dd>`).join("") || "<dt>集計</dt><dd>—</dd>";
+    document.getElementById("counts").innerHTML = rows.map(([k, v]) => `<div class="r"><dt>${k}</dt><dd>${Number(v).toLocaleString("ja-JP")}<span style="font-size:13px;font-weight:500;color:var(--sub)"> 件</span></dd></div>`).join("");
     document.getElementById("upd").textContent = "更新 " + (t.updated_ct || "") + (t.next_update_ct ? " · 次回 " + t.next_update_ct : "");
   } catch (e) {
     document.getElementById("picks").innerHTML = `<p style="padding:22px 0;color:var(--sub)">いま読み込めません。<a href="/signal/">Signal 本体</a>をご覧ください。</p>`;
