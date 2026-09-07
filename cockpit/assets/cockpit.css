@@ -25,7 +25,7 @@ body header.site-head{ display:flex; align-items:center; gap:24px; padding:10px 
 /* 9/7 CEO 採択: ロゴタイプ B-2(印+Signal・線の下段に by 43 Sunsets を右端揃え)。高さ 50px = 語が約 29px(旧 27px より一回り大) */
 .site-head .logo svg.lockup{ height:50px; width:auto; display:block; overflow:visible; }
 @media (max-width:900px){ .site-head .logo svg.lockup{ height:42px; } }
-@media (max-width:600px){ .site-head .logo svg.lockup{ height:38px; } }
+@media (max-width:600px){ .site-head .logo svg.lockup{ height:34px; } body header.site-head{ padding:10px 12px; gap:10px; } }  /* 375px 実測: 34px(幅 164)で 右ボタン群 164 と合わせ 364px に収める */
 .site-head .bword{ font-family:var(--serif, "Shippori Mincho", serif); font-size:27px; font-weight:700; letter-spacing:.01em; line-height:1; }
 .site-head .bby{ font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--sub); align-self:flex-end; margin-bottom:2px; }
 /* 9/7 CEO「細字のメニューでなく重厚感・高級感を」: 見出しと同じ明朝の太字・字間を広げ・墨色。現在地は墨の下線 */
