@@ -31,7 +31,7 @@ body header.site-head{ display:flex; align-items:center; gap:24px; padding:12px 
 .site-head .cnav a.sol{ margin-left:8px; padding-left:22px; border-left:1px solid var(--line); }
 .site-head .hdr-right{ margin-left:auto; display:flex; align-items:center; gap:12px; flex:none; }
 .site-head .beta{ font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px; letter-spacing:.18em; color:var(--sub); border:1px solid var(--line); border-radius:999px; padding:3px 9px; }
-.site-head .theme-btn{ font-size:12.5px; }
+.site-head .theme-btn{ font-size:12.5px; border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:999px; padding:4px 11px; font-family:inherit; cursor:pointer; }
 @media (prefers-reduced-motion: reduce){ .site-head .cnav a{ transition:none; } .site-head .cnav a:hover{ transform:none; } }
 @media (max-width:1180px){ .site-head .cnav{ gap:18px; font-size:14px; } }
 @media (max-width:900px){ .site-head .cnav{ display:none; } .site-head .bmark{ width:34px; height:34px; } .site-head .bword{ font-size:22px; } }
