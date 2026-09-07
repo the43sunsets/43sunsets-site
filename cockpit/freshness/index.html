@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>データの鮮度と網羅 — 自治体別の更新状況 | Signal by 43 Sunsets</title>
-<meta name="description" content="Signal(建設許可シグナル)が見ている自治体の一覧と、それぞれの最終更新日・最終データ日・次回更新予定。郡別ヒートマップで網羅の現在地を毎日更新。">
+<title>データの範囲と鮮度 — 自治体別の更新状況 | Signal by 43 Sunsets</title>
+<meta name="description" content="Signal の 4 つの情報源(建設許可・動産担保登記・政府補助金・求人)がそれぞれ何を対象にし、いつ更新したか。建設許可は自治体ごとの最終更新日・最終データ日・次回更新予定と郡別ヒートマップを毎日更新。">
 <link rel="canonical" href="https://43sunsets.com/cockpit/freshness/">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
-<meta property="og:title" content="データの鮮度と網羅 — Signal by 43 Sunsets">
-<meta property="og:description" content="自治体ごとの最終更新日・次回更新・郡別ヒートマップ。毎日更新。">
+<meta property="og:title" content="データの範囲と鮮度 — Signal by 43 Sunsets">
+<meta property="og:description" content="4 つの情報源の範囲と最終更新。建設許可は自治体ごとの最終更新日・次回更新・郡別ヒートマップ。毎日更新。">
 <meta property="og:url" content="https://43sunsets.com/cockpit/freshness/">
 <meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -75,6 +75,15 @@ h2 .sub{font-family:"Zen Kaku Gothic New",sans-serif; font-size:12px; color:var(
 .tabs button{border:1px solid var(--line); background:var(--card); color:var(--ink); padding:6px 14px; border-radius:999px; cursor:pointer; font:inherit; font-size:13px;}
 .tabs button[aria-selected="true"]{background:var(--ink); color:var(--paper); border-color:var(--ink);}
 .tabs button .n{color:inherit; opacity:.65; font-size:11px; margin-left:4px;}
+.srch{margin-top:14px !important;}
+.srcgrid{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:12px 0 26px;}
+.srccard{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px 12px; display:flex; flex-direction:column; gap:6px; min-height:150px;}
+.srccard .n{font-family:"Shippori Mincho",serif; font-size:16px; font-weight:700; color:var(--ink); display:flex; align-items:center; gap:8px;} .srccard .n a{color:inherit; text-decoration:none;} .srccard .n a:hover{text-decoration:underline; text-underline-offset:3px;}
+.srccard .dot{width:8px; height:8px; border-radius:50%; background:var(--fresh); flex:none;} .srccard .dot.bad{background:var(--over);} .srccard .dot.warn{background:var(--stale);}
+.srccard .u{font-size:11px; letter-spacing:.1em; color:var(--sub); font-family:"IBM Plex Mono",monospace;}
+.srccard .r{font-size:12.5px; line-height:1.6; color:var(--ink);}
+.srccard .t{font-size:11.5px; color:var(--sub); margin-top:auto; line-height:1.6;} .srccard .t .mono{color:var(--ink);}
+@media (max-width:1100px){.srcgrid{grid-template-columns:repeat(2,minmax(0,1fr));}} @media (max-width:600px){.srcgrid{grid-template-columns:1fr;}}
 .kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(118px,1fr)); gap:10px; margin:14px 0 6px;}
 .kpi{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
 .kpi .l{font-size:11px; letter-spacing:.12em; color:var(--sub); text-transform:uppercase;}
@@ -147,7 +156,7 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
 <body>
 <header class="site-head">
   <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg><span class="bword">Signal</span><span class="bby">by 43 Sunsets</span></a>
-  <nav class="cnav" aria-label="ページ"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/" aria-current="page">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
+  <nav class="cnav" aria-label="ページ"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/" aria-current="page">データの範囲と鮮度</a><a href="/cockpit/solutions/">ソリューション</a></nav>
   <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
@@ -170,8 +179,8 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
 
 <main class="app2">
   <aside class="rail">
-    <h1 class="pagetitle sr-only">データの鮮度と網羅</h1>
-    <div class="meta" id="metaline">自治体ごとに「いつ取れたか・データはいつのものか・次はいつ動くか」を毎日再計算して表示します。読み込み中…</div>
+    <h1 class="pagetitle sr-only">データの範囲と鮮度</h1>
+    <div class="meta" id="metaline">4 つの情報源それぞれが「どこまでを見ていて、いつ更新したか」。建設許可は自治体ごとに「いつ取れたか・データはいつのものか・次はいつ動くか」を毎日再計算して表示します。読み込み中…</div>
     <h2 class="railh">州</h2>
     <div class="tabs" id="tabs" role="tablist"></div>
     <h2 class="railh">このページの読み方</h2>
@@ -188,6 +197,10 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
     <div id="err" class="err" hidden></div>
 
   
+  <h2 class="srch">情報源ごとの範囲と更新<span class="sub">単位が違うので、それぞれの物差しで。状態は毎日の収集結果から</span></h2>
+  <div class="srcgrid" id="srcgrid"><div class="srccard"><div class="n">読み込み中…</div></div></div>
+
+  <h2>建設許可 — 自治体別の網羅<span class="sub">左の州を選ぶと切り替わります。人口比は製造業 80% 線の内側の自治体で計算</span></h2>
   <div class="kpis" id="kpis"></div>
   <div class="goal" id="goal"></div>
 
@@ -273,6 +286,29 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
   document.getElementById("metaline").innerHTML =
     `最終更新 <span class="mono">${ct(gen)}</span> 米中部時間(${utc(gen)})・次回収集 <span class="mono">${ct(next)}</span> 米中部時間(${utc(next)}・公開は 04:00 までに)・対象 <span class="mono">${fmtN(COV.rows.length)}</span> 自治体・判定基準: データ日 ${COV.meta.stale_days} 日 / 集計窓 ${COV.meta.window_days} 日`;
   window.addEventListener("themechange", () => drawMap());
+
+  // ---- 4 つの情報源の範囲と更新(9/7 CEO 裁定 ②-①)。範囲の文言は当面ここで手入力(②で JSON 生成に移す)。状態と時刻は health.json。
+  (async () => {
+    let H = null;
+    try { H = await fetch("../data/health.json", {cache:"no-store"}).then(r => r.ok ? r.json() : null); } catch (e) {}
+    const chk = k => (H && H.checks && H.checks[k]) || {};
+    const st = c => c.state === "OK" ? "" : (c.state ? "bad" : "warn");
+    const when = iso => iso ? `<span class="mono">${ct(new Date(iso))}</span> CT` : "—";
+    const tot = Object.values(COV.by_state || {}).reduce((a, b) => ({munis:a.munis+(b.munis||0), pop:a.pop+(b.pop||0), fresh:a.fresh+((b.by_status||{}).fresh||0), fpop:a.fpop+((b.pop_by_status||{}).fresh||0)}), {munis:0,pop:0,fresh:0,fpop:0});
+    const pu = chk("permits_update_vps"), uc = chk("ucc_sync_mac"), su = chk("subsidies_update_vps"), hi = chk("hiring_update_vps");
+    const cards = [
+      {href:"../permits/", name:"建設許可", unit:"自治体(郡別に集計)", dot:st(pu), last:pu.last_run_at || COV.meta.generated_at,
+       range:`5 州の ${fmtN(tot.munis)} 自治体を対象。最新データが取れている自治体 ${fmtN(tot.fresh)}(人口の ${tot.pop ? (tot.fpop/tot.pop*100).toFixed(1) : "—"}%)。`},
+      {href:"../ucc/", name:"動産担保登記(UCC)", unit:"州", dot:st(uc), last:uc.raw_db_synced_at,
+       range:`5 州のうち <b>オハイオ</b>(登記 ${fmtN((uc.last_status||{}).filings)} 件)。イリノイ・インディアナ・ウィスコンシンは州へ一括データを照会中、ミシガンは料金の判断待ち。`},
+      {href:"../subsidies/", name:"政府補助金", unit:"出し手(連邦・州・市郡)", dot:st(su), last:su.last_run_at,
+       range:`連邦(USAspending)と州 2(イリノイ EDGE・インディアナ IEDC)= ${fmtN(su.total)} 件。オハイオ・ミシガン・ウィスコンシンの州、市郡の減免は未着手。`},
+      {href:"../hiring/", name:"企業採用状況", unit:"会社(採用ページ)", dot:st(hi), last:hi.last_run_at,
+       range:`採用ページの公開 API を配線した 17 社(ATS 5 種)。開いている製造職の求人 ${fmtN(hi.open)} 件。増勢の判定は観測 30 日後から。`},
+    ];
+    document.getElementById("srcgrid").innerHTML = cards.map(c =>
+      `<div class="srccard"><div class="n"><span class="dot ${c.dot}" title="${c.dot ? "収集に問題あり" : "収集は正常"}"></span><a href="${c.href}">${c.name} ›</a></div><div class="u">単位: ${c.unit}</div><div class="r">${c.range}</div><div class="t">最終更新 ${when(c.last)}・次回 毎日 02:00 CT</div></div>`).join("");
+  })();
 
   // ---- 州タブ(IL を先頭・既定)
   let state = (location.hash.replace("#","") || "IL").toUpperCase();
