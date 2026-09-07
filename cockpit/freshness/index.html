@@ -59,7 +59,16 @@ th{top:var(--headh,0px);}
 .masthead .kicker a{color:inherit; text-decoration:none}
 .masthead .meta{font-size:12px; color:var(--sub); margin-top:4px;}
 .beta{flex:none; border:2.5px solid var(--stamp); color:var(--stamp); font-family:"Shippori Mincho",serif; font-weight:700; font-size:15px; padding:5px 8px; letter-spacing:.2em; transform:rotate(-4deg);}
-main{padding:18px 40px 60px;}
+main.app2{display:grid; grid-template-columns:320px minmax(0,1fr); align-items:start; padding:0; min-height:70vh;}
+.rail{padding:22px 22px 40px 40px; border-right:1px solid var(--line); position:sticky; top:var(--headh,70px); max-height:calc(100vh - var(--headh,70px)); overflow-y:auto;}
+.rail .pagetitle{margin:0 0 6px; font-family:"Shippori Mincho",serif; font-size:24px; white-space:nowrap;}
+.rail .meta{font-size:12.5px; color:var(--sub); line-height:1.6;}
+.rail h2.railh{font-size:15px; margin:22px 0 8px; font-family:inherit; font-weight:700; letter-spacing:.04em;}
+.rail .tabs{flex-direction:column; gap:4px; margin:0;} .rail .tabs button{text-align:left; border-radius:6px; padding:6px 10px; display:flex; justify-content:space-between;} .rail .tabs button .n{margin-left:auto;}
+.rail .defs{grid-template-columns:1fr; gap:8px;} .rail .def{padding:9px 11px; font-size:12px;} .rail .def h3{font-size:12px;} .rail .def p{font-size:12px;}
+.rail .cycle{font-size:11.5px;} .rail .cycle td,.rail .cycle th{padding:6px 8px;}
+.body{padding:18px 40px 60px;} .body h2:first-of-type{margin-top:18px;}
+@media (max-width:900px){ main.app2{grid-template-columns:1fr;} .rail{position:static; max-height:none; border-right:0; border-bottom:1px solid var(--line); padding:18px 16px;} .rail .tabs{flex-direction:row; flex-wrap:wrap;} .body{padding:16px 16px 48px;} }
 h2{font-family:"Shippori Mincho",serif; font-size:17px; margin:34px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--line);}
 h2 .sub{font-family:"Zen Kaku Gothic New",sans-serif; font-size:12px; color:var(--sub); font-weight:400; margin-left:10px;}
 .lede{color:var(--sub); font-size:13px; margin:6px 0 0;}
@@ -137,7 +146,7 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
 <body>
 <header class="site-head">
   <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg><span class="bword">Signal</span><span class="bby">by 43 Sunsets</span></a>
-  <nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/" aria-current="page">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
+  <nav class="cnav" aria-label="ページ"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/" aria-current="page">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
   <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
@@ -158,12 +167,34 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
 })();
 </script>
 
-<main>
-  <div class="facehead facehead--plain"><h1 class="pagetitle">データの鮮度と網羅</h1><div class="meta" id="metaline">自治体ごとに「いつ取れたか・データはいつのものか・次はいつ動くか」を毎日再計算して表示します。読み込み中…</div></div>
-  <div id="err" class="err" hidden></div>
+<main class="app2">
+  <aside class="rail">
+    <h1 class="pagetitle">データの鮮度と網羅</h1>
+    <div class="meta" id="metaline">自治体ごとに「いつ取れたか・データはいつのものか・次はいつ動くか」を毎日再計算して表示します。読み込み中…</div>
+    <h2 class="railh">州</h2>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <h2 class="railh">このページの読み方</h2>
+  <div class="defs">
+    <div class="def"><h3><span class="st fresh">fresh</span> 最新</h3><p>取得が周期どおりに続いていて、最新の許可日が 45 日以内。小規模な自治体で件数が少ないだけの場合も、源全体が新しければ fresh と判定します。</p></div>
+    <div class="def"><h3><span class="st stale">stale</span> データが古い</h3><p>取得そのものは成功しているのに、源が出す記録が 45 日より古い(自治体側の公開遅延)。取れていないのではなく、まだ出ていない状態です。</p></div>
+    <div class="def"><h3><span class="st overdue">overdue</span> 取得が止まっている</h3><p>期待周期の 2 倍以上、取得に成功していない。または FOIA の次回予定日を過ぎている。当社側で手当てが要る状態です。</p></div>
+    <div class="def"><h3><span class="st never">never</span> まだ一度も</h3><p>経路は決まっているが記録が一件も入っていない。FOIA 依頼の送信待ち、州 DB の障害中、配線したが 0 件、など。</p></div>
+    <div class="def"><h3><span class="st na">n/a</span> 経路なし</h3><p>公開ポータルが無い、または閲覧にログインが要るなどの理由で、まだ取得経路を決めていない自治体。網羅の穴として数えます。</p></div>
+    <div class="def"><h3>取得日とデータ日を分ける理由</h3><p>毎日取りに行っても、自治体が月末にまとめて公開する源では「取得は今日・データは先月」になります。タイムリーさは最終データ日で読んでください。</p></div>
+  </div>
+    <h2 class="railh">更新の周期<span class="sub">経路ごとに違います</span></h2>
+  <table class="cycle">
+    <tr><th>経路</th><th>周期</th><th>説明</th></tr>
+    <tr><td>公開ポータル・州 DB(source)</td><td>毎日 02:00 米中部時間に収集(公開は 04:00 までに・AI 読みの回収時にも再生成)</td><td>市・郡・州が公開している許可記録を自動取得。取得日は毎日更新され、データ日は源の公開頻度に従います。</td></tr>
+    <tr><td>郡の課税台帳(backstop)</td><td>約 1〜2 ヶ月遅れ</td><td>市に公開ポータルが無い場合、Cook 郡 Assessor の台帳から許可を拾います。工事内容の粒度は市の記録より粗い。</td></tr>
+    <tr><td>情報公開請求(FOIA)</td><td>毎月 1 日に前月分を依頼 → 5 営業日で回答</td><td>ポータルの無い自治体には Illinois FOIA(5 ILCS 140)で「発行済み許可の一覧」を請求。PDF・Excel の回答を取り込みます。月次配信に加えてくれた自治体は依頼不要になります。</td></tr>
+    <tr><td>AI 読み(分類)</td><td>週次(セッション枠)</td><td>保存した記録を AI が読み、5 分類(工場の増強・倉庫・データセンター・医療施設・研究ラボ)へ割り当てます。読了前の行は「未評価」として建設許可のページに残ります。</td></tr>
+  </table>
+  </aside>
+  <section class="body">
+    <div id="err" class="err" hidden></div>
 
-  <div class="tabs" id="tabs" role="tablist"></div>
-
+  
   <div class="kpis" id="kpis"></div>
   <div class="goal" id="goal"></div>
 
@@ -191,28 +222,13 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
   </div>
   <div class="more" id="more"></div>
 
-  <h2>この面の読み方</h2>
-  <div class="defs">
-    <div class="def"><h3><span class="st fresh">fresh</span> 最新</h3><p>取得が周期どおりに続いていて、最新の許可日が 45 日以内。小規模な自治体で件数が少ないだけの場合も、源全体が新しければ fresh と判定します。</p></div>
-    <div class="def"><h3><span class="st stale">stale</span> データが古い</h3><p>取得そのものは成功しているのに、源が出す記録が 45 日より古い(自治体側の公開遅延)。取れていないのではなく、まだ出ていない状態です。</p></div>
-    <div class="def"><h3><span class="st overdue">overdue</span> 取得が止まっている</h3><p>期待周期の 2 倍以上、取得に成功していない。または FOIA の次回予定日を過ぎている。当社側で手当てが要る状態です。</p></div>
-    <div class="def"><h3><span class="st never">never</span> まだ一度も</h3><p>経路は決まっているが記録が一件も入っていない。FOIA 依頼の送信待ち、州 DB の障害中、配線したが 0 件、など。</p></div>
-    <div class="def"><h3><span class="st na">n/a</span> 経路なし</h3><p>公開ポータルが無い、または閲覧にログインが要るなどの理由で、まだ取得経路を決めていない自治体。網羅の穴として数えます。</p></div>
-    <div class="def"><h3>取得日とデータ日を分ける理由</h3><p>毎日取りに行っても、自治体が月末にまとめて公開する源では「取得は今日・データは先月」になります。タイムリーさは最終データ日で読んでください。</p></div>
-  </div>
-
-  <h2>更新の周期<span class="sub">経路ごとに違います</span></h2>
-  <table class="cycle">
-    <tr><th>経路</th><th>周期</th><th>説明</th></tr>
-    <tr><td>公開ポータル・州 DB(source)</td><td>毎日 02:00 米中部時間に収集(公開は 04:00 までに・AI 読みの回収時にも再生成)</td><td>市・郡・州が公開している許可記録を自動取得。取得日は毎日更新され、データ日は源の公開頻度に従います。</td></tr>
-    <tr><td>郡の課税台帳(backstop)</td><td>約 1〜2 ヶ月遅れ</td><td>市に公開ポータルが無い場合、Cook 郡 Assessor の台帳から許可を拾います。工事内容の粒度は市の記録より粗い。</td></tr>
-    <tr><td>情報公開請求(FOIA)</td><td>毎月 1 日に前月分を依頼 → 5 営業日で回答</td><td>ポータルの無い自治体には Illinois FOIA(5 ILCS 140)で「発行済み許可の一覧」を請求。PDF・Excel の回答を取り込みます。月次配信に加えてくれた自治体は依頼不要になります。</td></tr>
-    <tr><td>AI 読み(分類)</td><td>週次(セッション枠)</td><td>保存した記録を AI が読み、5 分類(工場の増強・倉庫・データセンター・医療施設・研究ラボ)へ割り当てます。読了前の行は「未評価」として建設許可面に残ります。</td></tr>
-  </table>
+  
+  
+  </section>
 </main>
 
 <footer>
-  <b>Signal by 43 Sunsets(BETA)</b> — この面は <span class="mono">coverage.json</span>(毎日 02:00 米中部時間の収集後と、データを公開するたびに VPS が再生成)をそのまま描画しています。数字は当社の収集記録から機械的に計算したもので、自治体の公式な統計ではありません。
+  <b>Signal by 43 Sunsets(BETA)</b> — このサイトは <span class="mono">coverage.json</span>(毎日 02:00 米中部時間の収集後と、データを公開するたびに VPS が再生成)をそのまま描画しています。数字は当社の収集記録から機械的に計算したもので、自治体の公式な統計ではありません。
   郡の形状は米国 Census の境界データ、対象郡は Census CBP 2022 の製造業事業所数・従業者数の上位 80% 線で選んでいます。
 </footer>
 
@@ -330,7 +346,7 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
     document.getElementById("goal").innerHTML =
       `<div><b>80% 目標に対する現在地</b> <span class="mono">${f.toFixed(1)}%</span> の人口で最新データが取れています(データが古い分を足すと <span class="mono">${(f+s).toFixed(1)}%</span>)。</div>
        <div class="bar"><div class="f" style="width:${f}%"></div><div class="s" style="left:${f}%; width:${s}%"></div><div class="t" style="left:80%"></div></div>
-       <div class="cap"><span>0%</span><span>目標 80%(赤線)= 製造業の所在を人口ではなく事業所で測ると別の値になります。この面の人口比は「自治体の網羅」の目安です</span><span>100%</span></div>`;
+       <div class="cap"><span>0%</span><span>目標 80%(赤線)= 製造業の所在を人口ではなく事業所で測ると別の値になります。ここでの人口比は「自治体の網羅」の目安です</span><span>100%</span></div>`;
   }
 
   // ---- サイド: 郡の順位

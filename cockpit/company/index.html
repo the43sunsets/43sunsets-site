@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>企業カルテ | Signal by 43 Sunsets</title>
-<meta name="description" content="会社ごとに、建設許可・UCC 登記・採用・政府補助金の 4 面の出来事を 1 枚に束ねた企業カルテ(BETA)。">
+<meta name="description" content="会社ごとに、建設許可・UCC 登記・採用・政府補助金の 4 つの情報源の出来事を 1 枚に束ねた企業カルテ(BETA)。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon.ico">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -243,7 +243,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 </head>
 <body>
 <div class="kbar">
-  <div class="meta" id="metaline">会社ごとに 4 面(建設許可・UCC・採用・政府補助金)の出来事を 1 枚に — 読み込み中…</div>
+  <div class="meta" id="metaline">会社ごとに 4 つの情報源(建設許可・UCC・採用・政府補助金)の出来事を 1 枚に — 読み込み中…</div>
   <div class="kbar-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><button class="close-btn" id="closebtn" type="button" aria-label="このカルテを閉じる">✕ 閉じる</button></div>
 </div>
 <script>
@@ -310,18 +310,18 @@ function render(c){
     <section class="ksec" id="ucc"><h3>UCC 登記(${f.ucc.count})</h3>${f.ucc.items.length ? f.ucc.items.map(uccItem).join("") : `<div class="kempty">この会社の UCC 登記は当社の網に無い(オハイオ先行・担保権者名で検索した範囲)。</div>`}</section>
     <section class="ksec" id="hiring"><h3>採用(${hcount})</h3>${hcount ? `<div class="ksub" style="margin-bottom:8px">開いている求人 ${hcount}(製造職 ${f.hiring.mfg||0})・内訳: ${hroles.map(([k,v])=>`${esc(k)} <span class="mono">${v}</span>`).join("・")}・拠点: ${Object.entries(f.hiring.sites||{}).map(([k,v])=>`${esc(k)} ${v}`).join("・")}・出典 ${esc(f.hiring.source||"")}。職種の型は題名の規則。求人票の本文(設備・工程・人数)の AI 読みは順次。</div>` + hitems.map(hireItem).join("") : `<div class="kempty">${esc((f.hiring && f.hiring.note) || "この会社の採用ページは当社の網に無い。")}</div>`}</section>
     <section class="ksec" id="grants"><h3>政府補助金(${gcount})</h3>${gitems.length ? gitems.map(grantItem).join("") : `<div class="kempty">${esc((f.grants && f.grants.note) || "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。")}</div>`}</section>
-    <section class="ksec"><h3>時系列(4 面を合流)</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : (t.face === "grants" ? "grant" : (t.face === "hiring" ? "hire" : "permit"))}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
+    <section class="ksec"><h3>時系列(4 つの情報源を合流)</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : (t.face === "grants" ? "grant" : (t.face === "hiring" ? "hire" : "permit"))}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
     <div class="knote">${esc(c.note)}</div>`;
 }
 async function boot(){
   const id = new URLSearchParams(location.search).get("id") || "";
   const main = document.getElementById("main");
-  if(!/^C-\d+$/.test(id)){ main.innerHTML = `<div class="kempty">会社 ID が指定されていません。検出面(<a href="/cockpit/permits/">建設許可</a>・<a href="/cockpit/ucc/">UCC</a>)の社名から開いてください。</div>`; document.getElementById("metaline").textContent = "会社 ID なし"; return; }
+  if(!/^C-\d+$/.test(id)){ main.innerHTML = `<div class="kempty">会社 ID が指定されていません。一覧(<a href="/cockpit/permits/">建設許可</a>・<a href="/cockpit/ucc/">UCC</a>)の社名から開いてください。</div>`; document.getElementById("metaline").textContent = "会社 ID なし"; return; }
   try{
     const r = await fetch(`../data/companies/${id}.json`, {cache:"no-store"});
     if(!r.ok) throw new Error("HTTP " + r.status);
     render(await r.json());
-  }catch(err){ main.innerHTML = `<div class="kempty">このカルテ(${esc(id)})は見つかりません(${esc(err.message)})。会社マスターの更新で ID が変わった可能性があります。検出面から開き直してください。</div>`; document.getElementById("metaline").textContent = "見つかりません"; }
+  }catch(err){ main.innerHTML = `<div class="kempty">このカルテ(${esc(id)})は見つかりません(${esc(err.message)})。会社マスターの更新で ID が変わった可能性があります。一覧から開き直してください。</div>`; document.getElementById("metaline").textContent = "見つかりません"; }
 }
 boot();
 </script>

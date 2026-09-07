@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>中西部・設備投資検出面 — 動産担保登記(UCC) | Signal by 43 Sunsets</title>
-<meta name="description" content="州務長官の UCC(動産担保)登記から、製造業の機械・設備の取得(購入・リース)を検出する実験面。オハイオ州から先行。">
+<title>動産担保登記(UCC) — 中西部の設備投資シグナル | Signal by 43 Sunsets</title>
+<meta name="description" content="州務長官の UCC(動産担保)登記から、製造業の機械・設備の取得(購入・リース)を検出する実験ページ。オハイオ州から先行。">
 <link rel="canonical" href="https://43sunsets.com/cockpit/ucc/">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
-<meta property="og:title" content="中西部・設備投資検出面 — 動産担保登記(UCC)">
+<meta property="og:title" content="動産担保登記(UCC) — 中西部の設備投資シグナル">
 <meta property="og:description" content="公的記録から設備投資の動きを検出。報道より早いターゲット発掘の材料に。">
 <meta property="og:url" content="https://43sunsets.com/cockpit/ucc/">
 <meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
@@ -220,7 +220,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 
 <header class="site-head">
   <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg><span class="bword">Signal</span><span class="bby">by 43 Sunsets</span></a>
-  <nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/" aria-current="page">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
+  <nav class="cnav" aria-label="ページ"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/" aria-current="page">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
   <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
@@ -267,7 +267,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   <div class="pager" id="pager"></div>
 
   <details class="scope-details">
-    <summary>この面の読み方 — 数字の定義と、見ていないもの</summary>
+    <summary>このページの読み方 — 数字の定義と、見ていないもの</summary>
     <div id="scopebox">読み込み中…</div>
     <ul id="scopenotes">
       <li>UCC-1 登記は「債務者がその設備を担保にお金を借りた(購入・リースした)」という公的記録です。提出から 5 年で失効し、継続届で延長されます。金額は載りません。大きさは担保物の逐語(機械の型式・台数)と貸し手の種類で読みます。</li>
@@ -335,7 +335,7 @@ function cardHtml(s){
   const inf = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${esc(s.infer)}</div>` : "";
   const sp = s.secured_party ? `<div class="parties">担保権者: ${esc(s.secured_party)}${s.secured_party_city ? "(" + esc(s.secured_party_city) + ")" : ""}・${esc(s.lender_label)}${s.scope==="all_assets" ? "・包括担保" : s.scope==="mixed" ? "・特定設備+包括" : ""}</div>` : "";
   const made = s.made ? `<div class="loc">${esc(s.made)}${s.website ? ` · <a href="${esc(s.website)}" target="_blank" rel="noopener">サイト</a>` : ""}</div>` : "";
-  const name = s.karte ? `<a class="companylink" href="/cockpit/company/?id=${esc(s.karte)}" title="企業カルテ(4 面の出来事を 1 枚に)を開く">${esc(s.company)} ›</a>` : esc(s.company);   // 9/5 CEO: カルテは会社 ID で 1 枚(/cockpit/company/)
+  const name = s.karte ? `<a class="companylink" href="/cockpit/company/?id=${esc(s.karte)}" title="企業カルテ(4 つの情報源の出来事を 1 枚に)を開く">${esc(s.company)} ›</a>` : esc(s.company);   // 9/5 CEO: カルテは会社 ID で 1 枚(/cockpit/company/)
   return `<article class="card">
     <div class="head"><span class="state">${s.state}</span><h3>${name}</h3></div>
     <div>${nw}${jp}${kind}${ind}</div>

@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>中西部・設備投資検出面 — 建設許可 | Signal by 43 Sunsets</title>
+<title>建設許可 — 中西部の設備投資シグナル | Signal by 43 Sunsets</title>
 <meta name="description" content="米国中西部 5 州(IL・IN・MI・OH・WI)の建設許可・州建築審査記録から、製造業の設備投資シグナルを検出して一覧化。事実は公的記録の逐語、推論はバッジで分離表示。">
 <link rel="canonical" href="https://43sunsets.com/cockpit/permits/">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
-<meta property="og:title" content="中西部・設備投資検出面 — 建設許可">
+<meta property="og:title" content="建設許可 — 中西部の設備投資シグナル">
 <meta property="og:description" content="公的記録から設備投資の動きを検出。報道より早いターゲット発掘の材料に。">
 <meta property="og:url" content="https://43sunsets.com/cockpit/permits/">
 <meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
@@ -216,7 +216,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 
 <header class="site-head">
   <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg><span class="bword">Signal</span><span class="bby">by 43 Sunsets</span></a>
-  <nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/" aria-current="page">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
+  <nav class="cnav" aria-label="ページ"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/" aria-current="page">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
   <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
@@ -272,10 +272,10 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   <div class="pager" id="pager"></div>
 
   <details class="scope-details">
-    <summary>この面の読み方 — 数字の定義と、見ていないもの</summary>
+    <summary>このページの読み方 — 数字の定義と、見ていないもの</summary>
     <div id="scopebox">読み込み中…</div>
     <ul id="scopenotes">
-      <li>本面は 5 州の悉皆ではありません。どの自治体をいつ取れているか、源ごとの状態、郡別の網羅は「<a href="../freshness/">データの鮮度と網羅</a>」ページ(毎日更新)をご覧ください。</li>
+      <li>このサイトは 5 州の悉皆ではありません。どの自治体をいつ取れているか、源ごとの状態、郡別の網羅は「<a href="../freshness/">データの鮮度と網羅</a>」ページ(毎日更新)をご覧ください。</li>
       <li>「未評価」= 全件保存済みだが AI がまだ読んでいない行。「未分類」= 読んだが 5 分類のどれでもない、または確信度が低い行(トグルで表示可)。</li>
       <li>所有者名は許可記録にあればそれ、無い市は課税台帳(公開)を地番・住所で引いて補っています(カードに出所を表示)。課税台帳の名義は土地所有者で、テナントの投資は SPE・家主名で出ることがあります。</li>
       <li>金額の定義は市により異なります(申告工事費/評価額)。Express 許可の申告額は工事規模を表さないことがあり、その旨を注記しています。</li>
@@ -401,7 +401,7 @@ function cardHtml(s){
   const p = s.parties || {};
   // 出所は色や札で主張しない(9/3 CEO): 自社所有の名前にだけツールチップで「登記名義(課税台帳/許可記録)から」
   const srcNote = inv.basis === "owner_occupier" ? (p.owner_kind === "課税台帳" ? "登記名義(郡の課税台帳)から" : "登記名義(許可記録の所有者欄)から") : "";
-  const invName = inv.name ? (s.company_id ? `<a class="companylink" href="/cockpit/company/?id=${/^C-\d+$/.test(s.company_id) ? s.company_id : ""}" target="_blank" rel="noopener" title="企業カルテ(4 面の出来事を 1 枚に)を開く${srcNote ? "・" + srcNote : ""}">${inv.name} ›</a>`
+  const invName = inv.name ? (s.company_id ? `<a class="companylink" href="/cockpit/company/?id=${/^C-\d+$/.test(s.company_id) ? s.company_id : ""}" target="_blank" rel="noopener" title="企業カルテ(4 つの情報源の出来事を 1 枚に)を開く${srcNote ? "・" + srcNote : ""}">${inv.name} ›</a>`
                              : s.karte ? `<button class="companylink" data-karte="${s.karte}" title="企業カルテを開く${srcNote ? "・" + srcNote : ""}">${inv.name} ›</button>` : `<span title="${srcNote}">${inv.name}</span>`)
                            : `<span class="unknown-inv">投資主体 未特定</span>`;
   const invChip = `<span class="chip inv ${inv.basis}" title="${INV_TIP[inv.basis] || ''}">${inv.label}</span>`;
@@ -563,7 +563,7 @@ function karteHtml(k, standalone){
   const inf = k.infers.map(t=>`<div class="infer"><span class="badge-infer">推論</span>${t}</div>`).join("");
   const closeBtn = standalone
     ? `<button class="karte-close" onclick="window.close()">閉じる ×</button>`
-    : `<button class="karte-close" id="kclose">‹ 検出面に戻る</button>`;
+    : `<button class="karte-close" id="kclose">‹ 一覧に戻る</button>`;
   return `<div class="karte">
     <div class="karte-top">
       <div>

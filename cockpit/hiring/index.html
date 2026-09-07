@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>中西部・設備投資検出面 — 企業採用状況 | Signal by 43 Sunsets</title>
+<title>企業採用状況 — 中西部の設備投資シグナル | Signal by 43 Sunsets</title>
 <meta name="description" content="米国中西部 5 州(IL・IN・MI・OH・WI)の製造業の採用ページから、生産・設備保全・生産技術・品質・物流の求人を毎日数え、新設備の立ち上げ・一気に増員・新拠点の開設・じわり増員の兆しを検出。">
 <link rel="canonical" href="https://43sunsets.com/cockpit/hiring/">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
-<meta property="og:title" content="中西部・設備投資検出面 — 採用">
+<meta property="og:title" content="企業採用状況 — 中西部の設備投資シグナル">
 <meta property="og:description" content="製造職の求人の増え方から、稼働と増産の兆しを捉える。">
 <meta property="og:url" content="https://43sunsets.com/cockpit/hiring/">
 <meta property="og:image" content="https://43sunsets.com/assets/og-counted-light.png">
@@ -78,7 +78,7 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
 <body>
 <header class="site-head">
   <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg><span class="bword">Signal</span><span class="bby">by 43 Sunsets</span></a>
-  <nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/" aria-current="page">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
+  <nav class="cnav" aria-label="ページ"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/" aria-current="page">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
   <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
@@ -93,11 +93,11 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
   <label class="fitem jp-toggle cross-toggle" title="建設許可・UCC・補助金のいずれかにも載っている会社だけに絞る(採用に加えて設備投資の動きが確認できる会社。重なるほど確度が上がる)"><input type="checkbox" id="crossonly">投資の動きもある会社のみ <span class="cnt" id="crosscnt"></span></label>
   <div class="fgroup"><h2>州</h2><div id="f-state"></div></div>
   <div class="fgroup"><h2>採用の背景</h2><div id="f-type"></div></div>
-  <div class="fgroup"><h2>職種の型</h2><div id="f-role"></div></div>
+  <div class="fgroup"><h2>職種</h2><div id="f-role"></div></div>
   <div class="fgroup"><h2>業種</h2><div id="f-industry"></div></div>
   <div class="fgroup"><h2>製造職の求人数</h2><div id="f-size"></div></div>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
-  <div class="fnote">1 カード = 会社 × 拠点(州・市)。数字は各社の採用ページ(ATS の公開 API)から毎日数えた「今開いている製造職の求人」(重複除去後)。採用の背景は規則で付与: 新設備の立ち上げ = 生産技術/設備保全の新規求人・一気に増員 = 20 件以上・新拠点の開設 = 他の面の記録と同じ市で初めて求人・じわり増員 = 30 日前の当社スナップショット比。件数は現在の表示集合の全数。</div>
+  <div class="fnote">1 カード = 会社 × 拠点(州・市)。数字は各社の採用ページ(ATS の公開 API)から毎日数えた「今開いている製造職の求人」(重複除去後)。採用の背景は規則で付与: 新設備の立ち上げ = 生産技術/設備保全の新規求人・一気に増員 = 20 件以上・新拠点の開設 = 他の情報源の記録と同じ市で初めて求人・じわり増員 = 30 日前の当社スナップショット比。件数は現在の表示集合の全数。</div>
 </aside>
 <main>
   <div class="facehead"><div class="meta" id="metaline">製造職の採用シグナル 5 州 — データ読み込み中…</div><div class="hb hb-wait" id="healthbar" data-check="hiring_update_vps"></div></div>
@@ -106,7 +106,7 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
   <div class="empty" id="empty" hidden>条件に一致するシグナルはありません。フィルタを緩めてください。</div>
   <div class="pager" id="pager"></div>
   <details class="scope-details">
-    <summary>この面の読み方 — 数字の定義と、見ていないもの</summary>
+    <summary>このページの読み方 — 数字の定義と、見ていないもの</summary>
     <div id="scopebox">読み込み中…</div>
     <ul>
       <li>源: 当社の企業カルテにある会社のうち、サイトに公開 API を持つ採用管理システム(Greenhouse・Lever・Workday・SmartRecruiters・BambooHR)を使っている会社。Indeed・LinkedIn は API が閉じているため使いません。州の職業紹介サイトは規約を実測してから追加します。</li>
@@ -136,7 +136,7 @@ function filtered(){ return SIGNALS.filter(s=>pass(s,null)); }
 const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function cardHtml(s){
   const types=s.types.map(t=>`<span class="chip type">${esc(t)}</span>`).join(""); const jp=s.jp?`<span class="chip jp">日系</span>`:"";
-  const cross=isCross(s)?`<span class="chip cross" title="許可 ${s.faces.permits}・UCC ${s.faces.ucc}・補助金 ${s.faces.grants}">他の面 ${s.faces.permits+s.faces.ucc+s.faces.grants} 件</span>`:"";
+  const cross=isCross(s)?`<span class="chip cross" title="許可 ${s.faces.permits}・UCC ${s.faces.ucc}・補助金 ${s.faces.grants}">他の情報源 ${s.faces.permits+s.faces.ucc+s.faces.grants} 件</span>`:"";
   const roles=Object.entries(s.by_role||{}).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<span>${esc(k)} <b>${v}</b></span>`).join("");
   const titles=(s.titles||[]).map(t=>`<li>${t.url?`<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.t)}</a>`:esc(t.t)}${t.posted?` <span>(${esc(t.posted)})</span>`:""}</li>`).join("");
   const prev=s.prev30!=null?`・30 日前 <span class="mono">${s.prev30}</span>`:"";
@@ -163,8 +163,8 @@ function fmtCT(iso){ const d=new Date(iso); const o={timeZone:"America/Chicago",
 function setHeadH(){ const h=document.querySelector('header'); if(h) document.documentElement.style.setProperty('--headh',h.offsetHeight+'px'); } window.addEventListener('resize',setHeadH);
 async function boot(){ setHeadH(); try{ const r=await fetch("../data/hiring.json",{cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status); const d=await r.json(); META=d.meta; SIGNALS=d.signals; SIGNALS.forEach(x=>{ x.types=(x.types||[]).map(t=>TYPE_JA[t]||t); });
     document.getElementById("crosscnt").textContent=SIGNALS.filter(isCross).length;
-    document.getElementById("metaline").innerHTML=`IL・IN・MI・OH・WI / 会社 <span class="mono">${META.companies}</span> 社・拠点カード <span class="mono">${META.n}</span> 件・採用ページ ${META.sources[0].n_boards} 面・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
-    document.getElementById("scopebox").innerHTML=`<div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>採用ページ(ATS)<span class="mono">${META.sources[0].n_boards}</span> 面・会社 <span class="mono">${META.companies}</span>・拠点カード <span class="mono">${META.n}</span>・観測開始 <span class="mono">${esc(META.observed_since||"—")}</span>・書き出し <span class="mono">${fmtCT(META.generated_at)}</span>(米中部時間)<br><span class="ng">見ていないもの:</span> ATS の公開 API を持たない会社(Indeed・ADP・Paylocity 等)・州の職業紹介サイト・カルテに無い会社。</div>`;
+    document.getElementById("metaline").innerHTML=`IL・IN・MI・OH・WI / 会社 <span class="mono">${META.companies}</span> 社・拠点カード <span class="mono">${META.n}</span> 件・採用ページ ${META.sources[0].n_boards} 件・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
+    document.getElementById("scopebox").innerHTML=`<div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>採用ページ(ATS)<span class="mono">${META.sources[0].n_boards}</span> 件・会社 <span class="mono">${META.companies}</span>・拠点カード <span class="mono">${META.n}</span>・観測開始 <span class="mono">${esc(META.observed_since||"—")}</span>・書き出し <span class="mono">${fmtCT(META.generated_at)}</span>(米中部時間)<br><span class="ng">見ていないもの:</span> ATS の公開 API を持たない会社(Indeed・ADP・Paylocity 等)・州の職業紹介サイト・カルテに無い会社。</div>`;
     renderFilters(); render(); }catch(err){ document.getElementById("metaline").textContent="データの読み込みに失敗しました("+err.message+")。"; document.getElementById("empty").hidden=false; document.getElementById("empty").textContent="データ(hiring.json)を読み込めませんでした。"; } }
 boot();
 (function(){ const a=document.querySelector("aside"); const b=document.getElementById("filttoggle"); if(!a||!b) return; b.addEventListener("click",()=>{ a.classList.toggle("open"); b.textContent=a.classList.contains("open")?"絞り込みを閉じる ▴":"絞り込み ▾"; }); })();
