@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-07T09:54:09+00:00",
+"generated_at": "2026-09-07T15:10:51+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,19 +15,19 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 46157,
+"signals_total": 46159,
 "candidates": 709,
-"enriched": 29361,
-"targets": 92,
-"unclassified": 29269,
-"unevaluated": 16796,
+"enriched": 29432,
+"targets": 118,
+"unclassified": 29314,
+"unevaluated": 16727,
 "by_category": {
-"データセンター建設": 4,
-"医療施設": 45,
-"未分類": 29269,
-"物流・倉庫の新設": 13,
-"研究・ラボ施設": 9,
-"製造能力の増強": 21
+"データセンター建設": 7,
+"医療施設": 53,
+"未分類": 29314,
+"物流・倉庫の新設": 14,
+"研究・ラボ施設": 16,
+"製造能力の増強": 28
 }
 },
 "sources": [
@@ -43,7 +43,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-09-04",
 "owner_coverage": 5547,
-"targets": 20,
+"targets": 28,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -111,7 +111,7 @@
 "date_min": "2026-07-07",
 "date_max": "2026-09-04",
 "owner_coverage": 909,
-"targets": 13,
+"targets": 23,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -128,7 +128,7 @@
 "date_min": "2026-07-07",
 "date_max": "2026-07-31",
 "owner_coverage": 73,
-"targets": 3,
+"targets": 4,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -179,7 +179,7 @@
 "date_min": "2026-04-01",
 "date_max": "2026-06-15",
 "owner_coverage": 136,
-"targets": 1,
+"targets": 2,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -230,7 +230,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-08-31",
 "owner_coverage": 739,
-"targets": 3,
+"targets": 6,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -264,7 +264,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-09-07",
 "owner_coverage": 9461,
-"targets": 9,
+"targets": 11,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -298,7 +298,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-09-06",
 "owner_coverage": 4263,
-"targets": 8,
+"targets": 9,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -342,17 +342,17 @@
 "state": "IL",
 "jurisdiction": "Cook 郡 BS&A 利用自治体(Skokie 他)",
 "label": "Cook 郡 BS&A 利用自治体(Skokie 他) 建築許可(公開記録)",
-"last_run_status": "error",
-"last_run_at": "2026-09-06T15:40:58Z",
-"last_run_note": "RuntimeError: BS&A Wheeling: 10 consecutive errors at 10/792 parcels (last: TimeoutError)",
-"signals": 15,
+"last_run_status": "running",
+"last_run_at": "2026-09-07T13:43:10Z",
+"last_run_note": "",
+"signals": 17,
 "date_min": "2026-07-08",
-"date_max": "2026-08-26",
-"owner_coverage": 15,
+"date_max": "2026-09-04",
+"owner_coverage": 17,
 "targets": 0,
 "cadence": "monthly",
 "next_run_at": "2026-10-05T09:00:00+00:00",
-"interrupted": true
+"interrupted": false
 },
 {
 "source_id": "SRC-071",
@@ -869,11 +869,11 @@
 ]
 },
 "unclassified_by_state": {
-"OH": 5295,
-"IL": 21819,
+"OH": 5328,
+"IL": 21820,
 "WI": 571,
 "IN": 5,
-"MI": 1579
+"MI": 1590
 }
 },
 "signals": [
@@ -1479,6 +1479,56 @@
 },
 {
 "investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "HARPER COURT HOLDINGS II",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
+"id": "S-949",
+"state": "IL",
+"city": "Chicago・5207 S HARPER AVE",
+"company": "Hyde Park Labs",
+"entity_type": "corp",
+"company_basis": "web",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・ラボ施設",
+"category_raw": "研究・ラボ施設",
+"confidence": "high",
+"date": "2026-08-27",
+"applied": "2026-08-26",
+"jp": false,
+"new": true,
+"summary": "Hyde Park Labs(5207 S Harper Ave、13階・30万SFのラボ棟)3〜11階で電気設備増強の内装工事 $2M(新規幹線・スイッチボード・EPO 等)。",
+"infer": "ラボ棟向けの受電増強は、実験機器・特殊空調など高負荷設備の導入準備の可能性(推論)。入居はUniversity of Chicago Science Incubator等と第三者情報にあり。",
+"note": null,
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 101087399 PERMIT - RENOVATION/ALTERATION",
+"value": 2000000.0,
+"verbatim": "SC/ 2019 CBRC - INTERIOR ALTERATIONS ON FLOORS 3-11 FOR INSTALLATION OF ADDITIONAL ELECTRICAL SERVICE TO INCLUDE NEW CONDUIT AND EQUIPMENT, SWITCHBOARDS BUS DUCT, FEEDER CONNECTORS, SHUNT, TRIP BREAKERS AND FIRE DEPARTMENT EMERGENCY POWER OFF (EPO) AS PER PLANS. (OCCUPANCY GROUP B; TYPE 1A CONSTRUCTION)",
+"gc": "POWER CONSTRUCTION COMPANY, LLC",
+"pin": "2011412053",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-51",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
+}
+},
+{
+"investor": {
 "name": "VHS HARPER-HUTZEL HOSPITAL INC",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -1625,6 +1675,56 @@
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "WHISPERING MEADOWS REALTY LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "LAKEFRONT MECHANICAL SERVICES LLC."
+},
+"id": "S-36855",
+"state": "OH",
+"city": "Cleveland・3304 W 67TH PL, CLEVELAND, OH, 44102",
+"company": "WHISPERING MEADOWS REALTY LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "食品・素材加工",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-08-26",
+"applied": "2026-07-31",
+"jp": false,
+"new": true,
+"summary": "Cleveland 3304 W 67th Pl の食肉加工室(beef packing room)向けにウォークインクーラーの蒸発器・凝縮器を新設 $27.3k。",
+"infer": "食肉加工施設の冷却設備更新 = 生産ラインに付随する小規模設備投資の可能性(推論)。金額規模から新規工場投資ではなく既存設備の入替と読める。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCH26-032118 Commercial HVAC",
+"value": 27347.0,
+"verbatim": "Commercial HVAC / B Business / Installing new walk in cooler evaporator and condenser for beef packing room",
+"gc": "LAKEFRONT MECHANICAL SERVICES LLC.",
+"pin": "01604004",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7768",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -1940,6 +2040,56 @@
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
+"gc": "DRAKE CONSTRUCTION COMPANY"
+},
+"id": "S-36940",
+"state": "OH",
+"city": "Cleveland・9620 CARNEGIE AVE, CLEVELAND, OH, 44106",
+"company": "CLEVELAND CLINIC FOUNDATION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-08-19",
+"applied": "2026-08-03",
+"jp": false,
+"new": false,
+"summary": "Cleveland Clinic の Carnegie Ave キャンパス内 N 棟 A ウイング 5 階(16,536 SF)の内装のみの改修 $9.0M。機械・電気・配管は別許可。",
+"infer": "病院キャンパス内の内装改修 = 診療・検査関連の設備更新に伴う調達が発生する可能性(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-032426 Commercial Building",
+"value": 8998041.0,
+"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO EXISTING 16,536 SF OF BLDG N, A WING, 5TH FLOOR (NA5) PER APPROVED PLANS. SEPARATE PERMITS REQUIRED FOR PLUMBING, HVAC, AND ELECTRICAL. SPECIAL INSPECTIONS REQUIRED. SUBMIT SEPARATE PLANS TO FPB FOR ALTERATIONS TO FIRE PROTECTION SYSTEMS. MAINTAIN OBC CHAPTER 33 SAFEGUARDS DURING CONSTRUCTION.",
+"gc": "DRAKE CONSTRUCTION COMPANY",
+"pin": "11923058",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7724",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": "CLEVELAND CLINIC FOUNDATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND CLINIC FOUNDATION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
 "gc": "NEPTUNE PLUMBING & HEATING COMPANY"
 },
 "id": "S-36980",
@@ -2075,6 +2225,56 @@
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": "CLEVELAND CLINIC FOUNDATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND CLINIC FOUNDATION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "EINHEIT ELECTRIC CONSTRUCTION COMPANY"
+},
+"id": "S-36993",
+"state": "OH",
+"city": "Cleveland・2060 E 89TH ST, CLEVELAND, OH, 44106",
+"company": "CLEVELAND CLINIC FOUNDATION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-08-17",
+"applied": "2026-08-14",
+"jp": false,
+"new": false,
+"summary": "Cleveland Clinic Foundation の施設(2060 E 89th St)3 階 32,156 SQFT の電気工事 $1.48M(親許可 #BCB25-041723 の副許可)。",
+"infer": "病院施設の電気副許可 = 親案件の増築/改修工事に伴う設備投資の一部の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCE26-034583 Commercial Electrical",
+"value": 1476128.0,
+"verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / INSTALL 32156 SQUARE FEET: building permit #BCB25-041723 - 3rd fl",
+"gc": "EINHEIT ELECTRIC CONSTRUCTION COMPANY",
+"pin": "11916001",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7724",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -2279,6 +2479,106 @@
 },
 {
 "investor": {
+"name": "CLEVELAND CLINIC FOUNDATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND CLINIC FOUNDATION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "REGENCY CONSTRUCTION SERVICES, INC."
+},
+"id": "S-26689",
+"state": "OH",
+"city": "Cleveland・2060 E 89TH ST NA, CLEVELAND, OH, 44195",
+"company": "CLEVELAND CLINIC FOUNDATION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-08-13",
+"applied": "2025-12-23",
+"jp": false,
+"new": false,
+"summary": "Cleveland Clinic の複数棟(サブ地下・地下・1階の Building MM、2階 Building M、3階 Building G)32,156 SQ FT を滅菌処理部門(Sterile Processing Department)向けに内装改修 $12.5M。給排水・HVAC・電気・防火設備の許可も要求。",
+"infer": "滅菌処理部門の新設・拡張 = 滅菌機器(オートクレーブ等)・洗浄設備・搬送システムの調達が竣工まで続く窓(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB25-041723 Commercial Building",
+"value": 12456885.0,
+"verbatim": "Commercial Building / I-2 Institutional - Hospitals / Nursing Home / Interior Only Remodel / INTERIOR ALTERATION 32,156 SQ FT SUB-BASEMENT & BASEMENT & 1ST FLOOR OF BUILDING MM, 2ND FLOOR BUILDING M, 3RD FLOOR BUILDING G FOR STERILE PROCESSING DEPARTMENT PER APPROVED PLANS. PERMITS REQUIRED FOR PLUMBING, HVAC, ELECTRICAL AND FIRE PROTECTION SYSTEMS.",
+"gc": "REGENCY CONSTRUCTION SERVICES, INC.",
+"pin": "11916001",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7724",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": "Rush University Medical Center(Elmhurst 医療オフィス棟・$27.2M)",
+"basis": "operator",
+"label": "操業事業者",
+"source": "web",
+"source_label": "公開情報(報道・施工者・入居者)"
+},
+"parties": {
+"owner_of_record": "YORK ST VENTURE LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-17432",
+"state": "IL",
+"city": "Elmhurst・107 N YORK ST ELMHURST IL 60126",
+"company": "YORK ST VENTURE LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-08-13",
+"applied": "2025-12-23",
+"jp": false,
+"new": false,
+"summary": "Elmhurst 107 N York St に 3 階建て・約24,000 SF の医療オフィスビルを新築するコア/シェル許可 $6.7M。第 3 ホップ情報では Rush University Medical Center の医療オフィス棟($27.2M、HFSRB 26-007、20,764 GSF、2028 年夏完成予定)と一致。",
+"infer": "所有名義は開発 SPE(York St Venture LLC)だが、公開情報から Rush University Medical Center 向けの医療オフィス施設と読める(推論)。竣工後は画像診断・外来診療機器等の調達需要が見込まれる(推論)。",
+"note": null,
+"fact": {
+"src": "Elmhurst 建築許可(公開記録)",
+"ref": "許可 BLDC-007104-2025 Building New Construction - Commercial",
+"value": 6700000.0,
+"verbatim": "Core/Shell - Permit\nThree story medical office building of approximately 24,000 sf.\nPermit Terms\n**PERMITS ARE GOOD FOR 18 MONTHS FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 90DAYS. AFTER THE 90 DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER DAY WILL BE INVOICED FOR EACH DAY THE PERMIT",
+"gc": null,
+"pin": "0601118021",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"company_id": "C-181",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -2429,6 +2729,56 @@
 },
 {
 "investor": {
+"name": "CASE WESTERN RESERV UNIV",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CASE WESTERN RESERV UNIV",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "KRILL CO. INC. (THE)"
+},
+"id": "S-26708",
+"state": "OH",
+"city": "Cleveland・2109 ADELBERT RD, CLEVELAND, OH, 44106",
+"company": "CASE WESTERN RESERV UNIV",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "その他製造",
+"category": "研究・ラボ施設",
+"category_raw": "研究・ラボ施設",
+"confidence": "high",
+"date": "2026-08-12",
+"applied": "2026-07-17",
+"jp": false,
+"new": false,
+"summary": "Case Western Reserve University の Adelbert Rd 施設で 1 階 5,819 SF のラボを内装改修 $450k。配管・空調・電気・防火は別途許可。",
+"infer": "大学の研究棟ラボ改修 = 実験機器・分析装置・特殊空調の調達が竣工まで続く窓の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-029682 Commercial Building",
+"value": 450000.0,
+"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO 5,819 SF LABORATORY ON THE GROUND FLOOR PER APPROVED PLANS. SEPARATE PLUMBING, HVAC, ELECTRICAL AND FIRE PROTECTION PERMITS ARE REQUIRED.",
+"gc": "KRILL CO. INC. (THE)",
+"pin": "12112052",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7728",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": "Rockford Electric Motor",
 "basis": "operator",
 "label": "操業事業者",
@@ -2575,6 +2925,56 @@
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "CENTRE POINTE SPE, LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-24820",
+"state": "IL",
+"city": "Naperville・1841 CENTRE POINT CR",
+"company": "CellCarta",
+"entity_type": "corp",
+"company_basis": "web",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・ラボ施設",
+"category_raw": "研究・ラボ施設",
+"confidence": "high",
+"date": "2026-08-10",
+"applied": "2026-07-20",
+"jp": false,
+"new": false,
+"summary": "Naperville 1841 Centre Point Cr のスイート(5087 SQFT)で臨床試験サンプル採取キットの手作業組立ラインを開始する事業占有許可 $38k(従業員8名、2026年8月開始)。第三ホップ情報では同住所は医療検査ラボ CellCarta(29,283 SF・従業員約100名)。",
+"infer": "臨床試験サンプル採取キットの組立・保管拠点 = 検査ラボ関連の資材供給/物流機能の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "ネイパービル市 建築許可(公開記録)",
+"ref": "許可 COMM-0385-2026 BUSINESS OCCUPANCY",
+"value": 38000.0,
+"verbatim": "The suite will be used for assembly of clinical trial sample collection kits. This is a manual kit assembly line. There will be 8 employees in the suite starting Aug 1  2026. Sample collection supplies will be stored in the suite  these include empty blo / BUSINESS OCCUPANCY / COMMERCIAL / 5087 SQFT",
+"gc": null,
+"pin": "08064080070000",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"company_id": "C-3158",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
 }
 },
 {
@@ -2979,6 +3379,106 @@
 },
 {
 "investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "23432 LAKELAND LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "GEM INDUSTRIAL INC."
+},
+"id": "S-26870",
+"state": "OH",
+"city": "Cleveland・1804 E 40TH ST, CLEVELAND, OH, 44114",
+"company": "23432 LAKELAND LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "その他製造",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-08-04",
+"applied": "2026-07-28",
+"jp": false,
+"new": false,
+"summary": "Cleveland 1804 E 40th St の F-2 工業低危険施設で7,000 SQ FT分の商業電気工事 $491k(親許可 BCB26-025167 の電気サブ許可)。",
+"infer": "所有名義は SPE(LLC)で実入居事業者は記録上不明(推論不可)。F-2 用途区分から軽工業・製造用途の電気容量増強と読める(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCE26-031324 Commercial Electrical",
+"value": 491000.0,
+"verbatim": "Commercial Electrical / F-2 Factory Industrial Low Hazard / INSTALL 7,000 SQUARE FEET: ALT ***BUILDING PERMIT NO BCB26-025167***",
+"gc": "GEM INDUSTRIAL INC.",
+"pin": "10239024",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7745",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "23432 LAKELAND LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "GEM INDUSTRIAL, INC"
+},
+"id": "S-26874",
+"state": "OH",
+"city": "Cleveland・1804 E 40TH ST, CLEVELAND, OH, 44114",
+"company": "23432 LAKELAND LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "その他製造",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-08-04",
+"applied": "2026-07-28",
+"jp": false,
+"new": false,
+"summary": "Cleveland 1804 E 40th St(F-2 工場用途)で床排水・サンプポンプ・冷却塔・製氷機・給排水配管を新設する商業配管工事 $491k。親許可 BCB26-025167 の副許可。",
+"infer": "冷却塔・製氷機の新設は工場内の生産/冷却設備導入に伴う付帯工事の可能性(推論)。所有はSPE名義のため実際の入居事業者は記録上不明。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCP26-031326 Commercial Plumbing",
+"value": 491000.0,
+"verbatim": "Commercial Plumbing / F-2 Factory Industrial Low Hazard / INSTALL 3 FLOOR DRIAN, 1 SUMP PUMP, 1 COOLING TOWER, 1 ICE MAKER, 150 LIN. FT. DRAIN, VENT PIPING, 100 LIN. FT. WATER DISTRIBUTION PIPING***BUILDING PERMIT NO BCB26-025167***",
+"gc": "GEM INDUSTRIAL, INC",
+"pin": "10239024",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7745",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": "ISG COLUMBUS COATINGS INC",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -3175,6 +3675,56 @@
 "batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-05T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": "L 3 FUZING AND ORDNANCE SYSTEMS INC",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "L 3 FUZING AND ORDNANCE SYSTEMS INC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-28290",
+"state": "OH",
+"city": "Clermont County・3975 MCMANN RD CINCINNATI OH",
+"company": "L 3 FUZING AND ORDNANCE SYSTEMS INC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "軍事・防衛",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-08-03",
+"applied": "2026-06-01",
+"jp": false,
+"new": false,
+"summary": "L3 Fuzing and Ordnance Systems の Cincinnati 施設(3975 McMann Rd)で「L3 CONEX Storage Development Phase 2」の商業改修許可 $432k。",
+"infer": "CONEX(コンテナ型)保管施設のフェーズ2開発 = 信管・弾薬関連の保管・生産付帯設備の増強に伴う投資の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "Clermont County 建築許可(公開記録)",
+"ref": "許可 B-074983-2026 Commercial Alteration Permit",
+"value": 432000.0,
+"verbatim": "L3 CONEX STORAGE DEVELOPMENT PHASE 2 / Commercial Alteration Permit / Alteration",
+"gc": null,
+"pin": "413112A018.",
+"owner_source": "parcel:clermont_oh"
+},
+"karte": null,
+"company_id": "C-7758",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -3679,6 +4229,206 @@
 },
 {
 "investor": {
+"name": "Hyde Park Labs(Trammell Crow Company・Beacon Capital Partners)",
+"basis": "operator",
+"label": "操業事業者",
+"source": "web",
+"source_label": "公開情報(報道・施工者・入居者)"
+},
+"parties": {
+"owner_of_record": "HARPER COURT HOLDINGS II",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
+"id": "S-407",
+"state": "IL",
+"city": "Chicago・5207 S HARPER AVE",
+"company": "HARPER COURT HOLDINGS II",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・ラボ施設",
+"category_raw": "研究・ラボ施設",
+"confidence": "high",
+"date": "2026-07-27",
+"applied": "2026-07-22",
+"jp": false,
+"new": false,
+"summary": "既存複合ビル 8 階に「Quantum Lab West Side」フェーズ2の初期内装工事(非危険物ラボ)$3.5M。振動抑制構造・電気/機械換気/配管を含む。第三ホップ情報では Hyde Park Labs(Trammell Crow/Beacon Capital)の 13 階建て・30 万 SF ラボ棟で、University of Chicago Science Incubator 等が入居。",
+"infer": "量子関連ラボの内装 = 精密計測・低振動機器・特殊換気設備の調達が竣工まで続く窓(推論)。大学系インキュベーター入居のため研究機器メーカーの商談機会になりうる(推論)。",
+"note": null,
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 101085835 PERMIT - RENOVATION/ALTERATION",
+"value": 3500000.0,
+"verbatim": "SELF-CERT 2019 CBC: QUANTUM LAB WEST SIDE PHASE 2 OF INITIAL BUILDOUT ON THE 8TH FLOOR WITHIN AN EXISTING MIXED-USE BUILDING FOR A NON-HAZARDOUS LABORATORY SPACE.  WORK INCLUDES NEW NON-LOAD BEARING PARTITIONS, DOORS, CEILINGS, MILLWORK AND FINISHES AND VIBRATION MITIGATION STRUCTURE. ALONG WITH ASSOCIATED ELECTRICAL POWER AND LIGHING, MECHANICAL VENTILATION, AND PLUMBING WORK AS PER PLANS. (OCCUP",
+"gc": "POWER CONSTRUCTION COMPANY, LLC",
+"pin": "2011412059 | 2011412060 | 2011412061",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-51",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
+}
+},
+{
+"investor": {
+"name": "Hyde Park Labs(Trammell Crow Company・Beacon Capital Partners)",
+"basis": "operator",
+"label": "操業事業者",
+"source": "web",
+"source_label": "公開情報(報道・施工者・入居者)"
+},
+"parties": {
+"owner_of_record": "HARPER COURT HOLDINGS II",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
+"id": "S-423",
+"state": "IL",
+"city": "Chicago・5207 S HARPER AVE",
+"company": "HARPER COURT HOLDINGS II",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・ラボ施設",
+"category_raw": "研究・ラボ施設",
+"confidence": "high",
+"date": "2026-07-27",
+"applied": "2026-07-22",
+"jp": false,
+"new": false,
+"summary": "既存複合用途ビル 8 階でウェットラボ(東側フェーズ3)の初期内装工事 $3.5M(非危険物ラボ、B用途)。第3ホップ情報では Hyde Park Labs(Trammell Crow/Beacon Capital)のラボ棟で、University of Chicago Science Incubator 等が入居。",
+"infer": "大学系サイエンスインキュベーター入居のウェットラボ整備 = 実験機器・ドラフトチャンバー・特殊空調/排気設備の調達が続く窓の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 101085836 PERMIT - RENOVATION/ALTERATION",
+"value": 3500000.0,
+"verbatim": "SELF-CERT 2019 CBC: WET LAB EAST SIDE PHASE 3 OF INITIAL BUILDOUT ON THE 8TH FLOOR WITHIN AN EXISTING MIXED-USE BUILDING FOR A NON-HAZARDOUS LABORATORY SPACE. WORK INCLUDES NEW NON-LOAD BEARING PARTITIONS, DOORS, CEILINGS, MILLWORK AND FINISHES. ALONG WITH ASSOCIATED ELECTRICAL POWER AND LIGHING, MECHANICAL VENTILATION, AND PLUMBING WORK AS PER PLANS. (OCCUPANCY GROUP B; TYPE 1A CONSTRUCTION)",
+"gc": "POWER CONSTRUCTION COMPANY, LLC",
+"pin": "2011412059 | 2011412060 | 2011412061",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-51",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "HARPER COURT HOLDINGS II",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
+"id": "S-419",
+"state": "IL",
+"city": "Chicago・5207 S HARPER AVE",
+"company": "TRAMMELL CROW COMPANY",
+"entity_type": "corp",
+"company_basis": "web",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・ラボ施設",
+"category_raw": "研究・ラボ施設",
+"confidence": "high",
+"date": "2026-07-27",
+"applied": "2026-07-22",
+"jp": false,
+"new": false,
+"summary": "既存複合ビル(Hyde Park Labs)8 階に非危険物ラボスペースを新設するフェーズ1の内装工事 $3M(廊下・会議センター含む)。第三ホップ情報では 13 階建・30 万 SF のラボ棟で、University of Chicago Science Incubator 等が入居。",
+"infer": "ラボ棟の初期テナント工事段階 = 今後上層階でも同種のラボ内装・実験設備・特殊空調の調達が続く窓の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 101085095 PERMIT - RENOVATION/ALTERATION",
+"value": 3000000.0,
+"verbatim": "SELF-CERT 2019 CBC: CORRIDOR AND CONFERENCE CENTER - PHASE 1 OF INITIAL BUILDOUT ON THE 8TH FLOOR WITHIN AN EXISTING MIXED-USE BUILDING FOR A NON-HASARDOUS LABORATORY SPACE.  WORK INCLUDES NEW NON-LOAD BEARING PARTITIONS, DOORS, CEILINGS, MILLWORK AND FINISHES. ALONG WITH ASSOCIATED ELECTRICAL POWER AND LIGHING, MECHANICAL VENTILATION, AND PLUMBING WORK AS PER PLANS. (OCCUPANCY GROUP B; TYPE 1A CO",
+"gc": "POWER CONSTRUCTION COMPANY, LLC",
+"pin": "2011412059 | 2011412060 | 2011412061",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-51",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
+}
+},
+{
+"investor": {
+"name": "CCRM NAPERVILLE LLC",
+"basis": "operator",
+"label": "操業事業者",
+"source": "permit_text",
+"source_label": "許可記録(本文)"
+},
+"parties": {
+"owner_of_record": "NAPERVILLE MOB OWNER LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-10483",
+"state": "IL",
+"city": "Naperville・1331 W 75TH ST",
+"company": "CCRM NAPERVILLE LLC",
+"entity_type": "spe",
+"company_basis": "description",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-07-27",
+"applied": "2026-07-16",
+"jp": false,
+"new": false,
+"summary": "Naperville 1331 W 75th St のメディカルオフィスビル内スイート #303(4,548 SQFT)を新テナント CCRM Naperville LLC 向けに内装改修 $275k、火災報知器許可。",
+"infer": "CCRM は生殖医療(不妊治療)クリニックチェーンであり、既存事業区分を維持したテナント工事 = 診療機器・専用空調・検査室設備の調達が竣工まで続く窓の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "ネイパービル市 建築許可(公開記録)",
+"ref": "許可 FIRE-0302-2026 FIRE ALARM",
+"value": 275000.0,
+"verbatim": "Interior remodeling of existing suite #303 for new tenant CCRM Naperville  LLC. Existing suite remains as business occupancy. / FIRE ALARM / FIRE DEPARTMENT PERMIT / 4548 SQFT",
+"gc": null,
+"pin": "07262000210000",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"company_id": "C-518",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -3875,6 +4625,106 @@
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": "PROCTER & GAMBLE COMPANY",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "PROCTER & GAMBLE COMPANY",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-27606",
+"state": "OH",
+"city": "Mason・8700 MASON-MONTGOMERY ROAD, MASON, OH 45040",
+"company": "PROCTER & GAMBLE COMPANY",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "食品・素材加工",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-07-23",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Procter & Gamble の Mason 施設(8700 Mason-Montgomery Rd)F 棟増築に伴う商業用防火設備工事 $860.2k。",
+"infer": "既存施設 F 棟の増築に付随する消防設備工事 = 生産・研究関連棟の拡張が進行中である可能性(推論)。",
+"note": null,
+"fact": {
+"src": "メイソン市 建築許可(公開記録・月報)",
+"ref": "許可 BLD-26-630 Commercial Fire Protection",
+"value": 860200.0,
+"verbatim": "Commercial Fire Protection / Procter and Gamble Addition to F building",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:warren_oh:addr"
+},
+"karte": null,
+"company_id": "C-3615",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": "SUNOCO PARTNERS MARKETING & TERMINALS L.P.",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "SUNOCO PARTNERS MARKETING & TERMINALS L.P.",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "XL INDUSTRIAL SERVICES, INC."
+},
+"id": "S-27045",
+"state": "OH",
+"city": "Cleveland・3200 INDEPENDENCE RD, CLEVELAND, OH, 44105",
+"company": "SUNOCO PARTNERS MARKETING & TERMINALS L.P.",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "食品・素材加工",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-07-23",
+"applied": "2026-05-19",
+"jp": false,
+"new": false,
+"summary": "Cleveland 3200 Independence Rd の Energy Transfer Cleveland Terminal Butane Blending 施設に、60,000ガロン液化石油ガス(LPG)貯蔵タンクを支える基礎2基を新設 $120k。",
+"infer": "貯蔵タンク基礎は付帯設備であり、ブタンブレンディング施設の能力増強に伴う工事の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-019898 Commercial Building",
+"value": 120000.0,
+"verbatim": "Commercial Building / U Utility - Miscellaneous / Foundation / Erect two foundations to support a 60,000 gallon liquefied petroleum gas (lpg) storage vessel at Energy Transfer Cleveland Terminal Butane Blending. No Certificate of Occupancy to be issued with this permit. A separate permit is required from the Fire Dept for the storage vessel.",
+"gc": "XL INDUSTRIAL SERVICES, INC.",
+"pin": "13109001",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7750",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -4125,6 +4975,56 @@
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": "FAIRVIEW PARK HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "FAIRVIEW PARK HOSPITAL",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "UNITED MECHANICAL CONTRACTORS, INC."
+},
+"id": "S-27090",
+"state": "OH",
+"city": "Cleveland・18101 LORAIN AVE, CLEVELAND, OH, 44195",
+"company": "FAIRVIEW PARK HOSPITAL",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-07-20",
+"applied": "2026-07-13",
+"jp": false,
+"new": false,
+"summary": "Fairview Park Hospital(Cleveland 18101 Lorain Ave)で透析ボックス12台・排水/通気配管1,380リニアフィート・給水配管1,610リニアフィートを設置する配管工事 $400k。",
+"infer": "透析ユニット新設に伴う専用配管工事 = 透析装置・関連医療機器の調達が並行して発生する可能性(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCP26-028606 Commercial Plumbing",
+"value": 400000.0,
+"verbatim": "Commercial Plumbing / U Utility - Miscellaneous / INSTALL 12 DIALYSIS BOXES, 1380 LIN. FT. WASTE, VENT PIPING, 1610 LIN. FT. WATER DISTRIBUTION PIPING",
+"gc": "UNITED MECHANICAL CONTRACTORS, INC.",
+"pin": "02601001",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7726",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -4679,6 +5579,56 @@
 },
 {
 "investor": {
+"name": "CONTINENTAL PROPERTIES GROUP LLC",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CONTINENTAL PROPERTIES GROUP LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "BUTCHKO ELECTRIC, INC."
+},
+"id": "S-27174",
+"state": "OH",
+"city": "Cleveland・4556 INDUSTRIAL PKWY, CLEVELAND, OH, 44135",
+"company": "CONTINENTAL PROPERTIES GROUP LLC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "その他製造",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-07-13",
+"applied": "2026-06-23",
+"jp": false,
+"new": false,
+"summary": "Cleveland 4556 Industrial Pkwy の F-1 工場施設で 20,728 SF 分の電気配線(パネル・コンセント・照明)工事 $167k。関連建築許可 BCB26-012209 の副許可。",
+"infer": "F-1(工場・中程度危険物)用途の電気工事 = 生産ライン設備の稼働に伴う電源整備の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCE26-025606 Commercial Electrical",
+"value": 167000.0,
+"verbatim": "Commercial Electrical / F-1 Factory Industrial Moderate Hazard / Install (20,728) Sq. Ft. Wiring - Panels, Receptacles and Lighting Related Building Permit: BCB26-012209",
+"gc": "BUTCHKO ELECTRIC, INC.",
+"pin": "02322010",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7755",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": "HEALTH HILL HOSPITAL",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -4725,6 +5675,56 @@
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "3733 EAST 87TH STREET LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "CLAYCO INC."
+},
+"id": "S-118",
+"state": "IL",
+"city": "Chicago・3733 E 87TH ST",
+"company": "PsiQuantum",
+"entity_type": "corp",
+"company_basis": "web",
+"industry": "半導体・電子",
+"category": "研究・ラボ施設",
+"category_raw": "研究・ラボ施設",
+"confidence": "high",
+"date": "2026-07-10",
+"applied": "2026-05-13",
+"jp": false,
+"new": false,
+"summary": "Illinois Quantum & Microelectronics Park の量子コンピューティング施設でクライオプラント(極低温設備)構築フェーズ1C $30M(先行許可101063081等に隣接する工事)。",
+"infer": "クライオプラントは量子コンピュータの希釈冷凍機・極低温インフラであり、量子ビット関連の特殊機器・冷却設備・精密計測機器の調達が竣工まで続く窓の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 101080637 PERMIT - NEW CONSTRUCTION",
+"value": 30000000.0,
+"verbatim": "SPR 2019 CBC: PHASE 1C - CRYOPLANT BUILDOUT FOR QUANTUM COMPUTING FACILITY. ADJACENT WORK UNDER PRIOR PERMITS 101063081, 101065270, 101075599. (OCC GROUP B, F-1, S-1, CONST TYPE II-B)",
+"gc": "CLAYCO INC.",
+"pin": "2005200010",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-9",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
 }
 },
 {
@@ -4825,6 +5825,56 @@
 "batch": "03",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:41:36+00:00"
+}
+},
+{
+"investor": {
+"name": "SANMAR INC",
+"basis": "operator",
+"label": "操業事業者",
+"source": "permit_text",
+"source_label": "許可記録(本文)"
+},
+"parties": {
+"owner_of_record": "J&J OHIO LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-35666",
+"state": "OH",
+"city": "Butler County・8901 GLOBAL WAY, OH 45069 United States",
+"company": "SANMAR INC",
+"entity_type": "corp",
+"company_basis": "description",
+"industry": "物流・EC",
+"category": "物流・倉庫の新設",
+"category_raw": "物流・倉庫の新設",
+"confidence": "high",
+"date": "2026-07-10",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Butler County 8901 Global Way の物流施設でコンベヤシステムのアップグレード(SanMar Inc)。所有者は J&J Ohio LLC。金額不明。",
+"infer": "コンベヤ更新は既存倉庫の搬送設備投資 = マテハン機器・自動化設備の調達機会の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "Butler County 建築許可(公開記録)",
+"ref": "許可 BLD-CO26-02883 Building/Commercial/Alterations/Other",
+"value": null,
+"verbatim": "UPGRADE CONVEYOR SYSTEM - SANMAR INC / Building/Commercial/Alterations/Other",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:butler_oh:addr"
+},
+"karte": null,
+"company_id": "C-3670",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -5029,6 +6079,106 @@
 },
 {
 "investor": {
+"name": "Legacy Investing・GI Partners(Chicago Byte Exchange データセンター 33MW)",
+"basis": "operator",
+"label": "操業事業者",
+"source": "web",
+"source_label": "公開情報(報道・施工者・入居者)"
+},
+"parties": {
+"owner_of_record": "LEGACY GI TC 400 LASALLE, LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-66",
+"state": "IL",
+"city": "Chicago・400 S LA SALLE ST",
+"company": "LEGACY GI TC 400 LASALLE, LLC",
+"entity_type": "spe",
+"company_basis": "web",
+"industry": "データセンター",
+"category": "データセンター建設",
+"category_raw": "データセンター建設",
+"confidence": "high",
+"date": "2026-07-07",
+"applied": "2026-06-23",
+"jp": false,
+"new": false,
+"summary": "400 S LaSalle St(旧 Cboe 本部)7 階改修に伴う仮設電源工事 $300k(1000A 幹線に80回路追加)。第三ホップ情報によれば Legacy Investing・GI Partners が同ビルを Chicago Byte Exchange データセンター(33MW)へ転換中で 2026 年末〜2027 年初稼働予定。",
+"infer": "本許可自体は小規模な仮設電気工事だが、親プロジェクトはオフィスビルのデータセンター転換であり、今後電源増強・受変電・冷却設備の大型調達が続く可能性(推論)。",
+"note": null,
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 B200475301 PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 300000.0,
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. ADD 80 CIRCUITS TO EXISTING 1000 AMP SERVICE DISCONNECTING MEANS. RECEPTACLE OUTLETS: 63 . LIGHTING OUTLETS: 35. SPECIFIC LOCATION: TEMP POWER FOR 7 FLOOR RENOVATION.",
+"gc": null,
+"pin": "1716242017",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-4",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "NAPERVILLE MOB OWNER LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-10785",
+"state": "IL",
+"city": "Naperville・1331 W 75TH ST",
+"company": "CCRM NAPERVILLE LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-07-07",
+"applied": "2026-05-29",
+"jp": false,
+"new": false,
+"summary": "Naperville 1331 W 75th St のスイート#303(4,548 SQFT)を新規テナント CCRM Naperville LLC 向けに内装改修 $275k。建物所有者は Naperville MOB Owner LLC。",
+"infer": "CCRM(不妊治療クリニックチェーン)の名称から生殖医療クリニックの新規開設と読める(推論)。医療機器・培養室設備等の小規模調達を伴う可能性(推論)。",
+"note": null,
+"fact": {
+"src": "ネイパービル市 建築許可(公開記録)",
+"ref": "許可 COMM-0275-2026 COMMERCIAL BUILDING ALTERATION",
+"value": 275000.0,
+"verbatim": "Interior remodeling of existing suite #303 for new tenant CCRM Naperville  LLC. Existing suite remains as business occupancy. / COMMERCIAL BUILDING ALTERATION / COMMERCIAL / 4548 SQFT",
+"gc": null,
+"pin": "07262000210000",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"company_id": "C-518",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": "THE BOARD OF COUNTY HOSPITAL TRUSTEES OF THE",
 "basis": "public",
 "label": "公共",
@@ -5179,6 +6329,56 @@
 },
 {
 "investor": {
+"name": "Legacy Investing・GI Partners(Chicago Byte Exchange データセンター 33MW)",
+"basis": "operator",
+"label": "操業事業者",
+"source": "web",
+"source_label": "公開情報(報道・施工者・入居者)"
+},
+"parties": {
+"owner_of_record": "LEGACY GI TC 400 LASALLE LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "ARCO/MURRAY NATIONAL CONSTRUCTION COMPANY LLC"
+},
+"id": "S-61",
+"state": "IL",
+"city": "Chicago・400 S LA SALLE ST",
+"company": "LEGACY GI TC 400 LASALLE LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "データセンター",
+"category": "データセンター建設",
+"category_raw": "データセンター建設",
+"confidence": "high",
+"date": "2026-07-06",
+"applied": "2026-05-08",
+"jp": false,
+"new": false,
+"summary": "旧オフィスビル(400 S LaSalle St、7 階建)をデータセンターへ転換するフェーズ2/3のインフラ改修 $51.1M(床補強・ComEd 変電所からの電気幹線)。第 3 ホップ情報では Legacy Investing・GI Partners による Chicago Byte Exchange データセンター(33MW)への転換案件。",
+"infer": "フェーズ3で機械・配管・防火・機器の許可が続く見込み = 電源増強・冷却設備・受電機器の調達が今後発生する窓(推論)。",
+"note": null,
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 101081181 PERMIT - RENOVATION/ALTERATION",
+"value": 51100000.0,
+"verbatim": "DDS 2019 CBRC: PHASE 2 OF 3: INFRASTRUCTURE UPGRADES. CONVERT 7 STORY OFFICE BUILDING TO A DATA CENTER. REINFORCEMENT OF EXISTING FLOORS. ARCHITECTURAL PLANS PROVIDED FOR REFERENCE. ELECTRICAL WORK LIMITED TO ELECTRICAL DISTRIBUTION FROM COMED VAULT TO UPPER FLOORS. MECHANICAL, PLUMBING AND FIRE PROTECTION WORK TO BE PERMITTED UNDER PHASE 3. EQUIPMENT TO BE PERMITTED UNDER PHASE 3.  PHASE 1 DEMOLI",
+"gc": "ARCO/MURRAY NATIONAL CONSTRUCTION COMPANY LLC",
+"pin": "1716242017",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-4",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -5275,6 +6475,56 @@
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "LEGACY GI TC 400 LASALLE LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "ARCO/MURRAY NATIONAL CONSTRUCTION COMPANY LLC"
+},
+"id": "S-4",
+"state": "IL",
+"city": "Chicago・400 S LA SALLE ST",
+"company": "Legacy Investing・GI Partners",
+"entity_type": "corp",
+"company_basis": "web",
+"industry": "データセンター",
+"category": "データセンター建設",
+"category_raw": "データセンター建設",
+"confidence": "high",
+"date": "2026-07-01",
+"applied": "2026-05-08",
+"jp": false,
+"new": false,
+"summary": "旧 Cboe 本部ビル(400 S LaSalle St)の Phase 1/3 解体許可 $3.95M(地下〜7階の非耐力壁・機械ペントハウス撤去)。第三者情報によれば Legacy Investing・GI Partners が同ビルを $100M 超でデータセンター(Chicago Byte Exchange、33MW)に転換中で 2026 年末〜2027 年初稼働予定。",
+"infer": "解体は大型データセンター転換プロジェクトの初期フェーズと読める(推論)。今後の電源増強・冷却設備工事の許可が続く見込み。",
+"note": null,
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 101083036 PERMIT - RENOVATION/ALTERATION",
+"value": 3950000.0,
+"verbatim": "DDS 2019 CBRC: DDS 2019 CBRC: PHASE 1 OF 3: DEMOLITION OF NON LOAD BEARING PARTITIONS ON BASEMENT, 1ST THROUGH 7TH FLOORS OF EXISTING OFFICE BUILDING AS PER PLANS. TO ALSO INCLUDE DEMOLITION WORK ON THE MECHANICAL PENTHOUSE. 1A CONSTRUCTION. B-BUSINESS CONSULTANT REVIEWER: V3 COMPANIES",
+"gc": "ARCO/MURRAY NATIONAL CONSTRUCTION COMPANY LLC",
+"pin": "1716242017",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-4",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
 }
 },
 {
@@ -5429,6 +6679,56 @@
 },
 {
 "investor": {
+"name": "Ascension Columbia St. Mary’s(Airport Business Park クリニック)",
+"basis": "operator",
+"label": "操業事業者",
+"source": "web",
+"source_label": "公開情報(報道・施工者・入居者)"
+},
+"parties": {
+"owner_of_record": "555 WEST LAYTON AVE LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-1343",
+"state": "WI",
+"city": "Milwaukee・4848 S 6TH ST, MILWAUKEE, WI 532212462",
+"company": "555 WEST LAYTON AVE LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-05-26",
+"applied": "2026-03-02",
+"jp": false,
+"new": false,
+"summary": "Milwaukee 4848 S 6th St の外来透析クリニックの商業改修許可 $350.5k(所有者は 555 West Layton Ave LLC)。",
+"infer": "第 3 ホップ情報では Ascension Columbia St. Mary's の家庭医療・産婦人科クリニックとされ、本文の透析クリニックと用途が一致しないため、本文記載を優先(推論)。",
+"note": "第 3 ホップと本文の用途が不一致のため本文(透析クリニック)を採用。",
+"fact": {
+"src": "ミルウォーキー市 建築許可(公開記録・約 2.5 ヶ月遅れ)",
+"ref": "許可 COM-ALT-26-00124 Commercial Alteration Permit",
+"value": 350500.0,
+"verbatim": "Outpatient dialysis clinic / Commercial Alteration Permit",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:milwaukee"
+},
+"karte": null,
+"company_id": "C-452",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150458Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:07:12+00:00"
+}
+},
+{
+"investor": {
 "name": "TENNECO PACKAGING INC #367",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -5480,6 +6780,26 @@
 ],
 "companies": [
 {
+"id": "C-7724",
+"name": "CLEVELAND CLINIC FOUNDATION",
+"entity_type": "corp",
+"jp": false,
+"signals": 7,
+"value_total": 23896782.0,
+"states": "OH",
+"latest": "2026-08-27",
+"targets": 7,
+"signal_ids": [
+"S-26689",
+"S-26868",
+"S-27105",
+"S-36826",
+"S-36940",
+"S-36980",
+"S-36993"
+]
+},
+{
 "id": "C-138",
 "name": "OHIOHEALTH CORP",
 "entity_type": "corp",
@@ -5499,6 +6819,58 @@
 ]
 },
 {
+"id": "C-7726",
+"name": "FAIRVIEW PARK HOSPITAL",
+"entity_type": "corp",
+"jp": false,
+"signals": 5,
+"value_total": 1501675.0,
+"states": "OH",
+"latest": "2026-09-04",
+"targets": 5,
+"signal_ids": [
+"S-27090",
+"S-27213",
+"S-36695",
+"S-36884",
+"S-36919"
+]
+},
+{
+"id": "C-4",
+"name": "LEGACY GI TC 400 LASALLE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 4,
+"value_total": 55650000.0,
+"states": "IL",
+"latest": "2026-07-07",
+"targets": 4,
+"signal_ids": [
+"S-4",
+"S-61",
+"S-66",
+"S-66"
+]
+},
+{
+"id": "C-51",
+"name": "HARPER COURT HOLDINGS II",
+"entity_type": "spe",
+"jp": false,
+"signals": 4,
+"value_total": 12000000.0,
+"states": "IL",
+"latest": "2026-08-27",
+"targets": 4,
+"signal_ids": [
+"S-407",
+"S-419",
+"S-423",
+"S-949"
+]
+},
+{
 "id": "C-140",
 "name": "NATIONWIDE CHILDRENS HOSPITAL",
 "entity_type": "corp",
@@ -5513,40 +6885,6 @@
 "S-1903",
 "S-1903",
 "S-2374"
-]
-},
-{
-"id": "C-7726",
-"name": "FAIRVIEW PARK HOSPITAL",
-"entity_type": "corp",
-"jp": false,
-"signals": 4,
-"value_total": 1101675.0,
-"states": "OH",
-"latest": "2026-09-04",
-"targets": 4,
-"signal_ids": [
-"S-27213",
-"S-36695",
-"S-36884",
-"S-36919"
-]
-},
-{
-"id": "C-7724",
-"name": "CLEVELAND CLINIC FOUNDATION",
-"entity_type": "corp",
-"jp": false,
-"signals": 4,
-"value_total": 965728.0,
-"states": "OH",
-"latest": "2026-08-27",
-"targets": 4,
-"signal_ids": [
-"S-26868",
-"S-27105",
-"S-36826",
-"S-36980"
 ]
 },
 {
@@ -5585,6 +6923,38 @@
 "S-17223",
 "S-17242",
 "S-17339"
+]
+},
+{
+"id": "C-7733",
+"name": "CCRM NAPERVILLE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 3,
+"value_total": 825000.0,
+"states": "IL",
+"latest": "2026-07-27",
+"targets": 3,
+"signal_ids": [
+"S-10483",
+"S-10785",
+"S-10785"
+]
+},
+{
+"id": "C-7728",
+"name": "CASE WESTERN RESERV UNIV",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": 648977.0,
+"states": "OH",
+"latest": "2026-08-27",
+"targets": 3,
+"signal_ids": [
+"S-26670",
+"S-26708",
+"S-36811"
 ]
 },
 {
@@ -5733,6 +7103,22 @@
 ]
 },
 {
+"id": "C-7745",
+"name": "23432 LAKELAND LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 3,
+"value_total": 1473000.0,
+"states": "OH",
+"latest": "2026-08-04",
+"targets": 2,
+"signal_ids": [
+"S-26870",
+"S-26874",
+"S-27001"
+]
+},
+{
 "id": "C-2712",
 "name": "TETRA PAK",
 "entity_type": "corp",
@@ -5748,18 +7134,20 @@
 ]
 },
 {
-"id": "C-7728",
-"name": "CASE WESTERN RESERV UNIV",
-"entity_type": "corp",
+"id": "C-518",
+"name": "NAPERVILLE MOB OWNER LLC",
+"entity_type": "spe",
 "jp": false,
-"signals": 2,
-"value_total": 198977.0,
-"states": "OH",
-"latest": "2026-08-27",
+"signals": 4,
+"value_total": 554554.0,
+"states": "IL",
+"latest": "2026-08-21",
 "targets": 2,
 "signal_ids": [
-"S-26670",
-"S-36811"
+"S-10483",
+"S-10623",
+"S-10785",
+"S-24645"
 ]
 },
 {
@@ -5791,6 +7179,34 @@
 "S-16984",
 "S-17401",
 "S-25091"
+]
+},
+{
+"id": "C-9",
+"name": "3733 EAST 87TH STREET LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 30000000.0,
+"states": "IL",
+"latest": "2026-07-10",
+"targets": 1,
+"signal_ids": [
+"S-118"
+]
+},
+{
+"id": "C-7736",
+"name": "PsiQuantum",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 30000000.0,
+"states": "IL",
+"latest": "2026-07-10",
+"targets": 1,
+"signal_ids": [
+"S-118"
 ]
 },
 {
@@ -5854,6 +7270,22 @@
 ]
 },
 {
+"id": "C-181",
+"name": "YORK ST VENTURE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 3,
+"value_total": 6709450.0,
+"states": "IL",
+"latest": "2026-08-13",
+"targets": 1,
+"signal_ids": [
+"S-17315",
+"S-17374",
+"S-17432"
+]
+},
+{
 "id": "C-3708",
 "name": "MUNSON HOSPITAL",
 "entity_type": "corp",
@@ -5879,6 +7311,48 @@
 "targets": 1,
 "signal_ids": [
 "S-38747"
+]
+},
+{
+"id": "C-7735",
+"name": "Legacy Investing・GI Partners",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 3950000.0,
+"states": "IL",
+"latest": "2026-07-01",
+"targets": 1,
+"signal_ids": [
+"S-4"
+]
+},
+{
+"id": "C-7737",
+"name": "TRAMMELL CROW COMPANY",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 3000000.0,
+"states": "IL",
+"latest": "2026-07-27",
+"targets": 1,
+"signal_ids": [
+"S-419"
+]
+},
+{
+"id": "C-7738",
+"name": "Hyde Park Labs",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 2000000.0,
+"states": "IL",
+"latest": "2026-08-27",
+"targets": 1,
+"signal_ids": [
+"S-949"
 ]
 },
 {
@@ -5935,6 +7409,37 @@
 "targets": 1,
 "signal_ids": [
 "S-1204"
+]
+},
+{
+"id": "C-3615",
+"name": "PROCTER & GAMBLE COMPANY",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": 870200.0,
+"states": "OH",
+"latest": "2026-07-28",
+"targets": 1,
+"signal_ids": [
+"S-27606",
+"S-27618",
+"S-35567"
+]
+},
+{
+"id": "C-3654",
+"name": "PROCTER AND GAMBLE",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 865200.0,
+"states": "OH",
+"latest": "2026-07-23",
+"targets": 1,
+"signal_ids": [
+"S-27582",
+"S-27606"
 ]
 },
 {
@@ -6006,6 +7511,35 @@
 "signal_ids": [
 "S-13268",
 "S-13269"
+]
+},
+{
+"id": "C-7758",
+"name": "L 3 FUZING AND ORDNANCE SYSTEMS INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 432000.0,
+"states": "OH",
+"latest": "2026-08-03",
+"targets": 1,
+"signal_ids": [
+"S-28290"
+]
+},
+{
+"id": "C-452",
+"name": "555 WEST LAYTON AVE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 413000.0,
+"states": "WI",
+"latest": "2026-05-26",
+"targets": 1,
+"signal_ids": [
+"S-1343",
+"S-10105"
 ]
 },
 {
@@ -6093,6 +7627,20 @@
 ]
 },
 {
+"id": "C-7755",
+"name": "CONTINENTAL PROPERTIES GROUP LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 167000.0,
+"states": "OH",
+"latest": "2026-07-13",
+"targets": 1,
+"signal_ids": [
+"S-27174"
+]
+},
+{
 "id": "C-3601",
 "name": "METROHEALTH",
 "entity_type": "corp",
@@ -6108,6 +7656,34 @@
 "S-36682",
 "S-36690",
 "S-36897"
+]
+},
+{
+"id": "C-3650",
+"name": "Energy Transfer",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 120000.0,
+"states": "OH",
+"latest": "2026-07-23",
+"targets": 1,
+"signal_ids": [
+"S-27045"
+]
+},
+{
+"id": "C-7750",
+"name": "SUNOCO PARTNERS MARKETING & TERMINALS L.P.",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 120000.0,
+"states": "OH",
+"latest": "2026-07-23",
+"targets": 1,
+"signal_ids": [
+"S-27045"
 ]
 },
 {
@@ -6223,6 +7799,34 @@
 ]
 },
 {
+"id": "C-3158",
+"name": "CENTRE POINTE SPE, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 38000.0,
+"states": "IL",
+"latest": "2026-08-10",
+"targets": 1,
+"signal_ids": [
+"S-24820"
+]
+},
+{
+"id": "C-7739",
+"name": "CellCarta",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 38000.0,
+"states": "IL",
+"latest": "2026-08-10",
+"targets": 1,
+"signal_ids": [
+"S-24820"
+]
+},
+{
 "id": "C-3700",
 "name": "LINDNER CENTER OF HOPE",
 "entity_type": "corp",
@@ -6234,6 +7838,20 @@
 "targets": 1,
 "signal_ids": [
 "S-27544"
+]
+},
+{
+"id": "C-7768",
+"name": "WHISPERING MEADOWS REALTY LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 27347.0,
+"states": "OH",
+"latest": "2026-08-26",
+"targets": 1,
+"signal_ids": [
+"S-36855"
 ]
 },
 {
@@ -6277,6 +7895,20 @@
 "targets": 1,
 "signal_ids": [
 "S-27541"
+]
+},
+{
+"id": "C-3670",
+"name": "SANMAR INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-07-10",
+"targets": 1,
+"signal_ids": [
+"S-35666"
 ]
 },
 {
@@ -6463,6 +8095,34 @@
 ]
 },
 {
+"id": "C-3658",
+"name": "CORE SPACES, LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 93000000.0,
+"states": "MI",
+"latest": "2026-08-31",
+"targets": 0,
+"signal_ids": [
+"S-32068"
+]
+},
+{
+"id": "C-7761",
+"name": "CORE ANN ARBOR CHURCH STREET, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 93000000.0,
+"states": "MI",
+"latest": "2026-08-31",
+"targets": 0,
+"signal_ids": [
+"S-32068"
+]
+},
+{
 "id": "C-183",
 "name": "MORNINGSIDE ELMHURST LLC",
 "entity_type": "spe",
@@ -6594,6 +8254,20 @@
 "S-538",
 "S-541",
 "S-544"
+]
+},
+{
+"id": "C-7742",
+"name": "FAIRVIEW GENERAL HOSPITAL",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 32400716.0,
+"states": "OH",
+"latest": "2026-08-11",
+"targets": 0,
+"signal_ids": [
+"S-26752"
 ]
 },
 {
@@ -6911,6 +8585,23 @@
 ]
 },
 {
+"id": "C-7746",
+"name": "CLEVELAND CITY",
+"entity_type": "public",
+"jp": false,
+"signals": 4,
+"value_total": 12071200.0,
+"states": "OH",
+"latest": "2026-08-04",
+"targets": 0,
+"signal_ids": [
+"S-26876",
+"S-26920",
+"S-27018",
+"S-27033"
+]
+},
+{
 "id": "C-221",
 "name": "WILKINS FAMILY LLC",
 "entity_type": "spe",
@@ -6923,6 +8614,20 @@
 "signal_ids": [
 "S-17391",
 "S-17536"
+]
+},
+{
+"id": "C-7756",
+"name": "W26 APARTMENTS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 12000000.0,
+"states": "OH",
+"latest": "2026-07-08",
+"targets": 0,
+"signal_ids": [
+"S-27260"
 ]
 },
 {
@@ -7122,6 +8827,20 @@
 ]
 },
 {
+"id": "C-7769",
+"name": "THE CLEVELAND MUSEUM OF ART",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 9700000.0,
+"states": "OH",
+"latest": "2026-08-19",
+"targets": 0,
+"signal_ids": [
+"S-36945"
+]
+},
+{
 "id": "C-27",
 "name": "UPTOWN SQUARE CLIFTON PROPCO, LLC",
 "entity_type": "spe",
@@ -7234,6 +8953,20 @@
 ]
 },
 {
+"id": "C-7771",
+"name": "1300 EAST NINTH STREET CLEVELAND, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 8254960.0,
+"states": "OH",
+"latest": "2026-08-19",
+"targets": 0,
+"signal_ids": [
+"S-36954"
+]
+},
+{
 "id": "C-30",
 "name": "WOLVERINE HOLDINGS, LLC",
 "entity_type": "spe",
@@ -7307,6 +9040,20 @@
 ]
 },
 {
+"id": "C-7762",
+"name": "FIFTH AVE MI LIMITED DIVIDEND HOUSI",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 7850000.0,
+"states": "MI",
+"latest": "2026-07-22",
+"targets": 0,
+"signal_ids": [
+"S-32882"
+]
+},
+{
 "id": "C-33",
 "name": "4905-15 N GLENWOOD LLC",
 "entity_type": "spe",
@@ -7347,6 +9094,20 @@
 "signal_ids": [
 "S-16931",
 "S-17589"
+]
+},
+{
+"id": "C-7748",
+"name": "THE CLEVELAND MUSIC SCHOOL SETTLEMENT",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 6907951.0,
+"states": "OH",
+"latest": "2026-07-30",
+"targets": 0,
+"signal_ids": [
+"S-26935"
 ]
 },
 {
@@ -7410,6 +9171,22 @@
 ]
 },
 {
+"id": "C-7774",
+"name": "SH EAST BAY COMMONS WEST LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 3,
+"value_total": 5537160.29,
+"states": "MI",
+"latest": "2026-08-07",
+"targets": 0,
+"signal_ids": [
+"S-38486",
+"S-38488",
+"S-38492"
+]
+},
+{
 "id": "C-3027",
 "name": "Insurance Auto Auction",
 "entity_type": "corp",
@@ -7435,6 +9212,20 @@
 "targets": 0,
 "signal_ids": [
 "S-24422"
+]
+},
+{
+"id": "C-7764",
+"name": "CLEVELAND PUBLIC LIBRARY",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 5470100.0,
+"states": "OH",
+"latest": "2026-09-04",
+"targets": 0,
+"signal_ids": [
+"S-36689"
 ]
 },
 {
@@ -7606,6 +9397,20 @@
 ]
 },
 {
+"id": "C-7765",
+"name": "SKYLINE PROPERTY PARTNERS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 4570991.0,
+"states": "OH",
+"latest": "2026-09-04",
+"targets": 0,
+"signal_ids": [
+"S-36694"
+]
+},
+{
 "id": "C-1596",
 "name": "OLD NATIONAL BANK",
 "entity_type": "corp",
@@ -7632,6 +9437,21 @@
 "targets": 0,
 "signal_ids": [
 "S-308"
+]
+},
+{
+"id": "C-7759",
+"name": "TRAVERWOOD PROPERTIES II LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 4497900.0,
+"states": "MI",
+"latest": "2026-08-10",
+"targets": 0,
+"signal_ids": [
+"S-30235",
+"S-30236"
 ]
 },
 {
@@ -7801,6 +9621,20 @@
 ]
 },
 {
+"id": "C-7763",
+"name": "INTEGRA LIFESCIENCES CORPORATION",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 3800000.0,
+"states": "OH",
+"latest": "2026-09-03",
+"targets": 0,
+"signal_ids": [
+"S-36616"
+]
+},
+{
 "id": "C-179",
 "name": "TRANSITION PROPERTIES LP",
 "entity_type": "spe",
@@ -7813,6 +9647,34 @@
 "signal_ids": [
 "S-10182",
 "S-10249"
+]
+},
+{
+"id": "C-3637",
+"name": "CMSD",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 3740000.0,
+"states": "OH",
+"latest": "2026-07-17",
+"targets": 0,
+"signal_ids": [
+"S-27124"
+]
+},
+{
+"id": "C-7754",
+"name": "BD OF ED CSD",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 3740000.0,
+"states": "OH",
+"latest": "2026-07-17",
+"targets": 0,
+"signal_ids": [
+"S-27124"
 ]
 },
 {
@@ -7845,6 +9707,21 @@
 "S-25711",
 "S-25759",
 "S-25760"
+]
+},
+{
+"id": "C-7752",
+"name": "CLEVELAND CITY OF",
+"entity_type": "public",
+"jp": false,
+"signals": 2,
+"value_total": 3673005.0300000003,
+"states": "OH",
+"latest": "2026-08-26",
+"targets": 0,
+"signal_ids": [
+"S-27082",
+"S-36850"
 ]
 },
 {
@@ -7924,6 +9801,20 @@
 "S-770",
 "S-775",
 "S-805"
+]
+},
+{
+"id": "C-7775",
+"name": "WUERFEL RESORTS INVESTMENTS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 3514279.93,
+"states": "MI",
+"latest": "2026-08-14",
+"targets": 0,
+"signal_ids": [
+"S-39137"
 ]
 },
 {
@@ -8451,6 +10342,20 @@
 ]
 },
 {
+"id": "C-7773",
+"name": "GLAZE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 2500000.0,
+"states": "OH",
+"latest": "2026-08-27",
+"targets": 0,
+"signal_ids": [
+"S-38078"
+]
+},
+{
 "id": "C-67",
 "name": "CARL SANDBURG CONDOMINIUM ASSOCIATION NO. 2",
 "entity_type": "corp",
@@ -8652,6 +10557,20 @@
 "targets": 0,
 "signal_ids": [
 "S-166"
+]
+},
+{
+"id": "C-7749",
+"name": "6415 DETROIT AVENUE CORPORATION",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 2148214.0,
+"states": "OH",
+"latest": "2026-07-30",
+"targets": 0,
+"signal_ids": [
+"S-26952"
 ]
 },
 {
@@ -9195,6 +11114,34 @@
 ]
 },
 {
+"id": "C-7751",
+"name": "GREATER CLEVELAND FOOD BANK INC",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 1747000.0,
+"states": "OH",
+"latest": "2026-07-22",
+"targets": 0,
+"signal_ids": [
+"S-27061"
+]
+},
+{
+"id": "C-7753",
+"name": "GLOBAL AMBASSADORS LANGUAGE ACADEMY INC.",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1718063.0,
+"states": "OH",
+"latest": "2026-07-17",
+"targets": 0,
+"signal_ids": [
+"S-27122"
+]
+},
+{
 "id": "C-195",
 "name": "COSTCO #4454-00",
 "entity_type": "corp",
@@ -9419,6 +11366,20 @@
 "targets": 0,
 "signal_ids": [
 "S-27580"
+]
+},
+{
+"id": "C-7767",
+"name": "1455 EAST 185TH STREET LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1589500.0,
+"states": "OH",
+"latest": "2026-08-27",
+"targets": 0,
+"signal_ids": [
+"S-36821"
 ]
 },
 {
@@ -10285,6 +12246,20 @@
 ]
 },
 {
+"id": "C-7760",
+"name": "NECC PROPERTY, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1200000.0,
+"states": "MI",
+"latest": "2026-08-28",
+"targets": 0,
+"signal_ids": [
+"S-31817"
+]
+},
+{
 "id": "C-119",
 "name": "AMERICAN AIRLINES",
 "entity_type": "corp",
@@ -10378,6 +12353,34 @@
 "targets": 0,
 "signal_ids": [
 "S-26167"
+]
+},
+{
+"id": "C-3690",
+"name": "SUNOCO LP",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1121294.0,
+"states": "OH",
+"latest": "2026-08-06",
+"targets": 0,
+"signal_ids": [
+"S-26804"
+]
+},
+{
+"id": "C-7743",
+"name": "SUNOCO MIDSTREAM LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1121294.0,
+"states": "OH",
+"latest": "2026-08-06",
+"targets": 0,
+"signal_ids": [
+"S-26804"
 ]
 },
 {
@@ -10573,6 +12576,34 @@
 "signal_ids": [
 "S-17087",
 "S-17448"
+]
+},
+{
+"id": "C-7741",
+"name": "F.I. STEELYARD COMMONS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1038200.0,
+"states": "OH",
+"latest": "2026-08-11",
+"targets": 0,
+"signal_ids": [
+"S-26747"
+]
+},
+{
+"id": "C-7757",
+"name": "CITY OF MASON",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 1027913.0,
+"states": "OH",
+"latest": "2026-07-09",
+"targets": 0,
+"signal_ids": [
+"S-27527"
 ]
 },
 {
@@ -11614,6 +13645,20 @@
 ]
 },
 {
+"id": "C-7772",
+"name": "CITY OF WORTHINGTON",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 774590.0,
+"states": "OH",
+"latest": "2026-07-28",
+"targets": 0,
+"signal_ids": [
+"S-38032"
+]
+},
+{
 "id": "C-269",
 "name": "SJODIN ENTERPRISES",
 "entity_type": "corp",
@@ -11825,6 +13870,20 @@
 "targets": 0,
 "signal_ids": [
 "S-26252"
+]
+},
+{
+"id": "C-7744",
+"name": "GPP PRACTICE FACILITY LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 750000.0,
+"states": "OH",
+"latest": "2026-08-05",
+"targets": 0,
+"signal_ids": [
+"S-26841"
 ]
 },
 {
@@ -13923,6 +15982,21 @@
 "targets": 0,
 "signal_ids": [
 "S-36556"
+]
+},
+{
+"id": "C-7747",
+"name": "10801 MADISON AVENUE OWNER LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 450000.0,
+"states": "OH",
+"latest": "2026-08-03",
+"targets": 0,
+"signal_ids": [
+"S-26899",
+"S-26949"
 ]
 },
 {
@@ -16141,6 +18215,20 @@
 ]
 },
 {
+"id": "C-7766",
+"name": "VILLA MERCEDE COMM REDEV CORP",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 279206.0,
+"states": "OH",
+"latest": "2026-08-27",
+"targets": 0,
+"signal_ids": [
+"S-36818"
+]
+},
+{
 "id": "C-512",
 "name": "CP5 MCCLURG COURT LLC",
 "entity_type": "spe",
@@ -16182,6 +18270,20 @@
 "signal_ids": [
 "S-17847",
 "S-18026"
+]
+},
+{
+"id": "C-7740",
+"name": "D L K INVESTMENT CORP.",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 277400.0,
+"states": "OH",
+"latest": "2026-08-14",
+"targets": 0,
+"signal_ids": [
+"S-26675"
 ]
 },
 {
@@ -17641,6 +19743,21 @@
 "targets": 0,
 "signal_ids": [
 "S-27613"
+]
+},
+{
+"id": "C-3642",
+"name": "AMAZON",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 200000.0,
+"states": "OH",
+"latest": "2026-07-30",
+"targets": 0,
+"signal_ids": [
+"S-26949",
+"S-35422"
 ]
 },
 {
@@ -23779,21 +25896,6 @@
 ]
 },
 {
-"id": "C-452",
-"name": "555 WEST LAYTON AVE LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 62500.0,
-"states": "WI",
-"latest": "2026-05-26",
-"targets": 0,
-"signal_ids": [
-"S-1343",
-"S-10105"
-]
-},
-{
 "id": "C-1009",
 "name": "BIRCHWOOD GROUP",
 "entity_type": "corp",
@@ -24643,6 +26745,20 @@
 ]
 },
 {
+"id": "C-7770",
+"name": "KBTB LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 53768.0,
+"states": "OH",
+"latest": "2026-08-19",
+"targets": 0,
+"signal_ids": [
+"S-36946"
+]
+},
+{
 "id": "C-1322",
 "name": "SOUTH 13 PORTFOLIO LLC",
 "entity_type": "spe",
@@ -25190,6 +27306,20 @@
 "targets": 0,
 "signal_ids": [
 "S-9339"
+]
+},
+{
+"id": "C-1038",
+"name": "8700 MILITARY LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 50000.0,
+"states": "MI",
+"latest": "2026-08-08",
+"targets": 0,
+"signal_ids": [
+"S-9351"
 ]
 },
 {
@@ -37530,21 +39660,6 @@
 ]
 },
 {
-"id": "C-3615",
-"name": "PROCTER & GAMBLE COMPANY",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": 10000.0,
-"states": "OH",
-"latest": "2026-07-28",
-"targets": 0,
-"signal_ids": [
-"S-27618",
-"S-35567"
-]
-},
-{
 "id": "C-3660",
 "name": "MASON TOWN CENTER, LLC",
 "entity_type": "spe",
@@ -37757,22 +39872,6 @@
 "targets": 0,
 "signal_ids": [
 "S-24634"
-]
-},
-{
-"id": "C-181",
-"name": "YORK ST VENTURE LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 2,
-"value_total": 9450.0,
-"states": "IL",
-"latest": "2026-08-13",
-"targets": 0,
-"signal_ids": [
-"S-17315",
-"S-17374",
-"S-17432"
 ]
 },
 {
@@ -41810,21 +43909,6 @@
 ]
 },
 {
-"id": "C-3654",
-"name": "PROCTER AND GAMBLE",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 5000.0,
-"states": "OH",
-"latest": "2026-07-16",
-"targets": 0,
-"signal_ids": [
-"S-27582",
-"S-27606"
-]
-},
-{
 "id": "C-1963",
 "name": "TAIT AND TAIT GENERAL CONSTRUCTION",
 "entity_type": "corp",
@@ -42075,23 +44159,6 @@
 "targets": 0,
 "signal_ids": [
 "S-11064"
-]
-},
-{
-"id": "C-518",
-"name": "NAPERVILLE MOB OWNER LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 2,
-"value_total": 4554.0,
-"states": "IL",
-"latest": "2026-08-21",
-"targets": 0,
-"signal_ids": [
-"S-10483",
-"S-10623",
-"S-10785",
-"S-24645"
 ]
 },
 {
@@ -54074,21 +56141,6 @@
 "targets": 0,
 "signal_ids": [
 "S-35647"
-]
-},
-{
-"id": "C-3642",
-"name": "AMAZON",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 0,
-"states": "OH",
-"latest": "2026-07-24",
-"targets": 0,
-"signal_ids": [
-"S-26949",
-"S-35422"
 ]
 },
 {

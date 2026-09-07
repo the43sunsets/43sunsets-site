@@ -1,5 +1,5 @@
 {
-"generated_at": "2026-09-07T09:54:09+00:00",
+"generated_at": "2026-09-07T15:10:51+00:00",
 "state": "OH",
 "part": 1,
 "parts": 1,
@@ -52,6 +52,106 @@
 "batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": "CLEVELAND PUBLIC LIBRARY",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND PUBLIC LIBRARY",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "R.L. HILL MANAGEMENT, INC."
+},
+"id": "S-36689",
+"state": "OH",
+"city": "Cleveland・7224 BROADWAY AVE, CLEVELAND, OH, 44105",
+"company": "CLEVELAND PUBLIC LIBRARY",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-04",
+"applied": "2026-06-10",
+"jp": false,
+"new": true,
+"summary": "Cleveland Public Library Fleet 支館の増改築(内外装リモデル)$5.5M。A-3 集会用途。",
+"infer": null,
+"note": "公共(図書館)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-023764 Commercial Building",
+"value": 5470100.0,
+"verbatim": "Commercial Building / A-3 Assembly - Worship, Recreation, Amusement / Interior/Exterior Remodel / CONDITIONAL PERMIT TO MAKE ALTERATIONS AND ADDITIONS TO CPL- FLEET BRANCH. SPECIAL INSPECTIONS ARE REQ",
+"gc": "R.L. HILL MANAGEMENT, INC.",
+"pin": "13321007",
+"owner_source": "parcel:cuyahoga_oh:addr"
+},
+"karte": null,
+"company_id": "C-7764",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "SKYLINE PROPERTY PARTNERS LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "ALBERT M. HIGLEY COMPANY (THE)"
+},
+"id": "S-36694",
+"state": "OH",
+"city": "Cleveland・250 W HURON RD, CLEVELAND, OH, 44113",
+"company": "SKYLINE PROPERTY PARTNERS LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-04",
+"applied": "2026-08-12",
+"jp": false,
+"new": true,
+"summary": "Cleveland 250 W Huron Rd の高層オフィスビル 3 階(28,401 SF 中 27,379 SF)を内装改修 $4.6M。",
+"infer": null,
+"note": "オフィステナント改修。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-034161 Commercial Building",
+"value": 4570991.0,
+"verbatim": "Commercial Building / B Business / Add or change existing construction elements / MAKE INTERIOR ALTERATIONS TO 27,379 SF OF 28,401 SF 3RD FLOOR, HIGHRISE OFFICE TENANT. SEPARATE PERMITS REQUIRED FOR P",
+"gc": "ALBERT M. HIGLEY COMPANY (THE)",
+"pin": "10123100F",
+"owner_source": "parcel:cuyahoga_oh:addr"
+},
+"karte": null,
+"company_id": "C-7765",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -4352,6 +4452,56 @@
 "batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": "INTEGRA LIFESCIENCES CORPORATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "INTEGRA LIFESCIENCES CORPORATION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "JJP ENTERPRISES INC DBA SERVPRO"
+},
+"id": "S-36616",
+"state": "OH",
+"city": "Cincinnati・4900 CHARLEMAR DR",
+"company": "INTEGRA LIFESCIENCES CORPORATION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "未分類",
+"category_raw": "製造能力の増強",
+"confidence": "low",
+"date": "2026-09-03",
+"applied": "2026-08-12",
+"jp": false,
+"new": true,
+"summary": "Integra LifeSciences Corporation の Cincinnati 拠点(4900 Charlemar Dr)で Repair(B 区分)の建築許可 $3.8M。",
+"infer": "医療機器メーカー施設の修繕 = 生産・製造設備関連の維持工事の可能性(推論)。詳細記述が乏しく用途特定は不確か。",
+"note": null,
+"fact": {
+"src": "シンシナティ市 建築許可(公開記録)",
+"ref": "許可 2026P07650 Building",
+"value": 3800000.0,
+"verbatim": "Repair / Building / B",
+"gc": "JJP ENTERPRISES INC DBA SERVPRO",
+"pin": "005100080102",
+"owner_source": "parcel:hamilton_oh"
+},
+"karte": null,
+"company_id": "C-7763",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -25513,6 +25663,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "BD OF COUNTY COMM",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "K COMPANY, INC.(THE)"
+},
+"id": "S-36805",
+"state": "OH",
+"city": "Cleveland・11001 CEDAR AVE, CLEVELAND, OH, 44106",
+"company": "所有者・申請者の記載なし",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-28",
+"applied": "2026-08-19",
+"jp": false,
+"new": true,
+"summary": "郡所有施設(11001 Cedar Ave, Cleveland)にキッチンフード排気・排気ダクト・排気ファンを設置する商業 HVAC 工事(記載額は$35,000+$7,000程度)。",
+"infer": "所有者は County Commission = 公共施設の厨房設備更新であり生産設備投資ではない(推論)。記載の value_usd $1.26M は工事内容(合計$42,000程度)と大きく乖離。",
+"note": "公共施設の厨房設備。金額異常。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCH26-035314 Commercial HVAC",
+"value": 1263670.3,
+"verbatim": "Commercial HVAC / B Business / INSTALL 1 KITCHEN HOOD EXHAUST, KITCHEN HOOD EXHAUST DUCT SYSTEM -$35,000.00, EXHAUST FAN--$7,000.00",
+"gc": "K COMPANY, INC.(THE)",
+"pin": "12124001",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": null,
 "owner_kind": "登記名義",
 "owner_is_spe": false,
@@ -30956,6 +31156,56 @@
 },
 {
 "investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "GLAZE LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-38078",
+"state": "OH",
+"city": "Worthington・1012 HIGH ST WORTHINGTON OH 43085",
+"company": "GLAZE LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-27",
+"applied": "2026-07-29",
+"jp": false,
+"new": true,
+"summary": "Worthington 1012 High St に近隣向けベーカリーの新築(2階建木造)と駐車場整備 $2.5M。",
+"infer": null,
+"note": "飲食(ベーカリー)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0172 New Building (OBC)",
+"value": 2500000.0,
+"verbatim": "THIS PROJECT CONSISTS OF A NEW TWO-STORY WOOD-FRAMED BUILDING AND SITE REDEVELOPMENT WITH OFF-STREET PARKING FOR A NEIGHBORHOOD BAKERY. / New Building (OBC) / New Building ",
+"gc": null,
+"pin": "100-001121",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-7773",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": "CINCINNATI UNIVERSITY OF",
 "basis": "operator",
 "label": "操業事業者",
@@ -31002,6 +31252,56 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "1455 EAST 185TH STREET LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "KOKOSING INDUSTRIAL INC."
+},
+"id": "S-36821",
+"state": "OH",
+"city": "Cleveland・1455 E 185TH ST, CLEVELAND, OH, 44110",
+"company": "1455 EAST 185TH STREET LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-27",
+"applied": "2026-08-04",
+"jp": false,
+"new": true,
+"summary": "Cleveland 1455 E 185th St の F-2 工場施設敷地内に、1170 枚のモジュールから成る固定架台式太陽光発電設備と6フィートのチェーンリンクフェンスを設置する外構工事 $1.59M。",
+"infer": null,
+"note": "太陽光発電設備(用途変更なし)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-032785 Commercial Building",
+"value": 1589500.0,
+"verbatim": "Commercial Building / F-2 Factory Industrial Low Hazard / New Building / MAKE EXTERIOR ALTERATIONS INCLUDING PRE-DRIVEN PILE MOUNTS FOR FIXED-TILT SLOAR ARRAY OF 1170 MODULES AND 1250 LINEAR FEET OF 6",
+"gc": "KOKOSING INDUSTRIAL INC.",
+"pin": "11636003",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7767",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -31202,6 +31502,56 @@
 "batch": "session-002",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": "VILLA MERCEDE COMM REDEV CORP",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "VILLA MERCEDE COMM REDEV CORP",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "ADVANCED COATINGS & MAINTENANCE SOLUTIONS LLC."
+},
+"id": "S-36818",
+"state": "OH",
+"city": "Cleveland・1331 W 70TH ST, CLEVELAND, OH, 44102",
+"company": "VILLA MERCEDE COMM REDEV CORP",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-27",
+"applied": "2026-08-12",
+"jp": false,
+"new": true,
+"summary": "Cleveland 1331 W 70th St の商業建物で屋根を液状membrane被覆する外装改修 $279,206(構造変更なし)。",
+"infer": null,
+"note": "屋根改修。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-034011 Commercial Building",
+"value": 279206.0,
+"verbatim": "Commercial Building / B Business / Add or change existing construction elements / MAKE EXTERIOR ALTERATIONS COAT ROOF WITH LIQUID MEMBRANE PER MANUFACTURER SPECIFICATIONS AND FIELD INSPECTIONS. NO STR",
+"gc": "ADVANCED COATINGS & MAINTENANCE SOLUTIONS LLC.",
+"pin": "00207057",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7766",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -38102,6 +38452,56 @@
 "batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": "CLEVELAND CITY OF",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND CITY OF",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "A.W. FARRELL & SON, INC."
+},
+"id": "S-36850",
+"state": "OH",
+"city": "Cleveland・1201 LAKESIDE AVE, CLEVELAND, OH, 44114",
+"company": "CLEVELAND CITY OF",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-26",
+"applied": "2026-04-09",
+"jp": false,
+"new": true,
+"summary": "Cleveland市所有の建物(1201 Lakeside Ave)で屋根の全面張替え $2.2M(防湿層・テーパーシステム付き一枚もの防水)。",
+"infer": null,
+"note": "屋根改修(公共施設)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-012956 Commercial Building",
+"value": 2204000.0,
+"verbatim": "Commercial Building / B Business / Add or change existing construction elements / EXT. ALT.: REPLACE ROOF PER APPROVED PLANS/SPECS - FULLY ADHERED MOD SINGLE PLY W/ VAPOR BARRIER + TAPER SYSTEM.",
+"gc": "A.W. FARRELL & SON, INC.",
+"pin": "10201008",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7752",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -66056,6 +66456,106 @@
 },
 {
 "investor": {
+"name": "THE CLEVELAND MUSEUM OF ART",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "THE CLEVELAND MUSEUM OF ART",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "LOU RITENOUR DECORATORS, INC."
+},
+"id": "S-36945",
+"state": "OH",
+"city": "Cleveland・11150 EAST BLVD, CLEVELAND, OH, 44106",
+"company": "THE CLEVELAND MUSEUM OF ART",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-19",
+"applied": "2026-08-05",
+"jp": false,
+"new": false,
+"summary": "クリーブランド美術館(11150 East Blvd)の外構・ファサード改修 $9.7M(アクセシブルな屋外通路・植栽・外壁/テラス石材の清掃メンテナンス)。",
+"infer": null,
+"note": "美術館の外構・外装改修(工事内容は建設設備投資と無関係)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-033091 Commercial Building",
+"value": 9700000.0,
+"verbatim": "Commercial Building / B Business / Exterior only remodel / MAKE ALTERATIONS TO SITEWORK + BUILDING FACADE: INSTALL ACCESSIBLE OUTDOOR PATHS AND LANDSCAPING/TREE PLANTING + BUILDING ELEVATION AND TERRA",
+"gc": "LOU RITENOUR DECORATORS, INC.",
+"pin": "12036002",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7769",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "1300 EAST NINTH STREET CLEVELAND, LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "TURNER CONSTRUCTION COMPANY"
+},
+"id": "S-36954",
+"state": "OH",
+"city": "Cleveland・1300 E 9TH ST, CLEVELAND, OH, 44114",
+"company": "1300 EAST NINTH STREET CLEVELAND, LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-19",
+"applied": "2026-05-21",
+"jp": false,
+"new": false,
+"summary": "20 階建て高層オフィスビル(1300 E 9th St)の 2・3 階テナントスペースで内装改修、階間の大階段を新設 $8.3M。",
+"infer": "B(事務所)用途の内装改修であり生産・研究・医療用途への言及はない(推論)。",
+"note": "オフィステナント内装。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-020343 Commercial Building",
+"value": 8254960.0,
+"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INTERIOR ALTERATIONS INCLUDING INSTALLATION OF MONUMENTAL STAIR BETWEEN FLOORS TO EXISTING TENANT SPACE ON FLOORS 2 AND 3 OF 20 STORY TY",
+"gc": "TURNER CONSTRUCTION COMPANY",
+"pin": "10104004",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7771",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": "YOUNG MENS CHRISTIAN ASSOCIATION",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -66402,6 +66902,56 @@
 "batch": "session-010",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "KBTB LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "GEISEL HEATING & AIR CONDITIONING INC."
+},
+"id": "S-36946",
+"state": "OH",
+"city": "Cleveland・12730 TRISKETT RD C, CLEVELAND, OH, 44111",
+"company": "KBTB LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-19",
+"applied": "2026-08-18",
+"jp": false,
+"new": false,
+"summary": "Cleveland 12730 Triskett Rd C の F-2 Factory Industrial Low Hazard 区分施設に冷凍システム(25トン以下)2基を設置する商業 HVAC 工事 $53,768。",
+"infer": "小規模な冷凍設備更新であり、金額・規模から生産能力増強を示すものではない可能性(推論)。",
+"note": "小規模HVAC工事。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCH26-034988 Commercial HVAC",
+"value": 53768.0,
+"verbatim": "Commercial HVAC / F-2 Factory Industrial Low Hazard / INSTALL 2 REFRIGERATION SYSTEM 25 TONS OR LESS",
+"gc": "GEISEL HEATING & AIR CONDITIONING INC.",
+"pin": "02113017",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7770",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -81806,6 +82356,56 @@
 },
 {
 "investor": {
+"name": "D L K INVESTMENT CORP.",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "D L K INVESTMENT CORP.,",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "RAW ROOFING LLC."
+},
+"id": "S-26675",
+"state": "OH",
+"city": "Cleveland・3550 W 140TH ST, CLEVELAND, OH, 44111",
+"company": "D L K INVESTMENT CORP.",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-14",
+"applied": "2026-08-11",
+"jp": false,
+"new": false,
+"summary": "Cleveland 3550 W 140th St の商業建物で屋根の全面葺き替え(既存仕様通り)$277.4k。構造工事なし。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-033768 Commercial Building",
+"value": 277400.0,
+"verbatim": "Commercial Building / B Business / Exterior only remodel / MAKE EXTERIOR ALTERATIONS TEAR OFF AND REPLACE TOP ROOF COVERING IN-KIND PER MANUFACTURER SPECIFICATIONS AND FIELD INSPECTIONS. NO STRUCTURAL",
+"gc": "RAW ROOFING LLC.",
+"pin": "02433010",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7740",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -97106,6 +97706,56 @@
 },
 {
 "investor": {
+"name": "FAIRVIEW GENERAL HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "FAIRVIEW GENERAL HOSPITAL",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "ALBERT M. HIGLEY COMPANY (THE)"
+},
+"id": "S-26752",
+"state": "OH",
+"city": "Cleveland・18200 LORAIN AVE, CLEVELAND, OH, 44111",
+"company": "FAIRVIEW GENERAL HOSPITAL",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-11",
+"applied": "2026-02-20",
+"jp": false,
+"new": false,
+"summary": "Fairview General Hospital 敷地内に 6 階建・364,260 SQ FT・992 台収容の駐車場ガレージを新築 $32.4M(S-2 低危険物保管用途)。",
+"infer": "病院キャンパス内だが用途は駐車場であり医療機能の増強ではない(推論)。",
+"note": "駐車場ガレージ(病院附帯・医療機器投資ではない)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-005744 Commercial Building",
+"value": 32400716.0,
+"verbatim": "Commercial Building / S-2 Storage - Low Hazard / New Building / ERECT 6 STORY 364,260 SQ FT - 992 SPACE PARKING GARAGE PER APPROVED PLANS. SPECIAL INSPECTOR REQUIRED. PERMITS REQUIRED FOR PLUMBING, HV",
+"gc": "ALBERT M. HIGLEY COMPANY (THE)",
+"pin": "02502012",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7742",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -97152,6 +97802,56 @@
 "batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "F.I. STEELYARD COMMONS LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "PODOJIL BUILDERS INC."
+},
+"id": "S-26747",
+"state": "OH",
+"city": "Cleveland・3299 STEELYARD DR, CLEVELAND, OH, 44105",
+"company": "F.I. STEELYARD COMMONS LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-11",
+"applied": "2026-06-18",
+"jp": false,
+"new": false,
+"summary": "Cleveland 3299 Steelyard Dr の既存 Burger King 施設(飲食店 A-2)の内外装改修 $1.04M。",
+"infer": null,
+"note": "飲食店(内外装改修)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-025149 Commercial Building",
+"value": 1038200.0,
+"verbatim": "Commercial Building / A-2 Assembly - Food and Drink Consumption / Interior/Exterior Remodel / INTERIOR AND EXTERIOR OEBC LEVEL 1 ALTERATIONS TO EXISTING BURGER KING FACILITY PER APPROVED PLANS. SEPARA",
+"gc": "PODOJIL BUILDERS INC.",
+"pin": "00823010",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7741",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -118156,6 +118856,56 @@
 },
 {
 "investor": {
+"name": "SUNOCO MIDSTREAM LLC",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "SUNOCO MIDSTREAM LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "XL INDUSTRIAL SERVICES, INC."
+},
+"id": "S-26804",
+"state": "OH",
+"city": "Cleveland・250 MAHONING AVE, CLEVELAND, OH, 44113",
+"company": "SUNOCO MIDSTREAM LLC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-06",
+"applied": "2026-05-21",
+"jp": false,
+"new": false,
+"summary": "Sunoco LP Cleveland ターミナルの既存鉄道エリアで石油輸送用のサイト工事 $1.12M(用途 U・占有証明書なし)。",
+"infer": null,
+"note": "石油ターミナルのインフラ改修(製造・研究・物流施設の新設ではない)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-020460 Commercial Building",
+"value": 1121294.0,
+"verbatim": "Commercial Building / U Utility - Miscellaneous / Site Work Only / PERFORM SITE WORK ON AN EXISTING RAILWAY AREA FOR PETROLEUM TRANSFER AT SUNOCO LP CLEVELAND TERMINAL. NO CERTFICATE OF OCCUPANCY TO B",
+"gc": "XL INDUSTRIAL SERVICES, INC.",
+"pin": "00430002",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7743",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -125463,6 +126213,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "GPP PRACTICE FACILITY LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "CASTLE HEATING & AIR INC."
+},
+"id": "S-26841",
+"state": "OH",
+"city": "Cleveland・1901 W 3RD ST, CLEVELAND, OH, 44113",
+"company": "GPP PRACTICE FACILITY LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-05",
+"applied": "2026-07-29",
+"jp": false,
+"new": false,
+"summary": "Cleveland 1901 W 3rd St の施設(I-4 用途・24時間未満の成人/児童ケア施設分類)で HVAC 工事 $750k(壁掛/空間ヒーター3台、屋上空調5台、ダクト工事等)。",
+"infer": "施設名 'GPP Practice Facility' とI-4分類(デイケア系施設)から、スポーツ/トレーニング練習施設等の空調更新の可能性(推論)。生産設備投資とは読み取れない。",
+"note": "施設空調更新(用途は practice facility/デイケア系)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCH26-031659 Commercial HVAC",
+"value": 750000.0,
+"verbatim": "Commercial HVAC / I-4 Institutional - Adult and Child Care Less than 24 Hrs. / INSTALL 3 WALL/SPACE HEATER, 5 ROOFTOP HEATING/COOLING UNITS, INSTALLED COST OF DUCTWORK SUPPLY/RETURN/EXH.AIR-$565,000.0",
+"gc": "CASTLE HEATING & AIR INC.",
+"pin": "10130005",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7744",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "JUBILEE-SAWMILL LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -131802,6 +132602,56 @@
 "batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
+"name": "CLEVELAND CITY",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND CITY",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "LAKELAND ELECTRIC, INC."
+},
+"id": "S-26876",
+"state": "OH",
+"city": "Cleveland・2511 E 46TH ST, CLEVELAND, OH, 44104",
+"company": "CLEVELAND CITY",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-04",
+"applied": "2026-08-03",
+"jp": false,
+"new": false,
+"summary": "Cleveland市所有のA-3集会用途施設(35,300 SQFT)でLonnie Burton関連の電気工事許可 $1.1M。親許可 BCB26-009206 の副許可。",
+"infer": null,
+"note": "公共(集会施設・レクリエーション)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCE26-032532 Commercial Electrical",
+"value": 1108000.0,
+"verbatim": "Commercial Electrical / A-3 Assembly - Worship, Recreation, Amusement / INSTALL 35,300 SQUARE FEET: ALT - Electrical work associated w/ Lonnie Burton. ***BUILDING PERMIT NO BCB26-009206***",
+"gc": "LAKELAND ELECTRIC, INC.",
+"pin": "10335008",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7746",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -140663,6 +141513,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "10801 MADISON AVENUE OWNER LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "KWEEN INDUSTRIES INC DBA KINGS ELECTRIC SERVICES"
+},
+"id": "S-26899",
+"state": "OH",
+"city": "Cleveland・10801 MADISON AVE, CLEVELAND, OH, 44102",
+"company": "10801 MADISON AVENUE OWNER LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-03",
+"applied": "2026-07-30",
+"jp": false,
+"new": false,
+"summary": "Cleveland 10801 Madison Ave の S-1 倉庫施設で、物理セキュリティ強化(PSH)関連の外構フェンス・ゲート・警備小屋向け電気設備の設置 $250k(親許可 B25008580 の副許可)。",
+"infer": "PSH(物理セキュリティ強化)工事は既存施設のセキュリティ対策強化であり、生産能力増強ではない可能性(推論)。親許可の内容次第で施設用途が変わる。",
+"note": "セキュリティ設備(電気副許可)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCE26-031879 Commercial Electrical",
+"value": 250000.0,
+"verbatim": "Commercial Electrical / S-1 Storage - Moderate Hazard / 50 SQ. FT. Install associated electrical gear, conduits, feeders, and conductors for exterior fencing, gates, and guard shack for the PSH (Physi",
+"gc": "KWEEN INDUSTRIES INC DBA KINGS ELECTRIC SERVICES",
+"pin": "00505001",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7747",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "DIOCESE OF CLEVELAND",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -148456,6 +149356,56 @@
 },
 {
 "investor": {
+"name": "CLEVELAND CITY",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND CITY",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "DUNLOP & JOHNSTON, INC."
+},
+"id": "S-26920",
+"state": "OH",
+"city": "Cleveland・2511 E 46TH ST, CLEVELAND, OH, 44104",
+"company": "CLEVELAND CITY",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-31",
+"applied": "2026-03-17",
+"jp": false,
+"new": false,
+"summary": "Cleveland 市所有の集会施設(A-3 用途・礼拝/レクリエーション/娯楽)の既存 2 階建て建物で内外装の全面改修 $7.2M。電気・空調・配管・エレベーターは別途許可。",
+"infer": null,
+"note": "公共施設(集会用途)の改修。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-009206 Commercial Building",
+"value": 7163200.0,
+"verbatim": "Commercial Building / A-3 Assembly - Worship, Recreation, Amusement / Interior/Exterior Remodel / COMPLETE INTERIOR ALTERATIONS, TO EXISTING 2 STORY BLDG PER APPROVED PLANS. SEPARATE ELECTRICAL, HVAC,",
+"gc": "DUNLOP & JOHNSTON, INC.",
+"pin": "10335008",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7746",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -154006,6 +154956,56 @@
 },
 {
 "investor": {
+"name": "THE CLEVELAND MUSIC SCHOOL SETTLEMENT",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "THE CLEVELAND MUSIC SCHOOL SETTLEMENT",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "MAROUS BROTHERS CONSTRUCTION, INC."
+},
+"id": "S-26935",
+"state": "OH",
+"city": "Cleveland・1560 MISTLETOE DR D, CLEVELAND, OH, 44106",
+"company": "THE CLEVELAND MUSIC SCHOOL SETTLEMENT",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-30",
+"applied": "2026-03-30",
+"jp": false,
+"new": false,
+"summary": "Cleveland Music School Settlement(音楽学校)の既存建物への増築・改修 $6.9M。",
+"infer": null,
+"note": "教育・文化施設(音楽学校)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-011162 Commercial Building",
+"value": 6907951.0,
+"verbatim": "Commercial Building / B Business / Addition to an existing building / MAKE ALTERATIONS AND ADDITION PER APPROVED PLANS. SEPARATE PLUMBING, HVAC AND ELECTRICAL PERMITS REQUIRED. SPECIAL INSPECTIONS AND",
+"gc": "MAROUS BROTHERS CONSTRUCTION, INC.",
+"pin": "12021041",
+"owner_source": "parcel:cuyahoga_oh:addr"
+},
+"karte": null,
+"company_id": "C-7748",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": "SCARBOROUGH TENNIS LIMITED",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -154052,6 +155052,56 @@
 "batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
+"name": "6415 DETROIT AVENUE CORPORATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "6415 DETROIT AVENUE CORPORATION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "MAROUS BROTHERS CONSTRUCTION, INC."
+},
+"id": "S-26952",
+"state": "OH",
+"city": "Cleveland・6415 DETROIT AVE, CLEVELAND, OH, 44102",
+"company": "6415 DETROIT AVENUE CORPORATION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-30",
+"applied": "2025-11-14",
+"jp": false,
+"new": false,
+"summary": "Cleveland Public Theatre の Gordon Square Theatre でロビー改修と電気室増築 $2.1M(A-1 興行場用途)。",
+"infer": null,
+"note": "劇場(文化施設)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 B25037640 New",
+"value": 2148214.0,
+"verbatim": "New / A-1 Assembly - Performing Arts / Alteration / Perform alterations to the lobby & construct and an electrical room addition to Cleveland Public Theatre’s Gordan Square Theatre. Electrical, plumbi",
+"gc": "MAROUS BROTHERS CONSTRUCTION, INC.",
+"pin": "00216019",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7749",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -154202,6 +155252,56 @@
 "batch": "session-005",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "10801 MADISON AVENUE OWNER LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "TOYOTA AUTOMATED LOGISTICS AMERICAS, LLC"
+},
+"id": "S-26949",
+"state": "OH",
+"city": "Cleveland・10801 MADISON AVE, CLEVELAND, OH, 44102",
+"company": "10801 MADISON AVENUE OWNER LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "物流・EC",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-30",
+"applied": "2026-06-03",
+"jp": false,
+"new": false,
+"summary": "既存の Amazon 倉庫施設(DCL7)に新しい機械を設置する内外装改修 $200k(S-1 保管用途)。",
+"infer": "既存倉庫への機械設置 = マテハン(仕分け・搬送)設備の増設・更新の可能性(推論)。新設ではなく小規模改修のため未分類。",
+"note": "既存倉庫の設備更新(新設ではない)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-022430 Commercial Building",
+"value": 200000.0,
+"verbatim": "Commercial Building / S-1 Storage - Moderate Hazard / Interior/Exterior Remodel / INSTALL NEW MACHINERY FOR EXISTING AMAZON WAREHOUSE FACILITY (DCL7). SUBMIT SEPARATE PERMIT FOR ELECTRICAL. NO SPECIAL",
+"gc": "TOYOTA AUTOMATED LOGISTICS AMERICAS, LLC",
+"pin": "00505001",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7747",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -167756,6 +168856,56 @@
 },
 {
 "investor": {
+"name": "CITY OF WORTHINGTON",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CITY OF WORTHINGTON",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38032",
+"state": "OH",
+"city": "Worthington・380 HIGHLAND AVE WORTHINGTON OH 43085",
+"company": "CITY OF WORTHINGTON",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-28",
+"applied": "2026-07-15",
+"jp": false,
+"new": false,
+"summary": "Worthington 市所有施設(380 Highland Ave)の空調設備更新工事 $774,590(AHU/RTU 交換、VAV 追加、ボイラー新設、排気ファン交換など)。",
+"infer": null,
+"note": "公共施設の設備更新(市庁舎等・工事内容から生産設備ではない)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0151 Alteration/Repair  (OBC)",
+"value": 774590.0,
+"verbatim": "• REPLACE AHU-1 AND F-1 WITH NEW RTU-1 ON GRADE.\n• REPLACE MAU ON MEZZANINE.\n• ADD 12 NEW VAV BOXES WITH HOT WATER REHEAT COILS.\n• PROVIDE NEW GAS-FIRED HOT WATER BOILER SYSTEM AND DISTRIBUTION PIPING",
+"gc": null,
+"pin": "100-002538",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-7772",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -172952,6 +174102,56 @@
 "batch": "session-002",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "23432 LAKELAND LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "GEM INDUSTRIAL INC"
+},
+"id": "S-27001",
+"state": "OH",
+"city": "Cleveland・1804 E 40TH ST, CLEVELAND, OH, 44114",
+"company": "23432 LAKELAND LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "その他製造",
+"category": "未分類",
+"category_raw": "製造能力の増強",
+"confidence": "low",
+"date": "2026-07-27",
+"applied": "2026-06-18",
+"jp": false,
+"new": false,
+"summary": "Cleveland 1804 E 40th St の既存建物を F-1/B 用途(工場・事務所)に確立するための内外装改修 $491k。",
+"infer": "所有は SPE 名義で入居事業者は記録上不明(推論不可)。F-1 用途への変更は軽工業・製造利用への転用を示唆(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-025167 Commercial Building",
+"value": 491000.0,
+"verbatim": "Commercial Building / F-2 Factory Industrial Low Hazard / Interior/Exterior Remodel / MAKE INTERIOR AND EXTERIOR ALTERATIONS AND EXTABLISH F-1/B USE TO EXISTING OCCUPANCY PER APPROVED PLANS. SEPARATE ",
+"gc": "GEM INDUSTRIAL INC",
+"pin": "10239024",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7745",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -178352,6 +179552,106 @@
 "batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
+"name": "CLEVELAND CITY",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND CITY",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "NEPTUNE PLUMBING & HEATING CO."
+},
+"id": "S-27033",
+"state": "OH",
+"city": "Cleveland・1979 W 25TH ST, CLEVELAND, OH, 44113",
+"company": "CLEVELAND CITY",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-24",
+"applied": "2026-07-23",
+"jp": false,
+"new": false,
+"summary": "Cleveland 市の商業施設(1979 W 25th St、小売/マーケット用途)で燃料ガス配管1,750フィートを設置するHVAC許可 $1.9M。",
+"infer": null,
+"note": "小売/マーケット(公共所有)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCH26-030609 Commercial HVAC",
+"value": 1900000.0,
+"verbatim": "Commercial HVAC / M Mercantile - Stores / Markets / Retail / INSTALL 1750 LIN. FT. FUEL GAS PIPING ***BUILDING PERMIT NO B25021261***",
+"gc": "NEPTUNE PLUMBING & HEATING CO.",
+"pin": "00323026",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7746",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": "CLEVELAND CITY",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND CITY",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "NEPTUNE PLUMBING & HEATING COMPANY"
+},
+"id": "S-27018",
+"state": "OH",
+"city": "Cleveland・1979 W 25TH ST, CLEVELAND, OH, 44113",
+"company": "CLEVELAND CITY",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-24",
+"applied": "2026-07-22",
+"jp": false,
+"new": false,
+"summary": "Cleveland市の商業施設(1979 W 25th St、Mercantile-Stores/Markets/Retail用途)における配管設備工事 $1.9M。トイレ12基・小便器2基・洗面台11基・シンク25基・グリース阻集器10基などを設置。関連建築許可 B25021261 の副許可。",
+"infer": null,
+"note": "小売・市場施設の配管工事(公共所有)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCP26-030486 Commercial Plumbing",
+"value": 1900000.0,
+"verbatim": "Commercial Plumbing / M Mercantile - Stores / Markets / Retail / INSTALL 12 WATER CLOSET/TOILET, 2 URINALS, 11 LAVATORY SINK, 25 SINK, 1 DRINKING FOUNTAIN, 61 FLOOR DRAIN, 22 HOT WATER HEATER 2 SUMP P",
+"gc": "NEPTUNE PLUMBING & HEATING COMPANY",
+"pin": "00323026",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7746",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -187556,6 +188856,56 @@
 },
 {
 "investor": {
+"name": "GREATER CLEVELAND FOOD BANK INC",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "GREATER CLEVELAND FOOD BANK INC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "INDEPENDENCE CONSTRUCTION LLC."
+},
+"id": "S-27061",
+"state": "OH",
+"city": "Cleveland・9830 LORAIN AVE, CLEVELAND, OH, 44102",
+"company": "GREATER CLEVELAND FOOD BANK INC",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-22",
+"applied": "2026-05-28",
+"jp": false,
+"new": false,
+"summary": "Cleveland Food Bank 建物(31,363 SF 中 18,216 SF)の内外装改修 $1.7M。",
+"infer": null,
+"note": "非営利団体(フードバンク)の施設改修。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCB26-021500 Commercial Building",
+"value": 1747000.0,
+"verbatim": "Commercial Building / B Business / Interior/Exterior Remodel / MAKE INTERIOR ALTERATIONS TO 18,216 SF OF EXISTING 31,363 SF CLEVELAND FOOD BANK BUILDING PER APPROVED PLANS. SEPARATE ELECTRICAL, PLUMBI",
+"gc": "INDEPENDENCE CONSTRUCTION LLC.",
+"pin": "00519103",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7751",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -192152,6 +193502,56 @@
 "batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
+"name": "CLEVELAND CITY OF",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND CITY OF",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "TERRACE CONSTRUCTION COMPANY, INC."
+},
+"id": "S-27082",
+"state": "OH",
+"city": "Cleveland・1036 PANNA LN, CLEVELAND, OH, 44109",
+"company": "CLEVELAND CITY OF",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-21",
+"applied": "2023-11-06",
+"jp": false,
+"new": false,
+"summary": "Cleveland市による1036 Panna Lnでのポンプ場設置工事 $1.47M(電気工事許可含む)。",
+"infer": null,
+"note": "公共(上下水道インフラ)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 B23029197 New",
+"value": 1469005.03,
+"verbatim": "New / U Utility - Miscellaneous / Alteration / INSTALL PUMP STATION PER APPROVED PLANS. PERMIT REQUIRED FOR ELECTRICAL.",
+"gc": "TERRACE CONSTRUCTION COMPANY, INC.",
+"pin": "01016033",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7752",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -198506,6 +199906,56 @@
 },
 {
 "investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-27592",
+"state": "OH",
+"city": "Mason・487 CLUBHOUSE DRIVE, MASON, OH 45040",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-20",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Mason 487 Clubhouse Drive で既存外壁に新規サイディングを重ね張りし、断熱材追加・見切り材/雨樋/竪樋を交換する商業改修 $2.5M。",
+"infer": null,
+"note": "外装(サイディング・雨樋)。金額異常の可能性(推論)。",
+"fact": {
+"src": "メイソン市 建築許可(公開記録・月報)",
+"ref": "許可 BLD-26-603 Commercial Alteration",
+"value": 2500000.0,
+"verbatim": "Commercial Alteration / Richard Martin Placing new siding over existing, adding insulation, replacing trim, gutters, downspouts.",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:warren_oh:addr"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": "SUMMIT COUNTRY DAY SCHOOL",
 "basis": "operator",
 "label": "操業事業者",
@@ -203502,6 +204952,106 @@
 "batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
+"name": "BD OF ED CSD",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "BD OF ED CSD",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "LAKELAND ELECTRIC, INC."
+},
+"id": "S-27124",
+"state": "OH",
+"city": "Cleveland・1468 W 98TH ST, CLEVELAND, OH, 44102",
+"company": "BD OF ED CSD",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-17",
+"applied": "2026-07-16",
+"jp": false,
+"new": false,
+"summary": "Cleveland Municipal School District の Marion Seltzer 校新築(64,047 SQFT)に伴う電気工事 $3.74M(建築許可 B25039058 の副許可)。",
+"infer": null,
+"note": "公共(学校)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCE26-029552 Commercial Electrical",
+"value": 3740000.0,
+"verbatim": "Commercial Electrical / E Educational / INSTALL 64,047 SQUARE FEET: NEW CONSTR- Electrical work associated with CMSD Marion Seltzer. ***BUILDING PERMIT NO B25039058***",
+"gc": "LAKELAND ELECTRIC, INC.",
+"pin": "00129049",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7754",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
+"name": "GLOBAL AMBASSADORS LANGUAGE ACADEMY INC.",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "GLOBAL AMBASSADORS LANGUAGE ACADEMY INC.",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "J. LOMBARDO ELECTRIC"
+},
+"id": "S-27122",
+"state": "OH",
+"city": "Cleveland・3349 W 125TH ST, CLEVELAND, OH, 44111",
+"company": "GLOBAL AMBASSADORS LANGUAGE ACADEMY INC.",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-17",
+"applied": "2026-07-15",
+"jp": false,
+"new": false,
+"summary": "Cleveland 3349 W 125th St の教育施設(語学アカデミー)で 54,811 SQFT の内装改修に伴う商業電気工事 $1.7M(BUILDING PERMIT NO B24021177 の副許可)。",
+"infer": null,
+"note": "公共(学校)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCE26-029260 Commercial Electrical",
+"value": 1718063.0,
+"verbatim": "Commercial Electrical / E Educational / INSTALL 54,811 SQUARE FEET: ALT - Interior alterations as per approved plans. ***BUILDING PERMIT NO B24021177***",
+"gc": "J. LOMBARDO ELECTRIC",
+"pin": "02124075",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7753",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {
@@ -237906,6 +239456,56 @@
 },
 {
 "investor": {
+"name": "CITY OF MASON",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CITY OF MASON",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-27527",
+"state": "OH",
+"city": "Mason・6050 MASON-MONTGOMERY ROAD, MASON, OH 45040",
+"company": "CITY OF MASON",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-09",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Mason 市所有物件(6050 Mason-Montgomery Road)の屋根張替え工事 $1.03M(EPDM 防水システム、20年保証)。",
+"infer": null,
+"note": "屋根。公共(市)。",
+"fact": {
+"src": "メイソン市 建築許可(公開記録・月報)",
+"ref": "許可 BLD-26-693 Commercial Roof Replacement",
+"value": 1027913.0,
+"verbatim": "Commercial Roof Replacement / City of Mason Go-over existing single mod-bit roof system with new Carlisle 60-mil Reinforced EPDM vacuseal system (20yr ndl warranty)",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:warren_oh:addr"
+},
+"karte": null,
+"company_id": "C-7757",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -242902,6 +244502,56 @@
 "batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "W26 APARTMENTS LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-27260",
+"state": "OH",
+"city": "Cleveland・2166 W 26TH ST, CLEVELAND, OH, 44113",
+"company": "W26 APARTMENTS LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-08",
+"applied": "2026-06-11",
+"jp": false,
+"new": false,
+"summary": "Cleveland 2166 W 26th St の集合住宅(R-2)向け商業用HVAC工事 $12M(炉10台・ヒートポンプ109台・壁掛けヒーター27台・屋上空調ユニット109台等を設置)。",
+"infer": null,
+"note": "住宅(集合住宅の空調設備)。",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCH26-023953 Commercial HVAC",
+"value": 12000000.0,
+"verbatim": "Commercial HVAC / R-2 Residential - Permanent Housing - Shared Egress / INSTALL 10 FURNACES, 109 HEAT PUMPS, 27 WALL/SPACE HEATER, 109 ROOFTOP HEATING/COOLING UNITS, Installed Cost of Ductwork Supply/",
+"gc": null,
+"pin": "00710186",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7756",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-07T15:10:51+00:00"
 }
 },
 {

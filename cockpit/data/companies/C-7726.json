@@ -14,8 +14,8 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 1101675.0,
+"count": 5,
+"value_total": 1501675.0,
 "latest": "2026-09-04",
 "items": [
 {
@@ -91,6 +91,30 @@
 }
 },
 {
+"id": "S-27090",
+"date": "2026-07-20",
+"applied": "2026-07-13",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "18101 LORAIN AVE, CLEVELAND, OH, 44195",
+"permit_no": "BCP26-028606",
+"permit_type": "Commercial Plumbing",
+"value": 400000.0,
+"category": "医療施設",
+"confidence": "high",
+"summary": "Fairview Park Hospital(Cleveland 18101 Lorain Ave)で透析ボックス12台・排水/通気配管1,380リニアフィート・給水配管1,610リニアフィートを設置する配管工事 $400k。",
+"infer": "透析ユニット新設に伴う専用配管工事 = 透析装置・関連医療機器の調達が並行して発生する可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Plumbing / U Utility - Miscellaneous / INSTALL 12 DIALYSIS BOXES, 1380 LIN. FT. WASTE, VENT PIPING, 1610 LIN. FT. WATER DISTRIBUTION PIPING",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)"
+}
+},
+{
 "id": "S-27213",
 "date": "2026-07-10",
 "applied": "2026-07-07",
@@ -157,6 +181,13 @@
 "summary": "病院の救急部門 1 階 875 SF を CT 機器設置のため内装改修 $407k。給排水・空調・電気は別許可。"
 },
 {
+"date": "2026-07-20",
+"face": "permits",
+"title": "建設許可(Cleveland): 医療施設",
+"ref": "S-27090",
+"summary": "Fairview Park Hospital(Cleveland 18101 Lorain Ave)で透析ボックス12台・排水/通気配管1,380リニアフィート・給水配管1,610リニアフィートを設置する配管工事 $400k。"
+},
+{
 "date": "2026-07-10",
 "face": "permits",
 "title": "建設許可(Cleveland): 医療施設",
@@ -164,6 +195,6 @@
 "summary": "Fairview Park Hospital(I-2 施設)で商業用 HVAC 工事 $605k(ダクトヒーター14台・屋上冷暖房ユニット1台・VAV14台・ファン2台など)。親許可 BCB26-013373 の副許可。"
 }
 ],
-"generated_at": "2026-09-07T09:08:22+00:00",
+"generated_at": "2026-09-07T15:10:54+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

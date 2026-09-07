@@ -14,8 +14,8 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 10000.0,
+"count": 3,
+"value_total": 870200.0,
 "latest": "2026-07-28",
 "items": [
 {
@@ -40,6 +40,30 @@
 "policy": "v2-2026-09-05-highflow-filter",
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-27606",
+"date": "2026-07-23",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Mason",
+"address": "8700 MASON-MONTGOMERY ROAD, MASON, OH 45040",
+"permit_no": "BLD-26-630",
+"permit_type": "Commercial Fire Protection",
+"value": 860200.0,
+"category": "製造能力の増強",
+"confidence": "high",
+"summary": "Procter & Gamble の Mason 施設(8700 Mason-Montgomery Rd)F 棟増築に伴う商業用防火設備工事 $860.2k。",
+"infer": "既存施設 F 棟の増築に付随する消防設備工事 = 生産・研究関連棟の拡張が進行中である可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Fire Protection / Procter and Gamble Addition to F building",
+"source_id": "SRC-070",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)"
 }
 },
 {
@@ -95,6 +119,13 @@
 "summary": "P&G の Mason 拠点で新設の「SR CUP コネクタ」及び階段Bに対する防火設備工事 $10k。"
 },
 {
+"date": "2026-07-23",
+"face": "permits",
+"title": "建設許可(Mason): 製造能力の増強",
+"ref": "S-27606",
+"summary": "Procter & Gamble の Mason 施設(8700 Mason-Montgomery Rd)F 棟増築に伴う商業用防火設備工事 $860.2k。"
+},
+{
 "date": "2026-07-16",
 "face": "permits",
 "title": "建設許可(Butler County): 未分類",
@@ -102,6 +133,6 @@
 "summary": "Procter & Gamble の Union Centre Blvd 施設で機械室・設備室向けスプリンクラーの改訂許可(金額不明)。"
 }
 ],
-"generated_at": "2026-09-07T09:08:22+00:00",
+"generated_at": "2026-09-07T15:10:54+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

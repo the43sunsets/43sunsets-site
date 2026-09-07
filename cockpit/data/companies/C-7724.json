@@ -14,8 +14,8 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 965728.0,
+"count": 7,
+"value_total": 23896782.0,
 "latest": "2026-08-27",
 "items": [
 {
@@ -43,6 +43,30 @@
 }
 },
 {
+"id": "S-36940",
+"date": "2026-08-19",
+"applied": "2026-08-03",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "9620 CARNEGIE AVE, CLEVELAND, OH, 44106",
+"permit_no": "BCB26-032426",
+"permit_type": "Commercial Building",
+"value": 8998041.0,
+"category": "医療施設",
+"confidence": "high",
+"summary": "Cleveland Clinic の Carnegie Ave キャンパス内 N 棟 A ウイング 5 階(16,536 SF)の内装のみの改修 $9.0M。機械・電気・配管は別許可。",
+"infer": "病院キャンパス内の内装改修 = 診療・検査関連の設備更新に伴う調達が発生する可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO EXISTING 16,536 SF OF BLDG N, A WING, 5TH FLOOR (NA5) PER APPROVED PLANS. SEPARATE PERMITS REQUIRED FOR PLUMBING, HVAC, AND ELECTRICAL. SPECIAL INSPECTIONS REQUIRED. SUBMIT SEPARATE PLANS TO FPB FOR ALTERATIONS T",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)"
+}
+},
+{
 "id": "S-36980",
 "date": "2026-08-18",
 "applied": "2026-08-06",
@@ -64,6 +88,54 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36993",
+"date": "2026-08-17",
+"applied": "2026-08-14",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2060 E 89TH ST, CLEVELAND, OH, 44106",
+"permit_no": "BCE26-034583",
+"permit_type": "Commercial Electrical",
+"value": 1476128.0,
+"category": "医療施設",
+"confidence": "high",
+"summary": "Cleveland Clinic Foundation の施設(2060 E 89th St)3 階 32,156 SQFT の電気工事 $1.48M(親許可 #BCB25-041723 の副許可)。",
+"infer": "病院施設の電気副許可 = 親案件の増築/改修工事に伴う設備投資の一部の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / INSTALL 32156 SQUARE FEET: building permit #BCB25-041723 - 3rd fl",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)"
+}
+},
+{
+"id": "S-26689",
+"date": "2026-08-13",
+"applied": "2025-12-23",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2060 E 89TH ST NA, CLEVELAND, OH, 44195",
+"permit_no": "BCB25-041723",
+"permit_type": "Commercial Building",
+"value": 12456885.0,
+"category": "医療施設",
+"confidence": "high",
+"summary": "Cleveland Clinic の複数棟(サブ地下・地下・1階の Building MM、2階 Building M、3階 Building G)32,156 SQ FT を滅菌処理部門(Sterile Processing Department)向けに内装改修 $12.5M。給排水・HVAC・電気・防火設備の許可も要求。",
+"infer": "滅菌処理部門の新設・拡張 = 滅菌機器(オートクレーブ等)・洗浄設備・搬送システムの調達が竣工まで続く窓(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / I-2 Institutional - Hospitals / Nursing Home / Interior Only Remodel / INTERIOR ALTERATION 32,156 SQ FT SUB-BASEMENT & BASEMENT & 1ST FLOOR OF BUILDING MM, 2ND FLOOR BUILDING M, 3RD FLOOR BUILDING G FOR STERILE PROCESSING DEPARTMENT PER APPROVED PLANS. PERMITS REQUIRED FOR PLUM",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260907T150712Z",
+"model": "claude-sonnet-5 (sync fallback)"
 }
 },
 {
@@ -143,11 +215,32 @@
 "summary": "Cleveland Clinic の L棟1階(1391 SQFT)の内装電気改修に伴う商業電気工事 $871k(建築許可 BCB26-034065 の副許可)。"
 },
 {
+"date": "2026-08-19",
+"face": "permits",
+"title": "建設許可(Cleveland): 医療施設",
+"ref": "S-36940",
+"summary": "Cleveland Clinic の Carnegie Ave キャンパス内 N 棟 A ウイング 5 階(16,536 SF)の内装のみの改修 $9.0M。機械・電気・配管は別許可。"
+},
+{
 "date": "2026-08-18",
 "face": "permits",
 "title": "建設許可(Cleveland): 医療施設",
 "ref": "S-36980",
 "summary": "Cleveland Clinic の施設(9500 Euclid Ave)で配管工事 $30k(シンク3台・グリース阻集器・給排水配管100フィート)。親許可 BCB26-020921 に紐づく副許可。"
+},
+{
+"date": "2026-08-17",
+"face": "permits",
+"title": "建設許可(Cleveland): 医療施設",
+"ref": "S-36993",
+"summary": "Cleveland Clinic Foundation の施設(2060 E 89th St)3 階 32,156 SQFT の電気工事 $1.48M(親許可 #BCB25-041723 の副許可)。"
+},
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Cleveland): 医療施設",
+"ref": "S-26689",
+"summary": "Cleveland Clinic の複数棟(サブ地下・地下・1階の Building MM、2階 Building M、3階 Building G)32,156 SQ FT を滅菌処理部門(Sterile Processing Department)向けに内装改修 $12.5M。給排水・HVAC・電気・防火設備の許可も要求。"
 },
 {
 "date": "2026-08-04",
@@ -164,6 +257,6 @@
 "summary": "Cleveland Clinic(9500 Euclid Ave)でサンプポンプ1台・排水/通気配管23ftの設備配管工事 $14,660(親許可 B25018487 M19-M20 に付随)。"
 }
 ],
-"generated_at": "2026-09-07T09:08:22+00:00",
+"generated_at": "2026-09-07T15:10:54+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
