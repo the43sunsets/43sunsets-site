@@ -103,6 +103,21 @@ h2{font-family:var(--serif);font-weight:800;font-size:clamp(26px,2.8vw,36px);lin
 .bounds .no li::before{content:"×";color:var(--ember)}
 /* 責任者 */
 .band{height:380px;background:url(/assets/hero/photo-b.webp) center 55%/cover no-repeat;margin:-88px 0 80px}
+.who{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:64px;align-items:start;border-top:2px solid var(--ink);padding-top:28px}
+.who .name{font-family:var(--serif);font-size:30px;font-weight:800;margin:0 0 4px}
+.who .rom{font-family:var(--mono);font-size:12px;color:var(--sub);letter-spacing:.12em;margin:0 0 24px}
+.who .bio{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:8px 0 10px;margin:0 0 24px}
+.who .bio p{margin:10px 0;font-size:16px;line-height:2}
+.who ul{margin:0 0 24px;padding:0;list-style:none;font-size:15.5px}
+.who li{padding:14px 0;border-top:1px solid var(--line-soft);font-size:15.5px;line-height:1.85}
+.who li:last-child{border-bottom:1px solid var(--line-soft)}
+.contact h3{font-family:var(--serif);font-size:24px;margin:0 0 14px;font-weight:800}
+.contact p{margin:0 0 20px;color:var(--sub);font-size:15px}
+.contact a.mail{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:2px}
+.contact .sm{margin:22px 0 0;font-size:13px;color:var(--sub)}
+footer{border-top:1px solid var(--line);padding:34px 0 52px;font-size:13px;color:var(--sub)}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover{color:var(--ink)}
 @media (max-width:1000px){ .wrap{padding:0 28px} .hd{padding:22px 28px} .hero .txt{grid-template-columns:1fr;gap:24px;padding:0 28px 48px} .sec-h{grid-template-columns:1fr;gap:6px} .shots{grid-template-columns:1fr} .steps{grid-template-columns:1fr 1fr} .step{margin-right:20px} .step:nth-child(2){border-right:0} .who{grid-template-columns:1fr;gap:40px} }
 @media (max-width:640px){
   nav a:not(.lang){display:none}
@@ -113,6 +128,7 @@ h2{font-family:var(--serif);font-weight:800;font-size:clamp(26px,2.8vw,36px);lin
   .hero .hd .brand,.hero .hd nav a{color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.35)}
   .hero .photo{display:block;height:46vh;min-height:260px;background:#9AA6B2 url(/assets/hero/photo-a.webp) center 62%/cover no-repeat}
   .hero .txt{display:block;background:var(--paper);padding:30px 22px 40px;margin-top:0}
+  .band{height:220px;margin:-56px 0 48px}
   .hero h1{font-size:30px;line-height:1.3} .hero .txt > div:first-child{padding-bottom:0}
   .hero .k{background:var(--ink);color:#fff}
   .hero .lead{color:var(--ink);text-shadow:none;margin:22px 0 24px}
