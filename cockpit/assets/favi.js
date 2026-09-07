@@ -38,7 +38,7 @@
         if (!isFirst && /^(OF|AND|THE|FOR|DE|LA|DU|DEL|VON|VAN|&)$/.test(w)) return w.toLowerCase();   // 接続語は小文字(先頭は除く)
         if (isFirst && /^(THE|OF|AND|FOR)$/.test(w)) return w[0] + w.slice(1).toLowerCase();
         if (w.replace(/[^A-Z]/g,"").length <= 3) return w;            // USA・GI・TC・OH などは大文字のまま
-        if (/^(MC|MAC)[A-Z]/.test(w)) return w[0] + w.slice(1,2).toLowerCase() + w.slice(2,3) + w.slice(3).toLowerCase();   // MCMASTER → McMaster
+        if (/^MC[A-Z]/.test(w)) return "Mc" + w[2] + w.slice(3).toLowerCase();   // MCMASTER → McMaster(MAC- は MACHINING を誤変換するので対象外)
         return w[0] + w.slice(1).toLowerCase();
       }).join("");
     }
