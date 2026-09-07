@@ -136,7 +136,8 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
 }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907k">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907l">
+<script src="/cockpit/assets/cards.js?v=20260907k"></script>
 </head>
 <body>
 
@@ -298,7 +299,7 @@ function render(){
   document.getElementById("hitnum").textContent = list.length;
   const base = visibleBase().length;
   document.getElementById("hitsub").textContent = `(表示集合 ${base} 件・新しい順)`;
-  document.getElementById("grid").innerHTML = slice.map(cardHtml).join("");
+  swapCards(document.getElementById("grid"), slice.map(cardHtml).join(""));
   document.getElementById("empty").hidden = list.length>0;
   const pager = document.getElementById("pager"); pager.innerHTML = "";
   if(pages>1){

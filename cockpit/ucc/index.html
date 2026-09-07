@@ -217,7 +217,8 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   aside{padding:12px 14px 4px;}
 }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907k">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907l">
+<script src="/cockpit/assets/cards.js?v=20260907k"></script>
 </head>
 <body>
 
@@ -358,7 +359,7 @@ function render(){
   const slice = list.slice((page-1)*PAGE_SIZE, page*PAGE_SIZE);
   document.getElementById("hitnum").textContent = list.length;
   document.getElementById("hitsub").textContent = `(表示集合 ${visibleBase().length} 件・提出日の新しい順)`;
-  document.getElementById("grid").innerHTML = slice.map(cardHtml).join(""); document.getElementById("empty").hidden = list.length>0;
+  swapCards(document.getElementById("grid"), slice.map(cardHtml).join("")); document.getElementById("empty").hidden = list.length>0;
   const pager = document.getElementById("pager"); pager.innerHTML = "";
   if(pages>1){ const mk = (label, target, opts={})=>{ const b = document.createElement("button"); b.textContent = label; if(opts.cur) b.className = "cur"; if(opts.disabled) b.disabled = true;
       b.addEventListener("click", ()=>{ page = target; render(); document.querySelector("main").scrollIntoView({behavior:"smooth"}); }); pager.appendChild(b); };

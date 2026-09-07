@@ -132,3 +132,10 @@ body .parties, body .card .who{ border-top:1px solid var(--line-soft); padding-t
 body .roles span{ background:transparent; padding:0; margin-right:10px; }
 body .unknown-inv{ font-weight:500; }
 body .karte-top h2, body .kprof h2{ font-size:24px; }
+
+/* 9/7 CEO: フィルター切替時のカードの入れ替え演出(assets/cards.js の swapCards と対) */
+.grid.is-leaving > *{ animation:cardOut .17s ease forwards; }
+.grid > .enter{ animation:cardIn .42s cubic-bezier(.2,.8,.2,1) both; animation-delay:calc(var(--i,0) * 32ms); }
+@keyframes cardIn{ from{ opacity:0; transform:translateY(12px) scale(.965); } to{ opacity:1; transform:none; } }
+@keyframes cardOut{ to{ opacity:0; transform:scale(.965); } }
+@media (prefers-reduced-motion: reduce){ .grid.is-leaving > *, .grid > .enter{ animation:none; } }
