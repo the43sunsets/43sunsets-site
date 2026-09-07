@@ -6,7 +6,7 @@
 })();
 function run(el){
   const KEY = el.dataset.check || "permits_update_vps";
-  const LABEL = el.dataset.label || ({permits_update_vps: "建設許可", ucc_sync_mac: "UCC"})[KEY] || KEY;   // 9/5 CEO: どちらの収集かを先頭に
+  const LABEL = el.dataset.label || ({permits_update_vps: "建設許可", ucc_sync_mac: "UCC", subsidies_update_vps: "補助金"})[KEY] || KEY;   // 9/5 CEO: どちらの収集かを先頭に
   const TZ = "America/Chicago";
   const fmt = (iso, withTime) => { if(!iso) return "—"; const d = new Date(iso); const o = {timeZone:TZ, year:"numeric", month:"2-digit", day:"2-digit"}; if(withTime) Object.assign(o,{hour:"2-digit",minute:"2-digit",hour12:false});
     const p = Object.fromEntries(new Intl.DateTimeFormat("en-US",o).formatToParts(d).filter(x=>x.type!=="literal").map(x=>[x.type,x.value])); return withTime ? `${p.month}-${p.day} ${p.hour==="24"?"00":p.hour}:${p.minute}` : `${p.year}-${p.month}-${p.day}`; };
