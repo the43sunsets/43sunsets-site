@@ -56,13 +56,27 @@ main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
 .hb.hb-fail .hb-dot{background:var(--warn);} .hb.hb-fail{border-color:var(--warn); color:var(--warn);} .hb.hb-fail .hb-k{color:var(--warn);}
 @keyframes hbpulse{0%{box-shadow:0 0 0 0 rgba(46,110,78,.45)} 70%{box-shadow:0 0 0 7px rgba(46,110,78,0)} 100%{box-shadow:0 0 0 0 rgba(46,110,78,0)}}
 .rule{height:var(--rule-h); background:var(--rule); margin:28px 0;}
-.sec{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin:0 0 14px;} .sec h2{margin:0; font-family:var(--serif); font-size:21px; color:var(--ink); letter-spacing:.02em;} .sec span{font-size:12px; color:var(--sub);}
-.picks{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px;}
-.pick{display:flex; flex-direction:column; gap:8px; padding:16px 18px; background:var(--card); border:1px solid var(--line); border-radius:6px;}
-.pick .tag{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:700; font-family:var(--mono);}
-.pick h3{margin:0; font-family:var(--serif); font-size:17px; line-height:1.42; color:var(--ink); font-weight:700;}
-.pick h3 .companylink{color:var(--accent); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;} .pick h3 .companylink:hover{text-decoration-thickness:2px;}
-.pick p{margin:0; font-size:13px; line-height:1.7; color:var(--sub);}
+.sec{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin:0 0 14px;} .sec h2{margin:0; font-family:var(--serif); font-size:24px; color:var(--ink); letter-spacing:.02em;} .sec span{font-size:12px; color:var(--sub);}
+/* 今週の動き = 5 件の案件台帳(9/7 CEO: 1 件ずつが重要案件だと分かる意匠) */
+.picks{display:flex; flex-direction:column; border-top:2px solid var(--ink);}
+.pick{--kc:var(--accent); display:grid; grid-template-columns:64px minmax(0,1fr) 236px; gap:0 26px; padding:22px 10px 22px 0; border-bottom:1px solid var(--line); align-items:start; transition:background .15s;}
+.pick:hover{background:var(--card);}
+.pick.kind-permit{--kc:var(--infer);} .pick.kind-multi{--kc:var(--fact);}
+.pick .no{font-family:var(--serif); font-size:34px; line-height:1; font-weight:700; color:var(--kc); padding:4px 0 0 14px; border-left:4px solid var(--kc);}
+.pick .tagrow{display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap;}
+.pick .tag{font-size:11px; letter-spacing:.16em; font-weight:700; font-family:var(--mono); color:var(--paper); background:var(--kc); padding:3px 9px; border-radius:3px;}
+.pick .why{font-size:12px; color:var(--sub);}
+.pick h3{margin:0; font-family:var(--serif); font-size:22px; line-height:1.4; color:var(--ink); font-weight:700;}
+.pick h3 .companylink{color:var(--accent); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:4px;} .pick h3 .companylink:hover{text-decoration-thickness:2px;}
+.pick p{margin:8px 0 0; font-size:14px; line-height:1.75; color:var(--sub); max-width:720px;}
+.pick .meta{display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:var(--sub); border-left:1px solid var(--line); padding-left:20px; align-self:stretch;}
+.pick .meta .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; color:var(--sub); display:block; margin-bottom:1px;}
+.pick .meta .v{color:var(--ink); font-weight:500;}
+.pick .cta{display:inline-flex; align-items:center; gap:6px; margin-top:auto; font-size:13px; font-weight:700; color:var(--accent); text-decoration:none; border:1.5px solid var(--accent); border-radius:999px; padding:6px 14px; width:max-content;} .pick .cta:hover{background:var(--accent); color:var(--paper);}
+.pick .srcl{font-size:12px; color:var(--sub); text-decoration:underline; text-underline-offset:3px; width:max-content;} .pick .srcl:hover{color:var(--ink);}
+.pick-empty{padding:18px 0; color:var(--sub); font-size:13.5px; border-bottom:1px solid var(--line);}
+@media (max-width:900px){ .pick{grid-template-columns:52px minmax(0,1fr); gap:0 16px; padding:18px 0;} .pick .no{font-size:26px; padding-left:10px;} .pick .meta{grid-column:2; border-left:0; padding:10px 0 0; flex-direction:row; flex-wrap:wrap; gap:8px 18px; align-items:center;} .pick .cta{margin-top:0;} .pick h3{font-size:19px;} }
+@media (max-width:600px){ .pick{grid-template-columns:40px minmax(0,1fr);} .pick .no{font-size:22px; padding-left:8px;} .pick h3{font-size:17.5px;} }
 .ai{display:flex; gap:14px; align-items:flex-start; padding:18px 22px; background:var(--infer-bg); border:1px solid var(--infer-line); border-radius:6px;}
 .ai .badge{flex:none; font-size:10.5px; letter-spacing:.14em; font-weight:700; color:var(--infer); border:1px solid var(--infer); border-radius:4px; padding:3px 7px; font-family:var(--mono); margin-top:2px;}
 .ai p{margin:0; font-size:14.5px; line-height:1.8; color:var(--ink); font-family:var(--serif);} .ai .d{font-size:11px; color:var(--sub); margin-top:6px; font-family:var(--mono);}
@@ -84,9 +98,9 @@ main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
 .face .go{display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700; color:var(--accent);}
 .note{font-size:12px; color:var(--sub); line-height:1.7; margin-top:14px;}
 footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px; line-height:1.7; color:var(--sub); max-width:1280px; margin:0 auto;}
-@media (max-width:900px){ .picks{grid-template-columns:repeat(2,minmax(0,1fr));} .macro{grid-template-columns:repeat(3,minmax(0,1fr));} .faces{grid-template-columns:1fr;} .lede h1{font-size:clamp(19px, 5.4vw, 32px);} header,main,footer{padding-left:24px; padding-right:24px;} }
+@media (max-width:900px){ .macro{grid-template-columns:repeat(3,minmax(0,1fr));} .faces{grid-template-columns:1fr;} .lede h1{font-size:clamp(19px, 5.4vw, 32px);} header,main,footer{padding-left:24px; padding-right:24px;} }
 @media (max-width:820px){ .hb{padding:4px 9px 4px 7px;} .hb .hb-txt > :not(.hb-lbl){display:none;} .hb .hb-lbl{font-size:11px;} .dateline{gap:8px;} }
-@media (max-width:600px){ .picks{grid-template-columns:1fr;} .macro{grid-template-columns:repeat(2,minmax(0,1fr));} .lede h1{font-size:clamp(18px, 5.4vw, 26px);} header,main,footer{padding-left:18px; padding-right:18px;} main{padding-top:20px;} .rule{margin:22px 0;} .tile .how{display:block;} }
+@media (max-width:600px){ .macro{grid-template-columns:repeat(2,minmax(0,1fr));} .lede h1{font-size:clamp(18px, 5.4vw, 26px);} header,main,footer{padding-left:18px; padding-right:18px;} main{padding-top:20px;} .rule{margin:22px 0;} .tile .how{display:block;} }
 
 .cta{margin-top:34px; padding:26px 28px; border:1px solid var(--line); border-radius:6px; background:var(--card); display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:24px; align-items:center;}
 .cta h2{margin:0 0 8px; font-family:var(--serif); font-size:22px; color:var(--ink);} .cta p{margin:0; font-size:14px; line-height:1.75; color:var(--ink);}
@@ -185,8 +199,12 @@ async function boot(){
   const now = new Date(); const ct = fmtCT(now.toISOString(), false); const wd = WD[new Date(now.toLocaleString("en-US",{timeZone:"America/Chicago"})).getDay()];
   document.getElementById("edition").textContent = `${ct}(${wd})版`;
   try{ const top = await get("data/top.json"); const picks = top.picks || [];
-    const pickTitle = p => { if(p.karte && p.company && p.title.startsWith(p.company)){ return `<a class="companylink" href="/cockpit/company/?id=${esc(p.karte)}" target="_blank" rel="noopener" title="企業カルテを新しいタブで開く">${esc(p.company)}</a>${esc(p.title.slice(p.company.length))}`; } return esc(p.title); };   // 9/5 CEO: 社名からカルテへ
-    document.getElementById("picks").innerHTML = picks.length ? picks.map(p=>`<article class="pick"><div class="tag">${esc(p.tag)}</div><h3>${pickTitle(p)}</h3><p>${esc(p.body)}</p></article>`).join("") : `<div class="pick"><p>直近 90 日に目立つ動きはありません。</p></div>`;
+    const stripJp = t => t.replace("(日系)", "");
+    const pickTitle = p => { const t = stripJp(p.title); if(p.karte && p.company && t.startsWith(p.company)){ return `<a class="companylink" href="/cockpit/company/?id=${esc(p.karte)}" target="_blank" rel="noopener" title="企業カルテを新しいタブで開く">${esc(p.company)}</a>${esc(t.slice(p.company.length))}`; } return esc(t); };   // 9/5 CEO: 社名からカルテへ
+    const WHY = {"日系":"日本企業の米国拠点の投資","大型":"工事費の大きい建設","連続投資":"続けて設備を入れている会社","建屋と設備":"建屋と設備の両方に投資","自動化":"自動化設備つきの導入"};
+    const FACE = {"許可":"建設許可","UCC":"動産担保登記(UCC)"};
+    const pickHtml = (p, i) => `<article class="pick kind-${esc(p.kind||"")}"><div class="no">${String(i+1).padStart(2,"0")}</div><div class="main"><div class="tagrow"><span class="tag">${esc(p.tag)}</span>${WHY[p.tag] ? `<span class="why">${esc(WHY[p.tag])}</span>` : ""}</div><h3>${pickTitle(p)}</h3><p>${esc(p.body)}</p></div><div class="meta"><div><span class="k">根拠</span><span class="v">${esc(FACE[p.face]||p.face||"")}</span></div><div><span class="k">記録日</span><span class="v">${esc(p.date||"")}</span></div>${p.karte ? `<a class="cta" href="/cockpit/company/?id=${esc(p.karte)}" target="_blank" rel="noopener">企業カルテを開く ↗</a>` : ""}${p.link ? `<a class="srcl" href="${esc(p.link)}">${esc(FACE[p.face]||"出所")}のページで見る →</a>` : ""}</div></article>`;
+    document.getElementById("picks").innerHTML = picks.length ? picks.map(pickHtml).join("") : `<div class="pick-empty">直近 90 日に目立つ動きはありません。</div>`;
     if(top.intro) document.getElementById("picks-sub").textContent = top.intro;
     const wdOf = d => WD[new Date(d + "T12:00:00-05:00").getDay()];
     if(top.updated_ct) document.getElementById("picks-date").textContent = `更新 ${top.updated_ct}(${wdOf(top.updated_ct)})・次回 ${top.next_update_ct}(${wdOf(top.next_update_ct)})`;
@@ -195,7 +213,7 @@ async function boot(){
     document.getElementById("permits-upd").textContent = "更新 " + fmtCT(top.permits_meta.generated_at, true);
     document.getElementById("ucc-nums").textContent = `登記 ${uf.filings_total} 件・会社 ${top.counts.ucc_companies} 社・設備カタログ ${uc.equipment_rows||0} 型式`;
     document.getElementById("ucc-upd").textContent = "更新 " + fmtCT(top.ucc_meta.generated_at, true);
-  }catch(e){ document.getElementById("picks").innerHTML = `<div class="pick"><p>今週の動きを読み込めませんでした(${esc(e.message)})。</p></div>`; }
+  }catch(e){ document.getElementById("picks").innerHTML = `<div class="pick-empty">今週の動きを読み込めませんでした(${esc(e.message)})。</div>`; }
   try{ const sd = await get("data/subsidies.json"); const MINOR = new Set(["訓練・インフラ・その他","未分類"]); const major = sd.signals.filter(x=>!(MINOR.has(x.category) && x.issuer_level === "連邦")).length;
     document.getElementById("subsidies-nums").textContent = `保存 ${sd.meta.n.toLocaleString()} 件・設備投資に関わる案件 ${major} 件・連邦(州・市郡は順次)`;
     document.getElementById("subsidies-upd").textContent = "更新 " + fmtCT(sd.meta.generated_at, true);
