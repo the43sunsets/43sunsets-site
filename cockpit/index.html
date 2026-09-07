@@ -42,7 +42,7 @@ main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
 .lede .tagline{margin:0 0 14px; font-size:14px; letter-spacing:.02em; color:var(--sub);}
 .lede h1{margin:0; font-family:var(--serif); font-size:clamp(22px, 2.55vw, 40px); line-height:1.32; font-weight:800; letter-spacing:.005em; color:var(--ink); white-space:nowrap;}   /* 9/5 CEO: 1 行に固定(幅に応じて縮む) */
 .lede p{margin:0; font-size:15.5px; line-height:1.75; color:var(--sub); max-width:760px;}
-.dateline{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:4px;} .dateline .ed{font-family:var(--mono); font-size:12px; color:var(--ink); font-weight:600;}
+.dateline{display:flex; flex-direction:column; align-items:flex-start; gap:8px; margin-top:4px;} .dateline .pills{display:flex; align-items:center; gap:10px; flex-wrap:wrap;} .dateline .ed{font-family:var(--mono); font-size:12px; color:var(--ink); font-weight:600;}
 .hb{display:inline-flex; align-items:center; gap:7px; border:1px solid var(--line); border-radius:999px; padding:4px 11px 4px 8px; font-size:11.5px; color:var(--sub); background:var(--pill); white-space:nowrap; cursor:help;}
 .hb .hb-k{color:var(--ink);} .hb .hb-lbl{font-weight:700; color:var(--ink); letter-spacing:.04em;} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:var(--mono);}
 .hb-dot{width:9px; height:9px; border-radius:50%; background:var(--line); flex:none;}
@@ -122,7 +122,7 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
   <div class="lede">
     <h1>中西部で、次に動く会社が先に分かる。</h1>
     <p>イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの製造業について、投資・採用・補助金の兆しを公的記録から毎日拾い、会いに行くべき会社と、その理由を並べます。今は建設許可・動産担保登記(UCC)・政府補助金(連邦)から。事実と推論は分けています。</p>
-    <div class="dateline"><span class="ed" id="edition">読み込み中…</span><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(毎日 02:00 CT)"></div><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div><div class="hb hb-wait" data-check="subsidies_update_vps" title="政府補助金の収集(毎日 02:00 CT・USAspending)"></div></div>
+    <div class="dateline"><span class="ed" id="edition">読み込み中…</span><div class="pills"><div class="hb hb-wait" data-check="permits_update_vps" title="建設許可の収集(毎日 02:00 CT)"></div><div class="hb hb-wait" data-check="ucc_sync_mac" title="UCC の収集(毎日 02:00 CT)"></div><div class="hb hb-wait" data-check="subsidies_update_vps" title="政府補助金の収集(毎日 02:00 CT・USAspending)"></div></div></div>
   </div>
   <figure class="sigmap" aria-label="People, assets and capital line up, and the business expands. We see it first.">
 <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img">
