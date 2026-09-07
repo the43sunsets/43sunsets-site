@@ -136,7 +136,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
 }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907e">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907f">
 </head>
 <body>
 
@@ -164,7 +164,6 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
 <aside>
   <button class="filt-toggle" id="filttoggle" type="button">絞り込み ▾</button>
   <label class="fitem jp-toggle"><input type="checkbox" id="jponly">日系関連のみ表示</label>
-  <label class="fitem jp-toggle" title="小さな案件 = 投資の種類が「訓練・インフラ・その他」または「未分類」(用途が公開データから読めない SBA 504 融資・輸出促進・研修など)。既定では表示しません。"><input type="checkbox" id="showminor">小さな案件も表示 <span class="cnt" id="minorcnt"></span></label>
 
   <div class="fgroup"><h2>州</h2><div id="f-state"></div></div>
   <div class="fgroup"><h2>段階</h2><div id="f-stage"></div></div>
@@ -172,6 +171,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   <div class="fgroup"><h2>投資の種類</h2><div id="f-category"></div></div>
   <div class="fgroup"><h2>業種</h2><div id="f-industry"></div></div>
   <div class="fgroup"><h2>投資規模</h2><div id="f-size"></div></div>
+  <label class="fitem unc-toggle" title="小さな案件 = 投資の種類が「訓練・インフラ・その他」または「未分類」(用途が公開データから読めない SBA 504 融資・輸出促進・研修など)。既定では表示しません。入れると小さな案件だけを表示します。"><input type="checkbox" id="showminor">小さな案件のみ表示 <span class="cnt" id="minorcnt"></span></label>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
   <div class="fnote">段階 = 承認(審議会が決めた・これから建つ)/契約・交付(実行済み)。出し手 = 連邦・州・市郡。投資の種類と業種は、AI 読みが付いた案件は AI の割り当て(「AI のまとめ」札)、まだの案件は規則(制度番号・機関・本文の語)による割り当てです(チップにカーソルを当てると出所が出ます)。件数は現在の表示集合の全数。州と市郡の源は順次追加します。</div>
 </aside>
@@ -232,7 +232,7 @@ let period = "all";
 const cutoff = days => days ? new Date(Date.now() - days*864e5).toISOString().slice(0,10) : null;
 function inPeriod(s, p){ const c = cutoff((PERIODS.find(x=>x[0]===p)||[])[2]); return !c || ((s.date||"") >= c); }
 const isMinor = s => MINOR.has(s.category) && s.issuer_level === "連邦";   // 9/7: 州・市郡の契約(承認)は AI 読み前でも表示する
-function visibleBase(){ const m = document.getElementById("showminor").checked; return m ? SIGNALS : SIGNALS.filter(s=>!isMinor(s)); }
+function visibleBase(){ const m = document.getElementById("showminor").checked; return m ? SIGNALS.filter(isMinor) : SIGNALS.filter(s=>!isMinor(s)); }
 function pass(s, except){
   const jp = document.getElementById("jponly").checked;
   for(const f of FIELDS){ if(f!==except && sel[f].size && !sel[f].has(s[f])) return false; }

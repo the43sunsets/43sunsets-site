@@ -82,7 +82,9 @@ body footer{ padding-left:40px; padding-right:40px; }
 @media (max-width:900px){ body main, body footer, body header{ padding-left:22px; padding-right:22px; } body .cta{ grid-template-columns:1fr; } }
 /* ── 検出面(建設許可・UCC・補助金・採用) ── */
 body aside{ padding:24px 22px 40px 40px; }
-body .fgroup h2{ font-family:var(--mono, "IBM Plex Mono", monospace); font-size:10.5px; letter-spacing:.18em; color:var(--mute); border-bottom:0; padding-bottom:0; margin:0 0 6px; }
+body .fgroup h2{ font-family:inherit; font-size:15px; letter-spacing:.04em; text-transform:none; color:var(--ink); font-weight:700; border-bottom:1px solid var(--line); padding-bottom:6px; margin:0 0 8px; }
+body .fitem.unc-toggle{ margin:6px 0 14px; padding:8px 10px; border:1px dashed var(--line); border-radius:6px; color:var(--sub); font-size:13px; background:transparent; }
+body .fitem.unc-toggle input{ accent-color:var(--sub); }
 body .fgroup{ margin-bottom:22px; }
 body .fitem{ font-size:13.5px; padding:4px 0; } body .fitem:hover{ background:transparent; color:var(--accent); }
 body .fitem .cnt{ color:var(--mute); }
