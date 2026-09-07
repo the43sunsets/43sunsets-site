@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>景気の状況 — 連銀の公開データ 10 本 | Signal by 43 Sunsets</title>
-<meta name="description" content="中西部の製造業が設備投資に前向きかどうか。セントルイス連銀 FRED の公開データ 10 本を毎日更新し、AI のまとめを添えます。">
+<title>景気の状況 — 連銀の公開データ 10 指標 | Signal by 43 Sunsets</title>
+<meta name="description" content="中西部の製造業が設備投資に前向きかどうか。セントルイス連銀 FRED の公開データ 10 指標を毎日更新し、AI のまとめを添えます。">
 <link rel="canonical" href="https://43sunsets.com/cockpit/macro/">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon.ico">
@@ -161,7 +161,7 @@ const setHeadH=()=>document.documentElement.style.setProperty("--headh", (docume
 async function boot(){
   const get = async (u) => { const r = await fetch(u, {cache:"no-store"}); if(!r.ok) throw new Error(u+" HTTP "+r.status); return r.json(); };
   try{ const m = await get("../data/macro.json");
-    if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><span class="badge">AI のまとめ</span><div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は下の 10 本のみ</div></div></div>`;
+    if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><span class="badge">AI のまとめ</span><div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は下の 10 指標のみ</div></div></div>`;
     document.getElementById("macro").innerHTML = m.tiles.map(tileHtml).join(""); }
   catch(e){ document.getElementById("macro").innerHTML = `<div class="tile"><div class="n">景気の指標を読み込めませんでした(${esc(e.message)})</div></div>`; }
 }
