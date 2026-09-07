@@ -239,14 +239,13 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 .knote{font-size:11.5px; color:var(--sub); border-top:1px solid var(--line-soft); margin-top:28px; padding-top:10px; line-height:1.7;}
 @media (max-width:760px){ .faces4{grid-template-columns:repeat(2,minmax(0,1fr));} .kwrap{padding:18px 16px 60px;} .kprof h2{font-size:20px;} }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907g">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907h">
 </head>
 <body>
-<header class="site-head">
-  <a class="logo" href="/cockpit/" aria-label="Signal by 43 Sunsets"><svg class="bmark" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44 A24 24 0 0 1 56 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/><path d="M18 44 A14 14 0 0 1 46 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".62"/><path d="M27 44 A5 5 0 0 1 37 44" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round" opacity=".38"/><path d="M4 50 H60" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round"/></svg><span class="bword">Signal</span><span class="bby">by 43 Sunsets</span></a>
-  <nav class="cnav" aria-label="面"><a href="/cockpit/">トップ</a><a href="/cockpit/permits/">建設許可</a><a href="/cockpit/ucc/">UCC</a><a href="/cockpit/subsidies/">補助金</a><a href="/cockpit/hiring/">企業採用状況</a><a href="/cockpit/macro/">景気の状況</a><a href="/cockpit/freshness/">データの鮮度と網羅</a><a href="/cockpit/solutions/">ソリューション</a></nav>
-  <div class="hdr-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
-</header>
+<div class="kbar">
+  <div class="meta" id="metaline">会社ごとに 4 面(建設許可・UCC・採用・政府補助金)の出来事を 1 枚に — 読み込み中…</div>
+  <div class="kbar-right"><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><button class="close-btn" id="closebtn" type="button" aria-label="このカルテを閉じる">✕ 閉じる</button></div>
+</div>
 <script>
 /* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
 (function(){
@@ -262,7 +261,6 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
 })();
 </script>
-<div class="facehead facehead--plain"><div class="meta" id="metaline">会社ごとに 4 面(建設許可・UCC・採用・政府補助金)の出来事を 1 枚に — 読み込み中…</div></div>
 <main class="kwrap" id="main"><div class="kempty" id="loading">読み込み中…</div></main>
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -328,5 +326,11 @@ async function boot(){
 boot();
 </script>
 <script src="/cockpit/assets/hit.js?v=20260905e" defer></script>
+<script>
+document.getElementById("closebtn").addEventListener("click", ()=>{
+  window.close();
+  setTimeout(()=>{ if(!window.closed){ if(history.length > 1) history.back(); else location.href = "/cockpit/"; } }, 150);
+});
+</script>
 </body>
 </html>

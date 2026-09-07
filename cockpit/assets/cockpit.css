@@ -39,6 +39,14 @@ body header.site-head{ display:flex; align-items:center; gap:24px; padding:12px 
 .facehead .meta{ font-size:13px; color:var(--sub); }
 .facehead .pagetitle{ margin:0; font-family:var(--serif, "Shippori Mincho", serif); font-size:24px; }
 .facehead--plain{ padding:22px 40px 12px; margin:0; }
+/* ── 企業カルテ: ヘッダーなし・本体上部の細い帯(配色切り替え+閉じる) ── */
+.kbar{ max-width:940px; margin:0 auto; padding:16px 24px 0; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.kbar .meta{ font-size:13px; color:var(--sub); }
+.kbar-right{ display:flex; align-items:center; gap:8px; flex:none; }
+.kbar .theme-btn, .kbar .close-btn{ font-size:12.5px; border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:999px; padding:5px 12px; font-family:inherit; cursor:pointer; }
+.kbar .close-btn{ border-color:var(--ink); font-weight:600; }
+.kbar .close-btn:hover, .kbar .theme-btn:hover{ color:var(--accent); border-color:var(--accent); }
+@media (max-width:760px){ .kbar{ padding:12px 16px 0; flex-wrap:wrap; } }
 /* ── トップ ── */
 body main{ padding-left:40px; padding-right:40px; }
 body .lede h1{ font-size:clamp(26px, 2.9vw, 40px); line-height:1.28; }
