@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中西部・設備投資検出面 — 企業採用状況 | Signal by 43 Sunsets</title>
-<meta name="description" content="米国中西部 5 州(IL・IN・MI・OH・WI)の製造業の採用ページから、生産・設備保全・生産技術・品質・物流の求人を毎日数え、立ち上げ職種・大量採用・新拠点・増勢の兆しを検出。">
+<meta name="description" content="米国中西部 5 州(IL・IN・MI・OH・WI)の製造業の採用ページから、生産・設備保全・生産技術・品質・物流の求人を毎日数え、新設備の立ち上げ・一気に増員・新拠点の開設・じわり増員の兆しを検出。">
 <link rel="canonical" href="https://43sunsets.com/cockpit/hiring/">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
@@ -73,7 +73,7 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
   aside > *:not(.filt-toggle){display:none;} aside.open > *{display:block;} aside.open > .filt-toggle{display:flex;} aside.open > label.fitem{display:flex;} aside{padding:12px 14px 4px;} }
 @media (max-width:760px){ .app{grid-template-columns:1fr;} aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);} }
 </style>
-<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907h">
+<link rel="stylesheet" href="/cockpit/assets/cockpit.css?v=20260907i">
 </head>
 <body>
 <header class="site-head">
@@ -90,14 +90,14 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
 <aside>
   <button class="filt-toggle" id="filttoggle" type="button">絞り込み ▾</button>
   <label class="fitem jp-toggle"><input type="checkbox" id="jponly">日系関連のみ表示</label>
-  <label class="fitem jp-toggle" title="許可・UCC・補助金の面にも出ている会社だけに絞る(重なるほど確度が上がる)"><input type="checkbox" id="crossonly">他の面にも出ている会社のみ <span class="cnt" id="crosscnt"></span></label>
+  <label class="fitem jp-toggle cross-toggle" title="建設許可・UCC・補助金のいずれかにも載っている会社だけに絞る(採用に加えて設備投資の動きが確認できる会社。重なるほど確度が上がる)"><input type="checkbox" id="crossonly">投資の動きもある会社のみ <span class="cnt" id="crosscnt"></span></label>
   <div class="fgroup"><h2>州</h2><div id="f-state"></div></div>
-  <div class="fgroup"><h2>シグナルの型</h2><div id="f-type"></div></div>
+  <div class="fgroup"><h2>採用の背景</h2><div id="f-type"></div></div>
   <div class="fgroup"><h2>職種の型</h2><div id="f-role"></div></div>
   <div class="fgroup"><h2>業種</h2><div id="f-industry"></div></div>
   <div class="fgroup"><h2>製造職の求人数</h2><div id="f-size"></div></div>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
-  <div class="fnote">1 カード = 会社 × 拠点(州・市)。数字は各社の採用ページ(ATS の公開 API)から毎日数えた「今開いている製造職の求人」(重複除去後)。型は規則: 立ち上げ職種 = 生産技術/設備保全の新規求人・大量採用 = 20 件以上・新拠点 = 他の面の記録と同じ市で初めて求人・増勢 = 30 日前の当社スナップショット比。件数は現在の表示集合の全数。</div>
+  <div class="fnote">1 カード = 会社 × 拠点(州・市)。数字は各社の採用ページ(ATS の公開 API)から毎日数えた「今開いている製造職の求人」(重複除去後)。採用の背景は規則で付与: 新設備の立ち上げ = 生産技術/設備保全の新規求人・一気に増員 = 20 件以上・新拠点の開設 = 他の面の記録と同じ市で初めて求人・じわり増員 = 30 日前の当社スナップショット比。件数は現在の表示集合の全数。</div>
 </aside>
 <main>
   <div class="facehead"><div class="meta" id="metaline">製造職の採用シグナル 5 州 — データ読み込み中…</div><div class="hb hb-wait" id="healthbar" data-check="hiring_update_vps"></div></div>
@@ -110,7 +110,7 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
     <div id="scopebox">読み込み中…</div>
     <ul>
       <li>源: 当社の企業カルテにある会社のうち、サイトに公開 API を持つ採用管理システム(Greenhouse・Lever・Workday・SmartRecruiters・BambooHR)を使っている会社。Indeed・LinkedIn は API が閉じているため使いません。州の職業紹介サイトは規約を実測してから追加します。</li>
-      <li>「増勢」は当社が毎日積むスナップショットの 30 日前との比較で、観測開始から 30 日間は付きません。カードの「観測 n 日」で履歴の浅さを示します。</li>
+      <li>「じわり増員」は当社が毎日積むスナップショットの 30 日前との比較で、観測開始から 30 日間は付きません。カードの「観測 n 日」で履歴の浅さを示します。</li>
       <li>求人の題名は逐語(事実)。職種の型は題名からの規則で、求人票の本文(設備・工程・人数)の AI 読みは順次追加します。</li>
       <li>人材派遣会社の求人は除外。リモート求人は拠点に数えません。</li>
     </ul>
@@ -120,7 +120,7 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
 <footer><b>Signal by 43 Sunsets(BETA)</b> — 公的記録と各社の公開情報から中西部の設備投資シグナルを検出する無料の実験的サービスです。出典: 各社の採用ページ(ATS の公開 API)。事実欄は求人の題名の逐語、型は規則による割り当てで分離表示しています。情報の正確性・完全性を保証するものではなく、投資・法務・雇用等の助言でもありません。ご意見・掲載に関するご連絡は <span class="mono">hello@43sunsets.com</span> まで。© 43 Sunsets</footer>
 <script>
 let SIGNALS=[], META=null;
-const STATES=["IL","IN","MI","OH","WI"]; const TYPES=["立ち上げ職種","大量採用","新拠点","増勢"]; const ROLES=["生産","設備保全","生産技術","品質","物流"];
+const STATES=["IL","IN","MI","OH","WI"]; const TYPES=["新設備の立ち上げ","一気に増員","新拠点の開設","じわり増員"]; const TYPE_JA={"立ち上げ職種":"新設備の立ち上げ","大量採用":"一気に増員","新拠点":"新拠点の開設","増勢":"じわり増員"}; const ROLES=["生産","設備保全","生産技術","品質","物流"];
 const INDUSTRIES=["半導体・電子","医薬・ライフサイエンス","航空宇宙","軍事・防衛","自動車部品","機械・金属","食品・素材加工","物流・EC","データセンター","その他製造","未分類"]; const SIZES=["20+","5〜19","1〜4"];
 const FIELDS=["state","type","role","industry","size"]; const VOCAB={state:STATES,type:TYPES,role:ROLES,industry:INDUSTRIES,size:SIZES};
 const sel=Object.fromEntries(FIELDS.map(f=>[f,new Set()])); const PAGE_SIZE=8; let page=1;
@@ -156,12 +156,12 @@ function render(){ refreshCounts(); const list=filtered(); const pages=Math.max(
 document.getElementById("jponly").addEventListener("change",()=>{page=1; render();}); document.getElementById("crossonly").addEventListener("change",()=>{page=1; render();});
 document.getElementById("clear").addEventListener("click",()=>{ for(const k in sel) sel[k].clear(); document.querySelectorAll('.fitem input').forEach(cb=>cb.checked=false); page=1; render(); });
 function csvEscape(v){ v=String(v==null?"":v); return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v; }
-document.getElementById("export").addEventListener("click",()=>{ const list=filtered(); const head=["id","州","市","会社","企業カルテ","業種","シグナルの型","製造職の求人","全求人","直近30日の新規","30日前","職種の内訳","題名(逐語)","観測開始","最新掲載","出典"];
+document.getElementById("export").addEventListener("click",()=>{ const list=filtered(); const head=["id","州","市","会社","企業カルテ","業種","採用の背景","製造職の求人","全求人","直近30日の新規","30日前","職種の内訳","題名(逐語)","観測開始","最新掲載","出典"];
   const rows=list.map(s=>[s.id,s.state,s.city??"",s.company,s.company_id,s.industry,s.types.join("・"),s.open_mfg,s.open_all,s.new30,s.prev30??"",Object.entries(s.by_role||{}).map(([k,v])=>k+" "+v).join("・"),(s.titles||[]).map(t=>t.t).join(" | "),s.observed_since,s.latest,s.source]);
   const csv="﻿"+[head,...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n"); const blob=new Blob([csv],{type:"text/csv;charset=utf-8"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=`43sunsets-cockpit-hiring-${new Date().toISOString().slice(0,10)}.csv`; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},1000); });
 function fmtCT(iso){ const d=new Date(iso); const o={timeZone:"America/Chicago",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}; const p=Object.fromEntries(new Intl.DateTimeFormat("en-US",o).formatToParts(d).filter(x=>x.type!=="literal").map(x=>[x.type,x.value])); return `${p.year}-${p.month}-${p.day} ${p.hour==="24"?"00":p.hour}:${p.minute}`; }
 function setHeadH(){ const h=document.querySelector('header'); if(h) document.documentElement.style.setProperty('--headh',h.offsetHeight+'px'); } window.addEventListener('resize',setHeadH);
-async function boot(){ setHeadH(); try{ const r=await fetch("../data/hiring.json",{cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status); const d=await r.json(); META=d.meta; SIGNALS=d.signals;
+async function boot(){ setHeadH(); try{ const r=await fetch("../data/hiring.json",{cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status); const d=await r.json(); META=d.meta; SIGNALS=d.signals; SIGNALS.forEach(x=>{ x.types=(x.types||[]).map(t=>TYPE_JA[t]||t); });
     document.getElementById("crosscnt").textContent=SIGNALS.filter(isCross).length;
     document.getElementById("metaline").innerHTML=`IL・IN・MI・OH・WI / 会社 <span class="mono">${META.companies}</span> 社・拠点カード <span class="mono">${META.n}</span> 件・採用ページ ${META.sources[0].n_boards} 面・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     document.getElementById("scopebox").innerHTML=`<div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>採用ページ(ATS)<span class="mono">${META.sources[0].n_boards}</span> 面・会社 <span class="mono">${META.companies}</span>・拠点カード <span class="mono">${META.n}</span>・観測開始 <span class="mono">${esc(META.observed_since||"—")}</span>・書き出し <span class="mono">${fmtCT(META.generated_at)}</span>(米中部時間)<br><span class="ng">見ていないもの:</span> ATS の公開 API を持たない会社(Indeed・ADP・Paylocity 等)・州の職業紹介サイト・カルテに無い会社。</div>`;
