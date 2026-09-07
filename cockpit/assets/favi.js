@@ -27,6 +27,8 @@
    正式名は title と企業カルテに残す。 */
 (function(){
   var SUFFIX = /[,\s]+(L\.?L\.?C\.?|INC\.?|INCORPORATED|CORP\.?|CORPORATION|CO\.?|COMPANY|LTD\.?|LIMITED|L\.?P\.?|LLP|PLC|P\.?C\.?|N\.?A\.?)\s*$/i;
+  /* ブランド固有の表記(全部大文字の名前を頭文字大文字に直すときの例外表・9/7 順番 4 の暫定。会社マスターに表示名列を持つまでの間はここで保つ) */
+  var BRAND = {"FANUC":"FANUC","OHIOHEALTH":"OhioHealth","MCMASTER":"McMaster","MCMASTER-CARR":"McMaster-Carr","PSIQUANTUM":"PsiQuantum","CELLCARTA":"CellCarta","IBM":"IBM","GE":"GE","3M":"3M","AT&T":"AT&T","UPS":"UPS","USA":"USA","LLC":"LLC","JBT":"JBT","NVR":"NVR","ABB":"ABB","SKF":"SKF","TRUMPF":"TRUMPF","MAZAK":"Mazak","DMG":"DMG","MORI":"MORI","AMYLU":"Amylu","NORTHPOINT":"NorthPoint","FEDEX":"FedEx","WALMART":"Walmart","AMAZON":"Amazon","TOYOTA":"Toyota","HONDA":"Honda","DENSO":"DENSO","AISIN":"AISIN","YASKAWA":"YASKAWA","OKUMA":"OKUMA","MAKINO":"Makino","JTEKT":"JTEKT","NTN":"NTN","NSK":"NSK","THK":"THK","SMC":"SMC","OMRON":"OMRON","KOMATSU":"Komatsu","HITACHI":"Hitachi","MITSUBISHI":"Mitsubishi","PANASONIC":"Panasonic","SUBARU":"Subaru","NISSAN":"Nissan","MAZDA":"Mazda","HIDAKA":"Hidaka"};
   window.displayName = function(name){
     var n = String(name||"").trim();
     for (var i = 0; i < 2; i++) n = n.replace(SUFFIX, "").replace(/[,\s]+$/, "");   // "XYZ HOLDINGS, LLC" → "XYZ HOLDINGS"・二重の法人格にも対応
@@ -35,6 +37,7 @@
       n = n.split(/(\s+|-|\/)/).map(function(w){
         if (!/[A-Z]/.test(w)) return w;
         var isFirst = first; first = false;
+        if (BRAND[w]) return BRAND[w];
         if (!isFirst && /^(OF|AND|THE|FOR|DE|LA|DU|DEL|VON|VAN|&)$/.test(w)) return w.toLowerCase();   // 接続語は小文字(先頭は除く)
         if (isFirst && /^(THE|OF|AND|FOR)$/.test(w)) return w[0] + w.slice(1).toLowerCase();
         if (w.replace(/[^A-Z]/g,"").length <= 3) return w;            // USA・GI・TC・OH などは大文字のまま
