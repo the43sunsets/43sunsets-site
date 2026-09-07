@@ -179,7 +179,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
     <div class="left">
       <span class="hitcount"><span class="num" id="hitnum">0</span> 件</span>
       <span class="hitsub" id="hitsub"></span>
-      <div class="seg" id="seg-period" title="期間 = 交付・契約の開始日。件数は他のフィルタ適用後"></div>
+      <div class="seg" id="seg-period" title="期間 = 決定日(連邦が交付を決めて義務化した日・融資は実行日)。履行期間ではない。件数は他のフィルタ適用後"></div>
     </div>
     <button class="exportbtn" id="export">CSV エクスポート</button>
   </div>
@@ -194,6 +194,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
       <li>源(現在): USAspending.gov(連邦)— 5 州の事業者への助成(grants / cooperative agreements)と、設備投資に近い融資制度(SBA 504・USDA B&I/REAP・DOE 融資)。直近 365 日に取引のあった案件。</li>
       <li>未収集: 州の誘致インセンティブ(IL EDGE / IN IEDC / OH JobsOhio・Tax Credit Authority / MI Michigan Strategic Fund / WI WEDC)と、市・郡の固定資産税減免。審議会の承認一覧から順次追加します(「段階 = 承認」はその源で埋まります)。</li>
       <li>SBA 504 融資は公開データに使途の内訳が無いため、受領者名に製造の語がある案件だけを「製造能力の増強」に置き、残りは「未分類」(小さな案件のトグルで表示)。</li>
+      <li>日付の軸は「決定日」(連邦が交付を決めて義務化した日 = Base Obligation Date。融資は実行日)。履行期間(開始〜終了)は別に表示します。古い決定日の案件が載るのは、直近 1 年に変更・追加交付があったためです。州の審議会が入ると「承認日」が同じ軸に載ります。</li>
       <li>個人事業(個人名らしい受領者)は名前を表示しません。金額は交付額(助成)または融資額(融資)で、投資総額ではありません。</li>
     </ul>
   </details>
@@ -222,7 +223,7 @@ let page = 1;
 const FIELDS = ["state","stage","issuer_level","category","industry","size"];
 const VOCAB = {state:STATES, stage:STAGES, issuer_level:ISSUERS, category:CATEGORIES, industry:INDUSTRIES, size:SIZES};
 const sel = Object.fromEntries(FIELDS.map(f=>[f,new Set()]));
-const PERIODS = [["90d","直近 90 日",90],["1y","直近 1 年",365],["all","すべて",null]];
+const PERIODS = [["90d","直近 90 日",90],["1y","直近 1 年",365],["2y","直近 2 年",730],["all","すべて",null]];
 let period = "all";
 const cutoff = days => days ? new Date(Date.now() - days*864e5).toISOString().slice(0,10) : null;
 function inPeriod(s, p){ const c = cutoff((PERIODS.find(x=>x[0]===p)||[])[2]); return !c || ((s.date||"") >= c); }
@@ -277,7 +278,7 @@ function cardHtml(s){
     <div><span class="chip stage">${esc(s.stage)}</span><span class="chip">${esc(s.category)}</span><span class="chip">${esc(s.industry)}</span>${jp}<span class="amount">${fmtUsd(s.amount)}</span></div>
     <div class="loc">${esc(s.city||"")}${s.city?"・":""}${prog}</div>
     ${desc}
-    <div class="fact"><span class="flabel">事実(公的記録)</span>USAspending.gov・<span class="mono">${esc(s.date||"")}</span>${s.end_date?`〜<span class="mono">${esc(s.end_date)}</span>`:""}・${s.kind==="grant"?"交付額":"融資額"} <span class="mono">${s.amount!=null?"$"+Math.round(s.amount).toLocaleString("en-US"):"—"}</span>${link?"・"+link:""}</div>
+    <div class="fact"><span class="flabel">事実(公的記録)</span>USAspending.gov・決定 <span class="mono">${esc(s.date||"—")}</span>${s.start_date?`・履行期間 <span class="mono">${esc(s.start_date)}</span>〜<span class="mono">${esc(s.end_date||"")}</span>`:""}・${s.kind==="grant"?"交付額":"融資額"} <span class="mono">${s.amount!=null?"$"+Math.round(s.amount).toLocaleString("en-US"):"—"}</span>${link?"・"+link:""}</div>
     <div class="rule"><span class="badge-rule">規則</span>投資の種類・業種は制度番号と本文の語による割り当て(AI 読みではない)</div>
   </article>`;
 }
@@ -307,8 +308,8 @@ document.getElementById("clear").addEventListener("click", ()=>{ for(const k in 
 function csvEscape(v){ v = String(v==null?"":v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
 document.getElementById("export").addEventListener("click", ()=>{
   const list = filtered();
-  const head = ["id","州","市","受領者","種別","出し手の層","機関","制度番号","制度名","金額USD","段階","日付","終了日","投資の種類(規則)","業種(規則)","投資規模","日系","本文(逐語)","URL"];
-  const rows = list.map(s=>[s.id,s.state,s.city??"",s.recipient,s.kind_label,s.issuer_level,s.issuer??"",s.program??"",s.program_name??"",s.amount??"",s.stage,s.date??"",s.end_date??"",s.category,s.industry,s.size,s.jp?"1":"",s.description,s.url??""]);
+  const head = ["id","州","市","受領者","種別","出し手の層","機関","制度番号","制度名","金額USD","段階","決定日","履行開始","履行終了","投資の種類(規則)","業種(規則)","投資規模","日系","本文(逐語)","URL"];
+  const rows = list.map(s=>[s.id,s.state,s.city??"",s.recipient,s.kind_label,s.issuer_level,s.issuer??"",s.program??"",s.program_name??"",s.amount??"",s.stage,s.date??"",s.start_date??"",s.end_date??"",s.category,s.industry,s.size,s.jp?"1":"",s.description,s.url??""]);
   const csv = "﻿" + [head, ...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n");
   const blob = new Blob([csv], {type:"text/csv;charset=utf-8"}); const a = document.createElement("a");
   a.href = URL.createObjectURL(blob); a.download = `43sunsets-cockpit-subsidies-${new Date().toISOString().slice(0,10)}.csv`; document.body.appendChild(a); a.click();
