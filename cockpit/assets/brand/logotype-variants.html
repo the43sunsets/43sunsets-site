@@ -21,11 +21,20 @@ svg{display:block}
 
 <p class="lbl">案 A — 弧を「i」の点にする(印と文字が一語になる)</p>
 <div class="row">
-<div class="card"><svg width="300" height="60" viewBox="0 0 300 60"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M60 26 A16 16 0 0 1 92 26" stroke="var(--accent)"/><path d="M66 26 A10 10 0 0 1 86 26" stroke="var(--accent)" opacity=".62"/><path d="M72 26 A4 4 0 0 1 80 26" stroke="var(--accent)" opacity=".38"/></g><text x="8" y="50" class="wm" font-size="40" fill="var(--ink)">S<tspan fill="transparent">i</tspan>gnal</text><rect x="73.5" y="34" width="5" height="16" fill="var(--ink)"/><text x="156" y="50" class="by" font-size="10.5" fill="var(--sub)">BY 43 SUNSETS</text></svg></div>
-<div class="card dark"><svg width="300" height="60" viewBox="0 0 300 60"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M60 26 A16 16 0 0 1 92 26" stroke="var(--accent)"/><path d="M66 26 A10 10 0 0 1 86 26" stroke="var(--accent)" opacity=".62"/><path d="M72 26 A4 4 0 0 1 80 26" stroke="var(--accent)" opacity=".38"/></g><text x="8" y="50" class="wm" font-size="40" fill="var(--ink)">S<tspan fill="transparent">i</tspan>gnal</text><rect x="73.5" y="34" width="5" height="16" fill="var(--ink)"/><text x="156" y="50" class="by" font-size="10.5" fill="var(--sub)">BY 43 SUNSETS</text></svg></div>
+<div class="card"><svg width="300" height="60" viewBox="0 0 300 60" class="varA"><text x="8" y="50" class="wm" font-size="40" fill="var(--ink)"><tspan class="s">S</tspan><tspan class="i">ı</tspan>gnal</text><g class="arcs" fill="none" stroke-linecap="round" stroke-width="2.6"><path d="M-9 0 A9 9 0 0 1 9 0" stroke="var(--accent)"/><path d="M-5.5 0 A5.5 5.5 0 0 1 5.5 0" stroke="var(--accent)" opacity=".62"/><path d="M-2 0 A2 2 0 0 1 2 0" stroke="var(--accent)" opacity=".38"/></g><text x="156" y="50" class="by" font-size="10.5" fill="var(--sub)">BY 43 SUNSETS</text></svg></div>
+<div class="card dark"><svg width="300" height="60" viewBox="0 0 300 60" class="varA"><text x="8" y="50" class="wm" font-size="40" fill="var(--ink)"><tspan class="s">S</tspan><tspan class="i">ı</tspan>gnal</text><g class="arcs" fill="none" stroke-linecap="round" stroke-width="2.6"><path d="M-9 0 A9 9 0 0 1 9 0" stroke="var(--accent)"/><path d="M-5.5 0 A5.5 5.5 0 0 1 5.5 0" stroke="var(--accent)" opacity=".62"/><path d="M-2 0 A2 2 0 0 1 2 0" stroke="var(--accent)" opacity=".38"/></g><text x="156" y="50" class="by" font-size="10.5" fill="var(--sub)">BY 43 SUNSETS</text></svg></div>
 </div>
-<p class="note">「i」の点を夕日の弧に置き換え、印が文字の一部になります。BY 43 SUNSETS は同じ基線に小さく。弧の位置と i の柱の幅はフォントの実寸に合わせて微調整が要ります。</p>
-
+<p class="note">「i」の点を夕日の弧に置き換え、印が文字の一部になります(点なしの ı の上に弧を置き、位置はフォントの実寸から算出)。BY 43 SUNSETS は同じ基線に小さく。</p>
+<script>
+document.fonts.ready.then(function(){
+  document.querySelectorAll('svg.varA').forEach(function(svg){
+    var t=svg.querySelector('text.wm'), s=svg.querySelector('tspan.s'), i=svg.querySelector('tspan.i');
+    var x0=8, ws=s.getComputedTextLength(), wi=i.getComputedTextLength();
+    var cx=x0+ws+wi/2, top=50-40*0.72;   /* 小文字の高さ ≈ 0.72em の少し上 */
+    svg.querySelector('g.arcs').setAttribute('transform','translate('+cx.toFixed(1)+' '+(top-4).toFixed(1)+')');
+  });
+});
+</script>
 <p class="lbl">案 B — 地平線を文字の下線にする(印の線が語の基線になる)</p>
 <div class="row">
 <div class="card"><svg width="320" height="64" viewBox="0 0 320 64"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M14 40 A22 22 0 0 1 58 40" stroke="var(--accent)"/><path d="M23 40 A13 13 0 0 1 49 40" stroke="var(--accent)" opacity=".62"/><path d="M31 40 A5 5 0 0 1 41 40" stroke="var(--accent)" opacity=".38"/><path d="M10 46 H170" stroke="var(--ink)"/></g><text x="70" y="41" class="wm" font-size="36" fill="var(--ink)">Signal</text><text x="176" y="49" class="by2" font-size="12" fill="var(--sub)">by 43 Sunsets</text></svg></div>
