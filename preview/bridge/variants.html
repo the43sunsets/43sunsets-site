@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>トップの方向 3 案(上部のみ)— 43 Sunsets 目視用</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{--paper:#FBFBF9;--ink:#14181D;--sub:#5A636E;--line:#DADDD8;--ember:#D9714A;--gold:#E0A64B;--accent:#2F5D8A;
+ --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;--sans:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;--mono:"IBM Plex Mono",Menlo,monospace}
+*{box-sizing:border-box} body{margin:0;background:#E9EAE6;color:var(--ink);font-family:var(--sans);line-height:1.8}
+.label{max-width:1280px;margin:0 auto;padding:40px 24px 10px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;color:#444}
+.label b{color:var(--ember)}
+.label p{font-family:var(--sans);letter-spacing:0;font-size:14px;color:#555;margin:6px 0 0;max-width:900px}
+.frame{max-width:1280px;margin:0 auto 20px;background:var(--paper);box-shadow:0 8px 40px rgba(0,0,0,.10);overflow:hidden}
+.btn{display:inline-flex;align-items:center;padding:14px 24px;text-decoration:none;font-weight:700;font-size:14.5px;letter-spacing:.04em;border:1.5px solid currentColor}
+/* ===== V1 紙面 ===== */
+.v1{padding:0 56px 56px}
+.v1 .mast{display:flex;justify-content:space-between;align-items:baseline;padding:22px 0 14px;border-bottom:3px double var(--ink);font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--sub)}
+.v1 .mast .w{font-family:var(--serif);font-size:22px;font-weight:800;letter-spacing:.08em;color:var(--ink)}
+.v1 .mast nav a{color:var(--ink);text-decoration:none;font-family:var(--serif);font-weight:700;letter-spacing:.08em;font-size:14px;margin-left:26px}
+.v1 h1{font-family:var(--serif);font-weight:800;font-size:68px;line-height:1.25;letter-spacing:-.005em;margin:54px 0 22px;max-width:1120px}
+.v1 h1 em{font-style:normal;color:var(--ember)}
+.v1 .row{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;padding:26px 0 0;border-top:1px solid var(--ink)}
+.v1 .row p{margin:0;font-size:15px}
+.v1 .row .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--sub);display:block;margin-bottom:8px}
+.v1 .photo{margin:40px 0 0;position:relative;height:420px;background:url(/assets/hero/photo-a.webp) center 60%/cover}
+.v1 .cap{position:absolute;left:0;bottom:-30px;font-family:var(--mono);font-size:11.5px;color:var(--sub);letter-spacing:.06em}
+.v1 .ctas{margin:24px 0 0;display:flex;gap:14px}
+.v1 .btn.pri{background:var(--ink);color:#fff;border-color:var(--ink)}
+/* ===== V2 光 ===== */
+.v2{position:relative;height:760px;background:url(/assets/hero/photo-a.webp) center/cover;color:#fff}
+.v2::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,29,.28) 0%,rgba(20,24,29,0) 30%,rgba(20,24,29,0) 45%,rgba(20,24,29,.72) 100%)}
+.v2 .hd{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;padding:26px 56px}
+.v2 .hd .w{font-family:var(--serif);font-size:22px;font-weight:800;letter-spacing:.1em}
+.v2 .hd nav a{color:#fff;text-decoration:none;font-family:var(--serif);font-weight:700;letter-spacing:.08em;font-size:14px;margin-left:28px;opacity:.92}
+.v2 .txt{position:absolute;z-index:1;left:56px;right:56px;bottom:64px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:end}
+.v2 .k{font-family:var(--mono);font-size:12px;letter-spacing:.18em;opacity:.85;margin:0 0 18px}
+.v2 h1{font-family:var(--serif);font-weight:800;font-size:58px;line-height:1.28;margin:0;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+.v2 .lead{font-size:16px;margin:0 0 26px;color:rgba(255,255,255,.9)}
+.v2 .ctas{display:flex;gap:14px}
+.v2 .btn{color:#fff}
+.v2 .btn.pri{background:#fff;color:var(--ink);border-color:#fff}
+/* ===== V3 間 ===== */
+.v3{display:grid;grid-template-columns:46% 54%;height:760px}
+.v3 .l{background:var(--ink);color:#F4F2EC;padding:30px 56px 56px;display:flex;flex-direction:column;justify-content:space-between}
+.v3 .hd{display:flex;justify-content:space-between;align-items:center}
+.v3 .hd .w{font-family:var(--serif);font-size:20px;font-weight:800;letter-spacing:.1em}
+.v3 .hd nav a{color:#F4F2EC;text-decoration:none;font-family:var(--serif);font-weight:700;letter-spacing:.08em;font-size:13.5px;margin-left:22px;opacity:.85}
+.v3 .k{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--gold);margin:0 0 22px}
+.v3 h1{font-family:var(--serif);font-weight:800;font-size:50px;line-height:1.32;margin:0 0 26px}
+.v3 .lead{font-size:15.5px;color:#C9CDD2;margin:0 0 30px;max-width:460px}
+.v3 .btn{color:#F4F2EC}
+.v3 .btn.pri{background:#F4F2EC;color:var(--ink);border-color:#F4F2EC;margin-right:12px}
+.v3 .foot{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:#8B939C}
+.v3 .r{background:url(/assets/hero/photo-b.webp) center/cover;position:relative}
+.v3 .r .rule{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--gold),var(--ember))}
+</style>
+</head>
+<body>
+
+<div class="label"><b>V1 紙面</b> — 見出しで語る。新聞の一面のように、大きな明朝と細い罫だけで組む。写真は「記事の写真」として下に置く。箱・カード・アイコンを使わない。
+<p>参考の系統: 経済誌の特集面・Takram・mitutoyo.com/pmn の見出し。<b>ダサくならない理由</b>: 装飾を全部捨てて、文字の大きさと余白の差だけで高級感を出す。</p></div>
+<div class="frame v1">
+  <div class="mast"><span class="w">43 Sunsets</span><span>CHICAGO · EST. 2026</span><nav><a href="#">Signal</a><a href="#">進め方</a><a href="#">責任者</a><a href="#">EN</a></nav></div>
+  <h1>製造業の営業・マーケ・バックオフィスを、<br>AI で DX する会社です。</h1>
+  <p style="font-family:var(--serif);font-size:26px;font-weight:700;margin:-6px 0 34px;color:var(--ember)">経営を知る一人がやるから、安くて、結果が早い。</p>
+  <div class="row">
+    <p><span class="k">誰のために</span>米国で工場を動かす、日本の会社へ。営業・マーケティングから本社報告・顧客対応まで、業務の DX を一業務ずつ。</p>
+    <p><span class="k">いま提供しているもの</span><b>Signal</b> — 次に動く会社を公開情報から先に見つける、営業の照準器。無料・毎日更新。</p>
+    <p><span class="k">なぜ安く、結果が早いか</span>経営企画・GM として現場を回してきた本人が、要件を聞き、AI で組み、実地で直す。伝言も、大人数の会議も、要らない。</p>
+  </div>
+  <div class="ctas"><a class="btn pri" href="#">Signal を見る</a><a class="btn" href="#">30 分の相談</a></div>
+  <div class="photo"><span class="cap">ILLINOIS, 18:42 — 中西部の製造拠点。ここから先に動く会社を見つける。</span></div>
+</div>
+
+<div class="label" style="padding-top:64px"><b>V2 光</b> — 写真で語る。夕暮れの光の中の工場を全面に敷き、白い明朝を重ねる。社名「43 Sunsets」を、絵ではなく光で見せる。
+<p>参考の系統: 建築事務所・高級素材メーカーのサイト。<b>ダサくならない理由</b>: 主役は写真 1 枚と見出し 1 行だけ。他は端に小さく。<b>注意</b>: 写真の質がすべて。実写の撮り直し(シカゴ近郊で夕方に撮影)を後日推奨。</p></div>
+<div class="frame v2">
+  <div class="hd"><span class="w">43 Sunsets</span><nav><a href="#">Signal</a><a href="#">進め方</a><a href="#">責任者</a><a href="#">EN</a></nav></div>
+  <div class="txt">
+    <div><p class="k">米国で工場を動かす、日本の会社へ</p><h1>製造業の業務を、AI で DX する会社。<br>経営を知る一人がやるから、安くて早い。</h1></div>
+    <div><p class="lead">営業・マーケティングから本社報告・顧客対応まで、製造業の業務 DX。いま提供しているのは Signal — 次に動く会社を公開情報から先に見つける、営業の照準器です。</p><div class="ctas"><a class="btn pri" href="#">Signal を見る</a><a class="btn" href="#">30 分の相談</a></div></div>
+  </div>
+</div>
+
+<div class="label" style="padding-top:64px"><b>V3 間</b> — 二分割。左は墨色の面に白い言葉、右は光の入った工場の写真。静かで強い対比。
+<p>参考の系統: 日本の工芸・設計事務所のサイト。<b>ダサくならない理由</b>: 色は墨・白・金の 3 つだけ。左右の面が「言葉」と「現場」を対比させ、それ以上を足さない。<b>注意</b>: 暗い面が半分入る(CEO の「暗い」評との相性を確認)。</p></div>
+<div class="frame v3">
+  <div class="l">
+    <div class="hd"><span class="w">43 Sunsets</span><nav><a href="#">Signal</a><a href="#">進め方</a><a href="#">責任者</a><a href="#">EN</a></nav></div>
+    <div>
+      <p class="k">FOR JAPANESE MANUFACTURERS IN AMERICA</p>
+      <h1>製造業の営業と<br>バックオフィスの、DX 屋です。</h1>
+      <p class="lead">営業・マーケティングから本社報告・顧客対応まで。経営を知る一人が要件を聞き、AI で組み、実地で直す。だから安くて、結果が早い。いま提供しているのは Signal — 次に動く会社を先に見つける営業の照準器。</p>
+      <div><a class="btn pri" href="#">Signal を見る</a><a class="btn" href="#">30 分の相談</a></div>
+    </div>
+    <p class="foot">CHICAGO · KENTAROH YAO · SINCE 2026</p>
+  </div>
+  <div class="r"><div class="rule"></div></div>
+</div>
+
+<div class="label" style="padding:48px 24px 80px"><p>3 案とも「中西部」を冒頭から外し、冒頭の一行は「米国で工場を動かす、日本の会社へ」に置き換えています。5 州の範囲は Signal の説明の中だけに残します。</p></div>
+</body>
+</html>
