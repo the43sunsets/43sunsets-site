@@ -629,11 +629,14 @@ function renderScope(){
   const m = META; if(!m) return;
   const f = m.funnel;
   // 源ごとの表は 9/3 に「データの範囲と鮮度」ページへ移設(ここは漏斗の 1 行だけ)
-  const bad = m.sources.filter(s => s.last_run_status === "error").map(s => s.label.replace(/\(.*$/, ""));
+  const mdShort = iso => iso ? `${+iso.slice(5,7)}/${+iso.slice(8,10)}` : "—";
+  // 9/7 CEO: 月次源(BS&A 地番駆動)の途中中断は「源障害」ではなく「前回中断・次回の走査」と示す
+  const bad = m.sources.filter(s => s.last_run_status === "error" && s.cadence !== "monthly").map(s => s.label.replace(/\(.*$/, ""));
+  const paused = m.sources.filter(s => s.last_run_status === "error" && s.cadence === "monthly").map(s => `${s.label.replace(/\(.*$/, "")}(次回の走査 ${mdShort(s.next_run_at)})`);
   document.getElementById("scopebox").innerHTML = `
     <div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>
       保存 <span class="mono">${f.signals_total.toLocaleString()}</span> 件 → AI 読取候補 <span class="mono">${f.candidates}</span> 件(方針 ${m.policy.id}) → 読了 <span class="mono">${f.enriched}</span> 件 → 設備投資シグナル <span class="mono">${f.targets}</span> 件 / 未分類 <span class="mono">${f.unclassified}</span> 件 / 未評価 <span class="mono">${f.unevaluated.toLocaleString()}</span> 件。
-      書き出し <span class="mono">${fmtCT(m.generated_at)}</span>(米中部時間・UTC ${m.generated_at.slice(0,16).replace("T"," ")})・読み手: ${m.reader}${bad.length ? `<br><span class="ng">源障害:</span> ${bad.join("・")}(詳細は <a href="../freshness/">データの範囲と鮮度</a>)` : ""}</div>`;
+      書き出し <span class="mono">${fmtCT(m.generated_at)}</span>(米中部時間・UTC ${m.generated_at.slice(0,16).replace("T"," ")})・読み手: ${m.reader}${paused.length ? `<br>月次の源で前回は途中で中断: ${paused.join("・")}` : ""}${bad.length ? `<br><span class="ng">源障害:</span> ${bad.join("・")}(詳細は <a href="../freshness/">データの範囲と鮮度</a>)` : ""}</div>`;
 }
 /* 時刻は米中部時間(America/Chicago)を主に表示する — 読者は中西部にいる */
 function fmtCT(iso, withTime=true){

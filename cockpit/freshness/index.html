@@ -476,6 +476,8 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
   // 源(どこから取っているか)と源の状態 — coverage.json の sources を町の行に結合
   const SRC = Object.fromEntries((COV.sources || []).map(s => [s.source_id, s]));
   const RUN = {ok:"生", empty:"生(新着なし)", error:"源障害", running:"実行中", never:"未実行"};
+  const mdShort = iso => iso ? `${+iso.slice(5,7)}/${+iso.slice(8,10)}` : "—";
+  const runLabel = s => (s && s.last_run_status === "error" && s.cadence === "monthly") ? `前回中断(次回 ${mdShort(s.next_run_at)})` : RUN[(s && s.last_run_status) || "never"];   // 9/7 CEO: 月次源の途中中断は源障害と区別
   const RUN_RANK = {error:0, never:1, running:2, empty:3, ok:4};
   const srcLabel = r => {
     if (r.route === "foia") return "情報公開請求(FOIA)の回答";
@@ -491,9 +493,10 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
   function renderSrcSummary(){
     const list = (COV.sources || []).filter(s => s.state === state);
     const n = {}; list.forEach(s => { n[s.last_run_status] = (n[s.last_run_status] || 0) + 1; });
-    const bad = list.filter(s => s.last_run_status === "error").map(s => s.label);
+    const paused = list.filter(s => s.last_run_status === "error" && s.cadence === "monthly");
+    const bad = list.filter(s => s.last_run_status === "error" && s.cadence !== "monthly").map(s => s.label);
     document.getElementById("srcsum").innerHTML = list.length
-      ? `源の健全性(${NAMES[state]}): ${list.length} 源のうち 生 ${(n.ok||0) + (n.empty||0)}${n.empty ? `(うち新着なし ${n.empty})` : ""}・<span class="${bad.length ? "bad" : ""}">源障害 ${n.error||0}</span>${bad.length ? `(${bad.join("・")})` : ""}。源が止まっている町は「源の状態」列に出ます。`
+      ? `源の健全性(${NAMES[state]}): ${list.length} 源のうち 生 ${(n.ok||0) + (n.empty||0)}${n.empty ? `(うち新着なし ${n.empty})` : ""}・<span class="${bad.length ? "bad" : ""}">源障害 ${bad.length}</span>${bad.length ? `(${bad.join("・")})` : ""}${paused.length ? `・月次の源で前回中断 ${paused.length}(${paused.map(s => `${s.label.replace(/\(.*$/, "")}・次回 ${mdShort(s.next_run_at)}`).join("、")})` : ""}。源が止まっている町は「源の状態」列に出ます。`
       : `${NAMES[state]}に自動取得の源はまだありません。`;
     // 9/5: 郡発行(広域)の源 = 郡の建築課が未編入地域+契約自治体の許可を出す型。自治体単位への割当は未実装なので郡単位で示す
     const cs = (COV.county_sources || []).filter(c => c.state === state);
@@ -515,7 +518,8 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
       th.querySelector(".arr").textContent = on ? (sortDir > 0 ? "↑" : "↓") : "↕";
     });
     const show = rows.slice(0, limit);
-    const srcChip = r => r._srcstName == null ? "—" : `<span class="st ${r._srcstName === "error" ? "overdue" : (r._srcstName === "ok" || r._srcstName === "empty") ? "fresh" : "never"}" title="${((SRC[r.program]||{}).last_run_note || "").replace(/"/g, "'")}">${RUN[r._srcstName] || r._srcstName}</span>`;
+    const srcChip = r => { if (r._srcstName == null) return "—"; const sm = SRC[r.program] || {}; const paused = r._srcstName === "error" && sm.cadence === "monthly";
+      return `<span class="st ${paused ? "stale" : r._srcstName === "error" ? "overdue" : (r._srcstName === "ok" || r._srcstName === "empty") ? "fresh" : "never"}" title="${(sm.last_run_note || "").replace(/"/g, "'")}">${runLabel(sm) || r._srcstName}</span>`; };
     const subLine = r => {
       if (r.route === "none") return "";
       const m = METHOD[r.method] || r.method || "";
