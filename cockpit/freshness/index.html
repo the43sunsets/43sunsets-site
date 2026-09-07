@@ -66,7 +66,6 @@ main.app2{display:grid; grid-template-columns:320px minmax(0,1fr); align-items:s
 .rail h2.railh{font-size:15px; margin:22px 0 8px; font-family:inherit; font-weight:700; letter-spacing:.04em;}
 .rail .tabs{flex-direction:column; gap:4px; margin:0;} .rail .tabs button{text-align:left; border-radius:6px; padding:6px 10px; display:flex; justify-content:space-between;} .rail .tabs button .n{margin-left:auto;}
 .rail .defs{grid-template-columns:1fr; gap:8px;} .rail .def{padding:9px 11px; font-size:12px;} .rail .def h3{font-size:12px;} .rail .def p{font-size:12px;}
-.rail .cycle{font-size:11.5px;} .rail .cycle td,.rail .cycle th{padding:6px 8px;}
 .body{padding:18px 40px 60px;} .body h2:first-of-type{margin-top:18px;}
 @media (max-width:900px){ main.app2{grid-template-columns:1fr;} .rail{position:static; max-height:none; border-right:0; border-bottom:1px solid var(--line); padding:18px 16px;} .rail .tabs{flex-direction:row; flex-wrap:wrap;} .body{padding:16px 16px 48px;} }
 h2{font-family:"Shippori Mincho",serif; font-size:17px; margin:34px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--line);}
@@ -88,7 +87,7 @@ h2 .sub{font-family:"Zen Kaku Gothic New",sans-serif; font-size:12px; color:var(
 .goal .bar .s{position:absolute; top:0; bottom:0; background:var(--stale);}
 .goal .bar .t{position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--stamp);}
 .goal .cap{font-size:12px; color:var(--sub); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
-.mapwrap{display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:18px; align-items:start;}
+.mapwrap{display:grid; grid-template-columns:minmax(0,520px) minmax(260px,1fr); gap:20px; align-items:start; max-width:980px;}
 @media (max-width:860px){.mapwrap{grid-template-columns:1fr}}
 .mapcard{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:10px;}
 svg.map{width:100%; height:auto; display:block;}
@@ -106,10 +105,10 @@ svg.map{width:100%; height:auto; display:block;}
 .chip{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; padding:4px 11px; font:inherit; font-size:12px; cursor:pointer;}
 .chip[aria-pressed="true"]{background:var(--chip-bg); border-color:var(--ink);}
 .toolbar input{margin-left:auto; border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:6px; padding:6px 10px; font:inherit; font-size:13px; min-width:220px;}
-.tablewrap{overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--card);}
-table{border-collapse:collapse; width:100%; font-size:12.5px;}
+.tablewrap{overflow:auto; max-height:min(560px,62vh); border:1px solid var(--line); border-radius:8px; background:var(--card);}
+table{border-collapse:collapse; width:100%; font-size:12px;}
 th,td{padding:7px 10px; border-bottom:1px solid var(--line-soft); text-align:left; vertical-align:top; white-space:nowrap;}
-th{font-size:11px; letter-spacing:.1em; color:var(--sub); text-transform:uppercase; position:sticky; top:0; background:var(--card);}
+th{font-size:10.5px; letter-spacing:.08em; color:var(--sub); text-transform:uppercase; position:sticky; top:0; background:var(--card);}
 td.num{text-align:right; font-family:"IBM Plex Mono",monospace;}
 td.reason{white-space:normal; color:var(--sub); max-width:300px; font-size:12px;}
 .st{display:inline-block; padding:1px 8px; border-radius:999px; font-size:11px; font-weight:700; letter-spacing:.04em;}
@@ -117,17 +116,18 @@ td.reason{white-space:normal; color:var(--sub); max-width:300px; font-size:12px;
 .more{margin:10px 0 0; text-align:center;}
 .srcsum{font-size:12.5px; color:var(--sub); margin:8px 0 2px;}
 .srcsum .bad{color:var(--over); font-weight:700;}
-td.src{white-space:normal; min-width:170px; max-width:240px; font-size:12px;}
+td.src{white-space:normal; min-width:150px; max-width:210px; font-size:11.5px;}
 td.src .subl{color:var(--sub); font-size:11px; margin-top:1px;}
-td.reason{max-width:180px;}
-th,td{padding:7px 8px;}
+td.reason{max-width:170px; font-size:11.5px;}
+th,td{padding:5px 8px;}
 table{table-layout:auto;}
 .more button{border:1px solid var(--line); background:var(--card); color:var(--ink); padding:7px 18px; border-radius:6px; cursor:pointer; font:inherit;}
 .defs{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px;}
 .def{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px; font-size:13px;}
 .def h3{margin:0 0 6px; font-size:13px;}
 .def p{margin:0; color:var(--sub);}
-.cycle{width:100%; border-collapse:collapse; font-size:13px; background:var(--card); border:1px solid var(--line); border-radius:8px;}
+.cycle{width:100%; max-width:980px; border-collapse:collapse; font-size:12.5px; background:var(--card); border:1px solid var(--line); border-radius:8px;}
+.cycle td:first-child{white-space:nowrap; font-weight:500;} .cycle td:nth-child(2){min-width:180px; max-width:280px;} .cycle th{font-size:10.5px; letter-spacing:.08em; color:var(--sub); text-transform:uppercase; text-align:left;}
 .cycle td,.cycle th{padding:8px 12px; border-bottom:1px solid var(--line-soft); vertical-align:top;}
 footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px; color:var(--sub);}
 .err{border:1px solid var(--stamp); color:var(--stamp); padding:10px 12px; border-radius:6px; margin:16px 0;}
@@ -182,14 +182,6 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
     <div class="def"><h3><span class="st na">n/a</span> 経路なし</h3><p>公開ポータルが無い、または閲覧にログインが要るなどの理由で、まだ取得経路を決めていない自治体。網羅の穴として数えます。</p></div>
     <div class="def"><h3>取得日とデータ日を分ける理由</h3><p>毎日取りに行っても、自治体が月末にまとめて公開する源では「取得は今日・データは先月」になります。タイムリーさは最終データ日で読んでください。</p></div>
   </div>
-    <h2 class="railh">更新の周期<span class="sub">経路ごとに違います</span></h2>
-  <table class="cycle">
-    <tr><th>経路</th><th>周期</th><th>説明</th></tr>
-    <tr><td>公開ポータル・州 DB(source)</td><td>毎日 02:00 米中部時間に収集(公開は 04:00 までに・AI 読みの回収時にも再生成)</td><td>市・郡・州が公開している許可記録を自動取得。取得日は毎日更新され、データ日は源の公開頻度に従います。</td></tr>
-    <tr><td>郡の課税台帳(backstop)</td><td>約 1〜2 ヶ月遅れ</td><td>市に公開ポータルが無い場合、Cook 郡 Assessor の台帳から許可を拾います。工事内容の粒度は市の記録より粗い。</td></tr>
-    <tr><td>情報公開請求(FOIA)</td><td>毎月 1 日に前月分を依頼 → 5 営業日で回答</td><td>ポータルの無い自治体には Illinois FOIA(5 ILCS 140)で「発行済み許可の一覧」を請求。PDF・Excel の回答を取り込みます。月次配信に加えてくれた自治体は依頼不要になります。</td></tr>
-    <tr><td>AI 読み(分類)</td><td>週次(セッション枠)</td><td>保存した記録を AI が読み、5 分類(工場の増強・倉庫・データセンター・医療施設・研究ラボ)へ割り当てます。読了前の行は「未評価」として建設許可のページに残ります。</td></tr>
-  </table>
   </aside>
   <section class="body">
     <div id="err" class="err" hidden></div>
@@ -221,6 +213,15 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
     </table>
   </div>
   <div class="more" id="more"></div>
+
+  <h2>更新の周期<span class="sub">経路ごとに違います</span></h2>
+  <table class="cycle">
+    <tr><th>経路</th><th>周期</th><th>説明</th></tr>
+    <tr><td>公開ポータル・州 DB(source)</td><td>毎日 02:00 米中部時間に収集(公開は 04:00 までに・AI 読みの回収時にも再生成)</td><td>市・郡・州が公開している許可記録を自動取得。取得日は毎日更新され、データ日は源の公開頻度に従います。</td></tr>
+    <tr><td>郡の課税台帳(backstop)</td><td>約 1〜2 ヶ月遅れ</td><td>市に公開ポータルが無い場合、Cook 郡 Assessor の台帳から許可を拾います。工事内容の粒度は市の記録より粗い。</td></tr>
+    <tr><td>情報公開請求(FOIA)</td><td>毎月 1 日に前月分を依頼 → 5 営業日で回答</td><td>ポータルの無い自治体には Illinois FOIA(5 ILCS 140)で「発行済み許可の一覧」を請求。PDF・Excel の回答を取り込みます。月次配信に加えてくれた自治体は依頼不要になります。</td></tr>
+    <tr><td>AI 読み(分類)</td><td>週次(セッション枠)</td><td>保存した記録を AI が読み、5 分類(工場の増強・倉庫・データセンター・医療施設・研究ラボ)へ割り当てます。読了前の行は「未評価」として建設許可のページに残ります。</td></tr>
+  </table>
 
   
   
