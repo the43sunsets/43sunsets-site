@@ -1,5 +1,5 @@
 {
-"generated_at": "2026-09-07T02:17:42+00:00",
+"generated_at": "2026-09-07T08:15:41+00:00",
 "state": "IL",
 "part": 1,
 "parts": 3,
@@ -10275,17 +10275,17 @@
 "company": "NORTHWESTERN UNIVERSITY",
 "entity_type": "corp",
 "company_basis": "owner",
-"industry": "医薬・ライフサイエンス",
+"industry": "未分類",
 "category": "未分類",
-"category_raw": "研究・ラボ施設",
-"confidence": "low",
+"category_raw": "未分類",
+"confidence": "high",
 "date": "2026-09-03",
 "applied": "2026-09-02",
 "jp": false,
 "new": true,
-"summary": "Northwestern University(303 E Superior St、医療・研究系施設と見られる所在地)でエレベーター4台のモダナイゼーション $1.5M。",
-"infer": "住所は Northwestern の医学部/病院関連キャンパスに近く、施設維持管理の設備更新の可能性(推論)。生産設備投資ではなく昇降機更新にとどまる。",
-"note": null,
+"summary": "Northwestern University 所有ビル(303 E Superior St)でエレベーター4台(13階建・700FPM)の近代化工事 $1.5M。",
+"infer": null,
+"note": "エレベーター改修(建物設備)。",
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
 "ref": "許可 101088052 PERMIT - ELEVATOR EQUIPMENT",
@@ -10298,10 +10298,10 @@
 "karte": null,
 "company_id": "C-3166",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-05T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -99252,6 +99252,56 @@
 "batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "HARPER COURT HOLDINGS II",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "POWER CONSTRUCTION COMPANY, LLC"
+},
+"id": "S-949",
+"state": "IL",
+"city": "Chicago・5207 S HARPER AVE",
+"company": "HARPER COURT HOLDINGS II",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-27",
+"applied": "2026-08-26",
+"jp": false,
+"new": true,
+"summary": "オフィスビル(3〜11階)に追加電気設備を導入する内装改修 $2M(スイッチボード・バスダクト・EPO 設置)。",
+"infer": "電力増強はデータセンター/高負荷機器導入の前兆となり得るが、本文からは一般オフィスビルの電源強化と読める(推論)。",
+"note": "オフィス電気設備増強。",
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 101087399 PERMIT - RENOVATION/ALTERATION",
+"value": 2000000.0,
+"verbatim": "SC/ 2019 CBRC - INTERIOR ALTERATIONS ON FLOORS 3-11 FOR INSTALLATION OF ADDITIONAL ELECTRICAL SERVICE TO INCLUDE NEW CONDUIT AND EQUIPMENT, SWITCHBOARDS BUS DUCT, FEEDER CONNECTORS, SHUNT, TRIP BREAKE",
+"gc": "POWER CONSTRUCTION COMPANY, LLC",
+"pin": "2011412053",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-51",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -192666,6 +192716,56 @@
 "owner_of_record": null,
 "owner_kind": null,
 "owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-14874",
+"state": "IL",
+"city": "Arlington Heights・800 W CENTRAL RD ARLINGTON HEIGHTS IL 60005",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "医薬・ライフサイエンス",
+"category": "未分類",
+"category_raw": "医療施設",
+"confidence": "low",
+"date": "2026-08-21",
+"applied": "2026-07-14",
+"jp": false,
+"new": false,
+"summary": "Arlington Heights 800 W Central Rd に移動式 MRI トレーラーを設置する付属構造物許可(許可額 $1、実費不明)。",
+"infer": "移動式 MRI の設置 = 画像診断需要への対応で、医療機器・電源/搬入設備の調達が伴う可能性(推論)。所有者名は記録に無く特定不可。",
+"note": null,
+"fact": {
+"src": "Arlington Heights 建築許可(公開記録)",
+"ref": "許可 BLDC2026-00177 Accessory Structure - Commercial/Industrial/Multi-Family",
+"value": 1.0,
+"verbatim": "Installation of a mobile MRI - Trailer / Accessory Structure - Commercial/Industrial/Multi-Family / Accessory Building",
+"gc": null,
+"pin": "03314140780000",
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
 "applicant": "Cheryl Joyal",
 "gc": null
 },
@@ -196302,56 +196402,6 @@
 "batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-04T21:24:33+00:00"
-}
-},
-{
-"investor": {
-"name": "NALCO COMPANY",
-"basis": "owner_occupier",
-"label": "自社所有",
-"source": "parcel",
-"source_label": "登記(郡台帳)"
-},
-"parties": {
-"owner_of_record": "NALCO COMPANY",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-24680",
-"state": "IL",
-"city": "Naperville・1601 W DIEHL RD",
-"company": "NALCO COMPANY",
-"entity_type": "corp",
-"company_basis": "owner",
-"industry": "その他製造",
-"category": "未分類",
-"category_raw": "研究・ラボ施設",
-"confidence": "low",
-"date": "2026-08-20",
-"applied": "2026-05-07",
-"jp": false,
-"new": false,
-"summary": "Nalco(Naperville 拠点)C 棟の空調(AHU)・排気ファン(FEF)更新に伴う火災警報の副許可 $5.2M(45,000 SQFT)。親案件は同住所・同記述の別許可。",
-"infer": "FEF(排気ファン)更新はラボ/プロセス建屋の空調系統改修の可能性(推論)。",
-"note": null,
-"fact": {
-"src": "ネイパービル市 建築許可(公開記録)",
-"ref": "許可 FIRE-0184-2026 FIRE ALARM",
-"value": 5200000.0,
-"verbatim": "C Building AHU & FEF Replacement / FIRE ALARM / FIRE DEPARTMENT PERMIT / 45000 SQFT",
-"gc": null,
-"pin": "07033040230000",
-"owner_source": "parcel:dupage"
-},
-"karte": null,
-"company_id": "C-3028",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-0904-hv",
-"model": "claude-sonnet-5 (subagent, subscription session, foreground 11.5min)",
-"generated_at": "2026-09-04T18:35:05+00:00"
 }
 },
 {
@@ -341064,6 +341114,56 @@
 },
 "parties": {
 "owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-16848",
+"state": "IL",
+"city": "Park Ridge・1700 LUTHER LN PARK RIDGE IL 60068",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-11",
+"applied": "2026-07-14",
+"jp": false,
+"new": false,
+"summary": "Park Ridge 1700 Luther Ln の増築工事に先行するサイト造成・ユーティリティ準備・排水工事 $3.7M(2件中1件、仮設事務所の電気引込含む)。",
+"infer": "増築本体の準備工事であり、後続の本体許可(2 of 2)を追跡すべき兆候(推論)。所在地は病院・介護施設が集積するエリアと読める可能性があるが本文からは特定不可。",
+"note": "準備工事(用途不明・所有者記載なし)。",
+"fact": {
+"src": "Park Ridge 建築許可(公開記録)",
+"ref": "許可 CM-26-0204 Commercial Addition",
+"value": 3700000.0,
+"verbatim": "Permit 1 of 2 for SITE GRADING/UTILITY PREP & DRAINAGE PRIOR TO EXPANSION CONSTRUCTION NOTE: INCLUDES SITE TRAILER W/ELECTRICAL FEED / Commercial Addition / Addition",
+"gc": null,
+"pin": "09222000300000",
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
 "owner_kind": "登記名義",
 "owner_is_spe": false,
 "applicant": null,
@@ -356652,6 +356752,56 @@
 "batch": "session-073",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:15+00:00"
+}
+},
+{
+"investor": {
+"name": "SLK GLOBAL SOLUTIONS AMER",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "SLK GLOBAL SOLUTIONS AMER",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-19937",
+"state": "IL",
+"city": "Lombard・2050 S Finley RD 50",
+"company": "SLK GLOBAL SOLUTIONS AMER",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "未分類",
+"category_raw": "医療施設",
+"confidence": "low",
+"date": "2026-08-11",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Lombard の商業テナントでオフィスを患者室へ改修する工事(金額不明・小規模な用途変更)。給仕室の移設を含む。",
+"infer": "オフィスから患者室への転用 = クリニック機能の追加(推論)。規模・金額は記録上不明で投資規模の判断は難しい。",
+"note": null,
+"fact": {
+"src": "Lombard 建築許可(公開記録)",
+"ref": "許可 CB26-000178 Commercial Building Permit",
+"value": null,
+"verbatim": "converting offices into patient rooms. moving a janitors closet / Commercial Building Permit / Alterations / Remodels / Repairs",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:dupage:addr"
+},
+"karte": null,
+"company_id": "C-2416",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -440543,156 +440693,6 @@
 "verbatim": "DDS. 2019 CBC. INTERIOR ALTERATION OF EXISTING 2 STORY W/ (1) LEVEL BELOW GRADE, 13 UNIT TOWN HOME BUILDING TO INCLUDE LIKE FOR LIKE REPLACEMENT OF FIXTURES, FINISHES, AND MECHANICAL EQUIPMENT THROUGH",
 "gc": "PINTAURO CONSTRUCTION COMPANY LLC",
 "pin": "2029397002",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-12",
-"provenance": {
-"policy": "v0-2026-09-02",
-"batch": "03",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:41:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "CONTINENTAL PLAZA LIMITED PARTNERSHIP",
-"owner_kind": "登記名義",
-"owner_is_spe": true,
-"applicant": null,
-"gc": "PINTAURO CONSTRUCTION COMPANY LLC"
-},
-"id": "S-536",
-"state": "IL",
-"city": "Chicago・1329 W 76TH ST",
-"company": "CONTINENTAL PLAZA LIMITED PARTNERSHIP",
-"entity_type": "spe",
-"company_basis": "owner",
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-04",
-"applied": "2026-03-16",
-"jp": false,
-"new": false,
-"summary": "タウンホーム 14 戸の内装更新 $1.6M。",
-"infer": null,
-"note": "住宅。",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101080570 PERMIT - RENOVATION/ALTERATION",
-"value": 1613646.0,
-"verbatim": "DDS. 2019 CBC. EXISTING 2 STORY W/ (1) LEVEL BELOW GRADE, 14 UNIT TOWN HOME BUILDING. INTERIOR RENOVATION OF EXISTING TOWN HOME BUILDING WILL INCLUDE LIKE FOR LIKE REPLACEMENT OF FIXTURES, FINISHES, A",
-"gc": "PINTAURO CONSTRUCTION COMPANY LLC",
-"pin": "2029307002",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-12",
-"provenance": {
-"policy": "v0-2026-09-02",
-"batch": "03",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:41:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "CONTINENTAL PLAZA LIMITED PARTNERSHIP",
-"owner_kind": "登記名義",
-"owner_is_spe": true,
-"applicant": null,
-"gc": "PINTAURO CONSTRUCTION COMPANY LLC"
-},
-"id": "S-541",
-"state": "IL",
-"city": "Chicago・1323 W 76TH ST",
-"company": "CONTINENTAL PLAZA LIMITED PARTNERSHIP",
-"entity_type": "spe",
-"company_basis": "owner",
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-04",
-"applied": "2026-03-16",
-"jp": false,
-"new": false,
-"summary": "タウンホーム 13 戸の内装更新 $1.6M。",
-"infer": null,
-"note": "住宅。",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101080568 PERMIT - RENOVATION/ALTERATION",
-"value": 1613646.0,
-"verbatim": "DDS. 2019 CBC. EXISTING 2 STORY W/ (1) LEVEL BELOW GRADE, 13 UNIT TOWN HOME BUILDING. INTERIOR RENOVATION OF EXISTING TOWN HOME BUILDING WILL INCLUDE LIKE FOR LIKE REPLACEMENT OF FIXTURES, FINISHES, A",
-"gc": "PINTAURO CONSTRUCTION COMPANY LLC",
-"pin": "2029307002",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-12",
-"provenance": {
-"policy": "v0-2026-09-02",
-"batch": "03",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:41:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "CONTINENTAL PLAZA LIMITED PARTNERSHIP",
-"owner_kind": "登記名義",
-"owner_is_spe": true,
-"applicant": null,
-"gc": "PINTAURO CONSTRUCTION COMPANY LLC"
-},
-"id": "S-533",
-"state": "IL",
-"city": "Chicago・1359 W 76TH ST",
-"company": "CONTINENTAL PLAZA LIMITED PARTNERSHIP",
-"entity_type": "spe",
-"company_basis": "owner",
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-04",
-"applied": "2026-03-16",
-"jp": false,
-"new": false,
-"summary": "タウンホーム 13 戸の内装更新 $1.0M。",
-"infer": null,
-"note": "住宅。",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101080576 PERMIT - RENOVATION/ALTERATION",
-"value": 1044821.0,
-"verbatim": "DDS. 2019 CBC. EXISTING 2 STORY W/ (1) LEVEL BELOW GRADE, 13 UNIT TOWN HOME BUILDING. INTERIOR RENOVATION WILL INCLUDE REPLACEMENT OF FIXTURES, FINISHES, AND MECHANICAL EQUIPMENT THROUGHOUT UNITS. 2% ",
-"gc": "PINTAURO CONSTRUCTION COMPANY LLC",
-"pin": "2029307002",
 "owner_source": "permit"
 },
 "karte": null,

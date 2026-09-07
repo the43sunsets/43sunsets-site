@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-07T02:17:42+00:00",
+"generated_at": "2026-09-07T08:15:41+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,19 +15,19 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 46068,
-"candidates": 686,
-"enriched": 29349,
-"targets": 113,
-"unclassified": 29236,
-"unevaluated": 16719,
+"signals_total": 46157,
+"candidates": 706,
+"enriched": 29398,
+"targets": 117,
+"unclassified": 29281,
+"unevaluated": 16759,
 "by_category": {
 "データセンター建設": 7,
-"医療施設": 45,
-"未分類": 29236,
+"医療施設": 49,
+"未分類": 29281,
 "物流・倉庫の新設": 17,
-"研究・ラボ施設": 15,
-"製造能力の増強": 29
+"研究・ラボ施設": 13,
+"製造能力の増強": 31
 }
 },
 "sources": [
@@ -37,13 +37,13 @@
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T12:04:18Z",
+"last_run_at": "2026-09-07T07:02:41Z",
 "last_run_note": "",
 "signals": 5727,
 "date_min": "2026-07-01",
 "date_max": "2026-09-04",
 "owner_coverage": 5547,
-"targets": 28
+"targets": 27
 },
 {
 "source_id": "SRC-002",
@@ -51,7 +51,7 @@
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T12:04:27Z",
+"last_run_at": "2026-09-07T07:02:43Z",
 "last_run_note": "",
 "signals": 147,
 "date_min": "2026-07-01",
@@ -65,11 +65,11 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T12:04:28Z",
+"last_run_at": "2026-09-07T07:02:44Z",
 "last_run_note": "",
-"signals": 1935,
+"signals": 1975,
 "date_min": "2026-07-01",
-"date_max": "2026-09-03",
+"date_max": "2026-09-04",
 "owner_coverage": 1853,
 "targets": 1
 },
@@ -79,13 +79,13 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T12:04:29Z",
+"last_run_at": "2026-09-07T07:02:44Z",
 "last_run_note": "",
 "signals": 1675,
 "date_min": "2026-07-01",
 "date_max": "2026-09-04",
 "owner_coverage": 1663,
-"targets": 13
+"targets": 15
 },
 {
 "source_id": "SRC-068",
@@ -93,21 +93,21 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T12:04:30Z",
+"last_run_at": "2026-09-07T07:02:46Z",
 "last_run_note": "",
 "signals": 947,
 "date_min": "2026-07-07",
 "date_max": "2026-09-04",
 "owner_coverage": 909,
-"targets": 16
+"targets": 18
 },
 {
 "source_id": "SRC-070",
 "state": "OH",
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
-"last_run_status": "ok",
-"last_run_at": "2026-09-06T13:08:03Z",
+"last_run_status": "empty",
+"last_run_at": "2026-09-07T07:49:26Z",
 "last_run_note": "",
 "signals": 111,
 "date_min": "2026-07-07",
@@ -121,7 +121,7 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T12:04:30Z",
+"last_run_at": "2026-09-07T07:02:46Z",
 "last_run_note": "",
 "signals": 1243,
 "date_min": "2026-07-01",
@@ -135,7 +135,7 @@
 "jurisdiction": "Rochester Hills",
 "label": "ロチェスターヒルズ市 建築許可(公開記録・月報)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T13:08:01Z",
+"last_run_at": "2026-09-07T07:49:24Z",
 "last_run_note": "",
 "signals": 231,
 "date_min": "2026-07-08",
@@ -149,7 +149,7 @@
 "jurisdiction": "Milwaukee",
 "label": "ミルウォーキー市 建築許可(公開記録・約 2.5 ヶ月遅れ)",
 "last_run_status": "empty",
-"last_run_at": "2026-09-06T12:04:32Z",
+"last_run_at": "2026-09-07T07:02:47Z",
 "last_run_note": "",
 "signals": 150,
 "date_min": "2026-04-01",
@@ -163,8 +163,8 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "error",
-"last_run_at": "2026-09-06T12:04:33Z",
-"last_run_note": "SourceUnavailable: IN CDR 07/08/2026-07/14/2026: REP-56048: Engine rwEng-0 crashed., job Id: 181404",
+"last_run_at": "2026-09-07T07:02:48Z",
+"last_run_note": "SourceUnavailable: IN CDR 08/24/2026-08/30/2026: REP-56048: Engine rwEng-0 crashed., job Id: 189759",
 "signals": 0,
 "date_min": null,
 "date_max": null,
@@ -177,7 +177,7 @@
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T12:04:32Z",
+"last_run_at": "2026-09-07T07:02:47Z",
 "last_run_note": "",
 "signals": 209,
 "date_min": "2026-07-01",
@@ -191,13 +191,13 @@
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T12:04:33Z",
+"last_run_at": "2026-09-07T07:02:48Z",
 "last_run_note": "",
 "signals": 1028,
 "date_min": "2026-07-01",
 "date_max": "2026-08-31",
 "owner_coverage": 730,
-"targets": 5
+"targets": 6
 },
 {
 "source_id": "SRC-021",
@@ -205,13 +205,13 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T12:04:25Z",
+"last_run_at": "2026-09-07T07:02:42Z",
 "last_run_note": "",
 "signals": 3309,
 "date_min": "2026-07-01",
 "date_max": "2026-11-20",
 "owner_coverage": 14,
-"targets": 4
+"targets": 3
 },
 {
 "source_id": "SRC-022",
@@ -219,13 +219,13 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T18:50:18Z",
+"last_run_at": "2026-09-07T07:05:55Z",
 "last_run_note": "",
 "signals": 13436,
 "date_min": "2026-07-01",
 "date_max": "2026-09-07",
 "owner_coverage": 9457,
-"targets": 13
+"targets": 10
 },
 {
 "source_id": "SRC-023",
@@ -239,21 +239,21 @@
 "date_min": "2026-07-01",
 "date_max": "2585-06-01",
 "owner_coverage": 2968,
-"targets": 4
+"targets": 5
 },
 {
 "source_id": "SRC-024",
 "state": "IL",
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
-"last_run_status": "error",
-"last_run_at": "2026-09-06T18:50:46Z",
-"last_run_note": "Error: Page.evaluate: TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at evaluate (:311:30), <anonymous>:4:21)\n    at UtilityScript",
-"signals": 7934,
+"last_run_status": "ok",
+"last_run_at": "2026-09-07T07:44:52Z",
+"last_run_note": "",
+"signals": 7943,
 "date_min": "2026-07-01",
 "date_max": "2026-09-06",
 "owner_coverage": 4258,
-"targets": 6
+"targets": 9
 },
 {
 "source_id": "SRC-025",
@@ -261,7 +261,7 @@
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T13:06:09Z",
+"last_run_at": "2026-09-07T07:47:32Z",
 "last_run_note": "",
 "signals": 502,
 "date_min": "2026-07-01",
@@ -275,7 +275,7 @@
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-06T13:07:57Z",
+"last_run_at": "2026-09-07T07:49:22Z",
 "last_run_note": "",
 "signals": 87,
 "date_min": "2026-07-01",
@@ -303,7 +303,7 @@
 "jurisdiction": "Ottawa 郡 BS&A 利用自治体(Holland・Zeeland 他 22)",
 "label": "Ottawa 郡 BS&A 利用自治体(Holland・Zeeland 他 22) 建築許可(公開記録・郡地番台帳の工業地番から)",
 "last_run_status": "running",
-"last_run_at": "2026-09-07T01:56:09Z",
+"last_run_at": "2026-09-07T08:13:59Z",
 "last_run_note": "",
 "signals": 4,
 "date_min": "2026-07-27",
@@ -717,14 +717,18 @@
 "WI": [
 "permits-more-WI-1.json"
 ],
+"IN": [
+"permits-more-IN-1.json"
+],
 "MI": [
 "permits-more-MI-1.json"
 ]
 },
 "unclassified_by_state": {
-"OH": 5263,
-"IL": 21819,
-"WI": 570,
+"OH": 5297,
+"IL": 21824,
+"WI": 571,
+"IN": 5,
 "MI": 1584
 }
 },
@@ -749,7 +753,7 @@
 "city": "Columbus・3420 OHIOHEALTH PKWY",
 "company": "OHIOHEALTH CORP",
 "entity_type": "corp",
-"company_basis": "parcel",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -758,8 +762,8 @@
 "applied": null,
 "jp": false,
 "new": true,
-"summary": "OhioHealth 本部キャンパス(3420 OhioHealth Pkwy)内で 9,090 SQFT の構造改修 $500k。",
-"infer": "同キャンパスで先行する大型増築($115M)に付随する小規模改修の可能性(推論)。",
+"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)で 9,090 SQFT の改修工事 $500k。",
+"infer": "同施設は過去に大規模増築($115M)があり、その関連または継続的な内装改修の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "コロンバス市 建築許可(公開記録)",
@@ -773,10 +777,10 @@
 "karte": null,
 "company_id": "C-138",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -827,6 +831,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": "FAIRVIEW PARK HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "FAIRVIEW PARK HOSPITAL",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "UNITED MECHANICAL CONTRACTORS, INC."
+},
+"id": "S-36695",
+"state": "OH",
+"city": "Cleveland・18101 LORAIN AVE, CLEVELAND, OH, 44111",
+"company": "FAIRVIEW PARK HOSPITAL",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-09-04",
+"applied": "2026-09-01",
+"jp": false,
+"new": true,
+"summary": "Fairview Park Hospital(18101 Lorain Ave)でシンク1台設置と給排水配管工事 $15k(親許可 BCB26-030601 の配管副許可)。",
+"infer": "小規模な配管副許可であり、親許可の改修/増築工事の一部と読める(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCP26-037612 Commercial Plumbing",
+"value": 15000.0,
+"verbatim": "Commercial Plumbing / I-2 Institutional - Hospitals / Nursing Home / INSTALL 1 SINK, 70 LIN. FT. WASTE, VENT PIPING, 50 LIN. FT. WATER DISTRIBUTION PIPING ***BUILDING PERMIT NO BCB26-030601***",
+"gc": "UNITED MECHANICAL CONTRACTORS, INC.",
+"pin": "02601001",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7726",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -1008,8 +1062,8 @@
 "applied": "2026-08-03",
 "jp": false,
 "new": true,
-"summary": "2 階 X 線室の既存 X 線機器を新型に交換する内装改修(機械・電気・配管含む)$355k。",
-"infer": "医療画像機器の更新投資(推論)。",
+"summary": "病院 2 階 X 線室の内装改修 $355k。既存 X 線装置を新型に入替え、新規コントロールアルコーブを設置(MEP 対応含む)。",
+"infer": "X 線装置の入替 = 画像診断機器メーカーの調達が発生する小規模設備更新(推論)。",
 "note": null,
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
@@ -1023,60 +1077,10 @@
 "karte": null,
 "company_id": "C-3",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-0904-hv",
-"model": "claude-sonnet-5 (subagent, subscription session, foreground 11.5min)",
-"generated_at": "2026-09-04T18:35:05+00:00"
-}
-},
-{
-"investor": {
-"name": "KETTERING HEALTH NETWORK",
-"basis": "operator",
-"label": "操業事業者",
-"source": "permit_text",
-"source_label": "許可記録(本文)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-39906",
-"state": "OH",
-"city": "Kettering・3535 SOUTHERN Blvd, KETTERING OH 45429",
-"company": "KETTERING HEALTH NETWORK",
-"entity_type": "corp",
-"company_basis": "description",
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-09-02",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "Kettering Health Network(KHN)の施設でフルオロスコピー(透視撮影)機器室 4 の設備更新に伴う構造許可。金額記載なし。",
-"infer": "画像診断機器の入替 = 医療画像機器・関連設備の調達イベントの可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Kettering 建築許可(公開記録)",
-"ref": "許可 S26-05276 Structural Permit",
-"value": null,
-"verbatim": "KHN REPLACE FLUOROSCOPY EQUIPMENT ROOM 4 / Plan Review / REPLACE FLUOROSCOPY EQUIPMENT ROOM 4 / Structural Permit",
-"gc": null,
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-3725",
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -1099,7 +1103,7 @@
 "city": "Detroit・2799 W Grand Blvd, #13K",
 "company": "HENRY FORD HEALTH SYSTEM",
 "entity_type": "corp",
-"company_basis": "parcel",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -1108,8 +1112,8 @@
 "applied": "2026-08-03",
 "jp": false,
 "new": true,
-"summary": "Henry Ford 病院 K 棟 9・13 階の内装改修 $1.5M(9/1 発行 = 最新)。",
-"infer": null,
+"summary": "Henry Ford Health System の病院(2799 W Grand Blvd)K-9・K-13 階の内装改修 $1.5M。",
+"infer": "病院内フロアの改修 = 医療機器・特殊配管/空調の小〜中規模調達が伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "デトロイト市 建築許可(公開記録)",
@@ -1123,10 +1127,10 @@
 "karte": null,
 "company_id": "C-171",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "05",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:44:38+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -1231,52 +1235,102 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "HS ACQUISITION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
-"owner_of_record": "HARPER COURT HOLDINGS II",
-"owner_kind": "登記名義",
-"owner_is_spe": true,
+"owner_of_record": "HS ACQUISITION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
 "applicant": null,
-"gc": "POWER CONSTRUCTION COMPANY, LLC"
+"gc": null
 },
-"id": "S-949",
-"state": "IL",
-"city": "Chicago・5207 S HARPER AVE",
-"company": "HARPER COURT HOLDINGS II",
-"entity_type": "spe",
+"id": "S-44285",
+"state": "OH",
+"city": "Parma・12301 SNOW RD",
+"company": "HS ACQUISITION",
+"entity_type": "corp",
 "company_basis": "owner",
-"industry": "半導体・電子",
-"category": "研究・ラボ施設",
-"category_raw": "研究・ラボ施設",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
 "confidence": "high",
-"date": "2026-08-27",
-"applied": "2026-08-26",
+"date": "2026-08-28",
+"applied": null,
 "jp": false,
 "new": true,
-"summary": "同ビル 3〜11 階に追加電源(配電盤・バスダクト・非常停止)を敷設 $2M。",
-"infer": "量子ラボ整備(8 階・7/27 発行の 3 許可)に続く電源増強 = 実験機器の電力需要が確定している読み。",
+"summary": "Parma 12301 Snow Rd の施設で MRI スイートの改修/アップグレード(金額不明)。",
+"infer": "MRI 装置の更新・入替に伴う画像診断機器の調達が発生する可能性(推論)。",
 "note": null,
 "fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101087399 PERMIT - RENOVATION/ALTERATION",
-"value": 2000000.0,
-"verbatim": "SC/ 2019 CBRC - INTERIOR ALTERATIONS ON FLOORS 3-11 FOR INSTALLATION OF ADDITIONAL ELECTRICAL SERVICE TO INCLUDE NEW CONDUIT AND EQUIPMENT, SWITCHBOARDS BUS DUCT, FEEDER CONNECTORS, SHUNT, TRIP BREAKERS AND FIRE DEPARTMENT EMERGENCY POWER OFF (EPO) AS PER PLANS. (OCCUPANCY GROUP B; TYPE 1A CONSTRUCTION)",
-"gc": "POWER CONSTRUCTION COMPANY, LLC",
-"pin": "2011412053",
-"owner_source": "permit"
+"src": "Parma 建築許可(公開記録)",
+"ref": "許可 CBP25-000099 Building Permit Application - Commercial",
+"value": null,
+"verbatim": "**PLANS REC'D 9/30/25** MRI suite renovation/upgrade / Building Permit Application - Commercial / Alteration",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:cuyahoga_oh:addr"
 },
 "karte": null,
-"company_id": "C-51",
+"company_id": "C-7720",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "02",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:40:38+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": "HS ACQUISITION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "HS ACQUISITION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-44911",
+"state": "OH",
+"city": "Parma・12301 SNOW RD",
+"company": "HS ACQUISITION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-08-28",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "既存の放射線科(画像診断部門)に支援スペースを設ける改修工事(Parma 12301 Snow Rd)。金額は記録上不明。",
+"infer": "放射線科の支援スペース増設 = 画像診断機器の増設・更新に伴う付帯工事の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "Parma 建築許可(公開記録)",
+"ref": "許可 CBP25-000101 Building Permit Application - Commercial",
+"value": null,
+"verbatim": "**PLANS REC'D 10/9/25** Alterations to provide support spaces to the existing radiology department. / Building Permit Application - Commercial / Alteration",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:cuyahoga_oh:addr"
+},
+"karte": null,
+"company_id": "C-7720",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -1308,8 +1362,8 @@
 "applied": "2026-07-02",
 "jp": false,
 "new": true,
-"summary": "Detroit 3990 John R St の病院で内装のみの改修(建築解体・什器・仕上げ・MEP・医療ガス・防火設備を含む) $892k。",
-"infer": "病院の医療ガス・MEP更新を伴う内装改修 = 医療機器・設備の調達が動く窓(推論)。",
+"summary": "Harper-Hutzel 病院(3990 John R St)の内装改修 $892k(設備・仕上げ・MEP・医療ガス・防火含む)。",
+"infer": "医療ガス・MEP を含む内装改修 = 医療機器・空調・特殊配管設備の調達が伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "デトロイト市 建築許可(公開記録)",
@@ -1323,19 +1377,19 @@
 "karte": null,
 "company_id": "C-244",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-001",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "CLEVELAND CLINIC FOUNDATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
 "owner_of_record": "CLEVELAND CLINIC FOUNDATION",
@@ -1347,9 +1401,9 @@
 "id": "S-36826",
 "state": "OH",
 "city": "Cleveland・2119 E 93RD ST, CLEVELAND, OH, 44106",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
+"company": "CLEVELAND CLINIC FOUNDATION",
+"entity_type": "corp",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -1358,8 +1412,8 @@
 "applied": "2026-08-25",
 "jp": false,
 "new": true,
-"summary": "病院(I-2施設)L棟1階の1391平方フィートに対する電気内装工事 $871k(建築許可番号 BCB26-034065 に付随)。",
-"infer": "親許可(BCB26-034065)の電気系副許可と読める。病院内の設備改修に伴う電源・配線工事の可能性(推論)。",
+"summary": "Cleveland Clinic の L棟1階(1391 SQFT)の内装電気改修に伴う商業電気工事 $871k(建築許可 BCB26-034065 の副許可)。",
+"infer": "病院内の電気改修 = 親許可(BCB26-034065)の設備・内装工事に伴う電源対応の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -1371,21 +1425,21 @@
 "owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-7724",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "CASE WESTERN RESERV UNIV",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
 "owner_of_record": "CASE WESTERN RESERV UNIV",
@@ -1397,9 +1451,9 @@
 "id": "S-36811",
 "state": "OH",
 "city": "Cleveland・2109 ADELBERT RD, CLEVELAND, OH, 44106",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
+"company": "CASE WESTERN RESERV UNIV",
+"entity_type": "corp",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "研究・ラボ施設",
 "category_raw": "研究・ラボ施設",
@@ -1408,8 +1462,8 @@
 "applied": "2026-08-25",
 "jp": false,
 "new": true,
-"summary": "Cleveland 2109 Adelbert Rd(I-2 病院/介護施設区分)で 5,819 SF のラボの電気改修工事 $103,297(建築許可 BCB26-029682 の副許可)。",
-"infer": "所在地はケースウェスタン・リザーブ大学/医療機関が集積する地区と一致(推論)。親許可(BCB26-029682)のラボ改修に付随する電気工事と読める。",
+"summary": "Case Western Reserve University の建物で 5,819 SF のラボ向け内装電気改修 $103,297(親許可 BCB26-029682 の電気サブ許可)。",
+"infer": "大学のラボ改修に伴う電気設備更新 = 実験機器・特殊配電の付帯調達がある可能性(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -1421,12 +1475,12 @@
 "owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-7728",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -1508,8 +1562,8 @@
 "applied": null,
 "jp": false,
 "new": true,
-"summary": "Nationwide Children's Hospital(757 Mooberry St)で構造改修 $1M(1,500 SQFT・商業その他区分)。",
-"infer": "病院施設内の小規模改修 = 医療設備・機器の入替に伴う工事の可能性(推論)。",
+"summary": "Nationwide Children's Hospital(757 Mooberry St)で 1,500 SQFT の構造改修 $1M。",
+"infer": "小規模な院内改修 = 医療機器・設備更新に伴う工事の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "コロンバス市 建築許可(公開記録)",
@@ -1523,10 +1577,10 @@
 "karte": null,
 "company_id": "C-140",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T21:00:18+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -1581,11 +1635,11 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "FAIRVIEW PARK HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
 "owner_of_record": "FAIRVIEW PARK HOSPITAL",
@@ -1597,9 +1651,9 @@
 "id": "S-36884",
 "state": "OH",
 "city": "Cleveland・18101 LORAIN AVE, CLEVELAND, OH, 44111",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
+"company": "FAIRVIEW PARK HOSPITAL",
+"entity_type": "corp",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -1608,8 +1662,8 @@
 "applied": "2026-08-21",
 "jp": false,
 "new": true,
-"summary": "病院施設(I-2 用途)で875 SQFTのCTスキャナー入替に伴う電気工事(照明・電源アップグレード)$74,246。親許可 BCB26-030601 の副許可。",
-"infer": "CT装置の入替 = 画像診断機器の調達が発生している兆候(推論)。",
+"summary": "Fairview Park Hospital(875 SQFT)で既存 CT 装置の入替と照明・電源のアップグレードを行う電気工事 $74,246。親許可 #BCB26-030601 の副許可。",
+"infer": "CT 装置の入替 = 画像診断機器メーカーの受注機会を示す兆候(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -1621,12 +1675,12 @@
 "owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-7726",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -1673,19 +1727,19 @@
 "karte": null,
 "company_id": "C-138",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T21:00:18+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "FAIRVIEW PARK HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
 "owner_of_record": "FAIRVIEW PARK HOSPITAL",
@@ -1697,9 +1751,9 @@
 "id": "S-36919",
 "state": "OH",
 "city": "Cleveland・18101 LORAIN AVE, CLEVELAND, OH, 44111",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
+"company": "FAIRVIEW PARK HOSPITAL",
+"entity_type": "corp",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -1708,8 +1762,8 @@
 "applied": "2026-07-23",
 "jp": false,
 "new": false,
-"summary": "Cleveland の病院1階救急部門の875 SFを内装改修し、CT機器を設置 $407k。",
-"infer": "CT装置設置に伴う内装・電気・空調工事 = 画像診断機器メーカーの設備調達が発生する窓(推論)。",
+"summary": "病院の救急部門 1 階 875 SF を CT 機器設置のため内装改修 $407k。給排水・空調・電気は別許可。",
+"infer": "CT 装置の新規導入/更新に伴う内装工事 = 画像診断機器の調達が動く窓(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -1721,62 +1775,62 @@
 "owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-7726",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "NALCO COMPANY",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
-"owner_of_record": null,
-"owner_kind": null,
+"owner_of_record": "NALCO COMPANY",
+"owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": null
 },
-"id": "S-14874",
+"id": "S-24680",
 "state": "IL",
-"city": "Arlington Heights・800 W CENTRAL RD ARLINGTON HEIGHTS IL 60005",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
+"city": "Naperville・1601 W DIEHL RD",
+"company": "NALCO COMPANY",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "食品・素材加工",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
 "confidence": "high",
-"date": "2026-08-21",
-"applied": "2026-07-14",
+"date": "2026-08-20",
+"applied": "2026-05-07",
 "jp": false,
 "new": false,
-"summary": "Arlington Heights 800 W CENTRAL RD ARLINGTON HEIGHTS IL 60005 に移動式MRI(トレーラー型)の付属構造物を設置 $1(名目額)。所有者記載なし。",
-"infer": "画像診断設備(MRI)の新規設置 = 医療機関の画像診断能力増強の可能性(推論、所有者不明のため事業主体は要確認)。",
+"summary": "Nalco Company の Naperville 施設(1601 W Diehl Rd)C 棟で空調機(AHU)・排気設備(FEF)交換に伴う火災報知器許可 $5.2M(45,000 SQFT)。",
+"infer": "AHU/FEF 交換は既存の生産・研究施設の設備更新に伴う付帯工事の可能性(推論)。Nalco は水処理・化学製品メーカーであり、空調・排気系統の更新は生産継続性投資と読める(推論)。",
 "note": null,
 "fact": {
-"src": "Arlington Heights 建築許可(公開記録)",
-"ref": "許可 BLDC2026-00177 Accessory Structure - Commercial/Industrial/Multi-Family",
-"value": 1.0,
-"verbatim": "Installation of a mobile MRI - Trailer / Accessory Structure - Commercial/Industrial/Multi-Family / Accessory Building",
+"src": "ネイパービル市 建築許可(公開記録)",
+"ref": "許可 FIRE-0184-2026 FIRE ALARM",
+"value": 5200000.0,
+"verbatim": "C Building AHU & FEF Replacement / FIRE ALARM / FIRE DEPARTMENT PERMIT / 45000 SQFT",
 "gc": null,
-"pin": "03314140780000",
-"owner_source": null
+"pin": "07033040230000",
+"owner_source": "parcel:dupage"
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-3028",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-065",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:14+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -1831,6 +1885,56 @@
 },
 {
 "investor": {
+"name": "CLEVELAND CLINIC FOUNDATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CLEVELAND CLINIC FOUNDATION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "NEPTUNE PLUMBING & HEATING COMPANY"
+},
+"id": "S-36980",
+"state": "OH",
+"city": "Cleveland・9500 EUCLID AVE, CLEVELAND, OH, 44106",
+"company": "CLEVELAND CLINIC FOUNDATION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-08-18",
+"applied": "2026-08-06",
+"jp": false,
+"new": false,
+"summary": "Cleveland Clinic の施設(9500 Euclid Ave)で配管工事 $30k(シンク3台・グリース阻集器・給排水配管100フィート)。親許可 BCB26-020921 に紐づく副許可。",
+"infer": "病院内の厨房/給排水関連の小規模設備工事で、親許可(建築本体)の内容次第では調理設備調達が付随する可能性(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCP26-033193 Commercial Plumbing",
+"value": 30000.0,
+"verbatim": "Commercial Plumbing / I-2 Institutional - Hospitals / Nursing Home / INSTALL 3 SINKS,1 GREASE ITERCEPTOR, 100 LIN. FT. DRAIN, WASTE, VENT PIPIN, 100 LIN. FT. WATER DISTRUBUTION PIPING ***BUILDING PERMIT NO BCB26-020921***",
+"gc": "NEPTUNE PLUMBING & HEATING COMPANY",
+"pin": "11916001",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-3629",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
 "name": "NALCO COMPANY",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -1850,7 +1954,7 @@
 "company": "NALCO COMPANY",
 "entity_type": "corp",
 "company_basis": "owner",
-"industry": "その他製造",
+"industry": "医薬・ライフサイエンス",
 "category": "研究・ラボ施設",
 "category_raw": "研究・ラボ施設",
 "confidence": "high",
@@ -1858,8 +1962,8 @@
 "applied": "2026-05-28",
 "jp": false,
 "new": false,
-"summary": "Nalco(Naperville 拠点)で新しいラボスペースへの内装改修 $3.6M(6,300 SQFT)。",
-"infer": "特殊化学メーカーの研究設備更新 = 分析機器・実験設備の調達が伴う可能性(推論)。",
+"summary": "Nalco Company の Naperville 拠点(1601 W Diehl Rd)で新規ラボ空間への内装改修 $3.6M(6,300 SQFT)。",
+"infer": "ラボ新設の内装工事 = 分析・試験機器や特殊排気・給水設備の調達が伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "ネイパービル市 建築許可(公開記録)",
@@ -1873,17 +1977,17 @@
 "karte": null,
 "company_id": "C-3028",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-0904-hv",
-"model": "claude-sonnet-5 (subagent, subscription session, foreground 11.5min)",
-"generated_at": "2026-09-04T18:35:05+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
 "name": "UNIVERSITY OF CHICAGO",
-"basis": "owner_occupier",
-"label": "自社所有",
+"basis": "public",
+"label": "公共",
 "source": "permit_owner",
 "source_label": "許可記録(所有者欄)"
 },
@@ -1898,9 +2002,9 @@
 "state": "IL",
 "city": "Chicago・6045 S KENWOOD AVE",
 "company": "UNIVERSITY OF CHICAGO",
-"entity_type": "corp",
+"entity_type": "public",
 "company_basis": "owner",
-"industry": "未分類",
+"industry": "医薬・ライフサイエンス",
 "category": "研究・ラボ施設",
 "category_raw": "研究・ラボ施設",
 "confidence": "high",
@@ -1908,8 +2012,8 @@
 "applied": "2026-08-11",
 "jp": false,
 "new": false,
-"summary": "既存研究ラボの内装改修 $1.6M(間仕切り・設備)。",
-"infer": null,
+"summary": "University of Chicago(6045 S Kenwood Ave)の既存研究ラボの内装改修 $1.6M(間仕切り・配管・電気・機械工事)。",
+"infer": "大学の研究棟内装改修 = 実験機器・特殊配管/空調の調達が伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
@@ -1923,19 +2027,19 @@
 "karte": null,
 "company_id": "C-49",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "03",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:41:36+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": "KETTERING HEALTH",
-"basis": "owner_occupier",
-"label": "自社所有",
-"source": "permit_owner",
-"source_label": "許可記録(所有者欄)"
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
 },
 "parties": {
 "owner_of_record": null,
@@ -1947,9 +2051,9 @@
 "id": "S-40118",
 "state": "OH",
 "city": "Kettering・3535 SOUTHERN Blvd, KETTERING OH 45429",
-"company": "KETTERING HEALTH",
-"entity_type": "corp",
-"company_basis": "parcel",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -1958,8 +2062,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Kettering の病院1階 核医学室5でSymbia EVO機器の入替に伴う構造許可(金額不明)。",
-"infer": "画像診断機器(SPECT/CTのSymbia EVO)の入替 = 据付に伴う構造補強・遮蔽工事の可能性(推論)。",
+"summary": "Kettering の医療施設で核医学室(Rm 5)の Symbia EVO 装置更新に伴う構造許可。所有者・金額は記録上不明。",
+"infer": "核医学用ガンマカメラ(Symbia EVO)の入替 = 画像診断機器・設置に伴う構造補強の調達が動く兆候(推論)。",
 "note": null,
 "fact": {
 "src": "Kettering 建築許可(公開記録)",
@@ -1973,10 +2077,10 @@
 "karte": null,
 "company_id": "C-3723",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -2031,11 +2135,11 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "CASE WESTERN RESERV UNIV",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
 "owner_of_record": "CASE WESTERN RESERV UNIV",
@@ -2047,9 +2151,9 @@
 "id": "S-26670",
 "state": "OH",
 "city": "Cleveland・2109 ADELBERT RD, CLEVELAND, OH, 44106",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
+"company": "CASE WESTERN RESERV UNIV",
+"entity_type": "public",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "研究・ラボ施設",
 "category_raw": "研究・ラボ施設",
@@ -2058,8 +2162,8 @@
 "applied": "2026-08-13",
 "jp": false,
 "new": false,
-"summary": "Cleveland 2109 Adelbert Rd のラボ向け配管工事 $95,680(ガスマニホールド・真空/CO2アウトレット・給排水配管設置)。親許可 BCB26-029682 の副許可。",
-"infer": "ラボ用ガス・真空配管の新設は実験設備の新規導入・増強に付随する工事の可能性(推論)。所在地はケースウェスタンリザーブ大学近隣 = 研究施設の可能性(推論)。",
+"summary": "Case Western Reserve University(2109 Adelbert Rd)でラボガスマニホールド・真空/CO2アウトレット・給排水配管を設置する商業配管工事 $95,680(親許可 BCB26-029682 の副許可)。",
+"infer": "実験用ガス・真空配管の新設 = ラボ機器・分析装置の増設に伴う付帯設備投資の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -2071,12 +2175,12 @@
 "owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-7728",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -2149,7 +2253,7 @@
 "city": "Elmhurst・107 N YORK ST ELMHURST IL 60126",
 "company": "YORK ST VENTURE LLC",
 "entity_type": "spe",
-"company_basis": "parcel",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -2158,8 +2262,8 @@
 "applied": "2025-12-23",
 "jp": false,
 "new": false,
-"summary": "Elmhurst 107 N York St に 3 階建て約 24,000 SF のメディカルオフィスビルを新築(躯体)$6.7M。",
-"infer": "開発 SPE 名義・入居する医療機関は未定(推論)。",
+"summary": "Elmhurst 107 N York St に 3 階建て・約 24,000 SF のメディカルオフィスビル(コア/シェル)を新築 $6.7M。",
+"infer": "所有は開発 SPE 名義で、テナントとなる医療事業者は記録上不明(推論不可)。竣工後に内装・医療機器工事の追加許可が出る可能性(推論)。",
 "note": null,
 "fact": {
 "src": "Elmhurst 建築許可(公開記録)",
@@ -2173,19 +2277,19 @@
 "karte": null,
 "company_id": "C-181",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "batch-v0-06",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-03T03:26:26+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": "ZARMINALI PEDIATRICS",
-"basis": "operator",
-"label": "操業事業者",
-"source": "permit_text",
-"source_label": "許可記録(本文)"
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
 },
 "parties": {
 "owner_of_record": null,
@@ -2197,9 +2301,9 @@
 "id": "S-14857",
 "state": "IL",
 "city": "Arlington Heights・111 W RAND RD ARLINGTON HEIGHTS IL 60004",
-"company": "ZARMINALI PEDIATRICS",
-"entity_type": "corp",
-"company_basis": "description",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -2208,8 +2312,8 @@
 "applied": "2026-08-12",
 "jp": false,
 "new": false,
-"summary": "Arlington Heights 111 W Rand Rd で小児科クリニック Zarminali Pediatrics が隣接テナントスペースへ拡張 $338,465。",
-"infer": null,
+"summary": "小児科クリニック(Zarminali Pediatrics)が隣接テナントスペースへ拡張 $338,465、入居使用承認(Certificate of Occupancy)。",
+"infer": "小規模クリニックの拡張であり、医療機器・内装設備の調達を伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "Arlington Heights 建築許可(公開記録)",
@@ -2223,10 +2327,10 @@
 "karte": null,
 "company_id": "C-469",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-003",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -2408,8 +2512,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "OhioHealth 所有の医療施設(111 S Grant Ave)で構造改修 $1.0M(1,304 SQFT)。",
-"infer": "病院法人による小規模な構造改修 = 医療施設の設備更新の可能性(推論)。",
+"summary": "OhioHealth の Columbus 施設(111 S Grant Ave)で 1,304 SQFT の改修工事 $1.0M。",
+"infer": "小規模改修 = 既存医療施設内の部分的な設備更新の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "コロンバス市 建築許可(公開記録)",
@@ -2423,10 +2527,10 @@
 "karte": null,
 "company_id": "C-138",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T21:00:18+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -2508,8 +2612,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Columbus 4000 Westerville Rd に病院・施設系新築 96,351 SF $19.8M。",
-"infer": "所有名義は SPE(不動産保有会社)であり、実際の運営事業者(医療法人等)は記録からは特定できない(推論)。",
+"summary": "Columbus 4000 Westerville Rd に病院・施設系建物 96,351 SQFT を新築 $19.8M。",
+"infer": "所有は SPE 名義で運営事業者は要確認。病院・介護医療施設の新設 = 医療機器・特殊空調設備の調達が竣工まで続く窓の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "コロンバス市 建築許可(公開記録)",
@@ -2523,60 +2627,10 @@
 "karte": null,
 "company_id": "C-3754",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T21:00:18+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-16848",
-"state": "IL",
-"city": "Park Ridge・1700 LUTHER LN PARK RIDGE IL 60068",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-08-11",
-"applied": "2026-07-14",
-"jp": false,
-"new": false,
-"summary": "Park Ridge 1700 Luther Ln の商業増築 第 1 段階(造成・配管・排水)$3.7M。",
-"infer": "所在地は Advocate Lutheran General 病院キャンパスと一致(推論)。病院の増築プロジェクトの準備工事。",
-"note": null,
-"fact": {
-"src": "Park Ridge 建築許可(公開記録)",
-"ref": "許可 CM-26-0204 Commercial Addition",
-"value": 3700000.0,
-"verbatim": "Permit 1 of 2 for SITE GRADING/UTILITY PREP & DRAINAGE PRIOR TO EXPANSION CONSTRUCTION NOTE: INCLUDES SITE TRAILER W/ELECTRICAL FEED / Commercial Addition / Addition",
-"gc": null,
-"pin": "09222000300000",
-"owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v0-2026-09-02",
-"batch": "batch-v0-06",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-03T03:26:26+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -2600,7 +2654,7 @@
 "company": "MICH EMPLOYMENT & TRAINING PLUS",
 "entity_type": "corp",
 "company_basis": "owner",
-"industry": "医薬・ライフサイエンス",
+"industry": "未分類",
 "category": "医療施設",
 "category_raw": "医療施設",
 "confidence": "high",
@@ -2608,8 +2662,8 @@
 "applied": "2025-10-15",
 "jp": false,
 "new": false,
-"summary": "Detroit 8330 W Chicago St の既存2階建て倉庫(17,411SF)1階の一部(1,110SF)にメディカルクリニックの用途を追加、500SFのメザニンを増築 $43.5k。",
-"infer": null,
+"summary": "倉庫の1階部分1,110 sq ftにメディカルクリニックの用途追加、500 sq ftのメザニン増設 $43,510(Detroit 8330 W Chicago St)。",
+"infer": "小規模なクリニック用途追加であり、規模から見て大型医療機器投資の兆候は薄い可能性(推論)。",
 "note": null,
 "fact": {
 "src": "デトロイト市 建築許可(公開記録)",
@@ -2623,60 +2677,10 @@
 "karte": null,
 "company_id": "C-1099",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-013",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
-}
-},
-{
-"investor": {
-"name": "SLK GLOBAL SOLUTIONS AMER",
-"basis": "owner_occupier",
-"label": "自社所有",
-"source": "parcel",
-"source_label": "登記(郡台帳)"
-},
-"parties": {
-"owner_of_record": "SLK GLOBAL SOLUTIONS AMER",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-19937",
-"state": "IL",
-"city": "Lombard・2050 S Finley RD 50",
-"company": "SLK GLOBAL SOLUTIONS AMER",
-"entity_type": "corp",
-"company_basis": "owner",
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-08-11",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Lombard 2050 S Finley Rd Unit 50 で、オフィスを患者用診察室へ改修(給湯室の移設含む)。",
-"infer": "「patient rooms」への転用はメディカルオフィス化を示すが、規模(面積・金額)は記載なく小規模の可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Lombard 建築許可(公開記録)",
-"ref": "許可 CB26-000178 Commercial Building Permit",
-"value": null,
-"verbatim": "converting offices into patient rooms. moving a janitors closet / Commercial Building Permit / Alterations / Remodels / Repairs",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:dupage:addr"
-},
-"karte": null,
-"company_id": "C-2416",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-073",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:15+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -2708,8 +2712,8 @@
 "applied": "2026-07-20",
 "jp": false,
 "new": false,
-"summary": "Naperville 1841 Centre Point Cr の5087 SQFTスイートで臨床試験サンプル採取キットの手作業組立ラインを開設 $38k(従業員8名、2026年8月開始)。",
-"infer": "臨床検査キットの組立・保管拠点の新設 = ライフサイエンス受託加工(CRO/検体キット業者)の小規模設備投資の可能性(推論)。所有はSPE名義で実運用会社の特定には追加調査が必要。",
+"summary": "臨床試験用サンプル採取キットの手作業組立ライン(8名・5087 SQFT)としてのビジネス占有許可 $38k。",
+"infer": "臨床試験キット組立 = ライフサイエンス関連の軽作業拠点だが、設備投資額は小さく生産設備調達の規模感は限定的(推論)。",
 "note": null,
 "fact": {
 "src": "ネイパービル市 建築許可(公開記録)",
@@ -2723,10 +2727,60 @@
 "karte": null,
 "company_id": "C-3158",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-04T21:24:33+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": "CHILDRENS HOSPITAL MEDICAL CENTER",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "CHILDRENS HOSPITAL MEDICAL CENTER",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-35185",
+"state": "OH",
+"city": "Butler County・7777 YANKEE RD, LIBERTY TWP OH",
+"company": "CHILDRENS HOSPITAL MEDICAL CENTER",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-08-10",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Cincinnati Children's Hospital Medical Center の 3 階のテナント内装改修(金額不明・工事中)。",
+"infer": "病院法人による内装改修 = 医療設備・診療機能拡張に伴う調達の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "Butler County 建築許可(公開記録)",
+"ref": "許可 BLD-CN26-03368 Commercial Tenant Finish",
+"value": null,
+"verbatim": "ALTERATION 3RD FLR - CINCI CHILDREN'S HOSPITAL MED CTR / IN PROGRESS / Commercial Tenant Finish",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:butler_oh:addr"
+},
+"karte": null,
+"company_id": "C-4036",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -2781,6 +2835,56 @@
 },
 {
 "investor": {
+"name": "OHIOHEALTH CORPORATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "OHIOHEALTH CORPORATION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "BDT Architects & Designers",
+"gc": null
+},
+"id": "S-1855",
+"state": "OH",
+"city": "Columbus・111 S GRANT AVE",
+"company": "OHIOHEALTH CORPORATION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-08-07",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "OhioHealth の Columbus 施設(111 S Grant Ave)で 12,000 SQFT の改修工事 $2M。",
+"infer": "病院法人による構造改修 = 内装・設備更新に伴う医療関連機器の調達が発生する可能性(推論)。",
+"note": null,
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 ALTC2629458 Alteration",
+"value": 2000000.0,
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 12000 SQFT",
+"gc": "BDT Architects & Designers",
+"pin": "010001595",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-138",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
 "name": "RYAN COMPANIES US, INC.",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -2831,6 +2935,56 @@
 },
 {
 "investor": {
+"name": "ALDRICH CHEMICAL CO LLC",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "ALDRICH CHEMICAL CO LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "Michael Suttle",
+"gc": null
+},
+"id": "S-33970",
+"state": "OH",
+"city": "Montgomery County・3858 BENNER Rd MIAMISBURG, OH 45342",
+"company": "ALDRICH CHEMICAL CO LLC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・ラボ施設",
+"category_raw": "研究・ラボ施設",
+"confidence": "high",
+"date": "2026-08-07",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "既存建物への増築で、ラボ及び支援オフィスを追加(単層・従来構造)。金額は記録なし。",
+"infer": "ラボ増築 = 分析・試験機器や実験用設備の調達が竣工まで続く窓の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "Montgomery County 建築許可(公開記録)",
+"ref": "許可 BLDC26-0258 Commercial Building",
+"value": null,
+"verbatim": "New building addition to an existing building, including additional laboratories and supporting offices, single story, conventionally constructed. / Commercial Building / (MIAMI TOWNSHIP)",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:montgomery_oh:addr"
+},
+"karte": null,
+"company_id": "C-7721",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
 "name": "NALCO COMPANY",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -2850,7 +3004,7 @@
 "company": "NALCO COMPANY",
 "entity_type": "corp",
 "company_basis": "owner",
-"industry": "その他製造",
+"industry": "医薬・ライフサイエンス",
 "category": "研究・ラボ施設",
 "category_raw": "研究・ラボ施設",
 "confidence": "high",
@@ -2858,8 +3012,8 @@
 "applied": "2026-07-13",
 "jp": false,
 "new": false,
-"summary": "Nalco の新ラボスペース内装改修($3.6M・6,300 SQFT)に伴う火災警報の副許可。",
-"infer": "特殊化学メーカーの研究設備更新 = 分析機器・実験設備の調達が伴う可能性(推論)。",
+"summary": "Nalco(水処理・化学薬品)の Naperville 拠点で新規ラボ空間への内装改修に伴う火災報知器許可 $3.6M(6,300 SQFT)。",
+"infer": "ラボ拡張の付帯許可(火災報知)= 分析機器・実験設備の調達が続く窓の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "ネイパービル市 建築許可(公開記録)",
@@ -2873,10 +3027,10 @@
 "karte": null,
 "company_id": "C-3028",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-0904-hv",
-"model": "claude-sonnet-5 (subagent, subscription session, foreground 11.5min)",
-"generated_at": "2026-09-04T18:35:05+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -2908,8 +3062,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Nationwide Children's Hospital(700 Children's Dr)で 25,790 SQFT の構造改修 $3M。",
-"infer": "病院施設内の改修であり、医療機器・設備の更新を伴う可能性(推論)。",
+"summary": "Nationwide Children's Hospital(700 Children's Dr)の 25,790 SQFT 改修工事 $3.0M。",
+"infer": "病院施設の構造改修 = 医療機器・空調等の付帯調達を伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "コロンバス市 建築許可(公開記録)",
@@ -2923,10 +3077,10 @@
 "karte": null,
 "company_id": "C-140",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T21:00:18+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -2958,8 +3112,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Crittenton Hospital のスイート330で内装改修 $290k(X線室拡張、休憩室移設、照明交換等)。GC = Tower Group, LLC。",
-"infer": "X線室拡張 = 画像診断機器の更新・増設を伴う可能性(推論)。",
+"summary": "Crittenton Hospital のスイート330でX線室拡張・休憩室移設等の内装改修 $290k(GC = Tower Group, LLC)。",
+"infer": "X線室拡張 = 画像診断機器の入替・増設が伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "ロチェスターヒルズ市 建築許可(公開記録・月報)",
@@ -2973,10 +3127,10 @@
 "karte": null,
 "company_id": "C-3624",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -3131,7 +3285,7 @@
 },
 {
 "investor": {
-"name": "CLEVELAND CLINIC",
+"name": "CLEVELAND CLINIC FOUNDATION",
 "basis": "owner_occupier",
 "label": "自社所有",
 "source": "parcel",
@@ -3147,9 +3301,9 @@
 "id": "S-26868",
 "state": "OH",
 "city": "Cleveland・9500 EUCLID AVE, CLEVELAND, OH, 44195",
-"company": "CLEVELAND CLINIC",
+"company": "CLEVELAND CLINIC FOUNDATION",
 "entity_type": "corp",
-"company_basis": "parcel",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -3158,8 +3312,8 @@
 "applied": "2026-07-31",
 "jp": false,
 "new": false,
-"summary": "Cleveland Clinic(9500 Euclid Ave)の病院施設内、1,332 SF の食品サービス改修に伴う電気工事 $49.9k(親許可 BCB26-027905 の副許可)。",
-"infer": "病院内の食堂・厨房改修に付随する小規模電気工事であり、生産設備投資のシグナルとしては弱い(推論)。",
+"summary": "Cleveland Clinic 施設(9500 Euclid Ave)の 1,332 SF フードサービス改修に伴う電気工事 $49.9k(I-2 病院/ナーシングホーム)。",
+"infer": "病院内の厨房・食堂改修の副許可(電気)= 小規模内装工事の一部と読める(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -3173,10 +3327,10 @@
 "karte": null,
 "company_id": "C-3629",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -3208,8 +3362,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Kettering の医療施設で核医学室(Room 5, Symbia Evo)の解体・構造工事の許可。PME(配管・機械・電気)は2026年8月14日頃に別途申請予定。",
-"infer": "核医学用ガンマカメラ(Symbia Evo)の設置に伴う室内改修 = 医療画像診断機器の入替・新設の可能性(推論)。",
+"summary": "核医学室(Room 5)向けの解体・建築工事、Symbia Evo(SPECT/CT)設置に関連。PME(機械・配管・電気)は2026年8月頃に別途申請予定。",
+"infer": "核医学機器 Symbia Evo の設置に伴う室内改修 = 画像診断機器・遮蔽構造・特殊電源の調達が続く窓の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "Kettering 建築許可(公開記録)",
@@ -3223,10 +3377,10 @@
 "karte": null,
 "company_id": null,
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -3301,15 +3455,15 @@
 "entity_type": "corp",
 "company_basis": "description",
 "industry": "医薬・ライフサイエンス",
-"category": "研究・ラボ施設",
-"category_raw": "研究・ラボ施設",
+"category": "医療施設",
+"category_raw": "医療施設",
 "confidence": "high",
 "date": "2026-08-03",
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "既存ビル Suite 120 に LabCorp が新規入居するテナント改修(新設 RR・壁・電気・HVAC)。金額不明。",
-"infer": "検査ラボの新規開設 = 臨床検査機器・分析装置の設置が伴う可能性(推論)。",
+"summary": "既存ビルの Suite 120 を LabCorp 用にテナント改修(新規入居)。RR・壁・電気・HVAC を新設。金額不明。",
+"infer": "検査サービス(LabCorp)の新規出店 = 検査機器・専用配管設備の導入が伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "Kettering 建築許可(公開記録)",
@@ -3323,10 +3477,10 @@
 "karte": null,
 "company_id": "C-3710",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -3431,6 +3585,56 @@
 },
 {
 "investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "6770 CINCINNATI LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-35314",
+"state": "OH",
+"city": "Butler County・6770 CINCINNATI DAYTON RD, SUITE 209, OH",
+"company": "6770 CINCINNATI LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "その他製造",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-07-31",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Butler County のスイート209にて小児科クリニックのテナント内装工事(金額不明)。",
+"infer": null,
+"note": null,
+"fact": {
+"src": "Butler County 建築許可(公開記録)",
+"ref": "許可 BLD-CN26-03250 Commercial Tenant Finish",
+"value": null,
+"verbatim": "TENANT FINISH- PEDIATRIC CARE CLINIC / READY FOR PICKUP / Commercial Tenant Finish",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:butler_oh:addr"
+},
+"karte": null,
+"company_id": "C-7725",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
 "name": "AMAZON",
 "basis": "operator",
 "label": "操業事業者",
@@ -3500,7 +3704,7 @@
 "company": "UNIVERSITY OF CHICAGO",
 "entity_type": "corp",
 "company_basis": "owner",
-"industry": "未分類",
+"industry": "医薬・ライフサイエンス",
 "category": "研究・ラボ施設",
 "category_raw": "研究・ラボ施設",
 "confidence": "high",
@@ -3508,8 +3712,8 @@
 "applied": "2026-07-16",
 "jp": false,
 "new": false,
-"summary": "地下研究ラボとラボ支援スペースの内装改修 $1.05M。",
-"infer": null,
+"summary": "シカゴ大学の既存地下階研究ラボおよびラボ支援スペースの内装改修 $1.05M(B用途)。",
+"infer": "大学研究棟のラボ改修 = 実験機器・特殊空調・ラボ設備の調達が伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
@@ -3523,10 +3727,10 @@
 "karte": null,
 "company_id": "C-49",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "03",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:41:36+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -3608,8 +3812,8 @@
 "applied": "2026-03-06",
 "jp": false,
 "new": false,
-"summary": "Saint Joseph Hospital Chicago(2900 N Lake Shore Dr)の1〜3階を改修し画像診断機器を更新 $250k(I-2/B 用途)。",
-"infer": "画像診断機器の更新工事 = 医療機器メーカー・設置業者の調達が動く窓(推論)。",
+"summary": "Saint Joseph Hospital Chicago の 1〜3 階内装改修 $250k、画像診断機器の入替を含む。",
+"infer": "画像診断機器(イメージング装置)の更新調達が発生している兆候(推論)。",
 "note": null,
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
@@ -3623,10 +3827,10 @@
 "karte": null,
 "company_id": "C-536",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-004",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -3649,7 +3853,7 @@
 "city": "Elmhurst・1100 S YORK ST ELMHURST IL 60126",
 "company": "ELMHURST MEMORIAL HEALTH",
 "entity_type": "corp",
-"company_basis": "parcel",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -3658,8 +3862,8 @@
 "applied": "2026-07-28",
 "jp": false,
 "new": false,
-"summary": "Elmhurst Memorial Health の 51,300 SF メディカルオフィス(MOB)内装工事 $7.2M(使用許可)。",
-"infer": null,
+"summary": "Elmhurst Memorial Health が 51,300 sq ft のメディカルオフィスビル(MOB)をテナント内装工事し、使用許可を取得 $7.2M。",
+"infer": "外来医療機能拡張 = 医療機器・検査/画像診断設備の調達が竣工前後に発生する可能性(推論)。",
 "note": null,
 "fact": {
 "src": "Elmhurst 建築許可(公開記録)",
@@ -3673,10 +3877,10 @@
 "karte": null,
 "company_id": "C-180",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "batch-v0-06",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-03T03:26:26+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -3758,8 +3962,8 @@
 "applied": "2026-07-28",
 "jp": false,
 "new": false,
-"summary": "Elmhurst 1100 S York St の医療ビル2階、Cardiovascular Institute(心臓血管センター)の使用承認(占有証明書)。",
-"infer": "占有証明書のみで許可額の記載はないが、心臓血管センターの専用フロアという記述から医療設備の大規模内装が先行した可能性(推論)。",
+"summary": "Elmhurst Memorial Health の Cardiovascular Institute 2 階部分について使用許可(Certificate of Occupancy)を発行。金額記載なし。",
+"infer": "循環器専門施設の完成/入居段階 = 医療機器・画像診断装置の導入が完了もしくは進行中の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "Elmhurst 建築許可(公開記録)",
@@ -3773,60 +3977,10 @@
 "karte": null,
 "company_id": "C-180",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-077",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T06:17:20+00:00"
-}
-},
-{
-"investor": {
-"name": "ELMHURST MEMORIAL HEALTH",
-"basis": "owner_occupier",
-"label": "自社所有",
-"source": "parcel",
-"source_label": "登記(郡台帳)"
-},
-"parties": {
-"owner_of_record": "ELMHURST MEMORIAL HEALTH",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-17172",
-"state": "IL",
-"city": "Elmhurst・1100 S YORK ST ELMHURST IL 60126",
-"company": "ELMHURST MEMORIAL HEALTH",
-"entity_type": "corp",
-"company_basis": "owner",
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-07-28",
-"applied": "2026-07-28",
-"jp": false,
-"new": false,
-"summary": "Elmhurst 1100 S York St のメディカルオフィスビル1階全体に Endeavor Health/Elmhurst Memorial が入居(占有証明書)。",
-"infer": "占有証明書のみで許可額の記載はないが、メディカルオフィスビル1階全体の入居という記述から医療設備の大規模内装が先行した可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Elmhurst 建築許可(公開記録)",
-"ref": "許可 CO-010311-2026 Certificate of Occupancy",
-"value": null,
-"verbatim": "Endeavor Health / Elmhurst Memorial will occupy entire 1st floor of 1100 York Medical Office Building. / Certificate of Occupancy / Certificate of Occupancy",
-"gc": null,
-"pin": "0613305019",
-"owner_source": "parcel:dupage"
-},
-"karte": null,
-"company_id": "C-180",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-077",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T06:17:20+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -3858,8 +4012,8 @@
 "applied": "2026-07-22",
 "jp": false,
 "new": false,
-"summary": "複合ビル 8 階に量子ラボ(西側)を整備、初期ビルドアウト第 2 段 $3.5M(除振対策を含む)。",
-"infer": "Harper Court はシカゴ大学キャンパス隣接の商業棟 — 量子関連の研究・スタートアップ入居の読み。同フロアで 3 許可(西ラボ/東ウェットラボ/廊下・会議)が同日発行。",
+"summary": "既存複合施設 8 階に「Quantum Lab West Side」の初期内装フェーズ2を建設、非危険物ラボスペース $3.5M。振動対策構造・電気/機械/配管を含む。",
+"infer": "量子研究ラボの内装拡張 = 精密計測機器・振動制御設備・特殊電源/空調の調達が続く窓の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
@@ -3873,10 +4027,10 @@
 "karte": null,
 "company_id": "C-51",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "02",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:40:38+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -3900,7 +4054,7 @@
 "company": "HARPER COURT HOLDINGS II",
 "entity_type": "spe",
 "company_basis": "owner",
-"industry": "半導体・電子",
+"industry": "医薬・ライフサイエンス",
 "category": "研究・ラボ施設",
 "category_raw": "研究・ラボ施設",
 "confidence": "high",
@@ -3908,8 +4062,8 @@
 "applied": "2026-07-22",
 "jp": false,
 "new": false,
-"summary": "同ビル 8 階にウェットラボ(東側)を整備、初期ビルドアウト第 3 段 $3.5M。",
-"infer": "ウェットラボ = 実験台・排気・純水・ガス設備の調達が伴う。",
+"summary": "既存複合用途ビル8階のウェットラボ内装工事(初期ビルドアウト フェーズ3、東側)$3.5M。非危険物のラボ空間。",
+"infer": "テナント向けウェットラボの段階的ビルドアウト = ラボ機器・特殊空調・電気配線などの調達が継続する窓の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
@@ -3923,10 +4077,10 @@
 "karte": null,
 "company_id": "C-51",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "02",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:40:38+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -3950,7 +4104,7 @@
 "company": "HARPER COURT HOLDINGS II",
 "entity_type": "spe",
 "company_basis": "owner",
-"industry": "半導体・電子",
+"industry": "医薬・ライフサイエンス",
 "category": "研究・ラボ施設",
 "category_raw": "研究・ラボ施設",
 "confidence": "high",
@@ -3958,8 +4112,8 @@
 "applied": "2026-07-22",
 "jp": false,
 "new": false,
-"summary": "同ビル 8 階の量子ラボ用廊下・会議センター、初期ビルドアウト第 1 段 $3M。",
-"infer": null,
+"summary": "既存複合用途ビル8階に非危険物ラボスペースを新設するフェーズ1内装工事(廊下・会議センター含む)$3M。",
+"infer": "非危険物ラボの内装立ち上げ = 実験機器・特殊空調・電源設備の調達が続く初期段階の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
@@ -3973,33 +4127,33 @@
 "karte": null,
 "company_id": "C-51",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "02",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:40:38+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "CCRM NAPERVILLE LLC",
+"basis": "operator",
+"label": "操業事業者",
+"source": "permit_text",
+"source_label": "許可記録(本文)"
 },
 "parties": {
 "owner_of_record": "NAPERVILLE MOB OWNER LLC",
 "owner_kind": "課税台帳",
-"owner_is_spe": true,
+"owner_is_spe": false,
 "applicant": null,
 "gc": null
 },
 "id": "S-10483",
 "state": "IL",
 "city": "Naperville・1331 W 75TH ST",
-"company": "NAPERVILLE MOB OWNER LLC",
+"company": "CCRM NAPERVILLE LLC",
 "entity_type": "spe",
-"company_basis": "owner",
+"company_basis": "description",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -4008,8 +4162,8 @@
 "applied": "2026-07-16",
 "jp": false,
 "new": false,
-"summary": "Naperville 1331 W 75th St スイート303の既存テナントスペースを、生殖医療クリニック CCRM Naperville LLC 向けに内装工事 $275k(FIRE ALARM 副許可)。同一案件の別許可あり。",
-"infer": null,
+"summary": "医療オフィスビル内スイート303(4,548 SQFT)を新規テナント CCRM Naperville LLC 向けに内装改修、火災報知器工事 $275k。",
+"infer": "CCRM は生殖医療(不妊治療)クリニックの事業者名と読める = 外来クリニック開設に伴う医療機器・内装設備の調達が発生する可能性(推論)。",
 "note": null,
 "fact": {
 "src": "ネイパービル市 建築許可(公開記録)",
@@ -4023,10 +4177,10 @@
 "karte": null,
 "company_id": "C-518",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-004",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -4099,7 +4253,7 @@
 "city": "Detroit・1326 Saint Antoine St",
 "company": "HAYWOOD DEVELOPMENT LLC",
 "entity_type": "spe",
-"company_basis": "parcel",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -4108,8 +4262,8 @@
 "applied": "2026-03-17",
 "jp": false,
 "new": false,
-"summary": "1 階 40,212 SF に画像診断・セラノスティクス・放射性医薬品調剤の医療施設を新設 $21.5M。",
-"infer": "放射性医薬品(RadioPharmacy)の調剤室 = 遮蔽・ホットセル・特殊空調・品質管理機器の調達が伴う。所有は開発 SPE・運営主体は要確認。",
+"summary": "Detroit 1326 Saint Antoine St の 1 階 40,212 sq ft をテナント工事し、画像診断・セラノスティクス・放射性医薬品(RadioPharmacy)を含む医療オフィスを新設 $21.5M。",
+"infer": "画像診断とラジオファーマシーの併設 = 画像診断機器・放射性医薬品調剤設備・遮蔽/専用空調などの調達が竣工まで続く窓(推論)。",
 "note": null,
 "fact": {
 "src": "デトロイト市 建築許可(公開記録)",
@@ -4123,10 +4277,10 @@
 "karte": null,
 "company_id": "C-155",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "05",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:44:38+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -4177,6 +4331,56 @@
 "batch": "batch-v0-06",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-03T03:26:26+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "400-406 EAST WILSON BRIDGE ROAD LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-38031",
+"state": "OH",
+"city": "Worthington・402 E WILSON BRIDGE RD Unit: B WORTHINGTON OH 43085",
+"company": "400-406 EAST WILSON BRIDGE ROAD LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "研究・ラボ施設",
+"category_raw": "研究・ラボ施設",
+"confidence": "high",
+"date": "2026-07-23",
+"applied": "2026-07-10",
+"jp": false,
+"new": false,
+"summary": "既存の混合用途オフィス/倉庫施設内でテナント改修、陰圧ラボ室・採血/IV室・IVラボ・薬局コールセンター等を新設(金額不明)。",
+"infer": "陰圧ラボや採血・IV調剤設備の新設 = 検査・調剤関連の分析機器・特殊空調設備の調達が伴う可能性(推論)。所有は SPE 名義で実際の運営事業者(薬局/検査会社)は要確認。",
+"note": null,
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0147 Alteration/Repair  (OBC)",
+"value": 1200000.0,
+"verbatim": "THIS PROJECT IS A TENANT RENOVATION OF THE B USE PORTION OF AN EXISTING MIXED-USE OFFICE/WAREHOUSE FACILITY. THE SCOPE OF WORK INCLUDES NEW NEGATIVE-PRESSURE LAB ROOMS, FRONT OFFICE FINISH UPGRADES, NEW BLOOD DRAW AND IV ROOMS, AN IV LAB, A PHARMACY CALL CENTER, AN EXPANDED IT ROOM, RENOVATED EXISTING RESTROOMS, AND ONE NEW ADDITIONAL RESTROOM. NO MODIFICATIONS TO THE EXISTING DOCK AREA ARE INCLUD",
+"gc": null,
+"pin": "100-005891",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-7731",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -4338,106 +4542,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "400-406 EAST WILSON BRIDGE ROAD LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38031",
-"state": "OH",
-"city": "Worthington・402 E WILSON BRIDGE RD Unit: B WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "研究・ラボ施設",
-"category_raw": "研究・ラボ施設",
-"confidence": "high",
-"date": "2026-07-23",
-"applied": "2026-07-10",
-"jp": false,
-"new": false,
-"summary": "既存の混合用途オフィス/倉庫施設のB用途部分をテナント改修し、陰圧ラボ・採血/IV室・IVラボ・薬局コールセンター・拡張ITルームを新設(金額不明)。",
-"infer": "陰圧ラボ・IVラボ・薬局機能の新設 = 医療関連の実験・調剤設備の調達が伴う可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0147 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "THIS PROJECT IS A TENANT RENOVATION OF THE B USE PORTION OF AN EXISTING MIXED-USE OFFICE/WAREHOUSE FACILITY. THE SCOPE OF WORK INCLUDES NEW NEGATIVE-PRESSURE LAB ROOMS, FRONT OFFICE FINISH UPGRADES, NEW BLOOD DRAW AND IV ROOMS, AN IV LAB, A PHARMACY CALL CENTER, AN EXPANDED IT ROOM, RENOVATED EXISTING RESTROOMS, AND ONE NEW ADDITIONAL RESTROOM. NO MODIFICATIONS TO THE EXISTING DOCK AREA ARE INCLUD",
-"gc": null,
-"pin": "100-005891",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": "KAMALISARVESTANI",
-"gc": null
-},
-"id": "S-13124",
-"state": "IL",
-"city": "Park Ridge・27 N NORTHWEST HWY   PARK RI, PARK RIDGE, IL 60068",
-"company": "(個人名義・非掲載)",
-"entity_type": "individual",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-07-22",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Park Ridge 27 N Northwest Hwy の既存商業スペースをクリニック用途向けに改修 $235k(COMMERCIAL PERMIT)。非耐力間仕切りの再構成・天井・MEP改修。同一案件の別許可あり。",
-"infer": null,
-"note": null,
-"fact": {
-"src": "Park Ridge 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
-"ref": "許可 CM-26-0084 COMMERCIAL PERMIT",
-"value": 235000.0,
-"verbatim": "INTERIOR REMODEL OF EXISTING COMMERCIAL SPACE / COMMERCIAL PERMIT / OTHER REMODELING",
-"gc": null,
-"pin": "09264250450000",
-"owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-004",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": null,
 "owner_kind": null,
 "owner_is_spe": false,
@@ -4447,8 +4551,8 @@
 "id": "S-16837",
 "state": "IL",
 "city": "Park Ridge・27 N NORTHWEST HWY PARK RIDGE IL 60068",
-"company": "(個人名義・非掲載)",
-"entity_type": "individual",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
 "company_basis": null,
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
@@ -4458,8 +4562,8 @@
 "applied": "2026-03-27",
 "jp": false,
 "new": false,
-"summary": "Park Ridge 27 N Northwest Hwy の既存商業スペースをクリニック用途向けに改修 $235k(Commercial Remodel)。非耐力間仕切りの再構成・天井・MEP改修。同一案件の別許可あり。",
-"infer": null,
+"summary": "既存商業スペースをクリニック用途に内装改修 $235k(間仕切り再配置・天井・MEP改修、構造work無し)。",
+"infer": "小規模な外来クリニックの内装整備 = 医療機器・診察室設備の調達を伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "Park Ridge 建築許可(公開記録)",
@@ -4473,10 +4577,60 @@
 "karte": null,
 "company_id": null,
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-004",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": "GRANDVIEW HOSPITAL AND",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "GRANDVIEW HOSPITAL AND",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "Sandra Voelker",
+"gc": null
+},
+"id": "S-34305",
+"state": "OH",
+"city": "Montgomery County・1997 MIAMISBURG CENTERVILLE Rd DAYTON, OH 45459",
+"company": "GRANDVIEW HOSPITAL AND",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-07-22",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Grandview Hospital(Dayton, OH)の分娩・出産エリア(Labor and Delivery)の改修工事。金額は記録上不明。",
+"infer": "産科エリアの改修 = 分娩監視装置・新生児設備などの医療機器調達が伴う可能性(推論)。",
+"note": null,
+"fact": {
+"src": "Montgomery County 建築許可(公開記録)",
+"ref": "許可 BLDC26-0235 Commercial Building",
+"value": null,
+"verbatim": "Renovation of Hospital Labor and Delivery Area / Commercial Building / (WASHINGTON TOWNSHIP)",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:montgomery_oh:addr"
+},
+"karte": null,
+"company_id": "C-7722",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -4581,11 +4735,11 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "PARMA CITY OF",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
 "owner_of_record": "PARMA CITY OF",
@@ -4597,9 +4751,9 @@
 "id": "S-44089",
 "state": "OH",
 "city": "Parma・7007 POWERS BLVD",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
+"company": "PARMA CITY OF",
+"entity_type": "public",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -4608,8 +4762,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "既存の核医学画像診断室(Nuc. Med. Imaging suite)の内装改修(Parma 7007 Powers Blvd)。金額記載なし。",
-"infer": "画像診断機器の更新・増設に伴う内装改修の可能性(推論)。",
+"summary": "Parma 市所有の建物内にある核医学画像診断(Nuc. Med. Imaging)スイートの内装改修(金額不明)。",
+"infer": "画像診断スイートの改修 = 医療用画像診断機器の入替・据付が伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "Parma 建築許可(公開記録)",
@@ -4621,21 +4775,71 @@
 "owner_source": "parcel:cuyahoga_oh:addr"
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-7730",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": "CLEVELAND CLINIC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "permit_text",
-"source_label": "許可記録(本文)"
+"name": "NATIONWIDE CHILDRENS HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "NATIONWIDE CHILDRENS HOSPITAL",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "Nationwide Children's Hospital",
+"gc": null
+},
+"id": "S-2374",
+"state": "OH",
+"city": "Columbus・700 CHILDREN'S DR",
+"company": "NATIONWIDE CHILDRENS HOSPITAL",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-07-20",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Nationwide Children's Hospital(700 Children's Dr)で 2,075 SQFT の構造改修 $300k。",
+"infer": null,
+"note": null,
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 ALTC2622053 Alteration",
+"value": 300000.0,
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 2075 SQFT",
+"gc": "Nationwide Children's Hospital",
+"pin": "010082628",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-140",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": "CLEVELAND CLINIC FOUNDATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
 "owner_of_record": "CLEVELAND CLINIC FOUNDATION",
@@ -4647,9 +4851,9 @@
 "id": "S-27105",
 "state": "OH",
 "city": "Cleveland・9500 EUCLID AVE, CLEVELAND, OH, 44106",
-"company": "CLEVELAND CLINIC",
+"company": "CLEVELAND CLINIC FOUNDATION",
 "entity_type": "corp",
-"company_basis": "description",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -4658,8 +4862,8 @@
 "applied": "2026-07-17",
 "jp": false,
 "new": false,
-"summary": "Cleveland Clinic M19-M20 棟の商業配管許可(サンプポンプ1基・排水/通気配管23ft)$14,660。親許可 B25018487 の副許可。",
-"infer": "親建築許可(M19-M20 棟)の配管副工事 = 病院施設の建設/改修が進行中であることを示す(推論)。",
+"summary": "Cleveland Clinic(9500 Euclid Ave)でサンプポンプ1台・排水/通気配管23ftの設備配管工事 $14,660(親許可 B25018487 M19-M20 に付随)。",
+"infer": "親建築許可(M19-M20 棟)に紐づく配管副許可 = 病院施設の改修/増築工事の一部(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -4671,12 +4875,12 @@
 "owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
-"company_id": "C-3629",
+"company_id": "C-7724",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -4758,8 +4962,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "OhioHealth Corporation による商業用建物(285 E State St)の構造改修 $2.0M(4,130 SF)。",
-"infer": "医療法人所有の施設改修であり、医療関連の設備更新に伴う可能性(推論)。",
+"summary": "OhioHealth の Columbus 施設(285 E State St)で 4,130 SQFT の改修工事 $2.0M。",
+"infer": "病院法人による中規模改修 = 医療機器・内装設備の更新に伴う調達の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "コロンバス市 建築許可(公開記録)",
@@ -4773,10 +4977,10 @@
 "karte": null,
 "company_id": "C-138",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T21:00:18+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -4788,7 +4992,7 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "MAUREEN BLOSSFELD",
+"owner_of_record": null,
 "owner_kind": "登記名義",
 "owner_is_spe": false,
 "applicant": null,
@@ -4799,7 +5003,7 @@
 "city": "Chicago・1969 W OGDEN AVE",
 "company": "(個人名義・非掲載)",
 "entity_type": "individual",
-"company_basis": null,
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -4808,8 +5012,8 @@
 "applied": "2026-06-04",
 "jp": false,
 "new": false,
-"summary": "Chicago 1969 W Ogden Ave で CTシミュレータ室(放射線治療計画用CT)の機器更新に伴う内装改修 $340k(床・什器・空調電気の対応工事)。",
-"infer": "CTシミュレータ室 = 放射線治療計画用の医療画像機器室であり、病院/医療施設内の設備更新と読める(推論)。",
+"summary": "CTシミュレーター室と管制室の機器更新に伴う改修 $340k(内装・機械電気設備の更新含む)。",
+"infer": "CT関連の画像診断機器の更新工事 = 医療機器・空調・電源設備の調達が伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
@@ -4823,19 +5027,19 @@
 "karte": null,
 "company_id": null,
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-003",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": "PALOS COMMUNITY HOSPIT",
-"basis": "owner_occupier",
-"label": "自社所有",
-"source": "permit_owner",
-"source_label": "許可記録(所有者欄)"
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
 },
 "parties": {
 "owner_of_record": null,
@@ -4847,9 +5051,9 @@
 "id": "S-12397",
 "state": "IL",
 "city": "Palos Heights・12251 S 80TH AVE, PALOS HEIGHTS, IL 60463",
-"company": "PALOS COMMUNITY HOSPIT",
-"entity_type": "corp",
-"company_basis": "owner",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -4858,8 +5062,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Palos Heights 12251 S 80th Ave の Palos Community Hospital で MRI 増設に伴う1階火災報知設備工事(既存音声警報システムへ追加)$10k(親案件のMRI増設に付随する副許可)。",
-"infer": "MRI増設(親プロジェクト)に伴う消防設備の副許可 = 画像診断設備の増設・医療機器調達が進行中の可能性(推論)。",
+"summary": "既存施設の1階に火災報知設備を増設、MRI増設に伴う既存音声警報への接続工事 $10k。",
+"infer": "MRI増設という親工事に付随する副許可(火災報知)と読める(推論)。",
 "note": null,
 "fact": {
 "src": "Palos Heights 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
@@ -4873,10 +5077,10 @@
 "karte": null,
 "company_id": "C-1713",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-037",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:12+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -4931,6 +5135,56 @@
 },
 {
 "investor": {
+"name": "MUNSON MEDICAL CENTER - MAIN HOSP.",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "MUNSON MEDICAL CENTER - MAIN HOSP.",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38747",
+"state": "MI",
+"city": "Grand Traverse County・1105 SIXTH ST Unit: NICU ADDITION TRAVERSE CITY MI 49684",
+"company": "MUNSON MEDICAL CENTER - MAIN HOSP.",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-07-14",
+"applied": "2026-04-17",
+"jp": false,
+"new": false,
+"summary": "Munson Medical Center 本院に新生児集中治療室(NICU)を増築、20,906 SF・1 階建(I-2 用途・1A 構造・168 名収容)。金額不明。",
+"infer": "NICU 増築 = 新生児用医療機器・モニタリング設備・特殊空調の調達が竣工まで続く窓(推論)。",
+"note": null,
+"fact": {
+"src": "Grand Traverse County 建築許可(公開記録)",
+"ref": "許可 B26-0343 Building (Commercial) - Addition",
+"value": 4661828.94,
+"verbatim": "MINOR DEMO TO EXISTING; NEW NICU ADDITION AT MUNSON HOSPITAL. MAIN LEVEL FLOOR WITH CONNECTOR AND PARTIAL BASEMENT SEPARATED BY FIRE AND SMOKE PARTITIONS.  1-STORY, 20,906SF SCOPE OF WORK AREA. I-2 OCCUPANCY CLASS, 1A CONSTRUCTION. 168 TOTAL OCCUPANTS. NFPA 13 FIRE SUPPRESSION. / Building (Commercial) - Addition / Addition",
+"gc": null,
+"pin": "51-104-076-02",
+"owner_source": "parcel:grandtraverse_mi"
+},
+"karte": null,
+"company_id": "C-7732",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
 "name": "TETRA PAK",
 "basis": "operator",
 "label": "操業事業者",
@@ -4981,14 +5235,14 @@
 },
 {
 "investor": {
-"name": "LINDNER CENTER OF HOPE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "permit_text",
-"source_label": "許可記録(本文)"
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
 },
 "parties": {
-"owner_of_record": "CRAIG & FRANCES LINDNER *",
+"owner_of_record": null,
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
@@ -4997,9 +5251,9 @@
 "id": "S-27544",
 "state": "OH",
 "city": "Mason・4075 OLD WESTERN ROW ROAD, MASON, OH 45040",
-"company": "LINDNER CENTER OF HOPE",
-"entity_type": "corp",
-"company_basis": "description",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -5008,9 +5262,9 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "The Craig & Frances Lindner Center of Hope(医療施設)で火災報知システムの設置・配線追加 $30,230。",
-"infer": "小規模な消防設備の副許可 = 既存施設の維持・改修の一部と読める(推論)。",
-"note": "小規模改修(消防設備)。",
+"summary": "Lindner Center of Hope(医療施設)に火災報知システムを設置・配線を追加する商業防火工事 $30,230。",
+"infer": "既存医療施設内の副工事(防火設備)であり、親施設の医療機能拡張とは別の小規模設備投資と読める(推論)。",
+"note": null,
 "fact": {
 "src": "メイソン市 建築許可(公開記録・月報)",
 "ref": "許可 BLD-25-1444 Commercial Fire Protection",
@@ -5023,10 +5277,10 @@
 "karte": null,
 "company_id": "C-3700",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -5077,56 +5331,6 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
-}
-},
-{
-"investor": {
-"name": "MUNSON HOSPITAL",
-"basis": "operator",
-"label": "操業事業者",
-"source": "permit_text",
-"source_label": "許可記録(本文)"
-},
-"parties": {
-"owner_of_record": "MUNSON MEDICAL CENTER - MAIN HOSP.",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38747",
-"state": "MI",
-"city": "Grand Traverse County・1105 SIXTH ST Unit: NICU ADDITION TRAVERSE CITY MI 49684",
-"company": "MUNSON HOSPITAL",
-"entity_type": "corp",
-"company_basis": "description",
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-07-14",
-"applied": "2026-04-17",
-"jp": false,
-"new": false,
-"summary": "Munson Hospital(Traverse City)に NICU(新生児集中治療室)を新設、1 階建て 20,906 SF・一部地下・I-2 用途・NFPA13 消火設備。金額は記録上不明。",
-"infer": "NICU 新設 = 医療機器(保育器・モニタリング・特殊空調/電源)の調達が竣工に向けて発生する可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Grand Traverse County 建築許可(公開記録)",
-"ref": "許可 B26-0343 Building (Commercial) - Addition",
-"value": null,
-"verbatim": "MINOR DEMO TO EXISTING; NEW NICU ADDITION AT MUNSON HOSPITAL. MAIN LEVEL FLOOR WITH CONNECTOR AND PARTIAL BASEMENT SEPARATED BY FIRE AND SMOKE PARTITIONS.  1-STORY, 20,906SF SCOPE OF WORK AREA. I-2 OCCUPANCY CLASS, 1A CONSTRUCTION. 168 TOTAL OCCUPANTS. NFPA 13 FIRE SUPPRESSION. / Building (Commercial) - Addition / Addition",
-"gc": null,
-"pin": "51-104-076-02",
-"owner_source": "parcel:grandtraverse_mi"
-},
-"karte": null,
-"company_id": "C-3708",
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -5231,11 +5435,11 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "HEALTH HILL HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
 "owner_of_record": "HEALTH HILL HOSPITAL",
@@ -5247,19 +5451,19 @@
 "id": "S-27171",
 "state": "OH",
 "city": "Cleveland・2801 MARTIN LUTHER KING JR DR, CLEVELAND, OH, 44104",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
+"company": "HEALTH HILL HOSPITAL",
+"entity_type": "corp",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
-"category": "研究・ラボ施設",
-"category_raw": "研究・ラボ施設",
+"category": "医療施設",
+"category_raw": "医療施設",
 "confidence": "high",
 "date": "2026-07-13",
 "applied": "2026-03-16",
 "jp": false,
 "new": false,
-"summary": "病院施設(I-2)1階のラボ 593 SF の内装改修 $55,910(電気・機械・消防は別許可)。",
-"infer": "小規模ラボ改修 = 分析・検査機器の入替の可能性(推論)。",
+"summary": "Health Hill Hospital の 1 階ラボ(593 SF)の内装改修 $55,910。配管・HVAC・電気・防火は別許可。",
+"infer": "小規模なラボ内装改修 = 検査機器の入替・小規模設備更新の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -5271,12 +5475,12 @@
 "owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-7729",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -5301,15 +5505,15 @@
 "entity_type": "spe",
 "company_basis": "owner",
 "industry": "半導体・電子",
-"category": "医療施設",
-"category_raw": "医療施設",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
 "confidence": "high",
 "date": "2026-07-10",
 "applied": "2026-05-13",
 "jp": false,
 "new": false,
-"summary": "量子計算機施設の極低温プラント(CRYOPLANT)建設 フェーズ 1C $30M。GC = Clayco。",
-"infer": "所在地は旧 US Steel サウスワークス跡 = イリノイ州の量子・マイクロエレクトロニクス・パーク計画地と一致(推論)。極低温設備は配管・計装・特殊ガスの調達が続く。",
+"summary": "量子計算機施設の極低温プラント(CRYOPLANT)建設 フェーズ 1C $30M。先行許可 101063081, 101065270, 101075599 に隣接する工事。",
+"infer": "所在地は旧 US Steel サウスワークス跡 = イリノイ州の量子・マイクロエレクトロニクス・パーク計画地と一致(推論)。極低温設備は配管・計装・特殊ガスの調達が続く窓。",
 "note": null,
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
@@ -5323,19 +5527,19 @@
 "karte": null,
 "company_id": "C-9",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "01",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:40:38+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "FAIRVIEW PARK HOSPITAL",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
 "owner_of_record": "FAIRVIEW PARK HOSPITAL",
@@ -5347,9 +5551,9 @@
 "id": "S-27213",
 "state": "OH",
 "city": "Cleveland・18101 LORAIN AVE, CLEVELAND, OH, 44111",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
+"company": "FAIRVIEW PARK HOSPITAL",
+"entity_type": "corp",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -5358,8 +5562,8 @@
 "applied": "2026-07-07",
 "jp": false,
 "new": false,
-"summary": "Cleveland 18101 Lorain Ave の病院/介護施設(I-2)向け商業用HVAC工事 $605k(ダクトヒーター14台・屋上空調機1台・VAV14台等)。",
-"infer": "医療系施設の空調更新 = 施設の設備維持・改修投資の一環(推論)。",
+"summary": "Fairview Park Hospital(I-2 施設)で商業用 HVAC 工事 $605k(ダクトヒーター14台・屋上冷暖房ユニット1台・VAV14台・ファン2台など)。親許可 BCB26-013373 の副許可。",
+"infer": "病院の空調更新工事であり、生産設備投資というより施設維持・改修の範囲(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -5371,12 +5575,12 @@
 "owner_source": "parcel:cuyahoga_oh:addr"
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-7726",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -5581,11 +5785,11 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "MASSMUTUAL ASSET FINANCE LLC",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
 },
 "parties": {
 "owner_of_record": "MASSMUTUAL ASSET FINANCE LLC",
@@ -5597,9 +5801,9 @@
 "id": "S-27226",
 "state": "OH",
 "city": "Cleveland・11900 FAIRHILL RD, CLEVELAND, OH, 44120",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
+"company": "MASSMUTUAL ASSET FINANCE LLC",
+"entity_type": "corp",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -5608,8 +5812,8 @@
 "applied": "2026-04-13",
 "jp": false,
 "new": false,
-"summary": "病院(I-2用途)の既存3階建て建物内で550 SFの患者病室を隔離病室へ改修 $225k。電気・機械・配管は別途許可。",
-"infer": "小規模な隔離病室化改修 = 病室単位の設備更新(陰圧・換気設備等)に伴う限定的な調達の可能性(推論)。",
+"summary": "既存 3 階建て I-2(病院/介護施設)内で患者部屋 550 SF を隔離室へ改修 $225k。電気・機械・配管は別許可。",
+"infer": "隔離室への改修は感染対策向け医療設備(陰圧空調・特殊配管等)の調達を伴う可能性(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -5621,12 +5825,12 @@
 "owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-7727",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -5731,25 +5935,25 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "CCRM NAPERVILLE LLC",
+"basis": "operator",
+"label": "操業事業者",
+"source": "permit_text",
+"source_label": "許可記録(本文)"
 },
 "parties": {
 "owner_of_record": "NAPERVILLE MOB OWNER LLC",
 "owner_kind": "課税台帳",
-"owner_is_spe": true,
+"owner_is_spe": false,
 "applicant": null,
 "gc": null
 },
 "id": "S-10785",
 "state": "IL",
 "city": "Naperville・1331 W 75TH ST",
-"company": "NAPERVILLE MOB OWNER LLC",
+"company": "CCRM NAPERVILLE LLC",
 "entity_type": "spe",
-"company_basis": "owner",
+"company_basis": "description",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -5758,8 +5962,8 @@
 "applied": "2026-05-29",
 "jp": false,
 "new": false,
-"summary": "Naperville 1331 W 75th St スイート303の既存テナントスペースを、生殖医療クリニック CCRM Naperville LLC 向けに内装工事 $275k(COMMERCIAL BUILDING ALTERATION 副許可)。同一案件の別許可あり。",
-"infer": null,
+"summary": "医療オフィスビル(MOB)内スイート #303 をテナント CCRM Naperville LLC 向けに内装改修 $275k(4,548 SQFT)。",
+"infer": "CCRM は生殖医療(不妊治療)クリニックのブランドと読める = 医療機器・検査室設備の小規模調達の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "ネイパービル市 建築許可(公開記録)",
@@ -5773,17 +5977,17 @@
 "karte": null,
 "company_id": "C-518",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-004",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
 "investor": {
-"name": "METROHEALTH",
-"basis": "owner_occupier",
-"label": "自社所有",
+"name": "THE BOARD OF COUNTY HOSPITAL TRUSTEES OF THE",
+"basis": "public",
+"label": "公共",
 "source": "parcel",
 "source_label": "登記(郡台帳)"
 },
@@ -5797,9 +6001,9 @@
 "id": "S-27285",
 "state": "OH",
 "city": "Cleveland・2500 METROHEALTH DR, CLEVELAND, OH, 44109",
-"company": "METROHEALTH",
-"entity_type": "corp",
-"company_basis": "parcel",
+"company": "THE BOARD OF COUNTY HOSPITAL TRUSTEES OF THE",
+"entity_type": "public",
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "医療施設",
 "category_raw": "医療施設",
@@ -5808,8 +6012,8 @@
 "applied": "2026-07-07",
 "jp": false,
 "new": false,
-"summary": "MetroHealth病院1階の薬局(ED)における電気設備改修 832 SQFT $86k(親許可 BCB26-013337 の電気サブ許可)。",
-"infer": "薬局エリアの電気改修 = 調剤・保管設備の更新に伴う付帯工事の可能性(推論)。",
+"summary": "MetroHealth 病院1階の薬局(ED)電気設備改修 832 SQFT $86k(親許可 BCB26-013337 の副許可)。",
+"infer": "小規模な電気改修 = 病院内薬局スペースの機能改善に伴う付帯工事の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "クリーブランド市 建築許可(公開記録・月次更新)",
@@ -5823,10 +6027,10 @@
 "karte": null,
 "company_id": "C-3601",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -5908,8 +6112,8 @@
 "applied": "2026-05-12",
 "jp": false,
 "new": false,
-"summary": "病院のラボ/オフィス棟 5 フロアを改修しラボを拡張 $81.3M(4 階に機械ペントハウス増設)。",
-"infer": "ラボ拡張 = 分析機器・実験設備・特殊空調の調達が竣工まで続く窓。",
+"summary": "病院のラボ/オフィス棟 5 フロア(2, 4, 6, 7 階とペントハウス1)を改修しラボを拡張 $81.3M(4 階に機械ペントハウス増設)。",
+"infer": "ラボ拡張 = 分析機器・実験設備・特殊空調の調達が竣工まで続く窓(推論)。",
 "note": null,
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
@@ -5923,10 +6127,10 @@
 "karte": null,
 "company_id": "C-3",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "01",
-"model": "claude-fable-5-1 (manual batch, sparring session)",
-"generated_at": "2026-09-02T18:40:38+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -6058,8 +6262,8 @@
 "applied": "2026-04-22",
 "jp": false,
 "new": false,
-"summary": "Elmhurst Memorial Health の新築プロジェクトに伴うエレベーター2基(P-388/P-389)の設置 $410.3k(3500lb・200FPM)。",
-"infer": "新築プロジェクトの副許可(エレベーター)= 親案件である病院新築工事が進行中と読める(推論)。",
+"summary": "Elmhurst Memorial Health の新築プロジェクトに伴うエレベーター2台(Gen 3 Edge、3500lb、200FPM)設置 $410.3k。",
+"infer": "新築工事(親案件 P-388/P-389)の副許可 = 病院関連の新築工事が進行中と読める(推論)。",
 "note": null,
 "fact": {
 "src": "Elmhurst 建築許可(公開記録)",
@@ -6073,10 +6277,10 @@
 "karte": null,
 "company_id": "C-180",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-003",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -6308,8 +6512,8 @@
 "applied": "2026-03-02",
 "jp": false,
 "new": false,
-"summary": "Milwaukee 4848 S 6th St に人工透析クリニックの商業テナント内装 $350,500。",
-"infer": null,
+"summary": "Milwaukee 4848 S 6th St に外来透析クリニックを設置する商業改修許可 $350.5k。",
+"infer": "所有は SPE 名義で、実運営は透析事業者(テナント)である可能性(推論)。透析関連の医療機器・給排水設備の調達が伴う小規模案件。",
 "note": null,
 "fact": {
 "src": "ミルウォーキー市 建築許可(公開記録・約 2.5 ヶ月遅れ)",
@@ -6323,10 +6527,10 @@
 "karte": null,
 "company_id": "C-452",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-003",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -6390,7 +6594,7 @@
 "value_total": 235500000.0,
 "states": "OH",
 "latest": "2026-09-04",
-"targets": 5,
+"targets": 6,
 "signal_ids": [
 "S-1542",
 "S-1542",
@@ -6401,41 +6605,54 @@
 ]
 },
 {
-"id": "C-51",
-"name": "HARPER COURT HOLDINGS II",
-"entity_type": "spe",
+"id": "C-140",
+"name": "NATIONWIDE CHILDRENS HOSPITAL",
+"entity_type": "corp",
 "jp": false,
 "signals": 4,
-"value_total": 12000000.0,
-"states": "IL",
-"latest": "2026-08-27",
+"value_total": 7300000.0,
+"states": "OH",
+"latest": "2026-08-25",
 "targets": 4,
 "signal_ids": [
-"S-407",
-"S-419",
-"S-423",
-"S-949"
+"S-1468",
+"S-1903",
+"S-1903",
+"S-2374"
 ]
 },
 {
-"id": "C-180",
-"name": "ELMHURST MEMORIAL HEALTH",
+"id": "C-7726",
+"name": "FAIRVIEW PARK HOSPITAL",
 "entity_type": "corp",
 "jp": false,
-"signals": 8,
-"value_total": 7806641.0,
-"states": "IL",
-"latest": "2026-08-24",
+"signals": 4,
+"value_total": 1101675.0,
+"states": "OH",
+"latest": "2026-09-04",
 "targets": 4,
 "signal_ids": [
-"S-16928",
-"S-16991",
-"S-17079",
-"S-17102",
-"S-17172",
-"S-17223",
-"S-17242",
-"S-17339"
+"S-27213",
+"S-36695",
+"S-36884",
+"S-36919"
+]
+},
+{
+"id": "C-7724",
+"name": "CLEVELAND CLINIC FOUNDATION",
+"entity_type": "corp",
+"jp": false,
+"signals": 4,
+"value_total": 965728.0,
+"states": "OH",
+"latest": "2026-08-27",
+"targets": 4,
+"signal_ids": [
+"S-26868",
+"S-27105",
+"S-36826",
+"S-36980"
 ]
 },
 {
@@ -6455,19 +6672,77 @@
 ]
 },
 {
-"id": "C-140",
-"name": "NATIONWIDE CHILDRENS HOSPITAL",
+"id": "C-3028",
+"name": "NALCO COMPANY",
 "entity_type": "corp",
 "jp": false,
-"signals": 3,
-"value_total": 7000000.0,
-"states": "OH",
-"latest": "2026-08-25",
+"signals": 4,
+"value_total": 17600000.0,
+"states": "IL",
+"latest": "2026-08-20",
 "targets": 3,
 "signal_ids": [
-"S-1468",
-"S-1903",
-"S-1903"
+"S-24680",
+"S-24708",
+"S-24718",
+"S-24887"
+]
+},
+{
+"id": "C-51",
+"name": "HARPER COURT HOLDINGS II",
+"entity_type": "spe",
+"jp": false,
+"signals": 4,
+"value_total": 12000000.0,
+"states": "IL",
+"latest": "2026-08-27",
+"targets": 3,
+"signal_ids": [
+"S-407",
+"S-419",
+"S-423",
+"S-949"
+]
+},
+{
+"id": "C-180",
+"name": "ELMHURST MEMORIAL HEALTH",
+"entity_type": "corp",
+"jp": false,
+"signals": 8,
+"value_total": 7806641.0,
+"states": "IL",
+"latest": "2026-08-24",
+"targets": 3,
+"signal_ids": [
+"S-16928",
+"S-16991",
+"S-17079",
+"S-17102",
+"S-17172",
+"S-17223",
+"S-17242",
+"S-17339"
+]
+},
+{
+"id": "C-3629",
+"name": "CLEVELAND CLINIC",
+"entity_type": "corp",
+"jp": false,
+"signals": 6,
+"value_total": 144060.0,
+"states": "OH",
+"latest": "2026-08-31",
+"targets": 3,
+"signal_ids": [
+"S-26868",
+"S-26871",
+"S-26880",
+"S-27105",
+"S-36770",
+"S-36980"
 ]
 },
 {
@@ -6499,23 +6774,6 @@
 "signal_ids": [
 "S-148",
 "S-36512"
-]
-},
-{
-"id": "C-3028",
-"name": "NALCO COMPANY",
-"entity_type": "corp",
-"jp": false,
-"signals": 4,
-"value_total": 17600000.0,
-"states": "IL",
-"latest": "2026-08-20",
-"targets": 2,
-"signal_ids": [
-"S-24680",
-"S-24708",
-"S-24718",
-"S-24887"
 ]
 },
 {
@@ -6663,22 +6921,48 @@
 ]
 },
 {
-"id": "C-3629",
-"name": "CLEVELAND CLINIC",
-"entity_type": "corp",
+"id": "C-7733",
+"name": "CCRM NAPERVILLE LLC",
+"entity_type": "spe",
 "jp": false,
-"signals": 6,
-"value_total": 144060.0,
-"states": "OH",
-"latest": "2026-08-31",
+"signals": 2,
+"value_total": 550000.0,
+"states": "IL",
+"latest": "2026-07-27",
 "targets": 2,
 "signal_ids": [
-"S-26868",
-"S-26871",
-"S-26880",
-"S-27105",
-"S-36770",
-"S-36980"
+"S-10483",
+"S-10785"
+]
+},
+{
+"id": "C-7728",
+"name": "CASE WESTERN RESERV UNIV",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 198977.0,
+"states": "OH",
+"latest": "2026-08-27",
+"targets": 2,
+"signal_ids": [
+"S-26670",
+"S-36811"
+]
+},
+{
+"id": "C-7720",
+"name": "HS ACQUISITION",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-08-28",
+"targets": 2,
+"signal_ids": [
+"S-44285",
+"S-44911"
 ]
 },
 {
@@ -6788,6 +7072,34 @@
 ]
 },
 {
+"id": "C-3708",
+"name": "MUNSON HOSPITAL",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 4661828.94,
+"states": "MI",
+"latest": "2026-07-14",
+"targets": 1,
+"signal_ids": [
+"S-38747"
+]
+},
+{
+"id": "C-7732",
+"name": "MUNSON MEDICAL CENTER - MAIN HOSP.",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 4661828.94,
+"states": "MI",
+"latest": "2026-07-14",
+"targets": 1,
+"signal_ids": [
+"S-38747"
+]
+},
+{
 "id": "C-171",
 "name": "HENRY FORD HEALTH SYSTEM",
 "entity_type": "corp",
@@ -6813,6 +7125,20 @@
 "targets": 1,
 "signal_ids": [
 "S-683"
+]
+},
+{
+"id": "C-7731",
+"name": "400-406 EAST WILSON BRIDGE ROAD LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1200000.0,
+"states": "OH",
+"latest": "2026-07-23",
+"targets": 1,
+"signal_ids": [
+"S-38031"
 ]
 },
 {
@@ -7001,6 +7327,20 @@
 ]
 },
 {
+"id": "C-7727",
+"name": "MASSMUTUAL ASSET FINANCE LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 225000.0,
+"states": "OH",
+"latest": "2026-07-09",
+"targets": 1,
+"signal_ids": [
+"S-27226"
+]
+},
+{
 "id": "C-3642",
 "name": "AMAZON",
 "entity_type": "corp",
@@ -7062,6 +7402,20 @@
 ]
 },
 {
+"id": "C-7723",
+"name": "THE BOARD OF COUNTY HOSPITAL TRUSTEES OF THE",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 86000.0,
+"states": "OH",
+"latest": "2026-07-07",
+"targets": 1,
+"signal_ids": [
+"S-27285"
+]
+},
+{
 "id": "C-938",
 "name": "TENNECO PACKAGING INC #367",
 "entity_type": "corp",
@@ -7101,6 +7455,20 @@
 "targets": 1,
 "signal_ids": [
 "S-6935"
+]
+},
+{
+"id": "C-7729",
+"name": "HEALTH HILL HOSPITAL",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 55910.0,
+"states": "OH",
+"latest": "2026-07-13",
+"targets": 1,
+"signal_ids": [
+"S-27171"
 ]
 },
 {
@@ -7217,22 +7585,6 @@
 ]
 },
 {
-"id": "C-2416",
-"name": "SLK GLOBAL SOLUTIONS AMER",
-"entity_type": "corp",
-"jp": false,
-"signals": 3,
-"value_total": 0,
-"states": "IL",
-"latest": "2026-08-28",
-"targets": 1,
-"signal_ids": [
-"S-19762",
-"S-19911",
-"S-19937"
-]
-},
-{
 "id": "C-3670",
 "name": "SANMAR INC",
 "entity_type": "corp",
@@ -7247,17 +7599,17 @@
 ]
 },
 {
-"id": "C-3708",
-"name": "MUNSON HOSPITAL",
+"id": "C-3693",
+"name": "CINCINNATI CHILDREN'S HOSPITAL MEDICAL CENTER",
 "entity_type": "corp",
 "jp": false,
 "signals": 1,
 "value_total": 0,
-"states": "MI",
-"latest": "2026-07-14",
+"states": "OH",
+"latest": "2026-08-10",
 "targets": 1,
 "signal_ids": [
-"S-38747"
+"S-35185"
 ]
 },
 {
@@ -7289,17 +7641,73 @@
 ]
 },
 {
-"id": "C-3725",
-"name": "KETTERING HEALTH NETWORK",
+"id": "C-4036",
+"name": "CHILDRENS HOSPITAL MEDICAL CENTER",
 "entity_type": "corp",
 "jp": false,
 "signals": 1,
 "value_total": 0,
 "states": "OH",
-"latest": "2026-09-02",
+"latest": "2026-08-10",
 "targets": 1,
 "signal_ids": [
-"S-39906"
+"S-35185"
+]
+},
+{
+"id": "C-7721",
+"name": "ALDRICH CHEMICAL CO LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-08-07",
+"targets": 1,
+"signal_ids": [
+"S-33970"
+]
+},
+{
+"id": "C-7722",
+"name": "GRANDVIEW HOSPITAL AND",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-07-22",
+"targets": 1,
+"signal_ids": [
+"S-34305"
+]
+},
+{
+"id": "C-7725",
+"name": "6770 CINCINNATI LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-07-31",
+"targets": 1,
+"signal_ids": [
+"S-35314"
+]
+},
+{
+"id": "C-7730",
+"name": "PARMA CITY OF",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-07-21",
+"targets": 1,
+"signal_ids": [
+"S-44089"
 ]
 },
 {
@@ -9461,6 +9869,20 @@
 "targets": 0,
 "signal_ids": [
 "S-2100"
+]
+},
+{
+"id": "C-7715",
+"name": "NP LIMITED PARTNERSHIP",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 2300000.0,
+"states": "OH",
+"latest": "2026-08-11",
+"targets": 0,
+"signal_ids": [
+"S-1806"
 ]
 },
 {
@@ -11659,6 +12081,20 @@
 ]
 },
 {
+"id": "C-7717",
+"name": "GALAXY AT POLARIS PHASE I LLC THE",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1000000.0,
+"states": "OH",
+"latest": "2026-08-18",
+"targets": 0,
+"signal_ids": [
+"S-1630"
+]
+},
+{
 "id": "C-223",
 "name": "TM 2735 PARTNERS LLC",
 "entity_type": "spe",
@@ -12137,6 +12573,20 @@
 "targets": 0,
 "signal_ids": [
 "S-81"
+]
+},
+{
+"id": "C-7716",
+"name": "BG&CC DEVELOPMENT COMPANY LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 857203.0,
+"states": "OH",
+"latest": "2026-08-24",
+"targets": 0,
+"signal_ids": [
+"S-46987"
 ]
 },
 {
@@ -14880,6 +15330,21 @@
 ]
 },
 {
+"id": "C-7714",
+"name": "East Galloway Development, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 434634.0,
+"states": "OH",
+"latest": "2026-09-04",
+"targets": 0,
+"signal_ids": [
+"S-46883",
+"S-46984"
+]
+},
+{
 "id": "C-398",
 "name": "FULTON COURT CONDO ASSOC",
 "entity_type": "spe",
@@ -15011,6 +15476,20 @@
 ]
 },
 {
+"id": "C-7718",
+"name": "ROMANELLI & HUGHES BUILDING COMPANY",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 419400.0,
+"states": "OH",
+"latest": "2026-09-03",
+"targets": 0,
+"signal_ids": [
+"S-46901"
+]
+},
+{
 "id": "C-404",
 "name": "ROWLAND LLC",
 "entity_type": "spe",
@@ -15065,6 +15544,20 @@
 "signal_ids": [
 "S-3286",
 "S-24776"
+]
+},
+{
+"id": "C-7719",
+"name": "GOTT REAL ESTATE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 415000.0,
+"states": "WI",
+"latest": "2026-04-14",
+"targets": 0,
+"signal_ids": [
+"S-1339"
 ]
 },
 {
@@ -19358,6 +19851,20 @@
 "targets": 0,
 "signal_ids": [
 "S-10523"
+]
+},
+{
+"id": "C-7734",
+"name": "FROEDTERT MEMORIAL LUTHERAN HOSPITAL INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 160800.0,
+"states": "WI",
+"latest": "2026-08-28",
+"targets": 0,
+"signal_ids": [
+"S-45311"
 ]
 },
 {
@@ -50116,6 +50623,22 @@
 ]
 },
 {
+"id": "C-2416",
+"name": "SLK GLOBAL SOLUTIONS AMER",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-28",
+"targets": 0,
+"signal_ids": [
+"S-19762",
+"S-19911",
+"S-19937"
+]
+},
+{
 "id": "C-2417",
 "name": "SCHOOL DISTRICT NO 201",
 "entity_type": "public",
@@ -54877,20 +55400,6 @@
 ]
 },
 {
-"id": "C-3693",
-"name": "CINCINNATI CHILDREN'S HOSPITAL MEDICAL CENTER",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 0,
-"states": "OH",
-"latest": "2026-08-10",
-"targets": 0,
-"signal_ids": [
-"S-35185"
-]
-},
-{
 "id": "C-3694",
 "name": "TEXAS ROADHOUSE",
 "entity_type": "corp",
@@ -55154,6 +55663,20 @@
 "targets": 0,
 "signal_ids": [
 "S-40933"
+]
+},
+{
+"id": "C-3725",
+"name": "KETTERING HEALTH NETWORK",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-02",
+"targets": 0,
+"signal_ids": [
+"S-39906"
 ]
 }
 ]

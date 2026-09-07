@@ -1,5 +1,5 @@
 {
-"generated_at": "2026-09-07T02:17:42+00:00",
+"generated_at": "2026-09-07T08:15:41+00:00",
 "state": "OH",
 "part": 1,
 "parts": 1,
@@ -302,6 +302,106 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "East Galloway Development, LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-46883",
+"state": "OH",
+"city": "Franklin County・6122 FARELLA WAY, GALLOWAY, OH",
+"company": "East Galloway Development, LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-04",
+"applied": "2026-08-21",
+"jp": false,
+"new": true,
+"summary": "Galloway の 6122 Farella Way にて新築住宅の建築許可 $210,271。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1129 Building Permit - New Residence",
+"value": 210271.0,
+"verbatim": "Building Permit - New Residence / ISSUED / (GALLOWAY, OH)",
+"gc": null,
+"pin": "240-007164-00",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-7714",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46882",
+"state": "OH",
+"city": "Franklin County・4019 ALTON DARBY CRE, HILLIARD, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-04",
+"applied": "2026-06-16",
+"jp": false,
+"new": true,
+"summary": "Hilliard(Franklin County)4019 Alton Darby Cre の一般建築許可 $179,900(所有者は個人信託 MAYES RUBY K AFDT)。",
+"infer": null,
+"note": "住宅の可能性(用途不明・小規模個人名義)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-0757 Building Permit - General",
+"value": 179900.0,
+"verbatim": "Building Permit - General / ISSUED / (HILLIARD, OH)",
+"gc": null,
+"pin": "120-000264",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -794,56 +894,6 @@
 "gc": null,
 "pin": "032021B074.",
 "owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "FAIRVIEW PARK HOSPITAL",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": "UNITED MECHANICAL CONTRACTORS, INC."
-},
-"id": "S-36695",
-"state": "OH",
-"city": "Cleveland・18101 LORAIN AVE, CLEVELAND, OH, 44111",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "未分類",
-"category_raw": "医療施設",
-"confidence": "low",
-"date": "2026-09-04",
-"applied": "2026-09-01",
-"jp": false,
-"new": true,
-"summary": "I-2施設(病院/介護施設)向けの配管副許可、シンク1台・給排水配管を設置 $15k(親許可 BCB26-030601)。",
-"infer": "小規模な配管工事であり、親建築許可の内容に依存(推論)。単独では設備投資シグナルとしては小さい。",
-"note": "医療施設内の小規模配管工事(副許可)。",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCP26-037612 Commercial Plumbing",
-"value": 15000.0,
-"verbatim": "Commercial Plumbing / I-2 Institutional - Hospitals / Nursing Home / INSTALL 1 SINK, 70 LIN. FT. WASTE, VENT PIPING, 50 LIN. FT. WATER DISTRIBUTION PIPING ***BUILDING PERMIT NO BCB26-030601***",
-"gc": "UNITED MECHANICAL CONTRACTORS, INC.",
-"pin": "02601001",
-"owner_source": "parcel:cuyahoga_oh"
 },
 "karte": null,
 "company_id": null,
@@ -4406,6 +4456,56 @@
 },
 {
 "investor": {
+"name": "ROMANELLI & HUGHES BUILDING COMPANY",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "permit_owner",
+"source_label": "許可記録(所有者欄)"
+},
+"parties": {
+"owner_of_record": "ROMANELLI & HUGHES BUILDING COMPANY",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46901",
+"state": "OH",
+"city": "Franklin County・3061 SOUDER DR, BLACKLICK, OH",
+"company": "ROMANELLI & HUGHES BUILDING COMPANY",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-03",
+"applied": "2026-09-02",
+"jp": false,
+"new": true,
+"summary": "Blacklick, OH の新築住宅の建築許可 $419.4k。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1180 Building Permit - New Residence",
+"value": 419400.0,
+"verbatim": "Building Permit - New Residence / ISSUED / (BLACKLICK, OH)",
+"gc": null,
+"pin": "170-004964",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-7718",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -5063,6 +5163,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46896",
+"state": "OH",
+"city": "Franklin County・5910 CLARK STATE, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-03",
+"applied": "2026-08-31",
+"jp": false,
+"new": true,
+"summary": "Columbus 5910 Clark State の建築許可(一般)$54k。所有者は個人(Archibald George W / Stephanie A)。",
+"infer": null,
+"note": "住宅(個人所有・小規模)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1168 Building Permit - General",
+"value": 54000.0,
+"verbatim": "Building Permit - General / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "170-000130",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "BRAHMA 99 LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -5202,6 +5352,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46891",
+"state": "OH",
+"city": "Franklin County・5954 CAIRO, WESTERVILLE, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-03",
+"applied": "2026-08-12",
+"jp": false,
+"new": true,
+"summary": "Westerville の個人住宅(5954 Cairo)における一般建築許可 $26.4k。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1091 Building Permit - General",
+"value": 26400.0,
+"verbatim": "Building Permit - General / ISSUED / (WESTERVILLE, OH)",
+"gc": null,
+"pin": "110-004341",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -11313,6 +11513,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "PRESSLER ERIC J",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38127",
+"state": "OH",
+"city": "Worthington・5916 LINWORTH RD WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2026-08-20",
+"jp": false,
+"new": true,
+"summary": "Worthington 5916 Linworth Rd における屋根の葺き替え(シングル)工事。金額情報なし。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0187 Alteration/Repair  (OBC)",
+"value": 23656.25,
+"verbatim": "We are doing a reroof shingles / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-003019",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "AHA DEVELOPMENT OHC LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -11352,6 +11602,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46907",
+"state": "OH",
+"city": "Franklin County・4477 BEACON HILL, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-02",
+"applied": "2026-08-25",
+"jp": false,
+"new": true,
+"summary": "Columbus 4477 Beacon Hill での一般建築許可 $15,744。個人名義。",
+"infer": null,
+"note": "住宅(小規模)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1139 Building Permit - General",
+"value": 15744.0,
+"verbatim": "Building Permit - General / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "240-004818",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -11713,6 +12013,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "TRGOVAC TRACEY L",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38123",
+"state": "OH",
+"city": "Worthington・411 HIGHGATE AVE WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2026-08-24",
+"jp": false,
+"new": true,
+"summary": "Worthington 411 Highgate Ave での屋根全面交換工事(金額不明)。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0192 Alteration/Repair  (OBC)",
+"value": 10000.0,
+"verbatim": "Full Roof Replacement / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-004386",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "WEBER, MICHAEL & PATRICIA",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -12052,6 +12402,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46909",
+"state": "OH",
+"city": "Franklin County・4805 FUNSTON, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-02",
+"applied": "2026-08-28",
+"jp": false,
+"new": true,
+"summary": "Franklin County 4805 Funston(Columbus, OH)の一般建築許可 $4,928(個人所有)。",
+"infer": null,
+"note": "住宅(小規模工事)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1158 Building Permit - General",
+"value": 4928.0,
+"verbatim": "Building Permit - General / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "180-003613",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -15006,102 +15406,52 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "KHN",
+"basis": "operator",
+"label": "操業事業者",
+"source": "permit_text",
+"source_label": "許可記録(本文)"
 },
 "parties": {
-"owner_of_record": "TRGOVAC TRACEY L",
-"owner_kind": "課税台帳",
+"owner_of_record": null,
+"owner_kind": null,
 "owner_is_spe": false,
 "applicant": null,
 "gc": null
 },
-"id": "S-38123",
+"id": "S-39906",
 "state": "OH",
-"city": "Worthington・411 HIGHGATE AVE WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
+"city": "Kettering・3535 SOUTHERN Blvd, KETTERING OH 45429",
+"company": "KHN",
 "entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
+"company_basis": "description",
+"industry": "医薬・ライフサイエンス",
 "category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
+"category_raw": "医療施設",
+"confidence": "low",
 "date": "2026-09-02",
-"applied": "2026-08-24",
+"applied": null,
 "jp": false,
 "new": true,
-"summary": "Worthington 411 Highgate Ave での屋根全面交換工事(金額不明)。",
-"infer": null,
-"note": "屋根。",
+"summary": "KHN(Kettering Health Network)の施設で透視撮影装置室(Room 4)の機器更新に伴う構造許可(Kettering, 3535 Southern Blvd)。金額不明。",
+"infer": "医療画像機器(フルオロスコピー)の更新工事 = 医療機器・関連構造/遮蔽設備の調達が伴う可能性(推論)。",
+"note": null,
 "fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0192 Alteration/Repair  (OBC)",
+"src": "Kettering 建築許可(公開記録)",
+"ref": "許可 S26-05276 Structural Permit",
 "value": null,
-"verbatim": "Full Roof Replacement / Alteration/Repair  (OBC) / Alteration/Repair",
+"verbatim": "KHN REPLACE FLUOROSCOPY EQUIPMENT ROOM 4 / Plan Review / REPLACE FLUOROSCOPY EQUIPMENT ROOM 4 / Structural Permit",
 "gc": null,
-"pin": "100-004386",
-"owner_source": "parcel:franklin_oh"
+"pin": null,
+"owner_source": null
 },
 "karte": null,
-"company_id": null,
+"company_id": "C-3725",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "PRESSLER ERIC J",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38127",
-"state": "OH",
-"city": "Worthington・5916 LINWORTH RD WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-09-02",
-"applied": "2026-08-20",
-"jp": false,
-"new": true,
-"summary": "Worthington 5916 Linworth Rd における屋根の葺き替え(シングル)工事。金額情報なし。",
-"infer": null,
-"note": "屋根。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0187 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "We are doing a reroof shingles / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-003019",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -15416,6 +15766,56 @@
 "owner_of_record": null,
 "owner_kind": null,
 "owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-47099",
+"state": "OH",
+"city": "Independence・9424 Brookside Rd Independence OH 44131",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-02",
+"applied": "2026-09-02",
+"jp": false,
+"new": true,
+"summary": "Independence 9424 Brookside Rd における建物のコンクリート工事(用途・金額不明)。",
+"infer": null,
+"note": "汎用ラベルのみで詳細不明。",
+"fact": {
+"src": "Independence 建築許可(公開記録)",
+"ref": "許可 2026-0028-CONWKBLD Concrete Work - Building",
+"value": null,
+"verbatim": "Pouring New Patio & Service Walk - **Drawings on File / Concrete Work - Building / Concrete Work (Building)",
+"gc": null,
+"pin": "56428007",
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
 "applicant": "Sandra Voelker",
 "gc": null
 },
@@ -15433,8 +15833,8 @@
 "applied": null,
 "jp": false,
 "new": true,
-"summary": "Huber Heights の建物で倉庫室を超音波(画像診断)室へ改修する商業建築許可(金額不明)。",
-"infer": "医療用画像診断設備(超音波装置)の導入が伴う可能性(推論)。",
+"summary": "Huber Heights 8701 Old Troy の商業建物で、倉庫室を超音波(エコー)検査室へ改修する工事。",
+"infer": "画像診断機器(超音波装置)の新規導入に伴う内装改修の可能性(推論)。",
 "note": null,
 "fact": {
 "src": "Montgomery County 建築許可(公開記録)",
@@ -15448,10 +15848,10 @@
 "karte": null,
 "company_id": null,
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -15763,6 +16163,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46921",
+"state": "OH",
+"city": "Franklin County・6327 FOX TAIL DRIVE, GAHANNA, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-01",
+"applied": "2026-08-31",
+"jp": false,
+"new": true,
+"summary": "Gahanna 6327 Fox Tail Drive の個人名義(Dietz, Richard)による一般建築許可 $165,126。",
+"infer": null,
+"note": "住宅(個人・詳細不明)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1164 Building Permit - General",
+"value": 165126.0,
+"verbatim": "Building Permit - General / ISSUED / (GAHANNA, OH)",
+"gc": null,
+"pin": "170-005052-00",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "TEN ENTERPRISES LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -15802,6 +16252,56 @@
 "batch": "session-0904-hv",
 "model": "claude-sonnet-5 (subagent, subscription session, foreground 11.5min)",
 "generated_at": "2026-09-04T18:35:05+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46920",
+"state": "OH",
+"city": "Franklin County・1867 LITTLE AVENUE, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-01",
+"applied": "2026-09-01",
+"jp": false,
+"new": true,
+"summary": "Columbus 1867 Little Avenue における新築住宅の建築許可 $140,000。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1170 Building Permit - New Residence",
+"value": 140000.0,
+"verbatim": "Building Permit - New Residence / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "140-003248-00",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -16513,6 +17013,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46922",
+"state": "OH",
+"city": "Franklin County・1649 KEATS, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-01",
+"applied": "2026-08-31",
+"jp": false,
+"new": true,
+"summary": "Columbus 1649 Keats の建築一般許可 $25.7k、所有者は個人(Bulcher Shane A / Bulcher Jane A)。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1165 Building Permit - General",
+"value": 25700.0,
+"verbatim": "Building Permit - General / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "213-002531",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "RED BRICK RENOVATIONS LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -16613,6 +17163,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46908",
+"state": "OH",
+"city": "Franklin County・2523 VALLEYVIEW, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-01",
+"applied": "2026-08-27",
+"jp": false,
+"new": true,
+"summary": "Columbus 2523 Valleyview の一般建築許可 $23,301(所有者 Hall Mark/Schilling Dodie D)。",
+"infer": null,
+"note": "住宅規模の小工事。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1156 Building Permit - General",
+"value": 23301.0,
+"verbatim": "Building Permit - General / Final Processing Prior to Close / (COLUMBUS, OH)",
+"gc": null,
+"pin": "144-000359",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "D'ATRI EAST 79 PROPERTIES LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -16702,6 +17302,106 @@
 "batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-04T21:24:33+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46917",
+"state": "OH",
+"city": "Franklin County・305 EVERGREEN, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-01",
+"applied": "2026-09-01",
+"jp": false,
+"new": true,
+"summary": "Columbus 305 Evergreen の住宅所有者による解体許可 $15k。",
+"infer": null,
+"note": "住宅(解体)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 D-2026-0015 Demolition Permit - Homeowner",
+"value": 15000.0,
+"verbatim": "Demolition Permit - Homeowner / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "240-002239",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "CAROL & CO LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38115",
+"state": "OH",
+"city": "Worthington・882 HIGH ST WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-01",
+"applied": "2026-05-27",
+"jp": false,
+"new": true,
+"summary": "既存開口部の窓9枚を交換する改修工事(構造変更なし)。金額不明。",
+"infer": null,
+"note": "窓交換(小規模改修)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0111 Alteration/Repair  (OBC)",
+"value": 12796.0,
+"verbatim": "Remove and replace 9 windows in existing openings w/ no change to structure. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-000308",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -19763,56 +20463,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "CAROL & CO LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38115",
-"state": "OH",
-"city": "Worthington・882 HIGH ST WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-09-01",
-"applied": "2026-05-27",
-"jp": false,
-"new": true,
-"summary": "既存開口部の窓9枚を交換する改修工事(構造変更なし)。金額不明。",
-"infer": null,
-"note": "窓交換(小規模改修)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0111 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Remove and replace 9 windows in existing openings w/ no change to structure. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-000308",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": null,
 "owner_kind": null,
 "owner_is_spe": false,
@@ -19852,6 +20502,56 @@
 "batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-47094",
+"state": "OH",
+"city": "Independence・7515 Cherry St Independence OH 44131",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-01",
+"applied": "2026-08-31",
+"jp": false,
+"new": true,
+"summary": "Independence 7515 Cherry St でのコンクリート工事(建築)。金額・所有者情報は記録になし。",
+"infer": null,
+"note": "汎用ラベルのみで用途不明。",
+"fact": {
+"src": "Independence 建築許可(公開記録)",
+"ref": "許可 2026-0026-CONWKBLD Concrete Work - Building",
+"value": null,
+"verbatim": "24'x15' Concrete Pad & Service Walk - Two Inspections Required: Pre-pour & Final / Concrete Work - Building / Concrete Work (Building)",
+"gc": null,
+"pin": "56401034",
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -20363,6 +21063,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46926",
+"state": "OH",
+"city": "Franklin County・6738 MERWIN, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-31",
+"applied": "2026-07-14",
+"jp": false,
+"new": true,
+"summary": "Columbus 6738 Merwin での一般建築許可 $100k、申請者は個人(Westrick, Jessica)。",
+"infer": null,
+"note": "住宅(個人名義)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-0920 Building Permit - General",
+"value": 100000.0,
+"verbatim": "Building Permit - General / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "213-001601",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "EDWARD F HOBAN",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -20852,6 +21602,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "SOLOMON FAMILY PROPERTIES LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38103",
+"state": "OH",
+"city": "Worthington・7057 HUNTLEY RD WORTHINGTON OH 43229",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-31",
+"applied": "2026-06-11",
+"jp": false,
+"new": true,
+"summary": "Worthington 7057 Huntley Rd で Swiftwall Pro Wall システムの撤去および電気設備の変更撤去(金額不明)。",
+"infer": null,
+"note": "内装間仕切り撤去(小規模改修)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0126 Alteration/Repair  (OBC)",
+"value": 21000.0,
+"verbatim": "Removal of Swiftwall Pro Wall system - removal of electrical alterations. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-002684",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -21602,6 +22402,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "689 NORTH HIGH STREET LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38106",
+"state": "OH",
+"city": "Worthington・691 HIGH ST WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-31",
+"applied": "2026-08-19",
+"jp": false,
+"new": true,
+"summary": "Worthington 691 High St で 60 アンペアのサブパネル2台(破損・老朽)を交換する軽微な電気改修。",
+"infer": null,
+"note": "軽微な電気設備修繕。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0184 Alteration/Repair  (OBC)",
+"value": 6000.0,
+"verbatim": "replacing 2- 60 amp sub panels. one is damaged the other is old. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-000197",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -24213,106 +25063,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "SOLOMON FAMILY PROPERTIES LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38103",
-"state": "OH",
-"city": "Worthington・7057 HUNTLEY RD WORTHINGTON OH 43229",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-08-31",
-"applied": "2026-06-11",
-"jp": false,
-"new": true,
-"summary": "Worthington 7057 Huntley Rd で Swiftwall Pro Wall システムの撤去および電気設備の変更撤去(金額不明)。",
-"infer": null,
-"note": "内装間仕切り撤去(小規模改修)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0126 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Removal of Swiftwall Pro Wall system - removal of electrical alterations. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-002684",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "689 NORTH HIGH STREET LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38106",
-"state": "OH",
-"city": "Worthington・691 HIGH ST WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-31",
-"applied": "2026-08-19",
-"jp": false,
-"new": true,
-"summary": "Worthington 691 High St で 60 アンペアのサブパネル2台(破損・老朽)を交換する軽微な電気改修。",
-"infer": null,
-"note": "軽微な電気設備修繕。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0184 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "replacing 2- 60 amp sub panels. one is damaged the other is old. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-000197",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": "CRONIN DAVID AND",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -24752,6 +25502,56 @@
 "batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46946",
+"state": "OH",
+"city": "Franklin County・7029 RINGS RD, DUBLIN, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-28",
+"applied": "2026-08-27",
+"jp": false,
+"new": true,
+"summary": "Dublin, OH の 7029 Rings Rd における新築住宅の建築許可 $850k。所有者は個人(LeMaster Barbara J)。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1155 Building Permit - New Residence",
+"value": 850000.0,
+"verbatim": "Building Permit - New Residence / ISSUED / (DUBLIN, OH)",
+"gc": null,
+"pin": "272-000304",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -25213,6 +26013,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46938",
+"state": "OH",
+"city": "Franklin County・2080 BERRY HILL, GROVE CITY, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-28",
+"applied": "2026-08-16",
+"jp": false,
+"new": true,
+"summary": "Grove City の住宅所有者 SMITH, JAYNE による一般建築許可 $90,000。詳細不明。",
+"infer": null,
+"note": "住宅の可能性(詳細記載なし)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1107 Building Permit - General",
+"value": 90000.0,
+"verbatim": "Building Permit - General / ISSUED / (GROVE CITY, OH)",
+"gc": null,
+"pin": "160-002055",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "PROCTER & GAMBLE CO THE",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -25352,6 +26202,106 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46936",
+"state": "OH",
+"city": "Franklin County・6337 DARLING, BLACKLICK, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-28",
+"applied": "2026-07-09",
+"jp": false,
+"new": true,
+"summary": "Blacklick(Franklin County)6337 Darling で一般建築許可 $56k、所有者は Story Robert P / Story A Dawn の個人。",
+"infer": null,
+"note": "住宅(個人所有・小規模)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-0890 Building Permit - General",
+"value": 56000.0,
+"verbatim": "Building Permit - General / ISSUED / (BLACKLICK, OH)",
+"gc": null,
+"pin": "170-002753",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46937",
+"state": "OH",
+"city": "Franklin County・5155 SMOTHERS ROAD, WESTERVILLE, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-28",
+"applied": "2026-07-10",
+"jp": false,
+"new": true,
+"summary": "Westerville の住宅所在地(5155 Smothers Road)で一般建築許可 $51k、申請者はTyler Allen個人。",
+"infer": null,
+"note": "住宅(個人)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-0899 Building Permit - General",
+"value": 51000.0,
+"verbatim": "Building Permit - General / ISSUED / (WESTERVILLE, OH)",
+"gc": null,
+"pin": "220-002267-00",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -30013,87 +30963,37 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "HS ACQUISITION",
+"owner_of_record": "GLAZE LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
 "applicant": null,
 "gc": null
 },
-"id": "S-44285",
+"id": "S-38078",
 "state": "OH",
-"city": "Parma・12301 SNOW RD",
+"city": "Worthington・1012 HIGH ST WORTHINGTON OH 43085",
 "company": "所有者・申請者の記載なし",
 "entity_type": "unknown",
 "company_basis": null,
-"industry": "医薬・ライフサイエンス",
+"industry": "食品・素材加工",
 "category": "未分類",
-"category_raw": "医療施設",
-"confidence": "low",
-"date": "2026-08-28",
-"applied": null,
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-27",
+"applied": "2026-07-29",
 "jp": false,
 "new": true,
-"summary": "Parma 12301 Snow Rd の商業建物で MRI スイートの改修・アップグレード(金額不明)。",
-"infer": "MRI 装置の更新・搬入に伴う施設改修の可能性(推論)= 画像診断機器の調達が動く窓。",
-"note": null,
+"summary": "Worthington 1012 High St に近隣向けベーカリーの新築(2階建て木造)及び駐車場整備。金額不明。",
+"infer": null,
+"note": "小売・飲食(近隣ベーカリー)。",
 "fact": {
-"src": "Parma 建築許可(公開記録)",
-"ref": "許可 CBP25-000099 Building Permit Application - Commercial",
-"value": null,
-"verbatim": "**PLANS REC'D 9/30/25** MRI suite renovation/upgrade / Building Permit Application - Commercial / Alteration",
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0172 New Building (OBC)",
+"value": 2500000.0,
+"verbatim": "THIS PROJECT CONSISTS OF A NEW TWO-STORY WOOD-FRAMED BUILDING AND SITE REDEVELOPMENT WITH OFF-STREET PARKING FOR A NEIGHBORHOOD BAKERY. / New Building (OBC) / New Building ",
 "gc": null,
-"pin": null,
-"owner_source": "parcel:cuyahoga_oh:addr"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "HS ACQUISITION",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-44911",
-"state": "OH",
-"city": "Parma・12301 SNOW RD",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "未分類",
-"category_raw": "医療施設",
-"confidence": "low",
-"date": "2026-08-28",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "既存の放射線科(画像診断部門)に支援スペースを設ける改修工事(Parma, 12301 Snow Rd)。金額は記録に記載なし。",
-"infer": "画像診断部門の改修 = 医療画像機器・関連設備の更新/増設に伴う工事の可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Parma 建築許可(公開記録)",
-"ref": "許可 CBP25-000101 Building Permit Application - Commercial",
-"value": null,
-"verbatim": "**PLANS REC'D 10/9/25** Alterations to provide support spaces to the existing radiology department. / Building Permit Application - Commercial / Alteration",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:cuyahoga_oh:addr"
+"pin": "100-001121",
+"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": null,
@@ -30152,6 +31052,56 @@
 "batch": "04",
 "model": "claude-fable-5-1 (manual batch, sparring session)",
 "generated_at": "2026-09-02T18:43:30+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46958",
+"state": "OH",
+"city": "Franklin County・1878 PRESERVE RUN COURT, NEW ALBANY, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-27",
+"applied": "2026-08-27",
+"jp": false,
+"new": true,
+"summary": "New Albany, OH の 1878 Preserve Run Court に新築住宅を建設 $748.7k。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1149 Building Permit - New Residence",
+"value": 748674.0,
+"verbatim": "Building Permit - New Residence / ISSUED / (NEW ALBANY, OH)",
+"gc": null,
+"pin": "170-005288-00",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -30364,6 +31314,56 @@
 },
 "parties": {
 "owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46956",
+"state": "OH",
+"city": "Franklin County・2540 MAPLEWOOD, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-27",
+"applied": "2026-08-25",
+"jp": false,
+"new": true,
+"summary": "Columbus 2540 Maplewood の一般建築許可 $190k(個人所有者名義)。",
+"infer": null,
+"note": "住宅(個人名義・詳細不明)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1141 Building Permit - General",
+"value": 190000.0,
+"verbatim": "Building Permit - General / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "113-000612",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
 "owner_kind": null,
 "owner_is_spe": false,
 "applicant": null,
@@ -30552,6 +31552,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46957",
+"state": "OH",
+"city": "Franklin County・1650 LYNNBROOK, Orient, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-27",
+"applied": "2026-08-26",
+"jp": false,
+"new": true,
+"summary": "Orient, OH の 1650 Lynnbrook で個人名義の建築許可(一般)$146.4k。",
+"infer": null,
+"note": "住宅(個人施主・詳細不明)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1146 Building Permit - General",
+"value": 146400.0,
+"verbatim": "Building Permit - General / ISSUED / (Orient, OH)",
+"gc": null,
+"pin": "160-002983",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -31613,6 +32663,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46955",
+"state": "OH",
+"city": "Franklin County・830 HIGHVIEW, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-27",
+"applied": "2026-08-26",
+"jp": false,
+"new": true,
+"summary": "Columbus 830 Highview の一般建築許可 $19,646(所有者は個人トラスト名義)。",
+"infer": null,
+"note": "住宅規模の小規模工事。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1143 Building Permit - General",
+"value": 19646.0,
+"verbatim": "Building Permit - General / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "250-005637",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "RADWAN GALAL M",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -31752,6 +32852,56 @@
 "batch": "session-029",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:12+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46951",
+"state": "OH",
+"city": "Franklin County・1458 AMITY ROAD, HILLIARD, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-27",
+"applied": "2026-07-07",
+"jp": false,
+"new": true,
+"summary": "Hilliard の 1458 Amity Road で一般建築許可 $15,000、申請者は個人(Clifford Millkin)。",
+"infer": null,
+"note": "住宅規模・詳細不明。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-0871 Building Permit - General",
+"value": 15000.0,
+"verbatim": "Building Permit - General / ISSUED / (HILLIARD, OH)",
+"gc": null,
+"pin": "120-000962-00",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -36663,56 +37813,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "GLAZE LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38078",
-"state": "OH",
-"city": "Worthington・1012 HIGH ST WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "食品・素材加工",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-27",
-"applied": "2026-07-29",
-"jp": false,
-"new": true,
-"summary": "Worthington 1012 High St に近隣向けベーカリーの新築(2階建て木造)及び駐車場整備。金額不明。",
-"infer": null,
-"note": "小売・飲食(近隣ベーカリー)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0172 New Building (OBC)",
-"value": null,
-"verbatim": "THIS PROJECT CONSISTS OF A NEW TWO-STORY WOOD-FRAMED BUILDING AND SITE REDEVELOPMENT WITH OFF-STREET PARKING FOR A NEIGHBORHOOD BAKERY. / New Building (OBC) / New Building ",
-"gc": null,
-"pin": "100-001121",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": "KERBLER THOMAS A",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -36952,6 +38052,56 @@
 "batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-47095",
+"state": "OH",
+"city": "Independence・6770 Delmur Dr Independence OH 44131",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-27",
+"applied": "2026-08-27",
+"jp": false,
+"new": true,
+"summary": "Independence 6770 Delmur Dr にてコンクリート工事(建物付帯)。所有者・金額は記録上不明。",
+"infer": null,
+"note": "汎用ラベルのみ・詳細不明。",
+"fact": {
+"src": "Independence 建築許可(公開記録)",
+"ref": "許可 2026-0025-CONWKBLD Concrete Work - Building",
+"value": null,
+"verbatim": "6x10 stoop rebuild & repour **Drawings on file / Concrete Work - Building / Concrete Work (Building)",
+"gc": null,
+"pin": "56303010",
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -37463,6 +38613,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46974",
+"state": "OH",
+"city": "Franklin County・5789 CRESCENT, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-26",
+"applied": "2026-08-26",
+"jp": false,
+"new": true,
+"summary": "Franklin County(Columbus, OH)5789 Crescent での一般建築許可 $305,000、所有者は個人(Robert Simon)。",
+"infer": null,
+"note": "個人住宅の可能性。詳細不明のため用途不明。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1147 Building Permit - General",
+"value": 305000.0,
+"verbatim": "Building Permit - General / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "253-002693",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "NKH INVESTMENTS LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -37863,6 +39063,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46964",
+"state": "OH",
+"city": "Franklin County・1465 S CLUBVIEW, COLUMBUS, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-26",
+"applied": "2026-08-25",
+"jp": false,
+"new": true,
+"summary": "個人所有(Pfeifer Charles E / Rosemary A)の建物一般許可 $55k(Columbus, OH)。",
+"infer": null,
+"note": "住宅(個人所有・小規模)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1140 Building Permit - General",
+"value": 55000.0,
+"verbatim": "Building Permit - General / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "213-001913",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "PROCTER & GAMBLE CO THE",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -38052,6 +39302,56 @@
 "batch": "session-013",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46971",
+"state": "OH",
+"city": "Franklin County・129 GREEN LAKE, GALLOWAY, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-26",
+"applied": "2026-08-26",
+"jp": false,
+"new": true,
+"summary": "Galloway の住宅所有者(Kinsley, Joseph/Mary)による建築許可(一般)$42,376。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1145 Building Permit - General",
+"value": 42376.0,
+"verbatim": "Building Permit - General / ISSUED / (GALLOWAY, OH)",
+"gc": null,
+"pin": "240-005385",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -38752,6 +40052,56 @@
 "batch": "session-023",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:12+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "DIAMOND INNOVATIONS INC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38062",
+"state": "OH",
+"city": "Worthington・6325 HUNTLEY RD WORTHINGTON OH 43229",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-26",
+"applied": "2026-08-04",
+"jp": false,
+"new": true,
+"summary": "Worthington 6325 Huntley Rd に「Control Enclosure(制御用エンクロージャ)」の新築許可。金額・所有者情報なし。",
+"infer": "制御盤等の小規模建屋の可能性があるが、用途・事業主体が記録から特定できない(推論不可)。",
+"note": "詳細不明・汎用ラベルのみ。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0174 New Building (OBC)",
+"value": 20000.0,
+"verbatim": "Control Enclosure / New Building (OBC) / New Building ",
+"gc": null,
+"pin": "100-002243",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -39502,6 +40852,56 @@
 "batch": "session-038",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:13+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "BISHOP HERRMANN EDWARD J",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38163",
+"state": "OH",
+"city": "Worthington・5750 N HIGH ST WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-26",
+"applied": "2026-08-13",
+"jp": false,
+"new": true,
+"summary": "教会祭事用の仮設テント設置(Worthington 5750 N High St)。金額不明。",
+"infer": null,
+"note": "宗教施設の一時的仮設物(工事なし)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0179 Alteration/Repair  (OBC)",
+"value": 9846.14,
+"verbatim": "Temporary Tents for Church Festival / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-001714",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -40352,6 +41752,56 @@
 "batch": "session-047",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:13+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46970",
+"state": "OH",
+"city": "Franklin County・3370 ORDERS, GROVE CITY, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-26",
+"applied": "2026-08-26",
+"jp": false,
+"new": true,
+"summary": "Grove City の住宅所有者(Sturms Johnathon/Danielle)による一般建築許可 $5,280。",
+"infer": null,
+"note": "住宅の小規模工事。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1144 Building Permit - General",
+"value": 5280.0,
+"verbatim": "Building Permit - General / ISSUED / (GROVE CITY, OH)",
+"gc": null,
+"pin": "160-001388",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -42913,106 +44363,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "DIAMOND INNOVATIONS INC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38062",
-"state": "OH",
-"city": "Worthington・6325 HUNTLEY RD WORTHINGTON OH 43229",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-08-26",
-"applied": "2026-08-04",
-"jp": false,
-"new": true,
-"summary": "Worthington 6325 Huntley Rd に「Control Enclosure(制御用エンクロージャ)」の新築許可。金額・所有者情報なし。",
-"infer": "制御盤等の小規模建屋の可能性があるが、用途・事業主体が記録から特定できない(推論不可)。",
-"note": "詳細不明・汎用ラベルのみ。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0174 New Building (OBC)",
-"value": null,
-"verbatim": "Control Enclosure / New Building (OBC) / New Building ",
-"gc": null,
-"pin": "100-002243",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "BISHOP HERRMANN EDWARD J",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38163",
-"state": "OH",
-"city": "Worthington・5750 N HIGH ST WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-26",
-"applied": "2026-08-13",
-"jp": false,
-"new": true,
-"summary": "教会祭事用の仮設テント設置(Worthington 5750 N High St)。金額不明。",
-"infer": null,
-"note": "宗教施設の一時的仮設物(工事なし)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0179 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Temporary Tents for Church Festival / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-001714",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": "BRENTLINGER CAREY E",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -43252,6 +44602,56 @@
 "batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-47052",
+"state": "OH",
+"city": "Independence・5959 Rockside Woods Blvd Unit: 4th Floor Independence OH 44131",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-25",
+"applied": "2026-08-12",
+"jp": false,
+"new": true,
+"summary": "Independence 5959 Rockside Woods Blvd 4階のテナント内装工事。金額・所有者ともに記録なし。",
+"infer": null,
+"note": "汎用テナント内装(用途不明)。",
+"fact": {
+"src": "Independence 建築許可(公開記録)",
+"ref": "許可 2026-0036-BLDC Commercial - Tenant Alteration",
+"value": 1500000.0,
+"verbatim": "Tenant Alteration; CBIZ (4th floor). ***Drawings on file. ***All sub-contractors must be registered with the City and pull their own permits. / Commercial - Tenant Alteration / Tenant Alteration",
+"gc": null,
+"pin": "56125018",
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -43813,6 +45213,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46976",
+"state": "OH",
+"city": "Franklin County・6086 ALICE, WESTERVILLE, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-25",
+"applied": "2026-08-18",
+"jp": false,
+"new": true,
+"summary": "Westerville の個人住宅における一般建築許可 $41k。",
+"infer": null,
+"note": "住宅(個人)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1119 Building Permit - General",
+"value": 41000.0,
+"verbatim": "Building Permit - General / ISSUED / (WESTERVILLE, OH)",
+"gc": null,
+"pin": "220-001532",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "RIDGE CALVERT LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -44002,6 +45452,56 @@
 "batch": "session-025",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:12+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-46975",
+"state": "OH",
+"city": "Franklin County・7286 POPPY HILLS, BLACKLICK, OH",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-25",
+"applied": "2026-07-14",
+"jp": false,
+"new": true,
+"summary": "Blacklick 7286 Poppy Hills の一般建築許可 $15,000(個人所有者 Lisa Riddle)。",
+"infer": null,
+"note": "住宅(小規模)。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-0914 Building Permit - General",
+"value": 15000.0,
+"verbatim": "Building Permit - General / ISSUED / (BLACKLICK, OH)",
+"gc": null,
+"pin": "170-002134",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -48813,6 +50313,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-47067",
+"state": "OH",
+"city": "Independence・8317 Hillside Rd Independence OH 44131",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-25",
+"applied": "2026-08-24",
+"jp": false,
+"new": true,
+"summary": "Independence 8317 Hillside Rd での外部解体許可(金額・所有者不明)。",
+"infer": null,
+"note": "解体(詳細不明)。",
+"fact": {
+"src": "Independence 建築許可(公開記録)",
+"ref": "許可 2026-0004-DEMO Demolition - Exterior",
+"value": null,
+"verbatim": "Removing Chimney **Plans & photos on file. **Final inspection required / Demolition - Exterior / Exterior",
+"gc": null,
+"pin": "56405020",
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "SOUTH CONT. CUYAHOGA CO JOINT",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -48952,6 +50502,56 @@
 "batch": "session-001",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "BG&CC DEVELOPMENT COMPANY LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-46987",
+"state": "OH",
+"city": "Franklin County・2765 COTTAGE LANE SOUTH, COLUMBUS, OH",
+"company": "BG&CC DEVELOPMENT COMPANY LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-24",
+"applied": "2026-08-21",
+"jp": false,
+"new": true,
+"summary": "Columbus, OH の Cottage Lane South における新築住宅の建築許可 $857k。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1130 Building Permit - New Residence",
+"value": 857203.0,
+"verbatim": "Building Permit - New Residence / ISSUED / (COLUMBUS, OH)",
+"gc": null,
+"pin": "213-000570-09",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-7716",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -49402,6 +51002,56 @@
 "batch": "session-004",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "East Galloway Development, LLC",
+"owner_kind": "登記名義",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-46984",
+"state": "OH",
+"city": "Franklin County・6129 SEQUUM WAY, GALLOWAY, OH",
+"company": "East Galloway Development, LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-24",
+"applied": "2026-08-20",
+"jp": false,
+"new": true,
+"summary": "Galloway, OH の新築住宅許可 $224,363(6129 Sequum Way)。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "Franklin County 建築許可(公開記録)",
+"ref": "許可 B-2026-1127 Building Permit - New Residence",
+"value": 224363.0,
+"verbatim": "Building Permit - New Residence / ISSUED / (GALLOWAY, OH)",
+"gc": null,
+"pin": "240-007167-00",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-7714",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -56213,6 +57863,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "ANDERSEN MARIA K",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38040",
+"state": "OH",
+"city": "Worthington・280 PINNEY DR WORTHINGTON OH 43085",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-21",
+"applied": "2026-08-04",
+"jp": false,
+"new": false,
+"summary": "Worthington 280 Pinney Dr の住宅で屋根の張り替え(シングル葺き替え)。金額記載なし。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0173 Alteration/Repair  (OBC)",
+"value": 19030.42,
+"verbatim": "shingle tear off and replacement on house / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-001056",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "KUM, BESONG",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -56552,6 +58252,56 @@
 "batch": "session-052",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:13+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "HARDING HERITAGE FOUNDATION",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38047",
+"state": "OH",
+"city": "Worthington・430 E GRANVILLE RD Worthington OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-21",
+"applied": "2026-08-08",
+"jp": false,
+"new": false,
+"summary": "窓3枚の交換工事(構造変更なし)。金額不明。",
+"infer": null,
+"note": "小規模改修(窓交換)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0177 Alteration/Repair  (OBC)",
+"value": 3600.0,
+"verbatim": "Remove and replace 3 windows, no structural change. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-000594",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -60102,106 +61852,6 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "ANDERSEN MARIA K",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38040",
-"state": "OH",
-"city": "Worthington・280 PINNEY DR WORTHINGTON OH 43085",
-"company": "(個人名義・非掲載)",
-"entity_type": "individual",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-21",
-"applied": "2026-08-04",
-"jp": false,
-"new": false,
-"summary": "Worthington 280 Pinney Dr の住宅で屋根の張り替え(シングル葺き替え)。金額記載なし。",
-"infer": null,
-"note": "屋根。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0173 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "shingle tear off and replacement on house / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-001056",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "HARDING HERITAGE FOUNDATION",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38047",
-"state": "OH",
-"city": "Worthington・430 E GRANVILLE RD Worthington OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-21",
-"applied": "2026-08-08",
-"jp": false,
-"new": false,
-"summary": "窓3枚の交換工事(構造変更なし)。金額不明。",
-"infer": null,
-"note": "小規模改修(窓交換)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0177 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Remove and replace 3 windows, no structural change. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-000594",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -64663,6 +66313,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "WG PROPERTY LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38010",
+"state": "OH",
+"city": "Worthington・6950 WORTHINGTON GALENA RD WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-19",
+"applied": "2026-07-29",
+"jp": false,
+"new": false,
+"summary": "Worthington 6950 Worthington Galena Rd で消火ポンプ更新と8インチ逆流防止弁の設置(改修・修理、金額不明)。",
+"infer": null,
+"note": "設備修理(消防・給水)。金額不明。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0171 Alteration/Repair  (OBC)",
+"value": 80000.0,
+"verbatim": "Installation of 8\" RP Backflow on Combo water line, Fire Pump Replacement. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-003515",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "AJAPPJR UPTOWN LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -68513,56 +70213,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "WG PROPERTY LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38010",
-"state": "OH",
-"city": "Worthington・6950 WORTHINGTON GALENA RD WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-08-19",
-"applied": "2026-07-29",
-"jp": false,
-"new": false,
-"summary": "Worthington 6950 Worthington Galena Rd で消火ポンプ更新と8インチ逆流防止弁の設置(改修・修理、金額不明)。",
-"infer": null,
-"note": "設備修理(消防・給水)。金額不明。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0171 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Installation of 8\" RP Backflow on Combo water line, Fire Pump Replacement. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-003515",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": "TREJO ANTONIO",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -69052,6 +70702,56 @@
 "batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T21:00:18+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "GALAXY AT POLARIS PHASE I LLC THE",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-1630",
+"state": "OH",
+"city": "Columbus・2130 IKEA WAY UNIT 200",
+"company": "GALAXY AT POLARIS PHASE I LLC THE",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-18",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Columbus 2130 Ikea Way Unit 200 における商業施設の構造的改修 $1.0M(6,100 SQFT)。",
+"infer": "IKEA 関連の商業テナントスペースの小規模改修と読める(推論)。生産・物流設備投資の兆候は薄い。",
+"note": "商業施設の小規模改修。",
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 ALTC2624454 Alteration",
+"value": 1000000.0,
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 6100 SQFT",
+"gc": null,
+"pin": "31844202025015",
+"owner_source": "parcel:delaware_oh"
+},
+"karte": null,
+"company_id": "C-7717",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -69702,56 +71402,6 @@
 "batch": "session-017",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
-}
-},
-{
-"investor": {
-"name": "CLEVELAND CLINIC",
-"basis": "owner_occupier",
-"label": "自社所有",
-"source": "parcel",
-"source_label": "登記(郡台帳)"
-},
-"parties": {
-"owner_of_record": "CLEVELAND CLINIC FOUNDATION",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": "NEPTUNE PLUMBING & HEATING COMPANY"
-},
-"id": "S-36980",
-"state": "OH",
-"city": "Cleveland・9500 EUCLID AVE, CLEVELAND, OH, 44106",
-"company": "CLEVELAND CLINIC",
-"entity_type": "corp",
-"company_basis": "parcel",
-"industry": "医薬・ライフサイエンス",
-"category": "未分類",
-"category_raw": "医療施設",
-"confidence": "low",
-"date": "2026-08-18",
-"applied": "2026-08-06",
-"jp": false,
-"new": false,
-"summary": "Cleveland Clinic 敷地(9500 Euclid Ave)の病院/介護施設で配管工事 $30k(シンク3台・グリース阻集器・給排水配管100フィート)。親許可 BCB26-020921 の副許可。",
-"infer": "小規模な厨房・配管の付帯工事であり、親建築許可の内容(用途)は本文からは不明(推論不可)。",
-"note": null,
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCP26-033193 Commercial Plumbing",
-"value": 30000.0,
-"verbatim": "Commercial Plumbing / I-2 Institutional - Hospitals / Nursing Home / INSTALL 3 SINKS,1 GREASE ITERCEPTOR, 100 LIN. FT. DRAIN, WASTE, VENT PIPIN, 100 LIN. FT. WATER DISTRUBUTION PIPING ***BUILDING PERM",
-"gc": "NEPTUNE PLUMBING & HEATING COMPANY",
-"pin": "11916001",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-3629",
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
 }
 },
 {
@@ -95125,7 +96775,7 @@
 "company": "NORTHROP GRUMMAN",
 "entity_type": "corp",
 "company_basis": "description",
-"industry": "航空宇宙",
+"industry": "軍事・防衛",
 "category": "未分類",
 "category_raw": "製造能力の増強",
 "confidence": "low",
@@ -95133,8 +96783,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Butler County 460 W Crescentville Rd で Northrop Grumman のテナント内装工事(金額不明)。",
-"infer": "航空宇宙・防衛大手のテナントスペース改修 = 研究・製造関連拠点の設備投資の可能性(推論)。",
+"summary": "Butler County 460 W Crescentville Rd で Northrop Grumman 向けテナント内装工事(金額不明)。所有者は West Crescentville LLC。",
+"infer": "防衛大手のテナント改修 = 生産・試験設備の増強に関わる可能性(推論)。金額不明で規模は未確認。",
 "note": null,
 "fact": {
 "src": "Butler County 建築許可(公開記録)",
@@ -95148,10 +96798,10 @@
 "karte": null,
 "company_id": "C-3627",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -95502,6 +97152,56 @@
 "batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "NP LIMITED PARTNERSHIP",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": "ARCO/Murray National Construction",
+"gc": null
+},
+"id": "S-1806",
+"state": "OH",
+"city": "Columbus・0 LYRA DR",
+"company": "NP LIMITED PARTNERSHIP",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-11",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Columbus 0 Lyra Dr にて 96,500 SQFT の商業施設(店舗・カスタマーサービス用途)の基礎工事 $2.3M。",
+"infer": "用途区分が「Stores and Customer Services」= 小売系施設と読める(推論)。工場・倉庫の明示はない。",
+"note": "店舗系(小売)。",
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 FNDTC2630333 Foundation",
+"value": 2300000.0,
+"verbatim": "Commercial - Other / Foundation / Stores and Customer Services / Structural / 96500 SQFT",
+"gc": "ARCO/Murray National Construction",
+"pin": "31842403018000",
+"owner_source": "parcel:delaware_oh"
+},
+"karte": null,
+"company_id": "C-7715",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -110256,56 +111956,6 @@
 },
 {
 "investor": {
-"name": "CINCINNATI CHILDREN'S HOSPITAL MEDICAL CENTER",
-"basis": "operator",
-"label": "操業事業者",
-"source": "permit_text",
-"source_label": "許可記録(本文)"
-},
-"parties": {
-"owner_of_record": "CHILDRENS HOSPITAL MEDICAL CENTER",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-35185",
-"state": "OH",
-"city": "Butler County・7777 YANKEE RD, LIBERTY TWP OH",
-"company": "CINCINNATI CHILDREN'S HOSPITAL MEDICAL CENTER",
-"entity_type": "corp",
-"company_basis": "description",
-"industry": "医薬・ライフサイエンス",
-"category": "未分類",
-"category_raw": "医療施設",
-"confidence": "low",
-"date": "2026-08-10",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Cincinnati Children's Hospital Medical Center の 3 階テナント内装工事(Liberty Twp, Butler County)。金額は記録なし。",
-"infer": "小児病院の内装改修 = 医療機器・診療設備の更新/増設を伴う可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Butler County 建築許可(公開記録)",
-"ref": "許可 BLD-CN26-03368 Commercial Tenant Finish",
-"value": null,
-"verbatim": "ALTERATION 3RD FLR - CINCI CHILDREN'S HOSPITAL MED CTR / IN PROGRESS / Commercial Tenant Finish",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:butler_oh:addr"
-},
-"karte": null,
-"company_id": "C-3693",
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
-}
-},
-{
-"investor": {
 "name": null,
 "basis": "unknown",
 "label": "未特定",
@@ -111652,56 +113302,6 @@
 "batch": "session-073",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:15+00:00"
-}
-},
-{
-"investor": {
-"name": "OHIOHEALTH CORPORATION",
-"basis": "owner_occupier",
-"label": "自社所有",
-"source": "parcel",
-"source_label": "登記(郡台帳)"
-},
-"parties": {
-"owner_of_record": "OHIOHEALTH CORPORATION",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": "BDT Architects & Designers",
-"gc": null
-},
-"id": "S-1855",
-"state": "OH",
-"city": "Columbus・111 S GRANT AVE",
-"company": "OHIOHEALTH CORPORATION",
-"entity_type": "corp",
-"company_basis": "owner",
-"industry": "医薬・ライフサイエンス",
-"category": "未分類",
-"category_raw": "医療施設",
-"confidence": "low",
-"date": "2026-08-07",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "OhioHealth の建物(111 S Grant Ave)で 12,000 SF の構造的改修 $2M。",
-"infer": "病院法人の施設改修であり、用途詳細は記録上不明だが医療関連設備の更新の可能性(推論)。",
-"note": null,
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 ALTC2629458 Alteration",
-"value": 2000000.0,
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 12000 SQFT",
-"gc": "BDT Architects & Designers",
-"pin": "010001595",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-138",
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01AzubD3nbsHmkHgUauTFCbS",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T21:00:18+00:00"
 }
 },
 {
@@ -116113,56 +117713,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "ALDRICH CHEMICAL CO LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": "Michael Suttle",
-"gc": null
-},
-"id": "S-33970",
-"state": "OH",
-"city": "Montgomery County・3858 BENNER Rd MIAMISBURG, OH 45342",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "研究・ラボ施設",
-"confidence": "low",
-"date": "2026-08-07",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "既存建物へのラボ・支援オフィス増築(単層・従来工法)。所有者・金額は記録に記載なし。",
-"infer": "研究所拡張の兆候(推論)だが業種・事業主体は本文からは特定不可。",
-"note": null,
-"fact": {
-"src": "Montgomery County 建築許可(公開記録)",
-"ref": "許可 BLDC26-0258 Commercial Building",
-"value": null,
-"verbatim": "New building addition to an existing building, including additional laboratories and supporting offices, single story, conventionally constructed. / Commercial Building / (MIAMI TOWNSHIP)",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:montgomery_oh:addr"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": null,
 "owner_kind": null,
 "owner_is_spe": false,
@@ -116902,6 +118452,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "EASTWOOD PROPERTIES LTD",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37884",
+"state": "OH",
+"city": "Worthington・7030 WORTHINGTON GALENA RD WORTHINGTON OH 43229",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-06",
+"applied": "2026-07-27",
+"jp": false,
+"new": false,
+"summary": "既存屋根をメタルデッキまで撤去し、R-30 のISO断熱材2層とPVC防水membraneを新設する屋根改修工事。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0167 Alteration/Repair  (OBC)",
+"value": 208112.12,
+"verbatim": "Remove existing roof system down to metal deck. Install 2 layers of 2.6 Iso insulation with the R-30 value. Install new PVC membrane over insulation. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-002431",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -117913,6 +119513,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "CITY OF WORTHINGTON",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37912",
+"state": "OH",
+"city": "Worthington・245 E DUBLIN-GRANVILLE RD WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-06",
+"applied": "2026-04-29",
+"jp": false,
+"new": false,
+"summary": "公園に電気サービスがなかったため、新設の温水囲い設備用に新規電気引込を設置(OBC 改修/修理許可)。金額記載なし。",
+"infer": null,
+"note": "公園設備(工事)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0089 Alteration/Repair  (OBC)",
+"value": 30000.0,
+"verbatim": "The park did not have an electrical service. A new electrical service is being provided to serve a new heated water enclosure. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-000496",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "RIVERA ELEAZAR & JOSE E",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -118702,6 +120352,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37904",
+"state": "OH",
+"city": "Worthington・0 PROPRIETORS RD WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-06",
+"applied": "2026-07-08",
+"jp": false,
+"new": false,
+"summary": "Worthington 0 Proprietors Rd の「Scale House」建物1の壁・屋根の損傷修理(金額不明)。",
+"infer": null,
+"note": "修繕(小規模・計量小屋の壁・屋根)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0143 Alteration/Repair  (OBC)",
+"value": 10000.0,
+"verbatim": "Scale House - Wall and Roof Damage (Building 1) / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-000384",
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -123363,156 +125063,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "EASTWOOD PROPERTIES LTD",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37884",
-"state": "OH",
-"city": "Worthington・7030 WORTHINGTON GALENA RD WORTHINGTON OH 43229",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-06",
-"applied": "2026-07-27",
-"jp": false,
-"new": false,
-"summary": "既存屋根をメタルデッキまで撤去し、R-30 のISO断熱材2層とPVC防水membraneを新設する屋根改修工事。",
-"infer": null,
-"note": "屋根。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0167 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Remove existing roof system down to metal deck. Install 2 layers of 2.6 Iso insulation with the R-30 value. Install new PVC membrane over insulation. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-002431",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37904",
-"state": "OH",
-"city": "Worthington・0 PROPRIETORS RD WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-08-06",
-"applied": "2026-07-08",
-"jp": false,
-"new": false,
-"summary": "Worthington 0 Proprietors Rd の「Scale House」建物1の壁・屋根の損傷修理(金額不明)。",
-"infer": null,
-"note": "修繕(小規模・計量小屋の壁・屋根)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0143 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Scale House - Wall and Roof Damage (Building 1) / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-000384",
-"owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "CITY OF WORTHINGTON",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37912",
-"state": "OH",
-"city": "Worthington・245 E DUBLIN-GRANVILLE RD WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-08-06",
-"applied": "2026-04-29",
-"jp": false,
-"new": false,
-"summary": "公園に電気サービスがなかったため、新設の温水囲い設備用に新規電気引込を設置(OBC 改修/修理許可)。金額記載なし。",
-"infer": null,
-"note": "公園設備(工事)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0089 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "The park did not have an electrical service. A new electrical service is being provided to serve a new heated water enclosure. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-000496",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": null,
 "owner_kind": null,
 "owner_is_spe": false,
@@ -124602,6 +126152,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "DRP WORTHINGTON LP",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37975",
+"state": "OH",
+"city": "Worthington・7227 N HIGH ST WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-05",
+"applied": "2026-07-24",
+"jp": false,
+"new": false,
+"summary": "テナントスペースの天井・壁の石膏ボード交換(用途・所有者不明、金額記載なし)。",
+"infer": null,
+"note": "内装小規模改修。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0166 Alteration/Repair  (OBC)",
+"value": 50000.0,
+"verbatim": "Replacment of drywall ceilings and walls in tenant spaces. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-006788",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -127313,6 +128913,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "6767 HUNTLEY LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38004",
+"state": "OH",
+"city": "Worthington・6767 HUNTLEY RD WORTHINGTON OH 43229",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-08-05",
+"applied": "2026-07-28",
+"jp": false,
+"new": false,
+"summary": "Worthington 6767 Huntley Rd の保管ユニット向けに3相3線60A給電をディスコネクトへ供給し25Aへヒューズダウンする電気工事(金額不明)。",
+"infer": null,
+"note": "小規模電気工事(用途不明・金額記載なし)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0168 Alteration/Repair  (OBC)",
+"value": 3500.0,
+"verbatim": "Provide a 3 phase 3 wire 60A feed to a Disconnect and fused down to 25A for a storage unit. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-003930",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "CONROY JEFFREY D",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -129963,56 +131613,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "DRP WORTHINGTON LP",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37975",
-"state": "OH",
-"city": "Worthington・7227 N HIGH ST WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-08-05",
-"applied": "2026-07-24",
-"jp": false,
-"new": false,
-"summary": "テナントスペースの天井・壁の石膏ボード交換(用途・所有者不明、金額記載なし)。",
-"infer": null,
-"note": "内装小規模改修。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0166 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Replacment of drywall ceilings and walls in tenant spaces. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-006788",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": null,
 "owner_kind": null,
 "owner_is_spe": false,
@@ -130144,56 +131744,6 @@
 "gc": null,
 "pin": null,
 "owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "6767 HUNTLEY LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38004",
-"state": "OH",
-"city": "Worthington・6767 HUNTLEY RD WORTHINGTON OH 43229",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-08-05",
-"applied": "2026-07-28",
-"jp": false,
-"new": false,
-"summary": "Worthington 6767 Huntley Rd の保管ユニット向けに3相3線60A給電をディスコネクトへ供給し25Aへヒューズダウンする電気工事(金額不明)。",
-"infer": null,
-"note": "小規模電気工事(用途不明・金額記載なし)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0168 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Provide a 3 phase 3 wire 60A feed to a Disconnect and fused down to 25A for a storage unit. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-003930",
-"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": null,
@@ -134302,6 +135852,56 @@
 "batch": "session-052",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:13+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "DRAGO JOHN EDWARD",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37905",
+"state": "OH",
+"city": "Worthington・6795 HAYHURST ST WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-08-04",
+"applied": "2026-07-22",
+"jp": false,
+"new": false,
+"summary": "Worthington 6795 Hayhurst St で窓2枚の交換(構造変更なし)。金額不明。",
+"infer": null,
+"note": "小規模改修(窓交換)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0163 Alteration/Repair  (OBC)",
+"value": 4000.0,
+"verbatim": "Remove and replace 2 windows, no structural change. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-003318",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -138544,56 +140144,6 @@
 "gc": null,
 "pin": null,
 "owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "DRAGO JOHN EDWARD",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37905",
-"state": "OH",
-"city": "Worthington・6795 HAYHURST ST WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-04",
-"applied": "2026-07-22",
-"jp": false,
-"new": false,
-"summary": "Worthington 6795 Hayhurst St で窓2枚の交換(構造変更なし)。金額不明。",
-"infer": null,
-"note": "小規模改修(窓交換)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0163 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Remove and replace 2 windows, no structural change. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-003318",
-"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": null,
@@ -152213,56 +153763,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "6770 CINCINNATI LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-35314",
-"state": "OH",
-"city": "Butler County・6770 CINCINNATI DAYTON RD, SUITE 209, OH",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "未分類",
-"category_raw": "医療施設",
-"confidence": "low",
-"date": "2026-07-31",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Butler County の商業テナント(Suite 209)に小児科クリニックのテナント内装工事。金額は記録なし。",
-"infer": "小規模な医療テナント内装であり、医療機器・診察設備の調達が伴う可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Butler County 建築許可(公開記録)",
-"ref": "許可 BLD-CN26-03250 Commercial Tenant Finish",
-"value": null,
-"verbatim": "TENANT FINISH- PEDIATRIC CARE CLINIC / READY FOR PICKUP / Commercial Tenant Finish",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:butler_oh:addr"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": "GSP PRINCETON ROAD LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -159572,9 +161072,9 @@
 "id": "S-40291",
 "state": "OH",
 "city": "Kettering・5450 FAR HILLS Ave, KETTERING OH 45429",
-"company": "所有者・申請者の記載なし",
+"company": "RAHN FOUNTAIN PLAZA",
 "entity_type": "unknown",
-"company_basis": null,
+"company_basis": "owner",
 "industry": "医薬・ライフサイエンス",
 "category": "未分類",
 "category_raw": "医療施設",
@@ -159583,9 +161083,9 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Kettering の 5450 Far Hills Ave にて、行動医療/メディカルオフィス関連の構造許可(金額不明)。",
-"infer": null,
-"note": "金額不明。",
+"summary": "Kettering の Fountain Plaza(5450 Far Hills Ave)にてビヘイビアラルヘルス/メディカルオフィスの構造許可(金額不明)。",
+"infer": "メディカルオフィス系のテナント工事 = 内装・医療設備の調達が伴う可能性(推論)。",
+"note": null,
 "fact": {
 "src": "Kettering 建築許可(公開記録)",
 "ref": "許可 S26-04485 Structural Permit",
@@ -159598,10 +161098,10 @@
 "karte": null,
 "company_id": null,
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -162913,6 +164413,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "JAK INVESTMENTS LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37903",
+"state": "OH",
+"city": "Worthington・6511 PROPRIETORS RD WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-29",
+"applied": "2026-07-08",
+"jp": false,
+"new": false,
+"summary": "Worthington 6511 Proprietors Rd で照明をLEDへ更新し、天井吊り下げ型のエアフィルターを2台追加する小規模改修。",
+"infer": null,
+"note": "軽微な改修(照明・空気清浄機)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0144 Alteration/Repair  (OBC)",
+"value": 2500.0,
+"verbatim": "upgraded fixtured lighting to Hex LED lighting and added 2 air filters mounted from ceiling / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-002213",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "GOETZMAN ADAM & HOLLY",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -165806,56 +167356,6 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "JAK INVESTMENTS LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37903",
-"state": "OH",
-"city": "Worthington・6511 PROPRIETORS RD WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-07-29",
-"applied": "2026-07-08",
-"jp": false,
-"new": false,
-"summary": "Worthington 6511 Proprietors Rd で照明をLEDへ更新し、天井吊り下げ型のエアフィルターを2台追加する小規模改修。",
-"infer": null,
-"note": "軽微な改修(照明・空気清浄機)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0144 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "upgraded fixtured lighting to Hex LED lighting and added 2 air filters mounted from ceiling / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-002213",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
 "name": "TREADWELL CREDIT UNION",
 "basis": "operator",
 "label": "操業事業者",
@@ -165983,8 +167483,8 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "South College 向けに既存建物の1階と5階西棟を改修。1階は職員・管理・教員機能、5階は学生ラボ・講義室・教室・多目的スペースへ改修(金額不明)。",
-"infer": "教育機関の学生ラボ改修 = 実験・教育用機器の調達が伴う可能性(推論)。",
+"summary": "South College(専門学校)向けにオフィスビル1階と5階西棟を改修、5階は学生ラボ・講義室・教室に転用(金額不明)。",
+"infer": "学生ラボの新設 = 教育用実験機器・実習設備の調達が伴う可能性(推論)。金額不明のため規模は不確か。",
 "note": null,
 "fact": {
 "src": "Dublin 建築許可(公開記録)",
@@ -165998,10 +167498,10 @@
 "karte": null,
 "company_id": null,
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
+"generated_at": "2026-09-07T08:15:41+00:00"
 }
 },
 {
@@ -166313,6 +167813,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "CITY OF WORTHINGTON",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38032",
+"state": "OH",
+"city": "Worthington・380 HIGHLAND AVE WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-28",
+"applied": "2026-07-15",
+"jp": false,
+"new": false,
+"summary": "Worthington 380 Highland Ave の建物で空調設備(AHU/RTU/VAV/ボイラー等)の全面更新工事。金額不明。",
+"infer": "HVAC設備の大規模改修だが所有者・用途(工場か一般施設か)が記録から不明のため業種判定不可(推論)。",
+"note": "設備改修(用途不明・金額不明)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0151 Alteration/Repair  (OBC)",
+"value": 774590.0,
+"verbatim": "• REPLACE AHU-1 AND F-1 WITH NEW RTU-1 ON GRADE.\n• REPLACE MAU ON MEZZANINE.\n• ADD 12 NEW VAV BOXES WITH HOT WATER REHEAT COILS.\n• PROVIDE NEW GAS-FIRED HOT WATER BOILER SYSTEM AND DISTRIBUTION PIPING",
+"gc": null,
+"pin": "100-002538",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "RRR DEVELOPMENT HOLDINGS LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -166352,6 +167902,106 @@
 "batch": "session-001",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "CITY OF WORTHINGTON OHIO",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37862",
+"state": "OH",
+"city": "Worthington・777 EVENING ST WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-28",
+"applied": "2026-07-15",
+"jp": false,
+"new": false,
+"summary": "屋上ユニット14台や電気ヒーター等の空調機器を更新する改修工事(金額不明)。",
+"infer": null,
+"note": "設備更新(HVAC入替)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0153 Alteration/Repair  (OBC)",
+"value": 619552.0,
+"verbatim": "• REPLACE 14 ROOFTOP UNITS.\n• REPLACE 4 ELECTRIC WALL MOUNT UNIT HEATERS.\n• REPLACE 2 UPBLAST EXHAUST FANS LOCATED ON THE ROOF, AND 1 INLINE EXHAUST FAN LOCATED IN THE\nBASEMENT.\n• REPLACE (1)MINI SPLI",
+"gc": null,
+"pin": "100-006618",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "CITY OF WORTHINGTON",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37980",
+"state": "OH",
+"city": "Worthington・382 HIGHLAND AVE WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-28",
+"applied": "2026-07-15",
+"jp": false,
+"new": false,
+"summary": "Worthington 382 Highland Ave の建物で暖房・排気・空調設備の更新(Reznor ヒーター交換、換気扇追加など)。所有者・金額は記録に無し。",
+"infer": "設備の種類(産業用ヒーター・排気ファン・MAU)から倉庫または軽工業施設の空調更新の可能性(推論)。",
+"note": "HVAC 更新(用途不明・金額不明)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0152 Alteration/Repair  (OBC)",
+"value": 460647.0,
+"verbatim": "• REPLACE 4 REZNOR HEATERS.\n• REPLACE 2 REZNOR UNITS WITH GAS FURNACES AND DX COOLING SYSTEMS.\n• REPLACE 1 REZNOR UNIT WITH GAS FURNACE.\n• REPLACE 1 SPLIT SYSTEM GAS FURNACE AND DX AIR CONDITIONER SYS",
+"gc": null,
+"pin": "100-002538",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -166452,6 +168102,56 @@
 "batch": "session-003",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "CITY OF WORTHINGTON",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37974",
+"state": "OH",
+"city": "Worthington・374 HIGHLAND AVE WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-28",
+"applied": "2026-07-15",
+"jp": false,
+"new": false,
+"summary": "Worthington 374 Highland Ave にて分割式ガス炉・空調機 9台の交換、他1台交換、排気ファン5台交換等のHVAC改修工事(金額不明)。",
+"infer": null,
+"note": "HVAC設備更新(建物用途不明・生産設備投資ではない可能性)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0154 Alteration/Repair  (OBC)",
+"value": 297552.0,
+"verbatim": "• REPLACE 9 SPLIT SYSTEM GAS FURNACE AND DX AIR CONDITIONER SYSTEMS.\n• REPLACE 1 SPLIT SYSTEM GAS FURNACE AND DX AIR CONDITIONER SYSTEM W/GAS FURNACE AND AC.\n• REPLACE 5 INLINE EXHAUST FANS ON THE FIR",
+"gc": null,
+"pin": "100-002538",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -171113,156 +172813,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "CITY OF WORTHINGTON OHIO",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37862",
-"state": "OH",
-"city": "Worthington・777 EVENING ST WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-28",
-"applied": "2026-07-15",
-"jp": false,
-"new": false,
-"summary": "屋上ユニット14台や電気ヒーター等の空調機器を更新する改修工事(金額不明)。",
-"infer": null,
-"note": "設備更新(HVAC入替)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0153 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "• REPLACE 14 ROOFTOP UNITS.\n• REPLACE 4 ELECTRIC WALL MOUNT UNIT HEATERS.\n• REPLACE 2 UPBLAST EXHAUST FANS LOCATED ON THE ROOF, AND 1 INLINE EXHAUST FAN LOCATED IN THE\nBASEMENT.\n• REPLACE (1)MINI SPLI",
-"gc": null,
-"pin": "100-006618",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "CITY OF WORTHINGTON",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37974",
-"state": "OH",
-"city": "Worthington・374 HIGHLAND AVE WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-28",
-"applied": "2026-07-15",
-"jp": false,
-"new": false,
-"summary": "Worthington 374 Highland Ave にて分割式ガス炉・空調機 9台の交換、他1台交換、排気ファン5台交換等のHVAC改修工事(金額不明)。",
-"infer": null,
-"note": "HVAC設備更新(建物用途不明・生産設備投資ではない可能性)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0154 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "• REPLACE 9 SPLIT SYSTEM GAS FURNACE AND DX AIR CONDITIONER SYSTEMS.\n• REPLACE 1 SPLIT SYSTEM GAS FURNACE AND DX AIR CONDITIONER SYSTEM W/GAS FURNACE AND AC.\n• REPLACE 5 INLINE EXHAUST FANS ON THE FIR",
-"gc": null,
-"pin": "100-002538",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "CITY OF WORTHINGTON",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37980",
-"state": "OH",
-"city": "Worthington・382 HIGHLAND AVE WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-28",
-"applied": "2026-07-15",
-"jp": false,
-"new": false,
-"summary": "Worthington 382 Highland Ave の建物で暖房・排気・空調設備の更新(Reznor ヒーター交換、換気扇追加など)。所有者・金額は記録に無し。",
-"infer": "設備の種類(産業用ヒーター・排気ファン・MAU)から倉庫または軽工業施設の空調更新の可能性(推論)。",
-"note": "HVAC 更新(用途不明・金額不明)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0152 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "• REPLACE 4 REZNOR HEATERS.\n• REPLACE 2 REZNOR UNITS WITH GAS FURNACES AND DX COOLING SYSTEMS.\n• REPLACE 1 REZNOR UNIT WITH GAS FURNACE.\n• REPLACE 1 SPLIT SYSTEM GAS FURNACE AND DX AIR CONDITIONER SYS",
-"gc": null,
-"pin": "100-002538",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": "MURESAN, DENISA",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -171294,56 +172844,6 @@
 "gc": null,
 "pin": null,
 "owner_source": "parcel:cuyahoga_oh:addr"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "CITY OF WORTHINGTON",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38032",
-"state": "OH",
-"city": "Worthington・380 HIGHLAND AVE WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-28",
-"applied": "2026-07-15",
-"jp": false,
-"new": false,
-"summary": "Worthington 380 Highland Ave の建物で空調設備(AHU/RTU/VAV/ボイラー等)の全面更新工事。金額不明。",
-"infer": "HVAC設備の大規模改修だが所有者・用途(工場か一般施設か)が記録から不明のため業種判定不可(推論)。",
-"note": "設備改修(用途不明・金額不明)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0151 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "• REPLACE AHU-1 AND F-1 WITH NEW RTU-1 ON GRADE.\n• REPLACE MAU ON MEZZANINE.\n• ADD 12 NEW VAV BOXES WITH HOT WATER REHEAT COILS.\n• PROVIDE NEW GAS-FIRED HOT WATER BOILER SYSTEM AND DISTRIBUTION PIPING",
-"gc": null,
-"pin": "100-002538",
-"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": null,
@@ -176963,6 +178463,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "HIGH POINTE CUSTOM HOMES"
+},
+"id": "S-1100",
+"state": "OH",
+"city": "Cincinnati・1039 E ROOKWOOD DR",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-24",
+"applied": "2026-03-30",
+"jp": false,
+"new": false,
+"summary": "Cincinnati 1039 E Rookwood Dr における新築工事 $1.5M(個人所有者 Evans 夫妻)。",
+"infer": "1-2-3 FM(住宅系)分類と個人名義から高級住宅の新築の可能性(推論)。",
+"note": "住宅。",
+"fact": {
+"src": "シンシナティ市 建築許可(公開記録)",
+"ref": "許可 2026P02942 Building",
+"value": 1500000.0,
+"verbatim": "New Building / Building / 1-2-3 FM",
+"gc": "HIGH POINTE CUSTOM HOMES",
+"pin": "00460A040020",
+"owner_source": "parcel:hamilton_oh:addr"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "1340 BETHEL ROAD LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -177052,6 +178602,56 @@
 "batch": "session-003",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "CITY OF WORTHINGTON",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37907",
+"state": "OH",
+"city": "Worthington・6550 N HIGH ST Worthington OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-24",
+"applied": "2026-07-14",
+"jp": false,
+"new": false,
+"summary": "既存建物のガス炉・DX空調システム8台の入替、フルー配管・排気ファン等のHVAC更新工事(金額不明)。",
+"infer": null,
+"note": "HVAC更新(既存建物の設備改修)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0148 Alteration/Repair  (OBC)",
+"value": 249102.0,
+"verbatim": "• REPLACE QTY. 8 GAS FURNACE AND DX AIR CONDITIONER SYSTEMS.\n• REPLACE ALL EXISTING FURNACE FLUE AND COMBUSTION AIR PIPING FROM FURNACES THROUGH\nCHIMNEY TERMINATIONS.\n• REPLACE 1 DUCTLESS SPLIT SYSTEM",
+"gc": null,
+"pin": "100-006588",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -181413,56 +183013,6 @@
 "source_label": null
 },
 "parties": {
-"owner_of_record": "CITY OF WORTHINGTON",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37907",
-"state": "OH",
-"city": "Worthington・6550 N HIGH ST Worthington OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-24",
-"applied": "2026-07-14",
-"jp": false,
-"new": false,
-"summary": "既存建物のガス炉・DX空調システム8台の入替、フルー配管・排気ファン等のHVAC更新工事(金額不明)。",
-"infer": null,
-"note": "HVAC更新(既存建物の設備改修)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0148 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "• REPLACE QTY. 8 GAS FURNACE AND DX AIR CONDITIONER SYSTEMS.\n• REPLACE ALL EXISTING FURNACE FLUE AND COMBUSTION AIR PIPING FROM FURNACES THROUGH\nCHIMNEY TERMINATIONS.\n• REPLACE 1 DUCTLESS SPLIT SYSTEM",
-"gc": null,
-"pin": "100-006588",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
 "owner_of_record": "MEYER JEFFREY F TR AND",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -183152,6 +184702,56 @@
 "batch": "session-026",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:12+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "WILMER WENDY E",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37854",
+"state": "OH",
+"city": "Worthington・6675 SCHREINER ST WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-23",
+"applied": "2026-02-25",
+"jp": false,
+"new": false,
+"summary": "Worthington 6675 Schreiner St で屋根の全面交換工事(許可種別: 改修/修理)。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0038 Alteration/Repair  (OBC)",
+"value": 18000.0,
+"verbatim": "Full Roof Replacement / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-003439",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -185794,56 +187394,6 @@
 "gc": null,
 "pin": null,
 "owner_source": "parcel:hamilton_oh:addr"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "WILMER WENDY E",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37854",
-"state": "OH",
-"city": "Worthington・6675 SCHREINER ST WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-23",
-"applied": "2026-02-25",
-"jp": false,
-"new": false,
-"summary": "Worthington 6675 Schreiner St で屋根の全面交換工事(許可種別: 改修/修理)。",
-"infer": null,
-"note": "屋根。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0038 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Full Roof Replacement / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-003439",
-"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": null,
@@ -190141,56 +191691,6 @@
 "ref": "許可 BLDC26-0238 Commercial Building",
 "value": null,
 "verbatim": "Change of use for rear half of building from B to F-1 use type. Office and restroom on the side of the building to be used for the space. / Pay Fees Due / Commercial Building / (HARRISON TOWNSHIP)",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:montgomery_oh:addr"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T15:00:01+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "GRANDVIEW HOSPITAL AND",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": "Sandra Voelker",
-"gc": null
-},
-"id": "S-34305",
-"state": "OH",
-"city": "Montgomery County・1997 MIAMISBURG CENTERVILLE Rd DAYTON, OH 45459",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "未分類",
-"category_raw": "研究・ラボ施設",
-"confidence": "low",
-"date": "2026-07-22",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "病院の分娩・出産エリア(Labor and Delivery)の改修工事(Washington Township, Dayton OH)。金額情報なし。",
-"infer": "産科病棟の改修 = 医療機器・モニタリング設備・特殊内装の調達が伴う可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Montgomery County 建築許可(公開記録)",
-"ref": "許可 BLDC26-0235 Commercial Building",
-"value": null,
-"verbatim": "Renovation of Hospital Labor and Delivery Area / Commercial Building / (WASHINGTON TOWNSHIP)",
 "gc": null,
 "pin": null,
 "owner_source": "parcel:montgomery_oh:addr"
@@ -197256,56 +198756,6 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "NATIONWIDE CHILDRENS HOSPITAL",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": "Nationwide Children's Hospital",
-"gc": null
-},
-"id": "S-2374",
-"state": "OH",
-"city": "Columbus・700 CHILDREN'S DR",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "未分類",
-"category_raw": "医療施設",
-"confidence": "low",
-"date": "2026-07-20",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Columbus 700 Children's Dr で構造改修(Alteration)2,075 SQFT $300k。",
-"infer": "住所 700 Children's Dr は Nationwide Children's Hospital(小児病院)キャンパスと一致する可能性(推論)。所有者名の記載なし。",
-"note": null,
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 ALTC2622053 Alteration",
-"value": 300000.0,
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 2075 SQFT",
-"gc": "Nationwide Children's Hospital",
-"pin": "010082628",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-003",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:11+00:00"
-}
-},
-{
-"investor": {
 "name": "M/I HOMES",
 "basis": "operator",
 "label": "操業事業者",
@@ -201802,6 +203252,56 @@
 "batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-47191",
+"state": "OH",
+"city": "Middletown・4214 GRAND Avenue",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-20",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Middletown 4214 Grand Avenue で新規テナント向けの改修工事(金額不明)。",
+"infer": null,
+"note": "テナント改修(用途不明・金額不明)。",
+"fact": {
+"src": "Middletown 建築許可(公開記録)",
+"ref": "許可 C26-000029 Building Commercial",
+"value": null,
+"verbatim": "Renovation for new tenant / Building Commercial / Alterations",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 },
 {
@@ -209063,6 +210563,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "WWB HOLDINGS I LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38074",
+"state": "OH",
+"city": "Worthington・300 W WILSON BRIDGE RD Unit: Suite 300 WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-16",
+"applied": "2026-06-17",
+"jp": false,
+"new": false,
+"summary": "Worthington のオフィススイート(Suite 300)で間仕切り・照明・什器の解体と新設を行う内装改修(金額不明)。",
+"infer": null,
+"note": "オフィス内装改修。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0132 Alteration/Repair  (OBC)",
+"value": 243950.0,
+"verbatim": "Demolition of existing partitions, lights, casework. New construction of partitions, lights, casework. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-005592",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "REID FLATS LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -209252,6 +210802,56 @@
 "batch": "session-006",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:11+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "WWB HOLDINGS I LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38147",
+"state": "OH",
+"city": "Worthington・300 W WILSON BRIDGE RD Unit: Suite 310 WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-16",
+"applied": "2026-06-17",
+"jp": false,
+"new": false,
+"summary": "Worthington のオフィススイート(300 W Wilson Bridge Rd Suite 310)で間仕切り・照明・造作の解体と新設(金額不明)。",
+"infer": null,
+"note": "オフィス内装(テナント改修)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0131 Alteration/Repair  (OBC)",
+"value": 100100.0,
+"verbatim": "Demolition of existing partitions, lights, casework. New construction of partitions, lights, casework. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-005592",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -214594,106 +216194,6 @@
 "gc": null,
 "pin": null,
 "owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "WWB HOLDINGS I LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38074",
-"state": "OH",
-"city": "Worthington・300 W WILSON BRIDGE RD Unit: Suite 300 WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-16",
-"applied": "2026-06-17",
-"jp": false,
-"new": false,
-"summary": "Worthington のオフィススイート(Suite 300)で間仕切り・照明・什器の解体と新設を行う内装改修(金額不明)。",
-"infer": null,
-"note": "オフィス内装改修。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0132 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Demolition of existing partitions, lights, casework. New construction of partitions, lights, casework. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-005592",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "WWB HOLDINGS I LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38147",
-"state": "OH",
-"city": "Worthington・300 W WILSON BRIDGE RD Unit: Suite 310 WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-16",
-"applied": "2026-06-17",
-"jp": false,
-"new": false,
-"summary": "Worthington のオフィススイート(300 W Wilson Bridge Rd Suite 310)で間仕切り・照明・造作の解体と新設(金額不明)。",
-"infer": null,
-"note": "オフィス内装(テナント改修)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0131 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Demolition of existing partitions, lights, casework. New construction of partitions, lights, casework. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-005592",
-"owner_source": "parcel:franklin_oh"
 },
 "karte": null,
 "company_id": null,
@@ -228213,6 +229713,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "CITY OF WORTHINGTON OHIO",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37926",
+"state": "OH",
+"city": "Worthington・752 HIGH ST WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-13",
+"applied": "2026-06-15",
+"jp": false,
+"new": false,
+"summary": "Worthington 752 High St で壁面材(Board FeltとAmCork)の設置を伴う改修・補修(金額不明)。",
+"infer": null,
+"note": "内装小改修(金額不明・設備投資性なし)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0129 Alteration/Repair  (OBC)",
+"value": 3000.0,
+"verbatim": "Installed Wall Coverings (Board Felt and AmCork) / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-006616",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "COMPTON MOLLY ANN TR",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -228352,6 +229902,56 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "POAGA LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38024",
+"state": "OH",
+"city": "Worthington・891 HIGH ST WORTHINGTON OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-13",
+"applied": "2026-06-22",
+"jp": false,
+"new": false,
+"summary": "Worthington 891 High St のゲートハウス/オフィスで電気改修・ミニスプリット設置・キッチネット用オーブン追加・消火器/サージ保護器の更新。金額記載なし。",
+"infer": null,
+"note": "小規模改修(住宅/小規模オフィス相当)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0136 Alteration/Repair  (OBC)",
+"value": 1000.0,
+"verbatim": "2nd floor:\nElectrical alteration in Gatehouse upstairs was removed. (Tois office)  \nExterior building (gatehouse):\n\"gatehouse\" office was formally and always an office space with an old furnace and ac",
+"gc": null,
+"pin": "100-000050",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -229752,106 +231352,6 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "CITY OF WORTHINGTON OHIO",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37926",
-"state": "OH",
-"city": "Worthington・752 HIGH ST WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-13",
-"applied": "2026-06-15",
-"jp": false,
-"new": false,
-"summary": "Worthington 752 High St で壁面材(Board FeltとAmCork)の設置を伴う改修・補修(金額不明)。",
-"infer": null,
-"note": "内装小改修(金額不明・設備投資性なし)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0129 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "Installed Wall Coverings (Board Felt and AmCork) / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-006616",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "POAGA LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38024",
-"state": "OH",
-"city": "Worthington・891 HIGH ST WORTHINGTON OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-13",
-"applied": "2026-06-22",
-"jp": false,
-"new": false,
-"summary": "Worthington 891 High St のゲートハウス/オフィスで電気改修・ミニスプリット設置・キッチネット用オーブン追加・消火器/サージ保護器の更新。金額記載なし。",
-"infer": null,
-"note": "小規模改修(住宅/小規模オフィス相当)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0136 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "2nd floor:\nElectrical alteration in Gatehouse upstairs was removed. (Tois office)  \nExterior building (gatehouse):\n\"gatehouse\" office was formally and always an office space with an old furnace and ac",
-"gc": null,
-"pin": "100-000050",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -231613,6 +233113,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": "ZETTLER ZACHARY B",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-38176",
+"state": "OH",
+"city": "Worthington・705 WESLEY CT Worthington OH 43085",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-07-10",
+"applied": "2026-06-16",
+"jp": false,
+"new": false,
+"summary": "Worthington 705 Wesley Ct にてデッキ6〜8の増改築許可(デッキ1〜5は別申請済み、既存と同寸法)。金額不明。",
+"infer": null,
+"note": "住宅(デッキ増設)。",
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0130 Alteration/Repair  (OBC)",
+"value": 36544.8,
+"verbatim": "OBC was submitted for decks 1-5. This application is for decks 6-8. All decks being built to same dimensions as current. / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "HOA380609",
+"owner_source": "parcel:franklin_oh:addr"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "PPT ACQUISITION LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -232002,6 +233552,56 @@
 "batch": "session-029",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T05:59:12+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "WORTHINGTON MINI- WAREHOUSE CO LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-37947",
+"state": "OH",
+"city": "Worthington・503 SCHROCK RD WORTHINGTON OH 43229",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "機械・金属",
+"category": "未分類",
+"category_raw": "製造能力の増強",
+"confidence": "low",
+"date": "2026-07-10",
+"applied": "2026-05-22",
+"jp": false,
+"new": false,
+"summary": "Worthington 503 Schrock Rd で「CNC vent line needs permit」に関する改修/修繕許可(金額不明)。",
+"infer": "CNC(工作機械)の排気ラインに関する許可 = 加工設備の設置・増設に伴う付帯工事の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "Worthington 建築許可(公開記録)",
+"ref": "許可 BLDC2026-0105 Alteration/Repair  (OBC)",
+"value": 12408.0,
+"verbatim": "CNC vent line needs permit / Alteration/Repair  (OBC) / Alteration/Repair",
+"gc": null,
+"pin": "100-001356",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -236102,106 +237702,6 @@
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-06T15:00:01+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "WORTHINGTON MINI- WAREHOUSE CO LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-37947",
-"state": "OH",
-"city": "Worthington・503 SCHROCK RD WORTHINGTON OH 43229",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "機械・金属",
-"category": "未分類",
-"category_raw": "製造能力の増強",
-"confidence": "low",
-"date": "2026-07-10",
-"applied": "2026-05-22",
-"jp": false,
-"new": false,
-"summary": "Worthington 503 Schrock Rd で「CNC vent line needs permit」に関する改修/修繕許可(金額不明)。",
-"infer": "CNC(工作機械)の排気ラインに関する許可 = 加工設備の設置・増設に伴う付帯工事の可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0105 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "CNC vent line needs permit / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "100-001356",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "ZETTLER ZACHARY B",
-"owner_kind": "課税台帳",
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-38176",
-"state": "OH",
-"city": "Worthington・705 WESLEY CT Worthington OH 43085",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "low",
-"date": "2026-07-10",
-"applied": "2026-06-16",
-"jp": false,
-"new": false,
-"summary": "Worthington 705 Wesley Ct にてデッキ6〜8の増改築許可(デッキ1〜5は別申請済み、既存と同寸法)。金額不明。",
-"infer": null,
-"note": "住宅(デッキ増設)。",
-"fact": {
-"src": "Worthington 建築許可(公開記録)",
-"ref": "許可 BLDC2026-0130 Alteration/Repair  (OBC)",
-"value": null,
-"verbatim": "OBC was submitted for decks 1-5. This application is for decks 6-8. All decks being built to same dimensions as current. / Alteration/Repair  (OBC) / Alteration/Repair",
-"gc": null,
-"pin": "HOA380609",
-"owner_source": "parcel:franklin_oh:addr"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-06T16:34:36+00:00"
 }
 },
 {
@@ -251363,6 +252863,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "CLASSIC LIVING HOMES LLC"
+},
+"id": "S-1040",
+"state": "OH",
+"city": "Cincinnati・2921 THREE OAKS LN",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-07-06",
+"applied": "2026-05-12",
+"jp": false,
+"new": false,
+"summary": "Cincinnati 2921 Three Oaks Ln の新築 $1.15M(所有者は個人:Roehr Jack & Lisa)。",
+"infer": "所有者名・用途区分(1-2-3 FM = 住宅系)から戸建住宅の新築の可能性(推論)。",
+"note": "住宅。",
+"fact": {
+"src": "シンシナティ市 建築許可(公開記録)",
+"ref": "許可 2026P04471 Building",
+"value": 1151279.0,
+"verbatim": "New Building / Building / 1-2-3 FM",
+"gc": "CLASSIC LIVING HOMES LLC",
+"pin": "004900010017",
+"owner_source": "parcel:hamilton_oh:addr"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "HTA MARKET EXCHANGE LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -263152,6 +264702,156 @@
 "batch": "session-085",
 "model": "claude-sonnet-5 (subagent, subscription session)",
 "generated_at": "2026-09-03T06:17:21+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-47005",
+"state": "OH",
+"city": "Lima・420 E MAIN ST, BEAVERDAM, OH",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": null,
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Beaverdam, OH の物件で改修・補修許可(Finaled)。金額・所有者・詳細は記録に記載なし。",
+"infer": null,
+"note": "詳細不明の改修許可。",
+"fact": {
+"src": "Lima 建築許可(公開記録)",
+"ref": "許可 26-0098-CB Alteration or Repair",
+"value": null,
+"verbatim": "Alteration or Repair / Finaled / (BEAVERDAM, OH)",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-47007",
+"state": "OH",
+"city": "Lima・809 EWING AVE, LIMA, OH",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": null,
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Lima 809 Ewing Ave における改修/修繕許可(金額・所有者不明)。",
+"infer": null,
+"note": "汎用ラベルのみで内容不明。",
+"fact": {
+"src": "Lima 建築許可(公開記録)",
+"ref": "許可 26-0175-RB Alteration/Repair",
+"value": null,
+"verbatim": "Alteration/Repair / Issued / (LIMA, OH)",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-47014",
+"state": "OH",
+"city": "Lima・911 E EUREKA ST, LIMA, OH",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": null,
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Lima 911 E Eureka St の解体許可(Closed)。金額・所有者情報なし。",
+"infer": null,
+"note": "解体(詳細不明)。",
+"fact": {
+"src": "Lima 建築許可(公開記録)",
+"ref": "許可 26-0026-RD Demolition Permit",
+"value": null,
+"verbatim": "Demolition Permit / Closed / (LIMA, OH)",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01TDNg7jH9YdcDd1a5dXCTtE",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-07T08:15:15+00:00"
 }
 }
 ]
