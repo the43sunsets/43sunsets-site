@@ -247,7 +247,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   <div class="fgroup"><h2>設備の種類(領域)</h2><div id="f-domain"></div></div>
   <div class="fgroup"><h2>メーカー(カタログ判定)</h2><div id="f-maker"></div></div>
   <div class="fgroup"><h2>対象企業の業種</h2><div id="f-industry"></div></div>
-  <label class="fitem unc-toggle" title="雑音 = 個人名義・車両 1 台の割賦・住宅・農業リーエン・公共財務。未分類 = 本文が汎用文のみで種別を決められなかった記録。入れると雑音・未分類だけを表示します"><input type="checkbox" id="showunc">雑音・未分類のみ表示(<span id="unccnt">0</span> 件)</label>
+  <label class="fitem unc-toggle" title="未分類 = 本文が汎用文のみで種別を決められなかった記録。雑音(個人名義・車両 1 台の割賦・住宅・農業リーエン・公共財務)も含みます。入れると未分類だけを表示します"><input type="checkbox" id="showunc">未分類のみ表示 <span class="cnt" id="unccnt"></span></label>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
   <div class="fnote">設備の種類・メーカーは型式ごとの設備カタログ(メーカー製品ページを AI が読み・出典 URL つき)、業種は会社マスター(自社サイト)からの割り当てです。型式が担保物欄に無い登記(Mazak・Makino = 製番のみ)は領域だけを担保権者から判定し、機種は「不明(製番のみ)」と表示します。雑音・未分類は既定で表示しません(下のトグルでそれだけを表示できます)。</div>
 </aside>
