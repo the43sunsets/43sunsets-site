@@ -64,7 +64,9 @@ h2{font-family:var(--serif);font-weight:800;font-size:clamp(26px,2.8vw,36px);lin
 .note{margin:28px 0 0;font-size:14px;color:var(--sub);max-width:720px}
 .note b{color:var(--ink);font-weight:600}
 /* Signal shots */
-.shots{display:grid;grid-template-columns:1.15fr 1fr;gap:32px;align-items:start}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.siglogo{display:block;width:230px;margin:0 0 18px}
+.siglogo svg{display:block;width:100%;height:auto;overflow:visible}
 .shot{margin:0}
 .shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px;box-shadow:0 18px 50px -24px rgba(20,24,29,.35)}
 .shot figcaption{margin:12px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--sub)}
@@ -156,15 +158,16 @@ footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover
     <div class="sec-h">
       <div class="num">01 — いま提供しているもの</div>
       <div>
-        <h2>Signal — 次に動く会社が、先に分かる。</h2>
-        <p>中西部 5 州の建設許可・設備の担保登記・補助金・求人を毎日読み、「どの会社が、何を始めたか」を一覧にします。会社ごとの一枚(企業カルテ)で、事実と、そこから考えられる営業のヒントを分けて示します。無料・登録なし。</p>
+        <a class="siglogo" href="/signal/" aria-label="Signal by 43 Sunsets"><svg viewBox="6 8 182 62" role="img"><title>Signal by 43 Sunsets</title><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M14 40 A22 22 0 0 1 58 40" stroke="var(--accent)"/><path d="M23 40 A13 13 0 0 1 49 40" stroke="var(--accent)" opacity=".62"/><path d="M31 40 A5 5 0 0 1 41 40" stroke="var(--accent)" opacity=".38"/></g><path d="M10 46 H172" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" fill="none"/><text x="70" y="41" font-family="Shippori Mincho, serif" font-weight="700" font-size="36" fill="var(--ink)">Signal</text><text x="172" y="64" text-anchor="end" font-family="Shippori Mincho, serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="var(--sub)">by 43 Sunsets</text></svg></a>
+        <h2>会社の動きを、4 つのアンテナで毎日追う。</h2>
+        <p>建設許可、設備の担保登記、政府補助金、求人。この 4 つの公開情報をアンテナにして、中西部 5 州の会社の動きを毎日拾い、日付で積み上げます。一社ごとに「いつ、何を始めたか」が時系列でたまっていくので、次に動く会社が先に分かります。無料・登録なし。</p>
       </div>
     </div>
     <div class="shots">
-      <figure class="shot"><img src="/assets/shots/shot-permits.webp" alt="Signal の建設許可の一覧画面" loading="lazy"><figcaption>建設許可の一覧 — 州・業種・投資の種類で絞り込み</figcaption></figure>
-      <figure class="shot"><img src="/assets/shots/shot-karte.webp" alt="Signal の企業カルテ画面" loading="lazy"><figcaption>企業カルテ — 一社の動きを一枚に、事実と推論を分けて</figcaption></figure>
+      <figure class="shot"><img src="/assets/shots/shot-permits.webp?v=2" alt="Signal の建設許可の一覧画面" loading="lazy"><figcaption>一覧 — 州・業種・投資の種類で絞り込み、新しい動きから</figcaption></figure>
+      <figure class="shot"><img src="/assets/shots/shot-karte.webp?v=2" alt="Signal の企業カルテ画面" loading="lazy"><figcaption>企業カルテ — 一社の動きを日付順に一枚へ。事実と推論は分けて</figcaption></figure>
     </div>
-    <p class="more"><a href="/signal/">Signal を開く →</a><span>建設許可 113 社・担保登記 736 件を毎日更新(2026-09-07 時点)</span></p>
+    <p class="more"><a href="/signal/">Signal を開く →</a></p>
   </div>
 </section>
 
