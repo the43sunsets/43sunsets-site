@@ -84,7 +84,7 @@ footer{ max-width:640px; margin:0 auto; padding:0 24px 40px; font-size:11px; col
       else { body.innerHTML = `<div class="msg warn"><strong>ブラウザが Cookie を受け付けていません。</strong><br>Signal のログインはこのサイト(43sunsets.com)のファーストパーティ Cookie 1 つで保ちます。ブラウザの設定で 43sunsets.com の Cookie を許可し、もう一度リンクを受け取ってください。</div>` + resendForm(""); }
     }).catch(() => { body.innerHTML = `<div class="msg warn">確認に失敗しました。もう一度お試しください。</div>` + resendForm(""); });
   } else if (t) {
-    body.innerHTML = `<p class="lead">メールのリンクを確認しました。下のボタンを押すとログインが確定します(リンクは 15 分有効・1 回限り。ボタンを押すまでは何も起きません)。</p>
+    body.innerHTML = `<p class="lead">メールのリンクを確認しました。下のボタンを押すとログインが確定します(リンクは 1 回限り。ボタンを押すまでは何も起きません)。</p>
       <form class="reg" method="post" action="/signal/session" style="display:block"><input type="hidden" name="t" value="${esc(t)}"><input type="hidden" name="next" value="${esc(next)}"><button class="btn" type="submit">ログインする</button></form>
       <p class="note">期限が切れていた場合は、この画面でアドレスを入力すると新しいリンクが届きます。</p>`;
   } else if (st === "sent") {

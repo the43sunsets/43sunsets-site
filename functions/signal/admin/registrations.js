@@ -1,6 +1,6 @@
 // GET /signal/admin/registrations — 登録アカウントの一覧(Bearer SIGNAL_SECRET)。Mautic への転記・承認待ちの棚卸しに使う。
 // POST {"email":"…","status":"active|rejected"} で手動の承認/却下(承認リンクが 7 日で消えた後の救済)。承認時はリンクを送る。
-import { store, bearerOk, json, normEmail, issueToken, sendMail, loginMail, origin } from "../_lib.js";
+import { store, bearerOk, json, normEmail, issueToken, sendMail, loginMail, origin, APPROVED_TOKEN_SECONDS } from "../_lib.js";
 
 export async function onRequestGet({ request, env }) {
   if (!bearerOk(request, env)) return json({ ok: false, error: "unauthorized" }, 401);
@@ -21,6 +21,6 @@ export async function onRequestPost({ request, env }) {
   acct.status = status; acct.decided_at = new Date().toISOString(); if (status === "active") acct.source = "approved";
   await kv.put("sg:acct:" + email, JSON.stringify(acct));
   let mail = null;
-  if (status === "active" && b.send !== false) { const tok = await issueToken(env, email, "/signal/"); mail = await sendMail(env, email, loginMail(`${origin(env, request)}/signal/login/?t=${tok}`, acct.name)); }
+  if (status === "active" && b.send !== false) { const tok = await issueToken(env, email, "/signal/", APPROVED_TOKEN_SECONDS); mail = await sendMail(env, email, loginMail(`${origin(env, request)}/signal/login/?t=${tok}`, acct.name, APPROVED_TOKEN_SECONDS)); }
   return json({ ok: true, account: acct, mail });
 }

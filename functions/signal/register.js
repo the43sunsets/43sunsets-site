@@ -2,7 +2,7 @@
 // 名簿のアドレス/ドメイン → アカウント active+ログインリンクを即送信 → /signal/join/?state=sent
 // 名簿外 → pending+受付メール → CEO へ承認/却下リンク → /signal/join/?state=pending
 // 登録済み(active)→ リンクを再送(再登録不要)。rejected → pending と同じ見え方(理由は開示しない)。
-import { store, normEmail, clean, safeNext, isRosterAddress, issueToken, rateLimited, sendMail, loginMail, pendingMail, adminMail, decisionSig, origin, rid, redirect, json } from "./_lib.js";
+import { store, normEmail, clean, safeNext, isRosterAddress, issueToken, rateLimited, sendMail, loginMail, pendingMail, adminMail, decisionSig, origin, rid, redirect, json, APPROVED_TOKEN_SECONDS } from "./_lib.js";
 
 export async function onRequestPost({ request, env }) {
   const kv = store(env);
@@ -27,8 +27,8 @@ export async function onRequestPost({ request, env }) {
 
   try {
     if (acct.status === "active") {
-      const tok = await issueToken(env, email, next);
-      await sendMail(env, email, loginMail(`${base}/signal/login/?t=${tok}`, name));
+      const tok = await issueToken(env, email, next, APPROVED_TOKEN_SECONDS);
+      await sendMail(env, email, loginMail(`${base}/signal/login/?t=${tok}`, name, APPROVED_TOKEN_SECONDS));
     } else if (acct.status === "pending") {
       await kv.put("sg:dec:" + id, JSON.stringify({ email, next, ts }), { expirationTtl: 7 * 86400 });
       await sendMail(env, email, pendingMail(name));

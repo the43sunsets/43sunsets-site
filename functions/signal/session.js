@@ -8,7 +8,7 @@ export async function onRequestPost({ request, env }) {
   let form; try { form = await request.formData(); } catch { return page("不正な要求", "<p>フォームを読めませんでした。</p>", 400); }
   const tok = String(form.get("t") || "");
   const v = await consumeToken(env, tok);
-  if (!v) return page("リンクの期限が切れています", `<p>このログイン用リンクは期限切れ(15 分)か、すでに使われています。</p><p><a class="btn" href="/signal/login/">新しいリンクを受け取る</a></p>`, 410);
+  if (!v) return page("リンクの期限が切れています", `<p>このログイン用リンクは期限切れか、すでに使われています。</p><p><a class="btn" href="/signal/login/">新しいリンクを受け取る</a></p>`, 410);
   const acct = await kv.get("sg:acct:" + v.email, "json");
   if (!acct || acct.status !== "active") return page("ログインできません", `<p>このアドレス(${esc(v.email)})はまだ有効になっていません。</p><p><a class="btn alt" href="/signal/join/">登録画面へ</a></p>`, 403);
   const cookie = await createSession(env, acct);

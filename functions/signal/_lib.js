@@ -3,7 +3,7 @@
 //
 // 置き場(KV・BEACON_REQUESTS を共用・SIGNAL_AUTH が束ねられていればそちらを優先):
 //   sg:acct:<email>        登録済みアカウント {email, company, name, title, interests, status: active|pending|rejected, created, decided_at, source}
-//   sg:tok:<token>         マジックリンクの一回限りトークン(15 分) {email, next}
+//   sg:tok:<token>         マジックリンクの一回限りトークン(再送 = 15 分・承認後/名簿即送信 = 72 時間) {email, next, ttl}
 //   sg:sess:<sid>          ログイン状態(30 日) {email, company, created}
 //   sg:allow:dom:<domain>  名簿(Mautic 144 社)のドメイン → 即リンク
 //   sg:allow:eml:<email>   名簿のアドレス → 即リンク
@@ -65,11 +65,13 @@ export async function createSession(env, acct) {
 }
 
 // ── マジックリンク ──
-export async function issueToken(env, email, next) {
+export const APPROVED_TOKEN_SECONDS = 72 * 3600;   // 承認後・登録直後に送るリンクは 72 時間(CEO 9/8 承認)。本人が画面の前で再送するリンクは 15 分のまま
+export async function issueToken(env, email, next, ttl = TOKEN_SECONDS) {
   const kv = store(env); const tok = rid(24);
-  await kv.put("sg:tok:" + tok, JSON.stringify({ email, next: safeNext(next), created: new Date().toISOString() }), { expirationTtl: TOKEN_SECONDS });
+  await kv.put("sg:tok:" + tok, JSON.stringify({ email, next: safeNext(next), created: new Date().toISOString(), ttl }), { expirationTtl: ttl });
   return tok;
 }
+export function ttlLabel(ttl) { return ttl >= 3600 ? Math.round(ttl / 3600) + " 時間" : Math.round(ttl / 60) + " 分"; }
 export async function consumeToken(env, tok) {
   const kv = store(env); if (!/^[a-f0-9]{48}$/.test(tok || "")) return null;
   const v = await kv.get("sg:tok:" + tok, "json"); if (!v) return null;
@@ -92,11 +94,12 @@ export function bearerOk(request, env) { const a = request.headers.get("authoriz
 
 // ── メール本文 ──
 const SIGN = ["43 Sunsets / Signal", "hello@43sunsets.com", "https://43sunsets.com/signal/"].join("\n");
-export function loginMail(link, name) {
+export function loginMail(link, name, ttl = TOKEN_SECONDS) {
+  const lim = ttlLabel(ttl);
   return {
-    subject: "Signal ログインのご案内(15 分有効)",
+    subject: `Signal ログインのご案内(${lim}有効)`,
     text: [`${name ? name + " 様" : "こんにちは"}`, "", "Signal by 43 Sunsets のログイン用リンクをお送りします。下のリンクを開き、「ログインする」ボタンを押してください。", "", link, "",
-      "・このリンクは 15 分間・1 回だけ有効です。", "・期限が切れた場合は、ログイン画面でメールアドレスを入力すると新しいリンクが届きます。", "・お心当たりのない場合は、このメールを破棄してください。", "", SIGN].join("\n") };
+      `・このリンクは ${lim}・1 回だけ有効です。`, "・期限が切れた場合は、ログイン画面でメールアドレスを入力すると新しいリンクが届きます。", "・お心当たりのない場合は、このメールを破棄してください。", "", SIGN].join("\n") };
 }
 export function pendingMail(name) {
   return { subject: "Signal 登録を受け付けました(ご案内まで少しお待ちください)",
