@@ -5,7 +5,7 @@
 // ログイン済みは静的ファイルをそのまま返す(next() = Pages の静的配信)。
 import { currentSession, json } from "../../signal/_lib.js";
 
-const GATED = new Set(["ucc.json", "subsidies.json", "hiring.json"]);
+const GATED = new Set(["ucc.json", "subsidies.json", "hiring.json", "news.json", "macro.json"]);   // 9/8 CEO: 景気の状況(ニュース 2 軸と AI の読み ②③)も見本モード
 const SAMPLE_N = 4;                    // 見本の枚数
 const SAMPLE_MIN_AGE_DAYS = 45;        // 見本は 45 日以上前の実例だけ(鮮度は登録の対価)
 const MINOR_SUBSIDY = new Set(["訓練・インフラ・その他", "未分類"]);   // signal/index.html と同じ主要件数の規則
@@ -19,7 +19,7 @@ export async function onRequestGet(context) {
   const r = await next(); if (!r.ok) return r;
   let d; try { d = await r.json(); } catch { return json({ ok: false, error: "bad data" }, 502); }
   const cutoff = new Date(Date.now() - SAMPLE_MIN_AGE_DAYS * 864e5).toISOString().slice(0, 10);
-  const out = isCompany ? demoCompany(d) : demoFace(path, d, cutoff);
+  const out = isCompany ? demoCompany(d) : (path === "news.json" ? demoNews(d) : (path === "macro.json" ? demoMacro(d) : demoFace(path, d, cutoff)));
   return json(out, 200, { "x-signal-mode": "demo", "vary": "cookie" });
 }
 
@@ -44,6 +44,13 @@ function demoFace(path, d, cutoff) {
   return out;
 }
 
+// 景気の状況(9/8): 指標 10 と ① 指標の読みは公開(FRED の公開データの予告編)。② ③ のニュースの読みは施錠、ニュースは米 3 本・州 各 2 本の見本
+function demoMacro(m) { return { ...m, demo: true, ai_news: m.ai_news ? { locked: true, generated_at: m.ai_news.generated_at, news_updated_ct: m.ai_news.news_updated_ct } : null }; }
+function demoNews(n) {
+  const states = {}; for (const [k, v] of Object.entries(n.states || {})) states[k] = (v || []).slice(0, 2);
+  const total = (n.us || []).length + Object.values(n.states || {}).reduce((a, v) => a + (v || []).length, 0);
+  return { ...n, demo: true, us: (n.us || []).slice(0, 3), states, meta_demo: { total, sample: 3 + Object.values(states).reduce((a, v) => a + v.length, 0), note: `見本モード: 直近のニュース ${total} 本のうち一部を表示。登録すると全件と AI の読み(② ③)、会社名からの企業カルテが使えます。` } };
+}
 function demoCompany(c) {
   const f = c.faces || {};
   const lock = face => face ? { count: face.count || 0, locked: true } : { count: 0, locked: true };

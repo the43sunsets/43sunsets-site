@@ -106,6 +106,7 @@ body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:auto;
 .lede-m p{ margin:0; color:var(--ink-2); font-size:14.5px; line-height:1.85; max-width:34em; }
 .rail .sec{ margin:0 0 12px; } .rail .sec h2{ font-size:19px; }
 .rail .ai{ flex-direction:column; gap:10px; padding:16px 18px; margin-bottom:12px; } .rail .ai .axl{ font-family:var(--serif); font-size:17px; font-weight:700; letter-spacing:.02em; color:var(--ink); margin-bottom:6px; }   /* 9/8 CEO: 軸の表記を大きく太く・「AI の読み」札は見出しにあるので各ブロックでは省く */
+.sg-lockai p.sg-blur{ filter:blur(4px); user-select:none; }
 .axis-help{ margin-top:22px; border-top:1px solid var(--line); padding-top:14px; } .axis-help h4{ margin:0 0 8px; font-size:12px; letter-spacing:.1em; color:var(--sub); font-family:var(--mono); } .axis-help p{ margin:0 0 8px; font-size:12.5px; line-height:1.75; color:var(--ink-2); } .axis-help b{ color:var(--ink); } .rail .ai p{ margin:0; font-size:14px; line-height:1.85; color:var(--ink); } .rail .ai .d{ font-size:11px; color:var(--sub); margin-top:2px; }
 .rail .note{ display:none; }
 /* ── ニュース 2 軸(9/8): 米製造業 / 5 州ローカル ── */
@@ -200,6 +201,12 @@ async function boot(){
     if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><div><div class="axl">① 10 の指標</div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は右の 10 指標のみ</div></div></div>`;
     if(m.ai_news && m.ai_news.us) document.getElementById("ai-us").innerHTML = `<div class="ai"><div><div class="axl">② 米製造業のニュース</div><p>${esc(m.ai_news.us)}</p><div class="d">${esc(m.ai_news.model)}・${fmtCT(m.ai_news.generated_at, true)}・根拠は下のニュースの見出しと要約のみ</div></div></div>`;
     if(m.ai_news && m.ai_news.states) document.getElementById("ai-st").innerHTML = `<div class="ai"><div><div class="axl">③ 5 州のローカル</div><p>${esc(m.ai_news.states)}</p><div class="d">${esc(m.ai_news.model)}・${fmtCT(m.ai_news.generated_at, true)}・根拠は下の 5 州のニュースのみ</div></div></div>`;
+    if(m.ai_news && m.ai_news.locked){   // 見本モード(未ログイン): ② ③ はぼかした見本文+登録案内
+      const here = encodeURIComponent(location.pathname);
+      const lockBlk = (lab, txt) => `<div class="ai sg-lockai"><div><div class="axl">${lab}</div><p class="sg-blur" aria-hidden="true">${esc(txt)}</p><div class="d"><a href="/signal/join/?next=${here}">登録すると AI の読みが開きます(無料・日系製造業の方)</a></div></div></div>`;
+      document.getElementById("ai-us").innerHTML = lockBlk("② 米製造業のニュース", "先端分野の大型投資と工場閉鎖が同時に進み、業種間で明暗が分かれる展開とみられる。設備投資意欲は底堅く、機械・産業機器の需要は分野により差が出る。");
+      document.getElementById("ai-st").innerHTML = lockBlk("③ 5 州のローカル", "イリノイ州では電動化・グリッド関連の投資が活発で当たり所となりうる。インディアナ州は大型のメモリ工場が進む一方、部品工場の閉鎖もあり明暗が分かれる。オハイオ・ミシガン・ウィスコンシンでも新設と拡張の発表が続く。");
+    }
     document.getElementById("macro").innerHTML = m.tiles.map(tileHtml).join(""); }
   catch(e){ document.getElementById("macro").innerHTML = `<div class="tile"><div class="n">景気の指標を読み込めませんでした(${esc(e.message)})</div></div>`; }
 
@@ -218,6 +225,13 @@ async function boot(){
     tabs.innerHTML = order.map(st=>`<button type="button" role="tab" data-st="${st}" aria-selected="false">${st} <span style="font-weight:400;opacity:.7">${((n.states||{})[st]||[]).length}</span></button>`).join("");
     tabs.addEventListener("click", e=>{ const b = e.target.closest("button"); if(b) show(b.dataset.st); });
     let first = "IL"; try{ first = localStorage.getItem("cockpit-news-state") || "IL"; }catch(e){} show(order.includes(first) ? first : "IL");
+    if(n.demo){   // 見本モード: 一覧はぼかし・タブは不活性・登録案内の板
+      document.documentElement.setAttribute("data-demo", "1");
+      document.getElementById("news-us").classList.add("sg-blur"); stl.classList.add("sg-blur"); tabs.setAttribute("inert", ""); tabs.style.opacity = ".5";
+      const here = encodeURIComponent(location.pathname); const cta = document.createElement("div"); cta.className = "sg-cta";
+      cta.innerHTML = `<div class="sg-cta-in"><div class="sg-cta-k">見本モード</div><h2>ニュースの 2 軸と AI の読みは、登録した方に全件をお見せしています。</h2><p>${esc((n.meta_demo||{}).note||"")}</p><div class="sg-cta-acts"><a class="sg-cta-btn" href="/signal/join/?next=${here}">もっと見る(無料で登録)</a><a class="sg-cta-lnk" href="/signal/login/?next=${here}">登録済みの方はログイン</a></div></div>`;
+      const n2 = document.querySelector(".news2"); n2.parentNode.insertBefore(cta, n2);
+    }
     const note = document.getElementById("news-note"); note.hidden = false;
     note.textContent = (n.note||"") + " 出所: " + (n.sources||[]).map(s=>s.name).filter((v,i,a)=>a.indexOf(v)===i).join("・") + "。";
   }catch(e){ document.getElementById("news-sub").textContent = "ニュースは準備中(" + e.message + ")"; }
