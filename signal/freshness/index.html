@@ -242,8 +242,9 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
   <div class="tablewrap slim"><table class="srct" id="subs-table"><thead><tr><th>出し手</th><th>区分</th><th>状態</th><th>取得件数</th><th>最終取得</th><th>備考</th></tr></thead><tbody></tbody></table></div>
   </section>
   <section id="sec-hiring" hidden>
-  <h2>企業採用状況 — 採用ページを配線した会社<span class="sub" id="hiring-sub"></span></h2>
-  <div class="tablewrap slim"><table class="srct" id="hiring-table"><thead><tr><th>会社</th><th>所在</th><th>採用ページ</th><th>開いている求人</th><th>配線日</th></tr></thead><tbody></tbody></table></div>
+  <h2>企業採用状況 — 採用ページの種類ごと<span class="sub" id="hiring-sub"></span></h2>
+  <div class="tablewrap slim"><table class="srct" id="hiring-table"><thead><tr><th>採用ページの種類</th><th class="num">会社数</th><th class="num">開いている求人</th><th class="num">面に載せた求人</th><th class="num">載せた会社数</th><th>最終取り込み</th><th>次回取り込み</th></tr></thead><tbody></tbody></table></div>
+  <p class="note">開いている求人 = 採用ページで現在公開中の全職種。面に載せた求人 = そのうち製造系の職種(生産・設備保全・生産技術・品質・物流)で所在が 5 州のもの。次回取り込みは予定(毎晩 02:00 米中部時間・名簿の会社は週 1)。</p>
   </section>
 
   <h2>更新の周期<span class="sub">経路ごとに違います</span></h2>
@@ -352,11 +353,12 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
     document.querySelector("#subs-table tbody").innerHTML = S.subsidies.issuers.map(x =>
       `<tr><td class="name">${esc(x.label)}</td><td>${esc(x.level)}</td><td>${chip(x.status, x.status_label)}</td><td class="num">${x.n ? fmtN(x.n) + (x.n_shown != null && x.n_shown !== x.n ? `<span style="color:var(--sub)">(表示 ${fmtN(x.n_shown)})</span>` : "") : "—"}</td><td>${x.last ? `<span class="mono">${x.last.replace("T"," ")}Z</span>` : "—"}</td><td class="wrap">${esc(x.note)}</td></tr>`).join("");
     document.getElementById("sec-subs").hidden = false;
-    // ---- 採用 会社別
+    // ---- 採用 採用ページの種類ごと(9/8 CEO: 会社一覧ではなく簡潔な表)
     const R = S.hiring;
-    document.getElementById("hiring-sub").textContent = `${fmtN(R.companies)} 社・${fmtN(R.boards)} ページ。求人数は ${R.counted_day || "—"} 時点の重複除去後。${R.note || ""}`;
-    document.querySelector("#hiring-table tbody").innerHTML = R.list.map(x =>
-      `<tr><td class="name"><a href="../company/?id=${esc(x.company_id)}" target="_blank" rel="noopener">${esc(x.name)}</a>${x.jp ? ' <span class="st fresh">日系</span>' : ""}</td><td>${esc([x.city, x.state].filter(Boolean).join(", "))}</td><td>${esc(x.ats.join("・"))}${x.boards > 1 ? ` × ${x.boards}` : ""}</td><td class="num">${fmtN(x.open)}</td><td><span class="mono">${esc(x.since || "—")}</span></td></tr>`).join("");
+    const fmtT = s => { if (!s) return "—"; const d = new Date(s); if (isNaN(d)) return esc(String(s).slice(0, 16)); const o = {timeZone:"America/Chicago", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hour12:false}; const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", o).formatToParts(d).filter(x => x.type !== "literal").map(x => [x.type, x.value])); return `${p.month}/${p.day} ${p.hour === "24" ? "00" : p.hour}:${p.minute} CT`; };
+    document.getElementById("hiring-sub").textContent = `${fmtN(R.companies)} 社・${fmtN(R.boards)} ページ。開いている求人 ${fmtN(R.open)} 件、うち面に載せた製造系 ${fmtN(R.shown || 0)} 件(${R.counted_day || "—"} 時点・重複除去後)。${R.note || ""}`;
+    document.querySelector("#hiring-table tbody").innerHTML = (R.by_ats || []).map(x =>
+      `<tr><td class="name">${esc(x.label)}<span class="sub"> ${esc(x.cadence || "")}</span></td><td class="num">${fmtN(x.companies)}</td><td class="num">${fmtN(x.open)}</td><td class="num">${fmtN(x.shown)}</td><td class="num">${fmtN(x.shown_companies)}</td><td><span class="mono">${fmtT(x.last_collect)}</span></td><td><span class="mono">${fmtT(x.next_collect)}</span></td></tr>`).join("");
     document.getElementById("sec-hiring").hidden = false;
   })();
 
