@@ -3,7 +3,7 @@
 //   UCC・補助金・採用 = 見本(古い実例 数枚+件数)/企業カルテ = 建設許可の節だけ
 // を返す。建設許可・鮮度・景気・health・top・sources はそのまま通す(ログイン前フルアクセスの面)。
 // ログイン済みは静的ファイルをそのまま返す(next() = Pages の静的配信)。
-import { currentSession, json } from "../../signal/_lib.js";
+import { currentSession, json, logFaceDay } from "../../signal/_lib.js";
 
 const GATED = new Set(["ucc.json", "subsidies.json", "hiring.json", "news.json", "macro.json"]);   // 9/8 CEO: 景気の状況(ニュース 2 軸と AI の読み ②③)も見本モード
 const SAMPLE_N = 4;                    // 見本の枚数
@@ -19,6 +19,7 @@ export async function onRequestGet(context) {
   if (sess) {
     // 9/8 CEO 甲: ログイン済みでも 1 セッション 1 分 60 回まで(全件を機械で吸う動きを止める)+日次の取得回数を控える(管理者が流出元を追える)
     if (await sessionLimited(env, sess.sid)) return json({ ok: false, error: "too many requests — 1 分ほど待ってから再読み込みしてください" }, 429, { "retry-after": "60" });
+    await logFaceDay(env, sess.email, isCompany ? "company" : path.replace(/\.json$/, ""));   // 9/8: 登録者ごと・面ごと・日ごとの閲覧回数(点数付け)
     const r = await next(); return withHeaders(r, "full", sess.sid);
   }
   const r = await next(); if (!r.ok) return r;

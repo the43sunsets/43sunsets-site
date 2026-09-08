@@ -1,6 +1,6 @@
 // POST /signal/session — マジックリンクの確定(「ログインする」ボタン)。トークンを一回限りで消費し、30 日の Cookie を置く。
 // 開いただけでは何も起きない(会社のメールスキャナ対策)。確定後は /signal/login/?done=1&next=… へ(そこで Cookie が置けたかを確かめる)。
-import { store, consumeToken, createSession, safeNext, redirect, page, esc } from "./_lib.js";
+import { store, consumeToken, createSession, safeNext, redirect, page, esc, logEvent } from "./_lib.js";
 
 export async function onRequestPost({ request, env }) {
   const kv = store(env);
@@ -12,6 +12,7 @@ export async function onRequestPost({ request, env }) {
   const acct = await kv.get("sg:acct:" + v.email, "json");
   if (!acct || acct.status !== "active") return page("ログインできません", `<p>このアドレス(${esc(v.email)})はまだ有効になっていません。</p><p><a class="btn alt" href="/signal/join/">登録画面へ</a></p>`, 403);
   const cookie = await createSession(env, acct);
+  await logEvent(env, "login", v.email, { company: acct.company || "" });   // 9/8: 点数付けの出来事
   const next = safeNext(form.get("next") || v.next);
   return redirect("/signal/login/?done=1&next=" + encodeURIComponent(next), { "set-cookie": cookie });
 }

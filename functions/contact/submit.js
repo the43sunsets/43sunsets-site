@@ -2,6 +2,7 @@
 // 型は /services/submit と同じ: honeypot → Turnstile → KV(BEACON_REQUESTS・30 日で消える控え)→ beacon-notify Worker で hello@ へ通知 → /?contact=sent#contact へ戻す。
 // 記録は返信のためだけ(/legal/ のメール条項)。第三者サービスは Turnstile(Cloudflare)以外に無い。
 import { verifyTurnstile } from "../_turnstile.js";
+import { logEvent } from "../signal/_lib.js";
 
 const MAX = { company: 120, name: 80, email: 200, message: 4000, ref: 300 };
 
@@ -24,6 +25,7 @@ export async function onRequestPost({ request, env }) {
   if (env.BEACON_NOTIFY) {
     try { await env.BEACON_NOTIFY.fetch("https://beacon-notify/", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(record) }); } catch (e) { /* KV が控え */ }
   }
+  await logEvent(env, "contact", email.toLowerCase(), { company, name });   // 9/8: 点数付けの出来事(Mautic へ)
   return redirect(url, "/?contact=sent#contact");
 }
 export async function onRequestGet({ request }) { return redirect(new URL(request.url), "/#contact"); }

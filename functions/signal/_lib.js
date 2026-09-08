@@ -78,6 +78,13 @@ export async function consumeToken(env, tok) {
   await kv.delete("sg:tok:" + tok);   // 一回限り
   return v;
 }
+// 出来事の記録(2026-09-08 CEO: Mautic の点数付け用・追跡 cookie は足さない)。sg:ev:<ts>:<id> = {type, email, ...}(60 日)。/signal/admin/events が読む。
+export async function logEvent(env, type, email, extra = {}) {
+  try { const kv = store(env); if (!kv) return; const ts = new Date().toISOString(); await kv.put(`sg:ev:${ts}:${rid(4)}`, JSON.stringify({ type, email, ts, ...extra }), { expirationTtl: 60 * 86400 }); } catch (e) { /* best effort */ }
+}
+export async function logFaceDay(env, email, face) {
+  try { const kv = store(env); if (!kv || !email) return; const day = new Date().toISOString().slice(0, 10); const k = `sg:evd:${day}:${email}:${face}`; const n = parseInt((await kv.get(k)) || "0", 10) + 1; await kv.put(k, String(n), { expirationTtl: 45 * 86400 }); } catch (e) { /* best effort */ }
+}
 export async function rateLimited(env, email) {
   const kv = store(env); const k = "sg:rl:" + email; if (await kv.get(k)) return true;
   await kv.put(k, "1", { expirationTtl: 60 }); return false;
