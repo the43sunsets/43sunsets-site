@@ -354,7 +354,7 @@ async function boot(){
     const r = await fetch("/cockpit/data/subsidies.json", {cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status);
     const d = await r.json(); META = d.meta; SIGNALS = d.signals;
     document.getElementById("capexcnt").textContent = SIGNALS.filter(isCapex).length.toLocaleString();
-    const major = SIGNALS.filter(s=>!isMinor(s)).length;
+    const major = (d.demo && META.n_major != null) ? META.n_major : SIGNALS.filter(s=>!isMinor(s)).length;   // 見本モードは全体の件数(ゲートが meta に入れる)
     document.getElementById("metaline").innerHTML = `IL・IN・MI・OH・WI / 保存 <span class="mono">${META.n.toLocaleString()}</span> 件・設備投資に関わる案件 <span class="mono">${major}</span> 件・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     renderFilters(); render(); renderScope();
     if(d.demo && window.sgDemo) sgDemo(META.demo);   // 見本モード(未ログイン)
