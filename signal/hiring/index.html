@@ -76,9 +76,9 @@ footer{border-top:1px solid var(--line); padding:14px 28px 40px; font-size:11.5p
   aside > *:not(.filt-toggle){display:none;} aside.open > *{display:block;} aside.open > .filt-toggle{display:flex;} aside.open > label.fitem{display:flex;} aside{padding:12px 14px 4px;} }
 @media (max-width:760px){ .app{grid-template-columns:1fr;} aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);} }
 </style>
-<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260907y">
+<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260908a">
 <script src="/signal/assets/favi.js?v=20260907t"></script>
-<script src="/signal/assets/nav.js?v=20260907n" defer></script>
+<script src="/signal/assets/nav.js?v=20260908a" defer></script>
 <script src="/signal/assets/cards.js?v=20260907q"></script>
 </head>
 <body>
@@ -171,7 +171,7 @@ async function boot(){ setHeadH(); try{ const r=await fetch("/cockpit/data/hirin
     document.getElementById("crosscnt").textContent=SIGNALS.filter(isCross).length;
     document.getElementById("metaline").innerHTML=`IL・IN・MI・OH・WI / 会社 <span class="mono">${META.companies}</span> 社・拠点カード <span class="mono">${META.n}</span> 件・採用ページ ${META.sources[0].n_boards} 件・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     document.getElementById("scopebox").innerHTML=`<div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>採用ページ(ATS)<span class="mono">${META.sources[0].n_boards}</span> 件・会社 <span class="mono">${META.companies}</span>・拠点カード <span class="mono">${META.n}</span>・観測開始 <span class="mono">${esc(META.observed_since||"—")}</span>・書き出し <span class="mono">${fmtCT(META.generated_at)}</span>(米中部時間)<br><span class="ng">見ていないもの:</span> ATS の公開 API を持たない会社(Indeed・ADP・Paylocity 等)・州の職業紹介サイト・カルテに無い会社。</div>`;
-    renderFilters(); render(); }catch(err){ document.getElementById("metaline").textContent="データの読み込みに失敗しました("+err.message+")。"; document.getElementById("empty").hidden=false; document.getElementById("empty").textContent="データ(hiring.json)を読み込めませんでした。"; } }
+    renderFilters(); render(); if(d.demo && window.sgDemo) sgDemo(META.demo); }catch(err){ document.getElementById("metaline").textContent="データの読み込みに失敗しました("+err.message+")。"; document.getElementById("empty").hidden=false; document.getElementById("empty").textContent="データ(hiring.json)を読み込めませんでした。"; } }
 boot();
 (function(){ const a=document.querySelector("aside"); const b=document.getElementById("filttoggle"); if(!a||!b) return; b.addEventListener("click",()=>{ a.classList.toggle("open"); b.textContent=a.classList.contains("open")?"絞り込みを閉じる ▴":"絞り込み ▾"; }); })();
 </script>

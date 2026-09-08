@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal にログインする — Signal by 43 Sunsets</title>
+<meta name="description" content="Signal by 43 Sunsets のログイン。メールで届いたリンクを確定するか、登録済みのアドレスに新しいリンクを送ります。">
+<link rel="canonical" href="https://43sunsets.com/signal/login/">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{ --serif:"Shippori Mincho",serif; --mono:"IBM Plex Mono",ui-monospace,monospace; }
+*{box-sizing:border-box}
+body{ margin:0; background:var(--paper); color:var(--ink); font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif; }
+main{ max-width:640px; margin:0 auto; padding:48px 24px 80px; }
+.kicker{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; color:var(--sub); text-transform:uppercase; }
+h1{ font-family:var(--serif); font-size:28px; line-height:1.4; margin:8px 0 14px; }
+.lead{ color:var(--ink-2); line-height:1.9; margin:0 0 26px; font-size:15px; }
+form.reg{ display:grid; gap:14px; background:var(--card); border:1px solid var(--line); border-radius:8px; padding:24px; }
+label.f{ display:grid; gap:6px; font-size:13px; color:var(--sub); }
+label.f input{ font:inherit; font-size:15px; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:10px 12px; }
+label.f input:focus{ outline:2px solid var(--accent); outline-offset:1px; border-color:transparent; }
+.row2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; } @media (max-width:560px){ .row2{ grid-template-columns:1fr; } }
+fieldset{ border:0; padding:0; margin:0; display:grid; gap:6px; font-size:13px; color:var(--sub); }
+.chips{ display:flex; flex-wrap:wrap; gap:8px; } .chips label{ display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line); border-radius:999px; padding:5px 12px; font-size:13px; color:var(--ink); cursor:pointer; background:var(--paper); }
+.chips input{ margin:0; }
+.btn{ font:inherit; font-size:15px; font-weight:700; color:#fff; background:var(--ink); border:0; border-radius:6px; padding:12px 22px; cursor:pointer; }
+.btn:hover{ background:var(--accent); } .btn.alt{ background:transparent; color:var(--ink); border:1px solid var(--line); font-weight:500; }
+.note{ font-size:12.5px; color:var(--sub); line-height:1.8; margin-top:16px; } .note a{ color:var(--accent); }
+.msg{ border-left:3px solid var(--fact); background:var(--fact-bg); padding:14px 18px; border-radius:0 6px 6px 0; margin:0 0 22px; line-height:1.8; }
+.msg.warn{ border-color:var(--warn); background:var(--infer-bg); }
+.hp{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+footer{ max-width:640px; margin:0 auto; padding:0 24px 40px; font-size:11px; color:var(--sub); line-height:1.7; }
+</style>
+<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260908a">
+<script src="/signal/assets/nav.js?v=20260908a" defer></script>
+</head>
+<body>
+<header class="site-head">
+  <a class="logo" href="/signal/" aria-label="Signal by 43 Sunsets"><svg class="lockup" viewBox="0 8 300 62" role="img" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M14 40 A22 22 0 0 1 58 40" stroke="var(--accent)"/><path d="M23 40 A13 13 0 0 1 49 40" stroke="var(--accent)" opacity=".62"/><path d="M31 40 A5 5 0 0 1 41 40" stroke="var(--accent)" opacity=".38"/></g><path d="M10 46 H172" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" fill="none"/><text x="70" y="41" font-family="Shippori Mincho, serif" font-weight="700" font-size="36" fill="var(--ink)">Signal</text><text x="172" y="64" text-anchor="end" font-family="Shippori Mincho, serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="var(--sub)">by 43 Sunsets</text></svg></a>
+  <nav class="cnav" aria-label="ページ"><a href="/signal/">トップ</a><a href="/signal/permits/">建設許可</a><a href="/signal/ucc/">UCC</a><a href="/signal/subsidies/">補助金</a><a href="/signal/hiring/">企業採用状況</a><a href="/signal/macro/">景気の状況</a><a href="/signal/freshness/">データの範囲と鮮度</a><a href="/signal/solutions/">ソリューション</a></nav>
+  <div class="hdr-right"><a class="corp" href="/" title="43 Sunsets(会社サイト)">43 Sunsets ↗</a><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
+</header>
+<script>
+/* 配色スイッチ(cockpit 共通・既定 = ライト・選択は localStorage "cockpit-theme" に保存) */
+(function(){
+  const K = "cockpit-theme"; let t = null;
+  try { t = localStorage.getItem(K); } catch (e) {}
+  if (t !== "dark" && t !== "light") t = "light";
+  const apply = n => { document.documentElement.setAttribute("data-theme", n); try { localStorage.setItem(K, n); } catch (e) {}
+    const b = document.getElementById("themebtn"); if (b) b.textContent = n === "dark" ? "☀️ ライト" : "🌙 ダーク";
+    window.dispatchEvent(new CustomEvent("themechange", {detail: n})); };
+  document.documentElement.setAttribute("data-theme", t);
+  window.__setTheme = apply;
+  const b = document.getElementById("themebtn");
+  if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
+})();
+</script>
+<main id="main">
+  <div class="kicker">SIGNAL by 43 SUNSETS — ログイン</div>
+  <h1 id="h1">Signal にログインする</h1>
+  <div id="body"></div>
+</main>
+<footer>© 43 Sunsets · <a href="/legal/" style="color:inherit">Legal</a> · hello@43sunsets.com</footer>
+<script>
+(function(){
+  const q = new URLSearchParams(location.search); const t = q.get("t") || ""; const st = q.get("state"); const done = q.get("done") === "1";
+  const nextRaw = q.get("next") || "/signal/"; const next = /^\/signal\/[a-z0-9\/_\-]*\/?(\?[a-z0-9=&_\-]*)?$/i.test(nextRaw) ? nextRaw : "/signal/";
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const body = document.getElementById("body");
+  const resendForm = (lead) => `${lead}<form class="reg" method="post" action="/signal/resend">
+      <input type="hidden" name="next" value="${esc(next)}">
+      <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <label class="f">登録済みのメールアドレス <input type="email" name="email" required maxlength="200" autocomplete="email" inputmode="email" placeholder="例: taro.yamada@company.com"></label>
+      <div><button class="btn" type="submit">新しいログイン用リンクを受け取る</button></div>
+      <p class="note" style="margin:0">リンクは 15 分有効・1 回限り。未登録のアドレスには登録のご案内をお送りします。</p></form>
+    <p class="note">初めての方は <a href="/signal/join/">登録画面</a> へ。</p>`;
+  if (done) {
+    // Cookie が置けたかを確かめてから本来のページへ。置けていなければ案内(URL にセッションは載せない)。
+    body.innerHTML = `<p class="lead">ログインを確認しています…</p>`;
+    fetch("/signal/me", {cache:"no-store", credentials:"same-origin"}).then(r => r.json()).then(m => {
+      if (m && m.loggedIn) { body.innerHTML = `<div class="msg"><strong>ログインしました。</strong> ${esc(m.company || m.email)} として 30 日間ログイン状態が続きます。</div><p><a class="btn" href="${esc(next)}">Signal へ進む</a></p>`; setTimeout(() => { location.replace(next); }, 900); }
+      else { body.innerHTML = `<div class="msg warn"><strong>ブラウザが Cookie を受け付けていません。</strong><br>Signal のログインはこのサイト(43sunsets.com)のファーストパーティ Cookie 1 つで保ちます。ブラウザの設定で 43sunsets.com の Cookie を許可し、もう一度リンクを受け取ってください。</div>` + resendForm(""); }
+    }).catch(() => { body.innerHTML = `<div class="msg warn">確認に失敗しました。もう一度お試しください。</div>` + resendForm(""); });
+  } else if (t) {
+    body.innerHTML = `<p class="lead">メールのリンクを確認しました。下のボタンを押すとログインが確定します(リンクは 15 分有効・1 回限り。ボタンを押すまでは何も起きません)。</p>
+      <form class="reg" method="post" action="/signal/session" style="display:block"><input type="hidden" name="t" value="${esc(t)}"><input type="hidden" name="next" value="${esc(next)}"><button class="btn" type="submit">ログインする</button></form>
+      <p class="note">期限が切れていた場合は、この画面でアドレスを入力すると新しいリンクが届きます。</p>`;
+  } else if (st === "sent") {
+    body.innerHTML = `<div class="msg"><strong>メールをお送りしました。</strong><br>登録済みのアドレスならログイン用リンクが、未登録なら登録のご案内が届きます(15 分有効)。届かない場合は迷惑メール箱をご確認ください。</div>` + resendForm("");
+  } else {
+    body.innerHTML = resendForm(`<p class="lead">登録済みのメールアドレスを入力すると、新しいログイン用リンクをお送りします。${st === "invalid" ? "<br><span style=\"color:var(--warn)\">メールアドレスの形式を確認してください。</span>" : ""}</p>`);
+  }
+})();
+</script>
+<script src="/signal/assets/hit.js?v=20260905e" defer></script>
+</body>
+</html>

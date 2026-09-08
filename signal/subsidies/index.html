@@ -139,9 +139,9 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
 }
 </style>
-<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260907y">
+<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260908a">
 <script src="/signal/assets/favi.js?v=20260907t"></script>
-<script src="/signal/assets/nav.js?v=20260907n" defer></script>
+<script src="/signal/assets/nav.js?v=20260908a" defer></script>
 <script src="/signal/assets/cards.js?v=20260907q"></script>
 </head>
 <body>
@@ -349,6 +349,7 @@ async function boot(){
     const major = SIGNALS.filter(s=>!isMinor(s)).length;
     document.getElementById("metaline").innerHTML = `IL・IN・MI・OH・WI / 保存 <span class="mono">${META.n.toLocaleString()}</span> 件・設備投資に関わる案件 <span class="mono">${major}</span> 件・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     renderFilters(); render(); renderScope();
+    if(d.demo && window.sgDemo) sgDemo(META.demo);   // 見本モード(未ログイン)
   }catch(err){
     document.getElementById("metaline").textContent = "データの読み込みに失敗しました(" + err.message + ")。";
     document.getElementById("empty").hidden = false; document.getElementById("empty").textContent = "データ(subsidies.json)を読み込めませんでした。時間をおいて再読み込みしてください。";

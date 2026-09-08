@@ -182,3 +182,36 @@ body .karte-top h2, body .kprof h2{ font-size:24px; }
 .hdr-right .corp, .kbar .corp{ font-family:var(--serif, "Shippori Mincho", serif); font-weight:700; font-size:13.5px; letter-spacing:.06em; color:var(--sub); text-decoration:none; margin-right:8px; white-space:nowrap; }
 .hdr-right .corp:hover, .kbar .corp:hover{ color:var(--ink); }
 @media (max-width:600px){ .hdr-right .corp{ display:none; } }
+/* ── ログイン表示と見本モード(2026-09-08・登録/ログイン設計)── */
+.sg-auth{ display:inline-flex; align-items:center; gap:8px; }
+.sg-btn{ font-size:12.5px; border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:999px; padding:4px 11px; font-family:inherit; cursor:pointer; text-decoration:none; white-space:nowrap; line-height:1.4; }
+.sg-btn:hover{ border-color:var(--ink); }
+.sg-btn.sg-join{ background:var(--ink); color:var(--paper); border-color:var(--ink); font-weight:700; }
+.sg-btn.sg-join:hover{ background:var(--accent); border-color:var(--accent); }
+.sg-who{ font-size:12.5px; color:var(--sub); max-width:180px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.sg-form{ display:inline; margin:0; }
+@media (max-width:600px){ .sg-auth{ display:none; } }   /* 375px: ヘッダー右は ☰+配色で満杯(実測 364px)→ 導線は ☰ メニュー内の .sg-navitem */
+.cnav .sg-navitem{ display:none; }
+.site-head.nav-open .cnav .sg-navitem{ display:block; padding:11px 4px; font-size:15px; border-bottom:1px solid var(--line-soft); }
+.site-head.nav-open .cnav form.sg-navitem{ margin:0; }
+.sg-navbtn{ font:inherit; font-weight:700; color:var(--ink); background:transparent; border:0; padding:0; cursor:pointer; }
+/* 見本: カードはぼかして触れない・絞り込み帯は薄く不活性・動くのは戻るとナビのみ */
+.sg-blur{ filter:blur(5px) saturate(.6); pointer-events:none; user-select:none; opacity:.85; }
+.sg-blur a, .sg-blur button{ pointer-events:none !important; }
+aside.sg-locked{ opacity:.45; filter:blur(1.5px); pointer-events:none; user-select:none; }
+[data-demo="1"] .toolbar button:disabled{ opacity:.4; cursor:not-allowed; }
+.sg-cta{ position:sticky; top:calc(var(--headh, 72px) + 8px); z-index:5; margin:0 0 18px; }
+.sg-cta-in{ background:var(--card); border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:6px; padding:18px 22px; box-shadow:0 12px 32px -18px rgba(0,0,0,.35); }
+.sg-cta-k{ font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; letter-spacing:.18em; color:var(--accent); }
+.sg-cta-in h2{ margin:4px 0 6px; font-family:var(--serif, "Shippori Mincho", serif); font-size:19px; line-height:1.5; }
+.sg-cta-in p{ margin:0 0 12px; font-size:13.5px; color:var(--ink-2); line-height:1.8; }
+.sg-cta-acts{ display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+.sg-cta-btn{ display:inline-block; background:var(--ink); color:var(--paper); text-decoration:none; font-weight:700; font-size:14px; padding:9px 18px; border-radius:6px; }
+.sg-cta-btn:hover{ background:var(--accent); }
+.sg-cta-lnk{ font-size:13px; color:var(--accent); }
+/* 企業カルテ: 許可以外の節は施錠 */
+.ksec.sg-lock{ position:relative; min-height:120px; }
+.ksec.sg-lock .sg-lock-body{ filter:blur(5px); pointer-events:none; user-select:none; opacity:.6; }
+.ksec.sg-lock .sg-lock-note{ position:absolute; inset:auto 0 0 0; top:44px; display:flex; align-items:center; justify-content:center; }
+.ksec.sg-lock .sg-lock-note a{ background:var(--card); border:1px solid var(--line); border-radius:6px; padding:10px 16px; font-size:13.5px; color:var(--ink); text-decoration:none; box-shadow:0 8px 24px -14px rgba(0,0,0,.35); }
+.ksec.sg-lock .sg-lock-note a:hover{ border-color:var(--ink); }

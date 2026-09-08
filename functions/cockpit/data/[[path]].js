@@ -1,0 +1,53 @@
+// /cockpit/data/* のゲート(2026-09-07 夜 CEO 裁定「ぼかしは見た目だけにしない」)。
+// 静的 JSON(bot = VPS → Actions が毎日書く)の前に立ち、ログイン Cookie のない読者には
+//   UCC・補助金・採用 = 見本(古い実例 数枚+件数)/企業カルテ = 建設許可の節だけ
+// を返す。建設許可・鮮度・景気・health・top・sources はそのまま通す(ログイン前フルアクセスの面)。
+// ログイン済みは静的ファイルをそのまま返す(next() = Pages の静的配信)。
+import { currentSession, json } from "../../signal/_lib.js";
+
+const GATED = new Set(["ucc.json", "subsidies.json", "hiring.json"]);
+const SAMPLE_N = 4;                    // 見本の枚数
+const SAMPLE_MIN_AGE_DAYS = 45;        // 見本は 45 日以上前の実例だけ(鮮度は登録の対価)
+const MINOR_SUBSIDY = new Set(["訓練・インフラ・その他", "未分類"]);   // signal/index.html と同じ主要件数の規則
+
+export async function onRequestGet(context) {
+  const { request, env, next } = context;
+  const path = (context.params.path || []).join("/");
+  const isCompany = /^companies\/C-\d+\.json$/.test(path);
+  if (!GATED.has(path) && !isCompany) return next();
+  if (await currentSession(request, env)) { const r = await next(); return withHeaders(r, "full"); }
+  const r = await next(); if (!r.ok) return r;
+  let d; try { d = await r.json(); } catch { return json({ ok: false, error: "bad data" }, 502); }
+  const cutoff = new Date(Date.now() - SAMPLE_MIN_AGE_DAYS * 864e5).toISOString().slice(0, 10);
+  const out = isCompany ? demoCompany(d) : demoFace(path, d, cutoff);
+  return json(out, 200, { "x-signal-mode": "demo", "vary": "cookie" });
+}
+
+function withHeaders(r, mode) { const h = new Headers(r.headers); h.set("x-signal-mode", mode); h.set("cache-control", "no-store"); h.set("vary", "cookie"); return new Response(r.body, { status: r.status, headers: h }); }
+
+function demoFace(path, d, cutoff) {
+  const meta = { ...(d.meta || {}) };
+  const all = d.signals || [];
+  let pick;
+  if (path === "hiring.json") {
+    // 採用は日付を持たない(観測値)→ 製造職の多い順に 2 枚。数字は伏せずに古い観測を装わない。
+    pick = [...all].sort((a, b) => (b.open_mfg || 0) - (a.open_mfg || 0)).slice(0, 2);
+  } else {
+    const old = all.filter(s => (s.date || "") && s.date <= cutoff);
+    const pool = path === "ucc.json" ? old.filter(s => (s.equipment || []).length).concat(old.filter(s => !(s.equipment || []).length)) : old.filter(s => s.recipient && !s.masked).concat(old.filter(s => !(s.recipient && !s.masked)));
+    pick = pool.slice(0, SAMPLE_N);
+  }
+  meta.demo = { note: `全 ${all.length} 件のうち ${pick.length} 件(${path === "hiring.json" ? "観測値" : cutoff + " 以前の実例"})を表示。登録すると全件・当日分・絞り込み・企業カルテが使えます。`, total: all.length, cutoff, sample: pick.length };
+  if (path === "subsidies.json") meta.n_major = all.filter(x => !(MINOR_SUBSIDY.has(x.category) && x.issuer_level === "連邦")).length;
+  const out = { demo: true, meta, signals: pick };
+  if (d.companies) { const ids = new Set(pick.map(s => s.company_id).filter(Boolean)); out.companies = d.companies.filter(c => ids.has(c.id)); }
+  return out;
+}
+
+function demoCompany(c) {
+  const f = c.faces || {};
+  const lock = face => face ? { count: face.count || 0, locked: true } : { count: 0, locked: true };
+  return { ...c, demo: true,
+    faces: { permits: f.permits || { count: 0, items: [] }, ucc: lock(f.ucc), hiring: lock(f.hiring), grants: lock(f.grants) },
+    timeline: (c.timeline || []).filter(t => t.face === "permits") };
+}

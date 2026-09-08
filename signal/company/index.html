@@ -239,7 +239,8 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 .knote{font-size:11.5px; color:var(--sub); border-top:1px solid var(--line-soft); margin-top:28px; padding-top:10px; line-height:1.7;}
 @media (max-width:760px){ .faces4{grid-template-columns:repeat(2,minmax(0,1fr));} .kwrap{padding:18px 16px 60px;} .kprof h2{font-size:20px;} }
 </style>
-<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260907y">
+<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260908a">
+<script src="/signal/assets/nav.js?v=20260908a" defer></script>
 <script src="/signal/assets/favi.js?v=20260907t"></script>
 </head>
 <body>
@@ -290,6 +291,8 @@ function grantItem(g){
     <div class="kref">${esc([g.program_name || (g.program ? "CFDA " + g.program : null), g.start ? "履行 " + g.start + "〜" + (g.end || "") : null, g.id].filter(Boolean).join(" · "))}${g.url ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener">USAspending ↗</a>` : ""}</div></div>`;
 }
 function hireItem(h){ return `<div class="kitem"><div class="khead"><span class="kdate">${esc(h.posted || h.first_seen || "")}</span><span class="kloc">${esc([h.city, h.state].filter(Boolean).join(", "))}</span><span class="kchip">${esc(h.role)}</span></div><div class="kfact"><span class="badge-fact">事実</span>${h.url ? `<a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.title)}</a>` : esc(h.title)}</div></div>`; }
+// 見本モード(未ログイン): 許可以外の節はぼかした見本文+登録案内(データ自体はサーバーが返していない)
+function lockBody(label){ const here = encodeURIComponent(location.pathname + location.search); return `<div class="sg-lock-body" aria-hidden="true"><div class="kitem"><div class="khead"><span class="kdate">20XX-XX-XX</span><span class="kloc">—</span><span class="kchip">${esc(label)}</span></div><div class="kfact">登録した方には、この会社の${esc(label)}の記録をここに表示します。</div></div><div class="kitem"><div class="khead"><span class="kdate">20XX-XX-XX</span></div><div class="kfact">見本モードでは内容を伏せています。</div></div></div><div class="sg-lock-note"><a href="/signal/join/?next=${here}">登録すると${esc(label)}の節が開きます(無料・日系製造業の方)</a></div>`; }
 function render(c){
   document.title = `${c.name} — 企業カルテ | Signal by 43 Sunsets`;
   const f = c.faces; const jp = c.jp ? `<span class="chip jp">日系(${c.jp_basis === "roster" ? "名簿" : "人の確認"})</span>` : (c.jp_candidate ? `<span class="chip">日系?(AI 候補)</span>` : "");
@@ -303,15 +306,15 @@ function render(c){
       </div>
     <div class="faces4">
       ${faceTile("#permits", "建設許可", f.permits.count + " 件", f.permits.count ? (f.permits.value_total ? "工事費 合計 " + usd(f.permits.value_total) : "最新 " + (f.permits.latest || "")) : "当社の網に無い", false)}
-      ${faceTile("#ucc", "UCC 登記", f.ucc.count + " 件", f.ucc.count ? "機械 " + f.ucc.machines + " 台 · " + (f.ucc.makers || []).join("・") : "当社の網に無い", false)}
-      ${faceTile("#hiring", "企業採用状況", hcount + " 件", hcount ? ("製造職 " + (f.hiring.mfg||0) + " · " + hroles.slice(0,3).map(([k,v])=>k+" "+v).join("・")) : "採用ページが当社の網に無い", false)}
-      ${faceTile("#grants", "政府補助金", gcount + " 件", gcount ? (f.grants.amount_total ? "交付・融資 合計 " + usd(f.grants.amount_total) : "最新 " + (f.grants.latest || "")) : "連邦の網に無い(州・市郡は順次)", false)}
+      ${faceTile("#ucc", "UCC 登記", f.ucc.count + " 件", f.ucc.locked ? "登録すると内容が開きます" : (f.ucc.count ? "機械 " + f.ucc.machines + " 台 · " + (f.ucc.makers || []).join("・") : "当社の網に無い"), false)}
+      ${faceTile("#hiring", "企業採用状況", hcount + " 件", f.hiring.locked ? "登録すると内容が開きます" : (hcount ? ("製造職 " + (f.hiring.mfg||0) + " · " + hroles.slice(0,3).map(([k,v])=>k+" "+v).join("・")) : "採用ページが当社の網に無い"), false)}
+      ${faceTile("#grants", "政府補助金", gcount + " 件", f.grants.locked ? "登録すると内容が開きます" : (gcount ? (f.grants.amount_total ? "交付・融資 合計 " + usd(f.grants.amount_total) : "最新 " + (f.grants.latest || "")) : "連邦の網に無い(州・市郡は順次)"), false)}
     </div>
     <section class="ksec" id="permits"><h3>建設許可(${f.permits.count})</h3>${f.permits.items.length ? f.permits.items.map(permitItem).join("") : `<div class="kempty">この会社の建設許可は当社の網に無い(未収集の自治体か、名義が別会社)。</div>`}</section>
-    <section class="ksec" id="ucc"><h3>UCC 登記(${f.ucc.count})</h3>${f.ucc.items.length ? f.ucc.items.map(uccItem).join("") : `<div class="kempty">この会社の UCC 登記は当社の網に無い(オハイオ先行・担保権者名で検索した範囲)。</div>`}</section>
-    <section class="ksec" id="hiring"><h3>採用(${hcount})</h3>${hcount ? `<div class="ksub" style="margin-bottom:8px">開いている求人 ${hcount}(製造職 ${f.hiring.mfg||0})・内訳: ${hroles.map(([k,v])=>`${esc(k)} <span class="mono">${v}</span>`).join("・")}・拠点: ${Object.entries(f.hiring.sites||{}).map(([k,v])=>`${esc(k)} ${v}`).join("・")}・出典 ${esc(f.hiring.source||"")}。職種の型は題名の規則。求人票の本文(設備・工程・人数)の AI 読みは順次。</div>` + hitems.map(hireItem).join("") : `<div class="kempty">${esc((f.hiring && f.hiring.note) || "この会社の採用ページは当社の網に無い。")}</div>`}</section>
-    <section class="ksec" id="grants"><h3>政府補助金(${gcount})</h3>${gitems.length ? gitems.map(grantItem).join("") : `<div class="kempty">${esc((f.grants && f.grants.note) || "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。")}</div>`}</section>
-    <section class="ksec"><h3>時系列(4 つの情報源を合流)</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : (t.face === "grants" ? "grant" : (t.face === "hiring" ? "hire" : "permit"))}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
+    <section class="ksec${f.ucc.locked ? " sg-lock" : ""}" id="ucc"><h3>UCC 登記(${f.ucc.count})</h3>${f.ucc.locked ? lockBody("UCC 登記") : (f.ucc.items.length ? f.ucc.items.map(uccItem).join("") : `<div class="kempty">この会社の UCC 登記は当社の網に無い(オハイオ先行・担保権者名で検索した範囲)。</div>`)}</section>
+    <section class="ksec${f.hiring.locked ? " sg-lock" : ""}" id="hiring"><h3>採用(${hcount})</h3>${f.hiring.locked ? lockBody("採用") : hcount ? `<div class="ksub" style="margin-bottom:8px">開いている求人 ${hcount}(製造職 ${f.hiring.mfg||0})・内訳: ${hroles.map(([k,v])=>`${esc(k)} <span class="mono">${v}</span>`).join("・")}・拠点: ${Object.entries(f.hiring.sites||{}).map(([k,v])=>`${esc(k)} ${v}`).join("・")}・出典 ${esc(f.hiring.source||"")}。職種の型は題名の規則。求人票の本文(設備・工程・人数)の AI 読みは順次。</div>` + hitems.map(hireItem).join("") : `<div class="kempty">${esc((f.hiring && f.hiring.note) || "この会社の採用ページは当社の網に無い。")}</div>`}</section>
+    <section class="ksec${f.grants.locked ? " sg-lock" : ""}" id="grants"><h3>政府補助金(${gcount})</h3>${f.grants.locked ? lockBody("政府補助金") : gitems.length ? gitems.map(grantItem).join("") : `<div class="kempty">${esc((f.grants && f.grants.note) || "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。")}</div>`}</section>
+    <section class="ksec"><h3>時系列(4 つの情報源を合流)${c.demo ? `<span class="ksub" style="font-weight:400;margin-left:8px">見本モード: 建設許可のみ</span>` : ""}</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : (t.face === "grants" ? "grant" : (t.face === "hiring" ? "hire" : "permit"))}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
     <div class="knote">${esc(c.note)}</div>`;
 }
 async function boot(){

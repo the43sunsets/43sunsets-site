@@ -220,9 +220,9 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   aside{padding:12px 14px 4px;}
 }
 </style>
-<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260907y">
+<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260908a">
 <script src="/signal/assets/favi.js?v=20260907t"></script>
-<script src="/signal/assets/nav.js?v=20260907n" defer></script>
+<script src="/signal/assets/nav.js?v=20260908a" defer></script>
 <script src="/signal/assets/cards.js?v=20260907q"></script>
 </head>
 <body>
@@ -416,6 +416,7 @@ async function boot(){
     const f = META.funnel;
     document.getElementById("metaline").innerHTML = `${(META.states_present||[]).join("・")} 先行 / 登記 <span class="mono">${f.filings_total}</span> 件・会社 <span class="mono">${COMPANIES.length}</span> 社・機械 <span class="mono">${SIGNALS.reduce((a,s)=>a+Math.max(1,(s.equipment||[]).length),0)}</span> 台・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     renderFilters(); render(); renderScope();
+    if(d.demo && window.sgDemo) sgDemo(META.demo);   // 見本モード(未ログイン): 古い実例 数枚・絞り込み不活性・登録案内
   }catch(err){ document.getElementById("metaline").textContent = "データの読み込みに失敗しました(" + err.message + ")。"; document.getElementById("empty").hidden = false; document.getElementById("empty").textContent = "データ(ucc.json)を読み込めませんでした。時間をおいて再読み込みしてください。"; }
 }
 boot();
