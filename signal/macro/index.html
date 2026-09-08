@@ -95,10 +95,10 @@ footer{padding:18px 40px 30px; border-top:1px solid var(--line); font-size:11px;
 <link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260908a">
 <script src="/signal/assets/nav.js?v=20260908a" defer></script>
 <style>
-body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:minmax(0,1fr); gap:14px; margin-top:0; height:calc(100vh - var(--headh,70px) - var(--footh,120px) - 140px); min-height:460px; }
+body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:auto; gap:12px; margin-top:0; height:auto; min-height:0; }   /* 9/8 CEO: 3 軸化 → 指標は上段の帯(2 行)に圧縮し、下にニュース 2 軸 */
 .body{ min-height:calc(100vh - var(--headh,70px) - var(--footh,120px)); padding-bottom:22px; box-sizing:border-box; }
 .tile{ padding:14px 15px; gap:6px; min-height:0; overflow:hidden; } .tile .src{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; } .tile .states div{ font-size:10px; padding:2px 0; }
-.tile .n{ font-size:13.5px; } .tile .v b{ font-size:22px; } .tile svg{ flex:1 1 auto; height:auto; min-height:40px; margin:4px 0; }
+.tile .n{ font-size:13px; } .tile .v b{ font-size:20px; } .tile svg{ flex:0 0 auto; height:30px; width:100%; margin:2px 0; }
 .tile .how{ display:none; } .tile:hover .how, .tile:focus-within .how{ display:block; }
 @media (max-width:1180px){ body .macro{ grid-template-columns:repeat(3,minmax(0,1fr)); height:auto; } .tile svg{ flex:0 0 auto; height:36px; } }
 @media (max-width:600px){ body .macro{ grid-template-columns:1fr; } }
@@ -107,6 +107,25 @@ body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:minma
 .rail .sec{ margin:0 0 12px; } .rail .sec h2{ font-size:19px; }
 .rail .ai{ flex-direction:column; gap:10px; padding:16px 18px; } .rail .ai p{ margin:0; font-size:14px; line-height:1.85; color:var(--ink); } .rail .ai .d{ font-size:11px; color:var(--sub); margin-top:2px; }
 .rail .note{ display:none; }
+/* ── ニュース 2 軸(9/8): 米製造業 / 5 州ローカル ── */
+.news2{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; margin-top:34px; align-items:start; }
+.news2 .sec{ margin:0 0 12px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; } .news2 .sec h2{ font-size:19px; margin:0; } .news2 .sec span{ font-size:12px; color:var(--sub); }
+.tabs{ display:flex; gap:6px; margin-left:auto; } .tabs button{ font:inherit; font-size:12.5px; font-weight:700; letter-spacing:.04em; border:1px solid var(--line); background:transparent; color:var(--ink-2); border-radius:999px; padding:3px 11px; cursor:pointer; }
+.tabs button[aria-selected="true"]{ background:var(--ink); color:var(--paper); border-color:var(--ink); }
+.nlist{ display:flex; flex-direction:column; border-top:1px solid var(--line); }
+.ncard{ display:grid; grid-template-columns:150px minmax(0,1fr); gap:16px; padding:14px 0; border-bottom:1px solid var(--line-soft); }
+.ncard .ph{ width:150px; height:94px; border-radius:5px; overflow:hidden; background:var(--chip-bg); display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:26px; color:var(--sub); letter-spacing:.04em; }
+.ncard .ph img{ width:100%; height:100%; object-fit:cover; display:block; }
+.ncard h3{ margin:0 0 6px; font-size:15px; line-height:1.5; font-weight:700; } .ncard h3 a{ color:var(--ink); text-decoration:none; } .ncard h3 a:hover{ color:var(--accent); text-decoration:underline; }
+.ncard p{ margin:0 0 8px; font-size:13px; line-height:1.75; color:var(--ink-2); }
+.ncard .m{ display:flex; flex-wrap:wrap; gap:6px 10px; align-items:center; font-size:11.5px; color:var(--sub); }
+.ncard .m .chip{ border:1px solid var(--line); border-radius:999px; padding:1px 8px; font-size:11px; color:var(--ink-2); }
+.ncard .m .kar{ color:var(--accent); text-decoration:none; font-weight:600; } .ncard .m .kar:hover{ text-decoration:underline; }
+.ncard .m .rel3{ color:var(--fact); font-weight:700; }
+.nempty{ padding:18px 0; font-size:13px; color:var(--sub); }
+.nnote{ font-size:11.5px; color:var(--sub); line-height:1.7; margin:26px 0 0; }
+@media (max-width:1180px){ .news2{ grid-template-columns:1fr; gap:26px; } }
+@media (max-width:600px){ .ncard{ grid-template-columns:110px minmax(0,1fr); gap:12px; } .ncard .ph{ width:110px; height:70px; font-size:20px; } }
 </style>
 </head>
 <body>
@@ -132,13 +151,24 @@ body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:minma
 </script>
 <main class="app2">
   <aside class="rail">
-  <div class="lede-m"><h1 class="sr-only">景気の状況</h1><p>中西部の製造業が設備投資に前向きかどうか。セントルイス連銀 FRED の公開データ 10 指標を毎日更新し、AI はその 10 指標だけを根拠にまとめます。各指標の「↗」が出典です。</p></div>
+  <div class="lede-m"><h1 class="sr-only">景気の状況</h1><p>中西部の製造業が設備投資に前向きかどうかを 3 軸で。上段は セントルイス連銀 FRED の 10 指標(毎日更新)、下段は 米製造業のニュースと 5 州のローカルニュース(月・水・金に更新)。AI はその 10 指標だけを根拠にまとめます。各指標の「↗」が出典です。</p></div>
       <div class="sec"><h2>AI のまとめ</h2><span>根拠は右の 10 指標のみ</span></div>
     <div id="ai"></div>
     </aside>
   <section class="body">
     <div class="sec"><h2>10 の指標</h2><span>カーソルを当てると読み方が出ます</span></div>
     <div class="macro" id="macro"></div>
+    <div class="news2">
+      <div>
+        <div class="sec"><h2>米製造業のニュース</h2><span id="news-sub">読み込み中…</span></div>
+        <div class="nlist" id="news-us"></div>
+      </div>
+      <div>
+        <div class="sec"><h2>5 州のローカル</h2><div class="tabs" id="state-tabs" role="tablist"></div></div>
+        <div class="nlist" id="news-st"></div>
+      </div>
+    </div>
+    <p class="nnote" id="news-note" hidden></p>
   </section>
 </main>
 <footer>Signal by 43 Sunsets(BETA)— 出典: セントルイス連銀 FRED。AI が書いた文には必ず「AI のまとめ」の札。情報の正確性・完全性を保証するものではなく、投資・法務等の助言でもありません。© <a href="/" style="color:inherit">43 Sunsets</a></footer>
@@ -166,6 +196,25 @@ async function boot(){
     if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><span class="badge">AI のまとめ</span><div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は下の 10 指標のみ</div></div></div>`;
     document.getElementById("macro").innerHTML = m.tiles.map(tileHtml).join(""); }
   catch(e){ document.getElementById("macro").innerHTML = `<div class="tile"><div class="n">景気の指標を読み込めませんでした(${esc(e.message)})</div></div>`; }
+
+  // ── ニュース 2 軸(9/8): /cockpit/data/news.json(月・水・金 05:30 CT に VPS が更新)──
+  try{
+    const n = await get("/cockpit/data/news.json");
+    const STN = {IL:"イリノイ", IN:"インディアナ", MI:"ミシガン", OH:"オハイオ", WI:"ウィスコンシン"};
+    const mono = src => `<span class="ph" aria-hidden="true">${esc((src||"·").replace(/^The /,"").slice(0,2).toUpperCase())}</span>`;
+    const card = x => `<article class="ncard"><a href="${esc(x.url)}" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">${x.thumb ? `<span class="ph"><img src="${esc(x.thumb)}" alt="" loading="lazy"></span>` : mono(x.source)}</a>
+      <div><h3><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a></h3>${x.summary_ja ? `<p>${esc(x.summary_ja)}</p>` : ""}
+      <div class="m"><span>${esc(x.source||"")}</span><span>${esc(x.published_at||"")}</span>${x.state ? `<span>${esc(STN[x.state]||x.state)}${x.city ? "・"+esc(x.city) : ""}</span>` : ""}${(x.tags||[]).map(t=>`<span class="chip">${esc(t)}</span>`).join("")}${x.relevance>=3 ? `<span class="rel3" title="特定の会社の具体的な動き">会社の動き</span>` : ""}${x.company_id ? `<a class="kar" href="/signal/company/?id=${esc(x.company_id)}" target="_blank" rel="noopener">企業カルテ ↗</a>` : (x.company ? `<span>${esc(x.company)}</span>` : "")}</div></div></article>`;
+    document.getElementById("news-us").innerHTML = (n.us||[]).length ? n.us.map(card).join("") : `<div class="nempty">直近 14 日に該当するニュースはありません。</div>`;
+    document.getElementById("news-sub").textContent = `更新 ${n.updated_ct||""}・次回 ${n.next_update_ct||""}(${n.schedule||"月・水・金"})`;
+    const tabs = document.getElementById("state-tabs"); const stl = document.getElementById("news-st"); const order = ["IL","IN","MI","OH","WI"];
+    const show = st => { tabs.querySelectorAll("button").forEach(b=>b.setAttribute("aria-selected", b.dataset.st===st ? "true" : "false")); const arr = (n.states||{})[st]||[]; stl.innerHTML = arr.length ? arr.map(card).join("") : `<div class="nempty">${STN[st]}の直近 14 日のニュースは見つかりませんでした。</div>`; try{ localStorage.setItem("cockpit-news-state", st); }catch(e){} };
+    tabs.innerHTML = order.map(st=>`<button type="button" role="tab" data-st="${st}" aria-selected="false">${st} <span style="font-weight:400;opacity:.7">${((n.states||{})[st]||[]).length}</span></button>`).join("");
+    tabs.addEventListener("click", e=>{ const b = e.target.closest("button"); if(b) show(b.dataset.st); });
+    let first = "IL"; try{ first = localStorage.getItem("cockpit-news-state") || "IL"; }catch(e){} show(order.includes(first) ? first : "IL");
+    const note = document.getElementById("news-note"); note.hidden = false;
+    note.textContent = (n.note||"") + " 出所: " + (n.sources||[]).map(s=>s.name).filter((v,i,a)=>a.indexOf(v)===i).join("・") + "。";
+  }catch(e){ document.getElementById("news-sub").textContent = "ニュースは準備中(" + e.message + ")"; }
 }
 boot();
 </script>
