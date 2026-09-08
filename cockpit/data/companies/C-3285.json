@@ -26,15 +26,47 @@
 "Haas Automation",
 "TRUMPF"
 ],
-"latest": "2026-07-16",
+"latest": "2026-05-28",
 "items": [
 {
+"id": "U-242",
+"date": "2026-05-28",
+"lapse": "2031-05-28",
+"kind": "設備投資",
+"lender": "メーカー/メーカー系金融",
+"secured_party": "TRUMPF Inc.",
+"equipment": [
+{
+"type": "プレスブレーキ",
+"maker": "TRUMPF",
+"model": "TruBend 7036",
+"qty": 1,
+"domain": "板金加工"
+}
+],
+"makers": [
+"TRUMPF"
+],
+"summary": "Codonics, Inc(Middleburg Heights, OH)が TRUMPF Inc. を担保権者として TruBend 7036 (B28) ベンディングマシン 1 台(製番 B1702I0480)を登記(2026-05-28)。",
+"infer": "板金加工・曲げ工程の増強の可能性(推論)。",
+"ref": "FS OH00298991865 Original",
+"status": "Active",
+"role": "debtor",
+"role_label": "債務者(UCC 登記)",
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:16:43+00:00"
+}
+},
+{
 "id": "U-709",
-"date": "2026-07-16",
-"lapse": "2031-07-16",
+"date": "2023-04-27",
+"lapse": "2028-04-27",
 "kind": "設備投資",
 "lender": "その他",
-"secured_party": "Lake Ridge Bank",
+"secured_party": "Midwest Manufacturing Resources, Inc.",
 "equipment": [
 {
 "type": "縦型マシニングセンタ(超高速)",
@@ -56,7 +88,7 @@
 ],
 "summary": "Codonics Inc.(Middleburg Heights, OH)が Midwest Manufacturing Resources, Inc. を担保権者として HAAS VF-2SSYT(製番1199823)およびTRT210(製番913307)を登記(2023-04-27)。",
 "infer": "マシニングセンタ導入による加工能力増強の可能性(推論)。",
-"ref": "FS 20260716353757-2 UCC1 Initial Financing Statement",
+"ref": "FS OH00272506353 Original",
 "status": "Active",
 "role": "debtor",
 "role_label": "債務者(UCC 登記)",
@@ -65,38 +97,6 @@
 "batch": "msgbatch_01DvwhburgpkzJE2M69hixeQ",
 "model": "claude-sonnet-5 (batch api ucc-v0)",
 "generated_at": "2026-09-05T17:21:15+00:00"
-}
-},
-{
-"id": "U-242",
-"date": "2026-07-10",
-"lapse": "2031-07-10",
-"kind": "設備投資",
-"lender": "メーカー/メーカー系金融",
-"secured_party": "Forward Bank",
-"equipment": [
-{
-"type": "プレスブレーキ",
-"maker": "TRUMPF",
-"model": "TruBend 7036",
-"qty": 1,
-"domain": "板金加工"
-}
-],
-"makers": [
-"TRUMPF"
-],
-"summary": "Codonics, Inc(Middleburg Heights, OH)が TRUMPF Inc. を担保権者として TruBend 7036 (B28) ベンディングマシン 1 台(製番 B1702I0480)を登記(2026-05-28)。",
-"infer": "板金加工・曲げ工程の増強の可能性(推論)。",
-"ref": "FS 20260710350341-2 UCC1 Initial Financing Statement",
-"status": "Active",
-"role": "debtor",
-"role_label": "債務者(UCC 登記)",
-"provenance": {
-"policy": "ucc-v0-2026-09-05-original-with-collateral",
-"batch": "msgbatch_01SfsHEmsMM6tGufQJmyKUzh",
-"model": "claude-sonnet-5 (batch api ucc-v0)",
-"generated_at": "2026-09-05T17:16:43+00:00"
 }
 }
 ]
@@ -119,20 +119,20 @@
 },
 "timeline": [
 {
-"date": "2026-07-16",
-"face": "ucc",
-"title": "UCC 登記: 縦型マシニングセンタ(超高速), チルティングロータリーテーブル",
-"ref": "U-709",
-"summary": "Codonics Inc.(Middleburg Heights, OH)が Midwest Manufacturing Resources, Inc. を担保権者として HAAS VF-2SSYT(製番1199823)およびTRT210(製番913307)を登記(2023-04-27)。"
-},
-{
-"date": "2026-07-10",
+"date": "2026-05-28",
 "face": "ucc",
 "title": "UCC 登記: プレスブレーキ",
 "ref": "U-242",
 "summary": "Codonics, Inc(Middleburg Heights, OH)が TRUMPF Inc. を担保権者として TruBend 7036 (B28) ベンディングマシン 1 台(製番 B1702I0480)を登記(2026-05-28)。"
+},
+{
+"date": "2023-04-27",
+"face": "ucc",
+"title": "UCC 登記: 縦型マシニングセンタ(超高速), チルティングロータリーテーブル",
+"ref": "U-709",
+"summary": "Codonics Inc.(Middleburg Heights, OH)が Midwest Manufacturing Resources, Inc. を担保権者として HAAS VF-2SSYT(製番1199823)およびTRT210(製番913307)を登記(2023-04-27)。"
 }
 ],
-"generated_at": "2026-09-08T06:02:22+00:00",
+"generated_at": "2026-09-08T08:15:00+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
