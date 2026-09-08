@@ -1,12 +1,14 @@
 // POST /signal/resend — Cookie が消えた/期限切れの人が、登録済みアドレスを入れて新しいリンクを受け取る(再登録不要)。
 // 応答は常に同じ画面へ(アドレスの登録有無を外に漏らさない)。未登録なら登録案内を、承認待ちなら受付済みの旨を本人にだけメールする。
 import { store, normEmail, safeNext, issueToken, rateLimited, sendMail, loginMail, pendingMail, origin, redirect, json } from "./_lib.js";
+import { verifyTurnstile } from "../_turnstile.js";
 
 export async function onRequestPost({ request, env }) {
   const kv = store(env);
   if (!kv || !env.SIGNAL_SECRET) return json({ ok: false, error: "login desk not connected" }, 503);
   let form; try { form = await request.formData(); } catch { return json({ ok: false, error: "bad form" }, 400); }
   if ((form.get("website") || "").trim() !== "") return redirect("/signal/login/?state=sent");
+  if (!(await verifyTurnstile(env, form, request)).ok) return redirect("/signal/login/?state=invalid");   // Turnstile(9/8)
   const email = normEmail(form.get("email")); const next = safeNext(form.get("next"));
   if (!email) return redirect("/signal/login/?state=invalid");
   if (await rateLimited(env, email)) return redirect("/signal/login/?state=sent");

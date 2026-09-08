@@ -73,7 +73,7 @@ footer{ max-width:640px; margin:0 auto; padding:0 24px 40px; font-size:11px; col
       <input type="hidden" name="next" value="${esc(next)}">
       <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <label class="f">登録済みのメールアドレス <input type="email" name="email" required maxlength="200" autocomplete="email" inputmode="email" placeholder="例: taro.yamada@company.com"></label>
-      <div><button class="btn" type="submit">新しいログイン用リンクを受け取る</button></div>
+<div class="cf-turnstile"></div>      <div><button class="btn" type="submit">新しいログイン用リンクを受け取る</button></div>
       <p class="note" style="margin:0">リンクは 15 分有効・1 回限り。未登録のアドレスには登録のご案内をお送りします。</p></form>
     <p class="note">初めての方は <a href="/signal/join/">登録画面</a> へ。</p>`;
   if (done) {
@@ -95,5 +95,7 @@ footer{ max-width:640px; margin:0 auto; padding:0 24px 40px; font-size:11px; col
 })();
 </script>
 <script src="/signal/assets/hit.js?v=20260905e" defer></script>
+<script src="/assets/turnstile.js"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){ setTimeout(function(){ if(window.turnstile&&window.TURNSTILE_SITE_KEY){ document.querySelectorAll(".cf-turnstile:empty").forEach(function(d){ window.turnstile.render(d,{sitekey:window.TURNSTILE_SITE_KEY}); }); } },800); });</script>
 </body>
 </html>

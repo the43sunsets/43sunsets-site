@@ -15,7 +15,12 @@ export async function onRequestGet(context) {
   const path = (context.params.path || []).join("/");
   const isCompany = /^companies\/C-\d+\.json$/.test(path);
   if (!GATED.has(path) && !isCompany) return next();
-  if (await currentSession(request, env)) { const r = await next(); return withHeaders(r, "full"); }
+  const sess = await currentSession(request, env);
+  if (sess) {
+    // 9/8 CEO 甲: ログイン済みでも 1 セッション 1 分 60 回まで(全件を機械で吸う動きを止める)+日次の取得回数を控える(管理者が流出元を追える)
+    if (await sessionLimited(env, sess.sid)) return json({ ok: false, error: "too many requests — 1 分ほど待ってから再読み込みしてください" }, 429, { "retry-after": "60" });
+    const r = await next(); return withHeaders(r, "full", sess.sid);
+  }
   const r = await next(); if (!r.ok) return r;
   let d; try { d = await r.json(); } catch { return json({ ok: false, error: "bad data" }, 502); }
   const cutoff = new Date(Date.now() - SAMPLE_MIN_AGE_DAYS * 864e5).toISOString().slice(0, 10);
@@ -23,7 +28,17 @@ export async function onRequestGet(context) {
   return json(out, 200, { "x-signal-mode": "demo", "vary": "cookie" });
 }
 
-function withHeaders(r, mode) { const h = new Headers(r.headers); h.set("x-signal-mode", mode); h.set("cache-control", "no-store"); h.set("vary", "cookie"); return new Response(r.body, { status: r.status, headers: h }); }
+function withHeaders(r, mode, sid) { const h = new Headers(r.headers); h.set("x-signal-mode", mode); h.set("cache-control", "no-store"); h.set("vary", "cookie"); if (sid) h.set("x-signal-mark", sid.slice(0, 8)); return new Response(r.body, { status: r.status, headers: h }); }
+const SESSION_PER_MINUTE = 60;
+async function sessionLimited(env, sid) {
+  const kv = env.SIGNAL_AUTH || env.BEACON_REQUESTS; if (!kv) return false;
+  const minute = Math.floor(Date.now() / 60000), day = new Date().toISOString().slice(0, 10);
+  const k = `sg:rlq:${sid}:${minute}`; const n = parseInt((await kv.get(k)) || "0", 10) + 1;
+  await kv.put(k, String(n), { expirationTtl: 120 });
+  const dk = `sg:dl:${day}:${sid}`; const dn = parseInt((await kv.get(dk)) || "0", 10) + 1;
+  await kv.put(dk, String(dn), { expirationTtl: 30 * 86400 });
+  return n > SESSION_PER_MINUTE;
+}
 
 function demoFace(path, d, cutoff) {
   const meta = { ...(d.meta || {}) };

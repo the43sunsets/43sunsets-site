@@ -52,7 +52,7 @@
         <input type="hidden" name="job_ref" value="ai-visibility-audit">
         <input type="hidden" name="job" value="Free AI visibility check requested from the service page.">
         <input type="hidden" name="lang" id="lang_f" value="en">
-        <p class="ctas" style="margin-top:4px"><button class="cta" type="submit" data-i18n="order_cta">Run my free check</button> <a class="cta ghost" href="/services/ai-visibility-audit/sample/" data-i18n="order_sample">See a real report first</a></p>
+<div class="cf-turnstile"></div>        <p class="ctas" style="margin-top:4px"><button class="cta" type="submit" data-i18n="order_cta">Run my free check</button> <a class="cta ghost" href="/services/ai-visibility-audit/sample/" data-i18n="order_sample">See a real report first</a></p>
         <p class="note" data-i18n="order_fine">We keep your address only to send this report. <a href="/legal/">Terms &amp; privacy</a>.</p>
       </form>
     </div>
@@ -126,5 +126,6 @@ window.SERVICES_JA = {
 document.getElementById('order-form').addEventListener('submit', function(){ document.getElementById('lang_f').value = document.documentElement.lang; });
 </script>
 <script src="/services/i18n.js"></script>
+<script src="/assets/turnstile.js"></script>
 </body>
 </html>

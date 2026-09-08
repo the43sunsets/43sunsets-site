@@ -3,12 +3,14 @@
 // 名簿外 → pending+受付メール → CEO へ承認/却下リンク → /signal/join/?state=pending
 // 登録済み(active)→ リンクを再送(再登録不要)。rejected → pending と同じ見え方(理由は開示しない)。
 import { store, normEmail, clean, safeNext, isRosterAddress, issueToken, rateLimited, sendMail, loginMail, pendingMail, adminMail, decisionSig, origin, rid, redirect, json, APPROVED_TOKEN_SECONDS } from "./_lib.js";
+import { verifyTurnstile } from "../_turnstile.js";
 
 export async function onRequestPost({ request, env }) {
   const kv = store(env);
   if (!kv || !env.SIGNAL_SECRET) return json({ ok: false, error: "registration desk not connected" }, 503);
   let form; try { form = await request.formData(); } catch { return json({ ok: false, error: "bad form" }, 400); }
   if ((form.get("website") || "").trim() !== "") return redirect("/signal/join/?state=sent");   // honeypot: 記録せず成功に見せる
+  if (!(await verifyTurnstile(env, form, request)).ok) return redirect("/signal/join/?state=invalid");   // Turnstile(9/8): 失敗は入力エラーと同じ画面
   const email = normEmail(form.get("email"));
   const company = clean(form.get("company"), 120), name = clean(form.get("name"), 80), title = clean(form.get("title"), 80);
   const interests = [...form.getAll("interest")].map(x => clean(x, 24)).filter(Boolean).slice(0, 8).join("・");

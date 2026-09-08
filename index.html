@@ -115,6 +115,21 @@ h2{font-family:var(--serif);font-weight:800;font-size:clamp(26px,2.8vw,36px);lin
 .contact p{margin:0 0 20px;color:var(--sub);font-size:15px}
 .contact a.mail{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:2px}
 .contact .sm{margin:22px 0 0;font-size:13px;color:var(--sub)}
+/* 相談フォーム(2026-09-08 CEO: mailto だけでなく Web フォームも) */
+.cform{display:block;margin:0 0 6px}
+.cform label{display:block;font-size:13px;color:var(--sub);margin:0 0 12px}
+.cform input[type=text],.cform input[type=email],.cform textarea{display:block;width:100%;margin-top:6px;padding:11px 12px;font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:4px}
+.cform input:focus,.cform textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.cform textarea{resize:vertical;min-height:96px}
+.cform .row2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.cform .hp{position:absolute;left:-9999px;top:-9999px;height:0;overflow:hidden}
+.cform .cf-turnstile{margin:4px 0 10px;min-height:0}
+.cform .cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:4px}
+.cform .or{font-size:13px;color:var(--sub)}
+.contact a.mail.mail-sm{font-size:16px;border-bottom-width:1.5px}
+.cform .cmsg{margin:12px 0 0;padding:12px 14px;border-left:3px solid var(--fact);background:rgba(46,110,78,.06);color:var(--fact);font-size:14px}
+.cform .cmsg.err{border-color:var(--ember);color:var(--ember);background:rgba(217,113,74,.06)}
+@media(max-width:640px){.cform .row2{grid-template-columns:1fr}}
 footer{border-top:1px solid var(--line);padding:34px 0 52px;font-size:13px;color:var(--sub)}
 footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover{color:var(--ink)}
@@ -224,11 +239,24 @@ footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover
         </div>
         <p style="margin:0;color:var(--sub);font-size:14.5px">その経験を、米国の日系製造業に、そのまま使えるかたちで。</p>
       </div>
-      <div class="contact">
+      <div class="contact" id="contact">
         <h3>まず 30 分、話しませんか。</h3>
         <p>困っていることを 2〜3 行でお送りください。お使いのシステムやツールの名前があれば、あわせて。</p>
-        <a class="mail" href="mailto:hello@43sunsets.com">hello@43sunsets.com</a>
-        <p class="sm">返信は 1 営業日以内(月〜金・米中部時間)。日本語・英語どちらでも。</p>
+        <form class="cform" method="post" action="/contact/submit" id="contactform">
+          <input type="hidden" name="page" value="/">
+          <input type="hidden" name="ref" id="cref" value="">
+          <div class="hp" aria-hidden="true"><label>Fax <input type="text" name="fax" tabindex="-1" autocomplete="off"></label></div>
+          <div class="row2">
+            <label>会社名 <input type="text" name="company" required maxlength="120" autocomplete="organization" placeholder="例: 〇〇 Manufacturing of America, Inc."></label>
+            <label>お名前 <input type="text" name="name" required maxlength="80" autocomplete="name" placeholder="例: 山田 太郎"></label>
+          </div>
+          <label>メールアドレス <input type="email" name="email" required maxlength="200" autocomplete="email" inputmode="email" placeholder="例: taro.yamada@company.com"></label>
+          <label>困っていること(任意) <textarea name="message" maxlength="4000" rows="4" placeholder="例: 受注は Excel、在庫は別システムで二重入力になっている。使っているのは …"></textarea></label>
+          <div class="cf-turnstile"></div>
+          <div class="cta-row"><button class="btn pri" type="submit">送信する <small>返信は 1 営業日以内</small></button><span class="or">または</span><a class="mail mail-sm" href="mailto:hello@43sunsets.com">hello@43sunsets.com</a></div>
+          <p class="cmsg" id="cmsg" hidden></p>
+        </form>
+        <p class="sm">返信は 1 営業日以内(月〜金・米中部時間)。日本語・英語どちらでも。送っていただいた内容は返信のためだけに使います(<a href="/legal/">利用規約・プライバシー</a>)。</p>
       </div>
     </div>
   </div>
@@ -242,5 +270,15 @@ footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover
   </div>
 </footer>
 
+<script src="/assets/turnstile.js"></script>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search), st=q.get("contact"), m=document.getElementById("cmsg"), f=document.getElementById("contactform");
+  if(st&&m){ var t={sent:"受け付けました。1 営業日以内に hello@43sunsets.com からご連絡します。",invalid:"会社名・お名前・メールアドレスをご確認ください。",bot:"確認に失敗しました。もう一度お試しいただくか、hello@43sunsets.com へ直接メールをお送りください。"}[st];
+    if(t){ m.textContent=t; m.hidden=false; if(st!=="sent") m.classList.add("err"); if(st==="sent"){ f.querySelectorAll("input:not([type=hidden]),textarea,button").forEach(function(e){e.disabled=true;}); } }
+    if(location.hash!=="#contact") location.hash="#contact"; }
+  var r=document.getElementById("cref"); if(r){ var u=[]; ["utm_source","utm_medium","utm_campaign"].forEach(function(k){ if(q.get(k)) u.push(k+"="+q.get(k)); }); r.value=(u.join("&")||"")+(document.referrer?" ref="+document.referrer.slice(0,160):""); }
+})();
+</script>
 </body>
 </html>

@@ -13,6 +13,8 @@
 // Privacy: we keep only what the form sends (area, job, url, email, lang, job_ref) + a timestamp.
 // Retention: KV entries expire after 30 days (expirationTtl) — matches /legal/; the email copy lives in hello@ per /legal/.
 
+import { verifyTurnstile } from "../_turnstile.js";
+
 const MAX = { job: 4000, url: 500, email: 200 };
 const ALLOWED_AREA = new Set(["operations", "marketing", "sales", "research", "other"]);
 
@@ -23,6 +25,8 @@ export async function onRequestPost({ request, env }) {
 
   // Honeypot: the hidden "company" field must stay empty (bots fill everything).
   if ((form.get("company") || "").trim() !== "") return redirect(url, "/services/request/thanks/");
+  // Turnstile(2026-09-08 CEO 甲): 秘密鍵が設定されている間だけ検証。失敗は静かに thanks へ(記録しない)。
+  if (!(await verifyTurnstile(env, form, request)).ok) return redirect(url, "/services/request/thanks/");
 
   const area = String(form.get("area") || "other").slice(0, 32);
   const job = String(form.get("job") || "").trim().slice(0, MAX.job);
