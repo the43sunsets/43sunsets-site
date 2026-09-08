@@ -71,6 +71,7 @@ main{padding:18px 28px 60px; min-width:0;}
 .hitcount{font-family:"Shippori Mincho",serif; font-size:17px; font-weight:700;}
 .hitcount .num{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:19px;}
 .hitsub{font-size:12px; color:var(--sub);}
+.sortsel{font:inherit; font-size:12.5px; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:5px; padding:4px 8px; margin-left:6px;}
 .exportbtn{margin-left:auto; border:1.5px solid var(--ai-accent); color:var(--ai-accent); background:transparent; font-family:inherit; font-weight:700; font-size:13px; padding:7px 16px; border-radius:5px; cursor:pointer;}
 .exportbtn:hover{background:var(--ai-accent); color:var(--paper);}
 .seg{display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; background:var(--card);}
@@ -94,7 +95,8 @@ main{padding:18px 28px 60px; min-width:0;}
 .fact{border-left:3px solid var(--fact); background:var(--fact-bg); padding:7px 11px; border-radius:0 4px 4px 0; font-size:12.5px;}
 .fact .flabel{font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--fact); display:block; margin-bottom:1px;}
 .fact .verbatim{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; display:block; margin-top:3px; word-break:break-word; color:var(--sub);}
-.infer{border:1px dashed var(--infer-line); background:var(--infer-bg); padding:7px 11px; border-radius:4px; font-size:12.5px;}
+.infer{border:1px dashed var(--infer-line); background:var(--infer-bg); padding:7px 11px; border-radius:4px; font-size:12.5px; margin-top:auto;}
+.verb-en{display:inline; font-size:12px; color:var(--sub);} .verb-en summary{display:inline; cursor:pointer; color:var(--accent); font-size:12px;} .verb-en[open] summary{display:block;}
 .badge-infer{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--infer); border:1px solid var(--infer); border-radius:3px; padding:0 5px; margin-right:6px; vertical-align:1px;}
 .badge-ai{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.14em; color:var(--ai-accent); border:1px solid var(--ai-accent); border-radius:3px; padding:0 5px; margin-right:6px; vertical-align:1px;}
 .companylink{color:var(--ai-accent); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;}
@@ -177,7 +179,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   <div class="fgroup"><h2>投資の種類</h2><div id="f-category"></div></div>
   <div class="fgroup"><h2>業種</h2><div id="f-industry"></div></div>
   <div class="fgroup"><h2>投資規模</h2><div id="f-size"></div></div>
-  <label class="fitem unc-toggle" title="小さな案件 = 投資の種類が「訓練・インフラ・その他」または「未分類」(用途が公開データから読めない SBA 504 融資・輸出促進・研修など)。既定では表示しません。入れると小さな案件だけを表示します。"><input type="checkbox" id="showminor">小さな案件のみ表示 <span class="cnt" id="minorcnt"></span></label>
+  <label class="fitem unc-toggle" title="既定は全件(9/8 CEO: 補助金は使途が決まった金 — 種類を問わず「誰に金があるか」を見せる)。入れると、投資の種類が 製造能力の増強・物流・データセンター・医療施設・研究・ラボ施設・研究開発 のものだけに絞ります。"><input type="checkbox" id="capexonly">設備投資に関わる案件のみ <span class="cnt" id="capexcnt"></span></label>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
   <div class="fnote">段階 = 承認(審議会が決めた・これから建つ)/契約・交付(実行済み)。出し手 = 連邦・州・市郡。投資の種類と業種は、AI 読みが付いた案件は AI の割り当て(「AI のまとめ」札)、まだの案件は規則(制度番号・機関・本文の語)による割り当てです(チップにカーソルを当てると出所が出ます)。件数は現在の表示集合の全数。州と市郡の源は順次追加します。</div>
 </aside>
@@ -188,6 +190,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
     <div class="left">
       <span class="hitcount"><span class="num" id="hitnum">0</span> 件</span>
       <span class="hitsub" id="hitsub"></span>
+      <select class="sortsel" id="sortsel" title="並び順"><option value="amount">金額の大きい順</option><option value="date">決定日の新しい順</option></select>
       <div class="seg" id="seg-period" title="期間 = 決定日(連邦が交付を決めて義務化した日・融資は実行日)。履行期間ではない。件数は他のフィルタ適用後"></div>
     </div>
     <button class="exportbtn" id="export">CSV エクスポート</button>
@@ -237,8 +240,10 @@ const PERIODS = [["90d","直近 90 日",90],["1y","直近 1 年",365],["2y","直
 let period = "all";
 const cutoff = days => days ? new Date(Date.now() - days*864e5).toISOString().slice(0,10) : null;
 function inPeriod(s, p){ const c = cutoff((PERIODS.find(x=>x[0]===p)||[])[2]); return !c || ((s.date||"") >= c); }
-const isMinor = s => MINOR.has(s.category) && s.issuer_level === "連邦";   // 9/7: 州・市郡の契約(承認)は AI 読み前でも表示する
-function visibleBase(){ const m = document.getElementById("showminor").checked; return m ? SIGNALS.filter(isMinor) : SIGNALS.filter(s=>!isMinor(s)); }
+const isMinor = s => MINOR.has(s.category) && s.issuer_level === "連邦";   // 種類の集計(トップ面の「設備投資に関わる案件」)に使う。9/8 CEO: 既定では隠さない
+const isCapex = s => !MINOR.has(s.category);
+let SORT = "amount";   // 9/8: 既定 = 金額の大きい順(小口は下に沈める・隠さない)。"date" = 決定日の新しい順
+function visibleBase(){ const m = document.getElementById("capexonly").checked; return m ? SIGNALS.filter(isCapex) : SIGNALS; }
 function pass(s, except){
   const jp = document.getElementById("jponly").checked;
   for(const f of FIELDS){ if(f!==except && sel[f].size && !sel[f].has(s[f])) return false; }
@@ -267,7 +272,7 @@ function renderFilters(){
   for(const field of FIELDS){
     const counts = countBy(field); const el = document.getElementById("f-"+field); el.innerHTML = "";
     for(const v of VOCAB[field]){
-      if(MINOR.has(v) && !document.getElementById("showminor").checked) continue;
+      if(MINOR.has(v) && document.getElementById("capexonly").checked) continue;
       const lab = document.createElement("label"); lab.className = "fitem";
       lab.innerHTML = `<input type="checkbox" data-field="${field}" value="${v}"${sel[field].has(v) ? " checked" : ""}><span>${v}</span><span class="cnt">${counts[v]||0}</span>`;
       el.appendChild(lab);
@@ -275,7 +280,7 @@ function renderFilters(){
   }
   document.querySelectorAll('.fitem input[data-field]').forEach(cb=>{ cb.addEventListener("change", ()=>{ const set = sel[cb.dataset.field]; cb.checked ? set.add(cb.value) : set.delete(cb.value); page = 1; render(); }); });
 }
-function filtered(){ return visibleBase().filter(s=>pass(s, null)).sort((a,b)=> (b.date||"").localeCompare(a.date||"") || (b.amount||0)-(a.amount||0)); }
+function filtered(){ const byDate = (a,b)=> (b.date||"").localeCompare(a.date||"") || (b.amount||0)-(a.amount||0); const byAmt = (a,b)=> ((b.amount||0)-(a.amount||0)) || (b.date||"").localeCompare(a.date||""); return visibleBase().filter(s=>pass(s, null)).sort(SORT==="amount" ? byAmt : byDate); }
 function fmtUsd(v){ if(v==null) return "—"; if(v>=1e6) return "$"+(v/1e6).toFixed(v>=1e8?0:1)+"M"; if(v>=1e3) return "$"+Math.round(v/1e3)+"k"; return "$"+Math.round(v); }
 function esc(t){ return String(t==null?"":t).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 function cardHtml(s){
@@ -284,9 +289,11 @@ function cardHtml(s){
   const link = s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${s.issuer_level==="州" ? "契約 ↗" : "記録 ↗"}</a>` : "";
   const basisTip = s.basis === "ai" ? `AI の読み(${esc((s.ai&&s.ai.model)||"")}・確信度 ${esc((s.ai&&s.ai.confidence)||"")})。低確信は「未分類」に置く` : "規則(制度番号・機関・本文の語)による割り当て。AI 読みが付き次第、置き換わる";
   const name = s.company_id ? `<a class="companylink" href="/signal/company/?id=${esc(s.company_id)}" target="_blank" rel="noopener" title="企業カルテ(建設許可・UCC・補助金を 1 枚に)を開く">${esc(s.recipient)} ›</a>` : esc(s.recipient);
-  const summary = s.summary ? `<div class="summary"><span class="badge-ai" title="当社 AI(${esc((s.ai&&s.ai.model)||"")})が記録を読んで書いた要約。事実は下の欄の逐語">AI のまとめ</span>${esc(s.summary)}</div>` : "";
-  const infer = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${esc(s.infer)}</div>` : "";
-  const verb = s.description ? `<span class="verbatim">${esc(s.description.length>220 ? s.description.slice(0,220)+"…" : s.description)}</span>` : "";
+  const summary = "";   // 9/8 CEO: 「AI のまとめ」欄は廃止 → 下の「推論」に統合(他の面と同じ型)
+  const inferText = [s.summary, s.infer].filter(Boolean).join(" ");
+  const infer = inferText ? `<div class="infer"><span class="badge-infer" title="当社 AI(${esc((s.ai&&s.ai.model)||"")})が記録を読んで書いた要約と、記録から読み取れる推論。事実は上の欄">推論</span>${esc(inferText)}</div>` : "";
+  // 事実の本文: AI 読みの日本語訳があればそれを主に、英語の逐語は折り畳み(逐語は原文のまま残す規律)
+  const verb = s.description_ja ? `<span class="verbatim">${esc(s.description_ja)}</span> <details class="verb-en"><summary>原文(英語)</summary>${esc(s.description)}</details>` : (s.description ? `<span class="verbatim">${esc(s.description.length>220 ? s.description.slice(0,220)+"…" : s.description)}</span>` : "");
   return `<article class="card">
     <div class="srcline"><span class="chip src" title="出し手の層と機関">${esc(s.issuer_level)}・${esc(s.issuer||"")}</span></div>
     <div class="head"><span class="state">${esc(s.state)}</span><h3>${window.faviSlot ? faviSlot(s.company_id, s.recipient) : ""}${name}</h3><span class="chip kind" title="助成 = 返済不要の交付 / 融資 = 連邦の融資・保証">${esc(s.kind_label)}</span></div>
@@ -303,7 +310,7 @@ function render(){
   const slice = list.slice((page-1)*PAGE_SIZE, page*PAGE_SIZE);
   document.getElementById("hitnum").textContent = list.length;
   const base = visibleBase().length;
-  document.getElementById("hitsub").textContent = `(表示集合 ${base} 件・新しい順)`;
+  document.getElementById("hitsub").textContent = `(表示集合 ${base} 件・${SORT==="amount" ? "金額の大きい順" : "決定日の新しい順"})`;
   swapCards(document.getElementById("grid"), slice.map(cardHtml).join(""));
   document.getElementById("empty").hidden = list.length>0;
   const pager = document.getElementById("pager"); pager.innerHTML = "";
@@ -318,7 +325,8 @@ function render(){
   }
 }
 document.getElementById("jponly").addEventListener("change", ()=>{ page=1; render(); });
-document.getElementById("showminor").addEventListener("change", ()=>{ page=1; renderFilters(); render(); });
+document.getElementById("capexonly").addEventListener("change", ()=>{ page=1; renderFilters(); render(); });
+document.getElementById("sortsel").addEventListener("change", e=>{ SORT = e.target.value; page=1; render(); });
 document.getElementById("clear").addEventListener("click", ()=>{ for(const k in sel) sel[k].clear(); period = "all"; document.querySelectorAll('.fitem input').forEach(cb=>cb.checked=false); page = 1; renderFilters(); render(); });
 function csvEscape(v){ v = String(v==null?"":v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
 document.getElementById("export").addEventListener("click", ()=>{
@@ -345,7 +353,7 @@ async function boot(){
   try{
     const r = await fetch("/cockpit/data/subsidies.json", {cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status);
     const d = await r.json(); META = d.meta; SIGNALS = d.signals;
-    document.getElementById("minorcnt").textContent = SIGNALS.filter(isMinor).length.toLocaleString();
+    document.getElementById("capexcnt").textContent = SIGNALS.filter(isCapex).length.toLocaleString();
     const major = SIGNALS.filter(s=>!isMinor(s)).length;
     document.getElementById("metaline").innerHTML = `IL・IN・MI・OH・WI / 保存 <span class="mono">${META.n.toLocaleString()}</span> 件・設備投資に関わる案件 <span class="mono">${major}</span> 件・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     renderFilters(); render(); renderScope();
