@@ -105,7 +105,8 @@ body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:auto;
 .rail .lede-m{ margin-bottom:26px; } .lede-m h1{ margin:0 0 12px; font-family:var(--serif); font-size:34px; line-height:1.2; letter-spacing:.01em; }
 .lede-m p{ margin:0; color:var(--ink-2); font-size:14.5px; line-height:1.85; max-width:34em; }
 .rail .sec{ margin:0 0 12px; } .rail .sec h2{ font-size:19px; }
-.rail .ai{ flex-direction:column; gap:10px; padding:16px 18px; } .rail .ai p{ margin:0; font-size:14px; line-height:1.85; color:var(--ink); } .rail .ai .d{ font-size:11px; color:var(--sub); margin-top:2px; }
+.rail .ai{ flex-direction:column; gap:10px; padding:16px 18px; margin-bottom:12px; } .rail .ai .axl{ font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; color:var(--sub); text-transform:uppercase; }
+.axis-help{ margin-top:22px; border-top:1px solid var(--line); padding-top:14px; } .axis-help h4{ margin:0 0 8px; font-size:12px; letter-spacing:.1em; color:var(--sub); font-family:var(--mono); } .axis-help p{ margin:0 0 8px; font-size:12.5px; line-height:1.75; color:var(--ink-2); } .axis-help b{ color:var(--ink); } .rail .ai p{ margin:0; font-size:14px; line-height:1.85; color:var(--ink); } .rail .ai .d{ font-size:11px; color:var(--sub); margin-top:2px; }
 .rail .note{ display:none; }
 /* ── ニュース 2 軸(9/8): 米製造業 / 5 州ローカル ── */
 .news2{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; margin-top:34px; align-items:start; }
@@ -152,8 +153,11 @@ body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:auto;
 <main class="app2">
   <aside class="rail">
   <div class="lede-m"><h1 class="sr-only">景気の状況</h1><p>中西部の製造業が設備投資に前向きかどうかを 3 軸で。上段は セントルイス連銀 FRED の 10 指標(毎日更新)、下段は 米製造業のニュースと 5 州のローカルニュース(月・水・金に更新)。AI はその 10 指標だけを根拠にまとめます。各指標の「↗」が出典です。</p></div>
-      <div class="sec"><h2>AI のまとめ</h2><span>根拠は右の 10 指標のみ</span></div>
+      <div class="sec"><h2>AI の読み — 3 軸</h2><span>軸ごとに根拠を明記</span></div>
     <div id="ai"></div>
+    <div id="ai-us"></div>
+    <div id="ai-st"></div>
+    <div class="axis-help"><h4>読み方</h4><p><b>10 の指標</b> = セントルイス連銀 FRED の公開データ(毎日更新)。設備投資の温度を数字で見る。</p><p><b>米製造業のニュース</b> = 業界紙と Google News から製造業の投資・雇用・政策の記事(月・水・金)。</p><p><b>5 州のローカル</b> = IL・IN・MI・OH・WI の工場の新設・拡張・閉鎖・誘致(月・水・金)。会社名から企業カルテへ。</p></div>
     </aside>
   <section class="body">
     <div class="sec"><h2>10 の指標</h2><span>カーソルを当てると読み方が出ます</span></div>
@@ -193,7 +197,9 @@ const setHeadH=()=>{ document.documentElement.style.setProperty("--headh", (docu
 async function boot(){
   const get = async (u) => { const r = await fetch(u, {cache:"no-store"}); if(!r.ok) throw new Error(u+" HTTP "+r.status); return r.json(); };
   try{ const m = await get("/cockpit/data/macro.json");
-    if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><span class="badge">AI のまとめ</span><div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は下の 10 指標のみ</div></div></div>`;
+    if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><span class="badge">AI の読み</span><div><div class="axl">① 10 の指標</div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は右の 10 指標のみ</div></div></div>`;
+    if(m.ai_news && m.ai_news.us) document.getElementById("ai-us").innerHTML = `<div class="ai"><span class="badge">AI の読み</span><div><div class="axl">② 米製造業のニュース</div><p>${esc(m.ai_news.us)}</p><div class="d">${esc(m.ai_news.model)}・${fmtCT(m.ai_news.generated_at, true)}・根拠は下のニュースの見出しと要約のみ</div></div></div>`;
+    if(m.ai_news && m.ai_news.states) document.getElementById("ai-st").innerHTML = `<div class="ai"><span class="badge">AI の読み</span><div><div class="axl">③ 5 州のローカル</div><p>${esc(m.ai_news.states)}</p><div class="d">${esc(m.ai_news.model)}・${fmtCT(m.ai_news.generated_at, true)}・根拠は下の 5 州のニュースのみ</div></div></div>`;
     document.getElementById("macro").innerHTML = m.tiles.map(tileHtml).join(""); }
   catch(e){ document.getElementById("macro").innerHTML = `<div class="tile"><div class="n">景気の指標を読み込めませんでした(${esc(e.message)})</div></div>`; }
 
