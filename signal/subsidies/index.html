@@ -174,6 +174,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
 <aside>
   <button class="filt-toggle" id="filttoggle" type="button">絞り込み ▾</button>
   <label class="fitem jp-toggle"><input type="checkbox" id="jponly">日系関連のみ表示</label>
+  <label class="fitem unc-toggle" title="既定は全件(9/8 CEO: 補助金は使途が決まった金 — 種類を問わず「誰に金があるか」を見せる)。入れると、投資の種類が 製造能力の増強・物流・データセンター・医療施設・研究・ラボ施設・研究開発 のものだけに絞ります。"><input type="checkbox" id="capexonly">設備投資に関わる案件のみ <span class="cnt" id="capexcnt"></span></label>
 
   <div class="fgroup"><h2>州</h2><div id="f-state"></div></div>
   <div class="fgroup"><h2>段階</h2><div id="f-stage"></div></div>
@@ -181,7 +182,6 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   <div class="fgroup"><h2>投資の種類</h2><div id="f-category"></div></div>
   <div class="fgroup"><h2>業種</h2><div id="f-industry"></div></div>
   <div class="fgroup"><h2>投資規模</h2><div id="f-size"></div></div>
-  <label class="fitem unc-toggle" title="既定は全件(9/8 CEO: 補助金は使途が決まった金 — 種類を問わず「誰に金があるか」を見せる)。入れると、投資の種類が 製造能力の増強・物流・データセンター・医療施設・研究・ラボ施設・研究開発 のものだけに絞ります。"><input type="checkbox" id="capexonly">設備投資に関わる案件のみ <span class="cnt" id="capexcnt"></span></label>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
   <div class="fnote">段階 = 承認(審議会が決めた・これから建つ)/契約・交付(実行済み)。出し手 = 連邦・州・市郡。投資の種類と業種は、AI 読みが付いた案件は AI の割り当て(「AI のまとめ」札)、まだの案件は規則(制度番号・機関・本文の語)による割り当てです(チップにカーソルを当てると出所が出ます)。件数は現在の表示集合の全数。州と市郡の源は順次追加します。</div>
 </aside>
