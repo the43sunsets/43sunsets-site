@@ -1,11 +1,11 @@
 {
-"generated_at": "2026-09-07T06:50:58+00:00",
-"updated_ct": "2026-09-07",
+"generated_at": "2026-09-08T05:10:19+00:00",
+"updated_ct": "2026-09-08",
 "week_start": "2026-09-07",
 "next_update_ct": "2026-09-14",
 "window_days": 90,
-"rule": "直近 90 日の記録から、目立つ投資の動きを 5 つ(建屋と設備の両方/日系/大型の建設/続けて機械を入れた会社/自動化つきの導入)。同じ会社は 1 回。",
-"intro": "中西部の工場の目立つ投資。毎週月曜に入れ替え。",
+"rule": "直近 90 日の記録から、目立つ投資の動きを 5 つ選ぶ(建屋と設備の両方/日系/大型の建設/続けて機械を入れた会社/自動化つきの導入)。同じ会社は 1 回。毎週月曜に選び直す。各件の選定理由は why に。",
+"intro": "直近 90 日の記録から、毎週月曜に選び直す 5 件。記録日は 90 日前まで遡ることがある。",
 "picks": [
 {
 "kind": "jp",
@@ -17,7 +17,8 @@
 "face": "UCC",
 "date": "2026-06-17",
 "karte": "C-3288",
-"company": "Hidaka USA, Inc."
+"company": "Hidaka USA, Inc.",
+"why": "直近 90 日で日系企業の機械導入の登記はこれが最新(6/17)。日系は読者(日系製造業の営業)に最も近い相手なので、日付が古くても 5 件のうち 1 枠を当てる。"
 },
 {
 "kind": "jp",
@@ -29,7 +30,8 @@
 "face": "許可",
 "date": "2026-08-31",
 "karte": "C-3703",
-"company": "FANUC ROBOTICS CORPORATION"
+"company": "FANUC ROBOTICS CORPORATION",
+"why": "直近 90 日で日系企業の建設許可(用途が読めたもの)としては最新。日系は読者に最も近い相手なので 1 枠を当てる。"
 },
 {
 "kind": "permit",
@@ -41,19 +43,21 @@
 "face": "許可",
 "date": "2026-08-21",
 "karte": "C-138",
-"company": "OHIOHEALTH CORP"
+"company": "OHIOHEALTH CORP",
+"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 23 件中の上位)。工事費 $1M 以上 = 設備の入る建屋。"
 },
 {
 "kind": "permit",
 "tag": "大型",
 "title": "GREEN OAKS OF WALNUT CREEK が 医療施設を建設(工事費 $19.8M)",
-"body": "Columbus。8月に建設許可。Columbus 4000 Westerville Rd に病院・施設系新築 96,351 SF $19.8M。",
+"body": "Columbus。8月に建設許可。Columbus 4000 Westerville Rd に病院・施設系建物 96,351 SQFT を新築 $19.8M。",
 "move": "GREEN OAKS OF WALNUT CREEK が 医療施設を建設(工事費 $19.8M)",
 "link": "permits/",
 "face": "許可",
 "date": "2026-08-11",
 "karte": "C-3754",
-"company": "GREEN OAKS OF WALNUT CREEK"
+"company": "GREEN OAKS OF WALNUT CREEK",
+"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 23 件中の上位)。工事費 $1M 以上 = 設備の入る建屋。"
 },
 {
 "kind": "multi",
@@ -65,33 +69,34 @@
 "face": "UCC",
 "date": "2026-07-20",
 "karte": "C-3336",
-"company": "FAXON MACHINING, LLC"
+"company": "FAXON MACHINING, LLC",
+"why": "直近 90 日で機械 2 台・登記 2 件と、続けて設備を入れている会社。1 件ずつより、連続した導入の方が増産の意思が読める。"
 }
 ],
 "counts": {
-"permits_targets": 113,
-"permits_new90": 81,
+"permits_targets": 115,
+"permits_new90": 80,
 "ucc_read": 736,
 "ucc_new90": 19,
 "ucc_companies": 393,
 "jp_companies": 4
 },
 "permits_meta": {
-"generated_at": "2026-09-07T02:17:42+00:00",
+"generated_at": "2026-09-07T21:00:14+00:00",
 "funnel": {
-"signals_total": 46068,
-"candidates": 686,
-"enriched": 29349,
-"targets": 113,
-"unclassified": 29236,
-"unevaluated": 16719,
+"signals_total": 46159,
+"candidates": 709,
+"enriched": 29526,
+"targets": 115,
+"unclassified": 29411,
+"unevaluated": 16633,
 "by_category": {
 "データセンター建設": 7,
-"医療施設": 45,
-"未分類": 29236,
-"物流・倉庫の新設": 17,
-"研究・ラボ施設": 15,
-"製造能力の増強": 29
+"医療施設": 54,
+"未分類": 29411,
+"物流・倉庫の新設": 14,
+"研究・ラボ施設": 14,
+"製造能力の増強": 26
 }
 },
 "states": [
@@ -103,7 +108,7 @@
 ]
 },
 "ucc_meta": {
-"generated_at": "2026-09-06T21:00:33+00:00",
+"generated_at": "2026-09-07T21:01:51+00:00",
 "funnel": {
 "filings_total": 752,
 "with_collateral": 737,
@@ -120,7 +125,7 @@
 "equipment_rows": 199,
 "equipment_hits": 755,
 "equipment_misses": 23,
-"companies_checked": 449,
+"companies_checked": 467,
 "companies_total": 393
 }
 }
