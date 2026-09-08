@@ -45,7 +45,12 @@ function demoFace(path, d, cutoff) {
 }
 
 // 景気の状況(9/8): 指標 10 と ① 指標の読みは公開(FRED の公開データの予告編)。② ③ のニュースの読みは施錠、ニュースは米 3 本・州 各 2 本の見本
-function demoMacro(m) { return { ...m, demo: true, ai_news: m.ai_news ? { locked: true, generated_at: m.ai_news.generated_at, news_updated_ct: m.ai_news.news_updated_ct } : null }; }
+// 9/8 CEO「10 の指標もぼやかして」: タイルは名前と出典だけ残し、値・推移・前期比を伏せる。① の読みも施錠
+function demoMacro(m) {
+  const tiles = (m.tiles || []).map(t => ({ id: t.id, name: t.name, group: t.group, unit: t.unit, source: t.source, frequency: t.frequency, locked: true }));
+  return { ...m, demo: true, tiles, ai_read: m.ai_read ? { locked: true, generated_at: m.ai_read.generated_at } : null,
+           ai_news: m.ai_news ? { locked: true, generated_at: m.ai_news.generated_at, news_updated_ct: m.ai_news.news_updated_ct } : null };
+}
 function demoNews(n) {
   const states = {}; for (const [k, v] of Object.entries(n.states || {})) states[k] = (v || []).slice(0, 2);
   const total = (n.us || []).length + Object.values(n.states || {}).reduce((a, v) => a + (v || []).length, 0);

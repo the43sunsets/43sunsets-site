@@ -107,6 +107,7 @@ body .macro{ grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:auto;
 .rail .sec{ margin:0 0 12px; } .rail .sec h2{ font-size:19px; }
 .rail .ai{ flex-direction:column; gap:10px; padding:16px 18px; margin-bottom:12px; } .rail .ai .axl{ font-family:var(--serif); font-size:17px; font-weight:700; letter-spacing:.02em; color:var(--ink); margin-bottom:6px; }   /* 9/8 CEO: 軸の表記を大きく太く・「AI の読み」札は見出しにあるので各ブロックでは省く */
 .sg-lockai p.sg-blur{ filter:blur(4px); user-select:none; }
+.tile.sg-blur-tile .sg-blur{ filter:blur(5px); user-select:none; pointer-events:none; } .tile.sg-blur-tile .how{ display:none !important; }
 .axis-help{ margin-top:22px; border-top:1px solid var(--line); padding-top:14px; } .axis-help h4{ margin:0 0 8px; font-size:12px; letter-spacing:.1em; color:var(--sub); font-family:var(--mono); } .axis-help p{ margin:0 0 8px; font-size:12.5px; line-height:1.75; color:var(--ink-2); } .axis-help b{ color:var(--ink); } .rail .ai p{ margin:0; font-size:14px; line-height:1.85; color:var(--ink); } .rail .ai .d{ font-size:11px; color:var(--sub); margin-top:2px; }
 .rail .note{ display:none; }
 /* ── ニュース 2 軸(9/8): 米製造業 / 5 州ローカル ── */
@@ -190,7 +191,9 @@ function fmtVal(t){ const v = t.latest.value; if(t.id==="ICSA") return Math.roun
 function chgHtml(t){ if(t.change==null) return ""; const c = t.change; const cls = c > 0 ? "up" : c < 0 ? "down" : "flat"; const arrow = c > 0 ? "▲" : c < 0 ? "▼" : "→";
   const lab = t.change_mode==="pct" ? `${arrow} ${Math.abs(c).toFixed(2)}%` : `${arrow} ${Math.abs(c).toFixed(2)}${t.unit==="%"||t.unit==="%pt" ? "pt" : ""}`; const per = t.frequency==="W" ? "前週比" : t.frequency==="D" ? "前日比" : "前月比"; return `<span class="chg ${cls}" title="${per}">${lab}</span>`; }
 const SHORT = {"資本財受注(非国防・航空機除く)":"資本財受注","鉱工業生産指数":"鉱工業生産","製造業の建設支出":"製造業建設支出","失業保険 新規申請(週次)":"失業保険 新規申請","シカゴ連銀 全米活動指数":"シカゴ連銀 CFNAI","イールドカーブ(10 年−2 年)":"イールドカーブ 10−2","5 州の製造業雇用者数":"5 州 製造業雇用"};
-function tileHtml(t){ const unit = t.unit==="$M"||t.unit==="$M(年率)" ? (t.unit==="$M(年率)" ? "年率" : "") : t.unit;
+function lockedTile(t){ const unit = t.unit==="$M"||t.unit==="$M(年率)" ? (t.unit==="$M(年率)" ? "年率" : "") : t.unit;
+  return `<div class="tile sg-blur-tile" aria-hidden="true"><div class="g">${esc(t.group)}</div><div class="n">${esc(SHORT[t.name]||t.name)}</div><div class="v sg-blur"><b>—</b><span class="u">${esc(unit)}</span><span class="chg flat">▲ 0.0</span></div><svg viewBox="0 0 160 30" preserveAspectRatio="none" class="sg-blur"><path d="M0,20 L20,18 L40,22 L60,15 L80,17 L100,12 L120,14 L140,9 L160,11" fill="none" stroke="var(--accent)" stroke-width="1.6"/></svg><div class="d">最新 —・${esc(t.source||"")}</div></div>`; }
+function tileHtml(t){ if(t.locked) return lockedTile(t); const unit = t.unit==="$M"||t.unit==="$M(年率)" ? (t.unit==="$M(年率)" ? "年率" : "") : t.unit;
   const states = t.states ? `<div class="states">${t.states.map(s=>`<div title="${s.state} 製造業雇用 ${s.latest.value.toLocaleString()} 千人・前月比 ${s.mom_k>0?"+":""}${s.mom_k} 千人・前年比 ${s.yoy_pct==null?"—":s.yoy_pct+"%"}">${s.state}<br>${s.mom_k>0?"+":""}${s.mom_k}</div>`).join("")}</div>` : spark(t.series);
   return `<div class="tile" tabindex="0"><div class="g">${esc(t.group)}</div><div class="n">${esc(SHORT[t.name]||t.name)}</div><div class="v"><b>${fmtVal(t)}</b><span class="u">${esc(unit)}</span>${chgHtml(t)}</div>${states}<div class="d">最新 ${esc(t.latest.date)}${t.yoy_pct!=null ? `・前年比 ${t.yoy_pct>0?"+":""}${t.yoy_pct}%` : ""}</div><div class="how">${esc(t.howto)}</div><div class="src"><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.source.split("(")[0])} ↗</a></div></div>`; }
 
@@ -201,6 +204,7 @@ async function boot(){
     if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><div><div class="axl">① 10 の指標</div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は右の 10 指標のみ</div></div></div>`;
     if(m.ai_news && m.ai_news.us) document.getElementById("ai-us").innerHTML = `<div class="ai"><div><div class="axl">② 米製造業のニュース</div><p>${esc(m.ai_news.us)}</p><div class="d">${esc(m.ai_news.model)}・${fmtCT(m.ai_news.generated_at, true)}・根拠は下のニュースの見出しと要約のみ</div></div></div>`;
     if(m.ai_news && m.ai_news.states) document.getElementById("ai-st").innerHTML = `<div class="ai"><div><div class="axl">③ 5 州のローカル</div><p>${esc(m.ai_news.states)}</p><div class="d">${esc(m.ai_news.model)}・${fmtCT(m.ai_news.generated_at, true)}・根拠は下の 5 州のニュースのみ</div></div></div>`;
+    if(m.ai_read && m.ai_read.locked){ const here = encodeURIComponent(location.pathname); document.getElementById("ai").innerHTML = `<div class="ai sg-lockai"><div><div class="axl">① 10 の指標</div><p class="sg-blur" aria-hidden="true">製造業の受注と生産は横ばい圏で、設備投資の温度は緩やかに上向きとみられる。雇用は底堅く、資材価格は落ち着いている。</p><div class="d"><a href="/signal/join/?next=${here}">登録すると指標と AI の読みが開きます(無料・日系製造業の方)</a></div></div></div>`; }
     if(m.ai_news && m.ai_news.locked){   // 見本モード(未ログイン): ② ③ はぼかした見本文+登録案内
       const here = encodeURIComponent(location.pathname);
       const lockBlk = (lab, txt) => `<div class="ai sg-lockai"><div><div class="axl">${lab}</div><p class="sg-blur" aria-hidden="true">${esc(txt)}</p><div class="d"><a href="/signal/join/?next=${here}">登録すると AI の読みが開きます(無料・日系製造業の方)</a></div></div></div>`;
