@@ -20,14 +20,14 @@
 <main class="wrap">
   <section class="hero" style="padding-bottom:8px">
     <h1 data-i18n="h1">Terms &amp; privacy</h1>
-    <p class="note" data-i18n="ver">Version: 7 September 2026. Plain language on purpose — this page says what we actually do.</p>
+    <p class="note" data-i18n="ver">Version: 8 September 2026. Plain language on purpose — this page says what we actually do.</p>
   </section>
 
   <section>
     <h2 data-i18n="t_h">Terms of use — 43sunsets.com</h2>
     <p data-i18n="t1"><strong>Who we are.</strong> 43 Sunsets is an independent Illinois-based business (contact: <a href="mailto:hello@43sunsets.com">hello@43sunsets.com</a>). We help Japanese-owned manufacturers in the United States improve sales, marketing, planning and customer-facing work with workflow automation, custom business systems and data-driven tools, including <a href="/signal/">Signal</a>. We also operate <a href="/studio/">43 Sunsets Studio</a>, which publishes smaller automation tools, templates and technical products through third-party platforms (Gumroad, Apify, Agensi, Etsy, the n8n template library). Purchases made there are governed by that platform’s terms and refund policy in addition to any product-specific notes we publish.</p>
     <p data-i18n="t2"><strong>Products and accuracy.</strong> We describe only features that exist and numbers we have measured. Templates and tools are provided as described in their setup notes; you are responsible for configuring and running them in your own environment and for the credentials you connect.</p>
-    <p data-i18n="t3"><strong>No warranty beyond what we state.</strong> Except where a platform’s terms say otherwise, products are provided “as is”. We do not promise business outcomes.</p>
+    <p data-i18n="t3"><strong>No warranty beyond what we state.</strong> Except where a platform’s terms say otherwise, products are provided “as is”. We do not promise business outcomes. Signal is a beta: access is granted at our discretion, free of charge for now, and its scope may change without notice.</p>
     <p data-i18n="t4"><strong>Links.</strong> Some links on this site are tracked redirects on our own domain (<code>/go/…</code>) so we can see which page a visitor came from. They do not set cookies.</p>
     <p data-i18n="t5"><strong>Changes.</strong> We may update these terms; the version date at the top of this page is the current one.</p>
   </section>
@@ -38,8 +38,22 @@
       <li data-i18n="p1"><strong>Analytics.</strong> We use Cloudflare Web Analytics, which is cookie-less and does not track individuals across sites. We look at aggregate visits, referrers and paths.</li>
       <li data-i18n="p2"><strong>Language preference.</strong> If you switch the site language, the choice is stored in your browser’s local storage only. Nothing is sent to us.</li>
       <li data-i18n="p3"><strong>Embedded video.</strong> The <a href="/studio/">Studio</a> page embeds YouTube in privacy-enhanced mode (youtube-nocookie.com). YouTube’s policies apply once you play a video.</li>
-      <li data-i18n="p4"><strong>Email.</strong> If you write to hello@43sunsets.com we keep the correspondence to answer you. We do not add you to a mailing list.</li>
+      <li data-i18n="p4"><strong>Email.</strong> If you write to hello@43sunsets.com we keep the correspondence to answer you. We do not add you to a mailing list unless you register for Signal (see below).</li>
       <li data-i18n="p5"><strong>We do not</strong> run ads, sell data, or use third-party trackers on this site.</li>
+    </ul>
+  </section>
+
+  <section id="signal">
+    <h2 data-i18n="g_h">Signal (43sunsets.com/signal)</h2>
+    <ul>
+      <li data-i18n="g1"><strong>What Signal is.</strong> Signal shows signals about companies drawn from public records (building permits, UCC filings, government grants and loans, public job postings) and our reading of them. It is a beta offered free of charge to a limited group. Some sections are shown as a sample until you register.</li>
+      <li data-i18n="g2"><strong>Registration.</strong> To open the full sections we ask for your company name, your name, your title and your company email address, and optionally the states and sections you are interested in. We use them to decide whether to grant access, to send you the login link, and to contact you about Signal. We may check your registration by hand before granting access.</li>
+      <li data-i18n="g3"><strong>Login.</strong> There is no password. We email you a link that is valid for 15 minutes and works once; confirming it sets one first-party cookie (<code>sg_s</code>) on 43sunsets.com that keeps you logged in for 30 days. The cookie contains a random session identifier only. You can end the session with “Log out”, or by deleting the cookie.</li>
+      <li data-i18n="g4"><strong>What we record while you use Signal.</strong> Signal pages send us an anonymous visit beacon (a random identifier kept in your browser’s local storage, the page path and the source of the visit; no IP address or browser details) which we keep for 90 days to count visitors and return visits. When you are logged in, we may also record which sections you open and when, tied to your registration, so that we can improve Signal and get in touch with you about it.</li>
+      <li data-i18n="g5"><strong>Email from us.</strong> Registering means we may send you login links, notices about Signal, and occasional updates about what the data shows. Every update email has an unsubscribe link; login links and account notices are sent only when you ask for them.</li>
+      <li data-i18n="g6"><strong>Where it is stored and who processes it.</strong> Registration and session data are stored on Cloudflare (Workers KV, United States) and in our marketing database. Email is sent through Google Workspace. We do not sell or share your data with anyone else. Access is limited to the people who run 43 Sunsets.</li>
+      <li data-i18n="g7"><strong>Retention and deletion.</strong> Session data expires after 30 days and visit beacons after 90 days. We keep your registration until you ask us to delete it, or until our email has failed to reach you (bounced or unsubscribed) for 24 months or more. Write to hello@43sunsets.com to see, correct or delete your registration at any time.</li>
+      <li data-i18n="g8"><strong>About the companies shown.</strong> Signal displays information that public authorities have already published, plus our summaries and inferences, which may contain errors. If you represent a company shown and want a correction, write to hello@43sunsets.com; we will review and fix errors in our reading, but we cannot alter the public record itself.</li>
     </ul>
   </section>
 
@@ -59,18 +73,27 @@
 <script>
 window.SERVICES_JA = {
   nav_home: 'ホーム', nav_services: 'サービス一覧',
-  h1: '利用規約・プライバシー', ver: '2026年9月7日版。実際の取り扱いを、できるだけ分かりやすく記載しています。',
+  h1: '利用規約・プライバシー', ver: '2026年9月8日版。実際の取り扱いを、できるだけ分かりやすく記載しています。',
   t_h: '利用規約 — 43sunsets.com',
   t1: '<strong>運営者について。</strong> 43 Sunsets はイリノイ州を拠点とする独立の事業者です(連絡先: <a href="mailto:hello@43sunsets.com">hello@43sunsets.com</a>)。米国の日系製造業向けに、営業・マーケティング・経営企画・顧客対応などの業務を、業務の自動化、個社向けのシステム、<a href="/signal/">Signal</a> をはじめとするデータを使った道具で改善しています。あわせて <a href="/studio/">43 Sunsets Studio</a> として、小規模な自動化ツール・テンプレート・技術製品を第三者のプラットフォーム(Gumroad・Apify・Agensi・Etsy・n8n テンプレートライブラリ)で公開しています。そこでの購入には、43 Sunsets が公開する商品ごとの注記に加え、各プラットフォームの規約と返金方針が適用されます。',
   t2: '<strong>商品と正確さ。</strong> 実在する機能と、実測した数字だけを書きます。ご自身で利用する商品については、案内に沿った設定と利用、接続するアカウント情報の管理をお客様にお願いします。',
-  t3: '<strong>明記した以上の保証はしません。</strong> プラットフォームの規約に別段の定めがない限り、商品は「現状のまま」提供されます。事業上の成果は約束しません。',
+  t3: '<strong>明記した以上の保証はしません。</strong> プラットフォームの規約に別段の定めがない限り、商品は「現状のまま」提供されます。事業上の成果は約束しません。Signal はベータ版です。利用は 43 Sunsets の判断で許可し、当面は無料で、提供範囲は予告なく変わることがあります。',
   t4: '<strong>リンク。</strong> 当サイトの一部のリンクは、どのページから来訪があったかを見るための当サイト内の転送用リンク(<code>/go/…</code>)です。cookie は置きません。',
   t5: '<strong>変更。</strong> 本規約は更新されることがあります。ページ上部の版の日付が現行版です。',
   p_h: 'プライバシー — 当サイトが収集するもの',
   p1: '<strong>アクセス解析。</strong> Cloudflare Web Analytics を使用しています。cookie を使わず、サイトをまたいで個人を追跡しません。収集するのは、訪問数、参照元、閲覧ページの集計情報です。',
   p2: '<strong>言語設定。</strong> 言語を切り替えると、その選択はお使いのブラウザのローカルストレージにのみ保存されます。43 Sunsets には送信されません。',
   p3: '<strong>埋め込み動画。</strong> <a href="/studio/">Studio</a> のページは YouTube をプライバシー強化モード(youtube-nocookie.com)で埋め込んでいます。再生した時点から YouTube の方針が適用されます。',
-  p4: '<strong>メール。</strong> hello@43sunsets.com 宛にいただいたメールは、返信のために保持します。配信リストには登録しません。',
+  p4: '<strong>メール。</strong> hello@43sunsets.com 宛にいただいたメールは、返信のために保持します。Signal に登録された場合(下記)を除き、配信リストには登録しません。',
+  g_h: 'Signal(43sunsets.com/signal)について',
+  g1: '<strong>Signal とは。</strong> Signal は、公的記録(建設許可・UCC 登記・政府の補助金と融資・公開求人)から拾った会社の動きと、43 Sunsets による読みを表示するサービスです。限られた方に無料で提供しているベータ版で、登録前は一部の面を見本として表示します。',
+  g2: '<strong>登録。</strong> 全件を開くには、会社名・氏名・役職・会社のメールアドレス(任意で関心のある州・情報)をいただきます。利用を承認するか、ログイン用リンクを送るため、および Signal についてご連絡するために使います。承認の前に、内容を人が確認することがあります。',
+  g3: '<strong>ログイン。</strong> パスワードはありません。15 分間・1 回だけ有効なリンクをメールでお送りし、確定すると 43sunsets.com のファーストパーティ cookie(<code>sg_s</code>)が 1 つ置かれ、30 日間ログイン状態が続きます。cookie の中身は無作為のセッション ID だけです。「ログアウト」または cookie の削除で終了できます。',
+  g4: '<strong>利用中に記録するもの。</strong> Signal のページは匿名の来訪ビーコン(ブラウザのローカルストレージに置く無作為の ID・ページ・参照元。IP アドレスやブラウザ情報は含みません)を送り、訪問者数と再訪を数えるために 90 日間保持します。ログイン中は、どの面をいつ開いたかを登録情報と結び付けて記録することがあります。Signal の改善とご連絡に使います。',
+  g5: '<strong>43 Sunsets からのメール。</strong> 登録された方には、ログイン用リンク、Signal に関するお知らせ、データが示す動きのご案内(不定期)をお送りすることがあります。ご案内のメールには配信停止のリンクを付けます。ログイン用リンクとアカウントの通知は、ご依頼があったときだけ送ります。',
+  g6: '<strong>保存先と処理者。</strong> 登録情報とログイン状態は Cloudflare(Workers KV・米国)と 43 Sunsets のマーケティング用データベースに保存します。メールは Google Workspace から送ります。第三者への販売・提供は行いません。アクセスできるのは 43 Sunsets の運営者に限ります。',
+  g7: '<strong>保持と削除。</strong> ログイン状態は 30 日、来訪ビーコンは 90 日で消えます。登録情報は、削除のご依頼があるまで、または当社からのメールが 24 か月以上届かない状態(不達・配信停止)が続くまで保持します。開示・訂正・削除は hello@43sunsets.com までいつでもご連絡ください。',
+  g8: '<strong>表示される会社について。</strong> Signal は、公的機関がすでに公開している情報と、43 Sunsets の要約・推論を表示します。要約・推論には誤りが含まれることがあります。表示されている会社の関係者で訂正をご希望の方は hello@43sunsets.com までご連絡ください。読み取りの誤りは確認のうえ修正しますが、公的記録そのものは変更できません。',
   p5: '広告の掲載、データの販売、第三者による追跡は行いません。',
   s_h: 'サービス(43sunsets.com/services)について',
   s1: '<strong>いただくもの。</strong> サービスの実行には、注文フォームが求める入力(例: ウェブサイトのアドレス)をいただきます。ご注文の成果物を作るためだけに使います。',
