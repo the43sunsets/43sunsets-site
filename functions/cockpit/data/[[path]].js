@@ -48,6 +48,6 @@ function demoCompany(c) {
   const f = c.faces || {};
   const lock = face => face ? { count: face.count || 0, locked: true } : { count: 0, locked: true };
   return { ...c, demo: true,
-    faces: { permits: f.permits || { count: 0, items: [] }, ucc: lock(f.ucc), hiring: lock(f.hiring), grants: lock(f.grants) },
+    faces: { permits: f.permits || { count: 0, items: [] }, ucc: lock(f.ucc), hiring: lock(f.hiring), grants: lock(f.grants), news: lock(f.news) },
     timeline: (c.timeline || []).filter(t => t.face === "permits") };
 }

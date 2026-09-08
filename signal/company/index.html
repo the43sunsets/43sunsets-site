@@ -207,7 +207,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   aside > *:not(.filt-toggle){display:none;} aside.open > *{display:block;} aside.open > .filt-toggle{display:flex;} aside.open > label.fitem{display:flex;}
   aside{padding:12px 14px 4px;}
 }
-.tl-item.grant::before{background:var(--ai-accent);} .tl-item.hire::before{background:var(--infer);}
+.tl-item.grant::before{background:var(--ai-accent);} .tl-item.hire::before{background:var(--infer);} .tl-item.news::before{background:var(--jp);}
 </style>
 <style>
 /* 企業カルテ専用(9/5 CEO 裁定: 4 面が同じカルテを参照) */
@@ -217,7 +217,8 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 .kprof .ksub{font-size:13px; color:var(--sub);}
 .kprof .kback a{font-size:12.5px; color:var(--sub); text-decoration:none; border:1px solid var(--line); border-radius:5px; padding:6px 10px; margin-left:6px; display:inline-block;}
 .kprof .kback a:hover{color:var(--ai-accent); border-color:var(--ai-accent);}
-.faces4{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:14px 0 24px;}
+.faces4{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; margin:14px 0 24px;}   /* 9/8: ニュースの面を追加 = 5 枚 */
+.nitem{display:grid; grid-template-columns:110px minmax(0,1fr); gap:12px; padding:10px 0; border-bottom:1px solid var(--line-soft);} .nitem .ph{width:110px; height:70px; border-radius:4px; overflow:hidden; background:var(--chip-bg);} .nitem .ph img{width:100%; height:100%; object-fit:cover; display:block;} .nitem h4{margin:0 0 4px; font-size:14px; line-height:1.5;} .nitem h4 a{color:var(--ink); text-decoration:none;} .nitem h4 a:hover{color:var(--accent);} .nitem p{margin:0 0 4px; font-size:12.5px; color:var(--ink-2); line-height:1.7;} .nitem .m{font-size:11.5px; color:var(--sub);}
 .face4{display:block; text-decoration:none; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:6px; padding:12px 14px;}
 .face4 .fl{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--sub); font-family:"IBM Plex Mono",monospace;}
 .face4 .fn{font-family:"Shippori Mincho",serif; font-size:22px; margin-top:4px;}
@@ -237,7 +238,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 .kitem .keq{font-size:13px; margin-top:6px;} .kitem .keq li{margin:2px 0;}
 .kempty{font-size:13px; color:var(--sub); border:1px dashed var(--line); border-radius:6px; padding:12px 14px;}
 .knote{font-size:11.5px; color:var(--sub); border-top:1px solid var(--line-soft); margin-top:28px; padding-top:10px; line-height:1.7;}
-@media (max-width:760px){ .faces4{grid-template-columns:repeat(2,minmax(0,1fr));} .kwrap{padding:18px 16px 60px;} .kprof h2{font-size:20px;} }
+@media (max-width:760px){ .faces4{grid-template-columns:repeat(2,minmax(0,1fr));} .nitem{grid-template-columns:1fr;} .nitem .ph{width:100%; height:120px;} .kwrap{padding:18px 16px 60px;} .kprof h2{font-size:20px;} }
 </style>
 <link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260908a">
 <script src="/signal/assets/nav.js?v=20260908a" defer></script>
@@ -296,7 +297,7 @@ function lockBody(label){ const here = encodeURIComponent(location.pathname + lo
 function render(c){
   document.title = `${c.name} — 企業カルテ | Signal by 43 Sunsets`;
   const f = c.faces; const jp = c.jp ? `<span class="chip jp">日系(${c.jp_basis === "roster" ? "名簿" : "人の確認"})</span>` : (c.jp_candidate ? `<span class="chip">日系?(AI 候補)</span>` : "");
-  const gcount = (f.grants && f.grants.count) || 0; const gitems = (f.grants && f.grants.items) || []; const hcount = (f.hiring && f.hiring.count) || 0; const hitems = (f.hiring && f.hiring.items) || []; const hroles = Object.entries((f.hiring && f.hiring.by_role) || {}).sort((a,b)=>b[1]-a[1]);
+  const gcount = (f.grants && f.grants.count) || 0; const ncount = (f.news && f.news.count) || 0; const nitems = (f.news && f.news.items) || []; const gitems = (f.grants && f.grants.items) || []; const hcount = (f.hiring && f.hiring.count) || 0; const hitems = (f.hiring && f.hiring.items) || []; const hroles = Object.entries((f.hiring && f.hiring.by_role) || {}).sort((a,b)=>b[1]-a[1]);
   document.getElementById("metaline").innerHTML = `書き出し <span class="mono">${esc((c.generated_at || "").slice(0,10))}</span>`;   // 9/7 CEO: 社名と各源の件数は下段と重複するため帯は書き出し日だけ;
   // 9/7 CEO: カルテは新しいタブで開く仕様のため「‹ 戻る」は置かない(閉じるは上部の ✕)
   document.getElementById("main").innerHTML = `
@@ -309,12 +310,14 @@ function render(c){
       ${faceTile("#ucc", "UCC 登記", f.ucc.count + " 件", f.ucc.locked ? "登録すると内容が開きます" : (f.ucc.count ? "機械 " + f.ucc.machines + " 台 · " + (f.ucc.makers || []).join("・") : "当社の網に無い"), false)}
       ${faceTile("#hiring", "企業採用状況", hcount + " 件", f.hiring.locked ? "登録すると内容が開きます" : (hcount ? ("製造職 " + (f.hiring.mfg||0) + " · " + hroles.slice(0,3).map(([k,v])=>k+" "+v).join("・")) : "採用ページが当社の網に無い"), false)}
       ${faceTile("#grants", "政府補助金", gcount + " 件", f.grants.locked ? "登録すると内容が開きます" : (gcount ? (f.grants.amount_total ? "交付・融資 合計 " + usd(f.grants.amount_total) : "最新 " + (f.grants.latest || "")) : "連邦の網に無い(州・市郡は順次)"), false)}
+      ${faceTile("#news", "ニュース", ncount + " 件", (f.news && f.news.locked) ? "登録すると内容が開きます" : (ncount ? "最新 " + (f.news.latest || "") : "直近のニュースに無い"), false)}
     </div>
     <section class="ksec" id="permits"><h3>建設許可(${f.permits.count})</h3>${f.permits.items.length ? f.permits.items.map(permitItem).join("") : `<div class="kempty">この会社の建設許可は当社の網に無い(未収集の自治体か、名義が別会社)。</div>`}</section>
     <section class="ksec${f.ucc.locked ? " sg-lock" : ""}" id="ucc"><h3>UCC 登記(${f.ucc.count})</h3>${f.ucc.locked ? lockBody("UCC 登記") : (f.ucc.items.length ? f.ucc.items.map(uccItem).join("") : `<div class="kempty">この会社の UCC 登記は当社の網に無い(オハイオ先行・担保権者名で検索した範囲)。</div>`)}</section>
     <section class="ksec${f.hiring.locked ? " sg-lock" : ""}" id="hiring"><h3>採用(${hcount})</h3>${f.hiring.locked ? lockBody("採用") : hcount ? `<div class="ksub" style="margin-bottom:8px">開いている求人 ${hcount}(製造職 ${f.hiring.mfg||0})・内訳: ${hroles.map(([k,v])=>`${esc(k)} <span class="mono">${v}</span>`).join("・")}・拠点: ${Object.entries(f.hiring.sites||{}).map(([k,v])=>`${esc(k)} ${v}`).join("・")}・出典 ${esc(f.hiring.source||"")}。職種の型は題名の規則。求人票の本文(設備・工程・人数)の AI 読みは順次。</div>` + hitems.map(hireItem).join("") : `<div class="kempty">${esc((f.hiring && f.hiring.note) || "この会社の採用ページは当社の網に無い。")}</div>`}</section>
     <section class="ksec${f.grants.locked ? " sg-lock" : ""}" id="grants"><h3>政府補助金(${gcount})</h3>${f.grants.locked ? lockBody("政府補助金") : gitems.length ? gitems.map(grantItem).join("") : `<div class="kempty">${esc((f.grants && f.grants.note) || "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。")}</div>`}</section>
-    <section class="ksec"><h3>時系列(4 つの情報源を合流)${c.demo ? `<span class="ksub" style="font-weight:400;margin-left:8px">見本モード: 建設許可のみ</span>` : ""}</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : (t.face === "grants" ? "grant" : (t.face === "hiring" ? "hire" : "permit"))}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
+    <section class="ksec${f.news && f.news.locked ? " sg-lock" : ""}" id="news"><h3>ニュース(${ncount})</h3>${f.news && f.news.locked ? lockBody("ニュース") : (nitems.length ? nitems.map(n => `<div class="nitem"><a href="${esc(n.url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph">${n.thumb ? `<img src="${esc(n.thumb)}" alt="" loading="lazy">` : ""}</span></a><div><h4><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a></h4>${n.summary ? `<p>${esc(n.summary)}</p>` : ""}<div class="m">${esc(n.source || "")}・${esc(n.date || "")}${(n.tags||[]).length ? "・" + n.tags.map(esc).join("・") : ""}</div></div></div>`).join("") : `<div class="kempty">${esc((f.news && f.news.note) || "直近のニュース(米製造業・5 州)にこの会社は出ていない。")}</div>`)}</section>
+    <section class="ksec"><h3>時系列(5 つの情報源を合流)${c.demo ? `<span class="ksub" style="font-weight:400;margin-left:8px">見本モード: 建設許可のみ</span>` : ""}</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : (t.face === "grants" ? "grant" : (t.face === "hiring" ? "hire" : (t.face === "news" ? "news" : "permit")))}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
     <div class="knote">${esc(c.note)}</div>`;
 }
 async function boot(){
