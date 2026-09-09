@@ -94,6 +94,27 @@ details summary{ cursor:pointer; font-size:12.5px; color:var(--sub); }
     </div>
     <div class="tablewrap"><table id="ledger"><thead></thead><tbody></tbody></table></div>
     <p class="small">data_status の規則(機械判定・毎晩): <b>on_track</b> = 最終取得から 30 日+猶予 10 営業日以内 / <b>due</b> = 次回依頼日を過ぎた / <b>waiting</b> = 法定の応答窓(10 営業日・商用 21)内 / <b>no_response</b> = 窓を過ぎて回答なし → 催促 / <b>received_not_ingested</b> = 回答あり・取り込みなし / <b>redirected</b> = 別窓口・フォーム・不達 / <b>blocked</b> = 本人確認等で停止 / <b>not_needed</b> = 公開源で取れる。</p>
+    <h2>源の調達価格メモ(顧客への価格案内の根拠・2026-09-09 CEO 指示)</h2>
+    <div class="todo">
+      <div class="box"><h3>ミシガン UCC(州務省 UCC 課・PDF Rev. 05/2026・FAQ 実読)</h3>
+        <ul>
+          <li><b>データ便(索引のみ・担保物なし)</b>: 4 週 <span class="mono">$500</span> / 26 週 <span class="mono">$3,000</span>(1 年 = 26 週 × 2 = $6,000・4 週 × 13 なら $6,500)。週次 Excel 4 タブ・毎週水曜・30 日 DL 可・<b>途中で止められる</b>。</li>
+          <li><b>Database refresh</b>(前月末の全 active + lapsed・索引のみ): <span class="mono">$5,000</span>・毎月 5 日生成 CSV。</li>
+          <li><b>画像便(担保物の逐語はここだけ)</b>: 12 か月契約のみ <span class="mono">$6,000</span>・毎週水曜・前週分の新規のみ・<b>過去分の画像は提供なし</b>・PDF・60 日 DL。読み取りは当社 AI(1 頁 ≈ $0.01)。</li>
+          <li><b>会社単位の写し(UCC-11・要アカウント)</b>: 検索 <span class="mono">$6</span>/社名 + 写し <span class="mono">$2</span>/頁 + 公印 $12/件。担保物つき。社名が要る = 検証用(発見には使えない)。</li>
+          <li>前提: 購入前に <b>DSA(Data Sharing Agreement)</b>・MiLogin for Business。匿名の quick search は索引のみ(画像に届かない)。<b>ポータルの自動取得は規約で不可</b>。担当 UCC Section 517-335-6167 / UCC Specialist(9/9 追送済み・見本・週の件数・DSA 条項・支払条件は返答待ち)。</li>
+        </ul></div>
+      <div class="box"><h3>ウィスコンシン UCC(DFI・Data Sales Guide 実読・9/8 回答)</h3>
+        <ul>
+          <li>Full UCC Database(索引・有効 + 失効 1 年・画像なし): <span class="mono">$500</span>/月(毎月 4 日)。</li>
+          <li>Weekly Database Updates <span class="mono">$250</span>/週(直近 6 週)・Weekly Images <span class="mono">$250</span>/週(登記番号名の PDF ZIP・52 週まで遡れる・非連続可)。</li>
+          <li>個別の写し <span class="mono">$4.00</span>/IFS 番号。担保物の本文はデータに無く画像のみ(95% がオンライン提出でもスキャン)。派生物の第三者提供に制限なし・州外購入可。</li>
+        </ul></div>
+      <div class="box"><h3>オハイオ UCC(州務長官・無料)</h3>
+        <ul><li>担保物つきで無料取得(9/9 時点 752 件・担保物あり 737)。MI/WI の「担保権者名 → 設備投資」推定の較正データ。</li></ul></div>
+      <div class="box"><h3>方針(9/9 CEO)</h3>
+        <ul><li>MI は<b>需要起点</b>: 買い手の問いは「過去 3 か月に設備投資した会社は?」(発見)。答える経路 = A 索引便 + 担保権者名の推定(+上位は写しで検証)/ B 画像便 + AI 読み。まず OH で推定精度を測り、10/6 まで支出しない。監視が欲しい顧客が揃えば画像便を契約(年額を顧客数で割る・契約日以降のみを文書で確認)。</li></ul></div>
+    </div>
     <h2>Signal 登録者の追跡 <span class="small" id="reg-meta"></span></h2>
     <div class="tablewrap"><table id="reg"><thead></thead><tbody></tbody></table></div>
     <h2>取り込みの状態(夜間バッチ) <span class="small" id="health-meta"></span></h2>
