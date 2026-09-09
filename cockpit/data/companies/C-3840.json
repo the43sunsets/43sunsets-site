@@ -14,10 +14,35 @@
 "master_checked_at": "2026-09-08",
 "faces": {
 "permits": {
-"count": 0,
+"count": 1,
 "value_total": 0,
-"latest": null,
-"items": []
+"latest": "2026-08-25",
+"items": [
+{
+"id": "S-47760",
+"date": "2026-08-25",
+"applied": "2026-08-25",
+"state": "IL",
+"jurisdiction": "Silvis",
+"address": "1800 158 ST",
+"permit_no": "P2026-0062",
+"permit_type": "Com Plumbing",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Deere & Co(税務部門扱い)の Silvis 1800 158 St 施設で商業配管工事(金額不明)。",
+"infer": "John Deere の生産・整備拠点における配管の付帯設備工事の可能性(推論)。金額不明のため投資規模は不明。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Com Plumbing / Commercial",
+"source_id": "SRC-088",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01KGw4hsWANhygmC3cFPFbNN",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
 },
 "ucc": {
 "count": 0,
@@ -137,6 +162,13 @@
 },
 "timeline": [
 {
+"date": "2026-08-25",
+"face": "permits",
+"title": "建設許可(Silvis): 未分類",
+"ref": "S-47760",
+"summary": "Deere & Co(税務部門扱い)の Silvis 1800 158 St 施設で商業配管工事(金額不明)。"
+},
+{
 "date": "2026-02-16",
 "face": "grants",
 "title": "助成(州・Indiana IEDC): 製造能力の増強",
@@ -158,6 +190,6 @@
 "summary": "Deere & Companyがイリノイ州シカゴでEDGE税額控除$4.9Mを承認され、新規雇用150人を目標としている。用途詳細は本文からは不明。"
 }
 ],
-"generated_at": "2026-09-09T08:12:13+00:00",
+"generated_at": "2026-09-09T08:13:04+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

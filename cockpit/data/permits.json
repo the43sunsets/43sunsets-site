@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-09T08:12:11+00:00",
+"generated_at": "2026-09-09T08:13:02+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,14 +17,14 @@
 "funnel": {
 "signals_total": 49111,
 "candidates": 724,
-"enriched": 29526,
-"targets": 115,
-"unclassified": 29411,
-"unevaluated": 19585,
+"enriched": 30161,
+"targets": 117,
+"unclassified": 30044,
+"unevaluated": 18950,
 "by_category": {
 "データセンター建設": 7,
-"医療施設": 54,
-"未分類": 29411,
+"医療施設": 56,
+"未分類": 30044,
 "物流・倉庫の新設": 14,
 "研究・ラボ施設": 14,
 "製造能力の増強": 26
@@ -927,7 +927,7 @@
 "date_min": "2026-01-08",
 "date_max": "2026-09-03",
 "owner_coverage": 46,
-"targets": 0,
+"targets": 1,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -1063,7 +1063,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-08-31",
 "owner_coverage": 0,
-"targets": 0,
+"targets": 1,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -1317,22 +1317,22 @@
 "permits-more-IL-2.json",
 "permits-more-IL-3.json"
 ],
+"MI": [
+"permits-more-MI-1.json"
+],
 "WI": [
 "permits-more-WI-1.json"
 ],
 "IN": [
 "permits-more-IN-1.json"
-],
-"MI": [
-"permits-more-MI-1.json"
 ]
 },
 "unclassified_by_state": {
-"OH": 5413,
-"IL": 21826,
-"WI": 573,
-"IN": 5,
-"MI": 1594
+"OH": 5427,
+"IL": 22437,
+"MI": 1595,
+"WI": 580,
+"IN": 5
 }
 },
 "signals": [
@@ -1834,6 +1834,56 @@
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-07T08:15:41+00:00"
+}
+},
+{
+"investor": {
+"name": "DAYDREAM PEDIATRIC DENTISTRY",
+"basis": "operator",
+"label": "操業事業者",
+"source": "permit_text",
+"source_label": "許可記録(本文)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": "RWE DESIGN BUILD"
+},
+"id": "S-47880",
+"state": "IL",
+"city": "La Grange Park・909 E 31ST ST",
+"company": "DAYDREAM PEDIATRIC DENTISTRY",
+"entity_type": "corp",
+"company_basis": "description",
+"industry": "未分類",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-08-31",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "La Grange Park 909 E 31st St でテナント工事、小児歯科医院「Daydream Pediatric Dentistry」の内装改修 $500k。",
+"infer": "歯科クリニックのテナント内装 = 診療機器・設備の導入が伴う小規模投資の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "ラグランジパーク村 建築許可(FOIA 回答・Permits Summary Report Excel・所有者欄なし)",
+"ref": "許可 P26-0563 Interior Remodel",
+"value": 500000.0,
+"verbatim": "Interior Remodel / INTERIOR REMODEL - TENANT BUILDOUT FOR DAYDREAM PEDIATRIC DENTISTRY",
+"gc": "RWE DESIGN BUILD",
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-12149",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01KGw4hsWANhygmC3cFPFbNN",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-09T08:12:59+00:00"
 }
 },
 {
@@ -6988,6 +7038,56 @@
 },
 {
 "investor": {
+"name": "Agility Properties",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "permit_owner",
+"source_label": "許可記録(所有者欄)"
+},
+"parties": {
+"owner_of_record": "Agility Properties",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "Sullivan Contractors"
+},
+"id": "S-47656",
+"state": "IL",
+"city": "Mount Zion・1645 N. State Highway 121",
+"company": "Agility Properties",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-05-26",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Mount Zion 1645 N. State Highway 121 に 15,161 sqft の医療施設を新築 $8.1M(所有者 Agility Properties)。",
+"infer": "入居する医療事業者は記録上不明のため業種は判定不可(推論不可)。",
+"note": null,
+"fact": {
+"src": "マウントザイオン村 建築許可(FOIA 回答・Excel 台帳 2026 年通年・金額/所有者/施工者あり)",
+"ref": "許可 2026-6 Medical Facility",
+"value": 8052762.0,
+"verbatim": "Medical Facility / Commercial / 15161 sqft / [building]",
+"gc": "Sullivan Contractors",
+"pin": null,
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-12152",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01KGw4hsWANhygmC3cFPFbNN",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-09T08:12:59+00:00"
+}
+},
+{
+"investor": {
 "name": "Ascension Columbia St. Mary’s(Airport Business Park クリニック)",
 "basis": "operator",
 "label": "操業事業者",
@@ -7575,6 +7675,20 @@
 ]
 },
 {
+"id": "C-12152",
+"name": "Agility Properties",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 8052762.0,
+"states": "IL",
+"latest": "2026-05-26",
+"targets": 1,
+"signal_ids": [
+"S-47656"
+]
+},
+{
 "id": "C-3708",
 "name": "MUNSON HOSPITAL",
 "entity_type": "corp",
@@ -7844,6 +7958,20 @@
 "targets": 1,
 "signal_ids": [
 "S-1046"
+]
+},
+{
+"id": "C-12149",
+"name": "DAYDREAM PEDIATRIC DENTISTRY",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 500000.0,
+"states": "IL",
+"latest": "2026-08-31",
+"targets": 1,
+"signal_ids": [
+"S-47880"
 ]
 },
 {
@@ -11800,6 +11928,21 @@
 ]
 },
 {
+"id": "C-12158",
+"name": "Koester Custom Homes, LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 1595000.0,
+"states": "IL",
+"latest": "2026-04-15",
+"targets": 0,
+"signal_ids": [
+"S-47652",
+"S-47653"
+]
+},
+{
 "id": "C-7767",
 "name": "1455 EAST 185TH STREET LLC",
 "entity_type": "spe",
@@ -15607,6 +15750,22 @@
 ]
 },
 {
+"id": "C-12154",
+"name": "Kee Structured Investments, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 3,
+"value_total": 532548.0,
+"states": "IL",
+"latest": "2026-09-03",
+"targets": 0,
+"signal_ids": [
+"S-47658",
+"S-47659",
+"S-47660"
+]
+},
+{
 "id": "C-511",
 "name": "SUDLER PROPERTY MANAGEMENT",
 "entity_type": "corp",
@@ -19218,6 +19377,20 @@
 "targets": 0,
 "signal_ids": [
 "S-28318"
+]
+},
+{
+"id": "C-12165",
+"name": "Spitler Park Townhomes, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 250000.0,
+"states": "IL",
+"latest": "2026-06-23",
+"targets": 0,
+"signal_ids": [
+"S-47681"
 ]
 },
 {
@@ -44486,6 +44659,20 @@
 ]
 },
 {
+"id": "C-12141",
+"name": "GOLDMAN INVESTMENTS T7 CHICAGO LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 5000.0,
+"states": "IL",
+"latest": "2026-09-05",
+"targets": 0,
+"signal_ids": [
+"S-47620"
+]
+},
+{
 "id": "C-1963",
 "name": "TAIT AND TAIT GENERAL CONSTRUCTION",
 "entity_type": "corp",
@@ -49827,6 +50014,20 @@
 "targets": 0,
 "signal_ids": [
 "S-28882"
+]
+},
+{
+"id": "C-12147",
+"name": "CHEMGROUT",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 1000.0,
+"states": "IL",
+"latest": "2026-07-07",
+"targets": 0,
+"signal_ids": [
+"S-47780"
 ]
 },
 {
@@ -57117,6 +57318,20 @@
 ]
 },
 {
+"id": "C-3840",
+"name": "DEERE & COMPANY",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-25",
+"targets": 0,
+"signal_ids": [
+"S-47760"
+]
+},
+{
 "id": "C-7790",
 "name": "J&J OHIO LLC",
 "entity_type": "spe",
@@ -57242,6 +57457,292 @@
 "targets": 0,
 "signal_ids": [
 "S-47310"
+]
+},
+{
+"id": "C-12139",
+"name": "BND PROPERTIES X LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-01",
+"targets": 0,
+"signal_ids": [
+"S-47501"
+]
+},
+{
+"id": "C-12140",
+"name": "ELLINGER RIGGS PROPERTIES",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-08-31",
+"targets": 0,
+"signal_ids": [
+"S-47516",
+"S-47527"
+]
+},
+{
+"id": "C-12142",
+"name": "MAILHOT INVESTMENTS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-08-25",
+"targets": 0,
+"signal_ids": [
+"S-47540"
+]
+},
+{
+"id": "C-12143",
+"name": "SILVERTHORNE DEVELOPMENT CO",
+"entity_type": "corp",
+"jp": false,
+"signals": 6,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-25",
+"targets": 0,
+"signal_ids": [
+"S-47734",
+"S-47739",
+"S-47745",
+"S-47746",
+"S-47758",
+"S-47759"
+]
+},
+{
+"id": "C-12144",
+"name": "MISCO LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-07-13",
+"targets": 0,
+"signal_ids": [
+"S-47712"
+]
+},
+{
+"id": "C-12145",
+"name": "MEMBERS PROPERTY MANGEMEN",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-07-08",
+"targets": 0,
+"signal_ids": [
+"S-47701"
+]
+},
+{
+"id": "C-12146",
+"name": "Chillicothe historical society",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-14",
+"targets": 0,
+"signal_ids": [
+"S-48124"
+]
+},
+{
+"id": "C-12148",
+"name": "SILVIS RETAIL LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-07-22",
+"targets": 0,
+"signal_ids": [
+"S-47722"
+]
+},
+{
+"id": "C-12150",
+"name": "CIF001A LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-07-07",
+"targets": 0,
+"signal_ids": [
+"S-47700"
+]
+},
+{
+"id": "C-12151",
+"name": "MENCOS PROPERTIES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-07-09",
+"targets": 0,
+"signal_ids": [
+"S-47710"
+]
+},
+{
+"id": "C-12153",
+"name": "SILVIS ONE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-20",
+"targets": 0,
+"signal_ids": [
+"S-47749"
+]
+},
+{
+"id": "C-12155",
+"name": "REITZ DARYL/MARY TRUST",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-13",
+"targets": 0,
+"signal_ids": [
+"S-47744"
+]
+},
+{
+"id": "C-12156",
+"name": "HCRI ILLINOIS PROP LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-07-08",
+"targets": 0,
+"signal_ids": [
+"S-47706"
+]
+},
+{
+"id": "C-12157",
+"name": "MILLER REAL ESTATE HOLDINGS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-27",
+"targets": 0,
+"signal_ids": [
+"S-47762"
+]
+},
+{
+"id": "C-12159",
+"name": "DEERE & CO/TAX DEPT",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-07-23",
+"targets": 0,
+"signal_ids": [
+"S-47724"
+]
+},
+{
+"id": "C-12160",
+"name": "SERRA BROTHERS PROPERTIES",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-07-09",
+"targets": 0,
+"signal_ids": [
+"S-47709"
+]
+},
+{
+"id": "C-12161",
+"name": "ROCK ISLAND COUNTY HOUSING FINANCE CORP",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-10",
+"targets": 0,
+"signal_ids": [
+"S-47737"
+]
+},
+{
+"id": "C-12162",
+"name": "1600 JDR LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-07-08",
+"targets": 0,
+"signal_ids": [
+"S-47703"
+]
+},
+{
+"id": "C-12163",
+"name": "QUAD CITIES PROPERTIES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-06",
+"targets": 0,
+"signal_ids": [
+"S-47735"
+]
+},
+{
+"id": "C-12164",
+"name": "SOAR RESTAURANTS II LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-24",
+"targets": 0,
+"signal_ids": [
+"S-47752"
 ]
 }
 ]
