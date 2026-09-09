@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>管理者ダッシュボード — Signal by 43 Sunsets</title>
+<meta name="description" content="43 Sunsets の社内用。FOIA 管理台帳・登録者の追跡・取り込みの状態。管理者のログインが必要。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{ --serif:"Shippori Mincho",serif; --mono:"IBM Plex Mono",ui-monospace,monospace; }
+*{box-sizing:border-box}
+body{ margin:0; background:var(--paper); color:var(--ink); font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif; }
+main{ max-width:1280px; margin:0 auto; padding:32px 24px 80px; }
+.kicker{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; color:var(--sub); text-transform:uppercase; }
+h1{ font-family:var(--serif); font-size:26px; line-height:1.4; margin:8px 0 6px; }
+h2{ font-size:12px; letter-spacing:.2em; color:var(--sub); font-weight:700; margin:30px 0 10px; text-transform:uppercase; border-bottom:1px solid var(--line-soft); padding-bottom:6px; }
+.lead{ color:var(--ink-2); line-height:1.9; margin:0 0 18px; font-size:14px; }
+.msg{ border-left:3px solid var(--fact); background:var(--fact-bg); padding:14px 18px; border-radius:0 6px 6px 0; margin:0 0 22px; line-height:1.8; }
+.msg.warn{ border-color:var(--warn); background:var(--infer-bg); }
+.btn{ font:inherit; font-size:14px; font-weight:700; color:#fff; background:var(--ink); border:0; border-radius:6px; padding:10px 18px; cursor:pointer; text-decoration:none; display:inline-block; }
+.btn:hover{ background:var(--accent); } .btn.alt{ background:transparent; color:var(--ink); border:1px solid var(--line); font-weight:500; padding:6px 12px; font-size:12.5px; }
+.band{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 14px; }
+.tile{ background:var(--card); border:1px solid var(--line); border-radius:6px; padding:10px 14px; min-width:120px; cursor:pointer; }
+.tile:hover{ border-color:var(--accent); }
+.tile.on{ outline:2px solid var(--accent); }
+.tile .n{ font-family:var(--mono); font-size:22px; font-weight:600; line-height:1.1; }
+.tile .l{ font-size:11.5px; color:var(--sub); margin-top:3px; }
+.tile.bad .n{ color:var(--stamp); } .tile.warn .n{ color:var(--infer); } .tile.good .n{ color:var(--fact); }
+.todo{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; }
+.todo .box{ background:var(--card); border:1px solid var(--line); border-radius:6px; padding:12px 14px; }
+.todo .box h3{ margin:0 0 6px; font-size:13px; }
+.todo ul{ margin:0; padding-left:18px; font-size:13px; line-height:1.7; }
+.todo .empty{ color:var(--sub); font-size:12.5px; }
+.filters{ display:flex; flex-wrap:wrap; gap:8px 12px; align-items:center; font-size:12.5px; margin:0 0 10px; }
+.filters select, .filters input{ font:inherit; font-size:12.5px; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:4px; padding:5px 8px; }
+.tablewrap{ overflow-x:auto; border:1px solid var(--line); border-radius:6px; background:var(--card); }
+table{ border-collapse:collapse; width:100%; font-size:12.5px; }
+th, td{ padding:6px 8px; border-bottom:1px solid var(--line-soft); text-align:left; vertical-align:top; white-space:nowrap; }
+th{ position:sticky; top:0; background:var(--card); font-size:11px; letter-spacing:.08em; color:var(--sub); cursor:pointer; user-select:none; }
+th.sorted::after{ content:" ▾"; } th.sorted.asc::after{ content:" ▴"; }
+td.wrap{ white-space:normal; min-width:220px; max-width:420px; }
+td.mono, .mono{ font-family:var(--mono); font-variant-numeric:tabular-nums; }
+.pill{ display:inline-block; border-radius:999px; padding:1px 8px; font-size:11px; border:1px solid var(--line); background:var(--chip-bg); }
+.pill.good{ color:var(--fact); background:var(--fact-bg); border-color:transparent; }
+.pill.warn{ color:var(--infer); background:var(--infer-bg); border-color:var(--infer-line); }
+.pill.bad{ color:#fff; background:var(--stamp); border-color:transparent; }
+.small{ font-size:11.5px; color:var(--sub); }
+footer{ max-width:1280px; margin:0 auto; padding:0 24px 40px; font-size:11px; color:var(--sub); line-height:1.7; }
+details summary{ cursor:pointer; font-size:12.5px; color:var(--sub); }
+</style>
+<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260908a">
+<script src="/signal/assets/nav.js?v=20260908a" defer></script>
+</head>
+<body>
+<header class="site-head">
+  <a class="logo" href="/signal/" aria-label="Signal by 43 Sunsets"><svg class="lockup" viewBox="0 8 300 62" role="img" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M14 40 A22 22 0 0 1 58 40" stroke="var(--accent)"/><path d="M23 40 A13 13 0 0 1 49 40" stroke="var(--accent)" opacity=".62"/><path d="M31 40 A5 5 0 0 1 41 40" stroke="var(--accent)" opacity=".38"/></g><path d="M10 46 H172" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" fill="none"/><text x="70" y="41" font-family="Shippori Mincho, serif" font-weight="700" font-size="36" fill="var(--ink)">Signal</text><text x="172" y="64" text-anchor="end" font-family="Shippori Mincho, serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="var(--sub)">by 43 Sunsets</text></svg></a>
+  <nav class="cnav" aria-label="ページ"><a href="/signal/">トップ</a><a href="/signal/permits/">建設許可</a><a href="/signal/ucc/">UCC</a><a href="/signal/subsidies/">補助金</a><a href="/signal/hiring/">企業採用状況</a><a href="/signal/macro/">景気の状況</a><a href="/signal/freshness/">データの範囲と鮮度</a><a href="/signal/solutions/">ソリューション</a></nav>
+  <div class="hdr-right"><a class="corp" href="/" title="43 Sunsets(会社サイト)">43 Sunsets ↗</a><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">ADMIN</span></div>
+</header>
+<script>
+(function(){
+  const K = "cockpit-theme"; let t = null;
+  try { t = localStorage.getItem(K); } catch (e) {}
+  if (t !== "dark" && t !== "light") t = "light";
+  const apply = n => { document.documentElement.setAttribute("data-theme", n); try { localStorage.setItem(K, n); } catch (e) {}
+    const b = document.getElementById("themebtn"); if (b) b.textContent = n === "dark" ? "☀️ ライト" : "🌙 ダーク";
+    window.dispatchEvent(new CustomEvent("themechange", {detail: n})); };
+  document.documentElement.setAttribute("data-theme", t);
+  window.__setTheme = apply;
+  const b = document.getElementById("themebtn");
+  if (b) { b.textContent = t === "dark" ? "☀️ ライト" : "🌙 ダーク"; b.onclick = () => apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"); }
+})();
+</script>
+<main id="main">
+  <div class="kicker">SIGNAL by 43 SUNSETS — 社内用</div>
+  <h1>管理者ダッシュボード</h1>
+  <p class="lead">FOIA 管理台帳(自治体ごとの依頼・回答・取り込み・次回予定)、Signal 登録者の追跡、夜間の取り込みの状態。人と AI が同じ表を見る(朝バッチは公開版 <span class="mono">foia-status.json</span> を読む)。</p>
+  <div id="gate"></div>
+  <div id="app" hidden>
+    <h2>FOIA 台帳 — 数の帯 <span class="small" id="ledger-meta"></span></h2>
+    <div class="band" id="band"></div>
+    <h2>今日やること</h2>
+    <div class="todo" id="todo"></div>
+    <h2>FOIA 台帳 — 全自治体</h2>
+    <div class="filters">
+      <label>州 <select id="f-state"><option value="">すべて</option></select></label>
+      <label>データ状態 <select id="f-ds"><option value="">すべて</option></select></label>
+      <label>返信の状態 <select id="f-st"><option value="">すべて</option></select></label>
+      <label>検索 <input id="f-q" type="search" placeholder="自治体名・窓口・備考" size="28"></label>
+      <span class="small" id="f-n"></span>
+      <button class="btn alt" id="csv" type="button">CSV を保存</button>
+    </div>
+    <div class="tablewrap"><table id="ledger"><thead></thead><tbody></tbody></table></div>
+    <p class="small">data_status の規則(機械判定・毎晩): <b>on_track</b> = 最終取得から 30 日+猶予 10 営業日以内 / <b>due</b> = 次回依頼日を過ぎた / <b>waiting</b> = 法定の応答窓(10 営業日・商用 21)内 / <b>no_response</b> = 窓を過ぎて回答なし → 催促 / <b>received_not_ingested</b> = 回答あり・取り込みなし / <b>redirected</b> = 別窓口・フォーム・不達 / <b>blocked</b> = 本人確認等で停止 / <b>not_needed</b> = 公開源で取れる。</p>
+    <h2>Signal 登録者の追跡 <span class="small" id="reg-meta"></span></h2>
+    <div class="tablewrap"><table id="reg"><thead></thead><tbody></tbody></table></div>
+    <h2>取り込みの状態(夜間バッチ) <span class="small" id="health-meta"></span></h2>
+    <div class="tablewrap"><table id="health"><thead></thead><tbody></tbody></table></div>
+    <p class="small" id="cost"></p>
+  </div>
+</main>
+<footer>© 43 Sunsets · 社内用(noindex)· 台帳の窓口メールと備考は管理者ログイン時のみ(KV 経由・公開ファイルには置かない)</footer>
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const d10 = s => s ? String(s).slice(0, 10) : "";
+  const gate = $("#gate"), app = $("#app");
+  const DS_CLASS = { on_track: "good", not_needed: "good", waiting: "", due: "warn", redirected: "warn", review: "warn", no_response: "bad", received_not_ingested: "bad", blocked: "bad" };
+  const DS_LABEL = { on_track: "予定どおり", waiting: "回答待ち", no_response: "無回答 → 催促", received_not_ingested: "回答あり・未取り込み", due: "再依頼の時期", redirected: "別窓口/不達", blocked: "本人確認で停止", not_needed: "公開源あり", review: "要確認" };
+  let ledger = null, rows = [], privateMode = false, sortKey = "name", sortAsc = true, tileFilter = "";
+
+  async function getJSON(url) { const r = await fetch(url, { cache: "no-store", credentials: "same-origin" }); let d = null; try { d = await r.json(); } catch {} return { status: r.status, d }; }
+
+  async function boot() {
+    const me = await getJSON("/signal/me");
+    if (!me.d || !me.d.loggedIn) {
+      gate.innerHTML = `<div class="msg warn"><strong>管理者のログインが必要です。</strong> hello@43sunsets.com または管理者のアドレスで Signal にログインしてください。</div><p><a class="btn" href="/signal/login/?next=/signal/admin/">ログインする</a></p>`;
+      return;
+    }
+    const f = await getJSON("/signal/admin/foia");
+    if (f.status === 403) { gate.innerHTML = `<div class="msg warn"><strong>${esc(me.d.email)} は管理者ではありません。</strong> 管理者のアドレスでログインし直してください。</div><p><a class="btn alt" href="/signal/logout">ログアウト</a></p>`; return; }
+    if (f.status === 401) { gate.innerHTML = `<div class="msg warn">ログイン状態を確認できませんでした。<a href="/signal/login/?next=/signal/admin/">ログイン</a>し直してください。</div>`; return; }
+    if (!f.d || !f.d.ok) { gate.innerHTML = `<div class="msg warn">管理 API が応答しません(HTTP ${f.status})。</div>`; return; }
+    if (f.d.ledger) { ledger = f.d.ledger; privateMode = true; }
+    else {
+      const pub = await getJSON("/cockpit/data/foia-status.json");
+      ledger = pub.d; privateMode = false;
+      gate.innerHTML = `<div class="msg warn"><strong>台帳の全列(窓口メール・備考)はまだ投入されていません。</strong> 公開版(foia-status.json)で表示しています。VPS の <span class="mono">/var/lib/cockpit/signal.env</span> に SIGNAL_SECRET を置くと、夜間バッチが全列を投入します。</div>`;
+    }
+    if (!ledger || !Array.isArray(ledger.rows)) { gate.innerHTML += `<div class="msg warn">台帳データがまだありません(夜間バッチの初回実行待ち)。</div>`; app.hidden = false; loadOthers(); return; }
+    rows = ledger.rows;
+    app.hidden = false;
+    renderBand(); renderTodo(); buildFilters(); renderTable();
+    loadOthers();
+  }
+
+  function renderBand() {
+    const by = ledger.by_data_status || {}; const order = ["no_response", "received_not_ingested", "blocked", "due", "waiting", "redirected", "on_track", "not_needed", "review"];
+    const tiles = order.filter(k => by[k] != null).map(k => `<div class="tile ${DS_CLASS[k] || ""} ${tileFilter === k ? "on" : ""}" data-k="${k}"><div class="n">${by[k]}</div><div class="l">${esc(DS_LABEL[k] || k)} <span class="mono">${k}</span></div></div>`);
+    tiles.push(`<div class="tile" data-k=""><div class="n">${ledger.n ?? rows.length}</div><div class="l">自治体(台帳の行)</div></div>`);
+    tiles.push(`<div class="tile"><div class="n">${ledger.ingested_sources ?? "-"}</div><div class="l">取り込み済みの源 / ${(ledger.ingested_records ?? 0).toLocaleString()} 件</div></div>`);
+    $("#band").innerHTML = tiles.join("");
+    $("#ledger-meta").textContent = `生成 ${ledger.generated_at || "-"}${privateMode ? "(全列・KV)" : "(公開版)"}`;
+    $("#band").querySelectorAll(".tile[data-k]").forEach(t => t.onclick = () => { tileFilter = t.dataset.k; $("#f-ds").value = tileFilter; renderBand(); renderTable(); });
+  }
+  function renderTodo() {
+    const t = ledger.todo || {}; const boxes = [["no_response", "催促する(CEO 承認で送信)"], ["received_not_ingested", "取り込む(ファブ枠)"], ["blocked", "CEO の操作(本人確認など)"], ["due", "月次の再依頼(次回依頼日を過ぎた)"], ["redirected", "別窓口・フォームで出し直す"]];
+    $("#todo").innerHTML = boxes.map(([k, title]) => { const l = t[k] || []; return `<div class="box"><h3>${esc(title)} <span class="pill ${DS_CLASS[k] || ""}">${l.length}</span></h3>${l.length ? `<ul>${l.slice(0, 40).map(x => `<li>${esc(x.name)}${x.state ? ` <span class="small">(${esc(x.state)})</span>` : ""}${x.note ? ` <span class="small">— ${esc(x.note)}</span>` : ""}</li>`).join("")}${l.length > 40 ? `<li class="small">…ほか ${l.length - 40} 件(下の表で絞り込み)</li>` : ""}</ul>` : `<div class="empty">なし</div>`}</div>`; }).join("");
+  }
+  function buildFilters() {
+    const uniq = k => [...new Set(rows.map(r => r[k]).filter(Boolean))].sort();
+    for (const [sel, k] of [["#f-state", "state"], ["#f-ds", "data_status"], ["#f-st", "status"]]) { const s = $(sel); uniq(k).forEach(v => { const o = document.createElement("option"); o.value = v; o.textContent = v; s.appendChild(o); }); s.onchange = () => { if (k === "data_status") { tileFilter = s.value; renderBand(); } renderTable(); }; }
+    $("#f-q").oninput = renderTable;
+    $("#csv").onclick = () => { const cols = columns(); const lines = [cols.map(c => c.label).join(",")].concat(filtered().map(r => cols.map(c => { const v = c.get(r); return '"' + String(v ?? "").replace(/"/g, '""') + '"'; }).join(","))); const blob = new Blob(["﻿" + lines.join("\n")], { type: "text/csv;charset=utf-8" }); const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `foia-ledger-${(ledger.generated_at || "").slice(0, 10)}.csv`; a.click(); };
+  }
+  function columns() {
+    const c = [
+      { key: "name", label: "自治体", get: r => r.name },
+      { key: "state", label: "州", get: r => r.state },
+      { key: "population", label: "人口", get: r => r.population, cls: "mono" },
+      { key: "method", label: "方法", get: r => r.method },
+    ];
+    if (privateMode) c.push({ key: "to_addr", label: "窓口", get: r => r.to_addr || (r.form_url ? "form" : ""), cls: "mono" }, { key: "contact_role", label: "役職", get: r => r.contact_role });
+    c.push(
+      { key: "sent_at", label: "送信", get: r => d10(r.sent_at), cls: "mono" },
+      { key: "status", label: "返信の状態", get: r => r.status },
+      { key: "response_at", label: "回答", get: r => d10(r.response_at), cls: "mono" },
+      { key: "data_status", label: "データ状態", get: r => r.data_status, pill: true },
+      { key: "source_id", label: "源", get: r => r.source_id, cls: "mono" },
+      { key: "last_data_at", label: "最終取得", get: r => d10(r.last_data_at), cls: "mono" },
+      { key: "last_data_n", label: "件数", get: r => r.last_data_n, cls: "mono" },
+      { key: "last_record_date", label: "最新の記録日", get: r => d10(r.last_record_date), cls: "mono" },
+      { key: "next_request_at", label: "次回依頼", get: r => d10(r.next_request_at), cls: "mono" },
+      { key: "next_action", label: "次の一手", get: r => r.next_action },
+      { key: "next_due", label: "期日", get: r => d10(r.next_due), cls: "mono" },
+      { key: "data_note", label: "判定の理由", get: r => r.data_note, wrap: true },
+    );
+    if (privateMode) c.push({ key: "response_note", label: "備考(返信)", get: r => r.response_note, wrap: true });
+    return c;
+  }
+  function filtered() {
+    const st = $("#f-state").value, ds = $("#f-ds").value, s2 = $("#f-st").value, q = $("#f-q").value.trim().toLowerCase();
+    let out = rows.filter(r => (!st || r.state === st) && (!ds || r.data_status === ds) && (!s2 || r.status === s2) && (!q || [r.name, r.to_addr, r.response_note, r.data_note, r.next_note, r.source_id].some(v => String(v || "").toLowerCase().includes(q))));
+    out.sort((a, b) => { const va = a[sortKey], vb = b[sortKey]; const na = va == null ? "" : va, nb = vb == null ? "" : vb; const c = typeof na === "number" && typeof nb === "number" ? na - nb : String(na).localeCompare(String(nb), "ja"); return sortAsc ? c : -c; });
+    return out;
+  }
+  function renderTable() {
+    const cols = columns(); const list = filtered();
+    $("#ledger thead").innerHTML = `<tr>${cols.map(c => `<th data-k="${c.key}" class="${sortKey === c.key ? "sorted" + (sortAsc ? " asc" : "") : ""}">${esc(c.label)}</th>`).join("")}</tr>`;
+    $("#ledger tbody").innerHTML = list.map(r => `<tr>${cols.map(c => { const v = c.get(r); if (c.pill) return `<td><span class="pill ${DS_CLASS[v] || ""}">${esc(v)}</span></td>`; return `<td class="${c.cls || ""}${c.wrap ? " wrap" : ""}" ${c.wrap && v ? `title="${esc(v)}"` : ""}>${esc(v ?? "")}</td>`; }).join("")}</tr>`).join("");
+    $("#f-n").textContent = `${list.length} / ${rows.length} 行`;
+    $("#ledger thead").querySelectorAll("th").forEach(th => th.onclick = () => { const k = th.dataset.k; if (sortKey === k) sortAsc = !sortAsc; else { sortKey = k; sortAsc = true; } renderTable(); });
+  }
+
+  async function loadOthers() {
+    // 登録者の追跡(registrations + sessions + events 14 日)
+    try {
+      const since = new Date(Date.now() - 14 * 864e5).toISOString().slice(0, 10);
+      const [reg, ses, ev] = await Promise.all([getJSON("/signal/admin/registrations"), getJSON("/signal/admin/sessions"), getJSON("/signal/admin/events?since=" + since)]);
+      const accounts = (reg.d && reg.d.accounts) || []; const sessions = (ses.d && ses.d.sessions) || []; const faces = (ev.d && ev.d.faces) || []; const events = (ev.d && ev.d.events) || [];
+      const byMail = {}; for (const a of accounts) byMail[a.email] = { a, logins: 0, last: "", faces: {}, contact: 0 };
+      for (const s of sessions) { const b = byMail[s.email] || (byMail[s.email] = { a: { email: s.email, company: s.company }, logins: 0, last: "", faces: {}, contact: 0 }); b.logins++; if ((s.created || "") > b.last) b.last = s.created; }
+      for (const f of faces) { const b = byMail[f.email]; if (b) b.faces[f.face] = (b.faces[f.face] || 0) + f.n; }
+      for (const e of events) { const b = byMail[e.email]; if (b && e.type === "contact") b.contact++; }
+      const list = Object.values(byMail).sort((x, y) => (y.last || y.a.created || "").localeCompare(x.last || x.a.created || ""));
+      $("#reg thead").innerHTML = `<tr><th>会社</th><th>氏名</th><th>役職</th><th>メール</th><th>状態</th><th>登録</th><th>ログイン回数</th><th>最終ログイン</th><th>面の閲覧(14 日)</th><th>相談</th></tr>`;
+      $("#reg tbody").innerHTML = list.length ? list.map(b => `<tr><td>${esc(b.a.company)}</td><td>${esc(b.a.name)}</td><td>${esc(b.a.title)}</td><td class="mono">${esc(b.a.email)}</td><td><span class="pill ${b.a.status === "active" ? "good" : (b.a.status === "pending" ? "warn" : "")}">${esc(b.a.status || "-")}</span></td><td class="mono">${esc(d10(b.a.created))}</td><td class="mono">${b.logins}</td><td class="mono">${esc((b.last || "").replace("T", " ").slice(0, 16))}</td><td>${esc(Object.entries(b.faces).map(([k, n]) => `${k}×${n}`).join(" ") || "-")}</td><td class="mono">${b.contact || ""}</td></tr>`).join("") : `<tr><td colspan="10" class="small">登録者なし(または API 未応答: registrations HTTP ${reg.status})</td></tr>`;
+      $("#reg-meta").textContent = `${accounts.length} アカウント・${sessions.length} セッション(30 日)・面の閲覧記録は 14 日`;
+    } catch (e) { $("#reg tbody").innerHTML = `<tr><td class="small">読み込み失敗: ${esc(e.message)}</td></tr>`; }
+    // 取り込みの状態(health.json・cost.json は公開)
+    try {
+      const [h, c] = await Promise.all([getJSON("/cockpit/data/health.json"), getJSON("/cockpit/data/cost.json")]);
+      const checks = (h.d && h.d.checks) || {};
+      $("#health thead").innerHTML = `<tr><th>チェック</th><th>状態</th><th>最終実行</th><th>詳細</th></tr>`;
+      $("#health tbody").innerHTML = Object.entries(checks).map(([k, v]) => `<tr><td class="mono">${esc(k)}</td><td><span class="pill ${v.state === "OK" ? "good" : (v.state === "WARN" ? "warn" : "bad")}">${esc(v.state || "-")}</span></td><td class="mono">${esc((v.last_run_at || "").replace("T", " ").slice(0, 16))}</td><td class="wrap">${esc(v.detail || v.note || JSON.stringify(v).slice(0, 160))}</td></tr>`).join("") || `<tr><td class="small">health.json なし</td></tr>`;
+      $("#health-meta").textContent = h.d ? `overall ${h.d.overall || "-"}・生成 ${h.d.generated_at || "-"}` : "";
+      if (c.d) { const m = c.d.month || c.d; $("#cost").textContent = `API 費用(当月): $${Number(m.total_usd ?? c.d.total_usd ?? 0).toFixed(2)} / 枠 $${Number(m.budget_usd ?? c.d.budget_usd ?? 0).toFixed(0)}(cost.json 生成 ${c.d.generated_at || "-"})`; }
+    } catch (e) { $("#health tbody").innerHTML = `<tr><td class="small">読み込み失敗: ${esc(e.message)}</td></tr>`; }
+  }
+  boot();
+})();
+</script>
+</body>
+</html>

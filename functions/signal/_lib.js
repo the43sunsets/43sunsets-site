@@ -97,6 +97,14 @@ export async function isRosterAddress(env, email) {
 }
 export async function decisionSig(env, id) { return hmac(env.SIGNAL_SECRET, "decide:" + id); }
 export async function checkDecisionSig(env, id, sig) { return safeEq(String(sig || ""), await decisionSig(env, id)); }
+// 管理者の判定(2026-09-09・管理者ダッシュボード用)。Bearer(機械)か、ADMIN_EMAILS(既定 = hello@ と CEO の Gmail)のアドレスでログイン中のセッション(人)。
+// 戻り値: true(Bearer)/ メールアドレス(管理者セッション)/ null(未ログイン)/ false(ログイン中だが管理者でない)。開いている側に倒さない。
+export function adminEmails(env) { return String(env.ADMIN_EMAILS || "hello@43sunsets.com,kent.800@gmail.com").split(",").map(s => s.trim().toLowerCase()).filter(Boolean); }
+export async function adminOk(request, env) {
+  if (bearerOk(request, env)) return true;
+  const s = await currentSession(request, env); if (!s) return null;
+  return adminEmails(env).includes(String(s.email || "").toLowerCase()) ? s.email : false;
+}
 export function bearerOk(request, env) { const a = request.headers.get("authorization") || ""; return !!env.SIGNAL_SECRET && safeEq(a, "Bearer " + env.SIGNAL_SECRET); }
 
 // ── メール本文 ──

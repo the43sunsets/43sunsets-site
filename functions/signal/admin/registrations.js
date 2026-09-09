@@ -1,9 +1,9 @@
 // GET /signal/admin/registrations — 登録アカウントの一覧(Bearer SIGNAL_SECRET)。Mautic への転記・承認待ちの棚卸しに使う。
 // POST {"email":"…","status":"active|rejected"} で手動の承認/却下(承認リンクが 7 日で消えた後の救済)。承認時はリンクを送る。
-import { store, bearerOk, json, normEmail, issueToken, sendMail, loginMail, origin, APPROVED_TOKEN_SECONDS } from "../_lib.js";
+import { store, bearerOk, adminOk, json, normEmail, issueToken, sendMail, loginMail, origin, APPROVED_TOKEN_SECONDS } from "../_lib.js";
 
 export async function onRequestGet({ request, env }) {
-  if (!bearerOk(request, env)) return json({ ok: false, error: "unauthorized" }, 401);
+  if (!(await adminOk(request, env))) return json({ ok: false, error: "unauthorized" }, 401);   // 9/9: Bearer か管理者セッション(GET のみ)
   const kv = store(env); if (!kv) return json({ ok: false, error: "no store" }, 503);
   const accounts = []; let cursor;
   do { const p = await kv.list({ prefix: "sg:acct:", cursor, limit: 1000 }); for (const k of p.keys) { const v = await kv.get(k.name, "json"); if (v) accounts.push(v); } cursor = p.list_complete ? undefined : p.cursor; } while (cursor);
