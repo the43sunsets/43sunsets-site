@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-09-09T15:00:29+00:00",
+  "generated_at": "2026-09-09T18:14:25+00:00",
   "stale_days": 45,
   "window_days": 60,
   "seeded_plan_rows": 0,
@@ -36,33 +36,33 @@
    "munis": 505,
    "pop": 9552895,
    "by_status": {
-    "never": 197,
-    "fresh": 121,
+    "never": 196,
+    "fresh": 122,
     "n/a": 182,
     "stale": 5
    },
    "pop_by_status": {
-    "never": 1999113,
-    "fresh": 5153694,
+    "never": 1986598,
+    "fresh": 5166209,
     "n/a": 2395491,
     "stale": 4597
    },
    "pop_share_by_status": {
-    "never": 0.2093,
-    "fresh": 0.5395,
+    "never": 0.208,
+    "fresh": 0.5408,
     "n/a": 0.2508,
     "stale": 0.0005
    },
    "mfg_emp": 437226,
    "mfg_by_status": {
-    "never": 91108,
-    "fresh": 207982,
+    "never": 90660,
+    "fresh": 208429,
     "n/a": 137633,
     "stale": 503
    },
    "mfg_share_by_status": {
-    "never": 0.2084,
-    "fresh": 0.4757,
+    "never": 0.2074,
+    "fresh": 0.4767,
     "n/a": 0.3148,
     "stale": 0.0011
    }
@@ -720,16 +720,16 @@
    "pop": 175843,
    "by_status": {
     "n/a": 8,
-    "never": 13,
-    "fresh": 2
+    "never": 12,
+    "fresh": 3
    },
    "pop_by_status": {
     "n/a": 129035,
-    "never": 36871,
-    "fresh": 9937
+    "never": 24356,
+    "fresh": 22452
    },
-   "fresh_pop": 9937,
-   "fresh_pop_share": 0.0565
+   "fresh_pop": 22452,
+   "fresh_pop_share": 0.1277
   },
   "17001": {
    "state": "IL",
@@ -3657,6 +3657,40 @@
    "date_min": "2026-07-01",
    "date_max": "2026-08-31",
    "owner_coverage": 0,
+   "targets": 0,
+   "cadence": "daily",
+   "next_run_at": null,
+   "interrupted": false
+  },
+  {
+   "source_id": "SRC-118",
+   "state": "IL",
+   "jurisdiction": "Park Forest",
+   "label": "パークフォレスト村 建築許可(FOIA 回答・Excel 台帳・所有者/申請者/施工者/地番/金額あり)",
+   "last_run_status": "ok",
+   "last_run_at": "2026-09-09T17:46:19Z",
+   "last_run_note": "ingested from parkforest.json",
+   "signals": 217,
+   "date_min": "2026-07-01",
+   "date_max": "2026-08-31",
+   "owner_coverage": 217,
+   "targets": 0,
+   "cadence": "daily",
+   "next_run_at": null,
+   "interrupted": false
+  },
+  {
+   "source_id": "SRC-119",
+   "state": "IL",
+   "jurisdiction": "Rantoul",
+   "label": "ラントゥール村 建築許可(FOIA 回答・スキャン PDF 30 頁を AI 画像読みで転記)",
+   "last_run_status": "ok",
+   "last_run_at": "2026-09-09T18:14:03Z",
+   "last_run_note": "ingested from rantoul.json",
+   "signals": 169,
+   "date_min": "2026-07-01",
+   "date_max": "2026-08-31",
+   "owner_coverage": 164,
    "targets": 0,
    "cadence": "daily",
    "next_run_at": null,
@@ -7588,11 +7622,11 @@
    "program": "foia",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": "2026-09-03T19:59Z",
+   "last_fetch_at": "2026-09-09T15:21Z",
    "last_record_date": null,
    "records_60d": 0,
    "status": "never",
-   "reason": "FOIA acked",
+   "reason": "FOIA redirect_form",
    "county_fips": "17163",
    "platform": "none-found",
    "access": "unknown"
@@ -13245,14 +13279,14 @@
    "state": "IL",
    "name": "Park Forest village",
    "population": 20898,
-   "route": "backstop",
-   "method": "curl",
-   "program": "SRC-021",
+   "route": "source",
+   "method": "foia",
+   "program": "SRC-118",
    "cadence_days": 31,
-   "next_due_at": null,
-   "last_fetch_at": "2026-09-09T07:03:15Z",
-   "last_record_date": "2026-07-31",
-   "records_60d": 61,
+   "next_due_at": "2026-10-01",
+   "last_fetch_at": "2026-09-09T17:46:19Z",
+   "last_record_date": "2026-08-31",
+   "records_60d": 183,
    "status": "fresh",
    "reason": "",
    "county_fips": "17031",
@@ -13720,16 +13754,16 @@
    "state": "IL",
    "name": "Rantoul village",
    "population": 12515,
-   "route": "foia",
-   "method": "email",
-   "program": "foia",
+   "route": "source",
+   "method": "foia",
+   "program": "SRC-119",
    "cadence_days": 31,
    "next_due_at": "2026-10-01",
-   "last_fetch_at": null,
-   "last_record_date": null,
-   "records_60d": 0,
-   "status": "never",
-   "reason": "FOIA sent",
+   "last_fetch_at": "2026-09-09T18:14:03Z",
+   "last_record_date": "2026-08-31",
+   "records_60d": 140,
+   "status": "fresh",
+   "reason": "",
    "county_fips": "17019",
    "platform": "none-found",
    "access": "unknown"
