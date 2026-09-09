@@ -14,8 +14,8 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 7084.0,
+"count": 2,
+"value_total": 13860.0,
 "latest": "2026-08-31",
 "items": [
 {
@@ -40,6 +40,30 @@
 "policy": "v1-2026-09-02-all",
 "batch": "session-043",
 "model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-49535",
+"date": "2026-07-07",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Shorewood",
+"address": "21220 Coventry Cr",
+"permit_no": "26-0660",
+"permit_type": null,
+"value": 6776.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Shorewood 21220 Coventry Cr に屋根置き太陽光パネル(22 枚)を設置 $6,776。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "(22) Solar Panels - Roof",
+"source_id": "SRC-117",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_018s9H8SdLSq6gwdHZKrG2qX",
+"model": "claude-sonnet-5 (batch api v1)"
 }
 }
 ]
@@ -74,8 +98,15 @@
 "title": "建設許可(Schiller Park): 未分類",
 "ref": "S-14242",
 "summary": "Schiller Park 4249 Wesley Ter の既存住宅屋根に太陽光10.12kW・パネル23枚とテスラ蓄電池を設置 $7.08k(所有名義は開発業者LLC)。"
+},
+{
+"date": "2026-07-07",
+"face": "permits",
+"title": "建設許可(Shorewood): 未分類",
+"ref": "S-49535",
+"summary": "Shorewood 21220 Coventry Cr に屋根置き太陽光パネル(22 枚)を設置 $6,776。"
 }
 ],
-"generated_at": "2026-09-09T15:00:25+00:00",
+"generated_at": "2026-09-09T21:00:14+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

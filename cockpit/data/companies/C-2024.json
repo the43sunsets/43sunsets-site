@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 4000.0,
-"latest": "2026-07-07",
+"count": 2,
+"value_total": 9000.0,
+"latest": "2026-08-18",
 "items": [
+{
+"id": "S-48884",
+"date": "2026-08-18",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Bedford Park",
+"address": "6833 w 75th Street",
+"permit_no": "11230",
+"permit_type": null,
+"value": 5000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Bedford Park 6833 W 75th Street の FedEx 拠点でチャンネル文字看板の交換 $5,000。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Replace channel letters Fedex / [issued by Cook County Building & Zoning for Bedford Park]",
+"source_id": "SRC-105",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_018s9H8SdLSq6gwdHZKrG2qX",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-3138",
 "date": "2026-07-07",
@@ -69,6 +93,13 @@
 },
 "timeline": [
 {
+"date": "2026-08-18",
+"face": "permits",
+"title": "建設許可(Bedford Park): 未分類",
+"ref": "S-48884",
+"summary": "Bedford Park 6833 W 75th Street の FedEx 拠点でチャンネル文字看板の交換 $5,000。"
+},
+{
 "date": "2026-07-07",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -76,6 +107,6 @@
 "summary": "Chicago 1315 E 57th St でFedEx向け照明付き壁面サイン(北面・62平方フィート)設置 $4.0k。"
 }
 ],
-"generated_at": "2026-09-09T15:00:25+00:00",
+"generated_at": "2026-09-09T21:00:14+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

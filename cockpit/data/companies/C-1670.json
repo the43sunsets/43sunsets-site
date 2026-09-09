@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 10500.0,
-"latest": "2026-07-16",
+"count": 2,
+"value_total": 21000.0,
+"latest": "2026-07-20",
 "items": [
+{
+"id": "S-49611",
+"date": "2026-07-20",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Shorewood",
+"address": "103 Sarah Ave",
+"permit_no": "26-0914",
+"permit_type": null,
+"value": 10500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Shorewood 103 Sarah Ave での屋根の全面葺き替え工事 $10,500。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Tear Off and Re-roof - Tear Off and Re-roof",
+"source_id": "SRC-117",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_018s9H8SdLSq6gwdHZKrG2qX",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-12574",
 "date": "2026-07-16",
@@ -69,6 +93,13 @@
 },
 "timeline": [
 {
+"date": "2026-07-20",
+"face": "permits",
+"title": "建設許可(Shorewood): 未分類",
+"ref": "S-49611",
+"summary": "Shorewood 103 Sarah Ave での屋根の全面葺き替え工事 $10,500。"
+},
+{
 "date": "2026-07-16",
 "face": "permits",
 "title": "建設許可(Orland Park): 未分類",
@@ -76,6 +107,6 @@
 "summary": "Orland Park 15536 CATALINA CT, ORLAND PARK, IL 60462 で住宅・付属車庫の屋根葺き替え $10.5k。所有者/申請者: OPTIMUM ROOFING, INC。"
 }
 ],
-"generated_at": "2026-09-09T15:00:25+00:00",
+"generated_at": "2026-09-09T21:00:14+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

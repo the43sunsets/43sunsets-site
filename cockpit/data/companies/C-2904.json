@@ -14,10 +14,58 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 5810.0,
-"latest": "2026-06-29",
+"count": 3,
+"value_total": 18030.0,
+"latest": "2026-08-26",
 "items": [
+{
+"id": "S-49812",
+"date": "2026-08-26",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Shorewood",
+"address": "1810 Hunter Dr",
+"permit_no": "26-1086",
+"permit_type": null,
+"value": 6120.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Shorewood 1810 Hunter Dr の裏庭にフェンス設置(6フィート)、コンクリートカラー3基・アスファルト施工 $6,120。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "6' Fence - Rear Yard Install (3) Concrete Collars - Asphalt",
+"source_id": "SRC-117",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_018s9H8SdLSq6gwdHZKrG2qX",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-49529",
+"date": "2026-07-07",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Shorewood",
+"address": "24801 Jensen St",
+"permit_no": "26-0837",
+"permit_type": null,
+"value": 6100.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Shorewood 24801 Jensen St で裏庭にフェンス(5'・6')を設置 $6,100。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "5' & 6' Fence - Rear Yard",
+"source_id": "SRC-117",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_018s9H8SdLSq6gwdHZKrG2qX",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-22815",
 "date": "2026-06-29",
@@ -69,6 +117,20 @@
 },
 "timeline": [
 {
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Shorewood): 未分類",
+"ref": "S-49812",
+"summary": "Shorewood 1810 Hunter Dr の裏庭にフェンス設置(6フィート)、コンクリートカラー3基・アスファルト施工 $6,120。"
+},
+{
+"date": "2026-07-07",
+"face": "permits",
+"title": "建設許可(Shorewood): 未分類",
+"ref": "S-49529",
+"summary": "Shorewood 24801 Jensen St で裏庭にフェンス(5'・6')を設置 $6,100。"
+},
+{
 "date": "2026-06-29",
 "face": "permits",
 "title": "建設許可(Geneva): 未分類",
@@ -76,6 +138,6 @@
 "summary": "Geneva 3255 Hillcrest Rd でフェンスの工事(許可種別: Fence-Res - Fence Residential)$5.8k。申請者/所有者は Cedar Mountain Fence。"
 }
 ],
-"generated_at": "2026-09-09T15:00:25+00:00",
+"generated_at": "2026-09-09T21:00:14+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
