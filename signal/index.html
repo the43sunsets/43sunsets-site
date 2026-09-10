@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Signal by 43 Sunsets — 中西部で、次に動く会社が先に分かる</title>
+<title>Signal by 43 Sunsets — 中西部で、次に動く会社が先にわかる</title>
 <meta name="description" content="中西部で、次に動く会社が先に分かる。米国中西部 5 州(IL・IN・MI・OH・WI)の製造業について、工場を増やす・設備に投資する・人を採用する動きを公的な記録(建設許可・動産担保登記・政府補助金・求人)から毎日調べ、会社ごとに理由つきで並べます。">
 <link rel="canonical" href="https://43sunsets.com/signal/">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Signal by 43 Sunsets — 中西部で、次に動く会社が先に分かる">
+<meta property="og:title" content="Signal by 43 Sunsets — 中西部で、次に動く会社が先にわかる">
 <meta property="og:url" content="https://43sunsets.com/signal/">
 <meta property="og:image" content="https://43sunsets.com/assets/og-signal.png?v=20260907b">
 <meta property="og:image:width" content="1200">
@@ -49,7 +49,12 @@ main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
 .lede .brandline{display:flex; align-items:center; gap:12px; margin-bottom:4px;} .lede .pmark{width:44px; height:44px; flex:none;} .lede .pby{align-self:flex-end; margin-bottom:6px;} .lede .pname{font-family:var(--serif); font-size:34px; font-weight:700; letter-spacing:.01em; color:var(--ink);} .lede .pby{font-family:var(--mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--sub);}
 .lede .tagline{margin:0 0 14px; font-size:14px; letter-spacing:.02em; color:var(--sub);}
 .lede h1{margin:0; font-family:var(--serif); font-size:clamp(22px, 2.55vw, 40px); line-height:1.32; font-weight:800; letter-spacing:.005em; color:var(--ink); white-space:nowrap;}   /* 9/5 CEO: 1 行に固定(幅に応じて縮む) */
-.lede p{margin:0; font-size:15.5px; line-height:1.75; color:var(--sub); max-width:760px;} .lede p.lead{font-family:var(--serif); font-size:clamp(17px, 1.5vw, 21px); font-weight:700; color:var(--ink); letter-spacing:.02em; line-height:1.5; margin-top:1em;}  /* 9/7 CEO: 見出しとの間に 1 行ぶんの余白 */ .lede p b{color:var(--ink); font-weight:700;} .lede p.srcs{font-size:12.5px; color:var(--sub); letter-spacing:.02em;} .lede{gap:10px;}
+.lede p{margin:0; font-size:15.5px; line-height:1.75; color:var(--sub); max-width:760px;}
+.lede p.srcs{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;} .lede .src{display:inline-flex; align-items:center; gap:7px; font-size:13px; color:var(--ink-2); border:1px solid var(--line); border-radius:999px; padding:3px 11px 3px 9px; background:var(--card);}
+.lede .src::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--face-c, var(--sub)); box-shadow:0 0 0 2px color-mix(in srgb, var(--face-c, var(--sub)) 22%, transparent);}
+.lede .src[data-face="permits"]{--face-c:var(--face-permits);} .lede .src[data-face="ucc"]{--face-c:var(--face-ucc);} .lede .src[data-face="subsidies"]{--face-c:var(--face-subsidies);} .lede .src[data-face="procurement"]{--face-c:var(--face-procurement); color:var(--mute); border-style:dashed; background:transparent;} .lede .src[data-face="hiring"]{--face-c:var(--face-hiring);}
+.lede p.hero-cta{margin-top:10px;} .lede .btn.primary{background:var(--ink); color:var(--paper); font-size:15px; padding:12px 20px;} .lede .btn.primary:hover{background:var(--accent); border-color:var(--accent); color:#fff;}
+.lede p.hero-meta{font-size:12.5px; letter-spacing:.06em; color:var(--sub); margin-top:2px;} .lede p.lead{font-family:var(--serif); font-size:clamp(17px, 1.5vw, 21px); font-weight:700; color:var(--ink); letter-spacing:.02em; line-height:1.5; margin-top:1em;}  /* 9/7 CEO: 見出しとの間に 1 行ぶんの余白 */ .lede p b{color:var(--ink); font-weight:700;} .lede p.srcs{font-size:12.5px; color:var(--sub); letter-spacing:.02em;} .lede{gap:10px;}
 .dateline{display:flex; flex-direction:column; align-items:flex-start; gap:8px; margin-top:4px;} .dateline .pills{display:flex; align-items:center; gap:10px; flex-wrap:wrap;} .hb-link{text-decoration:none; color:inherit;} .hb-link .hb{cursor:pointer;} .hb-link:hover .hb{border-color:var(--accent); box-shadow:0 0 0 2px rgba(47,93,138,.12);} .dateline .ed{font-family:var(--mono); font-size:12px; color:var(--ink); font-weight:600;}
 .hb{display:inline-flex; align-items:center; gap:7px; border:1px solid var(--line); border-radius:999px; padding:4px 11px 4px 8px; font-size:11.5px; color:var(--sub); background:var(--pill); white-space:nowrap; cursor:help;}
 .hb .hb-k{color:var(--ink);} .hb .hb-lbl{font-weight:700; color:var(--ink); letter-spacing:.04em;} .hb .hb-sep{margin:0 6px; color:var(--line);} .hb .mono{font-family:var(--mono);}
@@ -119,14 +124,14 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 .cta .mail{font-family:var(--mono); font-size:12.5px; color:var(--sub);}
 @media (max-width:820px){ .cta{grid-template-columns:1fr; padding:20px 18px;} }
 </style>
-<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260909a">
+<link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260909b">
 <script src="/signal/assets/favi.js?v=20260907t"></script>
 <script src="/signal/assets/nav.js?v=20260909f" defer></script>
 </head>
 <body>
 <header class="site-head">
   <a class="logo" href="/signal/" aria-label="Signal by 43 Sunsets"><svg class="lockup" viewBox="0 8 300 62" role="img" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-width="3.2"><path d="M14 40 A22 22 0 0 1 58 40" stroke="var(--accent)"/><path d="M23 40 A13 13 0 0 1 49 40" stroke="var(--accent)" opacity=".62"/><path d="M31 40 A5 5 0 0 1 41 40" stroke="var(--accent)" opacity=".38"/></g><path d="M10 46 H172" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" fill="none"/><text x="70" y="41" font-family="Shippori Mincho, serif" font-weight="700" font-size="36" fill="var(--ink)">Signal</text><text x="172" y="64" text-anchor="end" font-family="Shippori Mincho, serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="var(--sub)">by 43 Sunsets</text></svg></a>
-  <nav class="cnav" aria-label="ページ"><a href="/signal/" aria-current="page">トップ</a><span class="grp" role="group" aria-label="シグナル"><span class="gk" aria-hidden="true">Signal</span><a href="/signal/permits/">建設許可</a><a href="/signal/ucc/">UCC</a><a href="/signal/subsidies/">政府補助金</a><a class="soon" aria-disabled="true" tabindex="-1" title="政府調達(米国陸軍などとの契約案件)— 準備中">政府調達<span class="tag">準備中</span></a><a href="/signal/hiring/">企業採用状況</a><a href="/signal/macro/">景気・ニュース</a></span><a href="/signal/freshness/">データの範囲と鮮度</a></nav>
+  <nav class="cnav" aria-label="ページ"><a href="/signal/" aria-current="page">トップ</a><span class="grp" role="group" aria-label="シグナルの面"><a class="sig" data-face="permits" href="/signal/permits/">建設許可</a><a class="sig" data-face="ucc" href="/signal/ucc/">UCC</a><a class="sig" data-face="subsidies" href="/signal/subsidies/">政府補助金</a><a class="sig soon" data-face="procurement" aria-disabled="true" tabindex="-1" title="政府調達(米国陸軍などとの契約案件)— 近日">政府調達</a><a class="sig" data-face="hiring" href="/signal/hiring/">企業採用状況</a><a class="sig" data-face="macro" href="/signal/macro/">景気・ニュース</a></span><a href="/signal/freshness/">データの範囲と鮮度</a></nav>
   <div class="hdr-right"><a class="corp" href="/" title="43 Sunsets(会社サイト)">43 Sunsets ↗</a><button class="theme-btn" id="themebtn" type="button" aria-label="配色を切り替え">🌙 ダーク</button><span class="beta">BETA</span></div>
 </header>
 <script>
@@ -147,13 +152,12 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
 <section class="hero" aria-label="Signal の紹介">
   <div class="hero-in">
   <div class="lede">
-    <h1>中西部で、次に動く会社が先に分かる。</h1>
-    <p class="lead">工場を増やす。設備を買う。人を採る。</p>
-    <p>そんな製造業の動きを毎日調べ、今、営業する理由がある会社を見つけます。</p>
-    <p><b>「どの会社に」「何が起きていて」「なぜ今、声をかけるのか」</b>まで分かるので、営業先を探す時間を減らせます。</p>
-    <p>対象は、イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシンの 5 州。</p>
-    <p>公開情報で確認できた企業の動きと、そこから考えられる営業のヒントは分けて表示します。</p>
-    <p class="srcs">情報源: 建設許可、動産担保登記(UCC)、政府補助金、求人情報。</p>
+    <h1>中西部で、次に動く会社が先にわかる。</h1>
+    <p class="lead">工場を増やす。設備を買う。人を採る。大型案件を受注する。</p>
+    <p>その兆しを公開情報から毎日拾い、<br><b>「今、営業する理由がある会社」</b>を見つけます。</p>
+    <p class="srcs" aria-label="シグナルの種類"><span class="src" data-face="permits">建設許可</span><span class="src" data-face="ucc">UCC</span><span class="src" data-face="subsidies">政府補助金</span><span class="src" data-face="procurement">政府調達</span><span class="src" data-face="hiring">採用</span></p>
+    <p class="hero-cta"><a class="btn primary" href="/signal/permits/">無料で Signal を見る →</a></p>
+    <p class="hero-meta mono">IL・IN・MI・OH・WI｜毎日更新</p>
   </div>
   </div>
 </section>

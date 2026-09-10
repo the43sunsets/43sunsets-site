@@ -217,18 +217,25 @@ aside.sg-locked{ opacity:.45; filter:blur(1.5px); pointer-events:none; user-sele
 .ksec.sg-lock .sg-lock-note a{ background:var(--card); border:1px solid var(--line); border-radius:6px; padding:10px 16px; font-size:13.5px; color:var(--ink); text-decoration:none; box-shadow:0 8px 24px -14px rgba(0,0,0,.35); }
 .ksec.sg-lock .sg-lock-note a:hover{ border-color:var(--ink); }
 
-/* ── 2026-09-09 CEO: ヘッダーの区分 — シグナルの面(建設許可・UCC・政府補助金・政府調達[準備中]・企業採用状況・景気・ニュース)を一群として囲み、トップ/データの範囲と鮮度/登録/ログインと分ける ── */
-.cnav .grp{ display:inline-flex; align-items:center; gap:16px; padding:3px 13px 3px 10px; margin:0 2px; border:1px solid var(--line); border-radius:999px; background:var(--chip-bg); }
-.cnav .gk{ font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:9.5px; font-weight:600; letter-spacing:.2em; color:var(--accent); text-transform:uppercase; margin-right:2px; user-select:none; }
-.cnav a.soon{ color:var(--mute); pointer-events:none; cursor:default; }
-.cnav a.soon .tag{ display:inline-block; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:9px; letter-spacing:.06em; color:var(--mute); border:1px solid var(--line); border-radius:3px; padding:0 4px; margin-left:5px; vertical-align:1px; }
-.site-head .cnav a.soon::after{ display:none; }
-@media (max-width:1180px){ .cnav{ gap:14px; } .cnav .grp{ gap:12px; padding:3px 10px 3px 9px; } }
+/* ── 2026-09-09 CEO: ヘッダーの区分 — シグナルの面は「色つきの点+ピル」で一つずつ独立して見せ、左右の細い線で一群にする(文字で括らない)。
+   政府調達は非アクティブ(薄色・破線・押せない)。色は面ごと(建設許可 = 青・UCC = 緑・政府補助金 = 琥珀・政府調達 = 灰・採用 = 赤・景気 = 紫)。 ── */
+:root{ --face-permits:#2F5D8A; --face-ucc:#2E6E4E; --face-subsidies:#B8862B; --face-procurement:#9AA1A9; --face-hiring:#B54434; --face-macro:#6B5B95; }
+:root[data-theme="dark"]{ --face-permits:#8FB4DA; --face-ucc:#7CC49C; --face-subsidies:#D8A96B; --face-procurement:#6F7882; --face-hiring:#D07360; --face-macro:#A99BD1; }
+.cnav .grp{ display:inline-flex; align-items:center; gap:7px; padding:0 14px; margin:0 2px; border-left:1px solid var(--line); border-right:1px solid var(--line); }
+.site-head .cnav a.sig{ display:inline-flex; align-items:center; gap:7px; padding:3px 11px 3px 9px; border:1px solid var(--line); border-radius:999px; background:var(--card); color:var(--ink-2); line-height:1.5; }
+.site-head .cnav a.sig::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--face-c, var(--sub)); box-shadow:0 0 0 2px color-mix(in srgb, var(--face-c, var(--sub)) 22%, transparent); flex:none; }
+.site-head .cnav a.sig[data-face="permits"]{ --face-c:var(--face-permits); } .site-head .cnav a.sig[data-face="ucc"]{ --face-c:var(--face-ucc); }
+.site-head .cnav a.sig[data-face="subsidies"]{ --face-c:var(--face-subsidies); } .site-head .cnav a.sig[data-face="procurement"]{ --face-c:var(--face-procurement); }
+.site-head .cnav a.sig[data-face="hiring"]{ --face-c:var(--face-hiring); } .site-head .cnav a.sig[data-face="macro"]{ --face-c:var(--face-macro); }
+.site-head .cnav a.sig:hover{ border-color:var(--face-c, var(--accent)); color:var(--ink); transform:translateY(-1px); }
+.site-head .cnav a.sig::after{ display:none; }
+.site-head .cnav a.sig[aria-current="page"]{ border-color:var(--face-c, var(--ink)); background:color-mix(in srgb, var(--face-c, var(--ink)) 10%, var(--card)); color:var(--ink); font-weight:700; }
+.site-head .cnav a.sig.soon{ color:var(--mute); border-style:dashed; background:transparent; pointer-events:none; cursor:default; }
+.site-head .cnav a.sig.soon::before{ background:var(--face-procurement); box-shadow:none; opacity:.6; }
 @media (max-width:1180px){
-  .site-head.nav-open .cnav .grp{ display:flex; flex-direction:column; align-items:stretch; gap:0; padding:8px 10px 4px; margin:6px 0; border-radius:10px; }
-  .site-head.nav-open .cnav .gk{ padding:2px 4px 6px; font-size:10px; }
-  .site-head.nav-open .cnav .grp a:last-child{ border-bottom:0; }
-  .site-head.nav-open .cnav a.soon{ color:var(--mute); }
+  .site-head.nav-open .cnav .grp{ display:flex; flex-direction:column; align-items:stretch; gap:6px; padding:8px 0 8px; margin:6px 0; border:0; border-top:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft); }
+  .site-head.nav-open .cnav a.sig{ display:inline-flex; padding:9px 12px; border-bottom:1px solid var(--line); border-radius:999px; font-size:14.5px; }
+  .site-head.nav-open .cnav a.sig[aria-current="page"]{ border-bottom:1px solid var(--face-c, var(--ink)); }
 }
 /* 1181〜1760px(ノート PC〜小さめの外部モニタ): 1 段に収まらない(必要幅 ≈ 1,750px)ので導線を 2 段目に回す。ロゴと右側(登録・ログイン・配色)は 1 段目のまま */
 @media (max-width:1760px) and (min-width:1181px){
