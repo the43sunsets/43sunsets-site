@@ -47,3 +47,39 @@
     var sub = document.getElementById('hitsub'); if (sub) sub.textContent = '(見本 ' + (info.sample || '') + ' 件 / 全 ' + (info.total != null ? info.total.toLocaleString() : '—') + ' 件)';
   };
 })();
+
+
+/* ── 右下のプロモ(2026-09-09 CEO): ヘッダーの「ソリューション」を外し、Signal 操作中に小さなカード広告で /signal/solutions/ へ誘導。
+   画像つき・× で閉じる・閉じたら 7 日間出さない(localStorage "sg-promo-solutions")・solutions/admin/login/join では出さない・表示は 6 秒後。?promo=1 で即時(検証用)。 */
+(function(){
+  var path = location.pathname;
+  if(/^\/signal\/(solutions|admin|login|join)\//.test(path)) return;
+  var K = "sg-promo-solutions"; var force = /[?&]promo=1/.test(location.search);
+  try{ var d = localStorage.getItem(K); if(d && !force && (Date.now() - parseInt(d, 10)) < 7*864e5) return; }catch(e){}
+  var css = document.createElement("style"); css.textContent =
+    ".sg-promo{position:fixed !important;top:auto !important;left:auto !important;right:18px;bottom:18px;z-index:9000;width:300px;height:auto !important;max-height:none !important;margin:0;padding:0;max-width:calc(100vw - 24px);background:var(--card,#fff);color:var(--ink,#1F252C);border:1px solid var(--line,#DCDFDB);border-radius:10px;box-shadow:0 12px 36px rgba(0,0,0,.18);overflow:hidden;font-family:'Zen Kaku Gothic New',-apple-system,'Hiragino Kaku Gothic ProN',Meiryo,sans-serif;transform:translateY(24px);opacity:0;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .45s}" +
+    ".sg-promo.in{transform:none;opacity:1}" +
+    ".sg-promo .pimg{display:block;width:100%;height:132px;object-fit:cover;object-position:center;background:#EEF0EC}" +
+    ".sg-promo .pbody{padding:12px 14px 14px}" +
+    ".sg-promo .pk{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.16em;color:var(--accent,#2F5D8A);text-transform:uppercase;margin:0 0 4px}" +
+    ".sg-promo h3{font-family:'Shippori Mincho',serif;font-size:16.5px;line-height:1.45;margin:0 0 6px;letter-spacing:.01em}" +
+    ".sg-promo p{font-size:12.5px;line-height:1.7;color:var(--sub,#6B737C);margin:0 0 10px}" +
+    ".sg-promo .pcta{display:inline-block;font-size:12.5px;font-weight:700;color:#fff;background:var(--ink,#1F252C);border-radius:5px;padding:7px 12px;text-decoration:none}" +
+    ".sg-promo .pcta:hover{background:var(--accent,#2F5D8A)}" +
+    ".sg-promo .px{position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#1F252C;font-size:15px;line-height:26px;text-align:center;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.25)}" +
+    ".sg-promo .px:hover{background:#fff}" +
+    "@media (max-width:600px){.sg-promo{right:12px;left:12px;bottom:12px;width:auto}.sg-promo .pimg{height:110px}}";
+  var el = document.createElement("div"); el.className = "sg-promo";   /* aside だと各面の絞り込み欄の CSS(高さ・sticky)を継承して崩れる(9/9 実測) */ el.setAttribute("role", "complementary"); el.setAttribute("aria-label", "Signal のカスタマイズのご案内");
+  el.innerHTML = '<button class="px" type="button" aria-label="閉じる" title="閉じる">✕</button>' +
+    '<img class="pimg" src="/assets/promo-solutions.jpg" alt="" width="640" height="360" loading="eager" decoding="async">' +
+    '<div class="pbody"><div class="pk">Signal をカスタマイズしませんか?</div>' +
+    '<h3>御社の条件で、次に動く会社だけを毎週。</h3>' +
+    '<p>気になる地域・設備・取引先に絞ったシグナルを、御社の営業の型に合わせてお届けします。まずは 30 分の相談から。</p>' +
+    '<a class="pcta" href="/signal/solutions/?utm_source=signal&utm_medium=promo&utm_campaign=solutions">ソリューションを見る →</a></div>';
+  var close = function(){ try{ localStorage.setItem(K, String(Date.now())); }catch(e){} el.classList.remove("in"); setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 450); };
+  el.querySelector(".px").addEventListener("click", close);
+  el.querySelector(".pcta").addEventListener("click", function(){ try{ localStorage.setItem(K, String(Date.now())); }catch(e){} });
+  var show = function(){ document.head.appendChild(css); document.body.appendChild(el); setTimeout(function(){ el.classList.add("in"); }, 40); };   /* rAF は非表示タブで止まるので setTimeout */
+  var start = function(){ setTimeout(show, force ? 300 : 6000); };
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
+})();
