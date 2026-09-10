@@ -50,15 +50,15 @@
 
 
 /* ── 右下のプロモ(2026-09-09 CEO): ヘッダーの「ソリューション」を外し、Signal 操作中に小さなカード広告で /signal/solutions/ へ誘導。
-   画像つき・× で閉じる・閉じたらその閲覧の間だけ出さない(sessionStorage)・CTA を押したら 1 日休む・solutions/admin/login/join では出さない・表示は 6 秒後。?promo=1 で即時(検証用)。 */
+   画像つき・× で閉じる・閉じたらその閲覧の間だけ出さない(sessionStorage)・それ以外の抑制なし・solutions/admin/login/join では出さない・表示は 6 秒後。?promo=1 で即時(検証用)。 */
 (function(){
   var path = location.pathname;
   if(/^\/signal\/(solutions|admin|login|join)\//.test(path)) return;
   /* 9/9 CEO: 7 日の抑制は長すぎる(操作の最中に「カスタマイズできる」と気づいてもらうのが目的)。× で閉じたら、その閲覧(タブ)の間だけ出さない = sessionStorage。
-     次に来たときはまた出る。CTA を押した(= ソリューションを見た)場合だけ 1 日休む。 */
+     次に来たときはまた出る。CTA を押しても休まない(9/9 CEO: 抑制のロジックは持たない)。 */
   var K = "sg-promo-solutions"; var force = /[?&]promo=1/.test(location.search);
   try{ if(!force && sessionStorage.getItem(K + ":closed")) return; }catch(e){}
-  try{ var d = localStorage.getItem(K + ":cta"); if(d && !force && (Date.now() - parseInt(d, 10)) < 864e5) return; }catch(e){}
+
   var css = document.createElement("style"); css.textContent =
     ".sg-promo{position:fixed !important;top:auto !important;left:auto !important;right:18px;bottom:18px;z-index:9000;width:300px;height:auto !important;max-height:none !important;margin:0;padding:0;max-width:calc(100vw - 24px);background:var(--card,#fff);color:var(--ink,#1F252C);border:1px solid var(--line,#DCDFDB);border-radius:10px;box-shadow:0 12px 36px rgba(0,0,0,.18);overflow:hidden;font-family:'Zen Kaku Gothic New',-apple-system,'Hiragino Kaku Gothic ProN',Meiryo,sans-serif;transform:translateY(24px);opacity:0;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .45s}" +
     ".sg-promo.in{transform:none;opacity:1}" +
@@ -81,7 +81,6 @@
     '<a class="pcta" href="/signal/solutions/?utm_source=signal&utm_medium=promo&utm_campaign=solutions">ソリューションを見る →</a></div>';
   var close = function(){ try{ sessionStorage.setItem(K + ":closed", "1"); }catch(e){} el.classList.remove("in"); setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 450); };
   el.querySelector(".px").addEventListener("click", close);
-  el.querySelector(".pcta").addEventListener("click", function(){ try{ localStorage.setItem(K + ":cta", String(Date.now())); }catch(e){} });
   var show = function(){ document.head.appendChild(css); document.body.appendChild(el); setTimeout(function(){ el.classList.add("in"); }, 40); };   /* rAF は非表示タブで止まるので setTimeout */
   var start = function(){ setTimeout(show, force ? 300 : 6000); };
   if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
