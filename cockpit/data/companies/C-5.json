@@ -14,10 +14,58 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 16,
-"value_total": 51295640.0,
-"latest": "2026-08-28",
+"count": 18,
+"value_total": 51365040.0,
+"latest": "2026-09-08",
 "items": [
+{
+"id": "S-50910",
+"date": "2026-09-08",
+"applied": "2026-07-27",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5939 S UNION AVE",
+"permit_no": "101086502",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 19500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 5939 S Union Ave の2階建て木造住宅を緊急解体 $19,500。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "EMERGENCY WRECK AND REMOVE A 2 STORY FRAME RESIDENCE",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_013Ym6tbx9DgjGi7sa8ECHVX",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-50964",
+"date": "2026-09-08",
+"applied": "2026-08-03",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2607 W LITHUANIAN PLAZA CT",
+"permit_no": "101086775",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 49900.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 市による2階建て組積造の多世帯住宅の緊急解体・撤去許可 $49,900。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "EMEERGENCY WRECK AND REMOVE A 2 STORY MASONRY MULTI UNIT RESIDENCE",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_013Ym6tbx9DgjGi7sa8ECHVX",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-6852",
 "date": "2026-08-28",
@@ -429,6 +477,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-08",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-50910",
+"summary": "Chicago 5939 S Union Ave の2階建て木造住宅を緊急解体 $19,500。"
+},
+{
+"date": "2026-09-08",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-50964",
+"summary": "Chicago 市による2階建て組積造の多世帯住宅の緊急解体・撤去許可 $49,900。"
+},
+{
 "date": "2026-08-28",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -541,6 +603,6 @@
 "summary": "Chicago 2255 E 103RD STでエレベーター・リフトの改修/部品交換 $18k(申請者: CITY OF CHICAGO)。"
 }
 ],
-"generated_at": "2026-09-10T12:30:38+00:00",
+"generated_at": "2026-09-10T21:00:22+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

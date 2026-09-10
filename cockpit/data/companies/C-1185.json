@@ -14,10 +14,58 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 46,
-"value_total": 296636.0,
-"latest": "2026-09-03",
+"count": 48,
+"value_total": 308986.0,
+"latest": "2026-09-08",
 "items": [
+{
+"id": "S-50907",
+"date": "2026-09-08",
+"applied": "2026-09-08",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "10140 S STATE ST",
+"permit_no": "B200510687",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 9500.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Chicago 10140 S State St で 200 アンペアの電気サービス切断装置新設(5 回路・コンセント5口)$9.5k の低額工事。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. NEW PERMANENT 200 AMP SERVICE DISCONNECTING MEANS WITH 5 CIRCUITS. RECEPTACLE OUTLETS: 5 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: BASEMENT/EXTERIOR.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_013Ym6tbx9DgjGi7sa8ECHVX",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-50940",
+"date": "2026-09-08",
+"applied": "2026-09-08",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "10140 S STATE ST",
+"permit_no": "B200510691",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 2850.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "10140 S State St の既存200A回路に5回路を増設する電気工事(コンセント5・照明0) $2,850。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. ADD 5 CIRCUITS TO EXISTING 200 AMP SERVICE DISCONNECTING MEANS. RECEPTACLE OUTLETS: 5 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: BASEMENT/EXTERIOR.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_013Ym6tbx9DgjGi7sa8ECHVX",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-26196",
 "date": "2026-09-03",
@@ -1149,6 +1197,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-08",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-50907",
+"summary": "Chicago 10140 S State St で 200 アンペアの電気サービス切断装置新設(5 回路・コンセント5口)$9.5k の低額工事。"
+},
+{
+"date": "2026-09-08",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-50940",
+"summary": "10140 S State St の既存200A回路に5回路を増設する電気工事(コンセント5・照明0) $2,850。"
+},
+{
 "date": "2026-09-03",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -1471,6 +1533,6 @@
 "summary": "Chicago 9600 S MORGAN ST の地下室で既存200Aサービスに5回路を追加 $2.5k。"
 }
 ],
-"generated_at": "2026-09-10T12:30:38+00:00",
+"generated_at": "2026-09-10T21:00:22+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
