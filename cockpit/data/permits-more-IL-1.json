@@ -1,5 +1,5 @@
 {
-"generated_at": "2026-09-10T08:09:57+00:00",
+"generated_at": "2026-09-10T12:30:35+00:00",
 "state": "IL",
 "part": 1,
 "parts": 3,
@@ -163,6 +163,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-51082",
+"state": "IL",
+"city": "Elmhurst・260 N ADDISON AVE ELMHURST IL 60126",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-09",
+"applied": "2026-09-09",
+"jp": false,
+"new": true,
+"summary": "Elmhurst 260 N Addison Ave の不動産売買譲渡印紙 $1.55M。",
+"infer": null,
+"note": "不動産売買(工事なし)。",
+"fact": {
+"src": "Elmhurst 建築許可(公開記録)",
+"ref": "許可 TS-010959-2026 Transfer Stamp",
+"value": 1550000.0,
+"verbatim": "9/9/26 please schedule sump inspection and upload sales contract\n9/9/26 UTILITY BILL OWED $373.99 / Transfer Stamp / Transfer Stamp",
+"gc": null,
+"pin": "0602205060",
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260910T123018Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-10T12:30:35+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "KESHET",
 "owner_kind": "課税台帳",
 "owner_is_spe": false,
@@ -252,6 +302,56 @@
 "batch": "msgbatch_018s9H8SdLSq6gwdHZKrG2qX",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-09T21:00:10+00:00"
+}
+},
+{
+"investor": {
+"name": "THE UNIVERSITY OF CHICAGO",
+"basis": "public",
+"label": "公共",
+"source": "permit_owner",
+"source_label": "許可記録(所有者欄)"
+},
+"parties": {
+"owner_of_record": "THE UNIVERSITY OF CHICAGO",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-50925",
+"state": "IL",
+"city": "Chicago・1313 E 60TH ST",
+"company": "THE UNIVERSITY OF CHICAGO",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-08",
+"applied": "2026-08-31",
+"jp": false,
+"new": true,
+"summary": "University of Chicago(1313 E 60th St)の外壁目地補修・組積補修工事 $1.4M(西・南・東立面、16,402 SQ FT)。",
+"infer": null,
+"note": "外装補修(大学施設の外壁工事)。",
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 B200509714 PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 1419783.0,
+"verbatim": "TUCKPOINTING AND UNIT MASONRY REPAIR / REPLACEMENT: 16402 SQ. FT., LINTEL QTY. 12, MAX. LENGTH 6. CONCRETE MASONRY REPAIR / REPLACEMNT: 30SQ. FT., EXCAVATION = . LOCATION: WEST SOUTH AND EAST ELEVATIO",
+"gc": null,
+"pin": "2014402001",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-49",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260910T123018Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-10T12:30:35+00:00"
 }
 },
 {
@@ -552,6 +652,56 @@
 "batch": "msgbatch_018s9H8SdLSq6gwdHZKrG2qX",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-09T21:00:10+00:00"
+}
+},
+{
+"investor": {
+"name": "TARGET CORPORATION",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "permit_owner",
+"source_label": "許可記録(所有者欄)"
+},
+"parties": {
+"owner_of_record": "TARGET CORPORATION",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "MORGAN HARBOUR CONSTRUCTION, LLC"
+},
+"id": "S-50917",
+"state": "IL",
+"city": "Chicago・3501 S PULASKI RD",
+"company": "TARGET CORPORATION",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "物流・EC",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-08",
+"applied": "2026-05-29",
+"jp": false,
+"new": true,
+"summary": "Target Corporation の既存1階建て倉庫(3501 S Pulaski Rd)内でラッキングシステム新設・床ストライピング・関連電気工事 $400k(S-1/B用途)。",
+"infer": "小規模な棚設置・内装工事であり新設倉庫や大規模拡張ではない(推論)。",
+"note": "既存倉庫の小改修。",
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 101083502 PERMIT - RENOVATION/ALTERATION",
+"value": 400000.0,
+"verbatim": "SPR 2019 CBRC: INTERIOR ALTERATIONS IN EXISTING 1-STORY WAREHOUSE TO BUILDOUT NEW RACKING SYSTEM, FLOOR STRIPING, AND ASSOCIATED ELECTRICAL WORK AS PER PLANS. (OCCUPANCY S-1 & B; TYPE 2A)**CERTIFIED C",
+"gc": "MORGAN HARBOUR CONSTRUCTION, LLC",
+"pin": "1635118002",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-74",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260910T123018Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-10T12:30:35+00:00"
 }
 },
 {
@@ -443352,156 +443502,6 @@
 "batch": "session-0903-003",
 "model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4",
 "generated_at": "2026-09-04T01:43:43+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-24066",
-"state": "IL",
-"city": "Elmwood Park・7934 BIRCHDALE AVE",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-07",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Elmwood Park 7934 BIRCHDALE AVE で空調工事($20.2k)。",
-"infer": null,
-"note": "空調設備(HVAC/furnace)。",
-"fact": {
-"src": "エルムウッドパーク村 建築許可(FOIA 回答・CSV・所有者欄なし)",
-"ref": "許可 261042 Hvac/Furnace",
-"value": 20236.0,
-"verbatim": "Hvac/Furnace / Out of Scope",
-"gc": null,
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-0903-003",
-"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4",
-"generated_at": "2026-09-04T01:43:43+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": "ZIAD ALSILWADI",
-"owner_kind": "登記名義",
-"owner_is_spe": false,
-"applicant": null,
-"gc": "A&S CONSTRUCTION"
-},
-"id": "S-5422",
-"state": "IL",
-"city": "Chicago・808 W 87TH ST",
-"company": "(個人名義・非掲載)",
-"entity_type": "individual",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-07",
-"applied": "2026-05-14",
-"jp": false,
-"new": false,
-"summary": "Chicago 808 W 87TH ST で既存レストランテナントスペースの内装改修 $20.0k。",
-"infer": null,
-"note": "商業(飲食店内装)。",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101083544 PERMIT - RENOVATION/ALTERATION",
-"value": 20000.0,
-"verbatim": "2019 CBC SELF CERT: INTERIOR RENOVATION OF AN EXISTING RESTAURANT TENANT SPACE WITHIN AN EXISTING ONE-STORY MULTI-TENANT COMMERCIAL BUILDING (TYPE II-B CONSTRUCTION, B-OCCUPANCY)",
-"gc": "A&S CONSTRUCTION",
-"pin": "2032432001",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-023",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:12+00:00"
-}
-},
-{
-"investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": "AMY GOUDSCHAAL",
-"gc": null
-},
-"id": "S-15897",
-"state": "IL",
-"city": "Palatine・250 E ILLINOIS AVE Palatine IL 60067",
-"company": "(個人名義・非掲載)",
-"entity_type": "individual",
-"company_basis": null,
-"industry": "未分類",
-"category": "未分類",
-"category_raw": "未分類",
-"confidence": "high",
-"date": "2026-08-07",
-"applied": "2026-06-16",
-"jp": false,
-"new": false,
-"summary": "Palatine 250 E ILLINOIS AVE Palatine IL 60067 で駐車場の一部再舗装 $20.0k。",
-"infer": null,
-"note": "商業(駐車場舗装)。",
-"fact": {
-"src": "Palatine 建築許可(公開記録)",
-"ref": "許可 BLDC-025477-2026 Building Permit for Commercial Alteration\r\n",
-"value": 20000.0,
-"verbatim": "repaving part of the parking lot / Building Permit for Commercial Alteration\r\n / Commercial - Alteration",
-"gc": null,
-"pin": "02233130290000",
-"owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-023",
-"model": "claude-sonnet-5 (subagent, subscription session)",
-"generated_at": "2026-09-03T05:59:12+00:00"
 }
 }
 ]
