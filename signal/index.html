@@ -50,6 +50,7 @@ main{padding:34px 56px 64px; max-width:1280px; margin:0 auto;}
 .lede .tagline{margin:0 0 14px; font-size:14px; letter-spacing:.02em; color:var(--sub);}
 .lede h1{margin:0; font-family:var(--serif); font-size:clamp(22px, 2.55vw, 40px); line-height:1.32; font-weight:800; letter-spacing:.005em; color:var(--ink); white-space:nowrap;}   /* 9/5 CEO: 1 行に固定(幅に応じて縮む) */
 .lede p{margin:0; font-size:15.5px; line-height:1.75; color:var(--sub); max-width:760px;}
+.lede p.cue{font-size:clamp(17px, 1.35vw, 19px); line-height:1.8; color:var(--ink); margin-top:4px;} .lede p.cue b{font-weight:800; color:var(--ink);}   /* 9/9 CEO「小さい」 */
 .lede p.srcs{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;} .lede .src{display:inline-flex; align-items:center; gap:7px; font-size:13px; color:var(--ink-2); border:1px solid var(--line); border-radius:999px; padding:3px 11px 3px 9px; background:var(--card);}
 .lede .src::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--face-c, var(--sub)); box-shadow:0 0 0 2px color-mix(in srgb, var(--face-c, var(--sub)) 22%, transparent);}
 .lede .src[data-face="permits"]{--face-c:var(--face-permits);} .lede .src[data-face="ucc"]{--face-c:var(--face-ucc);} .lede .src[data-face="subsidies"]{--face-c:var(--face-subsidies);} .lede .src[data-face="procurement"]{--face-c:var(--face-procurement); color:var(--mute); border-style:dashed; background:transparent;} .lede .src[data-face="hiring"]{--face-c:var(--face-hiring);}
@@ -154,7 +155,7 @@ footer{padding:18px 56px 30px; border-top:1px solid var(--line); font-size:11px;
   <div class="lede">
     <h1>中西部で、次に動く会社が先にわかる。</h1>
     <p class="lead">工場を増やす。設備を買う。人を採る。大型案件を受注する。</p>
-    <p>その兆しを公開情報から毎日拾い、<br><b>「今、営業する理由がある会社」</b>を見つけます。</p>
+    <p class="cue">その兆しを公開情報から毎日拾い、<br><b>「今、営業する理由がある会社」</b>を見つけます。</p>
     <p class="srcs" aria-label="シグナルの種類"><span class="src" data-face="permits">建設許可</span><span class="src" data-face="ucc">UCC</span><span class="src" data-face="subsidies">政府補助金</span><span class="src" data-face="procurement">政府調達</span><span class="src" data-face="hiring">採用</span></p>
     <p class="hero-cta"><a class="btn primary" href="/signal/permits/">無料で Signal を見る →</a></p>
     <p class="hero-meta mono">IL・IN・MI・OH・WI｜毎日更新</p>
