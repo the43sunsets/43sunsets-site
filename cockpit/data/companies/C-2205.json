@@ -14,10 +14,58 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 2225.0,
-"latest": "2026-07-01",
+"count": 4,
+"value_total": 27450.0,
+"latest": "2026-08-24",
 "items": [
+{
+"id": "S-50348",
+"date": "2026-08-24",
+"applied": "2026-08-21",
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "339 MAIN ST",
+"permit_no": "PB26-0988",
+"permit_type": "Plumbing",
+"value": 3000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Park Forest 村所有の建物(339 Main St)における配管工事 $3,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing / Building",
+"source_id": "SRC-118",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_017URTX6D9WgueFUFNLbNVBD",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-50401",
+"date": "2026-08-11",
+"applied": "2026-08-06",
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "410 LAKEWOOD BLVD",
+"permit_no": "PB26-0921",
+"permit_type": "Signs",
+"value": 20000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Park Forest 村(410 Lakewood Blvd)の看板設置許可 $20,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Signs / Building",
+"source_id": "SRC-118",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_017URTX6D9WgueFUFNLbNVBD",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-11079",
 "date": "2026-07-01",
@@ -40,6 +88,30 @@
 "policy": "v1-2026-09-02-all",
 "batch": "session-058",
 "model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-50529",
+"date": "2026-07-01",
+"applied": "2026-06-30",
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "67 LESTER RD",
+"permit_no": "PB26-0749",
+"permit_type": "Plumbing",
+"value": 2225.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Park Forest 村所有の建物(67 Lester Rd)で配管工事 $2,225。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing / Building",
+"source_id": "SRC-118",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_017URTX6D9WgueFUFNLbNVBD",
+"model": "claude-sonnet-5 (batch api v1)"
 }
 }
 ]
@@ -69,13 +141,34 @@
 },
 "timeline": [
 {
+"date": "2026-08-24",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-50348",
+"summary": "Park Forest 村所有の建物(339 Main St)における配管工事 $3,000。"
+},
+{
+"date": "2026-08-11",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-50401",
+"summary": "Park Forest 村(410 Lakewood Blvd)の看板設置許可 $20,000。"
+},
+{
 "date": "2026-07-01",
 "face": "permits",
 "title": "建設許可(Park Forest): 未分類",
 "ref": "S-11079",
 "summary": "Park Forest 67 LESTER RD, PARK FOREST, IL 60466 でCOMMERCIAL PERMITに関する工事(詳細不明) $2.23k。"
+},
+{
+"date": "2026-07-01",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-50529",
+"summary": "Park Forest 村所有の建物(67 Lester Rd)で配管工事 $2,225。"
 }
 ],
-"generated_at": "2026-09-10T08:09:07+00:00",
+"generated_at": "2026-09-10T08:10:00+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

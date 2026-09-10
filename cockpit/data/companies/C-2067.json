@@ -14,8 +14,8 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 4500.0,
+"count": 3,
+"value_total": 10100.0,
 "latest": "2026-07-20",
 "items": [
 {
@@ -40,6 +40,54 @@
 "policy": "v1-2026-09-02-all",
 "batch": "session-050",
 "model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-50480",
+"date": "2026-07-20",
+"applied": "2026-07-15",
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "325 ONARGA ST",
+"permit_no": "PB26-0817",
+"permit_type": "GARAGE SLAB",
+"value": 4500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Park Forest 325 Onarga St でガレージ床(スラブ)工事 $4,500。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "GARAGE SLAB / Building / status Finaled",
+"source_id": "SRC-118",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_017URTX6D9WgueFUFNLbNVBD",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-50503",
+"date": "2026-07-13",
+"applied": "2026-07-08",
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "120 NAUVOO ST",
+"permit_no": "PB26-0785",
+"permit_type": "Plumbing",
+"value": 1100.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Park Forest 120 Nauvoo St における配管工事許可 $1,100(ステータス Finaled)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing / Building / status Finaled",
+"source_id": "SRC-118",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_017URTX6D9WgueFUFNLbNVBD",
+"model": "claude-sonnet-5 (batch api v1)"
 }
 }
 ]
@@ -74,8 +122,22 @@
 "title": "建設許可(Park Forest): 未分類",
 "ref": "S-12879",
 "summary": "Park Forest 325 Onarga St のガレージ床スラブ交換(施工: Castle Ridge Builders) $4.5k。"
+},
+{
+"date": "2026-07-20",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-50480",
+"summary": "Park Forest 325 Onarga St でガレージ床(スラブ)工事 $4,500。"
+},
+{
+"date": "2026-07-13",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-50503",
+"summary": "Park Forest 120 Nauvoo St における配管工事許可 $1,100(ステータス Finaled)。"
 }
 ],
-"generated_at": "2026-09-10T08:09:07+00:00",
+"generated_at": "2026-09-10T08:10:00+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

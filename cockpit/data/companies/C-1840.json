@@ -14,8 +14,8 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 7200.0,
+"count": 2,
+"value_total": 14400.0,
 "latest": "2026-07-24",
 "items": [
 {
@@ -40,6 +40,30 @@
 "policy": "v1-2026-09-02-all",
 "batch": "session-043",
 "model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-50444",
+"date": "2026-07-24",
+"applied": "2026-07-23",
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "120 HAY ST",
+"permit_no": "PB26-0861",
+"permit_type": "Roofing",
+"value": 7200.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Park Forest 120 Hay St の屋根工事 $7,200。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Roofing / Building",
+"source_id": "SRC-118",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_017URTX6D9WgueFUFNLbNVBD",
+"model": "claude-sonnet-5 (batch api v1)"
 }
 }
 ]
@@ -74,8 +98,15 @@
 "title": "建設許可(Park Forest): 未分類",
 "ref": "S-13475",
 "summary": "Park Forest 120 Hay St の賃貸住宅で屋根の撤去・交換 $7.2k(管理会社: ND Property Management)。"
+},
+{
+"date": "2026-07-24",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-50444",
+"summary": "Park Forest 120 Hay St の屋根工事 $7,200。"
 }
 ],
-"generated_at": "2026-09-10T08:09:07+00:00",
+"generated_at": "2026-09-10T08:10:00+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 8950.0,
-"latest": "2026-07-07",
+"count": 3,
+"value_total": 21900.0,
+"latest": "2026-08-20",
 "items": [
+{
+"id": "S-50383",
+"date": "2026-08-20",
+"applied": "2026-08-13",
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "354 WESTGATE DR",
+"permit_no": "PB26-0944",
+"permit_type": "Air Condition",
+"value": 4000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Park Forest 354 Westgate Dr でのエアコン設置工事 $4,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Air Condition / Building",
+"source_id": "SRC-118",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_017URTX6D9WgueFUFNLbNVBD",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-11541",
 "date": "2026-07-07",
@@ -40,6 +64,30 @@
 "policy": "v1-2026-09-02-all",
 "batch": "session-039",
 "model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-50523",
+"date": "2026-07-07",
+"applied": "2026-07-01",
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "354 WESTGATE DR",
+"permit_no": "PB26-0760",
+"permit_type": "Windows",
+"value": 8950.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Park Forest 354 Westgate Dr での窓工事 $8,950。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Windows / Building",
+"source_id": "SRC-118",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_017URTX6D9WgueFUFNLbNVBD",
+"model": "claude-sonnet-5 (batch api v1)"
 }
 }
 ]
@@ -69,13 +117,27 @@
 },
 "timeline": [
 {
+"date": "2026-08-20",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-50383",
+"summary": "Park Forest 354 Westgate Dr でのエアコン設置工事 $4,000。"
+},
+{
 "date": "2026-07-07",
 "face": "permits",
 "title": "建設許可(Park Forest): 未分類",
 "ref": "S-11541",
 "summary": "Park Forest の住宅で窓10枚を交換 $8.9k(不動産投資法人名義)。"
+},
+{
+"date": "2026-07-07",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-50523",
+"summary": "Park Forest 354 Westgate Dr での窓工事 $8,950。"
 }
 ],
-"generated_at": "2026-09-10T08:09:07+00:00",
+"generated_at": "2026-09-10T08:10:00+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

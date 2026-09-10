@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 2644.0,
-"latest": "2026-07-22",
+"count": 3,
+"value_total": 8012.0,
+"latest": "2026-08-11",
 "items": [
+{
+"id": "S-50400",
+"date": "2026-08-11",
+"applied": "2026-08-06",
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "69 FIR ST",
+"permit_no": "PB26-0922",
+"permit_type": "Plumbing",
+"value": 2724.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Park Forest 69 Fir St の配管工事許可 $2,724(完了済)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing / Building / status Finaled",
+"source_id": "SRC-118",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_017URTX6D9WgueFUFNLbNVBD",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-13190",
 "date": "2026-07-22",
@@ -40,6 +64,30 @@
 "policy": "v1-2026-09-02-all",
 "batch": "session-056",
 "model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-50461",
+"date": "2026-07-22",
+"applied": "2026-07-21",
+"state": "IL",
+"jurisdiction": "Park Forest",
+"address": "15 FIR ST",
+"permit_no": "PB26-0842",
+"permit_type": "Plumbing",
+"value": 2644.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Park Forest 15 Fir St における配管工事 $2,644(完了済み)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing / Building / status Finaled",
+"source_id": "SRC-118",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_017URTX6D9WgueFUFNLbNVBD",
+"model": "claude-sonnet-5 (batch api v1)"
 }
 }
 ]
@@ -69,13 +117,27 @@
 },
 "timeline": [
 {
+"date": "2026-08-11",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-50400",
+"summary": "Park Forest 69 Fir St の配管工事許可 $2,724(完了済)。"
+},
+{
 "date": "2026-07-22",
 "face": "permits",
 "title": "建設許可(Park Forest): 未分類",
 "ref": "S-13190",
 "summary": "Park Forest の商業物件で浴槽の排水・オーバーフロー配管を交換 $2.6k(Central Park Property 名義)。"
+},
+{
+"date": "2026-07-22",
+"face": "permits",
+"title": "建設許可(Park Forest): 未分類",
+"ref": "S-50461",
+"summary": "Park Forest 15 Fir St における配管工事 $2,644(完了済み)。"
 }
 ],
-"generated_at": "2026-09-10T08:09:07+00:00",
+"generated_at": "2026-09-10T08:10:00+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
