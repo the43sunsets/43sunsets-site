@@ -62,9 +62,9 @@
   var css = document.createElement("style"); css.textContent =
     ".sg-promo{position:fixed !important;top:auto !important;left:auto !important;right:18px;bottom:18px;z-index:9000;width:300px;height:auto !important;max-height:none !important;margin:0;padding:0;max-width:calc(100vw - 24px);background:var(--card,#fff);color:var(--ink,#1F252C);border:1px solid var(--line,#DCDFDB);border-radius:10px;box-shadow:0 12px 36px rgba(0,0,0,.18);overflow:hidden;font-family:'Zen Kaku Gothic New',-apple-system,'Hiragino Kaku Gothic ProN',Meiryo,sans-serif;transform:translateY(24px);opacity:0;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .45s}" +
     ".sg-promo.in{transform:none;opacity:1}" +
-    ".sg-promo .pimg{display:block;width:100%;height:132px;object-fit:cover;object-position:center;background:#EEF0EC}" +
+    ".sg-promo .pimg{display:block;width:100%;height:140px;overflow:hidden;background:var(--chip-bg,#EDF0F3);border-bottom:1px solid var(--line-soft,#ECEEEA)}.sg-promo .pimg svg{display:block;width:100%;height:100%}" +
     ".sg-promo .pbody{padding:12px 14px 14px}" +
-    ".sg-promo .pk{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.16em;color:var(--accent,#2F5D8A);text-transform:uppercase;margin:0 0 4px}" +
+    ".sg-promo .pk{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.16em;color:var(--accent,#2F5D8A);margin:0 0 5px}" +
     ".sg-promo h3{font-family:'Shippori Mincho',serif;font-size:16.5px;line-height:1.45;margin:0 0 6px;letter-spacing:.01em}" +
     ".sg-promo p{font-size:12.5px;line-height:1.7;color:var(--sub,#6B737C);margin:0 0 10px}" +
     ".sg-promo .pcta{display:inline-block;font-size:12.5px;font-weight:700;color:#fff;background:var(--ink,#1F252C);border-radius:5px;padding:7px 12px;text-decoration:none}" +
@@ -74,10 +74,31 @@
     "@media (max-width:600px){.sg-promo{right:12px;left:12px;bottom:12px;width:auto}.sg-promo .pimg{height:110px}}";
   var el = document.createElement("div"); el.className = "sg-promo";   /* aside だと各面の絞り込み欄の CSS(高さ・sticky)を継承して崩れる(9/9 実測) */ el.setAttribute("role", "complementary"); el.setAttribute("aria-label", "Signal のカスタマイズのご案内");
   el.innerHTML = '<button class="px" type="button" aria-label="閉じる" title="閉じる">✕</button>' +
-    '<img class="pimg" src="/assets/promo-solutions.jpg" alt="" width="640" height="360" loading="eager" decoding="async">' +
-    '<div class="pbody"><div class="pk">Signal をカスタマイズしませんか?</div>' +
-    '<h3>御社の条件で、次に動く会社だけを毎週。</h3>' +
-    '<p>気になる地域・設備・取引先に絞ったシグナルを、御社の営業の型に合わせてお届けします。まずは 30 分の相談から。</p>' +
+    '<div class="pimg" aria-hidden="true">' +
+      '<svg viewBox="0 0 640 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">' +
+        '<defs><linearGradient id="sgpg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--paper,#F7F7F4)"/><stop offset="1" stop-color="var(--chip-bg,#EDF0F3)"/></linearGradient>' +
+        '<filter id="sgsh" x="-10%" y="-10%" width="130%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity=".16"/></filter></defs>' +
+        '<rect width="640" height="300" fill="url(#sgpg)"/>' +
+        '<g stroke="var(--line,#DCDFDB)" stroke-width="1"><path d="M0 60H640M0 120H640M0 180H640M0 240H640M80 0V300M160 0V300M240 0V300M320 0V300M400 0V300M480 0V300M560 0V300" opacity=".55"/></g>' +
+        /* 左: 条件のスイッチ(地域・設備・取引先) */
+        '<g font-family="Zen Kaku Gothic New,Hiragino Kaku Gothic ProN,Meiryo,sans-serif" font-size="15" fill="var(--ink,#1F252C)">' +
+          '<g transform="translate(44,58)"><rect x="0" y="0" width="230" height="46" rx="10" fill="var(--card,#fff)" stroke="var(--line,#DCDFDB)"/><text x="18" y="29">地域</text><text x="70" y="29" fill="var(--sub,#6B737C)" font-size="12">IL · OH · WI</text><rect x="172" y="11" width="42" height="24" rx="12" fill="var(--accent,#2F5D8A)"/><circle cx="203" cy="23" r="9" fill="#fff"/></g>' +
+          '<g transform="translate(44,116)"><rect x="0" y="0" width="230" height="46" rx="10" fill="var(--card,#fff)" stroke="var(--line,#DCDFDB)"/><text x="18" y="29">設備</text><text x="70" y="29" fill="var(--sub,#6B737C)" font-size="12">レーザー · MC</text><rect x="172" y="11" width="42" height="24" rx="12" fill="var(--fact,#2E6E4E)"/><circle cx="203" cy="23" r="9" fill="#fff"/></g>' +
+          '<g transform="translate(44,174)"><rect x="0" y="0" width="230" height="46" rx="10" fill="var(--card,#fff)" stroke="var(--line,#DCDFDB)"/><text x="18" y="29">取引先</text><text x="84" y="29" fill="var(--sub,#6B737C)" font-size="12">日系 · Tier 1</text><rect x="172" y="11" width="42" height="24" rx="12" fill="var(--line,#DCDFDB)"/><circle cx="183" cy="23" r="9" fill="#fff"/></g>' +
+        '</g>' +
+        /* 中央: 絞り込みの流れ */
+        '<path d="M296 135 C 330 135, 330 135, 352 135" stroke="var(--ink,#1F252C)" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M344 127 L354 135 L344 143" stroke="var(--ink,#1F252C)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' +
+        /* 右: 多数の点(すべての会社)→ 1 枚のカード(次に動く会社) */
+        '<g fill="var(--mute,#9AA1A9)" opacity=".55"><circle cx="392" cy="70" r="4"/><circle cx="430" cy="52" r="3"/><circle cx="476" cy="66" r="4"/><circle cx="520" cy="48" r="3"/><circle cx="566" cy="70" r="4"/><circle cx="604" cy="56" r="3"/><circle cx="408" cy="236" r="3"/><circle cx="452" cy="252" r="4"/><circle cx="500" cy="238" r="3"/><circle cx="548" cy="254" r="4"/><circle cx="594" cy="236" r="3"/><circle cx="386" cy="150" r="3"/><circle cx="612" cy="150" r="3"/></g>' +
+        '<g transform="translate(400,96)" filter="url(#sgsh)"><rect x="0" y="0" width="200" height="108" rx="12" fill="var(--card,#fff)" stroke="var(--accent,#2F5D8A)" stroke-width="2"/>' +
+          '<rect x="16" y="16" width="34" height="18" rx="4" fill="var(--ink,#1F252C)"/><text x="33" y="29" text-anchor="middle" font-family="IBM Plex Mono,ui-monospace,monospace" font-size="11" fill="var(--paper,#F7F7F4)">WI</text>' +
+          '<rect x="58" y="16" width="52" height="18" rx="4" fill="var(--fact-bg,#EEF5F0)"/><text x="84" y="29" text-anchor="middle" font-family="Zen Kaku Gothic New,sans-serif" font-size="10.5" fill="var(--fact,#2E6E4E)">新規</text>' +
+          '<rect x="16" y="46" width="132" height="12" rx="6" fill="var(--ink,#1F252C)" opacity=".85"/><rect x="16" y="66" width="168" height="8" rx="4" fill="var(--line,#DCDFDB)"/><rect x="16" y="82" width="120" height="8" rx="4" fill="var(--line,#DCDFDB)"/>' +
+          '<circle cx="176" cy="24" r="7" fill="var(--stamp,#B54434)"/></g>' +
+      '</svg></div>' +
+    '<div class="pbody"><div class="pk">SIGNAL をカスタマイズ</div>' +
+    '<h3>御社の条件で、<br>次に動く会社を。</h3>' +
+    '<p>地域・設備・取引先に合わせて、<br>必要なシグナルだけを毎週お届けします。</p>' +
     '<a class="pcta" href="/signal/solutions/?utm_source=signal&utm_medium=promo&utm_campaign=solutions">ソリューションを見る →</a></div>';
   var close = function(){ try{ sessionStorage.setItem(K + ":closed", "1"); }catch(e){} el.classList.remove("in"); setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 450); };
   el.querySelector(".px").addEventListener("click", close);
