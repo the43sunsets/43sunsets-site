@@ -5,7 +5,7 @@
 // ログイン済みは静的ファイルをそのまま返す(next() = Pages の静的配信)。
 import { currentSession, json, logFaceDay } from "../../signal/_lib.js";
 
-const GATED = new Set(["ucc.json", "subsidies.json", "hiring.json", "news.json", "macro.json"]);   // 9/8 CEO: 景気の状況(ニュース 2 軸と AI の読み ②③)も見本モード
+const GATED = new Set(["ucc.json", "ucc-wi.json", "subsidies.json", "hiring.json", "news.json", "macro.json"]);   // 9/9: ucc-wi.json = WI の索引行(推論段)   // 9/8 CEO: 景気の状況(ニュース 2 軸と AI の読み ②③)も見本モード
 const SAMPLE_N = 4;                    // 見本の枚数
 const SAMPLE_MIN_AGE_DAYS = 45;        // 見本は 45 日以上前の実例だけ(鮮度は登録の対価)
 const MINOR_SUBSIDY = new Set(["訓練・インフラ・その他", "未分類"]);   // signal/index.html と同じ主要件数の規則

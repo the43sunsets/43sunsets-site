@@ -108,6 +108,13 @@ main{padding:18px 28px 60px; min-width:0;}
 .fact .flabel{font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--fact); display:block; margin-bottom:1px;}
 .fact .verbatim{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; display:block; margin-top:3px; word-break:break-word; color:var(--sub);}
 .infer{border:1px dashed var(--infer-line); background:var(--infer-bg); padding:7px 11px; border-radius:4px; font-size:12.5px;}
+.chip.tier-infer{color:var(--infer); background:var(--infer-bg); border:1px solid var(--infer-line); font-weight:700;}
+.chip.tier-fact{color:var(--fact); background:var(--fact-bg); font-weight:700;}
+.chip.cand{color:var(--accent); background:transparent; border:1px solid var(--accent);}
+.copybox{display:flex; flex-wrap:wrap; gap:8px; align-items:center; font-size:12px; color:var(--sub); border-top:1px dashed var(--line-soft); padding-top:7px; margin-top:2px;}
+.reqbtn{font:inherit; font-size:12px; font-weight:700; color:var(--paper); background:var(--ink); border:0; border-radius:4px; padding:5px 10px; cursor:pointer; text-decoration:none;}
+.reqbtn:hover{background:var(--accent);} .reqbtn[disabled]{opacity:.5; cursor:default;}
+.reqdone{color:var(--fact); font-weight:700;}
 .badge-infer{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.18em; color:var(--infer); border:1px solid var(--infer); border-radius:3px; padding:0 5px; margin-right:6px; vertical-align:1px;}
 
 .pager{display:flex; align-items:center; justify-content:center; gap:6px; margin-top:24px;}
@@ -222,7 +229,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 </style>
 <link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260908b">
 <script src="/signal/assets/favi.js?v=20260907t"></script>
-<script src="/signal/assets/nav.js?v=20260908a" defer></script>
+<script src="/signal/assets/nav.js?v=20260909a" defer></script>
 <script src="/signal/assets/cards.js?v=20260907q"></script>
 </head>
 <body>
@@ -256,6 +263,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   <div class="fgroup"><h2>設備の種類(領域)</h2><div id="f-domain"></div></div>
   <div class="fgroup"><h2>メーカー(カタログ判定)</h2><div id="f-maker"></div></div>
   <div class="fgroup"><h2>対象企業の業種</h2><div id="f-industry"></div></div>
+  <label class="fitem unc-toggle" title="索引のみ = ウィスコンシン州の登記索引(債務者・担保権者・日付)だけで、担保物の逐語は未取得の行(推論段)。写しを依頼すると事実段に昇格します"><input type="checkbox" id="hideidx" onchange="page=1;render()">索引のみ(推論段)の行を隠す <span class="cnt" id="idxcnt"></span></label>
   <label class="fitem unc-toggle" title="未分類 = 本文が汎用文のみで種別を決められなかった記録。雑音(個人名義・車両 1 台の割賦・住宅・農業リーエン・公共財務)も含みます。入れると未分類だけを表示します"><input type="checkbox" id="showunc">未分類のみ表示 <span class="cnt" id="unccnt"></span></label>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
   <div class="fnote">設備の種類・メーカーは型式ごとの設備カタログ(メーカー製品ページを AI が読み・出典 URL つき)、業種は会社マスター(自社サイト)からの割り当てです。型式が担保物欄に無い登記(Mazak・Makino = 製番のみ)は領域だけを担保権者から判定し、機種は「不明(製番のみ)」と表示します。雑音・未分類は既定で表示しません(下のトグルでそれだけを表示できます)。</div>
@@ -280,7 +288,8 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
     <div id="scopebox">読み込み中…</div>
     <ul id="scopenotes">
       <li>UCC-1 登記は「債務者がその設備を担保にお金を借りた(購入・リースした)」という公的記録です。提出から 5 年で失効し、継続届で延長されます。金額は載りません。大きさは担保物の逐語(機械の型式・台数)と貸し手の種類で読みます。</li>
-      <li>先行版はオハイオ州のみ・担保権者(機械メーカー)名で検索した登記のみです。銀行・リース会社を担保権者とする登記は網に入っていません。</li>
+      <li>オハイオ州は担保権者(機械メーカー)名で検索した登記のみで、担保物の逐語まで無料で取れます。銀行・リース会社を担保権者とする登記は網に入っていません。</li>
+      <li><b>ウィスコンシン州(2026-09-09〜)</b>は登記索引の全行(法人の UCC-1・債務者・担保権者・提出日)を「索引のみ・推論」段で載せています。担保物の逐語は州の写し($4/件)でしか取れないため、当社の購入規則(債務者名が製造業らしい、または担保権者が機械商社/工作機械系)に当たる行は順次購入して「事実」段に昇格し、それ以外は各行の「写しを依頼」で取得します(ベータ期間は無料・月 10 件まで・週 1 回まとめて購入)。写しに別紙が付かず判定できない登記もあります。個人名義の登記は載せていません。</li>
       <li>設備の種類は型式ごとに 1 回だけメーカーの製品ページを調べて付けています(出典 URL と調べた日を CSV に出します)。会社の業種は自社サイトを調べて付けています。どちらも「人の確認」欄を持ち、確認済みかを CSV に出します。</li>
       <li>会社名を押すと、その会社の登記と建設許可(同じ会社マスターに紐づく場合)が 1 本の時系列で見られます。</li>
     </ul>
@@ -306,7 +315,10 @@ const sel = {state:new Set(), domain:new Set(), maker:new Set(), industry:new Se
 let VOCAB = {state:[], domain:[], maker:[], industry:[]};
 const cutoff = days => { if(!days) return null; const d = new Date(Date.now() - days*864e5); return d.toISOString().slice(0,10); };
 function inPeriod(s, p){ const c = cutoff((PERIODS.find(x=>x[0]===p)||[])[2]); return !c || (s.date && s.date >= c); }
-function visibleBase(){ return document.getElementById("showunc").checked ? SIGNALS.filter(s=>NOISE.has(s.kind)) : SIGNALS.filter(s=>!NOISE.has(s.kind)); }
+let MYREQ = {}, ME = null, CAP = 10, USED = 0;   // 9/9: 写しの依頼(ログイン中のアカウント分)
+function visibleBase(){ const hideIdx = document.getElementById("hideidx").checked;
+  const base = document.getElementById("showunc").checked ? SIGNALS.filter(s=>NOISE.has(s.kind)) : SIGNALS.filter(s=>!NOISE.has(s.kind));
+  return hideIdx ? base.filter(s=>s.tier!=="infer") : base; }
 function matches(s, field, set){ if(!set.size) return true; if(field==="domain") return s.domains.some(d=>set.has(d)); if(field==="maker") return s.makers.some(m=>set.has(m)); return set.has(s[field]); }
 function passes(s, except){ const jp = document.getElementById("jponly").checked; if(jp && !s.jp) return false;
   for(const f of Object.keys(sel)){ if(f!==except && !matches(s, f, sel[f])) return false; } return except==="period" ? true : inPeriod(s, period); }
@@ -340,6 +352,8 @@ function eqHtml(eq){
 function cardHtml(s){
   const jp  = s.jp ? `<span class="chip jp" title="${s.jp_basis==="roster" ? "総領事館 2025 名簿で確定" : "人の確認で確定"}">日系</span>` : (s.jp_candidate ? `<span class="chip" title="AI 判定のみ(名簿・人の確認なし)= 候補">日系?</span>` : ""); const nw = s.new ? `<span class="chip newchip" title="${META ? META.new_rule : ''}">NEW</span>` : "";
   const kind = NOISE.has(s.kind) ? `<span class="chip">${s.kind}</span>` : "";
+  const tier = s.tier==="infer" ? `<span class="chip tier-infer" title="索引のみ(債務者・担保権者・日付)。担保物の逐語は未取得 = 推論段">索引のみ・推論</span>` : (s.copy && s.copy.status==="purchased" ? `<span class="chip tier-fact" title="写しを取得済み(担保物の逐語あり)= 事実段">写し取得済み・事実</span>` : "");
+  const cand = s.candidate ? `<span class="chip cand" title="当社の購入規則に当たる行(${esc(s.candidate_reason||"")})。順次、写しを購入して事実段に昇格します">候補</span>` : "";
   const ind = `<span class="chip" title="${s.industry_basis==="master" ? "会社マスター(自社サイト)から" : "登記の読みから(会社マスター未調査)"}">${esc(s.industry)}${s.industry_basis==="master" ? "" : "?"}</span>`;
   const inf = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${esc(s.infer)}</div>` : "";
   const sp = s.secured_party ? `<div class="parties">担保権者: ${esc(s.secured_party)}${s.secured_party_city ? "(" + esc(s.secured_party_city) + ")" : ""}・${esc(s.lender_label)}${s.scope==="all_assets" ? "・包括担保" : s.scope==="mixed" ? "・特定設備+包括" : ""}</div>` : "";
@@ -349,15 +363,43 @@ function cardHtml(s){
   const fact = `<div class="fact"><span class="flabel">事実(公的記録)</span>${esc(s.fact.src)}・${esc(s.fact.ref)}・提出 <span class="mono">${s.date}</span>${s.lapse ? `・失効 <span class="mono">${s.lapse}</span>` : ""}・${esc(s.fact.status||"")}</div>`;
   const summ = `<div class="summary">${esc(s.summary)}</div>`;
   // 9/7 CEO: 重複を畳む。設備の箱があれば要約は details へ(要約は担保権者・設備・日付の言い直しのため)。
-  return `<article class="card">
+  const copy = copyBox(s);
+  return `<article class="card" data-id="${esc(s.id)}">
     <div class="head"><span class="state">${s.state}</span><h3>${window.faviSlot ? faviSlot(s.karte, s.company) : ""}${name}</h3></div>
-    <div>${nw}${jp}${kind}${ind}</div>
+    <div>${nw}${jp}${tier}${cand}${kind}${s.tier==="infer" ? "" : ind}</div>
     <div class="meta"><span>${esc(s.city)}</span>${made ? `<span>${made}</span>` : ""}<span>提出 <span class="mono">${s.date}</span>${s.lapse ? `・失効 <span class="mono">${s.lapse}</span>` : ""}${s.fact.status ? `・${esc(s.fact.status)}` : ""}</span></div>
     ${eq || summ}
     ${inf}
-    <details class="more"><summary>登記の詳細(担保権者・要約・登記番号)</summary>${sp}${eq ? summ : ""}${fact}</details>
+    ${s.tier==="infer" ? sp : ""}
+    <details class="more"><summary>登記の詳細(担保権者・要約・登記番号)</summary>${s.tier==="infer" ? "" : sp}${eq ? summ : ""}${fact}</details>
+    ${copy}
   </article>`;
 }
+// 9/9 CEO 承認: 写し($4/IFS)の依頼 UI。購入済み = 事実段。候補 = 当社が順次購入。それ以外 = 依頼で取得(ベータ期間は無料・月 10 件まで・週 1 回まとめて購入 → 翌営業日に反映)。
+function copyBox(s){
+  if(!s.copy || s.state!=="WI") return "";
+  const fs = esc(s.copy.fs_number);
+  if(s.copy.status==="purchased") return `<div class="copybox"><span class="reqdone">✓ 写し取得済み</span><span>担保物の逐語は上の要約に。原本 PDF は非公開(公的記録の写し・社内保管)。</span></div>`;
+  const st = MYREQ[s.copy.fs_number];
+  if(st==="requested") return `<div class="copybox"><span class="reqdone">依頼済み</span><span>週 1 回まとめて購入し、翌営業日までに担保物の逐語を反映します。</span></div>`;
+  if(st==="purchased" || st==="done") return `<div class="copybox"><span class="reqdone">購入済み・反映待ち</span></div>`;
+  if(st==="declined") return `<div class="copybox"><span>この登記の写しは提供できませんでした(hello@43sunsets.com へお問い合わせください)。</span></div>`;
+  if(!ME || !ME.loggedIn) return `<div class="copybox"><a class="reqbtn" href="/signal/login/?next=/signal/ucc/">担保物の写しを依頼する(要ログイン)</a><span>通常 $4/件・ベータ期間は無料(月 ${CAP} 件まで)</span></div>`;
+  const left = Math.max(0, CAP - USED);
+  return `<div class="copybox"><button class="reqbtn" type="button" data-fs="${fs}" data-debtor="${esc(s.company)}" ${left ? "" : "disabled"}>担保物の写しを依頼する</button><span>通常 $4/件・ベータ期間は無料(今月 残り ${left}/${CAP} 件)・週 1 回まとめて購入・翌営業日に反映。写しに別紙(Schedule)が付かず判定できない場合はその旨を表示します。</span></div>`;
+}
+async function requestCopy(btn){
+  const fs = btn.dataset.fs; btn.disabled = true; btn.textContent = "送信中…";
+  try{
+    const r = await fetch("/signal/copy-request", {method:"POST", credentials:"same-origin", headers:{"content-type":"application/json"}, body: JSON.stringify({fs_number: fs, state: "WI", debtor: btn.dataset.debtor||""})});
+    const d = await r.json().catch(()=>({}));
+    if(r.status===401){ location.href = "/signal/login/?next=/signal/ucc/"; return; }
+    if(r.status===429){ alert(`今月の依頼は上限(${d.cap} 件)に達しています。来月またはお問い合わせください。`); USED = d.used||USED; render(); return; }
+    if(!r.ok || !d.ok){ alert("依頼を受け付けられませんでした(" + (d.error||r.status) + ")。時間をおいてお試しください。"); btn.disabled=false; btn.textContent="担保物の写しを依頼する"; return; }
+    MYREQ[fs] = "requested"; if(typeof d.used==="number") USED = d.used; render();
+  }catch(e){ alert("通信に失敗しました: " + e.message); btn.disabled=false; btn.textContent="担保物の写しを依頼する"; }
+}
+document.addEventListener("click", e=>{ const b = e.target.closest && e.target.closest("button.reqbtn[data-fs]"); if(b) requestCopy(b); });
 function render(){
   refreshCounts(); const list = filtered();
   const pages = Math.max(1, Math.ceil(list.length/PAGE_SIZE)); if(page>pages) page = pages;
@@ -408,13 +450,17 @@ async function boot(){
   try{
     const r = await fetch("/cockpit/data/ucc.json", {cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status);
     const d = await r.json(); META = d.meta; SIGNALS = d.signals; COMPANIES = d.companies || []; CO = Object.fromEntries(COMPANIES.map(c=>[c.id,c]));
+    try{ const rw = await fetch("/cockpit/data/ucc-wi.json", {cache:"no-store"}); if(rw.ok){ const w = await rw.json(); const rows = (w.signals||[]).map(x=>({equipment:[], domains:[], makers:[], industry:"未分類", ...x})); SIGNALS = SIGNALS.concat(rows); META.wi = w.meta; } }catch(e){}   // 9/9: WI の索引行(推論段・別ファイル)
     VOCAB.state = (META.states||[]).filter(st => SIGNALS.some(s=>s.state===st)).concat((META.states||[]).filter(st => !SIGNALS.some(s=>s.state===st)));
     VOCAB.domain = (META.domains||[]).filter(d => d!=="不明" || SIGNALS.some(s=>s.domains.includes("不明")));
     const mk = {}; SIGNALS.forEach(s=>s.makers.forEach(m=>{ mk[m]=(mk[m]||0)+1; })); VOCAB.maker = Object.keys(mk).sort((a,b)=>mk[b]-mk[a]);
     VOCAB.industry = (META.industries||[]).filter(i => SIGNALS.some(s=>s.industry===i));
     document.getElementById("unccnt").textContent = SIGNALS.filter(s=>NOISE.has(s.kind)).length;
+    document.getElementById("idxcnt").textContent = SIGNALS.filter(s=>s.tier==="infer").length;
+    try{ const me = await fetch("/signal/me", {cache:"no-store", credentials:"same-origin"}).then(x=>x.json()); ME = me;
+      if(me && me.loggedIn){ const q = await fetch("/signal/copy-request", {cache:"no-store", credentials:"same-origin"}).then(x=>x.json()); if(q && q.ok){ MYREQ = q.requests||{}; CAP = q.cap||CAP; USED = q.used||0; } } }catch(e){}
     const f = META.funnel;
-    document.getElementById("metaline").innerHTML = `${(META.states_present||[]).join("・")} 先行 / 登記 <span class="mono">${f.filings_total}</span> 件・会社 <span class="mono">${COMPANIES.length}</span> 社・機械 <span class="mono">${SIGNALS.reduce((a,s)=>a+Math.max(1,(s.equipment||[]).length),0)}</span> 台・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
+    document.getElementById("metaline").innerHTML = `${(META.states_present||[]).join("・")} 先行 / 登記 <span class="mono">${f.filings_total}</span> 件・会社 <span class="mono">${COMPANIES.length}</span> 社・機械 <span class="mono">${SIGNALS.filter(s=>s.tier!=="infer").reduce((a,s)=>a+Math.max(1,(s.equipment||[]).length),0)}</span> 台${META.wi ? `・WI 索引 <span class="mono">${META.wi.n}</span> 行(推論段・候補 ${META.wi.candidates})` : ""}・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     renderFilters(); render(); renderScope();
     if(d.demo && window.sgDemo) sgDemo(META.demo);   // 見本モード(未ログイン): 古い実例 数枚・絞り込み不活性・登録案内
   }catch(err){ document.getElementById("metaline").textContent = "データの読み込みに失敗しました(" + err.message + ")。"; document.getElementById("empty").hidden = false; document.getElementById("empty").textContent = "データ(ucc.json)を読み込めませんでした。時間をおいて再読み込みしてください。"; }

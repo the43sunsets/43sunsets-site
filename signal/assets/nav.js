@@ -42,7 +42,7 @@
     if (grid) grid.classList.add('sg-blur');
     var tb = main && main.querySelector('.toolbar'); if (tb) { tb.querySelectorAll('button,select,input').forEach(function(b){ b.disabled = true; }); }
     var cta = document.createElement('div'); cta.className = 'sg-cta'; cta.setAttribute('role', 'region'); cta.setAttribute('aria-label', '見本モードの案内');
-    cta.innerHTML = '<div class="sg-cta-in"><div class="sg-cta-k">見本モード</div><h2>この面は、登録した方に全件をお見せしています。</h2><p>' + (info.note ? info.note.replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }) : '登録すると、全件・当日分・絞り込み・企業カルテが使えます。') + '</p><div class="sg-cta-acts"><a class="sg-cta-btn" href="/signal/join/?next=' + encodeURIComponent(here) + '">もっと見る(無料で登録)</a><a class="sg-cta-lnk" href="/signal/login/?next=' + encodeURIComponent(here) + '">登録済みの方はログイン</a></div></div>';
+    cta.innerHTML = '<div class="sg-cta-in"><div class="sg-cta-k">見本モード</div><h2>このページは、登録した方に全件をお見せしています。</h2><p>' + (info.note ? info.note.replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }) : '登録すると、全件・当日分・絞り込み・企業カルテが使えます。') + '</p><div class="sg-cta-acts"><a class="sg-cta-btn" href="/signal/join/?next=' + encodeURIComponent(here) + '">もっと見る(無料で登録)</a><a class="sg-cta-lnk" href="/signal/login/?next=' + encodeURIComponent(here) + '">登録済みの方はログイン</a></div></div>';
     var head = main && main.querySelector('.facehead'); if (head && head.parentNode) head.parentNode.insertBefore(cta, head.nextSibling); else if (main) main.insertBefore(cta, main.firstChild);
     var sub = document.getElementById('hitsub'); if (sub) sub.textContent = '(見本 ' + (info.sample || '') + ' 件 / 全 ' + (info.total != null ? info.total.toLocaleString() : '—') + ' 件)';
   };

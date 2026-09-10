@@ -51,7 +51,7 @@ footer{ max-width:1280px; margin:0 auto; padding:0 24px 40px; font-size:11px; co
 details summary{ cursor:pointer; font-size:12.5px; color:var(--sub); }
 </style>
 <link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260908a">
-<script src="/signal/assets/nav.js?v=20260908a" defer></script>
+<script src="/signal/assets/nav.js?v=20260909a" defer></script>
 </head>
 <body>
 <header class="site-head">
@@ -115,6 +115,12 @@ details summary{ cursor:pointer; font-size:12.5px; color:var(--sub); }
       <div class="box"><h3>方針(9/9 CEO)</h3>
         <ul><li>MI は<b>需要起点</b>: 買い手の問いは「過去 3 か月に設備投資した会社は?」(発見)。答える経路 = A 索引便 + 担保権者名の推定(+上位は写しで検証)/ B 画像便 + AI 読み。まず OH で推定精度を測り、10/6 まで支出しない。監視が欲しい顧客が揃えば画像便を契約(年額を顧客数で割る・契約日以降のみを文書で確認)。</li></ul></div>
     </div>
+    <h2>写しの依頼(WI UCC・$4/IFS)<span class="small" id="creq-meta"></span></h2>
+    <p class="small">週 1 回まとめて購入: wims.dfi.wi.gov → Filings → UCC → UCC-11 Information Request → Record Number(1 請求 6 番号まで)→ zip を hello@ へ(または Downloads)→ <span class="mono">ucc_wisconsin.py copies --json</span> で取り込み → 行が事実段に。購入したら「購入済み」、取り込んだら「反映済み」に。</p>
+    <div class="tablewrap"><table id="creq"><thead></thead><tbody></tbody></table></div>
+    <h2>今月の購入候補(当社の規則・上位)<span class="small" id="cand-meta"></span></h2>
+    <p class="small">規則(9/9 CEO 承認): 債務者名が製造業らしい、または担保権者が機械商社/工作機械系。点数 3 = 機械商社/工作機械系の担保権者・2 = 製造業らしい社名 × リース/メーカー系/その他・1 = 製造業らしい社名 × 銀行。銀行の包括担保は逐語を見ても価値が薄いので 1 は後回し。</p>
+    <div class="tablewrap"><table id="cand"><thead></thead><tbody></tbody></table></div>
     <h2>Signal 登録者の追跡 <span class="small" id="reg-meta"></span></h2>
     <div class="tablewrap"><table id="reg"><thead></thead><tbody></tbody></table></div>
     <h2>取り込みの状態(夜間バッチ) <span class="small" id="health-meta"></span></h2>
@@ -216,7 +222,25 @@ details summary{ cursor:pointer; font-size:12.5px; color:var(--sub); }
     $("#ledger thead").querySelectorAll("th").forEach(th => th.onclick = () => { const k = th.dataset.k; if (sortKey === k) sortAsc = !sortAsc; else { sortKey = k; sortAsc = true; } renderTable(); });
   }
 
+  async function loadCopyRequests() {
+    try {
+      const r = await getJSON("/signal/admin/copy-requests"); const list = (r.d && r.d.requests) || [];
+      $("#creq thead").innerHTML = `<tr><th>依頼日</th><th>州</th><th>IFS 番号</th><th>債務者</th><th>依頼者</th><th>メール</th><th>状態</th><th></th></tr>`;
+      $("#creq tbody").innerHTML = list.length ? list.map(x => `<tr><td class="mono">${esc((x.ts||"").replace("T"," ").slice(0,16))}</td><td>${esc(x.state)}</td><td class="mono">${esc(x.fs_number)}</td><td>${esc(x.debtor||"")}</td><td>${esc(x.company)}</td><td class="mono">${esc(x.email)}</td><td><span class="pill ${x.status==="requested"?"warn":(x.status==="done"?"good":"")}">${esc(x.status)}</span></td><td>${x.status==="requested" ? `<button class="btn alt" data-key="${esc(x.key)}" data-st="purchased">購入済みにする</button>` : (x.status==="purchased" ? `<button class="btn alt" data-key="${esc(x.key)}" data-st="done">反映済みにする</button>` : "")} ${x.status!=="declined" && x.status!=="done" ? `<button class="btn alt" data-key="${esc(x.key)}" data-st="declined">提供不可</button>` : ""}</td></tr>`).join("") : `<tr><td colspan="8" class="small">依頼なし(HTTP ${r.status})</td></tr>`;
+      $("#creq-meta").textContent = ` ${list.length} 件・要購入 ${list.filter(x=>x.status==="requested").length}`;
+      $("#creq tbody").querySelectorAll("button[data-key]").forEach(b => b.onclick = async () => { b.disabled = true; const rr = await fetch("/signal/admin/copy-requests", { method: "POST", credentials: "same-origin", headers: { "content-type": "application/json" }, body: JSON.stringify({ key: b.dataset.key, status: b.dataset.st }) }); if (!rr.ok) alert("更新に失敗: " + rr.status); loadCopyRequests(); });
+    } catch (e) { $("#creq tbody").innerHTML = `<tr><td class="small">読み込み失敗: ${esc(e.message)}</td></tr>`; }
+    try {
+      const u = await getJSON("/cockpit/data/ucc-wi.json"); const sig = (u.d && u.d.signals) || [];   // 9/9: WI の索引行は ucc-wi.json(推論段・候補フラグつき)
+      const cand = sig.filter(s => s.state === "WI" && s.candidate && s.copy && s.copy.status === "available").sort((a, b) => (b.candidate_score - a.candidate_score) || (b.date || "").localeCompare(a.date || ""));
+      $("#cand thead").innerHTML = `<tr><th>点数</th><th>提出</th><th>IFS 番号</th><th>債務者</th><th>市</th><th>担保権者</th><th>理由</th></tr>`;
+      $("#cand tbody").innerHTML = cand.slice(0, 40).map(s => `<tr><td class="mono">${s.candidate_score}</td><td class="mono">${esc(s.date)}</td><td class="mono">${esc(s.copy.fs_number)}</td><td>${esc(s.company)}</td><td>${esc(s.city)}</td><td>${esc(s.secured_party||"")}</td><td class="wrap">${esc(s.candidate_reason||"")}</td></tr>`).join("") || `<tr><td class="small">候補なし(ucc.json HTTP ${u.status})</td></tr>`;
+      const m = (u.d && u.d.meta) || {};
+      $("#cand-meta").textContent = ` 候補 ${cand.length} 件(索引 ${m.n ?? "-"} 行・生成 ${m.generated_at || "-"})・上位 40 を表示・点数 3 → 2 の順に週 6 件ずつ`;
+    } catch (e) { $("#cand tbody").innerHTML = `<tr><td class="small">読み込み失敗: ${esc(e.message)}</td></tr>`; }
+  }
   async function loadOthers() {
+    loadCopyRequests();
     // 登録者の追跡(registrations + sessions + events 14 日)
     try {
       const since = new Date(Date.now() - 14 * 864e5).toISOString().slice(0, 10);
