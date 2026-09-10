@@ -9,7 +9,7 @@
   nav.addEventListener('click', function(e){ if(e.target.closest('a')) set(false); });
   document.addEventListener('click', function(e){ if(head.classList.contains('nav-open') && !head.contains(e.target)) set(false); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') set(false); });
-  window.addEventListener('resize', function(){ if(innerWidth > 900) set(false); });
+  window.addEventListener('resize', function(){ if(innerWidth > 1180) set(false); });   /* 9/9: 折り畳みの境界 1180px(cockpit.css と揃える) */
 })();
 
 /* ── ログイン状態と見本モード(2026-09-08・設計 = memory/signal-gating-and-magic-link-design.md)──

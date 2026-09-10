@@ -46,7 +46,8 @@ body header.site-head .cnav a[aria-current="page"]{ color:var(--ink); border-col
 .site-head .theme-btn{ font-size:12.5px; border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:999px; padding:4px 11px; font-family:inherit; cursor:pointer; }
 @media (prefers-reduced-motion: reduce){ .site-head .cnav a, .site-head .cnav a::after{ transition:none; } .site-head .cnav a:hover{ transform:none; } }
 @media (max-width:1180px){ body header.site-head .cnav, body header.site-head .kicker .cnav{ gap:18px; font-size:14.5px; letter-spacing:.04em; } }
-@media (max-width:900px){ .site-head .cnav{ display:none; } .site-head .bmark{ width:34px; height:34px; } .site-head .bword{ font-size:22px; } }
+@media (max-width:1180px){ .site-head .cnav{ display:none; } }   /* 9/9: シグナル群の囲みで nav が広がった → 折り畳みを 1180px から */
+@media (max-width:900px){ .site-head .bmark{ width:34px; height:34px; } .site-head .bword{ font-size:22px; } }
 .facehead{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:0 0 12px; margin-bottom:16px; border-bottom:1px solid var(--line); }
 .facehead .meta{ font-size:13px; color:var(--sub); }
 .facehead .pagetitle{ margin:0; font-family:var(--serif, "Shippori Mincho", serif); font-size:24px; white-space:nowrap; flex:none; }
@@ -155,7 +156,7 @@ body .karte-top h2, body .kprof h2{ font-size:24px; }
 
 /* ---- 携帯(9/7 CEO「携帯の確認は?」の点検で 4 件): ヘッダー右の収まり・折り畳み導線・期間ボタンの折返し ---- */
 .site-head .menu-btn{ display:none; font-size:12.5px; border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:999px; padding:4px 11px; font-family:inherit; cursor:pointer; white-space:nowrap; }
-@media (max-width:900px){
+@media (max-width:1180px){
   body header.site-head{ position:sticky; }
   .site-head .menu-btn{ display:inline-flex; align-items:center; }
   .site-head.nav-open .cnav{ display:flex; position:absolute; left:0; right:0; top:100%; margin:0; flex-direction:column; gap:0; padding:6px 16px 10px; background:var(--card); border-bottom:1px solid var(--line); box-shadow:0 12px 24px rgba(0,0,0,.10); }
@@ -191,7 +192,7 @@ body .karte-top h2, body .kprof h2{ font-size:24px; }
 .sg-who{ font-size:12.5px; color:var(--sub); max-width:180px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .sg-form{ display:inline; margin:0; }
 @media (max-width:600px){ .sg-auth{ display:none; } }   /* 375px: ヘッダー右は ☰+配色で満杯(実測 364px)→ 導線は ☰ メニュー内の .sg-navitem */
-.cnav .sg-navitem{ display:none; }
+.cnav .sg-navitem, .site-head .cnav .sg-navitem{ display:none; }   /* 9/9: .site-head .cnav a{display:inline-block} に負けて PC でも二重に出ていた → 特異度を上げる */
 .site-head.nav-open .cnav .sg-navitem{ display:block; padding:11px 4px; font-size:15px; border-bottom:1px solid var(--line-soft); }
 .site-head.nav-open .cnav form.sg-navitem{ margin:0; }
 .sg-navbtn{ font:inherit; font-weight:700; color:var(--ink); background:transparent; border:0; padding:0; cursor:pointer; }
@@ -215,3 +216,22 @@ aside.sg-locked{ opacity:.45; filter:blur(1.5px); pointer-events:none; user-sele
 .ksec.sg-lock .sg-lock-note{ position:absolute; inset:auto 0 0 0; top:44px; display:flex; align-items:center; justify-content:center; }
 .ksec.sg-lock .sg-lock-note a{ background:var(--card); border:1px solid var(--line); border-radius:6px; padding:10px 16px; font-size:13.5px; color:var(--ink); text-decoration:none; box-shadow:0 8px 24px -14px rgba(0,0,0,.35); }
 .ksec.sg-lock .sg-lock-note a:hover{ border-color:var(--ink); }
+
+/* ── 2026-09-09 CEO: ヘッダーの区分 — シグナルの面(建設許可・UCC・政府補助金・政府調達[準備中]・企業採用状況・景気・ニュース)を一群として囲み、トップ/データの範囲と鮮度/登録/ログインと分ける ── */
+.cnav .grp{ display:inline-flex; align-items:center; gap:16px; padding:3px 13px 3px 10px; margin:0 2px; border:1px solid var(--line); border-radius:999px; background:var(--chip-bg); }
+.cnav .gk{ font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:9.5px; font-weight:600; letter-spacing:.2em; color:var(--accent); text-transform:uppercase; margin-right:2px; user-select:none; }
+.cnav a.soon{ color:var(--mute); pointer-events:none; cursor:default; }
+.cnav a.soon .tag{ display:inline-block; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:9px; letter-spacing:.06em; color:var(--mute); border:1px solid var(--line); border-radius:3px; padding:0 4px; margin-left:5px; vertical-align:1px; }
+.site-head .cnav a.soon::after{ display:none; }
+@media (max-width:1180px){ .cnav{ gap:14px; } .cnav .grp{ gap:12px; padding:3px 10px 3px 9px; } }
+@media (max-width:1180px){
+  .site-head.nav-open .cnav .grp{ display:flex; flex-direction:column; align-items:stretch; gap:0; padding:8px 10px 4px; margin:6px 0; border-radius:10px; }
+  .site-head.nav-open .cnav .gk{ padding:2px 4px 6px; font-size:10px; }
+  .site-head.nav-open .cnav .grp a:last-child{ border-bottom:0; }
+  .site-head.nav-open .cnav a.soon{ color:var(--mute); }
+}
+/* 1181〜1760px(ノート PC〜小さめの外部モニタ): 1 段に収まらない(必要幅 ≈ 1,750px)ので導線を 2 段目に回す。ロゴと右側(登録・ログイン・配色)は 1 段目のまま */
+@media (max-width:1760px) and (min-width:1181px){
+  body header.site-head{ flex-wrap:wrap; row-gap:4px; padding-bottom:8px; }
+  .site-head .cnav{ order:3; flex-basis:100%; margin-left:2px; justify-content:flex-start; gap:16px; padding-top:2px; }
+}
