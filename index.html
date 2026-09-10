@@ -50,6 +50,10 @@ nav a.lang{font-family:var(--mono);font-weight:600;letter-spacing:.14em;font-siz
 .hero h1{font-size:min(clamp(38px,4.8vw,66px), 9.6cqw)}
 .hero h1 .nw{white-space:nowrap}
 .hero .lead{font-size:15.5px;line-height:1.95;margin:0 0 28px;color:rgba(255,255,255,.94);text-shadow:0 1px 14px rgba(0,0,0,.35)}
+/* 2026-09-09 CEO: 右文言の改行は固定(常にこの並び)。最長の 1 行目(30 字)が列幅に入る大きさまで縮め、行内では折り返さない。600px 以下は折り返しを許す(読める大きさを優先) */
+.hero .txt > div:last-child{container-type:inline-size}
+.hero .lead{font-size:min(15.5px, 3.2cqw)} .hero .lead .nw{white-space:nowrap}
+@media (max-width:600px){ .hero .lead{font-size:15px} .hero .lead .nw{white-space:normal} }
 .hero .lead p{margin:0 0 10px}
 .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
 .hero .btn{color:#fff}
@@ -178,9 +182,8 @@ footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover
     </div>
     <div>
       <div class="lead">
-        <p>経営企画、営業、マーケティング、顧客対応。現場に残る手作業や非効率を、AI と自動化で一業務ずつ仕組みに変えます。</p>
-        <p>大きなシステム導入から始める必要はありません。いま一番困っている仕事から、まず変える。</p>
-        <p>経営と現場を知る本人が、話を聞き、つくり、実際の業務の中で直していきます。</p>
+        <p><span class="nw">経営企画、経理・ファイナンスから、営業・マーケティングまで。</span><br><span class="nw">現場に残る手作業や非効率を、AIと自動化で</span><br><span class="nw">ひとつずつ仕組みに変えます。</span></p>
+        <p><span class="nw">大きく変えなくていい。</span><br><span class="nw">いちばん困っている仕事から変える。</span></p>
       </div>
       <div class="ctas">
         <a class="btn pri" href="#signal">いま提供しているもの</a>
