@@ -43,9 +43,12 @@ nav a:hover{border-color:var(--ink)}
 nav a.lang{font-family:var(--mono);font-weight:600;letter-spacing:.14em;font-size:12.5px}
 .hero .photo{display:none}
 .hero .txt{position:relative;z-index:2;flex:1;padding:0 56px 64px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;align-items:end}
-.hero .txt > div:first-child{align-self:center;padding-bottom:6vh}
+.hero .txt > div:first-child{align-self:center;padding-bottom:6vh;container-type:inline-size}
 .hero .k{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.18em;background:var(--ink);color:#fff;padding:6px 12px;border-radius:2px;margin:0 0 22px}
 .hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(38px,4.8vw,66px);line-height:1.24;margin:0;color:var(--ink);letter-spacing:.005em}
+/* 2026-09-09 CEO: 1 行目「米国の日系製造業を、」(10 字)は常に 1 行に。列幅(cqw)に対して 10 字が入る大きさまで縮め、行は折り返さない */
+.hero h1{font-size:min(clamp(38px,4.8vw,66px), 9.6cqw)}
+.hero h1 .nw{white-space:nowrap}
 .hero .lead{font-size:15.5px;line-height:1.95;margin:0 0 28px;color:rgba(255,255,255,.94);text-shadow:0 1px 14px rgba(0,0,0,.35)}
 .hero .lead p{margin:0 0 10px}
 .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
@@ -144,7 +147,7 @@ footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover
   .hero .photo{display:block;height:46vh;min-height:260px;background:#9AA6B2 url(/assets/hero/photo-a.webp) center 62%/cover no-repeat}
   .hero .txt{display:block;background:var(--paper);padding:30px 22px 40px;margin-top:0}
   .band{height:220px;margin:-56px 0 48px}
-  .hero h1{font-size:30px;line-height:1.3} .hero .txt > div:first-child{padding-bottom:0}
+  .hero h1{font-size:min(30px, 9.6cqw);line-height:1.3} .hero .txt > div:first-child{padding-bottom:0}
   .hero .k{background:var(--ink);color:#fff}
   .hero .lead{color:var(--ink);text-shadow:none;margin:22px 0 24px}
   .hero .btn{color:var(--ink)} .hero .btn.pri{background:var(--ink);color:var(--paper);border-color:var(--ink)}
@@ -171,7 +174,7 @@ footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover
   <div class="txt">
     <div>
       <p class="k">小さく始めて、早く結果を出す。</p>
-      <h1>米国の日系製造業を、<br>もっと身軽に。</h1>
+      <h1><span class="nw">米国の日系製造業を、</span><br><span class="nw">もっと身軽に。</span></h1>
     </div>
     <div>
       <div class="lead">
