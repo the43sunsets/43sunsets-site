@@ -6,27 +6,33 @@ import { logEvent } from "../signal/_lib.js";
 
 const MAX = { company: 120, name: 80, email: 200, message: 4000, ref: 300 };
 
+// 9/9: ソリューション LP(/signal/solutions/)からも同じ受け口を使う。戻り先は page の許可リストで決める(外部 URL へは戻さない)。
+const BACK = { "/": "/", "/signal/solutions/": "/signal/solutions/" };
+const back = (page, st) => `${BACK[page] || "/"}?contact=${st}#contact`;
+
 export async function onRequestPost({ request, env }) {
   const url = new URL(request.url);
   let form; try { form = await request.formData(); } catch { return text("Malformed form", 400); }
-  if ((form.get("fax") || "").trim() !== "") return redirect(url, "/?contact=sent#contact");   // honeypot: 記録せず成功に見せる
+  const page0 = clean(form.get("page"), 120);
+  if ((form.get("fax") || "").trim() !== "") return redirect(url, back(page0, "sent"));   // honeypot: 記録せず成功に見せる
   const ts = await verifyTurnstile(env, form, request);
-  if (!ts.ok) return redirect(url, "/?contact=bot#contact");
+  if (!ts.ok) return redirect(url, back(page0, "bot"));
   const company = clean(form.get("company"), MAX.company), name = clean(form.get("name"), MAX.name);
   const email = String(form.get("email") || "").trim().slice(0, MAX.email);
   const message = String(form.get("message") || "").replace(/\r/g, "").trim().slice(0, MAX.message);
   const ref = clean(form.get("ref"), MAX.ref), page = clean(form.get("page"), 120);
-  if (!company || !name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return redirect(url, "/?contact=invalid#contact");
+  if (!company || !name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return redirect(url, back(page, "invalid"));
+  const fromLP = page === "/signal/solutions/";
   if (!env.BEACON_REQUESTS && !env.BEACON_NOTIFY) return text("Sorry — the contact desk is not connected yet. Please email hello@43sunsets.com.", 503);
   const id = cryptoId(); const now = new Date().toISOString();
-  const record = { id, ts: now, area: "contact", jobRef: "consult-30min", email, lang: "ja",
-                   job: `【30 分の相談】\n会社名: ${company}\nお名前: ${name}\n\n${message || "(本文なし)"}\n\n参照元: ${ref || "-"} / ページ: ${page || "/"}`, site: "" };
+  const record = { id, ts: now, area: "contact", jobRef: fromLP ? "solutions-consult" : "consult-30min", email, lang: "ja",
+                   job: `${fromLP ? "【個社向け開発の相談(Signal ソリューション)】" : "【30 分の相談】"}\n会社名: ${company}\nお名前: ${name}\n\n${message || "(本文なし)"}\n\n参照元: ${ref || "-"} / ページ: ${page || "/"}`, site: "" };
   if (env.BEACON_REQUESTS) await env.BEACON_REQUESTS.put(`contact:${now}:${id}`, JSON.stringify({ ...record, company, name, message, ref, page }), { expirationTtl: 60 * 60 * 24 * 30 });
   if (env.BEACON_NOTIFY) {
     try { await env.BEACON_NOTIFY.fetch("https://beacon-notify/", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(record) }); } catch (e) { /* KV が控え */ }
   }
-  await logEvent(env, "contact", email.toLowerCase(), { company, name });   // 9/8: 点数付けの出来事(Mautic へ)
-  return redirect(url, "/?contact=sent#contact");
+  await logEvent(env, "contact", email.toLowerCase(), { company, name, page });   // 9/8: 点数付けの出来事(Mautic へ)
+  return redirect(url, back(page, "sent"));
 }
 export async function onRequestGet({ request }) { return redirect(new URL(request.url), "/#contact"); }
 function clean(s, n) { return String(s ?? "").replace(/[\r\n\t]/g, " ").trim().slice(0, n); }
