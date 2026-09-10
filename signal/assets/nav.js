@@ -106,3 +106,80 @@
   var start = function(){ setTimeout(show, force ? 300 : 6000); };
   if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
 })();
+
+/* ── 左の絞り込み: 注記を折り畳む(2026-09-10 CEO 指摘「見切れている」)──
+   注記(.fnote)は 152〜187px あり、絞り込み項目を画面外へ押し出していた(実測)。
+   既定は閉じ、見出しを押すと開く。開閉は面ごとに localStorage で覚える。
+   携帯(≤820px)は既存の「絞り込み ▾」折り畳みが効いているので触らない。 */
+(function(){
+  if (!window.matchMedia || !matchMedia('(min-width:821px)').matches) return;
+  var note = document.querySelector('aside .fnote'); if(!note || note.closest('details')) return;
+  var key = 'sg-fnote:' + location.pathname;
+  var d = document.createElement('details'); d.className = 'fnote-fold';
+  var s = document.createElement('summary'); s.textContent = 'この絞り込みの読み方';
+  try{ d.open = localStorage.getItem(key) === '1'; }catch(e){}
+  note.parentNode.insertBefore(d, note);
+  d.appendChild(s); d.appendChild(note);
+  d.addEventListener('toggle', function(){ try{ localStorage.setItem(key, d.open ? '1' : '0'); }catch(e){} });
+})();
+
+/* ── 左の絞り込み: グループの折り畳み(2026-09-10 CEO 指摘「見切れている」)──
+   既定は「開いたまま」= 初見で見えるものは従来どおり。使う人が要らない群を畳める。
+   畳んだ状態は面ごと・群ごとに localStorage で記憶する。携帯(≤820px)は既存の折り畳みに任せる。 */
+(function(){
+  if (!window.matchMedia || !matchMedia('(min-width:821px)').matches) return;
+  var groups = document.querySelectorAll('aside .fgroup');
+  Array.prototype.forEach.call(groups, function(g, i){
+    var h = g.querySelector('h2'); if(!h || h.dataset.fold) return;
+    h.dataset.fold = '1';
+    var label = (h.textContent || ('group' + i)).trim();
+    var key = 'sg-fold:' + location.pathname + ':' + label;
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'fgroup-toggle';
+    btn.setAttribute('aria-label', label + ' の絞り込みを開閉');
+    var span = document.createElement('span'); span.textContent = label;
+    btn.appendChild(span);
+    h.textContent = ''; h.appendChild(btn);
+    var set = function(folded, save){
+      g.classList.toggle('folded', folded);
+      btn.setAttribute('aria-expanded', folded ? 'false' : 'true');
+      if (save) { try{ localStorage.setItem(key, folded ? '1' : '0'); }catch(e){} }
+    };
+    var saved = null; try{ saved = localStorage.getItem(key); }catch(e){}
+    set(saved === '1', false);
+    btn.addEventListener('click', function(){ set(!g.classList.contains('folded'), true); });
+  });
+})();
+
+/* ── 左の絞り込み: 素のテキストのラベルを span に包み、収まらないものに title を付ける(2026-09-10)──
+   静的なトグル(日系のみ・未分類のみ・索引のみ…)はラベルが素のテキストノードなので、CSS の ellipsis が効かず
+   横にはみ出して切れていた(実測 UCC「索引のみ(推論段)の行を隠す 4944」= 14px はみ出し)。span に包めば効く。
+   ellipsis で見えなくなった分は title(ホバー)で必ず読めるようにする = 文字は消さない。 */
+(function(){
+  if (!window.matchMedia || !matchMedia('(min-width:821px)').matches) return;
+  var aside = document.querySelector('aside'); if(!aside) return;
+
+  /* 素のテキストノードを span に包む(静的トグルのみ。動的な項目は renderFilters が span を作っている) */
+  Array.prototype.forEach.call(aside.querySelectorAll('.fitem'), function(el){
+    Array.prototype.slice.call(el.childNodes).forEach(function(n){
+      if (n.nodeType === 3 && n.nodeValue.trim()){
+        var s = document.createElement('span'); s.textContent = n.nodeValue;
+        el.replaceChild(s, n);
+      }
+    });
+  });
+
+  /* 収まらないラベルに title を付ける。件数は絞り込みのたびに再描画されるので、その都度掛け直す。
+     見ているのは childList/subtree だけで、付けるのは属性 → 自分の変更で再発火しない。 */
+  var mark = function(){
+    Array.prototype.forEach.call(aside.querySelectorAll('.fitem'), function(el){
+      var s = el.querySelector('span:not(.cnt)'); if(!s) return;
+      var over = s.scrollWidth > s.clientWidth + 1;
+      if (over && !el.getAttribute('title')) el.setAttribute('title', s.textContent.trim());
+      if (!over && el.dataset.autoTitle) { el.removeAttribute('title'); delete el.dataset.autoTitle; }
+      if (over && !el.dataset.autoTitle) el.dataset.autoTitle = '1';
+    });
+  };
+  mark();
+  if (window.MutationObserver) new MutationObserver(mark).observe(aside, {childList:true, subtree:true});
+})();

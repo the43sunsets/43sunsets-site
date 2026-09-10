@@ -242,3 +242,67 @@ aside.sg-locked{ opacity:.45; filter:blur(1.5px); pointer-events:none; user-sele
   body header.site-head{ flex-wrap:wrap; row-gap:4px; padding-bottom:8px; }
   .site-head .cnav{ order:3; flex-basis:100%; margin-left:2px; justify-content:flex-start; gap:16px; padding-top:2px; }
 }
+
+/* ── 左の絞り込みトグル(2026-09-10 CEO 指摘)── 3 つの別々の欠陥を直す。
+   ① 幅: 「医薬・ライフサイエンス」(149px)が、使える 170px のうち件数と取り合って 3 桁で 2 行に折れていた(実測)。
+      **基本フォントサイズは変えない**(CEO 指示)ので、列 +16px・左右余白 −12px・gap −2px で幅を稼ぐ。
+   ② 横の見切れ: 9/8 に subsidies だけ `white-space:nowrap` を足したため、件数が伸びると横にはみ出して切れる(潜在)。
+      → ラベル側を min-width:0 + ellipsis、件数側を flex:none にして、必ず 1 行・必ず収まるようにする。
+   ③ 縦の見切れ: 中身が可視領域の 1.5〜2.2 倍(実測 建設許可 1,187 / 採用 1,564 / 補助金 1,716 px vs 可視 787px)。
+      macOS のオーバーレイ scrollbar は触るまで出ないので「続きがある」と分からない → 余白を詰め、scrollbar を常時見せ、
+      上下に「まだ続く」影を出す(端に着くと自動で消える local/scroll 二層グラデーション)。
+   携帯(≤820px)は既存の「絞り込み ▾」折り畳みが別に効いているので触らない。 */
+@media (min-width:821px){
+  /* ① 幅を稼ぐ。⚠️ 左 40px は「ロゴ・ヘッダーの左端と揃える」意図的な余白(実測 9/10: ロゴ 40px = ヘッダー padding 40px
+     = サイドバー項目 40px)なので触らない。列幅 +12px と右余白 −10px で稼ぐ。
+     ⚠️ 列幅の上限は 278px。カード表は `body .grid{minmax(360px,1fr); gap:16px}` なので 3 列に grid 幅 1,112px が要り、
+     1470px の画面では サイドバー ≤ 1470−1112−80(main の左右 padding) = 278px。300px にすると 3 列 → 2 列に減る(9/10 実測)。 */
+  body .app{ grid-template-columns:276px minmax(0,1fr); }
+  body aside{ padding-right:12px; }
+
+  /* ② 必ず 1 行に収める(ラベルは縮む・件数は縮まない) */
+  body .fitem{ gap:6px; flex-wrap:nowrap; }
+  body .fitem > span:not(.cnt){ min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  body .fitem .cnt{ flex:none; margin-left:auto; padding-left:6px; }
+
+  /* ③-a 縦を詰める(font-size は触らない) */
+  body .fitem{ padding:3px 0; }
+  body .fgroup{ margin-bottom:16px; }
+  body .fgroup h2{ margin:0 0 6px; padding-bottom:5px; }
+
+  /* ③-b スクロールできることを見せる */
+  body aside{ scrollbar-width:thin; scrollbar-color:var(--line) transparent;
+    background:
+      linear-gradient(var(--paper), rgba(0,0,0,0)) center top / 100% 18px no-repeat local,
+      linear-gradient(rgba(0,0,0,0), var(--paper)) center bottom / 100% 18px no-repeat local,
+      radial-gradient(farthest-side at 50% 0, rgba(31,37,44,.16), rgba(0,0,0,0)) center top / 100% 8px no-repeat scroll,
+      radial-gradient(farthest-side at 50% 100%, rgba(31,37,44,.16), rgba(0,0,0,0)) center bottom / 100% 8px no-repeat scroll;
+  }
+  body aside::-webkit-scrollbar{ width:9px; }
+  body aside::-webkit-scrollbar-track{ background:transparent; }
+  body aside::-webkit-scrollbar-thumb{ background:var(--line); border-radius:6px; border:2px solid var(--paper); }
+  body aside::-webkit-scrollbar-thumb:hover{ background:var(--mute); }
+
+  /* ③-c 注記は折り畳む(既定は閉じる。markup の挿入は nav.js) */
+  body details.fnote-fold{ margin-top:14px; border-top:1px solid var(--line-soft); padding-top:8px; }
+  body details.fnote-fold > summary{ font-size:11.5px; color:var(--sub); cursor:pointer; list-style:none; padding:2px 0; user-select:none; }
+  body details.fnote-fold > summary::-webkit-details-marker{ display:none; }
+  body details.fnote-fold > summary::before{ content:"▸ "; color:var(--mute); }
+  body details.fnote-fold[open] > summary::before{ content:"▾ "; }
+  body details.fnote-fold > summary:hover{ color:var(--accent); }
+  body details.fnote-fold .fnote{ margin-top:6px; border-top:0; padding-top:0; }
+}
+
+/* ③-d グループを畳めるようにする(2026-09-10)。補助金 6 群・UCC 4 群(項目 69)は全部開くと物理的に画面へ入らない
+   (実測: UCC 2,390px vs 可視 787px)。既定は全部開いたまま = 表示は従来どおり。畳んだ状態は面ごとに記憶する。 */
+@media (min-width:821px){
+  body .fgroup h2 .fgroup-toggle{ display:flex; width:100%; align-items:center; justify-content:space-between; gap:8px;
+    background:none; border:0; padding:0; margin:0; font:inherit; color:inherit; letter-spacing:inherit; text-transform:inherit; text-align:left; cursor:pointer; }
+  body .fgroup h2 .fgroup-toggle::after{ content:"▾"; color:var(--mute); font-size:11px; line-height:1; flex:none; }
+  body .fgroup.folded h2 .fgroup-toggle::after{ content:"▸"; }
+  body .fgroup h2 .fgroup-toggle:hover{ color:var(--accent); }
+  body .fgroup h2 .fgroup-toggle:hover::after{ color:var(--accent); }
+  body .fgroup.folded > *:not(h2){ display:none; }
+  body .fgroup.folded{ margin-bottom:8px; }
+  body .fgroup.folded h2{ margin-bottom:0; }
+}
