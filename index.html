@@ -52,7 +52,9 @@ nav a.lang{font-family:var(--mono);font-weight:600;letter-spacing:.14em;font-siz
 .hero .lead{font-size:15.5px;line-height:1.95;margin:0 0 28px;color:rgba(255,255,255,.94);text-shadow:0 1px 14px rgba(0,0,0,.35)}
 /* 2026-09-09 CEO: 右文言の改行は固定(常にこの並び)。最長の 1 行目(30 字)が列幅に入る大きさまで縮め、行内では折り返さない。600px 以下は折り返しを許す(読める大きさを優先) */
 .hero .txt > div:last-child{container-type:inline-size}
-.hero .lead{font-size:min(15.5px, 3.2cqw)} .hero .lead .nw{white-space:nowrap}
+.hero .lead{font-size:15.5px} .hero .lead .nw{white-space:nowrap}
+/* 9/9 CEO「文字が小さすぎる」: 縮めない。最長行(30 字 ≈ 480px)が入らない幅(< 1280px)は右列を下に回して 1 列にする */
+@media (max-width:1279px){ .hero .txt{grid-template-columns:1fr; gap:20px} .hero .txt > div:first-child{padding-bottom:0} }
 @media (max-width:600px){ .hero .lead{font-size:15px} .hero .lead .nw{white-space:normal} }
 .hero .lead p{margin:0 0 10px}
 .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
