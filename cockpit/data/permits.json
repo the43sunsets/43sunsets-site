@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-11T01:09:29+00:00",
+"generated_at": "2026-09-11T01:13:31+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,12 +15,12 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 50366,
-"candidates": 733,
+"signals_total": 50659,
+"candidates": 736,
 "enriched": 32673,
 "targets": 122,
 "unclassified": 32551,
-"unevaluated": 17693,
+"unevaluated": 17986,
 "by_category": {
 "データセンター建設": 7,
 "医療施設": 56,
@@ -1420,6 +1420,23 @@
 "date_min": "2026-07-13",
 "date_max": "2026-08-18",
 "owner_coverage": 8,
+"targets": 0,
+"cadence": "daily",
+"next_run_at": null,
+"interrupted": false
+},
+{
+"source_id": "SRC-125",
+"state": "IL",
+"jurisdiction": "Grayslake",
+"label": "グレイズレイク村 建築許可(FOIA 回答・Issued Permits Report の PDF 30 頁・施工業者/地番/金額あり)",
+"last_run_status": "ok",
+"last_run_at": "2026-09-11T01:12:52Z",
+"last_run_note": "ingested from grayslake.json",
+"signals": 293,
+"date_min": "2026-07-01",
+"date_max": "2026-08-31",
+"owner_coverage": 0,
 "targets": 0,
 "cadence": "daily",
 "next_run_at": null,
