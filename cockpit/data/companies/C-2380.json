@@ -14,10 +14,58 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 1.0,
-"latest": "2026-08-07",
+"count": 3,
+"value_total": 40001.0,
+"latest": "2026-09-10",
 "items": [
+{
+"id": "S-52633",
+"date": "2026-09-10",
+"applied": "2026-06-08",
+"state": "IL",
+"jurisdiction": "Elmhurst",
+"address": "424 W AVERY ST ELMHURST IL 60126",
+"permit_no": "RESIR-009509-2026",
+"permit_type": "Interior Remodel - Residential",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Elmhurst 424 W Avery St の住宅地下室を未完成部分から仕上げレクリエーションエリアへ改修 $10,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "The basement was updated from an unfinished area to a finished recreational area. The work performed consisted of the following:\n•\tConstruction of 3 non-load-bearing partition walls to define and separate portions of the basement.\n1.\tSeparate the laundry sink/sump pump area\n2.\tSeparate the water mai",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01B5JKrVs3MKSaboGQuHfNsv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-52632",
+"date": "2026-09-10",
+"applied": "2026-05-29",
+"state": "IL",
+"jurisdiction": "Elmhurst",
+"address": "953 S KIRK AVE ELMHURST IL 60126",
+"permit_no": "RESIR-009378-2026",
+"permit_type": "Interior Remodel - Residential",
+"value": 30000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Elmhurst 953 S Kirk Ave の住宅内装改修(無許可工事の事後申請)$30k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "interior remodel - work done w/out permits\n**PERMITS ARE GOOD FOR 1 YEAR FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50% OF THE TOTAL COST OF THE PERMIT WILL BE INVOICED; THIS WILL EXTEND THE PERMIT FOR 30DAYS. AFTER THE 30 DAY EXTENSION HAS EXPIRED A FEE OF $100.00 PER D",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01B5JKrVs3MKSaboGQuHfNsv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-17460",
 "date": "2026-08-07",
@@ -69,6 +117,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-10",
+"face": "permits",
+"title": "建設許可(Elmhurst): 未分類",
+"ref": "S-52633",
+"summary": "Elmhurst 424 W Avery St の住宅地下室を未完成部分から仕上げレクリエーションエリアへ改修 $10,000。"
+},
+{
+"date": "2026-09-10",
+"face": "permits",
+"title": "建設許可(Elmhurst): 未分類",
+"ref": "S-52632",
+"summary": "Elmhurst 953 S Kirk Ave の住宅内装改修(無許可工事の事後申請)$30k。"
+},
+{
 "date": "2026-08-07",
 "face": "permits",
 "title": "建設許可(Elmhurst): 未分類",
@@ -76,6 +138,6 @@
 "summary": "Elmhurst 273 W KIMBELL AVE ELMHURST IL 60126 の既存デッキ(取得前に建築、詳細不明のため目視による推定評価額) $1(名目額)。所有者: Mash Properties Series LL。"
 }
 ],
-"generated_at": "2026-09-11T10:36:35+00:00",
+"generated_at": "2026-09-11T12:30:06+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 2500.0,
-"latest": "2026-08-20",
+"count": 2,
+"value_total": 12500.0,
+"latest": "2026-09-09",
 "items": [
+{
+"id": "S-52363",
+"date": "2026-09-09",
+"applied": "2026-08-23",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "11730 S STATE ST",
+"permit_no": "101087577",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 11730 S State St のアパート南面で既存木製ポーチを同種・同規模・同位置で交換 $10k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SPR 2019 CBC. REPLACE EXISTING OPEN WOOD SIDE PORCH AT SOUTH ELEVATION WITH PORCH SAME KIND, SIZE AND LOCATION. ALL WORK AS PER PLANS.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01B5JKrVs3MKSaboGQuHfNsv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-6379",
 "date": "2026-08-20",
@@ -69,6 +93,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-09",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-52363",
+"summary": "Chicago 11730 S State St のアパート南面で既存木製ポーチを同種・同規模・同位置で交換 $10k。"
+},
+{
 "date": "2026-08-20",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -76,6 +107,6 @@
 "summary": "Chicago 11730 S STATE ST のアパートで無許可施工だった木製フェンス(高さ6'×長さ120')を追認合法化 $2.5k。"
 }
 ],
-"generated_at": "2026-09-11T10:36:35+00:00",
+"generated_at": "2026-09-11T12:30:06+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 5,
-"value_total": 5389160.0,
-"latest": "2026-09-03",
+"count": 6,
+"value_total": 5399160.0,
+"latest": "2026-09-09",
 "items": [
+{
+"id": "S-52406",
+"date": "2026-09-09",
+"applied": "2026-09-04",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "600 E GRAND AVE",
+"permit_no": "101088193",
+"permit_type": "PERMIT - NEW CONSTRUCTION",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Navy Pier(Festival Halls A&B)でのコンサート用仮設ステージ設置許可 $10k(2026年9月11-12日イベント、9/9設営〜9/13撤去)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "PERMIT EXPIRES ON 11/08/2026 ERECTION STARTS: 9/9/2026, ERECTION ENDS: 9/13/2026.  SELF-CERT - CBC 2019. ERECTION OF TEMPORARY STAGE FOR A SKRILLEX CONCERT AT NAVY PIER- FESTIVAL HALLS A&B, EVENT DATES SEPTEMBER 11-12TH,  2026. SET-UP IS SEPT 9TH AND TAKEDOWN IS SEPT 13TH. OVERALL SQUARE FOOTAGE IS ",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01B5JKrVs3MKSaboGQuHfNsv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-26230",
 "date": "2026-09-03",
@@ -165,6 +189,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-09",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-52406",
+"summary": "Navy Pier(Festival Halls A&B)でのコンサート用仮設ステージ設置許可 $10k(2026年9月11-12日イベント、9/9設営〜9/13撤去)。"
+},
+{
 "date": "2026-09-03",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -200,6 +231,6 @@
 "summary": "Navy Pier敷地内コンサートステージの仮設構造物(2日間イベント) $150k。"
 }
 ],
-"generated_at": "2026-09-11T10:36:35+00:00",
+"generated_at": "2026-09-11T12:30:06+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

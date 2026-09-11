@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 7,
-"value_total": 21720082.0,
-"latest": "2026-09-08",
+"count": 8,
+"value_total": 21720182.0,
+"latest": "2026-09-09",
 "items": [
+{
+"id": "S-52322",
+"date": "2026-09-09",
+"applied": "2026-09-03",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "11601 W TOUHY AVE",
+"permit_no": "B200510337",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 100.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "O'Hare 空港内 Hilton Chicago O'Hare でのライン電圧の電気修理(コンセント1・照明1)の簡易許可 $100。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 1. SPECIFIC LOCATION: HILTON CHICAGO O'HARE.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01B5JKrVs3MKSaboGQuHfNsv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-50955",
 "date": "2026-09-08",
@@ -213,6 +237,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-09",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-52322",
+"summary": "O'Hare 空港内 Hilton Chicago O'Hare でのライン電圧の電気修理(コンセント1・照明1)の簡易許可 $100。"
+},
+{
 "date": "2026-09-08",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -262,6 +293,6 @@
 "summary": "Chicago 11601 W TOUHY AVE(Hilton Chicago O'Hare)で既存回路の軽微な電気修理(コンセント1・照明1)。申請者: Liang, Shile / Chicago Department of Aviation。"
 }
 ],
-"generated_at": "2026-09-11T10:36:35+00:00",
+"generated_at": "2026-09-11T12:30:06+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
