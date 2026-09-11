@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-11T08:10:58+00:00",
+"generated_at": "2026-09-11T12:30:37+00:00",
 "states": [
 "IL",
 "IN",
@@ -40,13 +40,13 @@
 "funnel": {
 "filings_total": 954,
 "with_collateral": 939,
-"read": 894,
-"unread": 45,
+"read": 896,
+"unread": 43,
 "no_text_yet": 15,
 "by_kind": {
 "与信枠の新設": 55,
 "未分類": 26,
-"設備投資": 748,
+"設備投資": 750,
 "資金繰り警戒": 2,
 "雑音": 63
 },
@@ -63,7 +63,7 @@
 },
 "catalog": {
 "equipment_rows": 269,
-"equipment_hits": 839,
+"equipment_hits": 841,
 "equipment_misses": 23,
 "companies_checked": 2830,
 "companies_total": 496
@@ -96,6 +96,154 @@
 "jp_rule": "日系 = 在シカゴ総領事館 2025 名簿(中西部 10 州)または人の確認で確定した会社。AI 判定のみは「日系?」(候補)で、日系トグルには入らない"
 },
 "signals": [
+{
+"id": "U-103468",
+"state": "OH",
+"company": "FAXON MACHINING, LLC",
+"company_id": null,
+"entity_type": "corp",
+"city": "Cincinnati, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "Mazak",
+"maker_raw": "MAZAK",
+"model": "不明・製番のみ",
+"serial": "368173",
+"qty": 1,
+"domain": "切削加工",
+"process": "切削加工",
+"type": "不明(製番のみ)",
+"automation": false,
+"source_url": null,
+"checked_at": "2026-09-05",
+"confidence": "low",
+"verified": false
+}
+],
+"domains": [
+"切削加工"
+],
+"makers": [
+"Mazak"
+],
+"industry": "機械・金属",
+"industry_basis": "filing",
+"made": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"confidence": "high",
+"date": "2026-09-10",
+"lapse": "2031-09-10",
+"new": true,
+"summary": "FAXON MACHINING, LLC(Cincinnati, OH)が Mazak Corporation を担保権者として MAZAK 製工作機械(製番 368173)を登記(2026-09-10)。",
+"infer": "工作機械の導入による加工能力増強の可能性(推論)。",
+"karte": null,
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00301598069 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01M6FuTBjoTUJa4XtEeL61yM",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-11T12:30:37+00:00"
+},
+"tier": "fact",
+"candidate": false,
+"candidate_score": 0,
+"candidate_reason": null,
+"copy": {
+"status": "free",
+"fs_number": "OH00301598069",
+"price_usd": 0
+}
+},
+{
+"id": "U-103467",
+"state": "OH",
+"company": "FAXON MACHINING, LLC",
+"company_id": null,
+"entity_type": "corp",
+"city": "Cincinnati, OH",
+"secured_party": "Mazak Corporation",
+"secured_party_city": "Florence, KY",
+"maker_query": "MAZAK",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "Mazak",
+"maker_raw": "MAZAK",
+"model": "不明・製番のみ",
+"serial": "368174",
+"qty": 1,
+"domain": "切削加工",
+"process": "切削加工",
+"type": "不明(製番のみ)",
+"automation": false,
+"source_url": null,
+"checked_at": "2026-09-05",
+"confidence": "low",
+"verified": false
+}
+],
+"domains": [
+"切削加工"
+],
+"makers": [
+"Mazak"
+],
+"industry": "機械・金属",
+"industry_basis": "filing",
+"made": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"confidence": "high",
+"date": "2026-09-10",
+"lapse": "2031-09-10",
+"new": true,
+"summary": "FAXON MACHINING, LLC(Cincinnati, OH)が Mazak Corporation を担保権者として MAZAK 製工作機械(製番 368174)を登記(2026-09-10)。",
+"infer": "加工能力増強・既存機更新の可能性(推論)。",
+"karte": null,
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00301597279 Original",
+"verbatim": "All of the Lessee's / Purchaser's right, title and interest in the property described below, and to all of the following, whether now owned or hereafter acquired and wherever located; all accessories, parts, and other property now and hereafter affixed to, or used in connection with the property described below; all substitutions for and replacements of the property; and all proceeds from the sale, lease, license, exchange or disposition of all the foregoing and of all the property below including without limitation any leases of any of the property below or any claims or insurance proceeds wi",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01M6FuTBjoTUJa4XtEeL61yM",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-11T12:30:37+00:00"
+},
+"tier": "fact",
+"candidate": false,
+"candidate_score": 0,
+"candidate_reason": null,
+"copy": {
+"status": "free",
+"fs_number": "OH00301597279",
+"price_usd": 0
+}
+},
 {
 "id": "U-43361",
 "state": "OH",
