@@ -14,10 +14,35 @@
 "master_checked_at": "2026-09-08",
 "faces": {
 "permits": {
-"count": 0,
-"value_total": 0,
-"latest": null,
-"items": []
+"count": 1,
+"value_total": 23000000.0,
+"latest": "2026-08-19",
+"items": [
+{
+"id": "S-51549",
+"date": "2026-08-19",
+"applied": "2026-08-17",
+"state": "IL",
+"jurisdiction": "East Peoria",
+"address": "901 W WASHINGTON ST EAST PEORIA, ILLINOIS 61611",
+"permit_no": "BLDC-2026-0251",
+"permit_type": "Building - Commercial",
+"value": 23000000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Caterpillar の East Peoria 拠点(901 W Washington St)Building HH の屋根改修 $23M。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Caterpillar Building HH Roof Replacement / Remodel",
+"source_id": "SRC-123",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01Axd6ttMK5jqk2LstWLf1Ey",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
 },
 "ucc": {
 "count": 0,
@@ -197,6 +222,13 @@
 },
 "timeline": [
 {
+"date": "2026-08-19",
+"face": "permits",
+"title": "建設許可(East Peoria): 未分類",
+"ref": "S-51549",
+"summary": "Caterpillar の East Peoria 拠点(901 W Washington St)Building HH の屋根改修 $23M。"
+},
+{
 "date": "2024-11-19",
 "face": "grants",
 "title": "助成(州・Indiana IEDC): 訓練・インフラ・その他",
@@ -232,6 +264,6 @@
 "summary": "米国エネルギー省(DOE)がキャタピラー社に対し、天然ガス/水素対応の柔軟なコジェネレーション(CHP)システムの研究開発に$4.55Mを助成。2021年9月から2025年12月までの期間の事業。"
 }
 ],
-"generated_at": "2026-09-10T21:01:24+00:00",
+"generated_at": "2026-09-11T02:35:53+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

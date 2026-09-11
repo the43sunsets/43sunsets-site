@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-11T01:36:13+00:00",
+"generated_at": "2026-09-11T02:35:50+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,17 +17,17 @@
 "funnel": {
 "signals_total": 50946,
 "candidates": 740,
-"enriched": 32673,
-"targets": 122,
-"unclassified": 32551,
-"unevaluated": 18273,
+"enriched": 33454,
+"targets": 124,
+"unclassified": 33330,
+"unevaluated": 17492,
 "by_category": {
-"データセンター建設": 7,
+"データセンター建設": 8,
 "医療施設": 56,
-"未分類": 32551,
+"未分類": 33330,
 "物流・倉庫の新設": 15,
 "研究・ラボ施設": 14,
-"製造能力の増強": 30
+"製造能力の増強": 31
 }
 },
 "sources": [
@@ -1437,7 +1437,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-08-31",
 "owner_coverage": 0,
-"targets": 0,
+"targets": 1,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -1471,7 +1471,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-07-31",
 "owner_coverage": 62,
-"targets": 0,
+"targets": 1,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -1567,7 +1567,7 @@
 },
 "unclassified_by_state": {
 "OH": 5452,
-"IL": 24878,
+"IL": 25657,
 "MI": 1632,
 "IN": 6,
 "WI": 583
@@ -4783,6 +4783,56 @@
 "source_label": null
 },
 "parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": "CLUNE CONSTRUCTION COMPANY"
+},
+"id": "S-51738",
+"state": "IL",
+"city": "Grayslake・1700 Cornerstone Pkwy",
+"company": "所有者・申請者の記載なし",
+"entity_type": "unknown",
+"company_basis": null,
+"industry": "データセンター",
+"category": "データセンター建設",
+"category_raw": "データセンター建設",
+"confidence": "high",
+"date": "2026-07-30",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "Grayslake 1700 Cornerstone Pkwy にデータセンター「Building 1」の基礎工事(Foundation Only)$54.1M。",
+"infer": "新築データセンターの基礎工事段階 = 今後の建築本体・電源増強・冷却設備の調達が続く窓の可能性(推論)。所有者・運営事業者は記録上不明。",
+"note": null,
+"fact": {
+"src": "グレイズレイク村 建築許可(FOIA 回答・Issued Permits Report の PDF 30 頁・施工業者/地番/金額あり)",
+"ref": "許可 P2026-0859 Foundation Only",
+"value": 54070641.0,
+"verbatim": "FOUNDATION ONLY - NEW CONSTRUCTION - DATA CENTER BUILDING 1 / Foundation Only / ISSUED",
+"gc": "CLUNE CONSTRUCTION COMPANY",
+"pin": "00-00-000-002",
+"owner_source": null
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01Axd6ttMK5jqk2LstWLf1Ey",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-11T02:35:35+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
 "owner_of_record": "10801 MADISON AVENUE OWNER LLC",
 "owner_kind": "課税台帳",
 "owner_is_spe": true,
@@ -6826,6 +6876,56 @@
 },
 {
 "investor": {
+"name": "DEERE & CO/TAX DEP",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "permit_owner",
+"source_label": "許可記録(所有者欄)"
+},
+"parties": {
+"owner_of_record": "DEERE & CO/TAX DEP",
+"owner_kind": "登記名義",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "RUSSELL CONSTRUCTI"
+},
+"id": "S-51968",
+"state": "IL",
+"city": "Rock Island County・1 JOHN DEERE",
+"company": "DEERE & CO/TAX DEP",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "機械・金属",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-07-08",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "John Deere の Moline 拠点(1 John Deere)で EOB(本社事務棟)エレベーター現代化工事 $2.4M。",
+"infer": "エレベーター更新は本社/事務棟の設備維持であり、生産ライン増強の直接的シグナルではない可能性(推論)。",
+"note": null,
+"fact": {
+"src": "ロックアイランド郡 建築許可(FOIA 回答・Permits by Township・郡発行・7 月分のみ交付)",
+"ref": "許可 26-0394 Commercial Building",
+"value": 2429796.0,
+"verbatim": "EOB ELEVATOR MODERNIZATION / Commercial Building / Building - 1 bid / MOLINE",
+"gc": "RUSSELL CONSTRUCTI",
+"pin": "06103",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-12483",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01Axd6ttMK5jqk2LstWLf1Ey",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-11T02:35:35+00:00"
+}
+},
+{
+"investor": {
 "name": "PCI Pharma Services",
 "basis": "operator",
 "label": "操業事業者",
@@ -8251,6 +8351,20 @@
 ]
 },
 {
+"id": "C-12483",
+"name": "DEERE & CO/TAX DEP",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 2429796.0,
+"states": "IL",
+"latest": "2026-07-08",
+"targets": 1,
+"signal_ids": [
+"S-51968"
+]
+},
+{
 "id": "C-7738",
 "name": "Hyde Park Labs",
 "entity_type": "corp",
@@ -9409,6 +9523,20 @@
 "S-896",
 "S-947",
 "S-4036"
+]
+},
+{
+"id": "C-3812",
+"name": "CATERPILLAR, INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 23000000.0,
+"states": "IL",
+"latest": "2026-08-19",
+"targets": 0,
+"signal_ids": [
+"S-51549"
 ]
 },
 {
@@ -11805,6 +11933,30 @@
 ]
 },
 {
+"id": "C-12476",
+"name": "TPG AG EHC III LEN MULTI STATE 6 LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 11,
+"value_total": 2056821.0,
+"states": "IL",
+"latest": "2026-08-24",
+"targets": 0,
+"signal_ids": [
+"S-51876",
+"S-51908",
+"S-51909",
+"S-51910",
+"S-51911",
+"S-51912",
+"S-51913",
+"S-51954",
+"S-51955",
+"S-51956",
+"S-51958"
+]
+},
+{
 "id": "C-422",
 "name": "GT ALTERNATIVES LLC",
 "entity_type": "spe",
@@ -12754,6 +12906,21 @@
 "targets": 0,
 "signal_ids": [
 "S-24733"
+]
+},
+{
+"id": "C-12475",
+"name": "HREP JOHNSBURG LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 1500000.0,
+"states": "IL",
+"latest": "2026-08-10",
+"targets": 0,
+"signal_ids": [
+"S-51907",
+"S-51953"
 ]
 },
 {
@@ -14482,6 +14649,21 @@
 "targets": 0,
 "signal_ids": [
 "S-26237"
+]
+},
+{
+"id": "C-12474",
+"name": "KLM BUILDERS INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 898900.0,
+"states": "IL",
+"latest": "2026-08-13",
+"targets": 0,
+"signal_ids": [
+"S-51914",
+"S-51957"
 ]
 },
 {
@@ -39315,6 +39497,20 @@
 ]
 },
 {
+"id": "C-12485",
+"name": "TOPPCO LTD",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 15000.0,
+"states": "IL",
+"latest": "2026-07-27",
+"targets": 0,
+"signal_ids": [
+"S-51961"
+]
+},
+{
 "id": "C-1552",
 "name": "IMKD 2 LLC",
 "entity_type": "spe",
@@ -41937,6 +42133,20 @@
 ]
 },
 {
+"id": "C-12487",
+"name": "LUEBBE TRINA LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 10640.0,
+"states": "IL",
+"latest": "2026-07-16",
+"targets": 0,
+"signal_ids": [
+"S-52016"
+]
+},
+{
 "id": "C-2872",
 "name": "Complete Fence - Batavia",
 "entity_type": "corp",
@@ -44453,6 +44663,20 @@
 ]
 },
 {
+"id": "C-12480",
+"name": "CASEYS RETAIL CO",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 7690.0,
+"states": "IL",
+"latest": "2026-07-06",
+"targets": 0,
+"signal_ids": [
+"S-52005"
+]
+},
+{
 "id": "C-1808",
 "name": "RESDENTIAL HEATING & COOLING",
 "entity_type": "corp",
@@ -46210,6 +46434,20 @@
 "targets": 0,
 "signal_ids": [
 "S-50620"
+]
+},
+{
+"id": "C-12484",
+"name": "Jidi Properties LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 6000.0,
+"states": "IL",
+"latest": "2026-08-24",
+"targets": 0,
+"signal_ids": [
+"S-52147"
 ]
 },
 {
@@ -50807,6 +51045,20 @@
 ]
 },
 {
+"id": "C-12481",
+"name": "3607 CHAPEL HILL LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 2500.0,
+"states": "IL",
+"latest": "2026-07-31",
+"targets": 0,
+"signal_ids": [
+"S-51905"
+]
+},
+{
 "id": "C-2188",
 "name": "QUALITY HVAC SOLUTIONS LLC",
 "entity_type": "spe",
@@ -52473,6 +52725,20 @@
 ]
 },
 {
+"id": "C-12479",
+"name": "FOX RIVER OWNER LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1500.0,
+"states": "IL",
+"latest": "2026-08-04",
+"targets": 0,
+"signal_ids": [
+"S-51926"
+]
+},
+{
 "id": "C-2289",
 "name": "708 W 65TH ST LLC",
 "entity_type": "spe",
@@ -52990,6 +53256,20 @@
 "targets": 0,
 "signal_ids": [
 "S-47780"
+]
+},
+{
+"id": "C-12486",
+"name": "SL BOARDMAN HOLDI",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1000.0,
+"states": "IL",
+"latest": "2026-07-01",
+"targets": 0,
+"signal_ids": [
+"S-51988"
 ]
 },
 {
@@ -61158,6 +61438,64 @@
 "targets": 0,
 "signal_ids": [
 "S-51120"
+]
+},
+{
+"id": "C-12473",
+"name": "PEERLESS ENTERPRISES LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-08-04",
+"targets": 0,
+"signal_ids": [
+"S-51379",
+"S-51393"
+]
+},
+{
+"id": "C-12477",
+"name": "SQUAW HOLDINGS LL",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0.0,
+"states": "IL",
+"latest": "2026-07-06",
+"targets": 0,
+"signal_ids": [
+"S-51976"
+]
+},
+{
+"id": "C-12478",
+"name": "CKBP LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0.0,
+"states": "IL",
+"latest": "2026-07-24",
+"targets": 0,
+"signal_ids": [
+"S-51974"
+]
+},
+{
+"id": "C-12482",
+"name": "T K CONSTRUCTION",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-07-09",
+"targets": 0,
+"signal_ids": [
+"S-51381",
+"S-51382"
 ]
 }
 ]
