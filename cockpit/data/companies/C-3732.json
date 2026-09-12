@@ -14,10 +14,58 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 12,
-"value_total": 12057571.99,
-"latest": "2026-09-04",
+"count": 14,
+"value_total": 13561071.99,
+"latest": "2026-09-09",
 "items": [
+{
+"id": "S-53303",
+"date": "2026-09-09",
+"applied": "2026-09-09",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "705 E PETE ROSE WY",
+"permit_no": "2026P08562",
+"permit_type": "Misc. Structures",
+"value": 3500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati市所有の705 E Pete Rose Wy(A-5用途)における雑構造物(Misc. Structures)許可 $3,500。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Misc. Structures / Misc. Structures / A-5",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0111czRsgdugDWzXi3UgsAT1",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-53311",
+"date": "2026-09-09",
+"applied": "2026-05-28",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "4765 AIRPORT RD",
+"permit_no": "2026P04875",
+"permit_type": "Building",
+"value": 1500000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati市所有の4765 Airport Rdの施設でS-1倉庫用途の増築工事$1.5M。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Addition / Building / S-1",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0111czRsgdugDWzXi3UgsAT1",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-47286",
 "date": "2026-09-04",
@@ -333,6 +381,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-09",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-53303",
+"summary": "Cincinnati市所有の705 E Pete Rose Wy(A-5用途)における雑構造物(Misc. Structures)許可 $3,500。"
+},
+{
+"date": "2026-09-09",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-53311",
+"summary": "Cincinnati市所有の4765 Airport Rdの施設でS-1倉庫用途の増築工事$1.5M。"
+},
+{
 "date": "2026-09-04",
 "face": "permits",
 "title": "建設許可(Cincinnati): 未分類",
@@ -417,6 +479,6 @@
 "summary": "Cincinnati 市所有建物(425 Walnut St)のエレベーター許可 $1.6M。"
 }
 ],
-"generated_at": "2026-09-12T08:27:55+00:00",
+"generated_at": "2026-09-12T08:45:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

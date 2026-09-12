@@ -14,10 +14,58 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 4,
+"count": 6,
 "value_total": 51000000.0,
-"latest": "2026-08-10",
+"latest": "2026-09-09",
 "items": [
+{
+"id": "S-53335",
+"date": "2026-09-09",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 RIVERSIDE PLZ",
+"permit_no": "EMEPC2636177",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "American Electric Power Service Corp(Columbus 1 Riverside Plz)の電気設備工事(MEP)。金額不明。",
+"infer": "本文の情報が汎用的で用途が特定できない(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0111czRsgdugDWzXi3UgsAT1",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-53334",
+"date": "2026-09-09",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 RIVERSIDE PLZ",
+"permit_no": "EMEPC2636183",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "American Electric Power Service Corp(Columbus 1 Riverside Plz)の電気(MEP)工事許可。金額不明。",
+"infer": "電力会社の自社施設に対する一般的な電気工事の可能性(推論)。用途・規模が不明で生産設備投資シグナルとは判定できない。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0111czRsgdugDWzXi3UgsAT1",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-1818",
 "date": "2026-08-10",
@@ -141,6 +189,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-09",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-53335",
+"summary": "American Electric Power Service Corp(Columbus 1 Riverside Plz)の電気設備工事(MEP)。金額不明。"
+},
+{
+"date": "2026-09-09",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-53334",
+"summary": "American Electric Power Service Corp(Columbus 1 Riverside Plz)の電気(MEP)工事許可。金額不明。"
+},
+{
 "date": "2026-08-10",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -169,6 +231,6 @@
 "summary": "American Electric Power の Columbus 本社(1 Riverside Plaza)における商業改修の着工前許可(Advance Construction Start)$10.5M。"
 }
 ],
-"generated_at": "2026-09-12T08:27:55+00:00",
+"generated_at": "2026-09-12T08:45:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

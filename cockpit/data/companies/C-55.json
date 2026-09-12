@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 18,
-"value_total": 18209558.0,
-"latest": "2026-09-09",
+"count": 19,
+"value_total": 18495558.0,
+"latest": "2026-09-10",
 "items": [
+{
+"id": "S-53156",
+"date": "2026-09-10",
+"applied": "2026-05-14",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5120 N WINTHROP AVE",
+"permit_no": "101083490",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 286000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago Public Schools の Goudy 校(5120 N Winthrop Ave)で舗装更新・遊具新設・階段手すり改修 $286k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SPR 2019 CBRC: CPS GOUDY - CONCRETE PAVEMENT REPLACEMENT, NEW PLAYGROUND EQUIPMENT, NEW HANDRAIL AT EXISTING BUILDING ACCESS STAIRS. OCCUPANCY GROUP E-1 (TO REMAIN), TYPE II-A | I-B CONSTRUCTION (TO REMAIN).",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0111czRsgdugDWzXi3UgsAT1",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-52382",
 "date": "2026-09-09",
@@ -477,6 +501,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-10",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-53156",
+"summary": "Chicago Public Schools の Goudy 校(5120 N Winthrop Ave)で舗装更新・遊具新設・階段手すり改修 $286k。"
+},
+{
 "date": "2026-09-09",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -603,6 +634,6 @@
 "summary": "学校の内装仕上げ更新 $1.1M。"
 }
 ],
-"generated_at": "2026-09-12T08:27:55+00:00",
+"generated_at": "2026-09-12T08:45:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
