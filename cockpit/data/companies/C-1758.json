@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 8600.0,
-"latest": "2026-08-10",
+"count": 2,
+"value_total": 168200.0,
+"latest": "2026-09-11",
 "items": [
+{
+"id": "S-54621",
+"date": "2026-09-11",
+"applied": "2026-08-27",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "730 N WABASH AVE",
+"permit_no": "B200509329",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 159600.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Archdiocese of Chicago 所有建物(730 N Wabash Ave)の東面タックポインティング・組積補修 $159.6k(3,500 SQ FT)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "TUCKPOINTING AND UNIT MASONRY REPAIR / REPLACEMENT: 3500 SQ. FT., LINTEL QTY. 0, MAX. LENGTH 0. LOCATION: EAST ELEVATION.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-5483",
 "date": "2026-08-10",
@@ -69,6 +93,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-11",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-54621",
+"summary": "Archdiocese of Chicago 所有建物(730 N Wabash Ave)の東面タックポインティング・組積補修 $159.6k(3,500 SQ FT)。"
+},
+{
 "date": "2026-08-10",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -76,6 +107,6 @@
 "summary": "Chicago 7200 N Osceola Ave(Archdiocese of Chicago 所有)で外壁タックポイント補修 $8.6k(規模は僅少)。"
 }
 ],
-"generated_at": "2026-09-14T08:09:56+00:00",
+"generated_at": "2026-09-14T08:45:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

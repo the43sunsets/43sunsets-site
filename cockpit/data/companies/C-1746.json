@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 9000.0,
-"latest": "2026-08-19",
+"count": 2,
+"value_total": 24000.0,
+"latest": "2026-09-11",
 "items": [
+{
+"id": "S-54589",
+"date": "2026-09-11",
+"applied": "2026-08-27",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "21 E CHESTNUT ST",
+"permit_no": "B200509384",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 15000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 21 E Chestnut St でルーフトップパッケージ空調機1台の交換工事 $15k(Carrier製、非住宅ユニット向け)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "REPAIR/REPLACEMENT AFFECTING 1 SYSTEMS :   1 ROOFTOP PACKAGED UNIT(CARRIER 48FEEM12A3A6-0A0A0 LOCATED ON ROOF) . ELECTRICAL WORK UNDER THIS PERMIT = YES . LOCATIONS: 0 RESIDENTIAL UNIT(S), 1 NON-RESIDENTIAL UNIT(S), EXTERIOR WORK,  ROOF OVER 1 STORY PORTION OF BUILDING ABOVE TENANT.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-6197",
 "date": "2026-08-19",
@@ -69,6 +93,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-11",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-54589",
+"summary": "Chicago 21 E Chestnut St でルーフトップパッケージ空調機1台の交換工事 $15k(Carrier製、非住宅ユニット向け)。"
+},
+{
 "date": "2026-08-19",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -76,6 +107,6 @@
 "summary": "Chicago のGAPストア店内で弱電設備の新設 $9.0k(REIT名義)。"
 }
 ],
-"generated_at": "2026-09-14T08:09:56+00:00",
+"generated_at": "2026-09-14T08:45:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

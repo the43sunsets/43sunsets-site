@@ -14,10 +14,34 @@
 "master_checked_at": "2026-09-06",
 "faces": {
 "permits": {
-"count": 5,
-"value_total": 120500000.0,
-"latest": "2026-09-04",
+"count": 6,
+"value_total": 215500000.0,
+"latest": "2026-09-10",
 "items": [
+{
+"id": "S-54704",
+"date": "2026-09-10",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "800 W NORTH BROADWAY",
+"permit_no": "FALRC2624895",
+"permit_type": "Fire Alarm",
+"value": 95000000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "OhioHealth(800 W North Broadway)の駐車場ガレージに関する火災報知設備許可 $95M。",
+"infer": "用途分類が「Parking Garages」であり、病院機能そのものの拡張ではなく附属駐車施設の工事の可能性(推論)。金額は火災報知設備単体としては高額で、駐車場新築等の親案件の一部を表している可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Alarm / Parking Garages (Buildings and Open Decked) / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-36659",
 "date": "2026-09-04",
@@ -191,6 +215,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-10",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-54704",
+"summary": "OhioHealth(800 W North Broadway)の駐車場ガレージに関する火災報知設備許可 $95M。"
+},
+{
 "date": "2026-09-04",
 "face": "permits",
 "title": "建設許可(Columbus): 医療施設",
@@ -226,6 +257,6 @@
 "summary": "OhioHealth の Columbus 施設(285 E State St)で 4,130 SQFT の改修工事 $2.0M。"
 }
 ],
-"generated_at": "2026-09-14T08:09:56+00:00",
+"generated_at": "2026-09-14T08:45:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

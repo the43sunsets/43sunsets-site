@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 620500.0,
-"latest": "2026-09-09",
+"count": 2,
+"value_total": 1215500.0,
+"latest": "2026-09-11",
 "items": [
+{
+"id": "S-54546",
+"date": "2026-09-11",
+"applied": "2026-07-02",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2909 N HOYNE AVE",
+"permit_no": "101085240",
+"permit_type": "PERMIT - NEW CONSTRUCTION",
+"value": 595000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 2909 N Hoyne Ave に2階建て2,814 SQFTの一戸建て住宅と2台用ガレージを新築 $595k(R-5用途)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF-CERT 2019 CBC: NEW CONSTRUCTION OF A (2,814) SQ. FT., 2-STORY, TYPE VA FRAME, 30' HT., SINGLE-FAMILY RESIDENCE WITH NEW (118) SQ. FT. REAR COVERED 1-STORY DECK, AND NEW (400) SQ. FT., TYPE VA FRAME, DETACHED 2-CAR GARAGE WITH ROOF DECK (OCCUPANCY GROUP R-5; TYPE VA CONSTRUCTION). CONDITIONAL AP",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-52411",
 "date": "2026-09-09",
@@ -69,6 +93,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-11",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-54546",
+"summary": "Chicago 2909 N Hoyne Ave に2階建て2,814 SQFTの一戸建て住宅と2台用ガレージを新築 $595k(R-5用途)。"
+},
+{
 "date": "2026-09-09",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -76,6 +107,6 @@
 "summary": "Chicago 2117 W Melrose St に 2,700 SQ FT の 2 階建て戸建住宅を新築 $620,500(付属ガレージ・デッキ含む)。"
 }
 ],
-"generated_at": "2026-09-14T08:09:56+00:00",
+"generated_at": "2026-09-14T08:45:05+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
