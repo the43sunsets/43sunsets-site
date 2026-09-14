@@ -3,7 +3,7 @@
 //   UCC・補助金・採用 = 見本(古い実例 数枚+件数)/企業カルテ = 建設許可の節だけ
 // を返す。建設許可・鮮度・景気・health・top・sources はそのまま通す(ログイン前フルアクセスの面)。
 // ログイン済みは静的ファイルをそのまま返す(next() = Pages の静的配信)。
-import { currentSession, json, logFaceDay } from "../../signal/_lib.js";
+import { store, currentSession, json, logFaceDay } from "../../signal/_lib.js";
 
 const GATED = new Set(["ucc.json", "ucc-wi.json", "subsidies.json", "hiring.json", "news.json", "macro.json"]);   // 9/9: ucc-wi.json = WI の索引行(推論段)   // 9/8 CEO: 景気の状況(ニュース 2 軸と AI の読み ②③)も見本モード
 const SAMPLE_N = 4;                    // 見本の枚数
@@ -42,8 +42,11 @@ async function sessionLimited(env, sid) {
     await cache.put(key, new Response(String(n), { headers: { "cache-control": "max-age=120", "content-type": "text/plain" } }));
   } catch (e) { n = 1; }
   try {
-    const kv = env.SIGNAL_AUTH || env.BEACON_REQUESTS;
-    if (kv && (n === 1 || n % 10 === 0)) { const day = new Date().toISOString().slice(0, 10); const dk = `sg:dl:${day}:${sid}`; const dn = parseInt((await kv.get(dk)) || "0", 10); await kv.put(dk, String(Math.max(dn, 0) + (n === 1 ? 1 : 10)), { expirationTtl: 30 * 86400 }); }
+    const kv = store(env);
+    if (kv && (n === 1 || n % 10 === 0)) {
+      const day = new Date().toISOString().slice(0, 10);
+      for (let i = 0; i < (n === 1 ? 1 : 10); i++) await kv.bumpDl(day, sid);
+    }
   } catch (e) { /* 控えは best effort */ }
   return n > SESSION_PER_MINUTE;
 }

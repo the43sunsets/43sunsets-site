@@ -1,15 +1,15 @@
+import { adminKey, configured } from "../_keys.js";
 // /signal/admin/decide?id=…&sig=… — 名簿外の登録を CEO がワンクリックで承認/却下する画面。
 // GET = ボタンのある画面(メールのリンクを開いただけでは何も起きない)/ POST = 確定。
-// 署名 = HMAC(SIGNAL_SECRET, "decide:"+id)。KV sg:dec:<id> は 7 日で消える(消えた後は登録一覧から手で承認)。
 import { store, checkDecisionSig, issueToken, sendMail, loginMail, origin, page, esc, APPROVED_TOKEN_SECONDS } from "../_lib.js";
 
 async function load(request, env) {
-  const kv = store(env); if (!kv || !env.SIGNAL_SECRET) return { err: page("接続なし", "<p>承認の仕組みが接続されていません。</p>", 503) };
+  const kv = store(env); if (!configured(env) || !adminKey(env)) return { err: page("接続なし", "<p>承認の仕組みが接続されていません。</p>", 503) };
   const u = new URL(request.url); const id = String(u.searchParams.get("id") || "").slice(0, 32); const sig = u.searchParams.get("sig");
   if (!/^[a-f0-9]{16}$/.test(id) || !(await checkDecisionSig(env, id, sig))) return { err: page("無効なリンク", "<p>このリンクは無効です。</p>", 403) };
-  const dec = await kv.get("sg:dec:" + id, "json");
+  const dec = await kv.getDecision(id);
   if (!dec) return { err: page("期限切れ", "<p>この承認リンクは期限切れ(7 日)か、すでに処理済みです。</p>", 410) };
-  const acct = await kv.get("sg:acct:" + dec.email, "json");
+  const acct = await kv.getAccount(dec.email);
   return { kv, id, sig, dec, acct };
 }
 
@@ -26,10 +26,10 @@ export async function onRequestPost({ request, env }) {
   const x = await load(request, env); if (x.err) return x.err;
   let form; try { form = await request.formData(); } catch { return page("不正な要求", "<p>フォームを読めませんでした。</p>", 400); }
   const action = form.get("action") === "approve" ? "approve" : "reject";
-  const acct = x.acct || { email: x.dec.email, status: "pending" };
+  const acct = x.acct || { email: x.dec.email, status: "pending", created: x.dec.ts, source: "self" };   // 14-a: アカウント行が無い承認は登録時刻(承認リンクの ts)を created に(D1 の NOT NULL)
   acct.status = action === "approve" ? "active" : "rejected"; acct.decided_at = new Date().toISOString(); acct.source = action === "approve" ? "approved" : acct.source;
-  await x.kv.put("sg:acct:" + acct.email, JSON.stringify(acct));
-  await x.kv.delete("sg:dec:" + x.id);
+  await x.kv.putAccount(acct);
+  await x.kv.deleteDecision(x.id);
   if (action === "approve") {
     try {
       const tok = await issueToken(env, acct.email, x.dec.next, APPROVED_TOKEN_SECONDS);

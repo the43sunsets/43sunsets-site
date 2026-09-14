@@ -1,3 +1,4 @@
+import { configured } from "./_keys.js";
 // POST /signal/register — 登録画面(/signal/join/)のフォーム。
 // 名簿のアドレス/ドメイン → アカウント active+ログインリンクを即送信 → /signal/join/?state=sent
 // 名簿外 → pending+受付メール → CEO へ承認/却下リンク → /signal/join/?state=pending
@@ -7,7 +8,7 @@ import { verifyTurnstile } from "../_turnstile.js";
 
 export async function onRequestPost({ request, env }) {
   const kv = store(env);
-  if (!kv || !env.SIGNAL_SECRET) return json({ ok: false, error: "registration desk not connected" }, 503);
+  if (!configured(env)) return json({ ok: false, error: "registration desk not connected" }, 503);
   let form; try { form = await request.formData(); } catch { return json({ ok: false, error: "bad form" }, 400); }
   if ((form.get("website") || "").trim() !== "") return redirect("/signal/join/?state=sent");   // honeypot: 記録せず成功に見せる
   if (!(await verifyTurnstile(env, form, request)).ok) return redirect("/signal/join/?state=invalid");   // Turnstile(9/8): 失敗は入力エラーと同じ画面
@@ -19,20 +20,20 @@ export async function onRequestPost({ request, env }) {
   if (await rateLimited(env, email)) return redirect("/signal/join/?state=sent");
 
   const base = origin(env, request);
-  const existing = await kv.get("sg:acct:" + email, "json");
+  const existing = await kv.getAccount(email);
   const ts = new Date().toISOString(); const id = rid(8);
   const roster = await isRosterAddress(env, email);
   const status = existing ? existing.status : (roster ? "active" : "pending");
   const acct = { email, company, name, title, interests, status, created: existing ? existing.created : ts, updated: ts, source: existing ? existing.source : (roster ? "roster" : "self"), id: existing ? existing.id : id };
-  await kv.put("sg:acct:" + email, JSON.stringify(acct));
-  await kv.put(`sg:reg:${ts}:${id}`, JSON.stringify({ ...acct, id, ts, roster, next }), { expirationTtl: 365 * 86400 });
+  await kv.putAccount(acct);
+  await kv.putRegistration({ ...acct, id, ts, roster, next });
 
   try {
     if (acct.status === "active") {
       const tok = await issueToken(env, email, next, APPROVED_TOKEN_SECONDS);
       await sendMail(env, email, loginMail(`${base}/signal/login/?t=${tok}`, name, APPROVED_TOKEN_SECONDS));
     } else if (acct.status === "pending") {
-      await kv.put("sg:dec:" + id, JSON.stringify({ email, next, ts }), { expirationTtl: 7 * 86400 });
+      await kv.putDecision(id, { email, next, ts }, 7 * 86400);
       await sendMail(env, email, pendingMail(name));
     }
     // CEO への通知(名簿 = 記録のみ・名簿外 = 承認画面のリンク)

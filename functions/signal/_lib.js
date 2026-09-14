@@ -1,38 +1,26 @@
 // Signal by 43 Sunsets — 登録/ログイン(見本モード+招待制マジックリンク)の共有部品。
 // 設計の正本 = polaris memory/signal-gating-and-magic-link-design.md(2026-09-07 夜 CEO 確定)。
 //
-// 置き場(KV・BEACON_REQUESTS を共用・SIGNAL_AUTH が束ねられていればそちらを優先):
-//   sg:acct:<email>        登録済みアカウント {email, company, name, title, interests, status: active|pending|rejected, created, decided_at, source}
-//   sg:tok:<token>         マジックリンクの一回限りトークン(再送 = 15 分・承認後/名簿即送信 = 72 時間) {email, next, ttl}
-//   sg:sess:<sid>          ログイン状態(30 日) {email, company, created}
-//   sg:allow:dom:<domain>  名簿(Mautic 144 社)のドメイン → 即リンク
-//   sg:allow:eml:<email>   名簿のアドレス → 即リンク
-//   sg:reg:<ts>:<id>       登録の履歴(Mautic へ写す・365 日)
-//   sg:rl:<email>          再送の間隔制限(60 秒)
-//   sg:dec:<id>            承認待ち → 承認/却下のワンクリック用(7 日)
-//
-// 環境変数(Pages → Settings → Variables and Secrets): SIGNAL_SECRET(必須・HMAC 鍵)・SMTP_USER/SMTP_PASS(hello@ のアプリパスワード)
+// 認証の置き場と KV の互換形式は _store.js、用途別の鍵は _keys.js。
+// 環境変数(Pages → Settings → Variables and Secrets): SIGNAL_COOKIE_KEYS・SIGNAL_ADMIN_KEY・SIGNAL_INGEST_KEY(移行中は SIGNAL_SECRET に倒す)・SMTP_USER/SMTP_PASS(hello@ のアプリパスワード)
 //   ・MAIL_FROM(既定 hello@43sunsets.com)・ADMIN_EMAIL(既定 kent.800@gmail.com)・SITE_ORIGIN(既定 https://43sunsets.com)
 //   ・MAIL_DEV=1 のときは送信せずリンクを応答に返す(ローカル検証専用・本番には置かない)。
 // 設定が無いときは「開いている」側に倒さない(鍵なし = 全員未ログイン・登録は 503)。
+
+import { authStore } from "./_store.js";
+import { cookieKeys, configured, signCookie, verifyCookie, adminKey, ingestKey, bearerIs, hmac, safeEq } from "./_keys.js";
+export { hmac };
 
 export const COOKIE = "sg_s";
 export const SESSION_DAYS = 30;
 export const TOKEN_SECONDS = 15 * 60;
 const FREE_MAIL = new Set(["gmail.com", "yahoo.com", "yahoo.co.jp", "hotmail.com", "outlook.com", "live.com", "icloud.com", "me.com", "aol.com", "proton.me", "protonmail.com", "mail.com", "gmx.com", "docomo.ne.jp", "ezweb.ne.jp", "softbank.ne.jp"]);
 
-export function store(env) { return env.SIGNAL_AUTH || env.BEACON_REQUESTS || null; }
+export function store(env) { return authStore(env); }
 export function origin(env, request) { return (env.SITE_ORIGIN || (request ? new URL(request.url).origin : "https://43sunsets.com")).replace(/\/$/, ""); }
 
 // ── 乱数・HMAC ──
 export function rid(bytes = 16) { const a = new Uint8Array(bytes); crypto.getRandomValues(a); return [...a].map(b => b.toString(16).padStart(2, "0")).join(""); }
-export async function hmac(secret, msg) {
-  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
-  const sig = await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(msg));
-  return [...new Uint8Array(sig)].map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 40);
-}
-function safeEq(a, b) { if (typeof a !== "string" || typeof b !== "string" || a.length !== b.length) return false; let r = 0; for (let i = 0; i < a.length; i++) r |= a.charCodeAt(i) ^ b.charCodeAt(i); return r === 0; }
-
 // ── 入力の正規化 ──
 export function normEmail(s) { const e = String(s || "").trim().toLowerCase().slice(0, 200); return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e) ? e : ""; }
 export function domainOf(email) { return email.split("@")[1] || ""; }
@@ -51,52 +39,43 @@ export function sessionCookie(value, maxAge) { return `${COOKIE}=${value}; Path=
 // ── ログイン状態 ──
 // 戻り値: {email, company, sid} または null。鍵か置き場が無ければ常に null(開いている側に倒さない)。
 export async function currentSession(request, env) {
-  const kv = store(env); const secret = env.SIGNAL_SECRET; if (!kv || !secret) return null;
-  const raw = parseCookies(request)[COOKIE]; if (!raw) return null;
-  const [sid, sig] = raw.split("."); if (!sid || !sig || !/^[a-f0-9]{32}$/.test(sid)) return null;
-  if (!safeEq(sig, await hmac(secret, "sess:" + sid))) return null;
-  const s = await kv.get("sg:sess:" + sid, "json"); if (!s || !s.email) return null;
+  if (!configured(env)) return null;
+  let raw; try { raw = parseCookies(request)[COOKIE]; } catch { return null; }
+  const sid = await verifyCookie(env, raw); if (!sid) return null;
+  const s = await store(env).getSession(sid); if (!s || !s.email) return null;
   return { ...s, sid };
 }
 export async function createSession(env, acct) {
-  const kv = store(env); const sid = rid(16);
-  await kv.put("sg:sess:" + sid, JSON.stringify({ email: acct.email, company: acct.company || "", created: new Date().toISOString() }), { expirationTtl: SESSION_DAYS * 86400 });
-  return sessionCookie(sid + "." + await hmac(env.SIGNAL_SECRET, "sess:" + sid), SESSION_DAYS * 86400);
+  const sid = rid(16), key = cookieKeys(env)[0];
+  if (!key) throw new Error("cookie key not configured");
+  await store(env).createSession(sid, acct.email, acct.company || "", SESSION_DAYS, key.id);
+  return sessionCookie(await signCookie(env, sid), SESSION_DAYS * 86400);
 }
 
 // ── マジックリンク ──
 export const APPROVED_TOKEN_SECONDS = 72 * 3600;   // 承認後・登録直後に送るリンクは 72 時間(CEO 9/8 承認)。本人が画面の前で再送するリンクは 15 分のまま
 export async function issueToken(env, email, next, ttl = TOKEN_SECONDS) {
-  const kv = store(env); const tok = rid(24);
-  await kv.put("sg:tok:" + tok, JSON.stringify({ email, next: safeNext(next), created: new Date().toISOString(), ttl }), { expirationTtl: ttl });
-  return tok;
+  return store(env).issueToken(email, safeNext(next), ttl);
 }
 export function ttlLabel(ttl) { return ttl >= 3600 ? Math.round(ttl / 3600) + " 時間" : Math.round(ttl / 60) + " 分"; }
-export async function consumeToken(env, tok) {
-  const kv = store(env); if (!/^[a-f0-9]{48}$/.test(tok || "")) return null;
-  const v = await kv.get("sg:tok:" + tok, "json"); if (!v) return null;
-  await kv.delete("sg:tok:" + tok);   // 一回限り
-  return v;
-}
-// 出来事の記録(2026-09-08 CEO: Mautic の点数付け用・追跡 cookie は足さない)。sg:ev:<ts>:<id> = {type, email, ...}(60 日)。/signal/admin/events が読む。
+export async function consumeToken(env, tok) { return store(env).consumeToken(tok); }
+// 出来事と閲覧回数は best effort で記録する。
 export async function logEvent(env, type, email, extra = {}) {
-  try { const kv = store(env); if (!kv) return; const ts = new Date().toISOString(); await kv.put(`sg:ev:${ts}:${rid(4)}`, JSON.stringify({ type, email, ts, ...extra }), { expirationTtl: 60 * 86400 }); } catch (e) { /* best effort */ }
+  try { await store(env)?.logEvent(type, email, extra); } catch (e) { /* best effort */ }
 }
 export async function logFaceDay(env, email, face) {
-  try { const kv = store(env); if (!kv || !email) return; const day = new Date().toISOString().slice(0, 10); const k = `sg:evd:${day}:${email}:${face}`; const n = parseInt((await kv.get(k)) || "0", 10) + 1; await kv.put(k, String(n), { expirationTtl: 45 * 86400 }); } catch (e) { /* best effort */ }
+  try { if (email) await store(env)?.bumpFaceDay(new Date().toISOString().slice(0, 10), email, face); } catch (e) { /* best effort */ }
 }
-export async function rateLimited(env, email) {
-  const kv = store(env); const k = "sg:rl:" + email; if (await kv.get(k)) return true;
-  await kv.put(k, "1", { expirationTtl: 60 }); return false;
-}
+export async function rateLimited(env, email) { return store(env).rateLimited(email); }
 export async function isRosterAddress(env, email) {
-  const kv = store(env);
-  if (await kv.get("sg:allow:eml:" + email)) return true;
-  if (!isFreeMail(email) && await kv.get("sg:allow:dom:" + domainOf(email))) return true;
-  return false;
+  const s = store(env);
+  return await s.isAllowed("eml", email) || (!isFreeMail(email) && await s.isAllowed("dom", domainOf(email)));
 }
-export async function decisionSig(env, id) { return hmac(env.SIGNAL_SECRET, "decide:" + id); }
-export async function checkDecisionSig(env, id, sig) { return safeEq(String(sig || ""), await decisionSig(env, id)); }
+export async function decisionSig(env, id) {
+  const key = adminKey(env); if (!key) throw new Error("admin key not configured");
+  return hmac(key, "decide:" + id);
+}
+export async function checkDecisionSig(env, id, sig) { return !!adminKey(env) && safeEq(String(sig || ""), await decisionSig(env, id)); }
 // 管理者の判定(2026-09-09・管理者ダッシュボード用)。Bearer(機械)か、ADMIN_EMAILS(既定 = hello@ と CEO の Gmail)のアドレスでログイン中のセッション(人)。
 // 戻り値: true(Bearer)/ メールアドレス(管理者セッション)/ null(未ログイン)/ false(ログイン中だが管理者でない)。開いている側に倒さない。
 export function adminEmails(env) { return String(env.ADMIN_EMAILS || "hello@43sunsets.com,kent.800@gmail.com").split(",").map(s => s.trim().toLowerCase()).filter(Boolean); }
@@ -105,7 +84,8 @@ export async function adminOk(request, env) {
   const s = await currentSession(request, env); if (!s) return null;
   return adminEmails(env).includes(String(s.email || "").toLowerCase()) ? s.email : false;
 }
-export function bearerOk(request, env) { const a = request.headers.get("authorization") || ""; return !!env.SIGNAL_SECRET && safeEq(a, "Bearer " + env.SIGNAL_SECRET); }
+export function bearerOk(request, env) { return bearerIs(request, adminKey(env)); }
+export function ingestOk(request, env) { return bearerIs(request, ingestKey(env)); }
 
 // ── メール本文 ──
 const SIGN = ["43 Sunsets / Signal", "hello@43sunsets.com", "https://43sunsets.com/signal/"].join("\n");
