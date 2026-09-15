@@ -26,6 +26,7 @@ export function kvStore(kv) {
   const bump = async (key, ttl) => { const n = Math.max(parseInt(await kv.get(key) || "0", 10), 0) + 1; await kv.put(key, String(n), { expirationTtl: ttl }); return n; };
   return {
     kind: "kv",
+    async sweep() { return {}; },
     async getAccount(email) { return kv.get("sg:acct:" + email, "json"); },
     async putAccount(acct) { await put("sg:acct:" + acct.email, acct); },
     async listAccounts() { return records("sg:acct:"); },
@@ -88,6 +89,27 @@ export function d1Store(db) {
   const sessionValue = row => row ? compact({ email: row.email, company: row.company, created: row.created_at }) : null;
   return {
     kind: "d1",
+    async sweep(now = nowISO()) {
+      try {
+        const cutoff = later(now, -60 * 86400), grace = later(now, -7 * 86400);
+        const deletes = [
+          ["event", "ts", cutoff],
+          ["face_day", "day", cutoff.slice(0, 10)],
+          ["dl_count", "day", cutoff.slice(0, 10)],
+          ["magic_token", "expires_at", grace],
+          ["session", "expires_at", grace],
+          ["decision_link", "expires_at", grace],
+          ["rate_limit", "until", now],
+          ["copy_request_index", "expires_at", grace],
+        ];
+        const results = await db.batch(deletes.map(([table, column, limit]) => stmt(`DELETE FROM ${table} WHERE ${column} < ?`, [limit])));
+        return Object.fromEntries(deletes.map(([table], i) => [table, results[i].meta.changes]));
+      } catch (e) {
+        const error = String(e?.message ?? e);
+        console.warn(`[signal sweep] ${error.replace(/[\r\n]+/g, " ")}`);
+        return { error };
+      }
+    },
     async getAccount(email) { return compact(await first("SELECT * FROM account WHERE email=?", email)); },
     async putAccount(acct) { await upsert("account", accountColumns, acct, "email"); },
     async listAccounts() { return (await all("SELECT * FROM account ORDER BY email")).map(compact); },

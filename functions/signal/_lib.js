@@ -61,7 +61,11 @@ export function ttlLabel(ttl) { return ttl >= 3600 ? Math.round(ttl / 3600) + " 
 export async function consumeToken(env, tok) { return store(env).consumeToken(tok); }
 // 出来事と閲覧回数は best effort で記録する。
 export async function logEvent(env, type, email, extra = {}) {
-  try { await store(env)?.logEvent(type, email, extra); } catch (e) { /* best effort */ }
+  try {
+    const s = store(env);
+    await s?.logEvent(type, email, extra);
+    await s?.sweep?.();
+  } catch (e) { /* best effort */ }
 }
 export async function logFaceDay(env, email, face) {
   try { if (email) await store(env)?.bumpFaceDay(new Date().toISOString().slice(0, 10), email, face); } catch (e) { /* best effort */ }

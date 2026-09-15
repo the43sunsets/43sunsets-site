@@ -3,6 +3,7 @@
 //   GET(Bearer か、管理者(ADMIN_EMAILS)としてログイン中のセッション)= KV の台帳を返す。無ければ {ledger:null}(画面は公開版 foia-status.json に落ちる)。
 // 個人名は台帳に含めない(CEO 9/8 裁定・VPS 側で役職だけに落として送る)。
 import { ingestOk, adminOk, json } from "../_lib.js";
+import { authStore } from "../_store.js";
 
 const KEY = "sg:admin:foia";
 const MAX_BYTES = 8 * 1024 * 1024;   // KV の値は 25 MiB まで・台帳は 200 自治体で ≈ 150 KB
@@ -16,6 +17,7 @@ export async function onRequestPost({ request, env }) {
   if (!d || !Array.isArray(d.rows)) return json({ ok: false, error: "rows[] required" }, 400);
   const stored = { ...d, received_at: new Date().toISOString() };
   await kv.put(KEY, JSON.stringify(stored));
+  await authStore(env)?.sweep?.();
   return json({ ok: true, n: d.rows.length, received_at: stored.received_at });
 }
 
