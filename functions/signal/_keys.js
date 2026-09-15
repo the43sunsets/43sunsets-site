@@ -35,7 +35,11 @@ export async function verifyCookie(env, raw) {
   if (!/^[a-f0-9]{32}$/.test(sid)) return null;
   let secret, sig;
   if (parts.length === 2) { secret = env.SIGNAL_SECRET; sig = parts[1]; }
-  else if (parts.length === 3) { secret = cookieKeys(env).find(k => k.id === parts[1])?.secret; sig = parts[2]; }
+  else if (parts.length === 3) {
+    secret = cookieKeys(env).find(k => k.id === parts[1])?.secret;
+    if (!secret && parts[1] === "v0") secret = env.SIGNAL_SECRET;
+    sig = parts[2];
+  }
   else return null;
   return secret && safeEq(sig, await hmac(secret, "sess:" + sid)) ? sid : null;
 }
