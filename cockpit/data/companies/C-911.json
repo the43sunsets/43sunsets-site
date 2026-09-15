@@ -1,8 +1,8 @@
 {
 "id": "C-911",
 "name": "THE HOME DEPOT USA",
-"city": null,
-"state": "IL",
+"city": "Whitestown",
+"state": "IN",
 "entity_type": "corp",
 "industry": null,
 "made": null,
@@ -105,9 +105,42 @@
 "note": "この会社の採用ページは当社の網に無い(公開 API を持つ ATS が見つからない、または求人 0)。"
 },
 "grants": {
-"status": "該当なし",
-"count": 0,
-"note": "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。"
+"status": "収集中",
+"count": 1,
+"amount_total": 110000.0,
+"latest": "2021-05-11",
+"items": [
+{
+"id": "S-3949",
+"date": "2021-05-11",
+"start": "2021-05-11",
+"end": null,
+"state": "IN",
+"city": "Whitestown",
+"kind": "grant",
+"kind_label": "助成",
+"issuer_level": "州",
+"issuer": "Indiana IEDC",
+"program": "EDGE",
+"program_name": "EDGE 税額控除(雇用創出)(IN)",
+"amount": 110000.0,
+"stage": "承認",
+"category": "未分類",
+"industry": "物流・EC",
+"summary": "Indiana IEDCがHome Depot U.S.A., Inc.(Whitestown)に雇用創出を条件としたEDGE税額控除$110,000を承認、予定投資額は$1.0M、新規雇用18人。",
+"infer": "小売大手の物流拠点関連投資の可能性(推論)だが、本文からは具体的な設備用途は不明。",
+"confidence": "low",
+"verbatim": "Indiana IEDC EDGE contract (EDGE 税額控除(雇用創出)) executed 2021-05-11, status executed. Contract amount $110,000; expected investment $1,000,000; actual investment to date $0; jobs at contract end 18; base jobs 0; paid to date $18,627; compliant True.",
+"url": "https://transparencyportal.iedc.in.gov/contract/7cae9ade462beb11a813001dd8309fa8",
+"role": "recipient",
+"role_label": "受領者(USAspending)",
+"provenance": {
+"policy": "subsidies-v1-2026-09-07",
+"batch": "msgbatch_016VqX91MqVLiqMTo24VyH9W",
+"model": "claude-sonnet-5"
+}
+}
+]
 },
 "news": {
 "status": "該当なし",
@@ -136,8 +169,15 @@
 "title": "建設許可(Tinley Park): 未分類",
 "ref": "S-13179",
 "summary": "Tinley Park 8568 SCHEER DR, TINLEY PARK, IL 60487 で窓・ドア交換 $10.9k(申請者/所有者: HOME DEPOT USA)。"
+},
+{
+"date": "2021-05-11",
+"face": "grants",
+"title": "助成(州・Indiana IEDC): 未分類",
+"ref": "S-3949",
+"summary": "Indiana IEDCがHome Depot U.S.A., Inc.(Whitestown)に雇用創出を条件としたEDGE税額控除$110,000を承認、予定投資額は$1.0M、新規雇用18人。"
 }
 ],
-"generated_at": "2026-09-15T12:36:20+00:00",
+"generated_at": "2026-09-15T21:00:27+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
