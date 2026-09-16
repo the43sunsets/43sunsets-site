@@ -14,10 +14,34 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 5,
-"value_total": 1420832.0,
-"latest": "2026-08-10",
+"count": 6,
+"value_total": 1900832.0,
+"latest": "2026-09-14",
 "items": [
+{
+"id": "S-58249",
+"date": "2026-09-14",
+"applied": "2026-09-10",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2111 N HALSTED ST",
+"permit_no": "B200511154",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 480000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago Housing Authority(2111 N Halsted St)の地下機械室でボイラー5台の修理・交換 $480k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "REPAIR/REPLACEMENT AFFECTING 1 SYSTEMS :  3 BOILER - HOT WATER(LAARS MAGNATHERM MGH2000NJA3XX BASEMENT MECHANICAL ROOM) 2 BOILER - HOT WATER(LAARS NEOTHERM NT2V0800NXXX1 BASEMENT MECHANICAL ROOM). ELECTRICAL WORK UNDER THIS PERMIT = NO .LOCATIONS: 0 RESIDENTIAL UNIT(S), 0 NON-RESIDENTIAL UNIT(S), 1 ",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01Lv42GwnYquNdatWsieoun7",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-637",
 "date": "2026-08-10",
@@ -165,6 +189,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-58249",
+"summary": "Chicago Housing Authority(2111 N Halsted St)の地下機械室でボイラー5台の修理・交換 $480k。"
+},
+{
 "date": "2026-08-10",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -200,6 +231,6 @@
 "summary": "Chicago 1487 N CLYBOURN AVE で既存一戸建ての裏木造デッキ・階段を交換(公営住宅局名義) $8.0k(CHICAGO HOUSING AUTHORITY)。"
 }
 ],
-"generated_at": "2026-09-16T10:35:57+00:00",
+"generated_at": "2026-09-16T15:00:15+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
