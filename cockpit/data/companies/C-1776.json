@@ -14,8 +14,8 @@
 "master_checked_at": null,
 "faces": {
 "permits": {
-"count": 7,
-"value_total": 20670.0,
+"count": 8,
+"value_total": 25870.0,
 "latest": "2026-08-18",
 "items": [
 {
@@ -63,6 +63,30 @@
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-55478",
+"date": "2026-07-28",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago Ridge",
+"address": "771 Chicago Ridge Mall",
+"permit_no": "20260300",
+"permit_type": "ELE",
+"value": 5200.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago Ridge Mall内のSpirit Halloween店舗における電気工事許可 $5,200。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ELE / ELE / use COM",
+"source_id": "SRC-133",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01HZT6nzCByNgVCjPNEUS1RR",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 },
@@ -227,6 +251,13 @@
 "summary": "Kildeer のテナント(Spirit Halloween)の電気工事 $3,800。"
 },
 {
+"date": "2026-07-28",
+"face": "permits",
+"title": "建設許可(Chicago Ridge): 未分類",
+"ref": "S-55478",
+"summary": "Chicago Ridge Mall内のSpirit Halloween店舗における電気工事許可 $5,200。"
+},
+{
 "date": "2026-07-20",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -262,6 +293,6 @@
 "summary": "Shorewood 988 Brook Forest Ave の Spirit Halloween(季節限定小売店)に関する記録で、許可種別・金額の記載なし。"
 }
 ],
-"generated_at": "2026-09-16T09:35:19+00:00",
+"generated_at": "2026-09-16T09:36:39+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
