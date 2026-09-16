@@ -321,7 +321,7 @@ function render(c){
     <div class="knote">${esc(c.note)}</div>`;
 }
 async function boot(){
-  const id = new URLSearchParams(location.search).get("id") || "";
+  const rawId = (new URLSearchParams(location.search).get("id") || "").trim(); const id = /^\d+$/.test(rawId) ? "C-" + rawId : rawId;   // 9/16 H-92: 素の数字(旧 news.json の company_id)も受ける(後方互換・正本は cockpit F-1)
   const main = document.getElementById("main");
   if(!/^C-\d+$/.test(id)){ main.innerHTML = `<div class="kempty">会社 ID が指定されていません。一覧(<a href="/signal/permits/">建設許可</a>・<a href="/signal/ucc/">UCC</a>)の社名から開いてください。</div>`; document.getElementById("metaline").textContent = "会社 ID なし"; return; }
   try{
