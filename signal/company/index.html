@@ -275,7 +275,7 @@ function masterLabel(c){
   if (!m || !m.state) return c.master_checked_at ? ` · 会社マスター調査 ${esc(c.master_checked_at)}` : " · 会社マスター未調査";
   if (m.state === "checked") return ` · 会社マスター調査 ${esc((r.checked_at || c.master_checked_at || "").slice(0,10))}`;
   if (m.state === "queued") return ` · 会社マスター 調査待ち(${esc(ORIGIN_JA[r.origin] || r.origin || "")}${r.rank ? ` ${r.rank}/${r.of} 番目` : ""})`;
-  if (m.state === "untargeted") return ` · 会社マスター 対象外(由来: ${esc((r.origins || []).map(o => ORIGIN_JA[o] || o).join("・") || "なし")}・開くと翌便で調査)`;
+  if (m.state === "untargeted") return ` · 会社マスター 対象外(由来: ${esc((r.origins || []).map(o => ORIGIN_JA[o] || o).join("・") || "なし")})`;
   return " · 会社マスター未調査";
 }
 function faceTile(href, label, n, sub, soon){ return `<a class="face4${soon ? " soon" : ""}" href="${href}"><div class="fl">${label}</div><div class="fn">${soon ? "Coming soon" : n}</div><div class="fs">${esc(sub)}</div></a>`; }
