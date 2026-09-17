@@ -268,6 +268,16 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const usd = v => v == null ? "" : (v >= 1e6 ? "$" + (v/1e6).toFixed(1) + "M" : "$" + Math.round(v/1e3) + "k");
+// F-2(v1.1 §9.2・9/16): 会社マスターの状態と理由。master_status が無い古い JSON は従来の文言に倒す。
+const ORIGIN_JA = {view: "閲覧起点", ucc: "UCC 登記", permit: "建設許可", subsidy: "政府補助金", permits: "建設許可", grants: "政府補助金", hiring: "採用", news: "ニュース", roster: "名簿"};
+function masterLabel(c){
+  const m = c.master_status; const r = (m && m.reason) || {};
+  if (!m || !m.state) return c.master_checked_at ? ` · 会社マスター調査 ${esc(c.master_checked_at)}` : " · 会社マスター未調査";
+  if (m.state === "checked") return ` · 会社マスター調査 ${esc((r.checked_at || c.master_checked_at || "").slice(0,10))}`;
+  if (m.state === "queued") return ` · 会社マスター 調査待ち(${esc(ORIGIN_JA[r.origin] || r.origin || "")}${r.rank ? ` ${r.rank}/${r.of} 番目` : ""})`;
+  if (m.state === "untargeted") return ` · 会社マスター 対象外(由来: ${esc((r.origins || []).map(o => ORIGIN_JA[o] || o).join("・") || "なし")}・開くと翌便で調査)`;
+  return " · 会社マスター未調査";
+}
 function faceTile(href, label, n, sub, soon){ return `<a class="face4${soon ? " soon" : ""}" href="${href}"><div class="fl">${label}</div><div class="fn">${soon ? "Coming soon" : n}</div><div class="fs">${esc(sub)}</div></a>`; }
 function permitItem(i){
   const cat = i.category === "未評価" ? `<span class="kchip">未評価(AI 読み待ち)</span>` : `<span class="kchip">${esc(i.category)}${i.confidence === "low" ? "・低確度" : ""}</span>`;
@@ -303,7 +313,7 @@ function render(c){
   document.getElementById("main").innerHTML = `
     <div class="kprof"><div><div class="kicker">SIGNAL by 43 SUNSETS — COMPANY KARTE(BETA)</div><h2>${window.faviFromWebsite ? faviFromWebsite(c.website, c.name) : ""}${esc(c.name)}</h2>
       <div class="ksub">${esc([c.city, c.state].filter(Boolean).join(", "))} ${jp} ${c.industry ? `<span class="chip">${esc(c.industry)}</span>` : ""}</div>
-      <div class="ksub" style="margin-top:6px">${c.made ? esc(c.made) + " · " : ""}${c.size ? "規模 " + esc(c.size) + " · " : ""}${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website)}</a>` : "サイト —"}${c.master_checked_at ? ` · 会社マスター調査 ${esc(c.master_checked_at)}` : " · 会社マスター未調査"}</div></div>
+      <div class="ksub" style="margin-top:6px">${c.made ? esc(c.made) + " · " : ""}${c.size ? "規模 " + esc(c.size) + " · " : ""}${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website)}</a>` : "サイト —"}${masterLabel(c)}</div></div>
       </div>
     <div class="faces4">
       ${faceTile("#permits", "建設許可", f.permits.count + " 件", f.permits.count ? (f.permits.value_total ? "工事費 合計 " + usd(f.permits.value_total) : "最新 " + (f.permits.latest || "")) : "当社の網に無い", false)}
