@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 20,
-"value_total": 19128558.0,
-"latest": "2026-09-11",
+"count": 21,
+"value_total": 19213558.0,
+"latest": "2026-09-15",
 "items": [
+{
+"id": "S-58946",
+"date": "2026-09-15",
+"applied": "2026-09-02",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "7740 S INGLESIDE AVE",
+"permit_no": "B200509936",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 85000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago Public Schools 所有の建物(7740 S Ingleside Ave)で、タックポインティングおよび組積補修・交換工事 $85k(175 SQ.FT.、まぐさ2箇所)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "TUCKPOINTING AND UNIT MASONRY REPAIR / REPLACEMENT: 175 SQ. FT., LINTEL QTY. 2, MAX. LENGTH 6. LOCATION: ALL ELEVATIONS.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54593",
 "date": "2026-09-11",
@@ -534,6 +558,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-15",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-58946",
+"summary": "Chicago Public Schools 所有の建物(7740 S Ingleside Ave)で、タックポインティングおよび組積補修・交換工事 $85k(175 SQ.FT.、まぐさ2箇所)。"
+},
+{
 "date": "2026-09-11",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -674,6 +705,6 @@
 "summary": "学校の内装仕上げ更新 $1.1M。"
 }
 ],
-"generated_at": "2026-09-17T08:24:54+00:00",
+"generated_at": "2026-09-17T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

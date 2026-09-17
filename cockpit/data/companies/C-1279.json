@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 25750.0,
-"latest": "2026-07-09",
+"count": 2,
+"value_total": 1633857.78,
+"latest": "2026-09-16",
 "items": [
+{
+"id": "S-59163",
+"date": "2026-09-16",
+"applied": "2026-05-20",
+"state": "IL",
+"jurisdiction": "Wood Dale",
+"address": "1501 N MITTEL BLVD WOOD DALE IL 60191",
+"permit_no": "SITE-2026-0008",
+"permit_type": "Site Development Disturbed Area >= 2,500 sf",
+"value": 1608107.78,
+"category": "未分類",
+"confidence": "low",
+"summary": "Wood Dale 1501 N Mittel Blvd における 2,500 sf 以上の敷地整備工事(Site Work)$1.6M。",
+"infer": "所有者は SPE 名義(Broadstone)で、建物用途や入居事業者は記録上不明(推論不可)。造成・敷地整備のみで建築本体の情報がない。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Site Development Disturbed Area >= 2,500 sf / Site Work Disturbed Area >= 2,500 sf",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-17761",
 "date": "2026-07-09",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Wood Dale): 未分類",
+"ref": "S-59163",
+"summary": "Wood Dale 1501 N Mittel Blvd における 2,500 sf 以上の敷地整備工事(Site Work)$1.6M。"
+},
+{
 "date": "2026-07-09",
 "face": "permits",
 "title": "建設許可(Wood Dale): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Wood Dale 1501 N MITTEL WOOD DALE IL 60191 の火災報知設備工事 $25.8k(所有者: BROADSTONE CHR IL LLC)。"
 }
 ],
-"generated_at": "2026-09-17T08:24:54+00:00",
+"generated_at": "2026-09-17T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

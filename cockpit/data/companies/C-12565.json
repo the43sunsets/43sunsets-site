@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 4,
 "value_total": 0,
-"latest": "2026-09-11",
+"latest": "2026-09-14",
 "items": [
+{
+"id": "S-59070",
+"date": "2026-09-14",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "6050 E MAIN ST",
+"permit_no": "MMEPC2636818",
+"permit_type": "Mechanical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 6050 E Main St の商業施設における機械設備(MEP)工事。金額情報なし。",
+"infer": "所有者は SPE 名義で用途詳細不明、建物種別・工事内容ともに記録からは特定不可(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-59071",
+"date": "2026-09-14",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "6050 E MAIN ST",
+"permit_no": "MMEPC2636821",
+"permit_type": "Mechanical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 6050 E Main St における商業施設の機械設備(MEP)工事、金額不明。",
+"infer": "用途・業種が本文からは判別できず、SPE名義のため入居事業者も不明(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54681",
 "date": "2026-09-11",
@@ -102,6 +150,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-59070",
+"summary": "Columbus 6050 E Main St の商業施設における機械設備(MEP)工事。金額情報なし。"
+},
+{
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-59071",
+"summary": "Columbus 6050 E Main St における商業施設の機械設備(MEP)工事、金額不明。"
+},
+{
 "date": "2026-09-11",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -116,6 +178,6 @@
 "summary": "Columbus 6050 E Main St の商業施設で電気(MEP)工事の許可。金額不明。"
 }
 ],
-"generated_at": "2026-09-17T08:24:54+00:00",
+"generated_at": "2026-09-17T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

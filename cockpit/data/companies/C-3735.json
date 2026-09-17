@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 4145000.0,
-"latest": "2026-09-08",
+"count": 3,
+"value_total": 5045000.0,
+"latest": "2026-09-14",
 "items": [
+{
+"id": "S-59075",
+"date": "2026-09-14",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "4349 EASTON WAY",
+"permit_no": "ALTC2634941",
+"permit_type": "Alteration",
+"value": 900000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 4349 Easton Way の商業施設(13,230 SQFT)で改修工事 $900k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 13230 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-52503",
 "date": "2026-09-08",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-59075",
+"summary": "Columbus 4349 Easton Way の商業施設(13,230 SQFT)で改修工事 $900k。"
+},
+{
 "date": "2026-09-08",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -116,6 +147,6 @@
 "summary": "Columbus 4349 Easton Way の商業建物(34,321 SF)の構造改修 $4.1M。"
 }
 ],
-"generated_at": "2026-09-17T08:24:54+00:00",
+"generated_at": "2026-09-17T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

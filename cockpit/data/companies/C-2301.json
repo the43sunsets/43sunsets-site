@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 10,
-"value_total": 10000.0,
-"latest": "2026-09-04",
+"count": 11,
+"value_total": 11000.0,
+"latest": "2026-09-15",
 "items": [
+{
+"id": "S-58932",
+"date": "2026-09-15",
+"applied": "2026-09-04",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "235 S COLUMBUS DR",
+"permit_no": "B200510572",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 1000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 235 S Columbus Dr(グラントパーク一帯)で 100A の常設電源盤を複数箇所新設する電気工事 $1,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. NEW PERMANENT 100 AMP SERVICE DISCONNECTING MEANS WITH 1 CIRCUITS. NEW PERMANENT 100 AMP SERVICE DISCONNECTING MEANS WITH 1 CIRCUITS. NEW PERMANENT 100 AMP SERVICE DISCONNECTING MEANS WITH 1 CIRCUITS. NEW PERMANENT 100 AMP SERVICE DISCONNECTING MEANS WITH 1 CIRCUITS. NE",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-36552",
 "date": "2026-09-04",
@@ -294,6 +318,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-15",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-58932",
+"summary": "Chicago 235 S Columbus Dr(グラントパーク一帯)で 100A の常設電源盤を複数箇所新設する電気工事 $1,000。"
+},
+{
 "date": "2026-09-04",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -364,6 +395,6 @@
 "summary": "Chicago(6401 S Stony Island Ave)でイベント用に100Aサービス断路器を10回線新設$1,000(Chicago Special Events Management申請)。"
 }
 ],
-"generated_at": "2026-09-17T08:24:54+00:00",
+"generated_at": "2026-09-17T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

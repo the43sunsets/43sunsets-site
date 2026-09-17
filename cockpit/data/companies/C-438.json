@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 375000.0,
-"latest": "2026-07-20",
+"count": 2,
+"value_total": 1380398.0,
+"latest": "2026-09-15",
 "items": [
+{
+"id": "S-58957",
+"date": "2026-09-15",
+"applied": "2026-08-17",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "180 N STETSON AVE",
+"permit_no": "101087323",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 1005398.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "既存64階建てビルの51階オフィススイート内装改修 $1.0M(用途分類 B・Type 1A構造)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF-CERT 2019 CBRC: ALTERATION OF INTERIOR OFFICE SUITE ON FLOOR 51 IN AN EXISTING 64 STORY BUILDING (OCCUPANCY GROUP B / TYPE 1A CONSTRUCTION)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-276",
 "date": "2026-07-20",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-15",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-58957",
+"summary": "既存64階建てビルの51階オフィススイート内装改修 $1.0M(用途分類 B・Type 1A構造)。"
+},
+{
 "date": "2026-07-20",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Chicago 180 N STETSON AVE での「PERMIT - RENOVATION/ALTERATION」$375k、申請者/所有者は WANXIANG STERLING STETSON OWNER, LLC。"
 }
 ],
-"generated_at": "2026-09-17T08:24:54+00:00",
+"generated_at": "2026-09-17T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

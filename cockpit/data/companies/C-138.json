@@ -20,10 +20,58 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 215500000.0,
-"latest": "2026-09-10",
+"count": 8,
+"value_total": 216150000.0,
+"latest": "2026-09-14",
 "items": [
+{
+"id": "S-59073",
+"date": "2026-09-14",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3535 OLENTANGY RIVER RD",
+"permit_no": "ALTC2628738",
+"permit_type": "Alteration",
+"value": 650000.0,
+"category": "医療施設",
+"confidence": "high",
+"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)で 4,644 SQFT の改修工事 $650k。",
+"infer": "病院法人による小規模改修 = 既存施設の内装・設備更新の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 4644 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-59059",
+"date": "2026-09-14",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "111 S GRANT AVE",
+"permit_no": "FALRC2632174",
+"permit_type": "Fire Alarm",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "OhioHealth Corporation の Columbus 施設(111 S Grant Ave)における火災報知設備(Fire Alarm)工事。金額記載なし。",
+"infer": "病院法人の付帯設備工事であり、既存医療施設の維持管理に伴う工事の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Alarm / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54704",
 "date": "2026-09-10",
@@ -221,6 +269,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Columbus): 医療施設",
+"ref": "S-59073",
+"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)で 4,644 SQFT の改修工事 $650k。"
+},
+{
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-59059",
+"summary": "OhioHealth Corporation の Columbus 施設(111 S Grant Ave)における火災報知設備(Fire Alarm)工事。金額記載なし。"
+},
+{
 "date": "2026-09-10",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -263,6 +325,6 @@
 "summary": "OhioHealth の Columbus 施設(285 E State St)で 4,130 SQFT の改修工事 $2.0M。"
 }
 ],
-"generated_at": "2026-09-17T08:24:54+00:00",
+"generated_at": "2026-09-17T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

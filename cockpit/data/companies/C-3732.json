@@ -23,10 +23,82 @@
 },
 "faces": {
 "permits": {
-"count": 17,
-"value_total": 13578321.99,
-"latest": "2026-09-10",
+"count": 20,
+"value_total": 13670314.99,
+"latest": "2026-09-14",
 "items": [
+{
+"id": "S-59054",
+"date": "2026-09-14",
+"applied": "2026-09-14",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "15 W MEHRING WY",
+"permit_no": "2026P08635",
+"permit_type": "Misc. Structures",
+"value": 32743.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati市が15 W Mehring Wyで雑構造物(Misc. Structures)を設置 $32,743(A-5用途)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Misc. Structures / Misc. Structures / A-5",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-59045",
+"date": "2026-09-14",
+"applied": "2026-09-08",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "1721 LINN ST",
+"permit_no": "2026P07922",
+"permit_type": "Plumbing Permits",
+"value": 2500.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati市(1721 Linn St)における配管許可 $2,500(A-5用途)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing Permits / Plumbing Permits / A-5",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-59021",
+"date": "2026-09-14",
+"applied": "2026-08-14",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "4765 AIRPORT RD",
+"permit_no": "2026P07776",
+"permit_type": "Fire Protection Systems",
+"value": 56750.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati市が所有する4765 Airport Rdの施設(S-2低危険度倉庫)で消防設備工事 $56,750。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / S-2",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-53869",
 "date": "2026-09-10",
@@ -462,6 +534,27 @@
 },
 "timeline": [
 {
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-59054",
+"summary": "Cincinnati市が15 W Mehring Wyで雑構造物(Misc. Structures)を設置 $32,743(A-5用途)。"
+},
+{
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-59045",
+"summary": "Cincinnati市(1721 Linn St)における配管許可 $2,500(A-5用途)。"
+},
+{
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-59021",
+"summary": "Cincinnati市が所有する4765 Airport Rdの施設(S-2低危険度倉庫)で消防設備工事 $56,750。"
+},
+{
 "date": "2026-09-10",
 "face": "permits",
 "title": "建設許可(Cincinnati): 未分類",
@@ -581,6 +674,6 @@
 "summary": "Cincinnati 市所有建物(425 Walnut St)のエレベーター許可 $1.6M。"
 }
 ],
-"generated_at": "2026-09-17T08:24:54+00:00",
+"generated_at": "2026-09-17T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

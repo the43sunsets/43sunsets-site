@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 1772359.0,
-"latest": "2026-08-25",
+"count": 4,
+"value_total": 2322359.0,
+"latest": "2026-09-15",
 "items": [
+{
+"id": "S-58978",
+"date": "2026-09-15",
+"applied": "2026-09-14",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "100 W RANDOLPH ST",
+"permit_no": "B200511506",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 550000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Google, Inc. の Chicago オフィス(100 W Randolph St)でオフィス・会議室・ラボスペース・キッチンの低電圧/通信電気工事 $550k。",
+"infer": "「ラボスペース」の記載はあるが本文はオフィス内装の低電圧配線工事であり、研究施設としての大規模投資ではない可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL OTHER. SPECIFIC LOCATION: OFFICE, CONFERENCES, LAB SPACE KITCHEN.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-889",
 "date": "2026-08-25",
@@ -126,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-15",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-58978",
+"summary": "Google, Inc. の Chicago オフィス(100 W Randolph St)でオフィス・会議室・ラボスペース・キッチンの低電圧/通信電気工事 $550k。"
+},
+{
 "date": "2026-08-25",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -147,6 +178,6 @@
 "summary": "Google のオフィス(旧州庁舎 3〜9 階)内装の変更許可 $625k。"
 }
 ],
-"generated_at": "2026-09-17T08:24:54+00:00",
+"generated_at": "2026-09-17T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
