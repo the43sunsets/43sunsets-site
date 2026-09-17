@@ -8,7 +8,7 @@ import { onRequestPost } from "../functions/signal/admin/foia.js";
 
 const now = "2026-09-14T12:34:56.789Z";
 const ago = (days, base = now) => new Date(Date.parse(base) - days * 864e5).toISOString();
-const tables = ["event", "face_day", "dl_count", "magic_token", "session", "decision_link", "rate_limit", "copy_request_index"];
+const tables = ["event", "face_day", "company_view", "dl_count", "magic_token", "session", "decision_link", "rate_limit", "copy_request_index"];
 const counts = n => Object.fromEntries(tables.map(table => [table, n]));
 const insert = (db, table, row) => db.prepare(`INSERT INTO ${table} (${Object.keys(row).join(",")}) VALUES (${Object.keys(row).map(() => "?").join(",")})`).bind(...Object.values(row)).run();
 const count = (db, table) => db.prepare(`SELECT count(*) AS n FROM ${table}`).first("n");
@@ -19,13 +19,14 @@ function post(env) {
   }) });
 }
 
-test("D1 sweep deletes only old rows in all eight tables, uses one batch and is idempotent", async t => {
+test("D1 sweep deletes only old rows in all nine tables, uses one batch and is idempotent", async t => {
   const db = database(t), store = d1Store(db);
   const batch = t.mock.method(db, "batch");
   for (const [label, days, graceDays, minutes] of [["old", 61, 8, 1], ["new", 59, 6, -1], ["boundary", 60, 7, 0]]) {
     const ts = ago(days), day = ts.slice(0, 10), expires_at = ago(graceDays), email = `${label}@example.test`;
     await insert(db, "event", { ts, type: "login", email });
     await insert(db, "face_day", { day, email, face: "ucc", n: 1 });
+    await insert(db, "company_view", { day, email, company_id: label, n: 1 });
     await insert(db, "dl_count", { day, sid: label, n: 1 });
     await insert(db, "magic_token", { token_hash: label, email, ttl: 900, created_at: ago(90), expires_at });
     await insert(db, "session", { sid: label, email, created_at: ago(90), expires_at });
@@ -36,7 +37,7 @@ test("D1 sweep deletes only old rows in all eight tables, uses one batch and is 
   await insert(db, "session", { sid: "old-revoked", email: "old@example.test", created_at: ago(90), expires_at: ago(8), revoked_at: ago(9) });
   assert.deepEqual(await store.sweep(now), { ...counts(1), session: 2 });
   assert.equal(batch.mock.callCount(), 1);
-  assert.equal(batch.mock.calls[0].arguments[0].length, 8);
+  assert.equal(batch.mock.calls[0].arguments[0].length, 9);
   for (const table of tables) {
     assert.equal(await count(db, table), 2, table);
     const rows = (await db.prepare(`SELECT * FROM ${table}`).all()).results;

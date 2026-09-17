@@ -70,6 +70,9 @@ export async function logEvent(env, type, email, extra = {}) {
 export async function logFaceDay(env, email, face) {
   try { if (email) await store(env)?.bumpFaceDay(new Date().toISOString().slice(0, 10), email, face); } catch (e) { /* best effort */ }
 }
+export async function logCompanyView(env, email, companyId) {
+  try { if (email && /^C-\d+$/.test(companyId)) await store(env)?.bumpCompanyView(new Date().toISOString().slice(0, 10), email, companyId); } catch (e) { /* best effort */ }
+}
 export async function rateLimited(env, email) { return store(env).rateLimited(email); }
 export async function isRosterAddress(env, email) {
   const s = store(env);

@@ -60,6 +60,20 @@ export function kvStore(kv) {
     async listFaceDays(since = "") {
       const out = []; for (const key of await keys(kv, "sg:evd:")) { const [, , day, email, ...face] = key.split(":"); if (day >= since) out.push({ day, email, face: face.join(":"), n: parseInt(await kv.get(key) || "0", 10) }); } return out;
     },
+    async bumpCompanyView(day, email, companyId) { return bump(`sg:cvd:${day}:${email}:${companyId}`, 45 * 86400); },
+    async listCompanyViews(since = "") {
+      const groups = new Map();
+      for (const key of await keys(kv, "sg:cvd:")) {
+        const [, , day, ...rest] = key.split(":");
+        if (day < since) continue;
+        const company_id = rest.pop(), email = rest.join(":"), groupKey = `${day}:${company_id}`;
+        if (!groups.has(groupKey)) groups.set(groupKey, { day, company_id, emails: new Set(), n: 0 });
+        const group = groups.get(groupKey);
+        group.emails.add(email); group.n += parseInt(await kv.get(key) || "0", 10);
+      }
+      return [...groups.values()].map(({ day, company_id, emails, n }) => ({ day, company_id, viewers: emails.size, n }))
+        .sort((a, b) => a.day < b.day ? -1 : a.day > b.day ? 1 : a.company_id < b.company_id ? -1 : a.company_id > b.company_id ? 1 : 0);
+    },
     async rateLimited(email, now = nowISO(), secs = 60) { const key = "sg:rl:" + email; if (await kv.get(key)) return true; await kv.put(key, "1", { expirationTtl: secs }); return false; },
     async bumpDl(day, sid) { return bump(`sg:dl:${day}:${sid}`, 30 * 86400); },
     async listDl() {
@@ -95,6 +109,7 @@ export function d1Store(db) {
         const deletes = [
           ["event", "ts", cutoff],
           ["face_day", "day", cutoff.slice(0, 10)],
+          ["company_view", "day", cutoff.slice(0, 10)],
           ["dl_count", "day", cutoff.slice(0, 10)],
           ["magic_token", "expires_at", grace],
           ["session", "expires_at", grace],
@@ -148,6 +163,8 @@ export function d1Store(db) {
     async listEvents(since = "") { return (await all("SELECT * FROM event WHERE ts >= ? ORDER BY ts,id", since)).map(row => ({ type: row.type, email: row.email, ts: row.ts, ...JSON.parse(row.extra || "{}") })); },
     async bumpFaceDay(day, email, face) { return (await first("INSERT INTO face_day (day,email,face,n) VALUES (?,?,?,1) ON CONFLICT(day,email,face) DO UPDATE SET n=n+1 RETURNING n", day, email, face)).n; },
     async listFaceDays(since = "") { return all("SELECT day,email,face,n FROM face_day WHERE day >= ? ORDER BY day,email,face", since); },
+    async bumpCompanyView(day, email, companyId) { return (await first("INSERT INTO company_view (day,email,company_id,n) VALUES (?,?,?,1) ON CONFLICT(day,email,company_id) DO UPDATE SET n=n+1 RETURNING n", day, email, companyId)).n; },
+    async listCompanyViews(since = "") { return all("SELECT day, company_id, COUNT(DISTINCT email) AS viewers, SUM(n) AS n FROM company_view WHERE day >= ? GROUP BY day, company_id ORDER BY day, company_id", since); },
     async rateLimited(email, now = nowISO(), secs = 60) {
       const r = await run("INSERT INTO rate_limit (email,until) VALUES (?,?) ON CONFLICT(email) DO UPDATE SET until=excluded.until WHERE rate_limit.until <= ?", email, later(now, secs), now);
       return r.meta.changes !== 1;
