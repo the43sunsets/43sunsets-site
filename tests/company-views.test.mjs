@@ -95,6 +95,12 @@ for (const kind of ["d1", "kv"]) {
     }
     env.ADMIN_EMAILS = email;
     assert.deepEqual(await (await getViews(env, { bearer: "", cookie })).json(), result);
+    // D-21 甲: ingest 鍵(VPS の機械鍵)でも読める。鍵が設定されていなければ 401 のまま。
+    assert.equal((await getViews(env, { bearer: "ingest-key" })).status, 401);
+    env.SIGNAL_INGEST_KEY = "ingest-key";
+    const viaIngest = await getViews(env, { bearer: "ingest-key" });
+    assert.equal(viaIngest.status, 200); assert.deepEqual(await viaIngest.json(), result);
+    assert.equal((await getViews(env, { bearer: "wrong" })).status, 401);
   });
 
   test(`${kind}: daily aggregates sort by day and company and since is inclusive`, async t => {
