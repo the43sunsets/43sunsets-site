@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 55350000.0,
-"latest": "2026-07-07",
+"count": 4,
+"value_total": 206462046.0,
+"latest": "2026-09-16",
 "items": [
+{
+"id": "S-59631",
+"date": "2026-09-16",
+"applied": "2026-06-17",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "400 S LA SALLE ST",
+"permit_no": "101084518",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 151112046.0,
+"category": "データセンター建設",
+"confidence": "high",
+"summary": "Chicago 400 S LaSalle St の既存7階オフィスビルをデータセンターへ転換する内装工事(フェーズ3/3)$151.1M。新設備導入とMEP(機械・電気・配管)更新を含む。フェーズ1解体・フェーズ2インフラ工事は別許可番号で実施済み。",
+"infer": "オフィスビルからデータセンターへの転換工事の最終段階 = サーバー機器・電源設備・冷却設備の大型調達が進行中の可能性(推論)。所有名義は SPE(Legacy GI TC 400 LaSalle LLC)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "PHASE 3 OF 3: INTERIOR ALTERATIONS TO EXISTING 7-STORY OFFICE BUILDING TO CONVERT TO A DATA CENTER. WORK TO INCLUDE NEW EQUIPMENT WITH ASSOCIATED MEP UPGRADES. PHASE 1 DEMOLITION ONLY WORK PERMITTED UNDER 101083036. PHASE 2 INFRASTRUCTURE WORK PERMITTED UNDER 101081181. IA CONSTRUCTION; B-BUSINESS",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-66",
 "date": "2026-07-07",
@@ -123,6 +147,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Chicago): データセンター建設",
+"ref": "S-59631",
+"summary": "Chicago 400 S LaSalle St の既存7階オフィスビルをデータセンターへ転換する内装工事(フェーズ3/3)$151.1M。新設備導入とMEP(機械・電気・配管)更新を含む。フェーズ1解体・フェーズ2インフラ工事は別許可番号で実施済み。"
+},
+{
 "date": "2026-07-07",
 "face": "permits",
 "title": "建設許可(Chicago): データセンター建設",
@@ -144,6 +175,6 @@
 "summary": "400 S LaSalle St(旧オフィスビル)のフェーズ1解体許可 $3.95M(非荷重壁・機械ペントハウス解体)。第三情報によれば Legacy Investing・GI Partners がデータセンター(Chicago Byte Exchange、33MW)へ転換中で 2026年末〜2027年初稼働予定。"
 }
 ],
-"generated_at": "2026-09-18T10:36:09+00:00",
+"generated_at": "2026-09-18T12:30:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

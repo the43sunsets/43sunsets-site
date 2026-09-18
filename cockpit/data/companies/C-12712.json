@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": 0,
-"latest": "2026-09-11",
+"latest": "2026-09-15",
 "items": [
+{
+"id": "S-59796",
+"date": "2026-09-15",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "4874 THOMPSON RD",
+"permit_no": "MMEPC2637142",
+"permit_type": "Mechanical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 4874 Thompson Rd における機械設備(MEP)の許可。金額記載なし。所有者は LongValley I LLC。",
+"infer": "本文情報が乏しく、施設用途・親案件が不明のため投資シグナルとして判定不可(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54684",
 "date": "2026-09-11",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-15",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-59796",
+"summary": "Columbus 4874 Thompson Rd における機械設備(MEP)の許可。金額記載なし。所有者は LongValley I LLC。"
+},
+{
 "date": "2026-09-11",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Columbus 4874 Thompson Rd の商業施設に関する配管(Plumbing/MEP)許可、金額不明。"
 }
 ],
-"generated_at": "2026-09-18T10:36:09+00:00",
+"generated_at": "2026-09-18T12:30:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

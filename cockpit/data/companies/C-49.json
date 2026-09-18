@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 23,
-"value_total": 17606397.4,
-"latest": "2026-09-14",
+"count": 24,
+"value_total": 17647137.4,
+"latest": "2026-09-16",
 "items": [
+{
+"id": "S-59730",
+"date": "2026-09-16",
+"applied": "2026-06-26",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1111 E 60TH ST",
+"permit_no": "B200476445",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 40740.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "University of Chicago の Judd Lot 駐車場で、既存600Aサービスに2回路を追加しEV充電設備4台分を設置する電気工事 $40,740。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. ADD 2 CIRCUITS TO EXISTING 600 AMP SERVICE DISCONNECTING MEANS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. ELECTRIC VEHICLE SUPPLY EQUIPMENT:4 SPACES. SPECIFIC LOCATION: UNIVERSTIY OF CHICAGO PARKING JUDD LOT PARKING..",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-58207",
 "date": "2026-09-14",
@@ -603,6 +627,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-59730",
+"summary": "University of Chicago の Judd Lot 駐車場で、既存600Aサービスに2回路を追加しEV充電設備4台分を設置する電気工事 $40,740。"
+},
+{
 "date": "2026-09-14",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -764,6 +795,6 @@
 "summary": "Chicago University of Chicago Judd Lot 駐車場で既存400Aサービスに2回路追加、EV充電設備2区画を増設 $37.6k。"
 }
 ],
-"generated_at": "2026-09-18T10:36:09+00:00",
+"generated_at": "2026-09-18T12:30:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -20,10 +20,35 @@
 },
 "faces": {
 "permits": {
-"count": 0,
-"value_total": 0,
-"latest": null,
-"items": []
+"count": 1,
+"value_total": 187450.0,
+"latest": "2026-09-16",
+"items": [
+{
+"id": "S-59563",
+"date": "2026-09-16",
+"applied": "2026-09-16",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2140 N ELSTON AVE",
+"permit_no": "101088551",
+"permit_type": "PERMIT - ELEVATOR EQUIPMENT",
+"value": 187450.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Kohl's 百貨店(2140 N Elston Ave)でエレベーター1台(2500lb・2階・油圧式)の改修許可 $187,450。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "MODERNIZATION OF ONE(1) 2500LB CAPACITY, 2-FLOOR, 100FPM, HYDRAULIC, PASSENGER ELEVATOR(ONLY), PURSUANT TO THE SCOPE OF WORK SUBMITTED.(100016116)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
 },
 "ucc": {
 "count": 0,
@@ -83,6 +108,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-59563",
+"summary": "Kohl's 百貨店(2140 N Elston Ave)でエレベーター1台(2500lb・2階・油圧式)の改修許可 $187,450。"
+},
+{
 "date": "2017-09-08",
 "face": "grants",
 "title": "助成(州・Indiana IEDC): 未分類",
@@ -90,6 +122,6 @@
 "summary": "米インディアナ州IEDCがKohl's Department Stores(小売業)に対しEDGE税額控除$1.2Mを承認、Plainfieldでの雇用創出300人・予定投資額$216.5Mに対する優遇措置。"
 }
 ],
-"generated_at": "2026-09-18T10:36:09+00:00",
+"generated_at": "2026-09-18T12:30:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

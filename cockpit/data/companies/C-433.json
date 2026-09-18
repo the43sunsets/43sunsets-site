@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 1520000.0,
-"latest": "2026-09-14",
+"count": 8,
+"value_total": 2270000.0,
+"latest": "2026-09-16",
 "items": [
+{
+"id": "S-59710",
+"date": "2026-09-16",
+"applied": "2026-07-13",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "4729 N KEWANEE AVE",
+"permit_no": "101085862",
+"permit_type": "PERMIT - NEW CONSTRUCTION",
+"value": 375000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 4729 N Kewanee Ave に地下室付き2階建て一戸建て住宅と車庫を新築 $375k。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "SPR 2019 CBRC. ERECT A NEW 2 STORY SINGLE FAMILY RESIDENCE W/ BASEMENT, REAR PATIO AND DETACHED 2 CAR FRAME GARAGE WITH ROOF DECK AND 2 EVSE-READY PARKING SPACES. INSTALL 6 FEET HIGH WOOD FENCE AND 6 FEET IRON FENCE. ALL WORK AS PER PLANS.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-59582",
+"date": "2026-09-16",
+"applied": "2026-05-29",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5156 N KEELER AVE",
+"permit_no": "101084121",
+"permit_type": "PERMIT - NEW CONSTRUCTION",
+"value": 375000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 5156 N Keeler Ave に地下室付き2階建て一戸建て住宅を新築 $375k(車庫・EVSE対応パーキング2台・フェンス含む)。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "SPR 2019 CBC.  ERECT A NEW 2 STORY SINGLE FAMILY RESIDENCE W/ BASEMENT.  DETACHED 2 CAR FRAME GARAGE WITH 2 EVSE-READY PARKING SPACES. INSTALL 6 FEET HIGH WOOD AND 6 FEET IRON FENCES. ALL WORK AS PER PLANS. (OCCUPANCY: R-5; CONSTRUCTION TYPE: V-A).",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-58238",
 "date": "2026-09-14",
@@ -198,6 +246,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-59710",
+"summary": "Chicago 4729 N Kewanee Ave に地下室付き2階建て一戸建て住宅と車庫を新築 $375k。"
+},
+{
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-59582",
+"summary": "Chicago 5156 N Keeler Ave に地下室付き2階建て一戸建て住宅を新築 $375k(車庫・EVSE対応パーキング2台・フェンス含む)。"
+},
+{
 "date": "2026-09-14",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -240,6 +302,6 @@
 "summary": "Chicago 1625 W JULIAN ST でガレージの新設・解体。 許可種別「PERMIT - RENOVATION/ALTERATION」、評価額 $15k。申請者/所有者: MK CONSTRUCTION & BUILDERS, INC。"
 }
 ],
-"generated_at": "2026-09-18T10:36:09+00:00",
+"generated_at": "2026-09-18T12:30:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
