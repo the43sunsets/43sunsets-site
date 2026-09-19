@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 250000.0,
-"latest": "2026-08-17",
+"count": 2,
+"value_total": 322500.0,
+"latest": "2026-09-18",
 "items": [
+{
+"id": "S-60600",
+"date": "2026-09-18",
+"applied": "2026-08-26",
+"state": "IL",
+"jurisdiction": "Highland Park",
+"address": "473 ROGER WILLIAMS AVE HIGHLAND PARK IL 60035",
+"permit_no": "OBST-2026-00103",
+"permit_type": "Obstruction",
+"value": 72500.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Highland Park 473 Roger Williams Ave での道路占用許可 $72,500。給水管の更新・下水道点検・掘削埋戻し等の土木工事。",
+"infer": "住宅または小規模不動産に対する給水インフラ更新工事の可能性(推論)。生産設備投資とは無関係。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "• Excavation, Backfill & Compaction\n•Full-Depth sawcut where required\n• Traffic Control\n• Offsite Spoil Removal (Title D Excluded)\n•Furnish Material for:\nDemo \nTerminate Existing WS - 1 \nTelevise Sewer -1 \nWater \n4\" DIP- 50 \nVV-1\n4x6-1\n*Priced for open cut not boring.\n**Water Service to be Installed",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DeZcrHnahcY1AvQRaz3JEK",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-19285",
 "date": "2026-08-17",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-18",
+"face": "permits",
+"title": "建設許可(Highland Park): 未分類",
+"ref": "S-60600",
+"summary": "Highland Park 473 Roger Williams Ave での道路占用許可 $72,500。給水管の更新・下水道点検・掘削埋戻し等の土木工事。"
+},
+{
 "date": "2026-08-17",
 "face": "permits",
 "title": "建設許可(Highland Park): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Highland Park 473 ROGER WILLIAMS AVE HIGHLAND PARK IL 60035 の住宅工事(Building Permit - Commercial Construction (including condos & townhomes)) $250k。 所有者: KLEIN FAMILY INVESTMENT COMPANY LLC。"
 }
 ],
-"generated_at": "2026-09-19T08:13:04+00:00",
+"generated_at": "2026-09-19T08:45:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

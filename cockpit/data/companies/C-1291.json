@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 34,
-"value_total": 850000.0,
-"latest": "2026-09-15",
+"count": 36,
+"value_total": 900000.0,
+"latest": "2026-09-17",
 "items": [
+{
+"id": "S-60390",
+"date": "2026-09-17",
+"applied": "2026-08-24",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1350 N WELLS ST",
+"permit_no": "B200507936",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 25000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 1350 N Wells St の住宅ユニット(D101)でキッチン・バスルームの内装・配管・電気の改修 $25k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SCOPE: NONSTRUCTURAL INTERIOR REPLACEMENT OF FINISHES AT KITCHEN AND BATHROOM, NEW PLUMBING FIXTURES AND ELECTRICAL THROUGHOUT, RECONFIGURATION OF KITCHEN AND CLOSET. LOCATIONS: 1 RESIDENTIAL UNIT(S), 0 NON-RESIDENTIAL UNIT(S), UNIT D101.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DeZcrHnahcY1AvQRaz3JEK",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-60423",
+"date": "2026-09-17",
+"applied": "2026-08-24",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1350 N WELLS ST",
+"permit_no": "B200507990",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 25000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 1350 N Wells St の住宅ユニット(D102)でキッチン・浴室の内装・配管・電気の改修 $25k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SCOPE: NONSTRUCTURAL INTERIOR REPLACEMENT OF FINISHES AT KITCHEN AND BATHROOM, NEW PLUMBING FIXTURES AND ELECTRICAL THROUGHOUT, RECONFIGURATION OF KITCHEN AND CLOSET. LOCATIONS: 1 RESIDENTIAL UNIT(S), 0 NON-RESIDENTIAL UNIT(S), UNIT D102.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DeZcrHnahcY1AvQRaz3JEK",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-58912",
 "date": "2026-09-15",
@@ -870,6 +918,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-17",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-60390",
+"summary": "Chicago 1350 N Wells St の住宅ユニット(D101)でキッチン・バスルームの内装・配管・電気の改修 $25k。"
+},
+{
+"date": "2026-09-17",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-60423",
+"summary": "Chicago 1350 N Wells St の住宅ユニット(D102)でキッチン・浴室の内装・配管・電気の改修 $25k。"
+},
+{
 "date": "2026-09-15",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -1108,6 +1170,6 @@
 "summary": "Chicago 1350 N Wells St ユニットF116でキッチン・浴室仕上げの交換 $25,000(同建物の連番許可の一つ)。"
 }
 ],
-"generated_at": "2026-09-19T08:13:04+00:00",
+"generated_at": "2026-09-19T08:45:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

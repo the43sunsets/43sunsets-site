@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
-"latest": "2026-08-04",
+"count": 2,
+"value_total": 400000.0,
+"latest": "2026-09-18",
 "items": [
+{
+"id": "S-60544",
+"date": "2026-09-18",
+"applied": "2026-07-21",
+"state": "IL",
+"jurisdiction": "Elmhurst",
+"address": "934 N CHURCH RD ELMHURST IL 60126",
+"permit_no": "CR-010203-2026",
+"permit_type": "Interior Remodel (Over 2000 Sq Ft) - Commercial",
+"value": 400000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Elmhurst 934 N Church Rd の SALTBOX 倉庫でモジュラー壁の内装更新とトイレ改修 $400k(既存オフィスは対象外)。",
+"infer": "既存倉庫の小規模内装改修であり大規模な生産・保管能力増強ではない可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SALTBOX Warehouse Finish Update with New Modular Wall systems for the client storage facility. Minor Existing Restroom Renovations and New Single use ADA Restroom. Existing Office not in scope\n*PERMITS ARE GOOD FOR 18 MONTHS FROM THE DATE THE PERMIT IS ISSUED. AFTER ONE YEAR AN EXPIRATION FEE OF 50%",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DeZcrHnahcY1AvQRaz3JEK",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-17400",
 "date": "2026-08-04",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-18",
+"face": "permits",
+"title": "建設許可(Elmhurst): 未分類",
+"ref": "S-60544",
+"summary": "Elmhurst 934 N Church Rd の SALTBOX 倉庫でモジュラー壁の内装更新とトイレ改修 $400k(既存オフィスは対象外)。"
+},
+{
 "date": "2026-08-04",
 "face": "permits",
 "title": "建設許可(Elmhurst): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Elmhurst 934 N Church Rd で下水管のビデオ検査、単独トイレ新設に関連(Pachard Capital LLC)。"
 }
 ],
-"generated_at": "2026-09-19T08:13:04+00:00",
+"generated_at": "2026-09-19T08:45:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
