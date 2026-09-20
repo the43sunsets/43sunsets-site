@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 3,
+"count": 5,
 "value_total": 0,
-"latest": "2026-09-11",
+"latest": "2026-09-17",
 "items": [
+{
+"id": "S-63356",
+"date": "2026-09-17",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2540 OLENTANGY RIVER RD",
+"permit_no": "EMLSC2637498",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "American Chemical Society(2540 Olentangy River Rd)における電気設備(MEP)工事。金額不明。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-63357",
+"date": "2026-09-17",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2540 OLENTANGY RIVER RD",
+"permit_no": "TSTRC2636909",
+"permit_type": "Temporary Structure",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "American Chemical Society(2540 Olentangy River Rd)による仮設構造物の許可(用途区分: 娯楽・社交・レクリエーション)。金額不明。",
+"infer": "仮設イベント設備の可能性が高く、生産・研究施設への投資ではないと読める(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Temporary Structure / Amusement, Social, and Recreational / Special",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54679",
 "date": "2026-09-11",
@@ -126,6 +174,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-17",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-63356",
+"summary": "American Chemical Society(2540 Olentangy River Rd)における電気設備(MEP)工事。金額不明。"
+},
+{
+"date": "2026-09-17",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-63357",
+"summary": "American Chemical Society(2540 Olentangy River Rd)による仮設構造物の許可(用途区分: 娯楽・社交・レクリエーション)。金額不明。"
+},
+{
 "date": "2026-09-11",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -147,6 +209,6 @@
 "summary": "American Chemical Society(2540 Olentangy River Rd)における仮設構造物(Temporary Structure)の許可。金額不明。"
 }
 ],
-"generated_at": "2026-09-20T08:45:34+00:00",
+"generated_at": "2026-09-20T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

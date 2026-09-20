@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 1500.0,
-"latest": "2026-09-14",
+"count": 2,
+"value_total": 3500.0,
+"latest": "2026-09-17",
 "items": [
+{
+"id": "S-63318",
+"date": "2026-09-17",
+"applied": "2026-09-17",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "5547 GOLDENROD DR",
+"permit_no": "2026P08772",
+"permit_type": "Building",
+"value": 2000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati 5547 Goldenrod Dr の住宅(1-2-3ファミリー)改修許可 $2,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Alteration / Building / 1-2-3 FM",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-59048",
 "date": "2026-09-14",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-17",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-63318",
+"summary": "Cincinnati 5547 Goldenrod Dr の住宅(1-2-3ファミリー)改修許可 $2,000。"
+},
+{
 "date": "2026-09-14",
 "face": "permits",
 "title": "建設許可(Cincinnati): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Cincinnati 5547 Goldenrod Dr の配管工事許可 $1,500(1-2-3 FM 用途)。"
 }
 ],
-"generated_at": "2026-09-20T08:45:34+00:00",
+"generated_at": "2026-09-20T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

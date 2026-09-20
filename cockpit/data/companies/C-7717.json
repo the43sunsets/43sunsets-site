@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 1000000.0,
-"latest": "2026-09-14",
+"count": 3,
+"value_total": 1777294.0,
+"latest": "2026-09-17",
 "items": [
+{
+"id": "S-63374",
+"date": "2026-09-17",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2140 IKEA WAY",
+"permit_no": "FSUPC2635504",
+"permit_type": "Fire Suppression",
+"value": 777294.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 2140 Ikea Way(IKEA 関連施設)における防火(消火)設備の増改築工事 $777k。",
+"infer": "所有名義は SPE(The Galaxy at Polaris Phase I LLC)で、既存の商業・物流施設における防火設備更新の可能性(推論)。生産・研究への直接投資とは読めない。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Suppression / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-59079",
 "date": "2026-09-14",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-17",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-63374",
+"summary": "Columbus 2140 Ikea Way(IKEA 関連施設)における防火(消火)設備の増改築工事 $777k。"
+},
+{
 "date": "2026-09-14",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -116,6 +147,6 @@
 "summary": "Columbus 2130 Ikea Way Unit 200 における商業施設の構造的改修 $1.0M(6,100 SQFT)。"
 }
 ],
-"generated_at": "2026-09-20T08:45:34+00:00",
+"generated_at": "2026-09-20T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

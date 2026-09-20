@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-09-20T08:45:41+00:00",
+  "generated_at": "2026-09-20T12:30:33+00:00",
   "stale_days": 45,
   "window_days": 60,
   "seeded_plan_rows": 0,
@@ -2439,7 +2439,7 @@
    "date_min": "2026-07-01",
    "date_max": "2026-09-18",
    "owner_coverage": 6718,
-   "targets": 36,
+   "targets": 38,
    "cadence": "daily",
    "next_run_at": null,
    "interrupted": false
@@ -2490,7 +2490,7 @@
    "date_min": "2026-07-01",
    "date_max": "2026-09-17",
    "owner_coverage": 1948,
-   "targets": 12,
+   "targets": 13,
    "cadence": "daily",
    "next_run_at": null,
    "interrupted": false
@@ -2643,7 +2643,7 @@
    "date_min": "2026-07-01",
    "date_max": "2026-11-20",
    "owner_coverage": 17,
-   "targets": 3,
+   "targets": 5,
    "cadence": "daily",
    "next_run_at": null,
    "interrupted": false
@@ -2738,9 +2738,9 @@
    "state": "IL",
    "jurisdiction": "Cook 郡 BS&A 利用自治体(Skokie 他)",
    "label": "Cook 郡 BS&A 利用自治体(Skokie 他) 建築許可(公開記録)",
-   "last_run_status": "killed",
-   "last_run_at": "2026-09-19T10:00:02Z",
-   "last_run_note": "terminated before completion (SIGTERM/timeout/exception)",
+   "last_run_status": "error",
+   "last_run_at": "2026-09-20T10:00:01Z",
+   "last_run_note": "RuntimeError: BS&A Greenfield: 10 consecutive errors at 48/592 parcels (last: TimeoutError)",
    "signals": 20,
    "date_min": "2026-07-08",
    "date_max": "2026-09-04",
@@ -2748,7 +2748,7 @@
    "targets": 0,
    "cadence": "monthly",
    "next_run_at": "2026-10-05T09:00:00+00:00",
-   "interrupted": false
+   "interrupted": true
   },
   {
    "source_id": "SRC-071",

@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": 7890.0,
-"latest": "2026-07-15",
+"latest": "2026-07-17",
 "items": [
+{
+"id": "S-61725",
+"date": "2026-07-17",
+"applied": "2026-07-17",
+"state": "IL",
+"jurisdiction": "Round Lake Beach",
+"address": "1102 SHORELAND CT",
+"permit_no": "PB26-0566",
+"permit_type": "Residential",
+"value": 0.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Round Lake Beach 1102 Shoreland Ct の住宅における下水修繕(Sewer Repair)、金額は $0。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Sewer Repair",
+"source_id": "SRC-179",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-12407",
 "date": "2026-07-15",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-07-17",
+"face": "permits",
+"title": "建設許可(Round Lake Beach): 未分類",
+"ref": "S-61725",
+"summary": "Round Lake Beach 1102 Shoreland Ct の住宅における下水修繕(Sewer Repair)、金額は $0。"
+},
+{
 "date": "2026-07-15",
 "face": "permits",
 "title": "建設許可(Matteson): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Matteson(6128 WEDGEWOOD CT, MATTESON, IL 60443)で賃貸住宅の煙突上部15段再構築・コンクリート笠木打設 $7.9k。"
 }
 ],
-"generated_at": "2026-09-20T08:45:34+00:00",
+"generated_at": "2026-09-20T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
