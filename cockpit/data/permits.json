@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-21T08:09:13+00:00",
+"generated_at": "2026-09-21T08:10:42+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,17 +17,17 @@
 "funnel": {
 "signals_total": 62444,
 "candidates": 867,
-"enriched": 42056,
-"targets": 154,
+"enriched": 42046,
+"targets": 144,
 "unclassified": 41902,
-"unevaluated": 20388,
+"unevaluated": 20398,
 "by_category": {
-"データセンター建設": 9,
-"医療施設": 80,
+"データセンター建設": 8,
+"医療施設": 74,
 "未分類": 41902,
-"物流・倉庫の新設": 17,
+"物流・倉庫の新設": 16,
 "研究・ラボ施設": 14,
-"製造能力の増強": 34
+"製造能力の増強": 32
 }
 },
 "sources": [
@@ -43,7 +43,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-09-18",
 "owner_coverage": 6718,
-"targets": 38,
+"targets": 37,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -111,7 +111,7 @@
 "date_min": "2026-07-07",
 "date_max": "2026-09-18",
 "owner_coverage": 1061,
-"targets": 27,
+"targets": 25,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -247,7 +247,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-11-20",
 "owner_coverage": 17,
-"targets": 5,
+"targets": 3,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -264,7 +264,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-09-21",
 "owner_coverage": 10902,
-"targets": 12,
+"targets": 10,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -1727,56 +1727,6 @@
 },
 {
 "investor": {
-"name": "CBOE Data Center(旧Chicago Board Options Exchangeビル、400 S LaSalle St)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": "LEGACY GI TC 400 LASALLE LLC",
-"owner_kind": "登記名義",
-"owner_is_spe": true,
-"applicant": null,
-"gc": "ARCO/MURRAY NATIONAL CONSTRUCTION COMPANY LLC"
-},
-"id": "S-59631",
-"state": "IL",
-"city": "Chicago・400 S LA SALLE ST",
-"company": "LEGACY GI TC 400 LASALLE LLC",
-"entity_type": "spe",
-"company_basis": "owner",
-"industry": "データセンター",
-"category": "データセンター建設",
-"category_raw": "データセンター建設",
-"confidence": "high",
-"date": "2026-09-16",
-"applied": "2026-06-17",
-"jp": false,
-"new": true,
-"summary": "Chicago 400 S LaSalle St の既存7階オフィスビルをデータセンターへ転換する内装工事(フェーズ3/3)$151.1M。新設備導入とMEP(機械・電気・配管)更新を含む。フェーズ1解体・フェーズ2インフラ工事は別許可番号で実施済み。",
-"infer": "オフィスビルからデータセンターへの転換工事の最終段階 = サーバー機器・電源設備・冷却設備の大型調達が進行中の可能性(推論)。所有名義は SPE(Legacy GI TC 400 LaSalle LLC)。",
-"note": null,
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101084518 PERMIT - RENOVATION/ALTERATION",
-"value": 151112046.0,
-"verbatim": "PHASE 3 OF 3: INTERIOR ALTERATIONS TO EXISTING 7-STORY OFFICE BUILDING TO CONVERT TO A DATA CENTER. WORK TO INCLUDE NEW EQUIPMENT WITH ASSOCIATED MEP UPGRADES. PHASE 1 DEMOLITION ONLY WORK PERMITTED UNDER 101083036. PHASE 2 INFRASTRUCTURE WORK PERMITTED UNDER 101081181. IA CONSTRUCTION; B-BUSINESS",
-"gc": "ARCO/MURRAY NATIONAL CONSTRUCTION COMPANY LLC",
-"pin": "1716242017",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-4",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-18T12:30:10+00:00"
-}
-},
-{
-"investor": {
 "name": "PROCTER & GAMBLE CO THE",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -2523,56 +2473,6 @@
 "batch": "msgbatch_0111czRsgdugDWzXi3UgsAT1",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-12T08:45:02+00:00"
-}
-},
-{
-"investor": {
-"name": "Maddox Industrial Transformer(303 Main St, Batavia OH)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": "OH MAIN 1 LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": true,
-"applicant": null,
-"gc": null
-},
-"id": "S-51130",
-"state": "OH",
-"city": "Clermont County・303 MAIN ST BATAVIA OH",
-"company": "OH MAIN 1 LLC",
-"entity_type": "spe",
-"company_basis": "owner",
-"industry": "機械・金属",
-"category": "製造能力の増強",
-"category_raw": "製造能力の増強",
-"confidence": "high",
-"date": "2026-09-09",
-"applied": "2026-08-11",
-"jp": false,
-"new": true,
-"summary": "Batavia OH 303 Main St で Maddox Industrial Transformer の改修工事 $1.125M。所有名義は OH MAIN 1 LLC。",
-"infer": "Maddox Industrial Transformer(変圧器メーカー)の施設改修と読める = 生産設備・電気機器の更新に伴う投資の可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Clermont County 建築許可(公開記録)",
-"ref": "許可 B-076909-2026 Commercial Alteration Permit",
-"value": 1125000.0,
-"verbatim": "MADDOX INDUSTRIAL TRANSFORMER RENO / Commercial Alteration Permit / Alteration",
-"gc": null,
-"pin": "060208.089B",
-"owner_source": "parcel:clermont_oh"
-},
-"karte": null,
-"company_id": "C-12430",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_013Ym6tbx9DgjGi7sa8ECHVX",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-10T21:00:18+00:00"
 }
 },
 {
@@ -3727,56 +3627,6 @@
 },
 {
 "investor": {
-"name": "Carle Health Methodist Hospital(旧UnityPoint Health Methodist)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": "Central Illinois Electrical Services"
-},
-"id": "S-57951",
-"state": "IL",
-"city": "Peoria・221 NE Glen Oak Ave",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-08-26",
-"applied": "2026-08-20",
-"jp": false,
-"new": false,
-"summary": "221 NE Glen Oak Ave の救急外来(ED)トリアージ改修に伴う電気工事 $10k。",
-"infer": "小規模な電気副許可であり、親案件の ED トリアージ改修工事に付随するものと読める(推論)。",
-"note": null,
-"fact": {
-"src": "Peoria 建築許可(公開記録)",
-"ref": "許可 ELE-001821-2026 Electrical",
-"value": 10000.0,
-"verbatim": "ED Triage Remodel / Electrical / Commercial",
-"gc": "Central Illinois Electrical Services",
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01HZT6nzCByNgVCjPNEUS1RR",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-16T09:36:30+00:00"
-}
-},
-{
-"investor": {
 "name": "NATIONWIDE CHILDRENS HOSPITAL",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -4677,106 +4527,6 @@
 },
 {
 "investor": {
-"name": "Zarminali Pediatrics",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-14857",
-"state": "IL",
-"city": "Arlington Heights・111 W RAND RD ARLINGTON HEIGHTS IL 60004",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-08-13",
-"applied": "2026-08-12",
-"jp": false,
-"new": false,
-"summary": "小児科クリニック(Zarminali Pediatrics)が隣接テナントスペースへ拡張 $338,465、入居使用承認(Certificate of Occupancy)。",
-"infer": "小規模クリニックの拡張であり、医療機器・内装設備の調達を伴う可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Arlington Heights 建築許可(公開記録)",
-"ref": "許可 CO2026-00054 Certificate of Occupancy",
-"value": 338465.0,
-"verbatim": "ZARMINALI PEDIATRICS EXPANSION - Into next door tenant space / Certificate of Occupancy / Certificate of Occupancy",
-"gc": null,
-"pin": "03173020740000",
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-469",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-07T08:15:41+00:00"
-}
-},
-{
-"investor": {
-"name": "Carle Health Methodist Hospital(旧UnityPoint Health Methodist)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": "WARNER MECHANICAL"
-},
-"id": "S-58023",
-"state": "IL",
-"city": "Peoria・221 NE Glen Oak Ave",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-08-13",
-"applied": "2026-08-13",
-"jp": false,
-"new": false,
-"summary": "Peoria 221 NE Glen Oak Ave の救急外来(ED)トリアージエリアの配管改修工事 $15k。",
-"infer": "病院 ED トリアージの小規模設備改修であり、生産設備投資シグナルとしては限定的(推論)。",
-"note": "小規模改修(金額小)。",
-"fact": {
-"src": "Peoria 建築許可(公開記録)",
-"ref": "許可 PLU-001754-2026 Plumbing",
-"value": 15000.0,
-"verbatim": "Plumbing Remodel in ED Triage / Plumbing / Commercial",
-"gc": "WARNER MECHANICAL",
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01HZT6nzCByNgVCjPNEUS1RR",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-16T09:36:30+00:00"
-}
-},
-{
-"investor": {
 "name": "LEGACY INVESTING",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -5073,56 +4823,6 @@
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-07T08:15:41+00:00"
-}
-},
-{
-"investor": {
-"name": "Meiss Family Dental (Kenneth D. Meiss, DMD)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": "C.L. O'Brien Plumbing Co."
-},
-"id": "S-58067",
-"state": "IL",
-"city": "Peoria・910 W Glen Ave",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": "description",
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-08-10",
-"applied": "2026-08-10",
-"jp": false,
-"new": false,
-"summary": "Meiss Family Dental の歯科医院(910 W Glen Ave)で診察椅子2台分の配管増設工事 $29,987。",
-"infer": "小規模な歯科診療所の設備配管工事であり、生産設備・産業機器の投資機会としては規模が小さい可能性(推論)。",
-"note": "小規模歯科医院の配管工事(金額小)。",
-"fact": {
-"src": "Peoria 建築許可(公開記録)",
-"ref": "許可 PLU-001712-2026 Plumbing",
-"value": 29987.0,
-"verbatim": "Meiss Family Dental - Adding plumbing for two exam room chairs / Plumbing / Commercial",
-"gc": "C.L. O'Brien Plumbing Co.",
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01HZT6nzCByNgVCjPNEUS1RR",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-16T09:36:30+00:00"
 }
 },
 {
@@ -5977,56 +5677,6 @@
 },
 {
 "investor": {
-"name": "UChicago Medicine AdventHealth La Grange(旧Adventist La Grange Memorial Hospital)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": "MARK RISTOW",
-"gc": null
-},
-"id": "S-62354",
-"state": "IL",
-"city": "La Grange・5101 WILLOW SPRINGS RD, LA G, LA GRANGE, IL 60525",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-07-31",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "La Grange 5101 Willow Springs Rd の施設で下層階のカテーテル検査室(Cath Lab)改修工事 $1.8M。",
-"infer": "Cath Lab 改修 = 心血管系の画像診断・検査機器の更新に伴う医療機器調達の可能性(推論)。",
-"note": null,
-"fact": {
-"src": "La Grange 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
-"ref": "許可 NRB-26-21 COMMERCIAL PERMIT",
-"value": 1807596.0,
-"verbatim": "LOWER LEVEL CATH LAB RENOVATION / COMMERCIAL PERMIT / OTHER REMODELING",
-"gc": null,
-"pin": "18082050700000",
-"owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-20T12:30:17+00:00"
-}
-},
-{
-"investor": {
 "name": "CSM TUBE USA INC",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -6177,56 +5827,6 @@
 },
 {
 "investor": {
-"name": "Amazon (Distribution Center DCL7)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": "10801 MADISON AVENUE OWNER LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": true,
-"applicant": null,
-"gc": "TOYOTA AUTOMATED LOGISTICS AMERICAS, LLC"
-},
-"id": "S-26949",
-"state": "OH",
-"city": "Cleveland・10801 MADISON AVE, CLEVELAND, OH, 44102",
-"company": "10801 MADISON AVENUE OWNER LLC",
-"entity_type": "spe",
-"company_basis": "owner",
-"industry": "物流・EC",
-"category": "物流・倉庫の新設",
-"category_raw": "物流・倉庫の新設",
-"confidence": "high",
-"date": "2026-07-30",
-"applied": "2026-06-03",
-"jp": false,
-"new": false,
-"summary": "既存 Amazon 倉庫施設(DCL7、Cleveland 10801 Madison Ave)に新規機械設備を設置する内外装改修 $200k(S-1 保管用途)。",
-"infer": "Amazon の既存物流施設(DCL7)内に新規マテハン機器を導入する工事と読める(推論)。所有名義は不動産保有 SPE。",
-"note": null,
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCB26-022430 Commercial Building",
-"value": 200000.0,
-"verbatim": "Commercial Building / S-1 Storage - Moderate Hazard / Interior/Exterior Remodel / INSTALL NEW MACHINERY FOR EXISTING AMAZON WAREHOUSE FACILITY (DCL7). SUBMIT SEPARATE PERMIT FOR ELECTRICAL. NO SPECIAL INSPECTIONS IDENTIFIED. NO C OF O REQUIRED WITH THIS PERMIT.",
-"gc": "TOYOTA AUTOMATED LOGISTICS AMERICAS, LLC",
-"pin": "00505001",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-7747",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XgsSA1e25Aj1Yf3Gg5cRhN",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-07T21:00:13+00:00"
-}
-},
-{
-"investor": {
 "name": "UNIVERSITY OF CHICAGO",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -6373,56 +5973,6 @@
 "batch": "session-0903-001",
 "model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4",
 "generated_at": "2026-09-04T01:43:43+00:00"
-}
-},
-{
-"investor": {
-"name": "Citadel of Glenview（旧 Maryhaven Nursing and Rehabilitation Center）",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": "HOWARD CORNER KAPLAN",
-"gc": null
-},
-"id": "S-62275",
-"state": "IL",
-"city": "Glenview・1700 E LAKE AVE, GLENVIEW, IL 60025",
-"company": "所有者・申請者の記載なし",
-"entity_type": "unknown",
-"company_basis": null,
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-07-29",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Glenview 1700 E Lake Ave の介護施設(ナーシングホーム)で 118トン空冷チラー交換工事 $324k(電気・HVAC・コンクリートスラブ工事のみ)。",
-"infer": "介護医療施設の空調設備更新であり、生産設備投資ではなく施設維持工事の可能性(推論)。",
-"note": null,
-"fact": {
-"src": "Glenview 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
-"ref": "許可 T2026-2325 COMMERCIAL PERMIT",
-"value": 324000.0,
-"verbatim": "CHILLER REPLACEMENT AIR COOLED 118 TON AT A NURSING HOME ELECTRICAL, HVAC, AND CONCRETE SLAB WORK ONLY / COMMERCIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION / AIR CONDITIONING - FIREPLACES",
-"gc": null,
-"pin": "04263000250000",
-"owner_source": null
-},
-"karte": null,
-"company_id": null,
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-20T12:30:17+00:00"
 }
 },
 {
@@ -7927,56 +7477,6 @@
 },
 {
 "investor": {
-"name": "NBW Inc.（National Boiler Works、産業用ボイラー機械請負業者）",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": "CONTINENTAL PROPERTIES GROUP LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": true,
-"applicant": null,
-"gc": "BUTCHKO ELECTRIC, INC."
-},
-"id": "S-27174",
-"state": "OH",
-"city": "Cleveland・4556 INDUSTRIAL PKWY, CLEVELAND, OH, 44135",
-"company": "CONTINENTAL PROPERTIES GROUP LLC",
-"entity_type": "spe",
-"company_basis": "owner",
-"industry": "その他製造",
-"category": "製造能力の増強",
-"category_raw": "製造能力の増強",
-"confidence": "high",
-"date": "2026-07-13",
-"applied": "2026-06-23",
-"jp": false,
-"new": false,
-"summary": "Cleveland 4556 Industrial Pkwy の F-1 工業施設で 20,728 SF の配線工事(パネル・コンセント・照明)$167k。関連建築許可 BCB26-012209 の副許可。",
-"infer": "F-1 工場用途の電気工事は既存/新規生産スペースの稼働準備に伴う付帯工事の可能性(推論)。",
-"note": null,
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCE26-025606 Commercial Electrical",
-"value": 167000.0,
-"verbatim": "Commercial Electrical / F-1 Factory Industrial Moderate Hazard / Install (20,728) Sq. Ft. Wiring - Panels, Receptacles and Lighting Related Building Permit: BCB26-012209",
-"gc": "BUTCHKO ELECTRIC, INC.",
-"pin": "02322010",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-7755",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XgsSA1e25Aj1Yf3Gg5cRhN",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-07T21:00:13+00:00"
-}
-},
-{
-"investor": {
 "name": "HEALTH HILL HOSPITAL",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -9322,25 +8822,6 @@
 ]
 },
 {
-"id": "C-4",
-"name": "LEGACY GI TC 400 LASALLE LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 6,
-"value_total": 210712046.0,
-"states": "IL",
-"latest": "2026-09-16",
-"targets": 6,
-"signal_ids": [
-"S-4",
-"S-4",
-"S-61",
-"S-66",
-"S-66",
-"S-59631"
-]
-},
-{
 "id": "C-7726",
 "name": "FAIRVIEW PARK HOSPITAL",
 "entity_type": "corp",
@@ -9357,6 +8838,25 @@
 "S-36884",
 "S-36919",
 "S-54749"
+]
+},
+{
+"id": "C-4",
+"name": "LEGACY GI TC 400 LASALLE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 5,
+"value_total": 59600000.0,
+"states": "IL",
+"latest": "2026-07-07",
+"targets": 5,
+"signal_ids": [
+"S-4",
+"S-4",
+"S-61",
+"S-66",
+"S-66",
+"S-59631"
 ]
 },
 {
@@ -10047,20 +9547,6 @@
 ]
 },
 {
-"id": "C-12430",
-"name": "OH MAIN 1 LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 1125000.0,
-"states": "OH",
-"latest": "2026-09-09",
-"targets": 1,
-"signal_ids": [
-"S-51130"
-]
-},
-{
 "id": "C-244",
 "name": "VHS HARPER-HUTZEL HOSPITAL INC",
 "entity_type": "corp",
@@ -10234,21 +9720,6 @@
 ]
 },
 {
-"id": "C-7747",
-"name": "10801 MADISON AVENUE OWNER LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 2,
-"value_total": 450000.0,
-"states": "OH",
-"latest": "2026-08-03",
-"targets": 1,
-"signal_ids": [
-"S-26899",
-"S-26949"
-]
-},
-{
 "id": "C-7758",
 "name": "L 3 FUZING AND ORDNANCE SYSTEMS INC",
 "entity_type": "corp",
@@ -10303,20 +9774,6 @@
 "targets": 1,
 "signal_ids": [
 "S-220"
-]
-},
-{
-"id": "C-469",
-"name": "ZARMINALI PEDIATRICS",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 338465.0,
-"states": "IL",
-"latest": "2026-08-13",
-"targets": 1,
-"signal_ids": [
-"S-14857"
 ]
 },
 {
@@ -10402,35 +9859,6 @@
 "signal_ids": [
 "S-5279",
 "S-58976"
-]
-},
-{
-"id": "C-3642",
-"name": "AMAZON",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": 200000.0,
-"states": "OH",
-"latest": "2026-07-30",
-"targets": 1,
-"signal_ids": [
-"S-26949",
-"S-35422"
-]
-},
-{
-"id": "C-7755",
-"name": "CONTINENTAL PROPERTIES GROUP LLC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 167000.0,
-"states": "OH",
-"latest": "2026-07-13",
-"targets": 1,
-"signal_ids": [
-"S-27174"
 ]
 },
 {
@@ -23990,6 +23418,21 @@
 "targets": 0,
 "signal_ids": [
 "S-28318"
+]
+},
+{
+"id": "C-7747",
+"name": "10801 MADISON AVENUE OWNER LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 250000.0,
+"states": "OH",
+"latest": "2026-08-03",
+"targets": 0,
+"signal_ids": [
+"S-26899",
+"S-26949"
 ]
 },
 {
@@ -70033,6 +69476,21 @@
 "targets": 0,
 "signal_ids": [
 "S-35647"
+]
+},
+{
+"id": "C-3642",
+"name": "AMAZON",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-07-24",
+"targets": 0,
+"signal_ids": [
+"S-26949",
+"S-35422"
 ]
 },
 {
