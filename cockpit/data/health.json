@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-09-20T15:00:37+00:00",
+ "generated_at": "2026-09-21T07:02:09+00:00",
  "checks": {
   "ucc_sync_mac": {
-   "raw_db_synced_at": "2026-09-20T07:01:06+00:00",
-   "raw_db_age_h": 8.0,
+   "raw_db_synced_at": "2026-09-21T07:02:07+00:00",
+   "raw_db_age_h": 0.0,
    "last_status": {
-    "ran_at": "2026-09-20T07:01:05Z",
+    "ran_at": "2026-09-21T07:02:07Z",
     "ok": 1,
     "search_failed": 0,
     "details_failed": 0,
@@ -25,14 +25,14 @@
    "new_docs_text": 0
   },
   "permits_update_vps": {
-   "last_run_at": "2026-09-20T10:00:01Z",
-   "age_h": 5.0,
+   "last_run_at": "2026-09-21T07:00:57Z",
+   "age_h": 0.0,
    "state": "OK",
-   "last_day": "2026-09-20",
-   "runs": 56,
-   "new_records": 1949,
-   "fetched": 33742,
-   "errors": 3,
+   "last_day": "2026-09-21",
+   "runs": 25,
+   "new_records": 115,
+   "fetched": 6565,
+   "errors": 0,
    "schedule": "02:00 America/Chicago"
   },
   "enrich_vps": {
@@ -42,7 +42,7 @@
   },
   "hiring_update_vps": {
    "last_run_at": "2026-09-20T08:25:51Z",
-   "age_h": 6.6,
+   "age_h": 22.6,
    "state": "OK",
    "open": 12029,
    "new_records": 60,
@@ -50,7 +50,7 @@
   },
   "subsidies_update_vps": {
    "last_run_at": "2026-09-20T08:23:04Z",
-   "age_h": 6.6,
+   "age_h": 22.7,
    "state": "OK",
    "total": 19753,
    "new_records": 17,
@@ -92,25 +92,28 @@
   },
   "news_update_vps": {
    "last_run_at": "2026-09-18T10:30:06+00:00",
-   "age_h": 52.5,
+   "age_h": 68.5,
    "state": "OK",
    "items_14d": 1752,
    "relevant_14d": 516,
    "schedule": "Mon/Wed/Fri 05:30 America/Chicago"
   },
   "foia_inbox": {
-   "last_run_at": "2026-09-20T12:31:06+00:00",
-   "age_h": 2.5,
-   "boxes": [
-    "hello@43sunsets.com(foia@ は別名) INBOX",
-    "hello@43sunsets.com(foia@ は別名) [Gmail]/Spam"
-   ],
-   "external": 123,
+   "last_run_at": "2026-09-20T21:00:31+00:00",
+   "age_h": 10.0,
    "unreflected": 0,
    "unreflected_over_24h": 0,
+   "quarantined": 0,
+   "reflected_weak": 0,
+   "state": "OK"
+  },
+  "inbox_other": {
+   "external": 123,
    "unmatched_72h": 1,
-   "unread_other": 2,
-   "unread_other_over_24h": 0,
+   "unread": 0,
+   "unread_over_24h": 0,
+   "unread_human": 0,
+   "unread_own_forward": 0,
    "state": "OK"
   },
   "schema_vps": {
@@ -124,8 +127,8 @@
   },
   "ready": {
    "state": "OK",
-   "run_date": "2026-09-20",
-   "deadline_met": false,
+   "run_date": "2026-09-21",
+   "deadline_met": true,
    "faces": {
     "permits": "degraded",
     "ucc": "complete",
