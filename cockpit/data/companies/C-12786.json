@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 94000.0,
-"latest": "2026-09-08",
+"count": 2,
+"value_total": 248284.0,
+"latest": "2026-09-15",
 "items": [
+{
+"id": "S-63587",
+"date": "2026-09-15",
+"applied": "2026-09-14",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1 CENTER CT, CLEVELAND, OH, 44115",
+"permit_no": "BCE26-039479",
+"permit_type": "Commercial Electrical",
+"value": 154284.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland の Rocket Arena(1 Center Ct)で照明・スイッチギア更新の商業電気工事 $154,284(A-4 屋内スポーツ観戦施設・500 SQFT)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Electrical / A-4 Assembly - Indoor Sporting Events / INSTALL 500 SQAURE FEET: Lighting and switchgear upgrades for Rocket Arena",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54779",
 "date": "2026-09-08",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-15",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-63587",
+"summary": "Cleveland の Rocket Arena(1 Center Ct)で照明・スイッチギア更新の商業電気工事 $154,284(A-4 屋内スポーツ観戦施設・500 SQFT)。"
+},
+{
 "date": "2026-09-08",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Cleveland 1 Center Ct のスポーツ観戦施設(A-4用途)でダクトヒーター設置等の商業用HVAC工事 $94k。"
 }
 ],
-"generated_at": "2026-09-21T08:11:22+00:00",
+"generated_at": "2026-09-21T08:45:14+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": 0,
-"latest": "2026-09-16",
+"latest": "2026-09-18",
 "items": [
+{
+"id": "S-63526",
+"date": "2026-09-18",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1931 JETWAY BLVD",
+"permit_no": "EMEPC2637701",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1931 Jetway Blvd の商業施設での電気設備(MEP)工事。金額不明。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-63391",
 "date": "2026-09-16",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-18",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-63526",
+"summary": "Columbus 1931 Jetway Blvd の商業施設での電気設備(MEP)工事。金額不明。"
+},
+{
 "date": "2026-09-16",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Columbus 1909 Jetway Blvd における機械設備(MEP)工事。金額不明、用途詳細も記載なし。"
 }
 ],
-"generated_at": "2026-09-21T08:11:22+00:00",
+"generated_at": "2026-09-21T08:45:14+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

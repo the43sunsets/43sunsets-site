@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 2193214.0,
-"latest": "2026-09-08",
+"count": 5,
+"value_total": 2239904.0,
+"latest": "2026-09-18",
 "items": [
+{
+"id": "S-63537",
+"date": "2026-09-18",
+"applied": "2026-09-01",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "6415 DETROIT AVE, CLEVELAND, OH, 44102",
+"permit_no": "BCB26-037413",
+"permit_type": "Commercial Building",
+"value": 16690.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 6415 Detroit Ave にてイベント「PANDEMONIUM 2026」用の仮設テント10基設置 $16,690。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Tent-Stage / ERECT (10) TEMP. TENTS PER MANU. SPECS. + APPROVED SITE PLAN FOR PANDEMONIUM 2026 EVENT ON 9/19/26. NO SEP. M/EP PERMITS REQUIRED.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-63550",
+"date": "2026-09-17",
+"applied": "2026-09-08",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "6415 DETROIT AVE, CLEVELAND, OH, 44102",
+"permit_no": "BCB26-038522",
+"permit_type": "Commercial Building",
+"value": 30000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 6415 Detroit Ave に両面70 sq.ftの内照式ビジネス識別ブレードサインを設置 $30k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Commercial Signs / Install one (1) double sided 70 sq.ft. internally illuminated business identification blade sign as per plan and as per Landmarks approval. Separate electrical permit required.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54771",
 "date": "2026-09-08",
@@ -126,6 +174,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-18",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-63537",
+"summary": "Cleveland 6415 Detroit Ave にてイベント「PANDEMONIUM 2026」用の仮設テント10基設置 $16,690。"
+},
+{
+"date": "2026-09-17",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-63550",
+"summary": "Cleveland 6415 Detroit Ave に両面70 sq.ftの内照式ビジネス識別ブレードサインを設置 $30k。"
+},
+{
 "date": "2026-09-08",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -147,6 +209,6 @@
 "summary": "Cleveland Public Theatre の Gordon Square Theatre でロビー改修と電気室増築 $2.1M(A-1 興行施設)。"
 }
 ],
-"generated_at": "2026-09-21T08:11:22+00:00",
+"generated_at": "2026-09-21T08:45:14+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

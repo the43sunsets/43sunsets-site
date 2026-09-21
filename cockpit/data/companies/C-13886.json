@@ -1,0 +1,120 @@
+{
+"id": "C-13886",
+"name": "Carle Health Methodist Hospital",
+"city": null,
+"state": null,
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"master_status": {
+"state": "queued",
+"reason": {
+"origin": "permit",
+"rank": 6,
+"of": 6
+}
+},
+"faces": {
+"permits": {
+"count": 2,
+"value_total": 25000.0,
+"latest": "2026-08-26",
+"items": [
+{
+"id": "S-57951",
+"date": "2026-08-26",
+"applied": "2026-08-20",
+"state": "IL",
+"jurisdiction": "Peoria",
+"address": "221 NE Glen Oak Ave",
+"permit_no": "ELE-001821-2026",
+"permit_type": "Electrical",
+"value": 10000.0,
+"category": "医療施設",
+"confidence": "high",
+"summary": "Peoria の Carle Health Methodist Hospital(221 NE Glen Oak Ave)で救急外来(ED)トリアージエリア改修に伴う電気工事 $10k。",
+"infer": "ED トリアージ改修に付随する小規模電気工事であり、大規模設備投資ではない可能性(推論)。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "ED Triage Remodel / Electrical / Commercial",
+"source_id": "SRC-142",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-58023",
+"date": "2026-08-13",
+"applied": "2026-08-13",
+"state": "IL",
+"jurisdiction": "Peoria",
+"address": "221 NE Glen Oak Ave",
+"permit_no": "PLU-001754-2026",
+"permit_type": "Plumbing",
+"value": 15000.0,
+"category": "医療施設",
+"confidence": "high",
+"summary": "Peoria 221 NE Glen Oak Ave の Carle Health Methodist Hospital で ED(救急外来)トリアージエリアの配管改修 $15k。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Plumbing Remodel in ED Triage / Plumbing / Commercial",
+"source_id": "SRC-142",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "該当なし",
+"count": 0,
+"note": "この会社の採用ページは当社の網に無い(公開 API を持つ ATS が見つからない、または求人 0)。"
+},
+"grants": {
+"status": "該当なし",
+"count": 0,
+"note": "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。"
+},
+"news": {
+"status": "該当なし",
+"count": 0,
+"note": "直近のニュース(景気の状況で収集する米製造業・5 州のニュース)にこの会社は出ていない。"
+}
+},
+"timeline": [
+{
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Peoria): 医療施設",
+"ref": "S-57951",
+"summary": "Peoria の Carle Health Methodist Hospital(221 NE Glen Oak Ave)で救急外来(ED)トリアージエリア改修に伴う電気工事 $10k。"
+},
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Peoria): 医療施設",
+"ref": "S-58023",
+"summary": "Peoria 221 NE Glen Oak Ave の Carle Health Methodist Hospital で ED(救急外来)トリアージエリアの配管改修 $15k。"
+}
+],
+"generated_at": "2026-09-21T08:45:14+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

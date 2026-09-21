@@ -20,10 +20,58 @@
 },
 "faces": {
 "permits": {
-"count": 8,
-"value_total": 24036782.0,
-"latest": "2026-09-09",
+"count": 10,
+"value_total": 24138164.0,
+"latest": "2026-09-16",
 "items": [
+{
+"id": "S-63578",
+"date": "2026-09-16",
+"applied": "2026-09-15",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "9500 EUCLID AVE, CLEVELAND, OH, 44106",
+"permit_no": "BCE26-039735",
+"permit_type": "Commercial Electrical",
+"value": 38000.0,
+"category": "医療施設",
+"confidence": "high",
+"summary": "Cleveland Clinic Foundation(9500 Euclid Ave)のリース区画 580 SQFT に新規パネルを設置する電気工事 $38k(建築許可 BCB26-037337 の副許可)。",
+"infer": "小規模なテナント向け電気工事であり、大規模な設備投資シグナルとは言えない(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / INSTALL 580 SQAURE FEET: Install new panel for leased space ***BUILDING PERMIT NO BCB26-037337***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-63584",
+"date": "2026-09-15",
+"applied": "2026-08-31",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "9500 EUCLID AVE, CLEVELAND, OH, 44106",
+"permit_no": "BCB26-037337",
+"permit_type": "Commercial Building",
+"value": 63382.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland Clinic Foundation(9500 Euclid Ave)の1階テナントスペース580 SFの内装改修 $63,382。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO 580 SF TENANT SPACE ON THE FIRST FLOOR PER APPROVED PLANS. SEPARATE PLUMBING AND ELECTRICAL PERMITS ARE REQUIRED.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54766",
 "date": "2026-09-09",
@@ -243,6 +291,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Cleveland): 医療施設",
+"ref": "S-63578",
+"summary": "Cleveland Clinic Foundation(9500 Euclid Ave)のリース区画 580 SQFT に新規パネルを設置する電気工事 $38k(建築許可 BCB26-037337 の副許可)。"
+},
+{
+"date": "2026-09-15",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-63584",
+"summary": "Cleveland Clinic Foundation(9500 Euclid Ave)の1階テナントスペース580 SFの内装改修 $63,382。"
+},
+{
 "date": "2026-09-09",
 "face": "permits",
 "title": "建設許可(Cleveland): 医療施設",
@@ -299,6 +361,6 @@
 "summary": "Cleveland Clinic(9500 Euclid Ave)でサンプポンプ1台・排水/通気配管23ftの設備配管工事 $14,660(親許可 B25018487 M19-M20 に付随)。"
 }
 ],
-"generated_at": "2026-09-21T08:11:22+00:00",
+"generated_at": "2026-09-21T08:45:14+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
