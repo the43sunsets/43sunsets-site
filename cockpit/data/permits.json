@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-22T08:12:00+00:00",
+"generated_at": "2026-09-22T08:13:28+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,13 +17,13 @@
 "funnel": {
 "signals_total": 62927,
 "candidates": 871,
-"enriched": 42172,
-"targets": 154,
+"enriched": 42171,
+"targets": 153,
 "unclassified": 42018,
-"unevaluated": 20755,
+"unevaluated": 20756,
 "by_category": {
 "データセンター建設": 9,
-"医療施設": 82,
+"医療施設": 81,
 "未分類": 42018,
 "物流・倉庫の新設": 16,
 "研究・ラボ施設": 14,
@@ -111,7 +111,7 @@
 "date_min": "2026-07-07",
 "date_max": "2026-09-18",
 "owner_coverage": 1061,
-"targets": 27,
+"targets": 26,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -2023,56 +2023,6 @@
 "batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-17T12:30:19+00:00"
-}
-},
-{
-"investor": {
-"name": "Aristos Rehabilitation & Nursing Center(旧Rae-Ann Center、現Rock River Healthcare of Westpark)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
-},
-"parties": {
-"owner_of_record": "ARISTOS PROPCO II LLC",
-"owner_kind": "課税台帳",
-"owner_is_spe": true,
-"applicant": null,
-"gc": "SEMA BUILDERS LLC"
-},
-"id": "S-63611",
-"state": "OH",
-"city": "Cleveland・4650 ROCKY RIVER DR, CLEVELAND, OH, 44135",
-"company": "ARISTOS PROPCO II LLC",
-"entity_type": "spe",
-"company_basis": "owner",
-"industry": "医薬・ライフサイエンス",
-"category": "医療施設",
-"category_raw": "医療施設",
-"confidence": "high",
-"date": "2026-09-14",
-"applied": "2026-07-15",
-"jp": false,
-"new": true,
-"summary": "Cleveland 4650 Rocky River Dr の病院/介護施設(I-2)で既存電気系統を改修し、必須電源システム(EES)用の第2発電機を設置 $160k。",
-"infer": "医療施設の非常用発電設備増強 = 施設の電源信頼性強化に伴う付帯設備投資の可能性(推論)。所有名義は SPE(Propco)。",
-"note": null,
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCE26-029379 Commercial Electrical",
-"value": 160000.0,
-"verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / MAKE ALTERATIONS TO EXISTING ELECTRICAL SYSTEM INCLUDING INSTALLATION OF SECOND GENERATOR FOR ESSENTIAL ELECTRICAL SYSTEM (EES) PER APPROVED PLANS. SEPARATE HVAC PERMIT REQUIRED. NO CERTIFICATE OF OCCUPANCY REQUIRED WITH THIS PERMIT. MAINTAIN OBC CHAPTER 33 SAFEGUARDS DURING CONSTRUCTION.",
-"gc": "SEMA BUILDERS LLC",
-"pin": "02633030",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-13904",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
-"model": "claude-sonnet-5 (batch api v1)",
-"generated_at": "2026-09-21T08:45:06+00:00"
 }
 },
 {
@@ -10465,20 +10415,6 @@
 "S-36682",
 "S-36690",
 "S-36897"
-]
-},
-{
-"id": "C-13904",
-"name": "ARISTOS PROPCO II LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 160000.0,
-"states": "OH",
-"latest": "2026-09-14",
-"targets": 1,
-"signal_ids": [
-"S-63611"
 ]
 },
 {

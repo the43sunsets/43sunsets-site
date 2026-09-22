@@ -1,7 +1,7 @@
 {
 "id": "C-13321",
 "name": "Nutramaize LLC",
-"city": "In82862",
+"city": "In00000",
 "state": "IN",
 "entity_type": "corp",
 "industry": null,
@@ -13,12 +13,11 @@
 "jp_basis": null,
 "master_checked_at": null,
 "master_status": {
-"state": "untargeted",
+"state": "queued",
 "reason": {
-"origins": [
-"grants"
-],
-"rule": "none"
+"origin": "subsidy",
+"rank": 7,
+"of": 15
 }
 },
 "faces": {
@@ -42,8 +41,8 @@
 },
 "grants": {
 "status": "収集中",
-"count": 3,
-"amount_total": 560443.5,
+"count": 4,
+"amount_total": 2112285.5,
 "latest": "2023-08-25",
 "items": [
 {
@@ -74,6 +73,36 @@
 "policy": "subsidies-v1-2026-09-07",
 "batch": "msgbatch_01NB7QBFSMR9MXAmUe6ThGjU",
 "model": "claude-sonnet-5"
+}
+},
+{
+"id": "S-19759",
+"date": "2019-07-31",
+"start": "2019-08-01",
+"end": "2028-01-31",
+"state": "IN",
+"city": "In00000",
+"kind": "grant",
+"kind_label": "助成",
+"issuer_level": "連邦",
+"issuer": "National Science Foundation",
+"program": "47.084",
+"program_name": "NSF SBIR/STTR",
+"amount": 1551842.0,
+"stage": "契約・交付",
+"category": "研究開発",
+"industry": "食品・素材加工",
+"summary": null,
+"infer": null,
+"confidence": null,
+"verbatim": "STTR PHASE II: DEVELOPING HIGH CAROTENOID ORANGE CORN FOR LARGE-SCALE COMMERCIAL ADOPTION",
+"url": "https://www.usaspending.gov/award/ASST_NON_1926952_049",
+"role": "recipient",
+"role_label": "受領者(USAspending)",
+"provenance": {
+"policy": "rule",
+"batch": null,
+"model": null
 }
 },
 {
@@ -153,6 +182,13 @@
 "summary": "National Institute of Food and Agricultureが NUTRAMAIZE LLC に $460,455 の助成を交付し、キサントフィルカロテノイドが採卵鶏の熱ストレス時の生理反応に与える影響を研究する。"
 },
 {
+"date": "2019-07-31",
+"face": "grants",
+"title": "助成(連邦・National Science Foundation): 研究開発",
+"ref": "S-19759",
+"summary": null
+},
+{
 "date": "2017-10-16",
 "face": "grants",
 "title": "助成(州・Indiana IEDC): 未分類",
@@ -167,6 +203,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-09-22T08:12:04+00:00",
+"generated_at": "2026-09-22T08:13:31+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
