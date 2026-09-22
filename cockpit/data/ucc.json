@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-22T08:14:07+00:00",
+"generated_at": "2026-09-22T08:45:13+00:00",
 "states": [
 "IL",
 "IN",
@@ -40,13 +40,13 @@
 "funnel": {
 "filings_total": 6744,
 "with_collateral": 954,
-"read": 914,
-"unread": 40,
+"read": 915,
+"unread": 39,
 "no_text_yet": 5790,
 "by_kind": {
 "与信枠の新設": 60,
 "未分類": 28,
-"設備投資": 755,
+"設備投資": 756,
 "資金繰り警戒": 2,
 "雑音": 69
 },
@@ -63,7 +63,7 @@
 },
 "catalog": {
 "equipment_rows": 280,
-"equipment_hits": 857,
+"equipment_hits": 858,
 "equipment_misses": 23,
 "companies_checked": 3108,
 "companies_total": 512
@@ -171,6 +171,80 @@
 "jp_rule": "日系 = 在シカゴ総領事館 2025 名簿(中西部 10 州)または人の確認で確定した会社。AI 判定のみは「日系?」(候補)で、日系トグルには入らない"
 },
 "signals": [
+{
+"id": "U-1104032",
+"state": "OH",
+"company": "Technibus, Inc.",
+"company_id": null,
+"entity_type": "corp",
+"city": "Canton, OH",
+"secured_party": "TRUMPF Inc.",
+"secured_party_city": "Farmington, CT",
+"maker_query": "TRUMPF",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "TRUMPF",
+"maker_raw": "TRUMPF",
+"model": "TruBend 1225",
+"serial": "B0122R0025",
+"qty": 1,
+"domain": "板金加工",
+"process": "曲げ",
+"type": "プレスブレーキ(曲げ機)",
+"automation": false,
+"source_url": "https://www.trumpf.com/en_INT/products/machines-systems/bending-machines/trubend-series-1000/",
+"checked_at": "2026-09-05",
+"confidence": "high",
+"verified": false
+}
+],
+"domains": [
+"板金加工"
+],
+"makers": [
+"TRUMPF"
+],
+"industry": "機械・金属",
+"industry_basis": "filing",
+"made": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"confidence": "high",
+"date": "2026-09-21",
+"lapse": "2031-09-21",
+"new": true,
+"summary": "Technibus, Inc.(Canton, OH)が TRUMPF Inc. を担保権者として TruBend 1225 (B45) ベンディングマシン 1 台(製番 B0122R0025)を登記(2026-09-21)。",
+"infer": "板金加工の曲げ工程増強の可能性(推論)。",
+"karte": null,
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00301835336 Original",
+"verbatim": "One (1) TRUMPF TruBend TruBend 1225 (B45) Machine, serial number B0122R0025",
+"status": "Active"
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_014QAXmyhAv2vyULPCzMsJ7r",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-22T08:45:13+00:00"
+},
+"tier": "fact",
+"candidate": false,
+"candidate_score": 0,
+"candidate_reason": null,
+"copy": {
+"status": "free",
+"fs_number": "OH00301835336",
+"price_usd": 0
+}
+},
 {
 "id": "U-1103749",
 "state": "OH",
