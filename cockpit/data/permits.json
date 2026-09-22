@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-22T08:13:28+00:00",
+"generated_at": "2026-09-22T12:30:12+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,14 +17,14 @@
 "funnel": {
 "signals_total": 62927,
 "candidates": 871,
-"enriched": 42171,
-"targets": 153,
-"unclassified": 42018,
-"unevaluated": 20756,
+"enriched": 42360,
+"targets": 154,
+"unclassified": 42206,
+"unevaluated": 20567,
 "by_category": {
 "データセンター建設": 9,
-"医療施設": 81,
-"未分類": 42018,
+"医療施設": 82,
+"未分類": 42206,
 "物流・倉庫の新設": 16,
 "研究・ラボ施設": 14,
 "製造能力の増強": 33
@@ -111,7 +111,7 @@
 "date_min": "2026-07-07",
 "date_max": "2026-09-18",
 "owner_coverage": 1061,
-"targets": 26,
+"targets": 27,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -1567,9 +1567,9 @@
 ]
 },
 "unclassified_by_state": {
-"OH": 6353,
-"IL": 33212,
-"MI": 1849,
+"OH": 6368,
+"IL": 33384,
+"MI": 1850,
 "WI": 590,
 "IN": 14
 }
@@ -2023,6 +2023,56 @@
 "batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-17T12:30:19+00:00"
+}
+},
+{
+"investor": {
+"name": "Aristos Rehabilitation & Nursing Center(旧Rae-Ann Center、現Rock River Healthcare of Westpark)",
+"basis": "operator",
+"label": "操業事業者",
+"source": "web",
+"source_label": "公開情報(報道・施工者・入居者)"
+},
+"parties": {
+"owner_of_record": "ARISTOS PROPCO II LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "SEMA BUILDERS LLC"
+},
+"id": "S-63611",
+"state": "OH",
+"city": "Cleveland・4650 ROCKY RIVER DR, CLEVELAND, OH, 44135",
+"company": "ARISTOS PROPCO II LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-09-14",
+"applied": "2026-07-15",
+"jp": false,
+"new": true,
+"summary": "Cleveland 4650 Rocky River Dr の I-2(病院/介護施設)で、必須電力系統(EES)用の第2発電機設置を含む電気系統改修 $160k。第3ホップ情報によれば同住所は介護・リハビリ施設 Aristos Rehabilitation & Nursing Center。",
+"infer": "介護医療施設のバックアップ発電機増設 = 施設の電源冗長化・維持投資の可能性(推論)。所有名義は不動産SPE(Aristos Propco II)で実運営は介護施設事業者と読める(推論)。",
+"note": null,
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCE26-029379 Commercial Electrical",
+"value": 160000.0,
+"verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / MAKE ALTERATIONS TO EXISTING ELECTRICAL SYSTEM INCLUDING INSTALLATION OF SECOND GENERATOR FOR ESSENTIAL ELECTRICAL SYSTEM (EES) PER APPROVED PLANS. SEPARATE HVAC PERMIT REQUIRED. NO CERTIFICATE OF OCCUPANCY REQUIRED WITH THIS PERMIT. MAINTAIN OBC CHAPTER 33 SAFEGUARDS DURING CONSTRUCTION.",
+"gc": "SEMA BUILDERS LLC",
+"pin": "02633030",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-13904",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_015wK7Br7iv479SRVtUdM5Ba",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-22T12:30:08+00:00"
 }
 },
 {
@@ -10415,6 +10465,20 @@
 "S-36682",
 "S-36690",
 "S-36897"
+]
+},
+{
+"id": "C-13904",
+"name": "ARISTOS PROPCO II LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 160000.0,
+"states": "OH",
+"latest": "2026-09-14",
+"targets": 1,
+"signal_ids": [
+"S-63611"
 ]
 },
 {
@@ -19700,13 +19764,14 @@
 "name": "SUBURBAN CENTERS INC",
 "entity_type": "corp",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 520000.0,
 "states": "OH",
-"latest": "2026-09-18",
+"latest": "2026-09-19",
 "targets": 0,
 "signal_ids": [
-"S-63514"
+"S-63514",
+"S-63696"
 ]
 },
 {
@@ -24429,10 +24494,10 @@
 "name": "CATHOLIC BISHOP OF CHICAGO",
 "entity_type": "corp",
 "jp": false,
-"signals": 6,
+"signals": 7,
 "value_total": 232500.0,
 "states": "IL",
-"latest": "2026-09-04",
+"latest": "2026-09-21",
 "targets": 0,
 "signal_ids": [
 "S-37",
@@ -24440,7 +24505,8 @@
 "S-24284",
 "S-26235",
 "S-36511",
-"S-36572"
+"S-36572",
+"S-63824"
 ]
 },
 {
@@ -25476,6 +25542,20 @@
 "targets": 0,
 "signal_ids": [
 "S-63586"
+]
+},
+{
+"id": "C-13988",
+"name": "Century Federal Credit Union",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 200000.0,
+"states": "OH",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-63962"
 ]
 },
 {
@@ -28903,6 +28983,20 @@
 ]
 },
 {
+"id": "C-13984",
+"name": "555 BRIARWOOD ASSOCIATES LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 120000.0,
+"states": "MI",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-63916"
+]
+},
+{
 "id": "C-2738",
 "name": "State Mechanical",
 "entity_type": "corp",
@@ -30165,6 +30259,20 @@
 "targets": 0,
 "signal_ids": [
 "S-63603"
+]
+},
+{
+"id": "C-13986",
+"name": "MACARTHUR FOUNDATION JOHN D. AND CATHERINE T.",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 99753.0,
+"states": "IL",
+"latest": "2026-09-20",
+"targets": 0,
+"signal_ids": [
+"S-63694"
 ]
 },
 {
@@ -36666,6 +36774,20 @@
 ]
 },
 {
+"id": "C-13987",
+"name": "251 N CASS AVE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 41138.19,
+"states": "IL",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-63805"
+]
+},
+{
 "id": "C-1109",
 "name": "OPERA LOFTS",
 "entity_type": "corp",
@@ -37265,6 +37387,20 @@
 "targets": 0,
 "signal_ids": [
 "S-4618"
+]
+},
+{
+"id": "C-13991",
+"name": "1431-33 W RASCHER AVENUE CONDOMINIUM ASSOCIATION",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 38440.0,
+"states": "IL",
+"latest": "2026-09-20",
+"targets": 0,
+"signal_ids": [
+"S-63693"
 ]
 },
 {
@@ -41593,6 +41729,21 @@
 ]
 },
 {
+"id": "C-1517",
+"name": "645 CASS BUILDING CO",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 24650.0,
+"states": "IL",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-18185",
+"S-63804"
+]
+},
+{
 "id": "C-1730",
 "name": "PENNYLAND LLC",
 "entity_type": "spe",
@@ -42671,6 +42822,20 @@
 ]
 },
 {
+"id": "C-13985",
+"name": "CHERUBIM & SERAPHIM CHURCH MOVEMENT",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 22000.0,
+"states": "IL",
+"latest": "2026-09-19",
+"targets": 0,
+"signal_ids": [
+"S-63685"
+]
+},
+{
 "id": "C-1327",
 "name": "THE JOINERY, LLC",
 "entity_type": "spe",
@@ -42867,6 +43032,20 @@
 "targets": 0,
 "signal_ids": [
 "S-11683"
+]
+},
+{
+"id": "C-13996",
+"name": "CITY REAL ESTATE HOLDINGS",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 21480.0,
+"states": "IL",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-63790"
 ]
 },
 {
@@ -46350,20 +46529,6 @@
 ]
 },
 {
-"id": "C-1517",
-"name": "645 CASS BUILDING CO",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 15000.0,
-"states": "IL",
-"latest": "2026-08-25",
-"targets": 0,
-"signal_ids": [
-"S-18185"
-]
-},
-{
 "id": "C-1518",
 "name": "STATE OF ILLINOIS-DEPARTMENT OF HUMAN SERVICES",
 "entity_type": "public",
@@ -47312,6 +47477,20 @@
 "targets": 0,
 "signal_ids": [
 "S-11513"
+]
+},
+{
+"id": "C-13992",
+"name": "ALICE C ZUBER TRUST DTD 10/4/1976",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 14545.0,
+"states": "IL",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-63829"
 ]
 },
 {
@@ -51836,6 +52015,20 @@
 "targets": 0,
 "signal_ids": [
 "S-22878"
+]
+},
+{
+"id": "C-13995",
+"name": "JCS CASTING CO LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 9200.0,
+"states": "OH",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-63830"
 ]
 },
 {
@@ -64149,6 +64342,20 @@
 ]
 },
 {
+"id": "C-13993",
+"name": "GENTRANE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 500.0,
+"states": "OH",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-63833"
+]
+},
+{
 "id": "C-2333",
 "name": "REBOUND COMMUNITY DEVELOPMEN et al",
 "entity_type": "corp",
@@ -67032,15 +67239,16 @@
 "name": "INTREN",
 "entity_type": "corp",
 "jp": false,
-"signals": 3,
+"signals": 4,
 "value_total": 0,
 "states": "IL",
-"latest": "2026-09-16",
+"latest": "2026-09-21",
 "targets": 0,
 "signal_ids": [
 "S-14503",
 "S-52610",
-"S-59138"
+"S-59138",
+"S-63712"
 ]
 },
 {
@@ -73524,13 +73732,14 @@
 "name": "MID-TOWN REAL ESTATE LTD",
 "entity_type": "spe",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 0,
 "states": "OH",
-"latest": "2026-09-14",
+"latest": "2026-09-21",
 "targets": 0,
 "signal_ids": [
-"S-55247"
+"S-55247",
+"S-64105"
 ]
 },
 {
@@ -75124,6 +75333,48 @@
 "targets": 0,
 "signal_ids": [
 "S-63546"
+]
+},
+{
+"id": "C-13989",
+"name": "KENWOOD COLLECTION LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-64096"
+]
+},
+{
+"id": "C-13990",
+"name": "KENWOOD MALL LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-64082"
+]
+},
+{
+"id": "C-13994",
+"name": "MONFORT SUPPLY CO",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-64084"
 ]
 }
 ]
