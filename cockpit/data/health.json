@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-09-22T12:31:08+00:00",
+ "generated_at": "2026-09-23T07:01:09+00:00",
  "checks": {
   "ucc_sync_mac": {
-   "raw_db_synced_at": "2026-09-22T07:01:12+00:00",
-   "raw_db_age_h": 5.5,
+   "raw_db_synced_at": "2026-09-23T07:01:07+00:00",
+   "raw_db_age_h": 0.0,
    "last_status": {
-    "ran_at": "2026-09-22T07:01:11Z",
+    "ran_at": "2026-09-23T07:01:06Z",
     "ok": 1,
     "search_failed": 0,
     "details_failed": 0,
     "images_failed": 0,
     "filings": 957,
     "docs_with_collateral": 942,
-    "new_filings": 1,
-    "new_docs_text": 1,
+    "new_filings": 0,
+    "new_docs_text": 0,
     "schedule": "02:00 America/Chicago",
     "host": "mac-launchd"
    },
@@ -21,15 +21,15 @@
    "failed": false,
    "state": "OK",
    "schedule": "02:00 America/Chicago",
-   "new_records": 1,
-   "new_docs_text": 1
+   "new_records": 0,
+   "new_docs_text": 0
   },
   "permits_update_vps": {
-   "last_run_at": "2026-09-22T07:46:40Z",
-   "age_h": 4.7,
+   "last_run_at": "2026-09-22T16:00:01Z",
+   "age_h": 15.0,
    "state": "OK",
    "last_day": "2026-09-22",
-   "runs": 53,
+   "runs": 54,
    "new_records": 483,
    "fetched": 10288,
    "errors": 1,
@@ -42,7 +42,7 @@
   },
   "hiring_update_vps": {
    "last_run_at": "2026-09-22T08:02:05Z",
-   "age_h": 4.5,
+   "age_h": 23.0,
    "state": "OK",
    "open": 12040,
    "new_records": 948,
@@ -50,7 +50,7 @@
   },
   "subsidies_update_vps": {
    "last_run_at": "2026-09-22T07:59:15Z",
-   "age_h": 4.5,
+   "age_h": 23.0,
    "state": "OK",
    "total": 19791,
    "new_records": 38,
@@ -92,26 +92,26 @@
   },
   "news_update_vps": {
    "last_run_at": "2026-09-21T10:30:02+00:00",
-   "age_h": 26.0,
+   "age_h": 44.5,
    "state": "OK",
-   "items_14d": 1977,
-   "relevant_14d": 575,
+   "items_14d": 1456,
+   "relevant_14d": 326,
    "schedule": "Mon/Wed/Fri 05:30 America/Chicago"
   },
   "foia_inbox": {
-   "last_run_at": "2026-09-22T08:45:44+00:00",
-   "age_h": 3.8,
-   "unreflected": 3,
-   "unreflected_over_24h": 0,
+   "last_run_at": "2026-09-22T21:00:39+00:00",
+   "age_h": 10.0,
+   "unreflected": 6,
+   "unreflected_over_24h": 3,
    "quarantined": 0,
    "reflected_weak": 0,
-   "state": "OK"
+   "state": "STALE"
   },
   "inbox_other": {
-   "external": 133,
-   "unmatched_72h": 8,
+   "external": 136,
+   "unmatched_72h": 7,
    "unread": 8,
-   "unread_over_24h": 5,
+   "unread_over_24h": 7,
    "unread_human": 3,
    "unread_own_forward": 0,
    "state": "OK"
@@ -127,8 +127,8 @@
   },
   "ready": {
    "state": "OK",
-   "run_date": "2026-09-22",
-   "deadline_met": false,
+   "run_date": "2026-09-23",
+   "deadline_met": true,
    "faces": {
     "permits": "degraded",
     "ucc": "complete",
@@ -138,5 +138,5 @@
    }
   }
  },
- "overall": "OK"
+ "overall": "STALE"
 }
