@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-23T12:31:05+00:00",
+ "generated_at": "2026-09-23T17:42:29+00:00",
  "checks": {
   "ucc_sync_mac": {
    "raw_db_synced_at": "2026-09-23T07:01:07+00:00",
-   "raw_db_age_h": 5.5,
+   "raw_db_age_h": 10.7,
    "last_status": {
     "ran_at": "2026-09-23T07:01:06Z",
     "ok": 1,
@@ -25,14 +25,14 @@
    "new_docs_text": 0
   },
   "permits_update_vps": {
-   "last_run_at": "2026-09-23T07:49:36Z",
-   "age_h": 4.7,
+   "last_run_at": "2026-09-23T16:00:01Z",
+   "age_h": 1.7,
    "state": "OK",
    "last_day": "2026-09-23",
-   "runs": 53,
+   "runs": 54,
    "new_records": 805,
    "fetched": 10239,
-   "errors": 1,
+   "errors": 2,
    "schedule": "02:00 America/Chicago"
   },
   "enrich_vps": {
@@ -42,7 +42,7 @@
   },
   "hiring_update_vps": {
    "last_run_at": "2026-09-23T08:09:10Z",
-   "age_h": 4.4,
+   "age_h": 9.6,
    "state": "OK",
    "open": 12075,
    "new_records": 900,
@@ -50,7 +50,7 @@
   },
   "subsidies_update_vps": {
    "last_run_at": "2026-09-23T08:05:12Z",
-   "age_h": 4.4,
+   "age_h": 9.6,
    "state": "OK",
    "total": 20069,
    "new_records": 278,
@@ -92,15 +92,15 @@
   },
   "news_update_vps": {
    "last_run_at": "2026-09-23T10:30:18+00:00",
-   "age_h": 2.0,
+   "age_h": 7.2,
    "state": "OK",
    "items_14d": 1696,
    "relevant_14d": 394,
    "schedule": "Mon/Wed/Fri 05:30 America/Chicago"
   },
   "foia_inbox": {
-   "last_run_at": "2026-09-23T08:45:32+00:00",
-   "age_h": 3.8,
+   "last_run_at": "2026-09-23T17:39:25+00:00",
+   "age_h": 0.1,
    "unreflected": 6,
    "unreflected_over_24h": 3,
    "quarantined": 0,
@@ -110,11 +110,120 @@
   "inbox_other": {
    "external": 137,
    "unmatched_72h": 8,
-   "unread": 8,
-   "unread_over_24h": 7,
+   "unread": 28,
+   "unread_over_24h": 26,
+   "noise": 24,
    "unread_human": 3,
    "unread_own_forward": 0,
    "state": "OK"
+  },
+  "permit_stage_readers": {
+   "state": "UNKNOWN",
+   "version": "qa-1-rev1-2026-09-21",
+   "declared_not_in_table": [],
+   "table_not_declared": [],
+   "states": {
+    "0/duplicate": {
+     "rows": 0,
+     "reader": null,
+     "terminal": "判定しない(裁定 D-4・0 件)",
+     "over_days": {
+      "days": 7,
+      "rows": 0
+     }
+    },
+    "0/future_date": {
+     "rows": 0,
+     "reader": null,
+     "terminal": "データ層に残す(未来日付)",
+     "over_days": {
+      "days": 7,
+      "rows": 0
+     }
+    },
+    "0/no_date": {
+     "rows": 0,
+     "reader": null,
+     "terminal": "データ層に残す(日付なし・設計 §2.1 段 0)",
+     "over_days": {
+      "days": 7,
+      "rows": 0
+     }
+    },
+    "0/older": {
+     "rows": 0,
+     "reader": null,
+     "terminal": "データ層に残す(窓より古い)",
+     "over_days": {
+      "days": 7,
+      "rows": 0
+     }
+    },
+    "2a/pending_row_read": {
+     "rows": 0,
+     "reader": "enrich/permit_read.py:select_inputs",
+     "terminal": null,
+     "over_days": {
+      "days": 3,
+      "rows": 0
+     }
+    },
+    "2b/pending_name_match": {
+     "rows": 0,
+     "reader": null,
+     "terminal": null,
+     "over_days": {
+      "days": 7,
+      "rows": 0
+     }
+    },
+    "2b/pending_row_read": {
+     "rows": 0,
+     "reader": "enrich/permit_read.py:select_inputs",
+     "terminal": null,
+     "over_days": {
+      "days": 3,
+      "rows": 0
+     }
+    },
+    "2c/pending_address_hop": {
+     "rows": 0,
+     "reader": null,
+     "terminal": null,
+     "over_days": {
+      "days": 7,
+      "rows": 0
+     }
+    },
+    "2d/subject_individual": {
+     "rows": 0,
+     "reader": null,
+     "terminal": "データ層に残す・待ち行列に積まない(設計 §2.1 2-d ①)",
+     "over_days": {
+      "days": 7,
+      "rows": 0
+     }
+    },
+    "2d/subject_unknown": {
+     "rows": 0,
+     "reader": null,
+     "terminal": null,
+     "over_days": {
+      "days": 7,
+      "rows": 0
+     }
+    },
+    "3/industry_pending": {
+     "rows": 0,
+     "reader": null,
+     "terminal": null,
+     "over_days": {
+      "days": 7,
+      "rows": 0
+     }
+    }
+   },
+   "unattended": {}
   },
   "schema_vps": {
    "pending": 0,
@@ -138,5 +247,5 @@
    }
   }
  },
- "overall": "STALE"
+ "overall": "UNKNOWN"
 }

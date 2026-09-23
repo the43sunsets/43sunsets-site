@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-23T12:30:53+00:00",
+"generated_at": "2026-09-23T17:42:23+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -342,9 +342,9 @@
 "state": "IL",
 "jurisdiction": "Cook 郡 BS&A 利用自治体(Skokie 他)",
 "label": "Cook 郡 BS&A 利用自治体(Skokie 他) 建築許可(公開記録)",
-"last_run_status": "killed",
-"last_run_at": "2026-09-22T16:00:01Z",
-"last_run_note": "terminated before completion (SIGTERM/timeout/exception)",
+"last_run_status": "error",
+"last_run_at": "2026-09-23T16:00:01Z",
+"last_run_note": "RuntimeError: BS&A Greenfield: 10 consecutive errors at 48/592 parcels (last: TimeoutError)",
 "signals": 20,
 "date_min": "2026-07-08",
 "date_max": "2026-09-04",
@@ -352,7 +352,7 @@
 "targets": 0,
 "cadence": "monthly",
 "next_run_at": "2026-10-05T09:00:00+00:00",
-"interrupted": false
+"interrupted": true
 },
 {
 "source_id": "SRC-071",
@@ -1727,11 +1727,11 @@
 },
 {
 "investor": {
-"name": "CBOE Data Center(旧Chicago Board Options Exchangeビル、400 S LaSalle St)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
 },
 "parties": {
 "owner_of_record": "LEGACY GI TC 400 LASALLE LLC",
@@ -2027,11 +2027,11 @@
 },
 {
 "investor": {
-"name": "Aristos Rehabilitation & Nursing Center(旧Rae-Ann Center、現Rock River Healthcare of Westpark)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
 },
 "parties": {
 "owner_of_record": "ARISTOS PROPCO II LLC",
@@ -3577,11 +3577,11 @@
 },
 {
 "investor": {
-"name": "Hyde Park Labs(Trammell Crow Company・Beacon Capital Partners)",
+"name": "PORTAL INNOVATIONS 53RD ST. LLC",
 "basis": "operator",
 "label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
 },
 "parties": {
 "owner_of_record": "HARPER COURT HOLDINGS II",
@@ -3777,11 +3777,11 @@
 },
 {
 "investor": {
-"name": "Atlantic Food Distributors(The Protein Specialists・食肉加工)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
 },
 "parties": {
 "owner_of_record": "WHISPERING MEADOWS REALTY LLC",
@@ -3927,11 +3927,11 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "ALBERTO CULVER USA INC WHSE",
+"basis": "operator",
+"label": "操業事業者",
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
 },
 "parties": {
 "owner_of_record": "ARMITAGE PLACE II LLC",
@@ -6027,11 +6027,11 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "PAPER RECOVERY SERVICE",
+"basis": "operator",
+"label": "操業事業者",
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
 },
 "parties": {
 "owner_of_record": null,
@@ -6577,11 +6577,11 @@
 },
 {
 "investor": {
-"name": "Masters Pharmaceutical(McKesson 傘下・医薬品卸)",
+"name": "COVERMYMEDS",
 "basis": "operator",
 "label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
 },
 "parties": {
 "owner_of_record": null,
@@ -6677,11 +6677,11 @@
 },
 {
 "investor": {
-"name": "Hyde Park Labs(Trammell Crow Company・Beacon Capital Partners)",
+"name": "PORTAL INNOVATIONS 53RD ST. LLC",
 "basis": "operator",
 "label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
 },
 "parties": {
 "owner_of_record": "HARPER COURT HOLDINGS II",
@@ -6727,11 +6727,11 @@
 },
 {
 "investor": {
-"name": "Hyde Park Labs(Trammell Crow Company・Beacon Capital Partners)",
+"name": "PORTAL INNOVATIONS 53RD ST. LLC",
 "basis": "operator",
 "label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
 },
 "parties": {
 "owner_of_record": "HARPER COURT HOLDINGS II",
@@ -8527,11 +8527,11 @@
 },
 {
 "investor": {
-"name": "Legacy Investing・GI Partners(Chicago Byte Exchange データセンター 33MW)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
 },
 "parties": {
 "owner_of_record": "LEGACY GI TC 400 LASALLE, LLC",
@@ -8827,11 +8827,11 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "ALBERTO CULVER USA INC WHSE",
+"basis": "operator",
+"label": "操業事業者",
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
 },
 "parties": {
 "owner_of_record": "ARMITAGE PLACE II LLC",
@@ -8927,7 +8927,7 @@
 },
 {
 "investor": {
-"name": "Legacy Investing・GI Partners(Chicago Byte Exchange データセンター 33MW)",
+"name": "LEGACY GI TC 400 LASALLE LLC",
 "basis": "operator",
 "label": "操業事業者",
 "source": "web",
@@ -9027,11 +9027,11 @@
 },
 {
 "investor": {
-"name": "Western George LLC(Stanislaw Pluta・石材/建材の倉庫 20 万 SF)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
 },
 "parties": {
 "owner_of_record": null,
@@ -9077,11 +9077,11 @@
 },
 {
 "investor": {
-"name": null,
-"basis": "unknown",
-"label": "未特定",
-"source": null,
-"source_label": null
+"name": "SUPERIOR TOOL & STAMPING CO.",
+"basis": "operator",
+"label": "操業事業者",
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
 },
 "parties": {
 "owner_of_record": "4519 W. HADDON, LLC",
@@ -9177,11 +9177,11 @@
 },
 {
 "investor": {
-"name": "Ascension Columbia St. Mary’s(Airport Business Park クリニック)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "web",
-"source_label": "公開情報(報道・施工者・入居者)"
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
 },
 "parties": {
 "owner_of_record": "555 WEST LAYTON AVE LLC",
