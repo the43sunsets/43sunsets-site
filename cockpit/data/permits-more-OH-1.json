@@ -1,5 +1,5 @@
 {
-"generated_at": "2026-09-23T08:19:07+00:00",
+"generated_at": "2026-09-23T12:30:53+00:00",
 "state": "OH",
 "part": 1,
 "parts": 1,
@@ -806,6 +806,56 @@
 },
 {
 "investor": {
+"name": "GROWMARK INC",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "GROWMARK INC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": "STUEVE CONSTRUCTION LLC"
+},
+"id": "S-64452",
+"state": "OH",
+"city": "Cincinnati・5125 RIVER RD",
+"company": "GROWMARK INC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "食品・素材加工",
+"category": "未分類",
+"category_raw": "製造能力の増強",
+"confidence": "low",
+"date": "2026-09-18",
+"applied": "2026-07-16",
+"jp": false,
+"new": true,
+"summary": "GROWMARK INC(農業協同組合系企業)による Cincinnati 5125 River Rd の新築建物 $4.9M(S-2 低危険度倉庫用途)。",
+"infer": "S-2倉庫分類の新築であり、農業資材・穀物関連の保管・流通施設の可能性(推論)。GROWMARKは農業インプット(肥料・種子・燃料)の流通事業者であり、生産設備というより物流・貯蔵目的の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "シンシナティ市 建築許可(公開記録)",
+"ref": "許可 2026P06717 Building",
+"value": 4865000.0,
+"verbatim": "New Building / Building / S-2",
+"gc": "STUEVE CONSTRUCTION LLC",
+"pin": "016100050103",
+"owner_source": "parcel:hamilton_oh"
+},
+"karte": null,
+"company_id": "C-14018",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260923T123027Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-23T12:30:49+00:00"
+}
+},
+{
+"investor": {
 "name": "MAGNOLIA CLUBHOUSE, INC.",
 "basis": "owner_occupier",
 "label": "自社所有",
@@ -852,6 +902,56 @@
 "batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-21T08:45:06+00:00"
+}
+},
+{
+"investor": {
+"name": "ADVANCED SOIL TECHNOLOGIES",
+"basis": "operator",
+"label": "操業事業者",
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
+},
+"parties": {
+"owner_of_record": "441 VINE STREET OWNER LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": "HGC CONSTRUCTION"
+},
+"id": "S-64442",
+"state": "OH",
+"city": "Cincinnati・441 VINE ST",
+"company": "441 VINE STREET OWNER LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-18",
+"applied": "2024-02-20",
+"jp": false,
+"new": true,
+"summary": "Cincinnati 441 Vine St(R-2 用途)の改修工事 $1.35M。",
+"infer": null,
+"note": "住宅(R-2集合住宅)。",
+"fact": {
+"src": "シンシナティ市 建築許可(公開記録)",
+"ref": "許可 2024P01656 Building",
+"value": 1350000.0,
+"verbatim": "Alteration / Building / R-2",
+"gc": "HGC CONSTRUCTION",
+"pin": "008300010030",
+"owner_source": "parcel:hamilton_oh:addr"
+},
+"karte": null,
+"company_id": "C-14017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260923T123027Z",
+"model": "claude-sonnet-5 (sync fallback)",
+"generated_at": "2026-09-23T12:30:49+00:00"
 }
 },
 {
