@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 10000.0,
+"count": 2,
+"value_total": 20000.0,
 "latest": "2026-09-16",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-64259",
+"date": "2026-09-16",
+"applied": "2026-07-24",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5636 N FRANCISCO AVE",
+"permit_no": "B101086443",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 5636 N Francisco Ave の1階建て住宅と離れのガレージを解体 $10,000。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "WRECK AND REMOVE A 1 STORY MASONRY RESIDENCE AND A DETACHED FRAME GARAGE",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Chicago): 未分類",
 "ref": "S-59704",
 "summary": "Chicago 5636 N Francisco Ave の 1 階建て住宅と離れのフレームガレージを解体 $10k。"
+},
+{
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64259",
+"summary": "Chicago 5636 N Francisco Ave の1階建て住宅と離れのガレージを解体 $10,000。"
 }
 ],
-"generated_at": "2026-09-24T08:48:53+00:00",
+"generated_at": "2026-09-24T08:50:29+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,106 @@
 },
 "faces": {
 "permits": {
-"count": 25,
-"value_total": 956030.0,
-"latest": "2026-09-08",
+"count": 29,
+"value_total": 1103230.0,
+"latest": "2026-09-21",
 "items": [
+{
+"id": "S-64423",
+"date": "2026-09-21",
+"applied": "2026-06-23",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "4737 W NORTH AVE",
+"permit_no": "B101085093",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 55000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 4737 W North Ave の2階建てフレームコーチハウス(裏側のみ)の緊急解体撤去 $55,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "EMERGENCY WRECK AND REMOVE A 2 STORY FRAME COACH HOUSE (REAR ONLY)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-64334",
+"date": "2026-09-21",
+"applied": "2026-07-24",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2524 E 106TH ST",
+"permit_no": "B101086427",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 26700.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 2524 E 106th St の1階建て煉瓦造住宅を緊急解体 $26,700。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "EMERGENCY WRECK AND REMOVE A 1 STORY MASONRY RESIDENCE",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-64389",
+"date": "2026-09-21",
+"applied": "2026-07-24",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2939 E 97TH ST",
+"permit_no": "B101086426",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 32800.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 市デモ部門による2階建て木造住宅の緊急解体・撤去 $32,800(2939 E 97th St)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "EMERGENCY WRECK AND REMOVE A 2 STORY FRAME RESIDENCE",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-64364",
+"date": "2026-09-21",
+"applied": "2026-07-01",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1320 W 73RD ST",
+"permit_no": "B101085516",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 32700.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 1320 W 73rd St の2階建て木造住宅を緊急解体・撤去 $32,700。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "EMERGENCY WRECK AND REMOVE A 2 STORY FRAME RESIDENCE",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-58130",
 "date": "2026-09-08",
@@ -654,6 +750,34 @@
 },
 "timeline": [
 {
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64423",
+"summary": "Chicago 4737 W North Ave の2階建てフレームコーチハウス(裏側のみ)の緊急解体撤去 $55,000。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64334",
+"summary": "Chicago 2524 E 106th St の1階建て煉瓦造住宅を緊急解体 $26,700。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64389",
+"summary": "Chicago 市デモ部門による2階建て木造住宅の緊急解体・撤去 $32,800(2939 E 97th St)。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64364",
+"summary": "Chicago 1320 W 73rd St の2階建て木造住宅を緊急解体・撤去 $32,700。"
+},
+{
 "date": "2026-09-08",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -829,6 +953,6 @@
 "summary": "Chicago 11515 S Loomis St の2階建て組積造/木造住宅を緊急解体 $23,700(市当局)。"
 }
 ],
-"generated_at": "2026-09-24T08:48:53+00:00",
+"generated_at": "2026-09-24T08:50:29+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

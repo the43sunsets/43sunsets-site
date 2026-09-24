@@ -1,9 +1,59 @@
 {
-"generated_at": "2026-09-24T08:48:47+00:00",
+"generated_at": "2026-09-24T08:50:24+00:00",
 "state": "MI",
 "part": 1,
 "parts": 1,
 "signals": [
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "CORNER HOUSE LOFTS LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-64681",
+"state": "MI",
+"city": "Ann Arbor・205 S State St Ann Arbor MI 48104",
+"company": "CORNER HOUSE LOFTS LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-22",
+"applied": "2026-08-21",
+"jp": false,
+"new": true,
+"summary": "Ann Arbor 205 S State St の既存 AT&T 屋上アンテナ設備の改修 $50k。",
+"infer": null,
+"note": "通信アンテナ改修(小規模・建設投資ではない)。",
+"fact": {
+"src": "Ann Arbor 建築許可(公開記録)",
+"ref": "許可 BLDGC26-0470 Building (Commercial) - Alteration/Repair",
+"value": 50000.0,
+"verbatim": "MODIFY EXISTING AT&T ROOFTOP ANTENNA FACILTY / Building (Commercial) - Alteration/Repair / Alteration/Repair",
+"gc": null,
+"pin": "09-09-28-223-014",
+"owner_source": "parcel:annarbor_mi"
+},
+"karte": null,
+"company_id": "C-14045",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
 {
 "investor": {
 "name": "THE MUSEUM OF CONTEMPORARY ART",
@@ -33,9 +83,9 @@
 "applied": "2026-05-14",
 "jp": false,
 "new": true,
-"summary": "Detroit 4454 Woodward Ave の現代美術館にキャバレー用途を追加する用途変更・改修工事 $1.76M。",
+"summary": "Detroit 4454 Woodward Ave の現代美術館(MOCAD)にキャバレー用途を追加する用途変更・改修工事 $1.76M。",
 "infer": null,
-"note": "美術館(文化施設・用途追加)。",
+"note": "文化施設(美術館・用途追加)。",
 "fact": {
 "src": "デトロイト市 建築許可(公開記録)",
 "ref": "許可 BLD2026-00816 Add Addition Use",
@@ -49,9 +99,59 @@
 "company_id": "C-14019",
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
-"batch": "sync-20260923T123027Z",
-"model": "claude-sonnet-5 (sync fallback)",
-"generated_at": "2026-09-23T12:30:49+00:00"
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": "RIVERVIEW TRENTON RAILROAD",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "RIVERVIEW TRENTON RAILROAD",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64493",
+"state": "MI",
+"city": "Detroit・8000 Melville St",
+"company": "RIVERVIEW TRENTON RAILROAD",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "物流・EC",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-01-29",
+"jp": false,
+"new": true,
+"summary": "Detroit 8000 Melville St の鉄道貨物ヤード/保管線敷地に、モジュラー式オフィス(23'x64')と従業員棟/ガレージ(50'x64')を設置する変更許可 $150k。元許可 BLD2022-06043 の改訂。",
+"infer": "鉄道の転車場・貨物保管施設に付随する事務所/従業員施設の小規模設置であり、生産・物流能力そのものの拡張ではない可能性(推論)。",
+"note": "鉄道ヤード附属の小規模事務所・従業員棟(設備投資規模は小さい)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 BLD2026-00154 Alter Revision",
+"value": 150000.0,
+"verbatim": "Revision to BLD2022-06043 & placement of 23' x64' Modular Office & 50' x 64' Employee Bldg/Garage to Code per plans. See BLD2022-06043 for full original Permit desc. Subject to Field Approval. / Railr",
+"gc": null,
+"pin": "20001110-3",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": "C-14044",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
 }
 },
 {
@@ -102,6 +202,956 @@
 "batch": "msgbatch_015wK7Br7iv479SRVtUdM5Ba",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-22T12:30:08+00:00"
+}
+},
+{
+"investor": {
+"name": "7634-7650 OAKLAND AVENUE",
+"basis": "operator",
+"label": "操業事業者",
+"source": "epa",
+"source_label": "EPA 登録(古い可能性)"
+},
+"parties": {
+"owner_of_record": "CTN HOLDINGS LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-64500",
+"state": "MI",
+"city": "Detroit・7634 Oakland St",
+"company": "CTN HOLDINGS LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-07-09",
+"jp": false,
+"new": true,
+"summary": "Detroit 7634 Oakland St でオフィスへの用途変更・改修工事 $80k。",
+"infer": null,
+"note": "オフィス用途変更(小規模)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 BLD2026-01137 Change of Occupancy/Use",
+"value": 80000.0,
+"verbatim": "Change of Occupancy/Use to Office & alterations to Code per plans. Subject to Field Approval. / Office / Change of Occupancy/Use",
+"gc": null,
+"pin": "05004685.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": "C-14033",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": "BETHEL BAPTIST CHURCH EAST",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "BETHEL BAPTIST CHURCH EAST",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64482",
+"state": "MI",
+"city": "Detroit・5715 Holcomb Ave, #33",
+"company": "BETHEL BAPTIST CHURCH EAST",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-04",
+"jp": false,
+"new": true,
+"summary": "Bethel Baptist Church East(5715 Holcomb Ave #33)で商業用フラット屋根の交換工事 $78,609。",
+"infer": null,
+"note": "屋根(教会施設)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 BLD2026-01460 Alteration",
+"value": 78609.0,
+"verbatim": "Replace commercial flat roof system per provided plan and documents. (Subject to field approval.) / Church / Alteration",
+"gc": null,
+"pin": "19008586-9",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": "C-14034",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "NIKKIS GINGER TEAS LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-64489",
+"state": "MI",
+"city": "Detroit・7403 E Canfield St",
+"company": "NIKKIS GINGER TEAS LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-08-13",
+"jp": false,
+"new": true,
+"summary": "Detroit 7403 E Canfield St の店舗建物で屋根(EPDM 防水シートとコーピングキャップ)交換の外装改修 $50k。用途変更なし。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 BLD2026-01321 Alteration",
+"value": 50000.0,
+"verbatim": "EXTERIOR ALTERATIONS (EPDM Flat Roof and Coping Caps Replacement), as per submitted Plans and Documents.\r\nNO Change of Occupancy/Use in this BLD- permit.\r\nSubject to Field Approval. / STORE-PARTY/ NEI",
+"gc": null,
+"pin": "17012824.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": "C-14063",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": "ST JUDE PARISH DETROIT",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "ST JUDE PARISH DETROIT",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64496",
+"state": "MI",
+"city": "Detroit・15889 E Seven Mile",
+"company": "ST JUDE PARISH DETROIT",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-08-19",
+"jp": false,
+"new": true,
+"summary": "St Jude Parish Detroit(15889 E Seven Mile)の教会建物に設置された通信施設(Telecom Facility)の改修 $50k。",
+"infer": null,
+"note": "宗教施設付帯の通信設備改修(小規模)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 BLD2026-01422 Alteration",
+"value": 50000.0,
+"verbatim": "Modifications to existing building mounted (Telecom Facility) per provided plans and documents. (Subject to field approval.) / Church/Telecom Facility / Alteration",
+"gc": null,
+"pin": "21021280-6",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": "C-14047",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": "DETROIT LAND BANK AUTHORITY",
+"basis": "public",
+"label": "公共",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "DETROIT LAND BANK AUTHORITY",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64488",
+"state": "MI",
+"city": "Detroit・2737 Tyler St",
+"company": "DETROIT LAND BANK AUTHORITY",
+"entity_type": "public",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-16",
+"jp": false,
+"new": true,
+"summary": "Detroit Land Bank Authority による一戸建て住宅の内外装改修 $38.5k(2737 Tyler St)。",
+"infer": null,
+"note": "住宅(一戸建て改修)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03351 Alteration",
+"value": 38500.0,
+"verbatim": "Interior and Exterior alterations as per documents. \r\n(Subject to Field Approval) / One Family / Alteration",
+"gc": null,
+"pin": "10004108.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": "C-1126",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "MITCHELL,ALMA & MILLS,AARON & JAMES",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64502",
+"state": "MI",
+"city": "Detroit・3515 S Edsel St",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-01",
+"jp": false,
+"new": true,
+"summary": "Detroit 3515 S Edsel St の一戸建て住宅の外装改修工事 $33,244。",
+"infer": null,
+"note": "住宅(外装改修)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 BLD2026-01436 Alteration",
+"value": 33244.0,
+"verbatim": "Exterior renovations/restorations per provided documents. (Subject to field approval.) / Single Family / Alteration",
+"gc": null,
+"pin": "20014617.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "HOOD, VICTOR B",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64498",
+"state": "MI",
+"city": "Detroit・2130 S Ethel St",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-21",
+"applied": "2026-09-21",
+"jp": false,
+"new": true,
+"summary": "Detroit 2130 S Ethel St の改修工事 $23,688(所有者 Victor B Hood)。",
+"infer": null,
+"note": "個人住宅の改修と見られる。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03405 Alteration",
+"value": 23688.0,
+"verbatim": "Alteration",
+"gc": null,
+"pin": "20012047.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "SHAR HOUSE",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64494",
+"state": "MI",
+"city": "Detroit・5675 Maybury Grand St",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-08",
+"jp": false,
+"new": true,
+"summary": "Detroit の二世帯住宅(5675 Maybury Grand St)で屋根の外装改修 $21,135。",
+"infer": null,
+"note": "屋根。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03223 Alteration",
+"value": 21135.0,
+"verbatim": "Exterior alterations (replacing roof) as per documents. \r\n(Subject to Field Approval.) / Two Family / Alteration",
+"gc": null,
+"pin": "12006657.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": "MOTORCITY FUELS LLC",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "MOTORCITY FUELS LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64492",
+"state": "MI",
+"city": "Detroit・1500 W Fort St",
+"company": "MOTORCITY FUELS LLC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-06-16",
+"jp": false,
+"new": true,
+"summary": "Detroit 1500 W Fort St のガソリンスタンド併設コンビニ内にクイックサービスレストランを追加する用途変更・改修 $15k。",
+"infer": null,
+"note": "小売・飲食(ガソリンスタンド併設店舗)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 BLD2026-01010 Add Additional Occupancy/Use",
+"value": 15000.0,
+"verbatim": "Add Additional Occupancy/Use of Carry-Out Restaurant & alterations to Code per plans. Subject to Field Approval. / “Quick-Service Restaurant within Existing Gas Station Convenience Store / Add Additio",
+"gc": null,
+"pin": "08000056.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": "C-14029",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "DANIELS, CAMILLE",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64495",
+"state": "MI",
+"city": "Detroit・13294 Prest St",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-21",
+"applied": "2026-09-21",
+"jp": false,
+"new": true,
+"summary": "Detroit 13294 Prest St における改修工事 $11,350。所有者は個人(Camille Daniels)。",
+"infer": null,
+"note": "住宅の可能性(小規模改修)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03392 Alteration",
+"value": 11350.0,
+"verbatim": "Alteration",
+"gc": null,
+"pin": "22048559.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64501",
+"state": "MI",
+"city": "Detroit・12378 Kentucky St",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-21",
+"applied": "2026-09-21",
+"jp": false,
+"new": true,
+"summary": "Detroit 12378 Kentucky St の個人所有者による改修工事 $11,250。",
+"infer": null,
+"note": "住宅小規模改修(個人・詳細不明)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03393 Alteration",
+"value": 11250.0,
+"verbatim": "Alteration",
+"gc": null,
+"pin": "16036327.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "NEAL,NEAL JONATHAN,TRACY D",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64487",
+"state": "MI",
+"city": "Detroit・3424 Field St",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-21",
+"jp": false,
+"new": true,
+"summary": "Detroit 3424 Field St の住宅改修許可 $9,877(所有者 Neal, Jonathan/Tracy D)。",
+"infer": null,
+"note": "住宅。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03409 Alteration",
+"value": 9877.0,
+"verbatim": "Alteration",
+"gc": null,
+"pin": "17013621.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "WALTHALL, JOAN",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64499",
+"state": "MI",
+"city": "Detroit・17231 Avon Ave",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-21",
+"jp": false,
+"new": true,
+"summary": "Detroit 17231 Avon Ave の改修許可 $9,728(所有者 Joan Walthall)。",
+"infer": null,
+"note": "住宅(個人名義の小規模改修)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03408 Alteration",
+"value": 9728.0,
+"verbatim": "Alteration",
+"gc": null,
+"pin": "22081769-82",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64486",
+"state": "MI",
+"city": "Detroit・14425 Woodmont Ave",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-21",
+"jp": false,
+"new": true,
+"summary": "Detroit 14425 Woodmont Ave の改修工事 $7,500。所有者は個人(McClendon, Alicia & Karl)。",
+"infer": null,
+"note": "住宅(個人所有・小規模改修)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03406 Alteration",
+"value": 7500.0,
+"verbatim": "Alteration",
+"gc": null,
+"pin": "22062818.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "SHABA SOUTH PROPERTIES LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": true,
+"applicant": null,
+"gc": null
+},
+"id": "S-64484",
+"state": "MI",
+"city": "Detroit・20134 Riopelle St",
+"company": "SHABA SOUTH PROPERTIES LLC",
+"entity_type": "spe",
+"company_basis": "owner",
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-11",
+"jp": false,
+"new": true,
+"summary": "Detroit 20134 Riopelle St の一戸建て住宅における火災被害の内外装修繕 $6,000。",
+"infer": null,
+"note": "住宅(火災修繕)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03304 Fire Repair",
+"value": 6000.0,
+"verbatim": "Interior/Exterior alterations (Due to Fire damage) as per documents.\r\n Subject to field inspection approval / One Family / Fire Repair",
+"gc": null,
+"pin": "09018656.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": "C-14052",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "JACKSON, MICHELE DIANE",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64491",
+"state": "MI",
+"city": "Detroit・19933 Stratford Rd",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "low",
+"date": "2026-09-21",
+"applied": "2026-09-21",
+"jp": false,
+"new": true,
+"summary": "Detroit 19933 Stratford Rd の改修工事 $5,963、個人名義。",
+"infer": null,
+"note": "住宅の可能性(小規模改修)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03407 Alteration",
+"value": 5963.0,
+"verbatim": "Alteration",
+"gc": null,
+"pin": "02005253.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "FOWLER,FOWLER, AARON,YVONNE",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64485",
+"state": "MI",
+"city": "Detroit・17363 Woodingham Dr",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-16",
+"jp": false,
+"new": true,
+"summary": "Detroit の一戸建て住宅(17363 Woodingham Dr)で窓3箇所交換の外装改修 $2,430。",
+"infer": null,
+"note": "住宅(小規模改修)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03356 Alteration",
+"value": 2430.0,
+"verbatim": "Exterior alterations (3 window replacements) as per documents. \r\n(Subject to Field Approval.) / One Family / Alteration",
+"gc": null,
+"pin": "16028799.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "BRACLEY, THEOSTA & GEATRICE",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64483",
+"state": "MI",
+"city": "Detroit・17569 Whitcomb St",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-16",
+"jp": false,
+"new": true,
+"summary": "Detroit 17569 Whitcomb St の一戸建て住宅で窓交換の外装改修 $2,193。",
+"infer": null,
+"note": "住宅(窓交換)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03358 Alteration",
+"value": 2193.0,
+"verbatim": "EXTERIOR ALTERATIONS (Window Replacements), as per submitted Documents.\r\nNo change to the size of openings in the Building Thermal Envelope in this RES- Permit.\r\nSubject to Field Approval. / One Famil",
+"gc": null,
+"pin": "22047867.002L",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": "HUMPHRIES, LUVENIA",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-64490",
+"state": "MI",
+"city": "Detroit・20191 Northlawn St",
+"company": "(個人名義・非掲載)",
+"entity_type": "individual",
+"company_basis": null,
+"industry": "未分類",
+"category": "未分類",
+"category_raw": "未分類",
+"confidence": "high",
+"date": "2026-09-21",
+"applied": "2026-09-21",
+"jp": false,
+"new": true,
+"summary": "Detroit 20191 Northlawn St の個人所有者による改修許可 $600。",
+"infer": null,
+"note": "住宅(小規模改修)。",
+"fact": {
+"src": "デトロイト市 建築許可(公開記録)",
+"ref": "許可 RES2026-03397 Alteration",
+"value": 600.0,
+"verbatim": "Alteration",
+"gc": null,
+"pin": "16032085.",
+"owner_source": "parcel:detroit"
+},
+"karte": null,
+"company_id": null,
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-24T08:50:17+00:00"
 }
 },
 {

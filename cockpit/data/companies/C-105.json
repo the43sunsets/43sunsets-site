@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 1400500.0,
-"latest": "2026-09-16",
+"count": 3,
+"value_total": 1450000.0,
+"latest": "2026-09-21",
 "items": [
+{
+"id": "S-64284",
+"date": "2026-09-21",
+"applied": "2026-09-17",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "222 S RIVERSIDE PLZ",
+"permit_no": "101088483",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 49500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 222 S Riverside Plz の StoneX Group 事務所で IT ルームに追加の空調機を設置する許可 #101084497 への変更届 $49.5k。",
+"infer": "オフィス内 IT ルームの小規模な空調追加であり、データセンター新設や生産設備投資とは規模・性質が異なる(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF-CERT 2019 CBRC: REVISION TO PERMIT #101084497 TO ADD AN ADDITIONAL AC UNIT TO THE IT ROOM. B-BUSINESS. 1A CONSTRUCTION.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-59651",
 "date": "2026-09-16",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64284",
+"summary": "Chicago 222 S Riverside Plz の StoneX Group 事務所で IT ルームに追加の空調機を設置する許可 #101084497 への変更届 $49.5k。"
+},
+{
 "date": "2026-09-16",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -116,6 +147,6 @@
 "summary": "金融会社のオフィス 14 階内装 $1.4M。"
 }
 ],
-"generated_at": "2026-09-24T08:48:53+00:00",
+"generated_at": "2026-09-24T08:50:29+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

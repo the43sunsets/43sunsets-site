@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 15922.0,
-"latest": "2026-09-09",
+"count": 4,
+"value_total": 18822.0,
+"latest": "2026-09-21",
 "items": [
+{
+"id": "S-64311",
+"date": "2026-09-21",
+"applied": "2026-09-02",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "21 E HURON ST",
+"permit_no": "B200510030",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 2900.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 21 E Huron St の駐車スペース201・202にEV充電設備用の電気工事(既存400Aサービスに1回路追加)$2,900。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. ADD 1 CIRCUITS TO EXISTING 400 AMP SERVICE DISCONNECTING MEANS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. ELECTRIC VEHICLE SUPPLY EQUIPMENT:1 SPACES. SPECIFIC LOCATION: PARKING SPOT 201&202.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-52386",
 "date": "2026-09-09",
@@ -126,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64311",
+"summary": "Chicago 21 E Huron St の駐車スペース201・202にEV充電設備用の電気工事(既存400Aサービスに1回路追加)$2,900。"
+},
+{
 "date": "2026-09-09",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -147,6 +178,6 @@
 "summary": "Chicago 128 S Aberdeen St の駐車スペースにEV充電設備1台分を設置し既存200Aサービスに回路1を追加 $3,422(施工者名義)。"
 }
 ],
-"generated_at": "2026-09-24T08:48:53+00:00",
+"generated_at": "2026-09-24T08:50:29+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

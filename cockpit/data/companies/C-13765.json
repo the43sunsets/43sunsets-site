@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 1336121.0,
-"latest": "2026-09-17",
+"count": 3,
+"value_total": 1943188.0,
+"latest": "2026-09-21",
 "items": [
+{
+"id": "S-64340",
+"date": "2026-09-21",
+"applied": "2026-08-25",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "4621 S PRAIRIE AVE",
+"permit_no": "101087655",
+"permit_type": "PERMIT - NEW CONSTRUCTION",
+"value": 607067.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 4621 S Prairie Ave に 3階建て3戸(D.U.)の住宅を新築 $607,067(R-5用途)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF-CERT 2019 CBC: FULL BUILDING PERMIT FOR 3 STORY 3 D.U. BUILDING, REAR PATIO WITH STAIR AT 1ST STORY, REAR PORCH WITH STAIR AT 2ND/3RD STORY, 2 EXTERIOR PARKING SPACES ON CONCRETE PAD AS PER PLAN (OCCUPANCY GROUP R-5, TYPE VA CONSTRUCTION).",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-61972",
 "date": "2026-09-17",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64340",
+"summary": "Chicago 4621 S Prairie Ave に 3階建て3戸(D.U.)の住宅を新築 $607,067(R-5用途)。"
+},
+{
 "date": "2026-09-17",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -116,6 +147,6 @@
 "summary": "Chicago 433 E 42nd Pl に 3 階建て 3 世帯住宅(地下室・裏ポーチ・3 台用ガレージ付)を新築 $650,737(R-5 用途)。"
 }
 ],
-"generated_at": "2026-09-24T08:48:53+00:00",
+"generated_at": "2026-09-24T08:50:29+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

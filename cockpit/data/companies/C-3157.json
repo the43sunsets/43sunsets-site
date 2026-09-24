@@ -23,10 +23,82 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 45000.0,
-"latest": "2026-08-24",
+"count": 4,
+"value_total": 150000.0,
+"latest": "2026-09-21",
 "items": [
+{
+"id": "S-64414",
+"date": "2026-09-21",
+"applied": "2026-09-11",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2847 W 59TH ST",
+"permit_no": "B200511278",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 2847 W 59th St の通信タワーで既存通信設備の改修(1タワー上の機器1箇所を改修)$35k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 1 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: TELECOMMUNICATIONS TOWER.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-64280",
+"date": "2026-09-21",
+"applied": "2026-09-15",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2300 W 57TH ST",
+"permit_no": "B200511653",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "American Tower の通信塔(2300 W 57th St)で既存通信設備の改修 $35k(タワー1基・ボックス1台の変更)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 1 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: TELECOMMUNICATIONS TOWER.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-64333",
+"date": "2026-09-21",
+"applied": "2026-09-11",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "3456 N ELSTON AVE",
+"permit_no": "B200511245",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "American Tower による通信タワー設備の改修 $35k(3456 N Elston Ave、1タワー上の機器・ボックス1つの改修)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 1 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: TELECOMMUNICATIONS TOWER.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-25211",
 "date": "2026-08-24",
@@ -78,6 +150,27 @@
 },
 "timeline": [
 {
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64414",
+"summary": "Chicago 2847 W 59th St の通信タワーで既存通信設備の改修(1タワー上の機器1箇所を改修)$35k。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64280",
+"summary": "American Tower の通信塔(2300 W 57th St)で既存通信設備の改修 $35k(タワー1基・ボックス1台の変更)。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64333",
+"summary": "American Tower による通信タワー設備の改修 $35k(3456 N Elston Ave、1タワー上の機器・ボックス1つの改修)。"
+},
+{
 "date": "2026-08-24",
 "face": "permits",
 "title": "建設許可(Mendota): 未分類",
@@ -85,6 +178,6 @@
 "summary": "American Tower Corp が Mendota 203 12th St に通信塔用機器の新規コンクリートパッドを設置 $45k。"
 }
 ],
-"generated_at": "2026-09-24T08:48:53+00:00",
+"generated_at": "2026-09-24T08:50:29+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

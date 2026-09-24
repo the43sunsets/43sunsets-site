@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 637650.0,
-"latest": "2026-08-25",
+"count": 4,
+"value_total": 641850.0,
+"latest": "2026-09-21",
 "items": [
+{
+"id": "S-64345",
+"date": "2026-09-21",
+"applied": "2026-09-18",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5905 N MERRIMAC AVE",
+"permit_no": "B200512415",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 4200.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 5905 N Merrimac Ave で既存電気サービス(3メーター)を200Aへ更新する小規模電気工事 $4,200。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. NEW PERMANENT 200 AMP SERVICE DISCONNECTING MEANS WITH 40 CIRCUITS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 1. SPECIFIC LOCATION: REPLACE EXISTING ELECTICAL SERVICE (3 METERS).",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-6633",
 "date": "2026-08-25",
@@ -126,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64345",
+"summary": "Chicago 5905 N Merrimac Ave で既存電気サービス(3メーター)を200Aへ更新する小規模電気工事 $4,200。"
+},
+{
 "date": "2026-08-25",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -147,6 +178,6 @@
 "summary": "Chicago 6729 N Ashland Ave に2階建一戸建て(前後オープンデッキ・2台用ガレージ)を新築 $623k。"
 }
 ],
-"generated_at": "2026-09-24T08:48:53+00:00",
+"generated_at": "2026-09-24T08:50:29+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
