@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 18,
-"value_total": 51365040.0,
-"latest": "2026-09-08",
+"count": 19,
+"value_total": 51400040.0,
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-65112",
+"date": "2026-09-22",
+"applied": "2026-05-18",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "9626 S BALTIMORE AVE",
+"permit_no": "101083599",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago市による2階建て木造住宅の緊急解体・撤去 $35,000(9626 S Baltimore Ave)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "EMERGENCY WRECK AND REMOVE A 2 STORY FRAME RESIDENCE",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-50910",
 "date": "2026-09-08",
@@ -486,6 +510,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-65112",
+"summary": "Chicago市による2階建て木造住宅の緊急解体・撤去 $35,000(9626 S Baltimore Ave)。"
+},
+{
 "date": "2026-09-08",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -612,6 +643,6 @@
 "summary": "Chicago 2255 E 103RD STでエレベーター・リフトの改修/部品交換 $18k(申請者: CITY OF CHICAGO)。"
 }
 ],
-"generated_at": "2026-09-24T08:51:17+00:00",
+"generated_at": "2026-09-24T12:30:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

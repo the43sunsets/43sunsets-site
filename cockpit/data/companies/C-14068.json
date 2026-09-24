@@ -2,7 +2,7 @@
 "id": "C-14068",
 "name": "640 LASALLE LLC",
 "city": null,
-"state": null,
+"state": "IL",
 "entity_type": "spe",
 "industry": null,
 "made": null,
@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 650000.0,
-"latest": "2026-09-21",
+"count": 2,
+"value_total": 1100000.0,
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-65144",
+"date": "2026-09-22",
+"applied": "2026-08-31",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "640 N LA SALLE DR",
+"permit_no": "101087876",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 450000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 640 N La Salle Dr の5階、5,498 SQFTのビジネスオフィスのテナント内装工事 $450k(電気・機械・配管の改修、用途変更なし)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF-CERT 2019 CBRC - TENANT BUILDOUT OF 5,498 SQFT FOR BUSINESS OFFICE ON THE 5TH FLOOR, INCLUDING ALTERATIONS TO ELECTRICAL CIRCUITS, MECHANICAL AND PLUMBING. NO CHANGE IN USE OR OCCCUPANCY.  (OCCUPANCY GROUP B; TYPE IA CONSTRUCTION)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-64286",
 "date": "2026-09-21",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-65144",
+"summary": "Chicago 640 N La Salle Dr の5階、5,498 SQFTのビジネスオフィスのテナント内装工事 $450k(電気・機械・配管の改修、用途変更なし)。"
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Chicago 640 N LaSalle Dr の2階、9,227 SQFTのビジネスオフィスのテナント内装工事 $650k(電気・機械・配管の改修、用途変更なし)。"
 }
 ],
-"generated_at": "2026-09-24T08:51:17+00:00",
+"generated_at": "2026-09-24T12:30:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

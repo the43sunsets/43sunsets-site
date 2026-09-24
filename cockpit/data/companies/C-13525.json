@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 10000.0,
-"latest": "2026-09-14",
+"count": 2,
+"value_total": 14500.0,
+"latest": "2026-09-21",
 "items": [
+{
+"id": "S-65221",
+"date": "2026-09-21",
+"applied": "2026-09-03",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "400 W 9TH ST",
+"permit_no": "2026P07895",
+"permit_type": "Plumbing Permits",
+"value": 4500.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Hamilton County Land Reutilization Corporation による配管許可 $4,500(400 W 9th St、用途 B)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing Permits / Plumbing Permits / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-59034",
 "date": "2026-09-14",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-65221",
+"summary": "Hamilton County Land Reutilization Corporation による配管許可 $4,500(400 W 9th St、用途 B)。"
+},
+{
 "date": "2026-09-14",
 "face": "permits",
 "title": "建設許可(Cincinnati): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Hamilton County Land Reutilization Corporation による Cincinnati 1428 Vine St の改修工事 $10k(A-2 用途)。"
 }
 ],
-"generated_at": "2026-09-24T08:51:17+00:00",
+"generated_at": "2026-09-24T12:30:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

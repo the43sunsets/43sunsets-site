@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 10,
+"count": 11,
 "value_total": 216150000.0,
-"latest": "2026-09-18",
+"latest": "2026-09-21",
 "items": [
+{
+"id": "S-65261",
+"date": "2026-09-21",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3535 OLENTANGY RIVER RD",
+"permit_no": "EMEPC2637908",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における電気工事(MEP)許可。金額記載なし。",
+"infer": "病院法人の電気/MEP工事であり、既存施設の設備更新・拡張に付随する工事の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-63520",
 "date": "2026-09-18",
@@ -320,6 +344,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-65261",
+"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における電気工事(MEP)許可。金額記載なし。"
+},
+{
 "date": "2026-09-18",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -397,6 +428,6 @@
 "summary": "OhioHealth の Columbus 施設(285 E State St)で 4,130 SQFT の改修工事 $2.0M。"
 }
 ],
-"generated_at": "2026-09-24T08:51:17+00:00",
+"generated_at": "2026-09-24T12:30:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 10000.0,
-"latest": "2026-09-10",
+"count": 2,
+"value_total": 65000.0,
+"latest": "2026-09-21",
 "items": [
+{
+"id": "S-65207",
+"date": "2026-09-21",
+"applied": "2026-09-21",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "3200 SPRING GROVE AV",
+"permit_no": "2026P08911",
+"permit_type": "Building",
+"value": 55000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati 3200 Spring Grove Ave の S-1 用途建物の補修工事 $55k。",
+"infer": "所有者名は不動産保有目的のSPEと見られ、金額規模も小さく設備投資シグナルとは読みにくい(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Repair / Building / S-1",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-53847",
 "date": "2026-09-10",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-65207",
+"summary": "Cincinnati 3200 Spring Grove Ave の S-1 用途建物の補修工事 $55k。"
+},
+{
 "date": "2026-09-10",
 "face": "permits",
 "title": "建設許可(Cincinnati): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Cincinnati 3200 Spring Grove Ave の配管許可 $10k(用途区分 B)。"
 }
 ],
-"generated_at": "2026-09-24T08:51:17+00:00",
+"generated_at": "2026-09-24T12:30:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

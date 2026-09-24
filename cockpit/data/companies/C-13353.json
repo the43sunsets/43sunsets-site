@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 342000.0,
-"latest": "2026-09-15",
+"count": 3,
+"value_total": 442000.0,
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-65201",
+"date": "2026-09-22",
+"applied": "2026-09-21",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5101 S WENTWORTH AVE",
+"permit_no": "B200512599",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 100000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 5101 S Wentworth Ave の1階と地下で照明設備150箇所の電気改修 $100k(既存回路の修理・改造)。",
+"infer": "Fleet and Facility Management はシカゴ市の施設管理部門であり、市有施設の照明更新工事の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 0 . LIGHTING OUTLETS: 150. SPECIFIC LOCATION: FIRST LEVEL AND BASEMENT.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-58909",
 "date": "2026-09-15",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-65201",
+"summary": "Chicago 5101 S Wentworth Ave の1階と地下で照明設備150箇所の電気改修 $100k(既存回路の修理・改造)。"
+},
+{
 "date": "2026-09-15",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -116,6 +147,6 @@
 "summary": "Chicago 4856 W Chicago Ave で「循環デスク」交換に伴う非構造の内装改修 $171k(電気工事含む)。"
 }
 ],
-"generated_at": "2026-09-24T08:51:17+00:00",
+"generated_at": "2026-09-24T12:30:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

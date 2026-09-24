@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 2530000.0,
-"latest": "2026-09-21",
+"count": 4,
+"value_total": 2730000.0,
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-65188",
+"date": "2026-09-22",
+"applied": "2026-09-03",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "141 W JACKSON BLVD",
+"permit_no": "101088130",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 200000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 141 W Jackson Blvd の45階建てオフィスビル22階スイート2250のテナント内装改修・拡張 $200k。構造工事なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF-CERT 2019 CBRC: INTERIOR RENOVATION AND EXPANSION OF OFFICE TENANT SPACE, SUITE 2250, ON THE 22ND FLOOR OF 45-FLOOR EXISTING OFFICE BUILDING. INCLUDES NEW NON-STRUCTURAL PARTITIONS, DOORS, CEILINGS, FINISHES, UPDATED MECHANICAL, ELECTRICAL, PLUMBING, FIRE ALARM, AND FIRE PROTECTION SYSTEM EXTEN",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-64407",
 "date": "2026-09-21",
@@ -126,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-65188",
+"summary": "Chicago 141 W Jackson Blvd の45階建てオフィスビル22階スイート2250のテナント内装改修・拡張 $200k。構造工事なし。"
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -147,6 +178,6 @@
 "summary": "Chicagoの141 W JACKSON BLVDで既存建物の解体を実施 $100k。申請者/所有者: 141 W JACKSON OWNER LLC。"
 }
 ],
-"generated_at": "2026-09-24T08:51:17+00:00",
+"generated_at": "2026-09-24T12:30:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 20,
-"value_total": 13670314.99,
-"latest": "2026-09-14",
+"count": 22,
+"value_total": 13795314.99,
+"latest": "2026-09-21",
 "items": [
+{
+"id": "S-65230",
+"date": "2026-09-21",
+"applied": "2026-09-11",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "801 PLUM ST",
+"permit_no": "2026P07960",
+"permit_type": "Plumbing Permits",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati市庁舎(801 Plum St)における配管工事許可 $35,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing Permits / Plumbing Permits / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-65231",
+"date": "2026-09-21",
+"applied": "2026-09-14",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "4765 AIRPORT RD",
+"permit_no": "2026P07964",
+"permit_type": "Plumbing Permits",
+"value": 90000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati市(4765 Airport Rd)における配管許可(Plumbing Permits)$90k(用途分類 B)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing Permits / Plumbing Permits / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-59054",
 "date": "2026-09-14",
@@ -534,6 +582,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-65230",
+"summary": "Cincinnati市庁舎(801 Plum St)における配管工事許可 $35,000。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-65231",
+"summary": "Cincinnati市(4765 Airport Rd)における配管許可(Plumbing Permits)$90k(用途分類 B)。"
+},
+{
 "date": "2026-09-14",
 "face": "permits",
 "title": "建設許可(Cincinnati): 未分類",
@@ -674,6 +736,6 @@
 "summary": "Cincinnati 市所有建物(425 Walnut St)のエレベーター許可 $1.6M。"
 }
 ],
-"generated_at": "2026-09-24T08:51:17+00:00",
+"generated_at": "2026-09-24T12:30:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
