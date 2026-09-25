@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 49000.0,
-"latest": "2026-09-21",
+"count": 4,
+"value_total": 56000.0,
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-66090",
+"date": "2026-09-22",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "4711 HILTON CORPORATE DR",
+"permit_no": "EMEPC2638013",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 4711 Hilton Corporate Dr の商業施設で電気(MEP)工事。金額不明。",
+"infer": "所有名義は SPE で、用途・入居事業者は記録上不明のため判定不可(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01662kdZo8KYBxtpVwwCDd2A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-66089",
+"date": "2026-09-22",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "4701 HILTON CORPORATE DR",
+"permit_no": "ALTC2633175",
+"permit_type": "Alteration",
+"value": 7000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 4701 Hilton Corporate Dr にて 36 SQFT の構造改修 $7,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 36 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01662kdZo8KYBxtpVwwCDd2A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-65263",
 "date": "2026-09-21",
@@ -102,6 +150,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-66090",
+"summary": "Columbus 4711 Hilton Corporate Dr の商業施設で電気(MEP)工事。金額不明。"
+},
+{
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-66089",
+"summary": "Columbus 4701 Hilton Corporate Dr にて 36 SQFT の構造改修 $7,000。"
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -116,6 +178,6 @@
 "summary": "Columbus 4695 Hilton Corporate Dr における機械設備(MEP)工事許可。金額記載なし。"
 }
 ],
-"generated_at": "2026-09-25T10:39:15+00:00",
+"generated_at": "2026-09-25T15:00:23+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

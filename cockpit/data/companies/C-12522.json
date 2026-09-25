@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 7,
+"count": 8,
 "value_total": 75000.0,
-"latest": "2026-09-21",
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-66091",
+"date": "2026-09-22",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3961 EASTON SQUARE PL UNIT H104",
+"permit_no": "PMEPC2638121",
+"permit_type": "Plumbing",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 3961 Easton Square Pl Unit H104 の商業テナントに対する配管(Plumbing/MEP)工事許可、金額不明。",
+"infer": "Easton Town Centerはショッピングモールであり、当該工事は商業施設内の小規模MEP作業の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Plumbing / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01662kdZo8KYBxtpVwwCDd2A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-65265",
 "date": "2026-09-21",
@@ -222,6 +246,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-66091",
+"summary": "Columbus 3961 Easton Square Pl Unit H104 の商業テナントに対する配管(Plumbing/MEP)工事許可、金額不明。"
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -271,6 +302,6 @@
 "summary": "Columbus 4149 The Strand にて 10 SQFT のサイン(看板)設置許可。金額記載なし。"
 }
 ],
-"generated_at": "2026-09-25T10:39:15+00:00",
+"generated_at": "2026-09-25T15:00:23+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

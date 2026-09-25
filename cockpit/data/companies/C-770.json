@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 115000.0,
-"latest": "2026-07-22",
+"count": 2,
+"value_total": 230000.0,
+"latest": "2026-09-23",
 "items": [
+{
+"id": "S-65944",
+"date": "2026-09-23",
+"applied": "2026-07-31",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "315 N OAKLEY BLVD",
+"permit_no": "101086376",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 115000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 315 N Oakley Blvd の既存空きビルでトイレ室の新設・改修工事 $115k(親許可 #101081239 の変更)。将来の用途は未定で建物は空室のまま。",
+"infer": "用途未定の空きビルにおける小規模内装工事であり、生産・物流・研究・医療いずれの設備投資シグナルとも読めない(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SPR 2019 CBRC: REVISION TO PERMIT #101081239 TO ADD NEW ACCESSIBLE TOILET ROOMS AND RENOVATE EXISTING TOILET ROOMS WITHIN AN EXISTING VACANT BUILDING. PLUMBING, ELECTRICAL, AND MECHANICAL WORK WILL BE PERFORMED WITHIN THE AREA OF WORK ONLY, AS PER PLANS. THE FUTURE OCCUPANCY IS CURRENTLY UNKNOWN, AN",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01662kdZo8KYBxtpVwwCDd2A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-365",
 "date": "2026-07-22",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-65944",
+"summary": "Chicago 315 N Oakley Blvd の既存空きビルでトイレ室の新設・改修工事 $115k(親許可 #101081239 の変更)。将来の用途は未定で建物は空室のまま。"
+},
+{
 "date": "2026-07-22",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Chicago 315 N OAKLEY BLVD の既存2階建て倉庫で内装改修(バリアフリー入口・トイレ新設、2階吹抜け空間・電気室の造作)$115k(315 Oakley Owner LLC、対象範囲のみ設備更新、将来用途未定・空室のまま、Occupancy S1)。"
 }
 ],
-"generated_at": "2026-09-25T10:39:15+00:00",
+"generated_at": "2026-09-25T15:00:23+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

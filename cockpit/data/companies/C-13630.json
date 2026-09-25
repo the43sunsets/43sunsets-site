@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
-"latest": "2026-09-15",
+"count": 2,
+"value_total": 115606.0,
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-66095",
+"date": "2026-09-22",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "751 CHESTNUT GROVE DR",
+"permit_no": "ALTC2616808",
+"permit_type": "Alteration",
+"value": 115606.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 751 Chestnut Grove Dr のアパート施設で 2,486 SQFT の改修工事 $115,606。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 2486 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01662kdZo8KYBxtpVwwCDd2A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-59805",
 "date": "2026-09-15",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-66095",
+"summary": "Columbus 751 Chestnut Grove Dr のアパート施設で 2,486 SQFT の改修工事 $115,606。"
+},
+{
 "date": "2026-09-15",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Blacklick Apartments LLC 名義の商業電気工事(MEP)、金額不明。"
 }
 ],
-"generated_at": "2026-09-25T10:39:15+00:00",
+"generated_at": "2026-09-25T15:00:23+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
