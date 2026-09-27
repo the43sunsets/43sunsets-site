@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 8,
-"value_total": 2270000.0,
-"latest": "2026-09-16",
+"count": 9,
+"value_total": 2280000.0,
+"latest": "2026-09-25",
 "items": [
+{
+"id": "S-67419",
+"date": "2026-09-25",
+"applied": "2026-08-24",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1315 W OHIO ST",
+"permit_no": "B200508422",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 1315 W Ohio St で2階建て集会施設(アセンブリ用途)の解体工事 $10k。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "DEMOLITION OF A 2-STORY ASSEMBLY OCCUPANCY BUILDING. 0 RESIDENTIAL UNITS. 1 NON-RESIDENTIAL UNITS. LOCATION ON LOT: FRONT. (COMPLEX DEMOLITION.)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01KZ9X6bWKjoQSoTnywC8LfN",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-59710",
 "date": "2026-09-16",
@@ -246,6 +270,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-25",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-67419",
+"summary": "Chicago 1315 W Ohio St で2階建て集会施設(アセンブリ用途)の解体工事 $10k。"
+},
+{
 "date": "2026-09-16",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -302,6 +333,6 @@
 "summary": "Chicago 1625 W JULIAN ST でガレージの新設・解体。 許可種別「PERMIT - RENOVATION/ALTERATION」、評価額 $15k。申請者/所有者: MK CONSTRUCTION & BUILDERS, INC。"
 }
 ],
-"generated_at": "2026-09-27T08:16:38+00:00",
+"generated_at": "2026-09-27T21:00:41+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

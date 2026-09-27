@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-27T08:16:31+00:00",
+"generated_at": "2026-09-27T21:00:34+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,14 +17,14 @@
 "funnel": {
 "signals_total": 66326,
 "candidates": 905,
-"enriched": 44090,
-"targets": 159,
-"unclassified": 43931,
-"unevaluated": 22236,
+"enriched": 44280,
+"targets": 160,
+"unclassified": 44120,
+"unevaluated": 22046,
 "by_category": {
 "データセンター建設": 11,
-"医療施設": 83,
-"未分類": 43931,
+"医療施設": 84,
+"未分類": 44120,
 "物流・倉庫の新設": 16,
 "研究・ラボ施設": 15,
 "製造能力の増強": 34
@@ -94,7 +94,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-09-24",
 "owner_coverage": 2155,
-"targets": 13,
+"targets": 14,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -342,9 +342,9 @@
 "state": "IL",
 "jurisdiction": "Cook 郡 BS&A 利用自治体(Skokie 他)",
 "label": "Cook 郡 BS&A 利用自治体(Skokie 他) 建築許可(公開記録)",
-"last_run_status": "error",
-"last_run_at": "2026-09-26T16:00:01Z",
-"last_run_note": "RuntimeError: BS&A Greenfield: 10 consecutive errors at 48/592 parcels (last: TimeoutError)",
+"last_run_status": "empty",
+"last_run_at": "2026-09-27T16:00:01Z",
+"last_run_note": "",
 "signals": 20,
 "date_min": "2026-07-08",
 "date_max": "2026-09-04",
@@ -352,7 +352,7 @@
 "targets": 0,
 "cadence": "monthly",
 "next_run_at": "2026-10-05T09:00:00+00:00",
-"interrupted": true
+"interrupted": false
 },
 {
 "source_id": "SRC-071",
@@ -1567,10 +1567,10 @@
 ]
 },
 "unclassified_by_state": {
-"OH": 6732,
-"IL": 34657,
+"OH": 6800,
+"IL": 34755,
 "IN": 17,
-"MI": 1930,
+"MI": 1953,
 "WI": 595
 }
 },
@@ -1623,6 +1623,56 @@
 "batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-26T15:00:24+00:00"
+}
+},
+{
+"investor": {
+"name": "OHIOHEALTH CORP",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "OHIOHEALTH CORP",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": "Vaughn Industries",
+"gc": null
+},
+"id": "S-67475",
+"state": "OH",
+"city": "Columbus・3420 OHIOHEALTH PKWY",
+"company": "OHIOHEALTH CORP",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-09-24",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)での電気(MEP)工事の副許可。金額不明。",
+"infer": "同住所の大規模増築案件($115M)に付随する電気工事の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "コロンバス市 建築許可(公開記録)",
+"ref": "許可 EMEPC2638607 Electrical",
+"value": null,
+"verbatim": "Commercial - Other / Electrical / MEP",
+"gc": "Vaughn Industries",
+"pin": "010183740",
+"owner_source": "parcel:franklin_oh"
+},
+"karte": null,
+"company_id": "C-138",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01KZ9X6bWKjoQSoTnywC8LfN",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-27T21:00:29+00:00"
 }
 },
 {
@@ -9555,11 +9605,11 @@
 "name": "OHIOHEALTH CORP",
 "entity_type": "corp",
 "jp": false,
-"signals": 12,
+"signals": 16,
 "value_total": 331150000.0,
 "states": "OH",
-"latest": "2026-09-21",
-"targets": 7,
+"latest": "2026-09-24",
+"targets": 8,
 "signal_ids": [
 "S-1542",
 "S-1542",
@@ -9572,7 +9622,11 @@
 "S-59073",
 "S-63340",
 "S-63520",
-"S-65261"
+"S-65261",
+"S-67472",
+"S-67473",
+"S-67474",
+"S-67475"
 ]
 },
 {
@@ -9636,10 +9690,10 @@
 "name": "NATIONWIDE CHILDRENS HOSPITAL",
 "entity_type": "corp",
 "jp": false,
-"signals": 9,
+"signals": 10,
 "value_total": 7300000.0,
 "states": "OH",
-"latest": "2026-09-21",
+"latest": "2026-09-24",
 "targets": 4,
 "signal_ids": [
 "S-1468",
@@ -9650,7 +9704,8 @@
 "S-53338",
 "S-54676",
 "S-59067",
-"S-65243"
+"S-65243",
+"S-67467"
 ]
 },
 {
@@ -10152,13 +10207,14 @@
 "name": "XPO LTL PROPERTIES LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 7000000.0,
 "states": "OH",
-"latest": "2026-09-11",
+"latest": "2026-09-24",
 "targets": 1,
 "signal_ids": [
-"S-54695"
+"S-54695",
+"S-67491"
 ]
 },
 {
@@ -11540,15 +11596,16 @@
 "name": "COLUMBUS REGIONAL AIRPORT AUTHORITY",
 "entity_type": "public",
 "jp": false,
-"signals": 3,
+"signals": 4,
 "value_total": 32000000.0,
 "states": "OH",
-"latest": "2026-09-18",
+"latest": "2026-09-24",
 "targets": 0,
 "signal_ids": [
 "S-53360",
 "S-53361",
-"S-63512"
+"S-63512",
+"S-67492"
 ]
 },
 {
@@ -11768,10 +11825,10 @@
 "name": "CITY OF COLUMBUS OHIO",
 "entity_type": "public",
 "jp": false,
-"signals": 8,
+"signals": 9,
 "value_total": 20459058.0,
 "states": "OH",
-"latest": "2026-09-22",
+"latest": "2026-09-24",
 "targets": 0,
 "signal_ids": [
 "S-2426",
@@ -11781,7 +11838,8 @@
 "S-63390",
 "S-63395",
 "S-66082",
-"S-66100"
+"S-66100",
+"S-67499"
 ]
 },
 {
@@ -14515,10 +14573,10 @@
 "name": "MK CONSTRUCTION & BUILDERS, INC",
 "entity_type": "corp",
 "jp": false,
-"signals": 8,
-"value_total": 2270000.0,
+"signals": 9,
+"value_total": 2280000.0,
 "states": "IL",
-"latest": "2026-09-16",
+"latest": "2026-09-25",
 "targets": 0,
 "signal_ids": [
 "S-133",
@@ -14528,7 +14586,8 @@
 "S-4785",
 "S-58238",
 "S-59582",
-"S-59710"
+"S-59710",
+"S-67419"
 ]
 },
 {
@@ -16003,6 +16062,24 @@
 ]
 },
 {
+"id": "C-192",
+"name": "UNITED AIRLINES",
+"entity_type": "corp",
+"jp": false,
+"signals": 5,
+"value_total": 1450406.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-5214",
+"S-14585",
+"S-64346",
+"S-66813",
+"S-67413"
+]
+},
+{
 "id": "C-104",
 "name": "AMTRUST REALTY CORP",
 "entity_type": "corp",
@@ -16031,23 +16108,6 @@
 "S-22",
 "S-59651",
 "S-64284"
-]
-},
-{
-"id": "C-192",
-"name": "UNITED AIRLINES",
-"entity_type": "corp",
-"jp": false,
-"signals": 4,
-"value_total": 1445906.0,
-"states": "IL",
-"latest": "2026-09-24",
-"targets": 0,
-"signal_ids": [
-"S-5214",
-"S-14585",
-"S-64346",
-"S-66813"
 ]
 },
 {
@@ -17383,6 +17443,25 @@
 ]
 },
 {
+"id": "C-13614",
+"name": "IMC EASTON OVAL LP",
+"entity_type": "spe",
+"jp": false,
+"signals": 6,
+"value_total": 1030000.0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-59807",
+"S-59808",
+"S-59809",
+"S-59810",
+"S-63527",
+"S-67486"
+]
+},
+{
 "id": "C-7757",
 "name": "CITY OF MASON",
 "entity_type": "public",
@@ -17591,13 +17670,14 @@
 "name": "EJ GRAY PROPERTY MANAGEMENT LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 1000000.0,
 "states": "OH",
-"latest": "2026-08-10",
+"latest": "2026-09-24",
 "targets": 0,
 "signal_ids": [
-"S-1827"
+"S-1827",
+"S-67468"
 ]
 },
 {
@@ -20231,6 +20311,21 @@
 ]
 },
 {
+"id": "C-14632",
+"name": "TERRI MANOR ASSOCIATES LTD",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 565000.0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67445",
+"S-67446"
+]
+},
+{
 "id": "C-1133",
 "name": "RENEWAL BY ANDERSEN LLC",
 "entity_type": "spe",
@@ -20266,15 +20361,16 @@
 "name": "SPEEDWAY SUPERAMERICA",
 "entity_type": "corp",
 "jp": false,
-"signals": 3,
+"signals": 4,
 "value_total": 562000.0,
 "states": "IL,OH",
-"latest": "2026-09-21",
+"latest": "2026-09-24",
 "targets": 0,
 "signal_ids": [
 "S-11550",
 "S-65271",
-"S-65283"
+"S-65283",
+"S-67484"
 ]
 },
 {
@@ -23425,24 +23521,6 @@
 ]
 },
 {
-"id": "C-13614",
-"name": "IMC EASTON OVAL LP",
-"entity_type": "spe",
-"jp": false,
-"signals": 5,
-"value_total": 350000.0,
-"states": "OH",
-"latest": "2026-09-18",
-"targets": 0,
-"signal_ids": [
-"S-59807",
-"S-59808",
-"S-59809",
-"S-59810",
-"S-63527"
-]
-},
-{
 "id": "C-13594",
 "name": "PARK MILLENNIUM CONDO. ASS.",
 "entity_type": "spe",
@@ -24366,6 +24444,20 @@
 ]
 },
 {
+"id": "C-14630",
+"name": "URBAN NEIGHBORHOOD INITIATIVES, INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 300000.0,
+"states": "MI",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67504"
+]
+},
+{
 "id": "C-13425",
 "name": "Haven on the Farm, Inc.",
 "entity_type": "corp",
@@ -24522,6 +24614,21 @@
 "targets": 0,
 "signal_ids": [
 "S-21976"
+]
+},
+{
+"id": "C-13519",
+"name": "BLUE CROSS/BLUE SHIELD OF MICHIGAN",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 286632.0,
+"states": "MI",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-59095",
+"S-67505"
 ]
 },
 {
@@ -25723,6 +25830,22 @@
 ]
 },
 {
+"id": "C-905",
+"name": "OAKFIELD WEST CONDO ASSN",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": 225225.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-5323",
+"S-5435",
+"S-67376"
+]
+},
+{
 "id": "C-562",
 "name": "JA PALMER PROPERTIES LLC C/O JOHN PALMER",
 "entity_type": "spe",
@@ -25834,20 +25957,6 @@
 "targets": 0,
 "signal_ids": [
 "S-347"
-]
-},
-{
-"id": "C-13519",
-"name": "BLUE CROSS/BLUE SHIELD OF MICHIGAN",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 221788.0,
-"states": "MI",
-"latest": "2026-09-15",
-"targets": 0,
-"signal_ids": [
-"S-59095"
 ]
 },
 {
@@ -27307,6 +27416,20 @@
 ]
 },
 {
+"id": "C-14641",
+"name": "BELLEMERE LIMITED DIVIDEND HOUSING",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 179164.0,
+"states": "MI",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67514"
+]
+},
+{
 "id": "C-632",
 "name": "DARLENE GRANT / GRANT'Z CONSTRUCTION, INC",
 "entity_type": "corp",
@@ -27570,6 +27693,25 @@
 ]
 },
 {
+"id": "C-1167",
+"name": "CROWN CASTLE INTERNATIONAL CORP.",
+"entity_type": "corp",
+"jp": false,
+"signals": 6,
+"value_total": 170000.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-3707",
+"S-4861",
+"S-6624",
+"S-65945",
+"S-65983",
+"S-67390"
+]
+},
+{
 "id": "C-14096",
 "name": "601 W SOUTH WACKER LLC & 601 SUNSET WACKER LLC",
 "entity_type": "spe",
@@ -27717,6 +27859,20 @@
 "S-9652",
 "S-64488",
 "S-66115"
+]
+},
+{
+"id": "C-14624",
+"name": "20 E CEDAR CONDOMINIUM",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 165010.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67402"
 ]
 },
 {
@@ -29035,21 +29191,6 @@
 ]
 },
 {
-"id": "C-905",
-"name": "OAKFIELD WEST CONDO ASSN",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": 149625.0,
-"states": "IL",
-"latest": "2026-08-07",
-"targets": 0,
-"signal_ids": [
-"S-5323",
-"S-5435"
-]
-},
-{
 "id": "C-706",
 "name": "TEF SCHAUMBURG I LLC",
 "entity_type": "spe",
@@ -29440,24 +29581,6 @@
 ]
 },
 {
-"id": "C-1167",
-"name": "CROWN CASTLE INTERNATIONAL CORP.",
-"entity_type": "corp",
-"jp": false,
-"signals": 5,
-"value_total": 135000.0,
-"states": "IL",
-"latest": "2026-09-23",
-"targets": 0,
-"signal_ids": [
-"S-3707",
-"S-4861",
-"S-6624",
-"S-65945",
-"S-65983"
-]
-},
-{
 "id": "C-1683",
 "name": "MK CONSTRUCTION & BUILDERS, IN",
 "entity_type": "corp",
@@ -29655,6 +29778,20 @@
 "S-19272",
 "S-19423",
 "S-59944"
+]
+},
+{
+"id": "C-14626",
+"name": "548 E 76TH LIMITED",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 130000.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67432"
 ]
 },
 {
@@ -31782,6 +31919,20 @@
 ]
 },
 {
+"id": "C-14628",
+"name": "ANNEX AT MAISON LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 100000.0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67479"
+]
+},
+{
 "id": "C-13986",
 "name": "MACARTHUR FOUNDATION JOHN D. AND CATHERINE T.",
 "entity_type": "corp",
@@ -33716,10 +33867,10 @@
 "name": "EASTON TOWN CENTER II LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 8,
+"signals": 9,
 "value_total": 75000.0,
 "states": "OH",
-"latest": "2026-09-22",
+"latest": "2026-09-24",
 "targets": 0,
 "signal_ids": [
 "S-52504",
@@ -33729,7 +33880,8 @@
 "S-63525",
 "S-65265",
 "S-65266",
-"S-66091"
+"S-66091",
+"S-67476"
 ]
 },
 {
@@ -33759,6 +33911,20 @@
 "targets": 0,
 "signal_ids": [
 "S-64372"
+]
+},
+{
+"id": "C-14639",
+"name": "HAMNER GROUP LLC THE",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 75000.0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67455"
 ]
 },
 {
@@ -34424,6 +34590,21 @@
 "targets": 0,
 "signal_ids": [
 "S-5060"
+]
+},
+{
+"id": "C-1022",
+"name": "71 S WACKER DRIVE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 69286.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-3317",
+"S-67367"
 ]
 },
 {
@@ -35701,6 +35882,20 @@
 ]
 },
 {
+"id": "C-14637",
+"name": "PARK ASTOR CONDO ASSOC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 59100.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67363"
+]
+},
+{
 "id": "C-852",
 "name": "PRICE FAMILY LLC",
 "entity_type": "spe",
@@ -36484,20 +36679,6 @@
 "S-12602",
 "S-12691",
 "S-13586"
-]
-},
-{
-"id": "C-1022",
-"name": "71 S WACKER DRIVE LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 51286.0,
-"states": "IL",
-"latest": "2026-07-09",
-"targets": 0,
-"signal_ids": [
-"S-3317"
 ]
 },
 {
@@ -39666,6 +39847,21 @@
 ]
 },
 {
+"id": "C-13640",
+"name": "TRIPLE R ASSOCIATES LTD",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 36950.0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-59792",
+"S-67465"
+]
+},
+{
 "id": "C-1150",
 "name": "CHICAGO HARDING REAL ESTATE INVESTMENTS LLC",
 "entity_type": "spe",
@@ -39756,6 +39952,21 @@
 "S-7190",
 "S-7192",
 "S-55524"
+]
+},
+{
+"id": "C-2267",
+"name": "CHUBB GROUP LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 36700.0,
+"states": "MI",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-9029",
+"S-67510"
 ]
 },
 {
@@ -40244,6 +40455,34 @@
 "targets": 0,
 "signal_ids": [
 "S-63610"
+]
+},
+{
+"id": "C-14644",
+"name": "ATLAS WAREHOUSE EQUIPMENT INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 35000.0,
+"states": "MI",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67519"
+]
+},
+{
+"id": "C-14658",
+"name": "HEARTLAND ALLIANCE INTERNATIONAL",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 35000.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67398"
 ]
 },
 {
@@ -40958,6 +41197,20 @@
 "targets": 0,
 "signal_ids": [
 "S-9065"
+]
+},
+{
+"id": "C-14640",
+"name": "WP FOUNDRY PARK LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 31697.0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67447"
 ]
 },
 {
@@ -41865,6 +42118,23 @@
 ]
 },
 {
+"id": "C-14618",
+"name": "PRESERVATION OF AFFORDABLE HOUSING",
+"entity_type": "corp",
+"jp": false,
+"signals": 4,
+"value_total": 29583.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67378",
+"S-67397",
+"S-67406",
+"S-67412"
+]
+},
+{
 "id": "C-1461",
 "name": "ABC PSHCE",
 "entity_type": "corp",
@@ -41979,6 +42249,20 @@
 "targets": 0,
 "signal_ids": [
 "S-22498"
+]
+},
+{
+"id": "C-14629",
+"name": "MATRIX HUMAN SERVICES",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 29290.0,
+"states": "MI",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67521"
 ]
 },
 {
@@ -46399,6 +46683,20 @@
 ]
 },
 {
+"id": "C-14617",
+"name": "NMC MIDWAY, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 20000.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67383"
+]
+},
+{
 "id": "C-1731",
 "name": "THE CONCRETE DOCTORS",
 "entity_type": "corp",
@@ -46838,6 +47136,20 @@
 "targets": 0,
 "signal_ids": [
 "S-65104"
+]
+},
+{
+"id": "C-14642",
+"name": "PRO HOMES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 19000.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67395"
 ]
 },
 {
@@ -50362,6 +50674,20 @@
 ]
 },
 {
+"id": "C-14625",
+"name": "MATTRESS FIRM, INC.",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 13786.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67401"
+]
+},
+{
 "id": "C-12193",
 "name": "YES Imperial LLC",
 "entity_type": "spe",
@@ -51066,6 +51392,20 @@
 "targets": 0,
 "signal_ids": [
 "S-25380"
+]
+},
+{
+"id": "C-14655",
+"name": "ST JOHN EVANGELICAL LUTHERAN CHURCH AFDT",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 12600.68,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67466"
 ]
 },
 {
@@ -52422,6 +52762,20 @@
 ]
 },
 {
+"id": "C-14627",
+"name": "3340 WOODBURN LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 11304.0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67457"
+]
+},
+{
 "id": "C-1910",
 "name": "DREAM HOLMES INVESTMENTS LLC",
 "entity_type": "spe",
@@ -52434,6 +52788,20 @@
 "signal_ids": [
 "S-6317",
 "S-24240"
+]
+},
+{
+"id": "C-14633",
+"name": "MEDILL WEST CONDO ASSOCIATION",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 11200.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67393"
 ]
 },
 {
@@ -54028,6 +54396,48 @@
 "targets": 0,
 "signal_ids": [
 "S-66029"
+]
+},
+{
+"id": "C-14622",
+"name": "MALIBU CONDOMINIUM ASSOCIATION",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 10000.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67409"
+]
+},
+{
+"id": "C-14638",
+"name": "RAVINIA LOFTS CONDOMINIUM ASSO",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 10000.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67371"
+]
+},
+{
+"id": "C-14653",
+"name": "CATHOLIC FOREIGN MISSION SOCIETY OF AMERICA",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 10000.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67389"
 ]
 },
 {
@@ -57196,6 +57606,21 @@
 ]
 },
 {
+"id": "C-14648",
+"name": "SINGHAL PARTNERS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 6878.0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67496",
+"S-67497"
+]
+},
+{
 "id": "C-14160",
 "name": "RELATED MIDWEST",
 "entity_type": "corp",
@@ -57789,6 +58214,21 @@
 ]
 },
 {
+"id": "C-14062",
+"name": "FAY LIMITED PARTNERSHIP",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 6100.0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-64434",
+"S-67449"
+]
+},
+{
 "id": "C-2041",
 "name": "WINDOW WORLD OF WESTERN CHICAGO",
 "entity_type": "corp",
@@ -58352,20 +58792,6 @@
 "targets": 0,
 "signal_ids": [
 "S-50384"
-]
-},
-{
-"id": "C-14062",
-"name": "FAY LIMITED PARTNERSHIP",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 5800.0,
-"states": "OH",
-"latest": "2026-09-18",
-"targets": 0,
-"signal_ids": [
-"S-64434"
 ]
 },
 {
@@ -59905,6 +60331,20 @@
 ]
 },
 {
+"id": "C-14619",
+"name": "HUD",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 5000.0,
+"states": "MI",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67516"
+]
+},
+{
 "id": "C-1963",
 "name": "TAIT AND TAIT GENERAL CONSTRUCTION",
 "entity_type": "corp",
@@ -60197,6 +60637,20 @@
 "targets": 0,
 "signal_ids": [
 "S-60473"
+]
+},
+{
+"id": "C-14660",
+"name": "3818-20 N CLARK ST. CONDOMINIUM ASSOCIATION",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 4666.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67418"
 ]
 },
 {
@@ -65658,20 +66112,6 @@
 ]
 },
 {
-"id": "C-2267",
-"name": "CHUBB GROUP LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 1700.0,
-"states": "MI",
-"latest": "2026-08-27",
-"targets": 0,
-"signal_ids": [
-"S-9029"
-]
-},
-{
 "id": "C-2268",
 "name": "VENTUS HOLDINGS LLC",
 "entity_type": "spe",
@@ -65800,6 +66240,20 @@
 "signal_ids": [
 "S-22244",
 "S-22323"
+]
+},
+{
+"id": "C-14647",
+"name": "EQUITY WEALTH BUILDERS DETROIT, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1600.0,
+"states": "MI",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67522"
 ]
 },
 {
@@ -66768,6 +67222,20 @@
 "targets": 0,
 "signal_ids": [
 "S-65871"
+]
+},
+{
+"id": "C-14620",
+"name": "PILSEN VENTURES LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1000.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67416"
 ]
 },
 {
@@ -75516,13 +75984,14 @@
 "name": "ETC DIME LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 0,
 "states": "OH",
-"latest": "2026-09-08",
+"latest": "2026-09-24",
 "targets": 0,
 "signal_ids": [
-"S-52508"
+"S-52508",
+"S-67478"
 ]
 },
 {
@@ -76347,13 +76816,14 @@
 "name": "WIECHART INVESTMENT",
 "entity_type": "spe",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 0,
 "states": "OH",
-"latest": "2026-09-11",
+"latest": "2026-09-25",
 "targets": 0,
 "signal_ids": [
-"S-53837"
+"S-53837",
+"S-67347"
 ]
 },
 {
@@ -77281,20 +77751,6 @@
 "targets": 0,
 "signal_ids": [
 "S-59590"
-]
-},
-{
-"id": "C-13640",
-"name": "TRIPLE R ASSOCIATES LTD",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 0,
-"states": "OH",
-"latest": "2026-09-15",
-"targets": 0,
-"signal_ids": [
-"S-59792"
 ]
 },
 {
@@ -78610,15 +79066,16 @@
 "name": "WESTERVILLE SQUARE INC",
 "entity_type": "corp",
 "jp": false,
-"signals": 3,
+"signals": 4,
 "value_total": 0,
 "states": "OH",
-"latest": "2026-09-21",
+"latest": "2026-09-24",
 "targets": 0,
 "signal_ids": [
 "S-65252",
 "S-65253",
-"S-65254"
+"S-65254",
+"S-67470"
 ]
 },
 {
@@ -79168,13 +79625,14 @@
 "name": "RADAR OF HURON LTD",
 "entity_type": "corp",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 0,
 "states": "OH",
-"latest": "2026-09-23",
+"latest": "2026-09-24",
 "targets": 0,
 "signal_ids": [
-"S-66872"
+"S-66872",
+"S-67462"
 ]
 },
 {
@@ -79423,13 +79881,14 @@
 "name": "BCORE DEFENDER OH1M01-M02 LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 0,
 "states": "OH",
-"latest": "2026-09-23",
+"latest": "2026-09-24",
 "targets": 0,
 "signal_ids": [
-"S-66899"
+"S-66899",
+"S-67488"
 ]
 },
 {
@@ -79515,6 +79974,272 @@
 "targets": 0,
 "signal_ids": [
 "S-66888"
+]
+},
+{
+"id": "C-14621",
+"name": "2888 BETHEL ROAD LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67494"
+]
+},
+{
+"id": "C-14623",
+"name": "WUMA LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67464"
+]
+},
+{
+"id": "C-14631",
+"name": "GILLGAN DEVELOPMENT LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67477"
+]
+},
+{
+"id": "C-14634",
+"name": "ABY 52 LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67480"
+]
+},
+{
+"id": "C-14635",
+"name": "ROOSTERS REAL ESTATE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67469"
+]
+},
+{
+"id": "C-14636",
+"name": "OMEGA OHIO LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67489"
+]
+},
+{
+"id": "C-14643",
+"name": "XENOS CHRISTIAN FELLOWSHIP INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67460"
+]
+},
+{
+"id": "C-14645",
+"name": "EMAC LTD",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67461"
+]
+},
+{
+"id": "C-14646",
+"name": "7730 EDGE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67498"
+]
+},
+{
+"id": "C-14649",
+"name": "TEMPUS POLARIS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67483"
+]
+},
+{
+"id": "C-14650",
+"name": "FRIENDSHIP VILLAGE OF COLUMBUS OHIO INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67495"
+]
+},
+{
+"id": "C-14651",
+"name": "PDK PROPERTIES LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67463"
+]
+},
+{
+"id": "C-14652",
+"name": "MORRISON BUILDING PARTNERSHIP, LTD",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67261"
+]
+},
+{
+"id": "C-14654",
+"name": "THE MAJESTIC GROUP LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67304"
+]
+},
+{
+"id": "C-14656",
+"name": "333 OUTERBELT SUB LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67485"
+]
+},
+{
+"id": "C-14657",
+"name": "OHIO NURSES ASSOCIATION",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67493"
+]
+},
+{
+"id": "C-14659",
+"name": "ARIS CHARTER STREET LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67490"
+]
+},
+{
+"id": "C-14661",
+"name": "WEST 70 THREE OWNER LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67482"
+]
+},
+{
+"id": "C-14662",
+"name": "L&O ACQUISITIONS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-67459"
 ]
 }
 ]

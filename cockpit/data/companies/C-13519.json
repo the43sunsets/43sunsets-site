@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 221788.0,
-"latest": "2026-09-15",
+"count": 2,
+"value_total": 286632.0,
+"latest": "2026-09-25",
 "items": [
+{
+"id": "S-67505",
+"date": "2026-09-25",
+"applied": "2026-09-10",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "441 E Jefferson Ave",
+"permit_no": "BLD2026-01484",
+"permit_type": "Alteration",
+"value": 64844.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Blue Cross/Blue Shield of Michigan の Detroit オフィス(441 E Jefferson Ave)1階の内装改修 $64,844。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Interior alterations/renovations (first floor) per provided plans and documents. (Subject to field approval.) / Office / Alteration",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01KZ9X6bWKjoQSoTnywC8LfN",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-59095",
 "date": "2026-09-15",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-25",
+"face": "permits",
+"title": "建設許可(Detroit): 未分類",
+"ref": "S-67505",
+"summary": "Blue Cross/Blue Shield of Michigan の Detroit オフィス(441 E Jefferson Ave)1階の内装改修 $64,844。"
+},
+{
 "date": "2026-09-15",
 "face": "permits",
 "title": "建設許可(Detroit): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Blue Cross/Blue Shield of Michigan の Detroit 本社(600 E Lafayette Ave)17階・20階のオフィス内装改修 $221,788。"
 }
 ],
-"generated_at": "2026-09-27T08:16:38+00:00",
+"generated_at": "2026-09-27T21:00:41+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
