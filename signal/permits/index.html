@@ -389,7 +389,7 @@ function filtered(){
     (sel.category.size===0 || sel.category.has(s.category)) &&
     (sel.industry.size===0 || sel.industry.has(s.industry)) &&
     (!jp || s.jp) && inPeriod(s, period)
-  ).sort((a,b)=> b.date.localeCompare(a.date));
+  ).sort((a,b)=> (b.date||"").localeCompare(a.date||""));   // 9/27 CE-2: 日付の無い行(IL 30・OH 3)で例外を出して一覧が止まっていた → 末尾へ
 }
 function fmtUsd(v){ return v==null ? "" : "$"+v.toLocaleString("en-US"); }
 const INV_TIP = {
