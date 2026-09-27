@@ -42,10 +42,40 @@
 },
 "grants": {
 "status": "収集中",
-"count": 1,
-"amount_total": 2721.0,
-"latest": "2026-05-19",
+"count": 3,
+"amount_total": 24229.66,
+"latest": "2026-08-13",
 "items": [
+{
+"id": "S-20917",
+"date": "2026-08-13",
+"start": "2026-05-19",
+"end": "2028-12-31",
+"state": "OH",
+"city": "Oh**059",
+"kind": "other",
+"kind_label": "融資",
+"issuer_level": "連邦",
+"issuer": "Natural Resources Conservation Service",
+"program": "10.912",
+"program_name": null,
+"amount": -0.96,
+"stage": "契約・交付",
+"category": "未分類",
+"industry": "未分類",
+"summary": "Natural Resources Conservation Service による Environmental Quality Incentives Program (EQIP) 関連の記録で、金額は-$0.96と極小(調整取引)であり用途不明。",
+"infer": null,
+"confidence": "high",
+"verbatim": "ENVIRON QUALITY INITIATIVE 2018",
+"url": "https://www.usaspending.gov/award/ASST_NON_0000745E342604Q_012",
+"role": "recipient",
+"role_label": "受領者(USAspending)",
+"provenance": {
+"policy": "subsidies-v1-2026-09-07",
+"batch": "msgbatch_017nnF7KY7uvJecEP9C4NW1d",
+"model": "claude-sonnet-5"
+}
+},
 {
 "id": "S-15411",
 "date": "2026-05-19",
@@ -75,6 +105,36 @@
 "batch": "msgbatch_01FBBuZptPDvCJDAKC4QcbYq",
 "model": "claude-sonnet-5"
 }
+},
+{
+"id": "S-20609",
+"date": "2024-06-17",
+"start": "2024-06-17",
+"end": "2028-12-31",
+"state": "OH",
+"city": "Oh**059",
+"kind": "other",
+"kind_label": "融資",
+"issuer_level": "連邦",
+"issuer": "Natural Resources Conservation Service",
+"program": "10.912",
+"program_name": null,
+"amount": 21509.62,
+"stage": "契約・交付",
+"category": "未分類",
+"industry": "未分類",
+"summary": "Natural Resources Conservation Service が Ohio の WHITE PINE WOODLANDS LLC に $21.5k の融資を交付。EQIP関連の環境保全プログラムとみられる。",
+"infer": null,
+"confidence": "low",
+"verbatim": "EQI IR-PL117-169",
+"url": "https://www.usaspending.gov/award/ASST_NON_0000745E34241U7_012",
+"role": "recipient",
+"role_label": "受領者(USAspending)",
+"provenance": {
+"policy": "subsidies-v1-2026-09-07",
+"batch": "msgbatch_017nnF7KY7uvJecEP9C4NW1d",
+"model": "claude-sonnet-5"
+}
 }
 ]
 },
@@ -86,13 +146,27 @@
 },
 "timeline": [
 {
+"date": "2026-08-13",
+"face": "grants",
+"title": "融資(連邦・Natural Resources Conservation Service): 未分類",
+"ref": "S-20917",
+"summary": "Natural Resources Conservation Service による Environmental Quality Incentives Program (EQIP) 関連の記録で、金額は-$0.96と極小(調整取引)であり用途不明。"
+},
+{
 "date": "2026-05-19",
 "face": "grants",
 "title": "融資(連邦・Natural Resources Conservation Service): 訓練・インフラ・その他",
 "ref": "S-15411",
 "summary": "オハイオ州のWhite Pine Woodlands LLCに対し、Natural Resources Conservation Serviceが環境品質インセンティブ事業(EQIP)の一環として$2,721のローンを交付。"
+},
+{
+"date": "2024-06-17",
+"face": "grants",
+"title": "融資(連邦・Natural Resources Conservation Service): 未分類",
+"ref": "S-20609",
+"summary": "Natural Resources Conservation Service が Ohio の WHITE PINE WOODLANDS LLC に $21.5k の融資を交付。EQIP関連の環境保全プログラムとみられる。"
 }
 ],
-"generated_at": "2026-09-25T21:00:26+00:00",
+"generated_at": "2026-09-27T08:16:38+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

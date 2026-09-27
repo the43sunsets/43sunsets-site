@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 19,
-"value_total": 51400040.0,
-"latest": "2026-09-22",
+"count": 20,
+"value_total": 51501040.0,
+"latest": "2026-09-24",
 "items": [
+{
+"id": "S-66777",
+"date": "2026-09-24",
+"applied": "2026-09-02",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "11601 W TOUHY AVE",
+"permit_no": "B200509987",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 101000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 11601 W Touhy Ave(オヘア空港周辺)にて既存ロビー・事務所の非構造的内装改修 $101k(電気・機械工事含む)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SCOPE: NONSTRUCTURAL INTERIOR ALTERATION OF EXISTING LOBBY AND OFFICE FOR NEW OFFICE WITH WITHIN EXISTING OFFICE AREA WITH ASSOCIATED ELECTRICAL AND MECHANICAL WORK.LOCATIONS: 0 RESIDENTIAL UNIT(S), 1 NON-RESIDENTIAL UNIT(S), BUILDING LOBBY.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-65112",
 "date": "2026-09-22",
@@ -510,6 +534,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-66777",
+"summary": "Chicago 11601 W Touhy Ave(オヘア空港周辺)にて既存ロビー・事務所の非構造的内装改修 $101k(電気・機械工事含む)。"
+},
+{
 "date": "2026-09-22",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -643,6 +674,6 @@
 "summary": "Chicago 2255 E 103RD STでエレベーター・リフトの改修/部品交換 $18k(申請者: CITY OF CHICAGO)。"
 }
 ],
-"generated_at": "2026-09-25T21:00:26+00:00",
+"generated_at": "2026-09-27T08:16:38+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

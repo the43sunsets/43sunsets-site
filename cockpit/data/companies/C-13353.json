@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 692000.0,
-"latest": "2026-09-23",
+"count": 5,
+"value_total": 842000.0,
+"latest": "2026-09-24",
 "items": [
+{
+"id": "S-66775",
+"date": "2026-09-24",
+"applied": "2026-09-21",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5101 S WENTWORTH AVE",
+"permit_no": "B200512619",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 150000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Chicago 5101 S Wentworth Ave の既存機械室で空調機器(ClimateCraft製 CAH54X108)の修理/交換 $150k。",
+"infer": "「2FM Fleet and Facility Management」はシカゴ市の資産管理部門であり、市公共施設の設備維持工事の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "REPAIR/REPLACEMENT AFFECTING 1 SYSTEMS :   1 OTHER AIR HANDLING EQUIPMENT(CLIMATECRAFT ,MODEL # CAH54X108) . ELECTRICAL WORK UNDER THIS PERMIT = NO . LOCATIONS: 0 RESIDENTIAL UNIT(S), 1 NON-RESIDENTIAL UNIT(S),  EXISTING MECHANICAL ROOM.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-65916",
 "date": "2026-09-23",
@@ -150,6 +174,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-66775",
+"summary": "Chicago 5101 S Wentworth Ave の既存機械室で空調機器(ClimateCraft製 CAH54X108)の修理/交換 $150k。"
+},
+{
 "date": "2026-09-23",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -178,6 +209,6 @@
 "summary": "Chicago 4856 W Chicago Ave で「循環デスク」交換に伴う非構造の内装改修 $171k(電気工事含む)。"
 }
 ],
-"generated_at": "2026-09-25T21:00:26+00:00",
+"generated_at": "2026-09-27T08:16:38+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

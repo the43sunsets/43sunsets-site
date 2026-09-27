@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 3,
+"count": 5,
 "value_total": 102880.0,
-"latest": "2026-09-21",
+"latest": "2026-09-23",
 "items": [
+{
+"id": "S-66881",
+"date": "2026-09-23",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "4215 WORTH AVE UNIT 200",
+"permit_no": "MMEPC2638274",
+"permit_type": "Mechanical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 4215 Worth Ave Unit 200 における機械設備(MEP)工事、金額不明。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-66880",
+"date": "2026-09-23",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "4194 EASTON GATEWAY DR",
+"permit_no": "MMEPC2638338",
+"permit_type": "Mechanical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 4194 Easton Gateway Dr の商業施設における機械設備(MEP)工事。金額不明。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-65259",
 "date": "2026-09-21",
@@ -126,6 +174,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-66881",
+"summary": "Columbus 4215 Worth Ave Unit 200 における機械設備(MEP)工事、金額不明。"
+},
+{
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-66880",
+"summary": "Columbus 4194 Easton Gateway Dr の商業施設における機械設備(MEP)工事。金額不明。"
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -147,6 +209,6 @@
 "summary": "Columbus 4201 Weaverton Ln の商業施設で防火設備(Fire Suppression)工事、金額不明。"
 }
 ],
-"generated_at": "2026-09-25T21:00:26+00:00",
+"generated_at": "2026-09-27T08:16:38+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

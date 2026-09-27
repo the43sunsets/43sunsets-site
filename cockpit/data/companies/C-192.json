@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 1410906.0,
-"latest": "2026-09-21",
+"count": 4,
+"value_total": 1445906.0,
+"latest": "2026-09-24",
 "items": [
+{
+"id": "S-66813",
+"date": "2026-09-24",
+"applied": "2026-09-24",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "11601 W TOUHY AVE",
+"permit_no": "B200513059",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "United Airlines のオヘア空港(11601 W Touhy Ave)ハンガー扉における電気設備の小規模修繕 $35k(コンセント2・照明10)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 2 . LIGHTING OUTLETS: 10. SPECIFIC LOCATION: HANGAR DOOR.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-64346",
 "date": "2026-09-21",
@@ -126,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-66813",
+"summary": "United Airlines のオヘア空港(11601 W Touhy Ave)ハンガー扉における電気設備の小規模修繕 $35k(コンセント2・照明10)。"
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -147,6 +178,6 @@
 "summary": "Arlington Heights 1421 W Shure Dr の United Airlines オフィス 1 階西側の内装改修 $1.3M。"
 }
 ],
-"generated_at": "2026-09-25T21:00:26+00:00",
+"generated_at": "2026-09-27T08:16:38+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
