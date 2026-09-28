@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 10773005.03,
+"count": 7,
+"value_total": 10820855.03,
 "latest": "2026-09-22",
 "items": [
 {
@@ -39,7 +39,7 @@
 "value": 7100000.0,
 "category": "未分類",
 "confidence": "high",
-"summary": "Cleveland市が管理事務所建物(750 E 88th St)の改修を実施 $7.1M(B用途)。給排水・空調・電気は別途許可。",
+"summary": "Cleveland市による管理棟(Administration Building)の改修工事 $7.1M(750 E 88th St)。",
 "infer": null,
 "role": "owner",
 "role_label": "所有名義(許可記録・課税台帳)",
@@ -47,8 +47,104 @@
 "source_id": "SRC-068",
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
-"batch": "sync-20260928T123025Z",
-"model": "claude-sonnet-5 (sync fallback)"
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-67672",
+"date": "2026-09-22",
+"applied": "2026-09-15",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "100 ALFRED LERNER WAY, CLEVELAND, OH, 44114",
+"permit_no": "BCE26-039700",
+"permit_type": "Commercial Electrical",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland Browns の試合(9/27放映)向けの仮設発電機用電気許可 $10k(100 Alfred Lerner Way)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Electrical / U Utility - Miscellaneous / Electrical Permit for Temp Generator for Cleveland Browns game on Fox on 9/27.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-67703",
+"date": "2026-09-21",
+"applied": "2026-08-05",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "4125 FULTON RD, CLEVELAND, OH, 44144",
+"permit_no": "BCB26-032971",
+"permit_type": "Commercial Building",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland市による仮設テント(20x20フィート×3basic)の設置許可 $10k(4125 Fulton Rd)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Tent-Stage / ERECT (3) 20'X20' TENTS PER APPROVED SITE PLAN, MANU. SPECS., AND FIELD INSPECTIONS. NO SEP. MEP PERMITS REQUIRED",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-67698",
+"date": "2026-09-21",
+"applied": "2026-09-09",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1200 STARKWEATHER AVE, CLEVELAND, OH, 44113",
+"permit_no": "BCB26-038614",
+"permit_type": "Commercial Building",
+"value": 2850.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland市がTremont Arts Festival向けに40'x60'の仮設テントを設置する許可 $2,850。9/18設置・9/21撤去の一時利用。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / U Utility - Miscellaneous / Tent-Stage / ERECT (1) 40' x 60' TEMP. TENT PER APPROVED SITE PLAN + MANU. SPECS FOR TREMONT ARTS FESTIVAL. Install 9/18/26 Use 9/19/26 Remove 9/21/26",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-67692",
+"date": "2026-09-21",
+"applied": "2026-09-03",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "10820 EAST BLVD, CLEVELAND, OH, 44106",
+"permit_no": "BCB26-037888",
+"permit_type": "Commercial Building",
+"value": 25000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland市によるイベント用ステージ(Stageline SL100・バナー含む)の設置許可 $25k、「Light the Night」イベント(9/30-10/1)向け。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Tent-Stage / ERECT STAGELINE SL100 WITH BANNERS PER MANUFACTURER SPECIFICATIONS AND APPROVED SITE PLAN FOR LIGHT THE NIGHT EVENT FROM 9/30 - 10/1.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
 }
 },
 {
@@ -130,7 +226,35 @@
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-67671",
-"summary": "Cleveland市が管理事務所建物(750 E 88th St)の改修を実施 $7.1M(B用途)。給排水・空調・電気は別途許可。"
+"summary": "Cleveland市による管理棟(Administration Building)の改修工事 $7.1M(750 E 88th St)。"
+},
+{
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-67672",
+"summary": "Cleveland Browns の試合(9/27放映)向けの仮設発電機用電気許可 $10k(100 Alfred Lerner Way)。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-67703",
+"summary": "Cleveland市による仮設テント(20x20フィート×3basic)の設置許可 $10k(4125 Fulton Rd)。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-67698",
+"summary": "Cleveland市がTremont Arts Festival向けに40'x60'の仮設テントを設置する許可 $2,850。9/18設置・9/21撤去の一時利用。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-67692",
+"summary": "Cleveland市によるイベント用ステージ(Stageline SL100・バナー含む)の設置許可 $25k、「Light the Night」イベント(9/30-10/1)向け。"
 },
 {
 "date": "2026-08-26",
@@ -147,6 +271,6 @@
 "summary": "Cleveland市によるポンプ場設置工事(電気許可含む) $1.47M。"
 }
 ],
-"generated_at": "2026-09-28T12:31:28+00:00",
+"generated_at": "2026-09-28T21:00:25+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

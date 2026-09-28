@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 5,
+"count": 6,
 "value_total": 3151072.0,
-"latest": "2026-09-21",
+"latest": "2026-09-25",
 "items": [
+{
+"id": "S-67577",
+"date": "2026-09-25",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "245 N HIGH ST",
+"permit_no": "EMEPC2638670",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Nationwide Mutual Insurance Co(245 N High St)の商業施設で電気設備工事(MEP)。金額不明。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-65239",
 "date": "2026-09-21",
@@ -174,6 +198,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-25",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-67577",
+"summary": "Nationwide Mutual Insurance Co(245 N High St)の商業施設で電気設備工事(MEP)。金額不明。"
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -209,6 +240,6 @@
 "summary": "Columbus 263 N Front St のオフィスビルで構造的な改修工事 $1.8M(8,728 SQFT)。"
 }
 ],
-"generated_at": "2026-09-28T12:31:28+00:00",
+"generated_at": "2026-09-28T21:00:25+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

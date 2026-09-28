@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 12071200.0,
-"latest": "2026-08-04",
+"count": 5,
+"value_total": 12081183.0,
+"latest": "2026-09-25",
 "items": [
+{
+"id": "S-67614",
+"date": "2026-09-25",
+"applied": "2026-09-21",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1501 N MARGINAL RD, CLEVELAND, OH, 44114",
+"permit_no": "BCH26-040712",
+"permit_type": "Commercial HVAC",
+"value": 9983.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland市(1501 N Marginal Rd)の商業HVAC工事で排気ファン1台を設置 $9,983。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial HVAC / B Business / INSTALL MISC. DEVICE-1 EXHAUST FAN-$9,983.00",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-26876",
 "date": "2026-08-04",
@@ -150,6 +174,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-25",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-67614",
+"summary": "Cleveland市(1501 N Marginal Rd)の商業HVAC工事で排気ファン1台を設置 $9,983。"
+},
+{
 "date": "2026-08-04",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -178,6 +209,6 @@
 "summary": "Cleveland 1979 W 25th St(小売・マーケット区分)で燃料ガス配管1,750フィートを設置する商業HVAC許可 $1.9M。"
 }
 ],
-"generated_at": "2026-09-28T12:31:28+00:00",
+"generated_at": "2026-09-28T21:00:25+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

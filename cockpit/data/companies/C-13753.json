@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 540000.0,
-"latest": "2026-09-17",
+"count": 3,
+"value_total": 565000.0,
+"latest": "2026-09-25",
 "items": [
+{
+"id": "S-67580",
+"date": "2026-09-25",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2100 MARYLAND AVE",
+"permit_no": "DEMO2637517",
+"permit_type": "NA",
+"value": 25000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus Metropolitan Housing Authority による 1,200 SQFT の建物解体工事 $25k(2100 Maryland Ave)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Demolition / NA / All Other Buildings and Structures Demolition / Demolition / 1200 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-63377",
 "date": "2026-09-17",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-25",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-67580",
+"summary": "Columbus Metropolitan Housing Authority による 1,200 SQFT の建物解体工事 $25k(2100 Maryland Ave)。"
+},
+{
 "date": "2026-09-17",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -116,6 +147,6 @@
 "summary": "Columbus Metropolitan Housing Authority による 350 SQFT の建物以外の構造物新設 $40k(2069 Bridge Point Blvd)。"
 }
 ],
-"generated_at": "2026-09-28T12:31:28+00:00",
+"generated_at": "2026-09-28T21:00:25+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

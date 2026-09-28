@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 248284.0,
-"latest": "2026-09-15",
+"count": 3,
+"value_total": 848284.0,
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-67680",
+"date": "2026-09-22",
+"applied": "2026-08-03",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1 CENTER CT, CLEVELAND, OH, 44115",
+"permit_no": "BCB26-032423",
+"permit_type": "Commercial Building",
+"value": 600000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 1 Center Ct にて既存の飲食提供エリアを分離する内装改修 $600k(B用途、フード・保健所承認要)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO SEPARATE, EXISTING FOOD SERVICE AREAS PER APPROVED PLANS. SEPARATE PLUMBING, HVAC, AND ELECTRICAL PERMITS REQUIRED. SUBMIT SEPARATE PLANS TO FPB FOR ALTERATIONS TO FIRE ALARM & SPRINKLER SYSTEMS. HEALTH DEPARTMEN",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-63587",
 "date": "2026-09-15",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-67680",
+"summary": "Cleveland 1 Center Ct にて既存の飲食提供エリアを分離する内装改修 $600k(B用途、フード・保健所承認要)。"
+},
+{
 "date": "2026-09-15",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -116,6 +147,6 @@
 "summary": "Cleveland 1 Center Ct のスポーツ観戦施設(A-4用途)でダクトヒーター設置等の商業用HVAC工事 $94k。"
 }
 ],
-"generated_at": "2026-09-28T12:31:28+00:00",
+"generated_at": "2026-09-28T21:00:25+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

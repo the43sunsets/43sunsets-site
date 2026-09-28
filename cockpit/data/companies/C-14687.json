@@ -2,7 +2,7 @@
 "id": "C-14687",
 "name": "CASE WESTERN RESERVE UNIVERSITY",
 "city": null,
-"state": null,
+"state": "OH",
 "entity_type": "public",
 "industry": null,
 "made": null,
@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 1899000.0,
-"latest": "2026-09-22",
+"count": 2,
+"value_total": 2059000.0,
+"latest": "2026-09-24",
 "items": [
+{
+"id": "S-67633",
+"date": "2026-09-24",
+"applied": "2026-09-23",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "10803 MAGNOLIA DR, CLEVELAND, OH, 44106",
+"permit_no": "BCE26-041352",
+"permit_type": "Commercial Electrical",
+"value": 160000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Case Western Reserve University 所有の住宅(R-2、10803 Magnolia Dr)で 3000 SQFT の電気設備再工事 $160k(照明・コンセント新設)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Electrical / R-2 Residential - Permanent Housing - Shared Egress / INSTALL 3000 SQUARE FEET: Re-working electrical in existing home. New lights, outlets to***BUILDING PERMIT NO BCB26-024095***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-67674",
 "date": "2026-09-22",
@@ -39,7 +63,7 @@
 "value": 1899000.0,
 "category": "未分類",
 "confidence": "high",
-"summary": "Case Western Reserve University の寄宿舎(10525 SF, R-2 用途)の内装改修 $1.9M(10803 Magnolia Dr)。",
+"summary": "Case Western Reserve University の学生寮(10525 SF)内装改修 $1.9M(R-2 用途)。",
 "infer": null,
 "role": "owner",
 "role_label": "所有名義(許可記録・課税台帳)",
@@ -47,8 +71,8 @@
 "source_id": "SRC-068",
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
-"batch": "sync-20260928T123025Z",
-"model": "claude-sonnet-5 (sync fallback)"
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
 }
 }
 ]
@@ -78,13 +102,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-67633",
+"summary": "Case Western Reserve University 所有の住宅(R-2、10803 Magnolia Dr)で 3000 SQFT の電気設備再工事 $160k(照明・コンセント新設)。"
+},
+{
 "date": "2026-09-22",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-67674",
-"summary": "Case Western Reserve University の寄宿舎(10525 SF, R-2 用途)の内装改修 $1.9M(10803 Magnolia Dr)。"
+"summary": "Case Western Reserve University の学生寮(10525 SF)内装改修 $1.9M(R-2 用途)。"
 }
 ],
-"generated_at": "2026-09-28T12:31:28+00:00",
+"generated_at": "2026-09-28T21:00:25+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 6800.0,
-"latest": "2026-09-09",
+"count": 2,
+"value_total": 12800.0,
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-67682",
+"date": "2026-09-22",
+"applied": "2026-09-10",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "8114 EUCLID AVE, CLEVELAND, OH, 44103",
+"permit_no": "BCH26-038945",
+"permit_type": "Commercial HVAC",
+"value": 6000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 8114 Euclid Ave の商業HVAC工事 $6,000(A-2 飲食用途、210 SQFT 設置)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial HVAC / A-2 Assembly - Food and Drink Consumption / INSTALL 210 SQUARE FEET ***BUIDLING PERMIT NO BCB26-018242***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54762",
 "date": "2026-09-09",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-67682",
+"summary": "Cleveland 8114 Euclid Ave の商業HVAC工事 $6,000(A-2 飲食用途、210 SQFT 設置)。"
+},
+{
 "date": "2026-09-09",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Cleveland 8114 Euclid Ave の飲食施設(A-2用途)に冷凍・冷却設備(製氷機2台、自立型製氷機1台、ウォークインクーラー1台)を設置する商業HVAC工事 $6,800。"
 }
 ],
-"generated_at": "2026-09-28T12:31:28+00:00",
+"generated_at": "2026-09-28T21:00:25+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
