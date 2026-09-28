@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 1718063.0,
-"latest": "2026-07-17",
+"count": 2,
+"value_total": 4011863.0,
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-67687",
+"date": "2026-09-22",
+"applied": "2026-08-26",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "3349 W 125TH ST, CLEVELAND, OH, 44111",
+"permit_no": "BCH26-036522",
+"permit_type": "Commercial HVAC",
+"value": 2293800.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Global Ambassadors Language Academy(3349 W 125th St, Cleveland)のB用途建物にHVAC工事 $2.29M(ヒートポンプ10台、壁掛/空間ヒーター13台、屋上空調2台、VRFシステム70台等を設置、関連建築許可 #B24021177)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial HVAC / B Business / INSTALL 10 HEAT PUMP, 13 WALL/SPACE HEATER, 2 ROOFTOP HEATING/COOLING UNITS, COST OF MISC. DEVICES-4 DOAS, 70 VRF SYSTEM, 6 EXHAUST FANS, 61 FIRE DAMPERS-$696,940.00 ***BLDG Permit# B24021177***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "sync-20260928T123025Z",
+"model": "claude-sonnet-5 (sync fallback)"
+}
+},
 {
 "id": "S-27122",
 "date": "2026-07-17",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-67687",
+"summary": "Global Ambassadors Language Academy(3349 W 125th St, Cleveland)のB用途建物にHVAC工事 $2.29M(ヒートポンプ10台、壁掛/空間ヒーター13台、屋上空調2台、VRFシステム70台等を設置、関連建築許可 #B24021177)。"
+},
+{
 "date": "2026-07-17",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Cleveland 3349 W 125th St の教育施設(語学アカデミー)で 54,811 SQFT の内装改修に伴う商業電気工事 $1.7M(建築許可 B24021177 に付随)。"
 }
 ],
-"generated_at": "2026-09-28T10:36:25+00:00",
+"generated_at": "2026-09-28T12:31:28+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
