@@ -183,7 +183,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   <div class="fgroup"><h2>業種</h2><div id="f-industry"></div></div>
   <div class="fgroup"><h2>投資規模</h2><div id="f-size"></div></div>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
-  <div class="fnote">段階 = 承認(審議会が決めた・これから建つ)/契約・交付(実行済み)。出し手 = 連邦・州・市郡。投資の種類と業種は、AI 読みが付いた案件は AI の割り当て(「AI のまとめ」札)、まだの案件は規則(制度番号・機関・本文の語)による割り当てです(チップにカーソルを当てると出所が出ます)。件数は現在の表示集合の全数。州と市郡の源は順次追加します。</div>
+  <div class="fnote">段階 = 承認(審議会が決めた・これから建つ)/契約・交付(実行済み)。出し手 = 連邦・州(市・郡の固定資産税減免はまだ載っていません)。投資の種類と業種は、AI 読みが付いた案件は AI の割り当て(「AI のまとめ」札)、まだの案件は規則(制度番号・機関・本文の語)による割り当てです(チップにカーソルを当てると出所が出ます)。件数は現在の表示集合の全数。州と市郡の源は順次追加します。</div>
 </aside>
 
 <main>
@@ -205,8 +205,8 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
     <summary>このページの読み方 — 数字の定義と、見ていないもの</summary>
     <div id="scopebox">読み込み中…</div>
     <ul id="scopenotes">
-      <li>源(現在): 連邦 = USAspending.gov(5 州の事業者への助成と、設備投資に近い融資制度 SBA 504・USDA B&I/REAP・DOE 融資。直近 365 日に取引のあった案件)。州 = Illinois DCEO の EDGE 契約一覧(2015 年以降)・Indiana IEDC の Transparency Portal(EDGE/HBI/SEF 等の契約)。州の契約は「段階 = 承認」(投資の決定)で、予定投資額・雇用目標が付きます。</li>
-      <li>未収集: OH(JobsOhio・Tax Credit Authority)・MI(Michigan Strategic Fund)・WI(WEDC)の承認一覧と、市・郡の固定資産税減免。順次追加します。</li>
+      <li>源(現在): 連邦 = USAspending.gov(5 州の事業者への助成と、設備投資に近い融資制度 SBA 504・USDA B&I/REAP・DOE 融資。直近 365 日に取引のあった案件)。州 = Illinois DCEO の EDGE 契約一覧(2015 年以降)・Indiana IEDC の Transparency Portal(EDGE/HBI/SEF 等の契約)・Ohio Tax Credit Authority の月次議事録(雇用創出税額控除の承認・2021 年以降)・Michigan Strategic Fund の Business Development Program 一覧・Wisconsin WEDC の受賞一覧(全制度・四半期更新)。州の案件は「段階 = 承認」(投資の決定)で、多くは予定投資額・雇用目標が付きます(OH の議事録には控除の見込額がありません)。</li>
+      <li>未収集: JobsOhio の独自の助成(案件が非公開)・Michigan Strategic Fund の他制度(MCRP・SOAR 等)と、市・郡の固定資産税減免(Cook 郡 6b・IN の減免・OH CRA・MI PA 198・WI TIF)。市・郡の減免は、公開データから取れるかを確かめているところです。</li>
       <li>「設備投資案件のみ」(既定でオン)= 投資の種類が 製造能力の増強・物流・データセンター・医療施設・研究・ラボ施設・研究開発 の案件。外すと、訓練・インフラ・その他と未分類も表示します。業種で絞るときは左の「業種」を使ってください。</li>
       <li>分類の出所: 設備投資に関わる案件は当社 AI(Sonnet 5・Batch)が読み、日本語の要約と投資の種類・業種を付けます(確信度が低いものは「未分類」)。まだ読んでいない案件は規則(制度番号・機関・本文の語)で仮置きしています。SBA 504 融資は公開データに使途の内訳が無く、受領者名に製造の語がある案件だけを読みの対象にしています。</li>
       <li>受領者名の「›」は企業カルテ(建設許可・UCC・補助金を 1 枚に)へのリンク。同じ会社が許可や登記にも出ていれば、その時系列が並びます。</li>
@@ -229,7 +229,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
 let SIGNALS = [], META = null;
 const STATES = ["IL","IN","MI","OH","WI"];
 const STAGES = ["承認","契約・交付"];
-const ISSUERS = ["連邦","州","市・郡"];
+const ISSUERS = ["連邦","州"];   // 9/29 HL-1 甲: 市・郡は未収集(件数 0 の空トグルを出さない)
 const CATEGORIES = ["製造能力の増強","物流・倉庫の新設","データセンター建設","医療施設","研究・ラボ施設","研究開発","訓練・インフラ・その他","未分類"];
 const INDUSTRIES = ["半導体・電子","医薬・ライフサイエンス","航空宇宙","軍事・防衛","自動車部品","機械・金属","食品・素材加工","物流・EC","データセンター","その他製造","未分類"];
 const SIZES = ["$100M 以上","$10M〜$100M","$1M〜$10M","$1M 未満","不明"];
