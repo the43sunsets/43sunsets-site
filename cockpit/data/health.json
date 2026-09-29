@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-09-28T21:01:23+00:00",
+ "generated_at": "2026-09-29T07:01:04+00:00",
  "checks": {
   "ucc_sync_mac": {
-   "raw_db_synced_at": "2026-09-28T07:01:06+00:00",
-   "raw_db_age_h": 14.0,
+   "raw_db_synced_at": "2026-09-29T07:01:02+00:00",
+   "raw_db_age_h": 0.0,
    "last_status": {
-    "ran_at": "2026-09-28T07:01:05Z",
-    "ok": 1,
-    "search_failed": 0,
+    "ran_at": "2026-09-29T07:01:01Z",
+    "ok": 0,
+    "search_failed": 1,
     "details_failed": 0,
     "images_failed": 0,
     "filings": 957,
@@ -18,15 +18,15 @@
     "host": "mac-launchd"
    },
    "stale": false,
-   "failed": false,
-   "state": "OK",
+   "failed": true,
+   "state": "FAIL",
    "schedule": "02:00 America/Chicago",
    "new_records": 0,
    "new_docs_text": 0
   },
   "permits_update_vps": {
    "last_run_at": "2026-09-28T16:00:01Z",
-   "age_h": 5.0,
+   "age_h": 15.0,
    "state": "OK",
    "last_day": "2026-09-28",
    "runs": 54,
@@ -42,7 +42,7 @@
   },
   "hiring_update_vps": {
    "last_run_at": "2026-09-28T08:07:56Z",
-   "age_h": 12.9,
+   "age_h": 22.9,
    "state": "OK",
    "open": 12154,
    "new_records": 116,
@@ -50,7 +50,7 @@
   },
   "subsidies_update_vps": {
    "last_run_at": "2026-09-28T08:05:00Z",
-   "age_h": 12.9,
+   "age_h": 22.9,
    "state": "OK",
    "total": 20993,
    "new_records": 3,
@@ -92,27 +92,27 @@
   },
   "news_update_vps": {
    "last_run_at": "2026-09-28T10:30:18+00:00",
-   "age_h": 10.5,
+   "age_h": 20.5,
    "state": "OK",
-   "items_14d": 1733,
-   "relevant_14d": 363,
+   "items_14d": 1542,
+   "relevant_14d": 319,
    "schedule": "Mon/Wed/Fri 05:30 America/Chicago"
   },
   "watchdog": {
    "state": "UNKNOWN"
   },
   "foia_inbox": {
-   "last_run_at": "2026-09-28T15:00:24+00:00",
-   "age_h": 6.0,
-   "unreflected": 9,
-   "unreflected_over_24h": 8,
+   "last_run_at": "2026-09-28T21:01:49+00:00",
+   "age_h": 10.0,
+   "unreflected": 10,
+   "unreflected_over_24h": 9,
    "quarantined": 0,
    "reflected_weak": 0,
    "state": "STALE"
   },
   "inbox_other": {
-   "external": 144,
-   "unmatched_72h": 4,
+   "external": 145,
+   "unmatched_72h": 1,
    "unread": 32,
    "unread_over_24h": 32,
    "noise": 26,
@@ -240,16 +240,16 @@
   },
   "ready": {
    "state": "OK",
-   "run_date": "2026-09-28",
-   "deadline_met": false,
+   "run_date": "2026-09-29",
+   "deadline_met": true,
    "faces": {
     "permits": "degraded",
-    "ucc": "complete",
+    "ucc": "degraded",
     "subsidies": "degraded",
     "hiring": "degraded",
     "news": "degraded"
    }
   }
  },
- "overall": "UNKNOWN"
+ "overall": "FAIL"
 }
