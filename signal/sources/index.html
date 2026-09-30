@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where Signal's data comes from — 43 Sunsets</title>
+<meta name="description" content="Which public records Signal reads, how our crawler identifies itself and behaves, and how a site operator can ask us to stop.">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/slat-sun-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/slat-sun-192.png">
+<link rel="apple-touch-icon" href="/assets/slat-sun-192.png">
+<link rel="canonical" href="https://43sunsets.com/signal/sources/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* 2026-09-30: トップページ(V1/V2)と同じ作法 = 紙・明朝の見出し・罫だけ。Studio 系の services.css は使わない(CEO 9/30) */
+:root{ --paper:#FBFBF9; --ink:#14181D; --sub:#5A636E; --line:#D6D9D4; --line-soft:#E8EAE5; --accent:#2F5D8A; --fact:#2E6E4E; --ember:#D9714A;
+  --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif; --sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 56px}
+.hd{display:flex;justify-content:space-between;align-items:center;padding:26px 56px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--serif);font-size:22px;font-weight:800;letter-spacing:.1em;text-decoration:none;color:var(--ink);white-space:nowrap}
+nav{display:flex;gap:28px;align-items:center;font-family:var(--serif);font-weight:700;font-size:14.5px;letter-spacing:.08em}
+nav a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid transparent;padding-bottom:3px;white-space:nowrap}
+nav a:hover{border-color:var(--ink)}
+#lang-toggle{font-family:var(--mono);font-weight:600;letter-spacing:.14em;font-size:12.5px;color:var(--ink);background:none;border:0;border-bottom:1.5px solid transparent;padding:0 0 3px;cursor:pointer}
+#lang-toggle:hover{border-color:var(--ink)}
+.title{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+.title .k{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.18em;background:var(--ink);color:#fff;padding:6px 12px;border-radius:2px;margin:0 0 22px}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,3.6vw,48px);line-height:1.3;margin:0 0 18px;letter-spacing:.005em;max-width:900px}
+.title p{margin:0;color:var(--sub);max-width:760px;font-size:15px}
+section{padding:56px 0 64px;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.sec-h{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px}
+.num{font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;color:var(--sub);padding-top:12px}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(24px,2.4vw,32px);line-height:1.4;margin:0 0 18px;letter-spacing:.005em}
+.body{max-width:800px}
+.body p{margin:0 0 14px}
+.body ul,.body ol{margin:0 0 14px;padding:0;list-style:none}
+.body li{padding:12px 0;border-top:1px solid var(--line-soft);display:flex;gap:14px}
+.body li:last-child{border-bottom:1px solid var(--line-soft)}
+.body ul li::before{content:"—";color:var(--sub);flex:none}
+.body ol{counter-reset:n}
+.body ol li{counter-increment:n}
+.body ol li::before{content:counter(n,decimal-leading-zero);font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--sub);flex:none;padding-top:5px}
+.body li > span{flex:1}
+code{font-family:var(--mono);font-size:13px;background:#F1F2EE;border:1px solid var(--line-soft);border-radius:3px;padding:1px 6px;word-break:break-all}
+.stop{border-top:2px solid var(--ink);padding-top:18px;margin-top:8px}
+.stop .mail{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:2px}
+.ja{font-size:15px;color:var(--sub)}
+footer{border-top:1px solid var(--line);padding:34px 0 52px;font-size:13px;color:var(--sub)}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--sub);text-decoration:none;margin-right:20px} footer a:hover{color:var(--ink)}
+@media (max-width:1000px){ .wrap{padding:0 28px} .hd{padding:22px 28px} .sec-h{grid-template-columns:1fr;gap:6px} }
+@media (max-width:640px){ nav a{display:none} .wrap{padding:0 22px} .hd{padding:20px 22px} .title{padding:44px 0 28px} section{padding:40px 0 48px} nav{gap:18px} }
+</style>
+</head>
+<body>
+<header class="hd">
+  <a class="brand" href="/">43 Sunsets</a>
+  <nav>
+    <a href="/" data-i18n="nav_home">Home</a>
+    <a href="/legal/" data-i18n="nav_legal">Terms &amp; privacy</a>
+    <button id="lang-toggle" type="button" aria-label="Switch language">日本語</button>
+  </nav>
+</header>
+<main class="wrap">
+  <div class="title">
+    <p class="k" data-i18n="k">SIGNAL — DATA SOURCES</p>
+    <h1 data-i18n="h1">Where Signal's data comes from — and how to ask us to stop</h1>
+    <p data-i18n="ver">Last updated: 30 September 2026. Written for the people who run the public sites we read. If you found this page in your server logs, you are in the right place.</p>
+  </div>
+
+  <section>
+    <div class="sec-h"><div class="num">01</div><div class="body">
+      <h2 data-i18n="w_h">Who we are</h2>
+      <p data-i18n="w1">43 Sunsets is developing <strong>Signal</strong> (not yet open to the public), a service that reads public records and turns them into short, plain-language notes for industrial sales teams in the U.S. Midwest (Illinois, Indiana, Michigan, Ohio, Wisconsin). Contact: <a href="mailto:hello@43sunsets.com">hello@43sunsets.com</a>.</p>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="sec-h"><div class="num">02</div><div class="body">
+      <h2 data-i18n="r_h">What we collect</h2>
+      <ul>
+        <li><span data-i18n="r1">Building-permit records that cities, counties and states publish on their public search portals (including Accela, EnerGov, BS&amp;A and open-data portals such as Socrata and ArcGIS), and records we receive through public-records (FOIA) requests.</span></li>
+        <li><span data-i18n="r2">State economic-development award lists published by state agencies.</span></li>
+        <li><span data-i18n="r3">Job postings that employers publish on their own careers pages and applicant-tracking job boards.</span></li>
+        <li><span data-i18n="r4">Federal filings and other government records published for public use.</span></li>
+      </ul>
+      <p data-i18n="r5">We do <strong>not</strong> read anything that requires an account or a login, and we do not collect information about private individuals for publication.</p>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="sec-h"><div class="num">03</div><div class="body">
+      <h2 data-i18n="m_h">How we collect it</h2>
+      <ol>
+        <li><span data-i18n="m1"><strong>We identify ourselves.</strong> Our crawler's user agent is <code>43sunsets-signal/0.1 (+https://43sunsets.com/signal/sources/; hello@43sunsets.com)</code>. Some public search portals only display records in a full web browser; for those we use a headless browser whose user agent keeps the standard browser string and adds our name and contact address (<code>43sunsets-cockpit/0.1 (public-records research; hello@43sunsets.com)</code>), in the same way major search-engine crawlers do.</span></li>
+        <li><span data-i18n="m2"><strong>We follow robots.txt.</strong></span></li>
+        <li><span data-i18n="m3"><strong>We do not work around blocks.</strong> If a site refuses our requests, shows a human-verification page, or rate-limits us, we stop. We do not hide who we are, switch to a different identity after being refused, or change IP addresses to get through.</span></li>
+        <li><span data-i18n="m4"><strong>We go slowly</strong> — typically one request at a time, with pauses between requests, mostly at night (U.S. Central time).</span></li>
+        <li><span data-i18n="m5"><strong>If you ask us to stop, we stop.</strong> See below.</span></li>
+      </ol>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="sec-h"><div class="num">04</div><div class="body">
+      <h2 data-i18n="p_h">What we publish</h2>
+      <p data-i18n="p1">Facts from the records (for example: date, address, permit type, stated project value) and our own short summary of what the record may mean for a supplier, with a link or reference back to the original record wherever one exists. We do not republish news articles.</p>
+    </div></div>
+  </section>
+
+  <section id="stop">
+    <div class="sec-h"><div class="num">05</div><div class="body">
+      <h2 data-i18n="s_h">How to ask us to stop</h2>
+      <p data-i18n="s1">Email us with the subject line <strong>"Stop collection"</strong> and the site or portal address. You do not need to give a reason.</p>
+      <p class="stop"><a class="mail" href="mailto:hello@43sunsets.com?subject=Stop%20collection">hello@43sunsets.com</a></p>
+      <ul>
+        <li><span data-i18n="s2">We stop collecting from that site within <strong>1 business day</strong> of receiving your email.</span></li>
+        <li><span data-i18n="s3">We remove records from that site from Signal's public pages within <strong>3 business days</strong>, and confirm to you by email.</span></li>
+        <li><span data-i18n="s4">If you would like us to continue under specific conditions (a different schedule, an official API, attribution wording), tell us and we will follow them.</span></li>
+      </ul>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="sec-h"><div class="num">06</div><div class="body">
+      <h2 data-i18n="c_h">Corrections</h2>
+      <p data-i18n="c1">If a record we show is wrong or out of date, email us with the page link and we will correct or remove it.</p>
+    </div></div>
+  </section>
+
+  <section id="ja">
+    <div class="sec-h"><div class="num">JA</div><div class="body">
+      <h2>日本語の要約(Signal をご覧になる方へ)</h2>
+      <p class="ja">Signal は、市・郡・州などが公開している記録と、雇用主が自ら公開している求人を、ログインを要する領域には立ち入らず、robots.txt を遵守し、当社の身元を明示したうえで、アクセス頻度を抑えて取得します。運営者から収集停止のご要請があった情報源は、翌営業日までに収集を停止します。記録の内容は、元の記録へのリンクからご確認いただけます。</p>
+    </div></div>
+  </section>
+</main>
+<footer>
+  <div class="wrap row">
+    <div><a href="/" data-i18n="foot_home">Home</a><a href="/legal/" data-i18n="foot_legal">Terms &amp; privacy</a></div>
+    <div>© 2026 43 Sunsets · Chicago, Illinois</div>
+  </div>
+</footer>
+<script>
+window.SERVICES_JA = {
+  nav_home: 'ホーム', nav_legal: '利用規約・プライバシー',
+  k: 'SIGNAL — データの出どころ',
+  h1: 'Signal のデータの出どころと、収集の停止のご依頼について',
+  ver: '2026年9月30日版。当社がデータを取得している公開サイトの運営者の方に向けて記載しています。サーバーのログでこのページの URL をご覧になった方は、ここで合っています。',
+  w_h: '運営者について',
+  w1: '43 Sunsets は <strong>Signal</strong>(開発中・一般公開前)を開発しています。公的記録を取得し、米国中西部(イリノイ・インディアナ・ミシガン・オハイオ・ウィスコンシン)の産業向け営業チームのために、短く分かりやすい要約にするサービスです。連絡先: <a href="mailto:hello@43sunsets.com">hello@43sunsets.com</a>。',
+  r_h: '収集しているデータ',
+  r1: '市・郡・州が公開検索ポータル(Accela・EnerGov・BS&amp;A、Socrata や ArcGIS などのオープンデータポータルを含む)で公開している建設許可の記録と、情報公開請求(FOIA)で受け取った記録。',
+  r2: '州の機関が公開している経済開発の交付一覧。',
+  r3: '雇用主が自社の採用ページや採用管理システムの求人掲示板で公開している求人。',
+  r4: '連邦の届出など、公用に公開されている政府の記録。',
+  r5: 'アカウントやログインを要する情報は<strong>取得しません</strong>。私人に関する情報を公開の目的で収集することもありません。',
+  m_h: 'データの収集方法',
+  m1: '<strong>身元を明示します。</strong> 当社のクローラーのユーザーエージェントは <code>43sunsets-signal/0.1 (+https://43sunsets.com/signal/sources/; hello@43sunsets.com)</code> です。ブラウザでしか記録を表示できない公開検索ポータルでは、標準のブラウザ文字列に当社名と連絡先を添えたヘッドレスブラウザ(<code>43sunsets-cockpit/0.1 (public-records research; hello@43sunsets.com)</code>)を使います。主要な検索エンジンのクローラーと同じ方式です。',
+  m2: '<strong>robots.txt を守ります。</strong>',
+  m3: '<strong>ブロックを迂回しません。</strong> サイトが当社のリクエストを拒否したり、人間確認の画面を出したり、速度を制限したりした場合は止まります。身元を隠す、拒否された後に別の名乗りに切り替える、IP アドレスを変えて通り抜ける、といったことはしません。',
+  m4: '<strong>アクセス頻度を抑えます。</strong> 通常は 1 度に 1 リクエストずつ、間隔を空けて、主に夜間(米国中部時間)に取得します。',
+  m5: '<strong>収集停止のご要請には、速やかに対応します。</strong> 手順は下記のとおりです。',
+  p_h: '公開しているもの',
+  p1: '記録にある事実(例: 日付・住所・許可の種類・記載された工事費)と、その記録がサプライヤーにとって何を意味しうるかの当社の短い要約です。元の記録がある場合は、そこへのリンクか参照を添えます。ニュース記事の転載はしません。',
+  s_h: '収集の停止のご依頼',
+  s1: '件名を <strong>"Stop collection"</strong> として、サイトまたはポータルのアドレスを添えてメールをください。理由は不要です。',
+  s2: 'メールの受信から <strong>1 営業日以内</strong>に、そのサイトからの収集を止めます。',
+  s3: '<strong>3 営業日以内</strong>に、そのサイト由来の記録を Signal の公開ページから外し、メールでご報告します。',
+  s4: '特定の条件(別の頻度、公式 API、出典表記の文言など)であれば続けてよい、という場合は、お知らせいただければその条件に従います。',
+  c_h: '訂正',
+  c1: '表示している記録に誤りや古い情報があれば、ページのリンクを添えてメールをください。訂正または削除します。',
+  foot_home: 'ホーム', foot_legal: '利用規約・プライバシー'
+};
+</script>
+<script src="/services/i18n.js"></script>
+</body>
+</html>
