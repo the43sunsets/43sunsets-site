@@ -23,34 +23,10 @@
 },
 "faces": {
 "permits": {
-"count": 7,
+"count": 5,
 "value_total": 93014.19,
-"latest": "2026-08-24",
+"latest": "2026-08-07",
 "items": [
-{
-"id": "S-19806",
-"date": "2026-08-24",
-"applied": null,
-"state": "IL",
-"jurisdiction": "Lombard",
-"address": "1501 S Main St",
-"permit_no": "CB26-000295",
-"permit_type": "Commercial Building Permit",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Lombard 1501 S Main St(ジョリエット教区所有)でアスファルトシングル屋根の撤去・交換許可。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "remove and replace asphalt shingle roof. / Commercial Building Permit / Roof Replacement",
-"source_id": "SRC-023",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-069",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
 {
 "id": "S-24845",
 "date": "2026-08-07",
@@ -73,30 +49,6 @@
 "policy": "v1-2026-09-02-all",
 "batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
 "model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-20006",
-"date": "2026-08-03",
-"applied": null,
-"state": "IL",
-"jurisdiction": "Lombard",
-"address": "1025 E Madison St",
-"permit_no": "SE26-000036",
-"permit_type": "Special Event",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Lombard 1025 E Madison St でのイベント許可、内容は『Pius Family Picnic』(Diocese of Joliet 主催)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "PIUS FAMILY PICNIC / Special Event / Other",
-"source_id": "SRC-023",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-075",
-"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 },
 {
@@ -222,25 +174,11 @@
 },
 "timeline": [
 {
-"date": "2026-08-24",
-"face": "permits",
-"title": "建設許可(Lombard): 未分類",
-"ref": "S-19806",
-"summary": "Lombard 1501 S Main St(ジョリエット教区所有)でアスファルトシングル屋根の撤去・交換許可。"
-},
-{
 "date": "2026-08-07",
 "face": "permits",
 "title": "建設許可(Naperville): 未分類",
 "ref": "S-24845",
 "summary": "Naperville でのホームカミングフェスト向けテント設置許可(特別イベント、金額情報なし)。"
-},
-{
-"date": "2026-08-03",
-"face": "permits",
-"title": "建設許可(Lombard): 未分類",
-"ref": "S-20006",
-"summary": "Lombard 1025 E Madison St でのイベント許可、内容は『Pius Family Picnic』(Diocese of Joliet 主催)。"
 },
 {
 "date": "2026-07-24",
@@ -271,6 +209,6 @@
 "summary": "Naperville 1215 Modaff Rd の Saint Raphael カトリック教会・学校の地下に金属スタッド間仕切りとドアを新設 $10,000(940 SQFT)。"
 }
 ],
-"generated_at": "2026-09-30T12:31:19+00:00",
+"generated_at": "2026-09-30T14:22:53+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

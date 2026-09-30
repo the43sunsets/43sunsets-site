@@ -20,8 +20,8 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 4000.0,
+"count": 1,
+"value_total": 2000.0,
 "latest": "2026-09-17",
 "items": [
 {
@@ -47,74 +47,15 @@
 "batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
 "model": "claude-sonnet-5 (batch api v1)"
 }
-},
-{
-"id": "S-27541",
-"date": "2026-07-14",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Mason",
-"address": "3877 MASON RESEARCH PARKWAY, MASON, OH 45040",
-"permit_no": "BLD-26-627",
-"permit_type": "Commercial Fire Protection",
-"value": 2000.0,
-"category": "製造能力の増強",
-"confidence": "high",
-"summary": "VEGA Americas, Inc の Mason 拠点で新設の VLM #13(垂直搬送ラック)にスプリンクラーヘッド4個を新設 $2,000。",
-"infer": "VLM(垂直搬送保管ラック)新設に伴う消防副許可 = 倉庫/生産設備増設の一部と読める(推論)。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "Commercial Fire Protection / VEGA AMERICAS, INC Install 4 new sprinkler heads in new VLM #13",
-"source_id": "SRC-070",
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
 }
 ]
 },
 "ucc": {
-"count": 1,
-"machines": 1,
-"makers": [
-"Haas Automation"
-],
-"latest": "2023-11-30",
-"items": [
-{
-"id": "U-1000732",
-"date": "2023-11-30",
-"lapse": "2028-11-30",
-"kind": "設備投資",
-"lender": "その他",
-"secured_party": "Midwest Manufacturing Resources, Inc.",
-"equipment": [
-{
-"type": "立形マシニングセンタ(パレットプール付)",
-"maker": "Haas Automation",
-"model": "VF-2SSYT with Pallet Pool",
-"qty": 1,
-"domain": "切削加工"
-}
-],
-"makers": [
-"Haas Automation"
-],
-"summary": "Vega Americas(Mason, OH)が Midwest Manufacturing Resources, Inc. を担保権者として HAAS VF-2SSYT マシニングセンタ(パレットプール付、製番1203639)を登記(2023-11-30)。",
-"infer": "加工能力増強のための工作機械導入の可能性(推論)。",
-"ref": "FS OH00277666043 Original",
-"status": "Active",
-"role": "debtor",
-"role_label": "債務者(UCC 登記)",
-"provenance": {
-"policy": "ucc-v0-2026-09-05-original-with-collateral",
-"batch": "msgbatch_01DvwhburgpkzJE2M69hixeQ",
-"model": "claude-sonnet-5 (batch api ucc-v0)",
-"generated_at": "2026-09-05T17:21:15+00:00"
-}
-}
-]
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
 },
 "hiring": {
 "status": "収集中",
@@ -358,22 +299,8 @@
 "title": "求人: Machine Operator(生産・Cincinnati OH)",
 "ref": "#hiring",
 "summary": null
-},
-{
-"date": "2026-07-14",
-"face": "permits",
-"title": "建設許可(Mason): 製造能力の増強",
-"ref": "S-27541",
-"summary": "VEGA Americas, Inc の Mason 拠点で新設の VLM #13(垂直搬送ラック)にスプリンクラーヘッド4個を新設 $2,000。"
-},
-{
-"date": "2023-11-30",
-"face": "ucc",
-"title": "UCC 登記: 立形マシニングセンタ(パレットプール付)",
-"ref": "U-1000732",
-"summary": "Vega Americas(Mason, OH)が Midwest Manufacturing Resources, Inc. を担保権者として HAAS VF-2SSYT マシニングセンタ(パレットプール付、製番1203639)を登記(2023-11-30)。"
 }
 ],
-"generated_at": "2026-09-30T12:31:19+00:00",
+"generated_at": "2026-09-30T14:22:53+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
