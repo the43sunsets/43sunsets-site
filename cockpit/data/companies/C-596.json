@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 200000.0,
-"latest": "2026-08-13",
+"count": 2,
+"value_total": 396000.0,
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-68306",
+"date": "2026-09-28",
+"applied": "2026-03-31",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "470 Martin Luther King Jr Blvd",
+"permit_no": "BLD2026-00529",
+"permit_type": "Correct Violation",
+"value": 196000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Detroit 470 Martin Luther King Jr Blvd のホテル建物で窓250枚の交換工事 $196k(開口部変更なし、違反是正・歴史保存委員会承認条件付き)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Per HDC2026-00295, remove & replace (250) Windows with no changes to existing openings to Code per plans. Subject to Field Approval, HDC Certificate of Appropriateness conditions. / Hotel / Correct Violation",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-1239",
 "date": "2026-08-13",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Detroit): 未分類",
+"ref": "S-68306",
+"summary": "Detroit 470 Martin Luther King Jr Blvd のホテル建物で窓250枚の交換工事 $196k(開口部変更なし、違反是正・歴史保存委員会承認条件付き)。"
+},
+{
 "date": "2026-08-13",
 "face": "permits",
 "title": "建設許可(Detroit): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Detroit 470 Martin Luther King Jr Blvd の住宅工事(Alteration) $200k。所有者: 470 MLK BLVD LLC。"
 }
 ],
-"generated_at": "2026-09-30T10:36:11+00:00",
+"generated_at": "2026-09-30T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -20,10 +20,83 @@
 },
 "faces": {
 "permits": {
-"count": 0,
+"count": 3,
 "value_total": 0,
-"latest": null,
-"items": []
+"latest": "2026-09-24",
+"items": [
+{
+"id": "S-68613",
+"date": "2026-09-24",
+"applied": "2026-09-17",
+"state": "IN",
+"jurisdiction": "Indiana/MARION",
+"address": "1330 W Southport Rd",
+"permit_no": "464164:2026-09-24",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Kroger J993(1330 W Southport Rd)の CDR release、用途は食料品小売。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Kroger J993 / Grocery Retail",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-68600",
+"date": "2026-09-23",
+"applied": "2026-01-05",
+"state": "IN",
+"jurisdiction": "Indiana/MARION",
+"address": "4445 E 10th St",
+"permit_no": "458551:2026-09-23",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Indiana州Marion郡 4445 E 10th St の Kroger 店舗(J820)に関する CDR release。金額・詳細は記録に無い。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Kroger J820 / Grocery Retail",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-68401",
+"date": "2026-09-16",
+"applied": "2026-08-28",
+"state": "IN",
+"jurisdiction": "Indiana/JENNINGS",
+"address": "2325 N State Hwy 3",
+"permit_no": "463757:2026-09-16",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Indiana Jennings郡 2325 N State Hwy 3 の Kroger L083(食料品店)に関する CDR release。金額・詳細記載なし。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Kroger L083 / Grocery",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
 },
 "ucc": {
 "count": 0,
@@ -143,6 +216,27 @@
 },
 "timeline": [
 {
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Indiana/MARION): 未分類",
+"ref": "S-68613",
+"summary": "Kroger J993(1330 W Southport Rd)の CDR release、用途は食料品小売。"
+},
+{
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Indiana/MARION): 未分類",
+"ref": "S-68600",
+"summary": "Indiana州Marion郡 4445 E 10th St の Kroger 店舗(J820)に関する CDR release。金額・詳細は記録に無い。"
+},
+{
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Indiana/JENNINGS): 未分類",
+"ref": "S-68401",
+"summary": "Indiana Jennings郡 2325 N State Hwy 3 の Kroger L083(食料品店)に関する CDR release。金額・詳細記載なし。"
+},
+{
 "date": "2021-10-07",
 "face": "grants",
 "title": "助成(州・Indiana IEDC): 未分類",
@@ -164,6 +258,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-09-30T10:36:11+00:00",
+"generated_at": "2026-09-30T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

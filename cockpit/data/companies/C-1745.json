@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 9000.0,
-"latest": "2026-08-24",
+"count": 2,
+"value_total": 89000.0,
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-68312",
+"date": "2026-09-28",
+"applied": "2026-09-28",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "11885 Pierson St",
+"permit_no": "RES2026-03501",
+"permit_type": "Alter Revision",
+"value": 80000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Detroit 11885 Pierson St の一戸建て住宅における火災修理範囲・費用の変更申請 $80k(内外装改修)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "(Revise (RES2026-02980) to show amended scope and cost of fire repairs per documents.\r\n(Interior and Exterior alterations as per documents.(Subject to field approval.) / One Family / Alter Revision",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-9097",
 "date": "2026-08-24",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Detroit): 未分類",
+"ref": "S-68312",
+"summary": "Detroit 11885 Pierson St の一戸建て住宅における火災修理範囲・費用の変更申請 $80k(内外装改修)。"
+},
+{
 "date": "2026-08-24",
 "face": "permits",
 "title": "建設許可(Detroit): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Detroit の一戸建てで室内外の改修 $9.0k(住所名義の保有法人)。"
 }
 ],
-"generated_at": "2026-09-30T10:36:11+00:00",
+"generated_at": "2026-09-30T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

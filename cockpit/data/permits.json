@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-09-30T08:57:43+00:00",
+"generated_at": "2026-09-30T12:30:19+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,14 +17,14 @@
 "funnel": {
 "signals_total": 67890,
 "candidates": 920,
-"enriched": 44636,
-"targets": 162,
-"unclassified": 44474,
-"unevaluated": 23254,
+"enriched": 45282,
+"targets": 165,
+"unclassified": 45117,
+"unevaluated": 22608,
 "by_category": {
 "データセンター建設": 11,
-"医療施設": 86,
-"未分類": 44474,
+"医療施設": 89,
+"未分類": 45117,
 "物流・倉庫の新設": 16,
 "研究・ラボ施設": 15,
 "製造能力の増強": 34
@@ -196,7 +196,7 @@
 "date_min": "2026-02-28",
 "date_max": "2026-09-29",
 "owner_coverage": 0,
-"targets": 0,
+"targets": 3,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -1559,22 +1559,122 @@
 "MI": [
 "permits-more-MI-1.json"
 ],
-"IN": [
-"permits-more-IN-1.json"
-],
 "WI": [
 "permits-more-WI-1.json"
+],
+"IN": [
+"permits-more-IN-1.json"
 ]
 },
 "unclassified_by_state": {
-"OH": 7002,
-"IL": 34905,
-"MI": 1955,
-"IN": 17,
-"WI": 595
+"OH": 7017,
+"IL": 35125,
+"MI": 1995,
+"WI": 597,
+"IN": 383
 }
 },
 "signals": [
+{
+"investor": {
+"name": "Powers Health",
+"basis": "operator",
+"label": "操業事業者",
+"source": "permit_text",
+"source_label": "許可記録(本文)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-68588",
+"state": "IN",
+"city": "Indiana/LAKE・802 MacArthur Blvd",
+"company": "Powers Health",
+"entity_type": "corp",
+"company_basis": "description",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-09-29",
+"applied": "2026-09-16",
+"jp": false,
+"new": true,
+"summary": "Powers Health による新設メディカルオフィスビルへの6階部分増築(802 MacArthur Blvd)。CDR release、金額不明。",
+"infer": "医療法人による新規メディカルオフィス増築 = 医療機器・診療設備の調達が竣工まで続く窓の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "インディアナ州 建築計画審査記録(公開記録)",
+"ref": "許可 464132:2026-09-29 CDR release",
+"value": null,
+"verbatim": "Powers Health New MOB 6th Floor Addition / New Medical Office Bldg.",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-14835",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-30T12:30:13+00:00"
+}
+},
+{
+"investor": {
+"name": "FRANCISCAN HEALTH",
+"basis": "operator",
+"label": "操業事業者",
+"source": "permit_text",
+"source_label": "許可記録(本文)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-68621",
+"state": "IN",
+"city": "Indiana/MARION・8111 S Emerson",
+"company": "FRANCISCAN HEALTH",
+"entity_type": "corp",
+"company_basis": "description",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-09-28",
+"applied": "2026-03-02",
+"jp": false,
+"new": true,
+"summary": "Indianapolis(8111 S Emerson)の Franciscan Health 施設で、脳血管撮影用バイプレーン装置設置に伴う準備工事(CDR release)。病院用途。",
+"infer": "バイプレーン血管撮影装置(Neuro Bi-Plane)の導入準備 = 画像診断機器・関連室内設備の調達が伴う可能性(推論)。",
+"note": null,
+"fact": {
+"src": "インディアナ州 建築計画審査記録(公開記録)",
+"ref": "許可 459652:2026-09-28 CDR release",
+"value": null,
+"verbatim": "Franciscan Health Neuro Bi-Plane & Make Ready / Hospital",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-14876",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-30T12:30:13+00:00"
+}
+},
 {
 "investor": {
 "name": "RUSH UNIVERSITY MEDICAL CENTER",
@@ -1673,6 +1773,56 @@
 "batch": "msgbatch_01KZ9X6bWKjoQSoTnywC8LfN",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-27T21:00:29+00:00"
+}
+},
+{
+"investor": {
+"name": "Franciscan Health Indianapolis",
+"basis": "operator",
+"label": "操業事業者",
+"source": "permit_text",
+"source_label": "許可記録(本文)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-68610",
+"state": "IN",
+"city": "Indiana/MARION・8111 S Emerson Ave",
+"company": "Franciscan Health Indianapolis",
+"entity_type": "corp",
+"company_basis": "description",
+"industry": "医薬・ライフサイエンス",
+"category": "医療施設",
+"category_raw": "医療施設",
+"confidence": "high",
+"date": "2026-09-24",
+"applied": "2026-09-10",
+"jp": false,
+"new": true,
+"summary": "Franciscan Health Indianapolis(8111 S Emerson Ave)の病院内 PET CT 室の改修(CDR release)。金額不明。",
+"infer": "PET CT 画像診断室の改修 = 画像診断機器・関連遮蔽/空調設備の更新が伴う可能性(推論)。",
+"note": null,
+"fact": {
+"src": "インディアナ州 建築計画審査記録(公開記録)",
+"ref": "許可 463991:2026-09-24 CDR release",
+"value": null,
+"verbatim": "Franciscan Health Indianapolis PET CT Reno / Hospital",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-14814",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-09-30T12:30:13+00:00"
 }
 },
 {
@@ -11432,6 +11582,48 @@
 ]
 },
 {
+"id": "C-14814",
+"name": "Franciscan Health Indianapolis",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 1,
+"signal_ids": [
+"S-68610"
+]
+},
+{
+"id": "C-14835",
+"name": "Powers Health",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-29",
+"targets": 1,
+"signal_ids": [
+"S-68588"
+]
+},
+{
+"id": "C-14876",
+"name": "FRANCISCAN HEALTH",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-28",
+"targets": 1,
+"signal_ids": [
+"S-68621"
+]
+},
+{
 "id": "C-1",
 "name": "ONNI HALSTED STREET CHICAGO LLC",
 "entity_type": "spe",
@@ -11721,6 +11913,21 @@
 ]
 },
 {
+"id": "C-154",
+"name": "FORD MOTOR COMPANY",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 30500987.0,
+"states": "MI",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-1233",
+"S-68280"
+]
+},
+{
 "id": "C-13665",
 "name": "THE MICHAELS ORGANIZATION",
 "entity_type": "corp",
@@ -11842,20 +12049,6 @@
 "signal_ids": [
 "S-54777",
 "S-67712"
-]
-},
-{
-"id": "C-154",
-"name": "FORD MOTOR COMPANY",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 24000987.0,
-"states": "MI",
-"latest": "2026-08-19",
-"targets": 0,
-"signal_ids": [
-"S-1233"
 ]
 },
 {
@@ -13310,15 +13503,16 @@
 "name": "OLD NATIONAL BANK",
 "entity_type": "corp",
 "jp": false,
-"signals": 3,
+"signals": 4,
 "value_total": 4533082.0,
-"states": "IL",
-"latest": "2026-08-27",
+"states": "IL,IN",
+"latest": "2026-09-23",
 "targets": 0,
 "signal_ids": [
 "S-5533",
 "S-23524",
-"S-49813"
+"S-49813",
+"S-68669"
 ]
 },
 {
@@ -15400,6 +15594,25 @@
 ]
 },
 {
+"id": "C-7714",
+"name": "East Galloway Development, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 6,
+"value_total": 1860567.0,
+"states": "OH",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-46883",
+"S-46984",
+"S-65797",
+"S-65798",
+"S-65820",
+"S-68242"
+]
+},
+{
 "id": "C-149",
 "name": "BERRADA PROPERTIES 81 LLC",
 "entity_type": "spe",
@@ -15669,24 +15882,6 @@
 "S-25366",
 "S-25423",
 "S-25436"
-]
-},
-{
-"id": "C-7714",
-"name": "East Galloway Development, LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 5,
-"value_total": 1688997.0,
-"states": "OH",
-"latest": "2026-09-23",
-"targets": 0,
-"signal_ids": [
-"S-46883",
-"S-46984",
-"S-65797",
-"S-65798",
-"S-65820"
 ]
 },
 {
@@ -18079,14 +18274,20 @@
 "name": "WALMART",
 "entity_type": "corp",
 "jp": false,
-"signals": 2,
+"signals": 8,
 "value_total": 950000.0,
-"states": "IL,OH",
-"latest": "2026-08-10",
+"states": "IL,OH,IN",
+"latest": "2026-09-24",
 "targets": 0,
 "signal_ids": [
 "S-25231",
-"S-35182"
+"S-35182",
+"S-68351",
+"S-68380",
+"S-68387",
+"S-68520",
+"S-68534",
+"S-68677"
 ]
 },
 {
@@ -20769,6 +20970,20 @@
 ]
 },
 {
+"id": "C-14810",
+"name": "BLUESTONE MIDWEST PROP LL",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 550000.0,
+"states": "IL",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68755"
+]
+},
+{
 "id": "C-345",
 "name": "BORDELON FAMILY TR",
 "entity_type": "spe",
@@ -21766,6 +21981,20 @@
 "targets": 0,
 "signal_ids": [
 "S-58918"
+]
+},
+{
+"id": "C-14875",
+"name": "DR HORTON - INDIANA LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 467780.0,
+"states": "OH",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-68239"
 ]
 },
 {
@@ -22892,6 +23121,21 @@
 ]
 },
 {
+"id": "C-596",
+"name": "470 MLK BLVD LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 396000.0,
+"states": "MI",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-1239",
+"S-68306"
+]
+},
+{
 "id": "C-1185",
 "name": "NICK & EDDIE CONSTRUCTION INC",
 "entity_type": "corp",
@@ -23047,13 +23291,14 @@
 "name": "THE SALVATION ARMY",
 "entity_type": "corp",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 387550.0,
-"states": "IL",
-"latest": "2026-07-30",
+"states": "IL,IN",
+"latest": "2026-09-28",
 "targets": 0,
 "signal_ids": [
-"S-492"
+"S-492",
+"S-68564"
 ]
 },
 {
@@ -23686,6 +23931,21 @@
 "targets": 0,
 "signal_ids": [
 "S-239"
+]
+},
+{
+"id": "C-636",
+"name": "MANRU MILWAUKEE JUNCTION LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 350000.0,
+"states": "MI",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-1243",
+"S-68293"
 ]
 },
 {
@@ -24798,10 +25058,10 @@
 "name": "VIP ELMHURST II LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 6,
+"signals": 8,
 "value_total": 290020.0,
 "states": "IL",
-"latest": "2026-09-08",
+"latest": "2026-09-29",
 "targets": 0,
 "signal_ids": [
 "S-16925",
@@ -24809,7 +25069,9 @@
 "S-17348",
 "S-17352",
 "S-17618",
-"S-49917"
+"S-49917",
+"S-68752",
+"S-68757"
 ]
 },
 {
@@ -26699,20 +26961,6 @@
 ]
 },
 {
-"id": "C-596",
-"name": "470 MLK BLVD LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 200000.0,
-"states": "MI",
-"latest": "2026-08-13",
-"targets": 0,
-"signal_ids": [
-"S-1239"
-]
-},
-{
 "id": "C-597",
 "name": "4701 N CLARK ST INC",
 "entity_type": "corp",
@@ -27783,20 +28031,6 @@
 "targets": 0,
 "signal_ids": [
 "S-17116"
-]
-},
-{
-"id": "C-636",
-"name": "MANRU MILWAUKEE JUNCTION LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 175000.0,
-"states": "MI",
-"latest": "2026-08-11",
-"targets": 0,
-"signal_ids": [
-"S-1243"
 ]
 },
 {
@@ -29899,10 +30133,10 @@
 "name": "PARK DISTRICT OF HIGHLAND PARK",
 "entity_type": "public",
 "jp": false,
-"signals": 9,
+"signals": 10,
 "value_total": 134100.0,
 "states": "IL",
-"latest": "2026-09-01",
+"latest": "2026-09-29",
 "targets": 0,
 "signal_ids": [
 "S-18930",
@@ -29913,7 +30147,8 @@
 "S-19214",
 "S-19236",
 "S-19370",
-"S-19399"
+"S-19399",
+"S-68790"
 ]
 },
 {
@@ -32810,6 +33045,21 @@
 "targets": 0,
 "signal_ids": [
 "S-58199"
+]
+},
+{
+"id": "C-1745",
+"name": "MAXMAR 3601 LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 89000.0,
+"states": "MI",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-9097",
+"S-68312"
 ]
 },
 {
@@ -38830,6 +39080,22 @@
 "targets": 0,
 "signal_ids": [
 "S-19069"
+]
+},
+{
+"id": "C-13422",
+"name": "HTW LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 3,
+"value_total": 44280.0,
+"states": "IL",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-54981",
+"S-68766",
+"S-68767"
 ]
 },
 {
@@ -45349,20 +45615,6 @@
 ]
 },
 {
-"id": "C-13422",
-"name": "HTW LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 22780.0,
-"states": "IL",
-"latest": "2026-09-14",
-"targets": 0,
-"signal_ids": [
-"S-54981"
-]
-},
-{
 "id": "C-1417",
 "name": "PETERSON ROOFING INC",
 "entity_type": "corp",
@@ -45736,6 +45988,20 @@
 "targets": 0,
 "signal_ids": [
 "S-63685"
+]
+},
+{
+"id": "C-14828",
+"name": "BSD REALTY, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 22000.0,
+"states": "MI",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-68286"
 ]
 },
 {
@@ -50488,6 +50754,20 @@
 ]
 },
 {
+"id": "C-14871",
+"name": "MCKINLEY ASSOCIATES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 15000.0,
+"states": "MI",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68854"
+]
+},
+{
 "id": "C-13579",
 "name": "DANA & COMPANY LLC",
 "entity_type": "spe",
@@ -53267,6 +53547,21 @@
 ]
 },
 {
+"id": "C-2503",
+"name": "SC OAKMONT FUNDING CO LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 11480.04,
+"states": "IL",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-18011",
+"S-68764"
+]
+},
+{
 "id": "C-1649",
 "name": "KMSTONE LLC - KMLAND LLC SERIES",
 "entity_type": "spe",
@@ -55502,20 +55797,6 @@
 ]
 },
 {
-"id": "C-1745",
-"name": "MAXMAR 3601 LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 9000.0,
-"states": "MI",
-"latest": "2026-08-24",
-"targets": 0,
-"signal_ids": [
-"S-9097"
-]
-},
-{
 "id": "C-1747",
 "name": "TNFL LLC",
 "entity_type": "spe",
@@ -55620,14 +55901,16 @@
 "name": "FEDEX",
 "entity_type": "corp",
 "jp": false,
-"signals": 2,
+"signals": 4,
 "value_total": 9000.0,
-"states": "IL",
-"latest": "2026-08-18",
+"states": "IL,IN",
+"latest": "2026-09-29",
 "targets": 0,
 "signal_ids": [
 "S-3138",
-"S-48884"
+"S-48884",
+"S-68604",
+"S-68629"
 ]
 },
 {
@@ -56982,6 +57265,22 @@
 "signal_ids": [
 "S-12407",
 "S-61725"
+]
+},
+{
+"id": "C-2513",
+"name": "CITY OF ELMHURST",
+"entity_type": "public",
+"jp": false,
+"signals": 3,
+"value_total": 7882.0,
+"states": "IL",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-16906",
+"S-17179",
+"S-68751"
 ]
 },
 {
@@ -61173,6 +61472,20 @@
 ]
 },
 {
+"id": "C-14834",
+"name": "HIGH PARK REALTY GROUP LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 5000.0,
+"states": "IL",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68800"
+]
+},
+{
 "id": "C-1963",
 "name": "TAIT AND TAIT GENERAL CONSTRUCTION",
 "entity_type": "corp",
@@ -61409,6 +61722,20 @@
 "targets": 0,
 "signal_ids": [
 "S-50335"
+]
+},
+{
+"id": "C-14853",
+"name": "HSE CHICAGO PROSTATE MOB",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 4800.0,
+"states": "IL",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68772"
 ]
 },
 {
@@ -67575,6 +67902,20 @@
 ]
 },
 {
+"id": "C-14878",
+"name": "PEACH HOLDINGS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 1345.0,
+"states": "IL",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68776"
+]
+},
+{
 "id": "C-3122",
 "name": "NAPERVILLE INVESTMENT",
 "entity_type": "corp",
@@ -68191,6 +68532,20 @@
 "targets": 0,
 "signal_ids": [
 "S-67619"
+]
+},
+{
+"id": "C-14854",
+"name": "CLERMONT COUNTY PORT AUTHORITY",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 1000.0,
+"states": "OH",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68814"
 ]
 },
 {
@@ -70649,13 +71004,14 @@
 "name": "S & L PROPERTIES MGMT",
 "entity_type": "spe",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 0,
 "states": "IL",
-"latest": "2026-08-31",
+"latest": "2026-09-29",
 "targets": 0,
 "signal_ids": [
-"S-19731"
+"S-19731",
+"S-68156"
 ]
 },
 {
@@ -71924,20 +72280,6 @@
 ]
 },
 {
-"id": "C-2503",
-"name": "SC OAKMONT FUNDING CO LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 0,
-"states": "IL",
-"latest": "2026-08-04",
-"targets": 0,
-"signal_ids": [
-"S-18011"
-]
-},
-{
 "id": "C-2504",
 "name": "5 RADNOR CORPORATE CENTER",
 "entity_type": "spe",
@@ -72047,21 +72389,6 @@
 "targets": 0,
 "signal_ids": [
 "S-5020"
-]
-},
-{
-"id": "C-2513",
-"name": "CITY OF ELMHURST",
-"entity_type": "public",
-"jp": false,
-"signals": 2,
-"value_total": 0,
-"states": "IL",
-"latest": "2026-08-03",
-"targets": 0,
-"signal_ids": [
-"S-16906",
-"S-17179"
 ]
 },
 {
@@ -75330,14 +75657,15 @@
 "name": "AMAZON",
 "entity_type": "corp",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 0,
-"states": "OH",
-"latest": "2026-07-24",
+"states": "OH,IN",
+"latest": "2026-09-29",
 "targets": 0,
 "signal_ids": [
 "S-26949",
-"S-35422"
+"S-35422",
+"S-68558"
 ]
 },
 {
@@ -75747,6 +76075,22 @@
 ]
 },
 {
+"id": "C-4735",
+"name": "Kroger Company",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68401",
+"S-68600",
+"S-68613"
+]
+},
+{
 "id": "C-5966",
 "name": "Heartland Dental, LLC",
 "entity_type": "corp",
@@ -75890,17 +76234,32 @@
 ]
 },
 {
+"id": "C-8902",
+"name": "LIBERTY MUTUAL INSURANCE CO",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-17",
+"targets": 0,
+"signal_ids": [
+"S-68444"
+]
+},
+{
 "id": "C-12139",
 "name": "BND PROPERTIES X LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 0,
 "states": "OH",
-"latest": "2026-09-01",
+"latest": "2026-09-28",
 "targets": 0,
 "signal_ids": [
-"S-47501"
+"S-47501",
+"S-68259"
 ]
 },
 {
@@ -81670,6 +82029,960 @@
 "targets": 0,
 "signal_ids": [
 "S-67877"
+]
+},
+{
+"id": "C-14806",
+"name": "Toray",
+"entity_type": "corp",
+"jp": true,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68661"
+]
+},
+{
+"id": "C-14807",
+"name": "Cardinal Health",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68456"
+]
+},
+{
+"id": "C-14808",
+"name": "Champion Homes",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-68497"
+]
+},
+{
+"id": "C-14809",
+"name": "Columbus Opportunity LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68508"
+]
+},
+{
+"id": "C-14811",
+"name": "Core & Main",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68467"
+]
+},
+{
+"id": "C-14812",
+"name": "Midwest Presort",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68388"
+]
+},
+{
+"id": "C-14813",
+"name": "Shelby Materials",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68514"
+]
+},
+{
+"id": "C-14815",
+"name": "DOT Foods",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68681"
+]
+},
+{
+"id": "C-14816",
+"name": "Parkview Regional Medical Center",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68317"
+]
+},
+{
+"id": "C-14817",
+"name": "Radius DC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-17",
+"targets": 0,
+"signal_ids": [
+"S-68390"
+]
+},
+{
+"id": "C-14818",
+"name": "Re-Element Tech",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68368"
+]
+},
+{
+"id": "C-14819",
+"name": "YANKEE PRINCE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-69030"
+]
+},
+{
+"id": "C-14820",
+"name": "Thor Motor Coach",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68537"
+]
+},
+{
+"id": "C-14821",
+"name": "Town of Dyer",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-68433"
+]
+},
+{
+"id": "C-14822",
+"name": "Attica Apartments LP",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-17",
+"targets": 0,
+"signal_ids": [
+"S-68363"
+]
+},
+{
+"id": "C-14823",
+"name": "The Lutheran Foundation",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-23",
+"targets": 0,
+"signal_ids": [
+"S-68500"
+]
+},
+{
+"id": "C-14824",
+"name": "West Pharmaceutical",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-17",
+"targets": 0,
+"signal_ids": [
+"S-68382"
+]
+},
+{
+"id": "C-14825",
+"name": "Round Up Inc",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68476"
+]
+},
+{
+"id": "C-14826",
+"name": "TOYOTA MANUFACTURING INDIANA",
+"entity_type": "corp",
+"jp": true,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-16",
+"targets": 0,
+"signal_ids": [
+"S-68366"
+]
+},
+{
+"id": "C-14827",
+"name": "MERCY HOSPITAL ANDERSON",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-69035"
+]
+},
+{
+"id": "C-14829",
+"name": "Allen Distribution IN",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-68561"
+]
+},
+{
+"id": "C-14830",
+"name": "CITY OF THE VILLAGE OF INDIAN HILL THE",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-69041"
+]
+},
+{
+"id": "C-14831",
+"name": "Shipsy Property LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-17",
+"targets": 0,
+"signal_ids": [
+"S-68416"
+]
+},
+{
+"id": "C-14832",
+"name": "Pratt Industries Valparaiso",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68645"
+]
+},
+{
+"id": "C-14833",
+"name": "SDI LaFarga Copperworks",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-17",
+"targets": 0,
+"signal_ids": [
+"S-68322"
+]
+},
+{
+"id": "C-14836",
+"name": "Indiana Donor Network",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68458"
+]
+},
+{
+"id": "C-14837",
+"name": "Kentland Bank",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-16",
+"targets": 0,
+"signal_ids": [
+"S-68474"
+]
+},
+{
+"id": "C-14838",
+"name": "DePauw University",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-68481"
+]
+},
+{
+"id": "C-14839",
+"name": "Fireplace Land Inc",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68675"
+]
+},
+{
+"id": "C-14840",
+"name": "Centra Credit Union",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-68569"
+]
+},
+{
+"id": "C-14841",
+"name": "American Pain Consortium",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68424"
+]
+},
+{
+"id": "C-14842",
+"name": "Good Samaritan Hospital",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68412"
+]
+},
+{
+"id": "C-14843",
+"name": "Lippert",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68541",
+"S-68542"
+]
+},
+{
+"id": "C-14844",
+"name": "LOWE'S",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68570"
+]
+},
+{
+"id": "C-14845",
+"name": "Family Express",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-68431",
+"S-68432"
+]
+},
+{
+"id": "C-14846",
+"name": "Win Energy REMC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-17",
+"targets": 0,
+"signal_ids": [
+"S-68410"
+]
+},
+{
+"id": "C-14847",
+"name": "INDOT",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-17",
+"targets": 0,
+"signal_ids": [
+"S-68421"
+]
+},
+{
+"id": "C-14848",
+"name": "FISCHER SINGLE FAMILY HOMES IV LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-69032"
+]
+},
+{
+"id": "C-14849",
+"name": "Fountain County Highway Garage",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68365"
+]
+},
+{
+"id": "C-14850",
+"name": "Sullivan County Health Department",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68663"
+]
+},
+{
+"id": "C-14851",
+"name": "New Cingular Wireless PCS, LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68347"
+]
+},
+{
+"id": "C-14852",
+"name": "Ryder",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68563"
+]
+},
+{
+"id": "C-14855",
+"name": "Roche",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-18",
+"targets": 0,
+"signal_ids": [
+"S-68446"
+]
+},
+{
+"id": "C-14856",
+"name": "Uesco Cranes",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68423"
+]
+},
+{
+"id": "C-14857",
+"name": "Martin Brothers Contracting",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68536"
+]
+},
+{
+"id": "C-14858",
+"name": "Elements Financial",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-68617"
+]
+},
+{
+"id": "C-14859",
+"name": "Straubinger Flutes",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68609"
+]
+},
+{
+"id": "C-14860",
+"name": "MORryde",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68538"
+]
+},
+{
+"id": "C-14861",
+"name": "IU HEALTH",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-23",
+"targets": 0,
+"signal_ids": [
+"S-68599"
+]
+},
+{
+"id": "C-14862",
+"name": "AAR-IN LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-68503"
+]
+},
+{
+"id": "C-14863",
+"name": "Endress+Hauser Level & Pressure",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-18",
+"targets": 0,
+"signal_ids": [
+"S-68408"
+]
+},
+{
+"id": "C-14864",
+"name": "Shirley Heinze Land Trust",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68648"
+]
+},
+{
+"id": "C-14865",
+"name": "Innomed Inc",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68678"
+]
+},
+{
+"id": "C-14866",
+"name": "Dayton Freight Lines",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68395"
+]
+},
+{
+"id": "C-14867",
+"name": "Village at Hyde Park LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-68370"
+]
+},
+{
+"id": "C-14868",
+"name": "IU HEALTH FORT WAYNE HOSPITAL",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68498"
+]
+},
+{
+"id": "C-14869",
+"name": "FedEx Ground",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-68575"
+]
+},
+{
+"id": "C-14870",
+"name": "Vision Park LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-68452"
+]
+},
+{
+"id": "C-14872",
+"name": "MONDELEZ",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68464"
+]
+},
+{
+"id": "C-14873",
+"name": "Flip N Out Pinball LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-29",
+"targets": 0,
+"signal_ids": [
+"S-68649"
+]
+},
+{
+"id": "C-14874",
+"name": "Cari & Company LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-17",
+"targets": 0,
+"signal_ids": [
+"S-68330"
+]
+},
+{
+"id": "C-14877",
+"name": "Expeditors",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-17",
+"targets": 0,
+"signal_ids": [
+"S-68394"
+]
+},
+{
+"id": "C-14879",
+"name": "Dollar General",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-68459"
+]
+},
+{
+"id": "C-14880",
+"name": "Keystone Co-Op",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-21",
+"targets": 0,
+"signal_ids": [
+"S-68339"
+]
+},
+{
+"id": "C-14881",
+"name": "Story Time ABA Therapy Inc",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68473"
+]
+},
+{
+"id": "C-14882",
+"name": "Wurth Industry",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-68405"
+]
+},
+{
+"id": "C-14883",
+"name": "Stellar Industries LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 0,
+"signal_ids": [
+"S-68636"
+]
+},
+{
+"id": "C-14884",
+"name": "CAPCO LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-09-16",
+"targets": 0,
+"signal_ids": [
+"S-68326"
 ]
 }
 ]

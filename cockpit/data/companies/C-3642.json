@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 3,
 "value_total": 200000.0,
-"latest": "2026-07-30",
+"latest": "2026-09-29",
 "items": [
+{
+"id": "S-68558",
+"date": "2026-09-29",
+"applied": "2026-09-23",
+"state": "IN",
+"jurisdiction": "Indiana/HANCOCK",
+"address": "2643 N Buck Creek Rd",
+"permit_no": "464267:2026-09-29",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Hancock County(Indiana)2643 N Buck Creek Rd で「Amazon 1-DC」のCDR release(許可関連手続き)。金額・申請者名は記録になし。",
+"infer": "説明文の『Amazon 1-DC』は Amazon の配送センター(Delivery Station)案件を示す可能性(推論)。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Amazon 1-DC",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-26949",
 "date": "2026-07-30",
@@ -372,6 +396,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Indiana/HANCOCK): 未分類",
+"ref": "S-68558",
+"summary": "Hancock County(Indiana)2643 N Buck Creek Rd で「Amazon 1-DC」のCDR release(許可関連手続き)。金額・申請者名は記録になし。"
+},
+{
 "date": "2026-09-26",
 "face": "news",
 "title": "ニュース(assemblymag.com): Amazon to Build $100 Million Assembly Plant in Indiana",
@@ -526,6 +557,6 @@
 "summary": "Butler County の Amazon Delivery Station における電気関連の変更許可(金額不明)。"
 }
 ],
-"generated_at": "2026-09-30T10:36:11+00:00",
+"generated_at": "2026-09-30T12:30:26+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
