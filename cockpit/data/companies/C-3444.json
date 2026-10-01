@@ -20,8 +20,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 2000.0,
+"count": 2,
+"value_total": 4000.0,
 "latest": "2026-09-17",
 "items": [
 {
@@ -47,6 +47,30 @@
 "batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-27541",
+"date": "2026-07-14",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Mason",
+"address": "3877 MASON RESEARCH PARKWAY, MASON, OH 45040",
+"permit_no": "BLD-26-627",
+"permit_type": "Commercial Fire Protection",
+"value": 2000.0,
+"category": "製造能力の増強",
+"confidence": "high",
+"summary": "VEGA Americas, Inc の Mason 拠点で新設の VLM #13(垂直搬送ラック)にスプリンクラーヘッド4個を新設 $2,000。",
+"infer": "VLM(垂直搬送保管ラック)新設に伴う消防副許可 = 倉庫/生産設備増設の一部と読める(推論)。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Commercial Fire Protection / VEGA AMERICAS, INC Install 4 new sprinkler heads in new VLM #13",
+"source_id": "SRC-070",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 }
 ]
 },
@@ -59,19 +83,28 @@
 },
 "hiring": {
 "status": "収集中",
-"count": 19,
+"count": 18,
 "mfg": 5,
 "by_role": {
+"その他": 13,
 "品質": 4,
-"その他": 14,
 "生産": 1
 },
 "sites": {
 "Mason, OH": 4,
 "Cincinnati, OH": 1
 },
-"latest": "2026-09-29",
+"latest": "2026-09-30",
 "items": [
+{
+"title": "Industry Sales Specialist - Refining",
+"role": "その他",
+"city": null,
+"state": null,
+"posted": "2026-09-30",
+"first_seen": "2026-10-01",
+"url": "https://job-boards.greenhouse.io/vegaamericas/jobs/4710457006"
+},
 {
 "title": "Lead Quality Engineer",
 "role": "品質",
@@ -217,24 +250,6 @@
 "url": "https://job-boards.greenhouse.io/vegaamericas/jobs/4708010006"
 },
 {
-"title": "Instructional Content Specialist",
-"role": "その他",
-"city": "Mason",
-"state": "OH",
-"posted": "2026-08-19",
-"first_seen": "2026-09-07",
-"url": "https://job-boards.greenhouse.io/vegaamericas/jobs/4706509006"
-},
-{
-"title": "Technical Sales Representative - Beaumont, TX",
-"role": "その他",
-"city": null,
-"state": null,
-"posted": "2026-08-05",
-"first_seen": "2026-09-07",
-"url": "https://job-boards.greenhouse.io/vegaamericas/jobs/4701966006"
-},
-{
 "title": "Technical Instructor",
 "role": "その他",
 "city": "Mason",
@@ -299,8 +314,15 @@
 "title": "求人: Machine Operator(生産・Cincinnati OH)",
 "ref": "#hiring",
 "summary": null
+},
+{
+"date": "2026-07-14",
+"face": "permits",
+"title": "建設許可(Mason): 製造能力の増強",
+"ref": "S-27541",
+"summary": "VEGA Americas, Inc の Mason 拠点で新設の VLM #13(垂直搬送ラック)にスプリンクラーヘッド4個を新設 $2,000。"
 }
 ],
-"generated_at": "2026-09-30T15:00:45+00:00",
+"generated_at": "2026-10-01T08:36:47+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
