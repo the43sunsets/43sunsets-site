@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 6,
+"count": 7,
 "value_total": 101740.0,
-"latest": "2026-09-25",
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-69221",
+"date": "2026-09-28",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3650 OLENTANGY RIVER RD",
+"permit_no": "MMEPC2638915",
+"permit_type": "Mechanical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 3650 Olentangy River Rd の機械設備(MEP)工事。所有者は HTA-Olentangy MOB LLC(メディカルオフィスビル名義)。",
+"infer": "'MOB'(Medical Office Building)名義から医療系オフィスビルの設備工事の可能性(推論)。金額不明のため規模は不明。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-67585",
 "date": "2026-09-25",
@@ -198,6 +222,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-69221",
+"summary": "Columbus 3650 Olentangy River Rd の機械設備(MEP)工事。所有者は HTA-Olentangy MOB LLC(メディカルオフィスビル名義)。"
+},
+{
 "date": "2026-09-25",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -240,6 +271,6 @@
 "summary": "Columbus 3650 Olentangy River Rd の商業施設(HTA-Olentangy MOB LLC 所有)で配管(Plumbing/MEP)工事。金額不明。"
 }
 ],
-"generated_at": "2026-10-01T08:36:47+00:00",
+"generated_at": "2026-10-01T12:30:20+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

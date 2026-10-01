@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 168750.0,
-"latest": "2026-09-24",
+"count": 3,
+"value_total": 183750.0,
+"latest": "2026-09-30",
 "items": [
+{
+"id": "S-69400",
+"date": "2026-09-30",
+"applied": "2026-08-13",
+"state": "IL",
+"jurisdiction": "Westmont",
+"address": "233 W 63RD ST WESTMONT IL 60559",
+"permit_no": "Com-001537-2026",
+"permit_type": "Commercial - Antenna",
+"value": 15000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Westmont 233 W 63rd St にアンテナ設置工事 $15k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Antenna / Antenna",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-66222",
 "date": "2026-09-24",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-30",
+"face": "permits",
+"title": "建設許可(Westmont): 未分類",
+"ref": "S-69400",
+"summary": "Westmont 233 W 63rd St にアンテナ設置工事 $15k。"
+},
+{
 "date": "2026-09-24",
 "face": "permits",
 "title": "建設許可(Westmont): 未分類",
@@ -116,6 +147,6 @@
 "summary": "商業用アンテナ設置 $150k。"
 }
 ],
-"generated_at": "2026-10-01T08:36:47+00:00",
+"generated_at": "2026-10-01T12:30:20+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 4,
+"count": 6,
 "value_total": 2977294.0,
-"latest": "2026-09-25",
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-69235",
+"date": "2026-09-28",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2130 IKEA WAY UNIT 200",
+"permit_no": "EMEPC2638977",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 2130 Ikea Way Unit 200 の電気(MEP)工事。金額記載なし。",
+"infer": "住所がIKEA系の商業施設を示唆するが、本文からは用途・規模が読み取れない(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-69234",
+"date": "2026-09-28",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2130 IKEA WAY UNIT 200",
+"permit_no": "FSUPC2636913",
+"permit_type": "Fire Suppression",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 2130 Ikea Way Unit 200 の既存商業施設で消防スプリンクラー(Fire Suppression)の増設・改修工事(金額不明)。",
+"infer": "住所表記から IKEA 関連施設内の防火設備改修の可能性(推論)。所有名義は開発 SPE(Galaxy at Polaris)で、生産・物流設備投資とは直結しない付帯工事と読める。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Suppression / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-67602",
 "date": "2026-09-25",
@@ -150,6 +198,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-69235",
+"summary": "Columbus 2130 Ikea Way Unit 200 の電気(MEP)工事。金額記載なし。"
+},
+{
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-69234",
+"summary": "Columbus 2130 Ikea Way Unit 200 の既存商業施設で消防スプリンクラー(Fire Suppression)の増設・改修工事(金額不明)。"
+},
+{
 "date": "2026-09-25",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -178,6 +240,6 @@
 "summary": "Columbus 2130 Ikea Way Unit 200 における商業施設の構造的改修 $1.0M(6,100 SQFT)。"
 }
 ],
-"generated_at": "2026-10-01T08:36:47+00:00",
+"generated_at": "2026-10-01T12:30:20+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

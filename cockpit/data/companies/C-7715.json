@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 22300000.0,
-"latest": "2026-09-25",
+"count": 3,
+"value_total": 22355000.0,
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-69232",
+"date": "2026-09-28",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "9300 LYRA DR",
+"permit_no": "FNCEC2635435",
+"permit_type": "Fence, Retaining Wall",
+"value": 55000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 9300 Lyra Dr でフェンス・擁壁の設置工事 $55k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fence, Retaining Wall / Structures Other Than Buildings / Structural",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-67601",
 "date": "2026-09-25",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-69232",
+"summary": "Columbus 9300 Lyra Dr でフェンス・擁壁の設置工事 $55k。"
+},
+{
 "date": "2026-09-25",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -116,6 +147,6 @@
 "summary": "Columbus 0 Lyra Dr にて 96,500 SQFT の商業施設(店舗・カスタマーサービス用途)の基礎工事 $2.3M。"
 }
 ],
-"generated_at": "2026-10-01T08:36:47+00:00",
+"generated_at": "2026-10-01T12:30:20+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

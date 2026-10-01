@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 5,
+"count": 6,
 "value_total": 4700000.0,
-"latest": "2026-09-09",
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-69209",
+"date": "2026-09-28",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "625 CLEVELAND AVE",
+"permit_no": "EMEPC2639100",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Abbott Manufacturing Inc(Columbus 625 Cleveland Ave)での電気設備(MEP)工事。金額記載なし。",
+"infer": "Abbott の製造拠点における電気インフラ更新 = 生産設備増強に付帯する受電・配電工事の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-53327",
 "date": "2026-09-09",
@@ -174,6 +198,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-69209",
+"summary": "Abbott Manufacturing Inc(Columbus 625 Cleveland Ave)での電気設備(MEP)工事。金額記載なし。"
+},
+{
 "date": "2026-09-09",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -209,6 +240,6 @@
 "summary": "Abbott Manufacturing Inc の Columbus 施設(625 Cleveland Ave)における火災報知設備(Fire Alarm)の許可。金額記載なし。"
 }
 ],
-"generated_at": "2026-10-01T08:36:47+00:00",
+"generated_at": "2026-10-01T12:30:20+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

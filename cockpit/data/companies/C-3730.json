@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 9,
+"count": 10,
 "value_total": 20459058.0,
-"latest": "2026-09-24",
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-69231",
+"date": "2026-09-28",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "5785 CENTRAL COLLEGE RD",
+"permit_no": "FALRC2633671",
+"permit_type": "Fire Alarm",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 5785 Central College Rd での火災報知器設置の機械系許可(金額記載なし)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Alarm / Mechanical Permits or NA / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-67499",
 "date": "2026-09-24",
@@ -270,6 +294,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-69231",
+"summary": "Columbus 5785 Central College Rd での火災報知器設置の機械系許可(金額記載なし)。"
+},
+{
 "date": "2026-09-24",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -333,6 +364,6 @@
 "summary": "コロンバス市所有の建物(1265 Marion Rd)で 22,600 SF の構造改修 $1.4M。"
 }
 ],
-"generated_at": "2026-10-01T08:36:47+00:00",
+"generated_at": "2026-10-01T12:30:20+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
