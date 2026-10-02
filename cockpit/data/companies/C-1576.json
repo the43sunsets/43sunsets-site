@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 13650.0,
-"latest": "2026-07-22",
+"count": 2,
+"value_total": 43650.0,
+"latest": "2026-08-14",
 "items": [
+{
+"id": "S-62774",
+"date": "2026-08-14",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Rolling Meadows",
+"address": "2400 GOLF RD, ROLLING MEADOWS, IL 60008",
+"permit_no": "BLDC26-0111",
+"permit_type": "COMMERCIAL PERMIT",
+"value": 30000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Rolling Meadows 2400 Golf Rd の駐車場舗装工事 $30k(コンクリート補修・クラックシール・シールコート・ライン引き直し等)。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "-CONCRETE FLATWORK - REMOVE AND REPLACE 5 - 745 SF -CONCRETE COLLARS - 2EA SIGNS AND POSTS 5 IN CONCRETE 1 IN LANDSCAPING - 12 EA -CRACKSEAL - NON-ROUTING - 4000 LF -SEALCOAT PMM - SPRAY / SPRAY - 49637 SF -LOT MARKING RESTRIPE - SINGLE BAYS - 3021 LS / COMMERCIAL PERMIT / DRIVEWAYS - PATIOS",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-13118",
 "date": "2026-07-22",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-08-14",
+"face": "permits",
+"title": "建設許可(Rolling Meadows): 未分類",
+"ref": "S-62774",
+"summary": "Rolling Meadows 2400 Golf Rd の駐車場舗装工事 $30k(コンクリート補修・クラックシール・シールコート・ライン引き直し等)。"
+},
+{
 "date": "2026-07-22",
 "face": "permits",
 "title": "建設許可(Rolling Meadows): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Rolling Meadows 5100 NEWPORT DR, ROLLING MEADOWS, IL 60008 で商業駐車場のアスファルト補修・シールコート・区画線引き(63,050SF) $13.65k。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

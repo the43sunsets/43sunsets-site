@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 0,
+"count": 6,
+"value_total": 102397.0,
 "latest": "2026-09-23",
 "items": [
 {
@@ -74,6 +74,102 @@
 "batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-24457",
+"date": "2026-09-02",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2495 CREEKWAY DR",
+"permit_no": "ALTC2628422",
+"permit_type": "Alteration",
+"value": 50000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 2495 Creekway Dr の商業建物(17,000 SQFT)の構造改修 $50k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 17000 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-2053",
+"date": "2026-08-03",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2495 CREEKWAY DR",
+"permit_no": "EMEPC2630783",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 2495 Creekway Dr の商業電気工事副許可(詳細不明、親案件不明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-075",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2569",
+"date": "2026-07-13",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2495 CREEKWAY DR",
+"permit_no": "MMEPC2627585",
+"permit_type": "Mechanical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 2495 CREEKWAY DR の商業建物向け機械(Mechanical)副許可(親プロジェクト・所有者・金額の記載なし)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-082",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2611",
+"date": "2026-07-10",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2495 CREEKWAY DR",
+"permit_no": "ALTC2625883",
+"permit_type": "Alteration",
+"value": 52397.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "2495 CREEKWAY DRの商業テナント/オフィス内装改修 $52.4k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 4200 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-011",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
 }
 ]
 },
@@ -114,8 +210,36 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-66895",
 "summary": "Columbus 2495 Creekway Dr にて 80 SQFT のサイン(看板)設置許可。金額記載なし。"
+},
+{
+"date": "2026-09-02",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-24457",
+"summary": "Columbus 2495 Creekway Dr の商業建物(17,000 SQFT)の構造改修 $50k。"
+},
+{
+"date": "2026-08-03",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2053",
+"summary": "Columbus 2495 Creekway Dr の商業電気工事副許可(詳細不明、親案件不明)。"
+},
+{
+"date": "2026-07-13",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2569",
+"summary": "Columbus 2495 CREEKWAY DR の商業建物向け機械(Mechanical)副許可(親プロジェクト・所有者・金額の記載なし)。"
+},
+{
+"date": "2026-07-10",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2611",
+"summary": "2495 CREEKWAY DRの商業テナント/オフィス内装改修 $52.4k。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

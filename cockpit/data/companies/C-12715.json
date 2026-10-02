@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
+"count": 3,
+"value_total": 50000.0,
 "latest": "2026-09-10",
 "items": [
 {
@@ -49,6 +49,54 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-10914",
+"date": "2026-08-31",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1223 E LONG ST",
+"permit_no": "ALTC2623896",
+"permit_type": "Alteration",
+"value": 50000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1223 E Long St でAlteration(改修、1400 SQFT) $50.0k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 1400 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-012",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2487",
+"date": "2026-07-15",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1223 E LONG ST",
+"permit_no": "SIGN2600732",
+"permit_type": "NA",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 1223 E Long St、20 SQFTの屋外看板許可。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "NA / Sign / 20 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-081",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -83,8 +131,22 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-54698",
 "summary": "Columbus 1223 E Long St の商業施設に関する配管(Plumbing/MEP)許可、金額不明。"
+},
+{
+"date": "2026-08-31",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-10914",
+"summary": "Columbus 1223 E Long St でAlteration(改修、1400 SQFT) $50.0k。"
+},
+{
+"date": "2026-07-15",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2487",
+"summary": "Columbus 1223 E Long St、20 SQFTの屋外看板許可。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

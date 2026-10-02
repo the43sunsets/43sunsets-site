@@ -23,10 +23,74 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 4,
 "value_total": 0,
-"latest": "2026-09-10",
+"latest": "2026-10-01",
 "items": [
+{
+"id": "S-70431",
+"date": "2026-10-01",
+"applied": "2026-02-26",
+"state": "IL",
+"jurisdiction": "Highland Park",
+"address": "647 ST JOHNS AVE HIGHLAND PARK IL 60035",
+"permit_no": "DEMO-2026-00112",
+"permit_type": "Demolition - Total Structure",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Removal of the existing 1.5 story frame with basement single family residence / Demolition - Total Structure / Demolition - Total Structure",
+"source_id": "SRC-022",
+"provenance": null
+},
+{
+"id": "S-70432",
+"date": "2026-10-01",
+"applied": "2026-08-18",
+"state": "IL",
+"jurisdiction": "Highland Park",
+"address": "647 ST JOHNS AVE HIGHLAND PARK IL 60035",
+"permit_no": "TREE-2026-02819",
+"permit_type": "Tree Preservation/Removal (Construction)",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Removal of the existing 1.5 story frame with basement single family residence / Tree Preservation/Removal (Construction) / Tree Preservation/Removal (Construction) ",
+"source_id": "SRC-022",
+"provenance": null
+},
+{
+"id": "S-66241",
+"date": "2026-09-24",
+"applied": "2026-08-25",
+"state": "IL",
+"jurisdiction": "Highland Park",
+"address": "647 ST JOHNS AVE HIGHLAND PARK IL 60035",
+"permit_no": "TREE-2026-02845",
+"permit_type": "Tree Preservation/Removal (Construction)",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Highland Park 647 St Johns Ave の既存の1.5階建て木造・地下室付き一戸建て住宅解体に伴う配管切断・樹木保護/除去許可。金額記載なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing disconnect for Removal of the existing 1.5 story frame with basement single family residence / Tree Preservation/Removal (Construction) / Tree Preservation/Removal (Construction) ",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01662kdZo8KYBxtpVwwCDd2A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-52682",
 "date": "2026-09-10",
@@ -78,6 +142,27 @@
 },
 "timeline": [
 {
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Highland Park): 未評価",
+"ref": "S-70431",
+"summary": null
+},
+{
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Highland Park): 未評価",
+"ref": "S-70432",
+"summary": null
+},
+{
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Highland Park): 未分類",
+"ref": "S-66241",
+"summary": "Highland Park 647 St Johns Ave の既存の1.5階建て木造・地下室付き一戸建て住宅解体に伴う配管切断・樹木保護/除去許可。金額記載なし。"
+},
+{
 "date": "2026-09-10",
 "face": "permits",
 "title": "建設許可(Highland Park): 未分類",
@@ -85,6 +170,6 @@
 "summary": "Highland Park 647 St Johns Ave の一戸建て住宅(地下室付き1.5階建てフレーム構造)解体に伴う配管副許可。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

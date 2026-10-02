@@ -23,10 +23,30 @@
 },
 "faces": {
 "permits": {
-"count": 5,
-"value_total": 4587100.0,
-"latest": "2026-09-28",
+"count": 8,
+"value_total": 4670100.0,
+"latest": "2026-10-01",
 "items": [
+{
+"id": "S-70451",
+"date": "2026-10-01",
+"applied": "2026-08-25",
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "2461 BURNS RD FELICITY OH",
+"permit_no": "B-077592-2026",
+"permit_type": "Residential Single Family Residence",
+"value": 75000.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "CROSSROADS COMMUNITY CHURCH SFR / Residential Single Family Residence / Single Family Residence",
+"source_id": "SRC-022",
+"provenance": null
+},
 {
 "id": "S-69242",
 "date": "2026-09-28",
@@ -146,6 +166,54 @@
 "batch": "msgbatch_0111czRsgdugDWzXi3UgsAT1",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-1938",
+"date": "2026-08-06",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "7343 WORTHINGTON-GALENA RD",
+"permit_no": "SIGN2600257",
+"permit_type": "NA",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 7343 WORTHINGTON-GALENA RD の看板設置許可(205 SQFT)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "NA / Structures Other Than Buildings / Sign / 205 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-074",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-7459",
+"date": "2026-07-08",
+"applied": "2026-05-12",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "3500 MADISON RD",
+"permit_no": "2026P04441",
+"permit_type": "Fire Protection Systems",
+"value": 8000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati 3500 MADISON RD で消防設備工事(A-3用途、詳細記載なし) $8.0k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / A-3",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-041",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
 }
 ]
 },
@@ -173,6 +241,13 @@
 }
 },
 "timeline": [
+{
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Clermont County): 未評価",
+"ref": "S-70451",
+"summary": null
+},
 {
 "date": "2026-09-28",
 "face": "permits",
@@ -207,8 +282,22 @@
 "title": "建設許可(Clermont County): 未分類",
 "ref": "S-53524",
 "summary": "Crossroads Community Church(Felicity, OH)の秋季チャーチキャンプ用テント設置に伴う商業改修許可 $87.1k。"
+},
+{
+"date": "2026-08-06",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1938",
+"summary": "Columbus 7343 WORTHINGTON-GALENA RD の看板設置許可(205 SQFT)。"
+},
+{
+"date": "2026-07-08",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-7459",
+"summary": "Cincinnati 3500 MADISON RD で消防設備工事(A-3用途、詳細記載なし) $8.0k。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

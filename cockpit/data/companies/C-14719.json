@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 10000.0,
+"count": 4,
+"value_total": 51000.0,
 "latest": "2026-09-24",
 "items": [
 {
@@ -48,6 +48,78 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36718",
+"date": "2026-09-02",
+"applied": "2026-04-09",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "625 E 140TH ST, CLEVELAND, OH, 44110",
+"permit_no": "BCB26-012894",
+"permit_type": "Commercial Building",
+"value": 25000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland のコンビニエンスストア(3,603 SF)の内装改修 $25k。用途変更(工事なし)扱い。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Change of use with no work / MAKE INTERIOR ALTERATIONS TO 3,603 SF CONVENIENCE STORE PER APPROVED PLANS. SEPARATE PLUMBING, HVAC, AND ELECTRICAL PERMITS ARE REQUIRED.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-26801",
+"date": "2026-08-06",
+"applied": "2026-07-28",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "625 E 140TH ST, CLEVELAND, OH, 44110",
+"permit_no": "BCH26-031498",
+"permit_type": "Commercial HVAC",
+"value": 8000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 625 E 140th St の飲食施設(A-2用途)で厨房排気フード・ダクト・ガス配管の設置 $8,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial HVAC / A-2 Assembly - Food and Drink Consumption / INSTALL 80 LIN. FT. FUEL GAS PIPING, INSTALLED COST OF DUCTWORK SUPPLY/RETURN/EXH.AIR-4,000.00, 2 KITCHEN HOOD EXHAUST DUCT SYSTEM COST-$4,000.00 ***BUILDING PERMIT NO BCB26-023666***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-27126",
+"date": "2026-07-17",
+"applied": "2026-06-10",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "625 E 140TH ST, CLEVELAND, OH, 44110",
+"permit_no": "BCB26-023666",
+"permit_type": "Commercial Building",
+"value": 8000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 625 E 140th St の商業ビルでクラスIキッチンフードダクト・排気設備の設置 $8,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Add or change existing construction elements / INSTALL CLASS I KITCHEN HOOD SYSTEM DUCTWORK, FANS & RELATED. SUBMIT FIRE PROTECTION PERMIT TO FPB FOR SUPPRESSION ALTERATIONS. SEPARATE PERMITS REQUIRED FOR ELECTRICAL, AND HVAC WORK.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +155,29 @@
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-67641",
 "summary": "Cleveland 625 E 140th St の商業配管工事 $10k(シンク4台・フロアドレン2台・グリーストラップ1台等の設置、B business 用途)。親許可 BCB26-012894 の副許可。"
+},
+{
+"date": "2026-09-02",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36718",
+"summary": "Cleveland のコンビニエンスストア(3,603 SF)の内装改修 $25k。用途変更(工事なし)扱い。"
+},
+{
+"date": "2026-08-06",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-26801",
+"summary": "Cleveland 625 E 140th St の飲食施設(A-2用途)で厨房排気フード・ダクト・ガス配管の設置 $8,000。"
+},
+{
+"date": "2026-07-17",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-27126",
+"summary": "Cleveland 625 E 140th St の商業ビルでクラスIキッチンフードダクト・排気設備の設置 $8,000。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

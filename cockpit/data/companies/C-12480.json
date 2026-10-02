@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 7690.0,
-"latest": "2026-07-06",
+"count": 3,
+"value_total": 3917690.0,
+"latest": "2026-07-24",
 "items": [
+{
+"id": "S-62188",
+"date": "2026-07-24",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Schaumburg",
+"address": "780 E SCHAUMBURG RD, SCHAUMB, SCHAUMBURG, IL 60194",
+"permit_no": "CBLD-26-6",
+"permit_type": "COMMERCIAL PERMIT",
+"value": 3900000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Schaumburg 780 E Schaumburg Rd の商業用配管工事のみの許可 $3.9M(その他改修)。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "PLUMBING ONLY / COMMERCIAL PERMIT / OTHER REMODELING",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-62112",
+"date": "2026-07-22",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Schaumburg",
+"address": "780 E SCHAUMBURG RD, SCHAUMB, SCHAUMBURG, IL 60194",
+"permit_no": "FIRE-26-148",
+"permit_type": "COMMERCIAL PERMIT",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Schaumburg 780 E Schaumburg Rd での火災報知器工事に関する商業許可 $10,000(その他改修)。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "FIRE ALARM / COMMERCIAL PERMIT / OTHER REMODELING",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-52005",
 "date": "2026-07-06",
@@ -78,6 +126,20 @@
 },
 "timeline": [
 {
+"date": "2026-07-24",
+"face": "permits",
+"title": "建設許可(Schaumburg): 未分類",
+"ref": "S-62188",
+"summary": "Schaumburg 780 E Schaumburg Rd の商業用配管工事のみの許可 $3.9M(その他改修)。"
+},
+{
+"date": "2026-07-22",
+"face": "permits",
+"title": "建設許可(Schaumburg): 未分類",
+"ref": "S-62112",
+"summary": "Schaumburg 780 E Schaumburg Rd での火災報知器工事に関する商業許可 $10,000(その他改修)。"
+},
+{
 "date": "2026-07-06",
 "face": "permits",
 "title": "建設許可(Rock Island County): 未分類",
@@ -85,6 +147,6 @@
 "summary": "Rock Island County(103 6th Ave E, Andalusia)の Casey's 店舗で看板 5 枚のリフェイス工事 $7,690。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

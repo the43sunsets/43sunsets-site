@@ -23,7 +23,7 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 4,
 "value_total": 0,
 "latest": "2026-09-08",
 "items": [
@@ -49,6 +49,78 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01B5JKrVs3MKSaboGQuHfNsv",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-1699",
+"date": "2026-08-13",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "6115 MCNAUGHTEN CENTER",
+"permit_no": "MMEPC2632449",
+"permit_type": "Mechanical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 6115 McNaughten Center で機械設備(MEP)の許可、詳細記載なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-072",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2009",
+"date": "2026-08-03",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "6115 MCNAUGHTEN CENTER",
+"permit_no": "SIGN2600840",
+"permit_type": "NA",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 6115 McNaughten Center に 110 SQFT の看板を設置。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "NA / Structures Other Than Buildings / Sign / 110 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-075",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2214",
+"date": "2026-07-27",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "6115 MCNAUGHTEN CENTER",
+"permit_no": "SIGN2600818",
+"permit_type": "NA",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 6115 MCNAUGHTEN CENTER に看板を設置(Sign 許可、84SQFT、所有者記載なし)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "NA / Sign / 84 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-077",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -83,8 +155,29 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-52467",
 "summary": "Columbus 6085 McNaughten Center における看板(Sign)設置許可、154 SQFT。金額記載なし。"
+},
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1699",
+"summary": "Columbus 6115 McNaughten Center で機械設備(MEP)の許可、詳細記載なし。"
+},
+{
+"date": "2026-08-03",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2009",
+"summary": "Columbus 6115 McNaughten Center に 110 SQFT の看板を設置。"
+},
+{
+"date": "2026-07-27",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2214",
+"summary": "Columbus 6115 MCNAUGHTEN CENTER に看板を設置(Sign 許可、84SQFT、所有者記載なし)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

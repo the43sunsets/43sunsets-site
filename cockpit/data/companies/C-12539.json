@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
+"count": 3,
+"value_total": 5000.0,
 "latest": "2026-09-08",
 "items": [
 {
@@ -49,6 +49,54 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01B5JKrVs3MKSaboGQuHfNsv",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-1657",
+"date": "2026-08-17",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "620 GRANDVIEW AVE",
+"permit_no": "FALRC2629505",
+"permit_type": "Fire Alarm",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "620 GRANDVIEW AVE の許可(種別: Fire Alarm)。MEP副許可(親案件不明・所有者/金額の記載なし)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Alarm / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-071",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2605",
+"date": "2026-07-10",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "620 GRANDVIEW AVE",
+"permit_no": "ALTC2622398",
+"permit_type": "Alteration",
+"value": 5000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 620 GRANDVIEW AVEで非住居用建物の構造改修21,525平方フィート($5.0k)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 21525 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-049",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -83,8 +131,22 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-52512",
 "summary": "Columbus 620 Grandview Ave の商業施設で電気設備工事(MEP)。金額不明。"
+},
+{
+"date": "2026-08-17",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1657",
+"summary": "620 GRANDVIEW AVE の許可(種別: Fire Alarm)。MEP副許可(親案件不明・所有者/金額の記載なし)。"
+},
+{
+"date": "2026-07-10",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2605",
+"summary": "Columbus 620 GRANDVIEW AVEで非住居用建物の構造改修21,525平方フィート($5.0k)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

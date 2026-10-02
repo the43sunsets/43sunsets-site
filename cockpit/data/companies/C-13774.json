@@ -23,10 +23,50 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 125000.0,
-"latest": "2026-09-17",
+"count": 4,
+"value_total": 231200.0,
+"latest": "2026-09-29",
 "items": [
+{
+"id": "S-70156",
+"date": "2026-09-29",
+"applied": "2026-09-16",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "205 CALHOUN ST",
+"permit_no": "2026P07977",
+"permit_type": "Plumbing Permits",
+"value": 3500.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing Permits / Plumbing Permits / B",
+"source_id": "SRC-003",
+"provenance": null
+},
+{
+"id": "S-70181",
+"date": "2026-09-29",
+"applied": "2026-09-14",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "205 CALHOUN ST",
+"permit_no": "2026P07963",
+"permit_type": "Plumbing Permits",
+"value": 3500.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing Permits / Plumbing Permits / B",
+"source_id": "SRC-003",
+"provenance": null
+},
 {
 "id": "S-63332",
 "date": "2026-09-17",
@@ -49,6 +89,30 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-7394",
+"date": "2026-07-06",
+"applied": "2026-06-23",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "205 CALHOUN ST",
+"permit_no": "2026P05563",
+"permit_type": "HVAC",
+"value": 99200.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnatiの205 CALHOUN STで空調に該当する簡易な工事(occupancy: B)を実施 $99.2k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "HVAC / HVAC / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-008",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -78,13 +142,34 @@
 },
 "timeline": [
 {
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未評価",
+"ref": "S-70156",
+"summary": null
+},
+{
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未評価",
+"ref": "S-70181",
+"summary": null
+},
+{
 "date": "2026-09-17",
 "face": "permits",
 "title": "建設許可(Cincinnati): 未分類",
 "ref": "S-63332",
 "summary": "Cincinnati 205 Calhoun St の商業施設(M用途)でHVAC工事 $125k。"
+},
+{
+"date": "2026-07-06",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-7394",
+"summary": "Cincinnatiの205 CALHOUN STで空調に該当する簡易な工事(occupancy: B)を実施 $99.2k。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

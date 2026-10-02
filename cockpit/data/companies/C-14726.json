@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 19000.0,
+"count": 2,
+"value_total": 194710.0,
 "latest": "2026-09-25",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36987",
+"date": "2026-08-17",
+"applied": "2026-06-23",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1215 SUPERIOR AVE 220, CLEVELAND, OH, 44114",
+"permit_no": "BCB26-025570",
+"permit_type": "Commercial Building",
+"value": 175710.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cleveland 1215 Superior Ave Suite 220 のオフィス内装改修 $175,710(B用途)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO SUITE 220 PER APPROVED PLANS. SEPARATE HVAC AND ELECTRICAL PERMIT REQUIRED. CERTIFICATE OF OCCUPANCY REQUIRED. SUBMIT SEPARATE PLANS TO FPB FOR ALTERATIONS TO FIRE PROTECTION SYSTEMS.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-67628",
 "summary": "Cleveland 1215 Superior Ave の1300 SQFT区画に対する商業電気工事 $19k(B用途、親許可 BCB26-025570 の副許可)。"
+},
+{
+"date": "2026-08-17",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36987",
+"summary": "Cleveland 1215 Superior Ave Suite 220 のオフィス内装改修 $175,710(B用途)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 49,
-"value_total": 11816959.0,
+"count": 51,
+"value_total": 11837219.0,
 "latest": "2026-08-29",
 "items": [
 {
@@ -892,6 +892,30 @@
 }
 },
 {
+"id": "S-10425",
+"date": "2026-07-29",
+"applied": "2026-06-17",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "2100 IRON RIDGE RD",
+"permit_no": "FIRE-0248-2026",
+"permit_type": "FIRE SUPPRESSION SYSTEM",
+"value": 6860.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Naperville 2100 Iron Ridge Rd で新築戸建てへのNFPA13D火災スプリンクラー設置(同区画、申請者名義なし)($6.9k)。",
+"infer": "同区画の他棟(#10341等)と同じM/I Homes分譲地の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Install new fire srinkler system per NFPA 13D / FIRE SUPPRESSION SYSTEM / FIRE DEPARTMENT PERMIT / 3152 SQFT",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-044",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
 "id": "S-10595",
 "date": "2026-07-20",
 "applied": "2026-07-15",
@@ -1152,6 +1176,30 @@
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-034",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-10666",
+"date": "2026-07-14",
+"applied": "2026-06-04",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "2060 IRON RIDGE RD",
+"permit_no": "FIRE-0217-2026",
+"permit_type": "FIRE SUPPRESSION SYSTEM",
+"value": 13400.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Naperville 2060 IRON RIDGE RD のスプリンクラー設備の設置 $13.4k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Install new fire sprinkler system per NFPA 13D / FIRE SUPPRESSION SYSTEM / FIRE DEPARTMENT PERMIT / 2436 SQFT",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-032",
 "model": "claude-sonnet-5 (subagent, subscription session)"
 }
 },
@@ -1482,6 +1530,13 @@
 "summary": "Naperville 3 N Main St(6,912 SQFT)で住宅開発業者 M/I Homes of Chicago による防護区画専用の火災警報・スプリンクラー監視システム設置。"
 },
 {
+"date": "2026-07-29",
+"face": "permits",
+"title": "建設許可(Naperville): 未分類",
+"ref": "S-10425",
+"summary": "Naperville 2100 Iron Ridge Rd で新築戸建てへのNFPA13D火災スプリンクラー設置(同区画、申請者名義なし)($6.9k)。"
+},
+{
 "date": "2026-07-20",
 "face": "permits",
 "title": "建設許可(Naperville): 未分類",
@@ -1559,6 +1614,13 @@
 "summary": "Naperville 2066 IRON RIDGE LNで新築一戸建ての消防設備(スプリンクラー)サブ許可(NFPA13D準拠、2244SQFT)$11.8k。"
 },
 {
+"date": "2026-07-14",
+"face": "permits",
+"title": "建設許可(Naperville): 未分類",
+"ref": "S-10666",
+"summary": "Naperville 2060 IRON RIDGE RD のスプリンクラー設備の設置 $13.4k。"
+},
+{
 "date": "2026-07-09",
 "face": "permits",
 "title": "建設許可(Naperville): 未分類",
@@ -1573,6 +1635,6 @@
 "summary": "Naperville 2062 IRON RIDGE LNで新築一戸建ての消防設備(スプリンクラー)サブ許可(NFPA13D準拠、2244SQFT)$11.8k。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

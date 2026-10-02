@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
+"count": 5,
+"value_total": 1304212.24,
 "latest": "2026-09-15",
 "items": [
 {
@@ -49,6 +49,102 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-21905",
+"date": "2026-09-01",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3955 LIMITED PKWY",
+"permit_no": "FSUPC2630322",
+"permit_type": "Fire Suppression",
+"value": 652106.12,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 3955 LIMITED PKWY で防災設備(火災報知/スプリンクラー等) $652k。Commercial - Other / Fire Suppression / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Suppression / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0903-001",
+"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
+}
+},
+{
+"id": "S-1928",
+"date": "2026-08-06",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3955 LIMITED PKWY",
+"permit_no": "ALTC2627170",
+"permit_type": "Alteration",
+"value": 652106.12,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 3955 Limited Pkwy の商業構造改修 51,951SF $652k(用途詳細不明)。",
+"infer": "面積に対し金額が低く軽微な改修の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 51951 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-001",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2123",
+"date": "2026-07-30",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3985 LIMITED PKWY",
+"permit_no": "EMEPC2630554",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 3985 Limited Pkwy の商業電気設備(MEP)許可。詳細情報なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-076",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2567",
+"date": "2026-07-13",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3985 LIMITED PKWY",
+"permit_no": "FALRC2622096",
+"permit_type": "Fire Alarm",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 3985 LIMITED PKWY の商業建物向け火災報知(Fire Alarm)副許可(親プロジェクト・所有者・金額の記載なし)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-082",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -83,8 +179,36 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-59806",
 "summary": "Distribution Land Company LLC 名義の物件(3975 Limited Pkwy)で電気設備(MEP)工事、金額不明。"
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-21905",
+"summary": "Columbus 3955 LIMITED PKWY で防災設備(火災報知/スプリンクラー等) $652k。Commercial - Other / Fire Suppression / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection"
+},
+{
+"date": "2026-08-06",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1928",
+"summary": "Columbus 3955 Limited Pkwy の商業構造改修 51,951SF $652k(用途詳細不明)。"
+},
+{
+"date": "2026-07-30",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2123",
+"summary": "Columbus 3985 Limited Pkwy の商業電気設備(MEP)許可。詳細情報なし。"
+},
+{
+"date": "2026-07-13",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2567",
+"summary": "Columbus 3985 LIMITED PKWY の商業建物向け火災報知(Fire Alarm)副許可(親プロジェクト・所有者・金額の記載なし)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

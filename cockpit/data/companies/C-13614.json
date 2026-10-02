@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 1030000.0,
+"count": 14,
+"value_total": 2960000.0,
 "latest": "2026-09-24",
 "items": [
 {
@@ -170,6 +170,198 @@
 "batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-26319",
+"date": "2026-09-03",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 EASTON OVAL",
+"permit_no": "EMEPC2635728",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1 Easton Oval における商業電気工事(MEP)。金額・所有者情報なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-26320",
+"date": "2026-09-03",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 EASTON OVAL",
+"permit_no": "PMEPC2635561",
+"permit_type": "Plumbing",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1 Easton Oval における配管(Plumbing/MEP)副許可、金額不明。",
+"infer": "親案件・用途が不明なため設備投資シグナルとしての判定は困難(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Plumbing / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-26321",
+"date": "2026-09-03",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 EASTON OVAL",
+"permit_no": "FSUPC2628661",
+"permit_type": "Fire Suppression",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1 Easton Oval の商業施設で消防設備(スプリンクラー等)の設置・改修に関する副許可(金額不明)。",
+"infer": "親案件不明で単体の消防設備許可 = 用途・規模を判定できない(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Suppression / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-21908",
+"date": "2026-09-01",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 EASTON OVAL",
+"permit_no": "FALRC2629328",
+"permit_type": "Fire Alarm",
+"value": 615000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1 EASTON OVAL で防災設備(火災報知/スプリンクラー等) $615k。Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0903-001",
+"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
+}
+},
+{
+"id": "S-1372",
+"date": "2026-08-28",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 EASTON OVAL",
+"permit_no": "ALTC2624083",
+"permit_type": "Alteration",
+"value": 615000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1 Easton Oval の商業構造改修 5,457SF $615k(用途詳細不明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 5457 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-001",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-1608",
+"date": "2026-08-19",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 EASTON OVAL",
+"permit_no": "FALRC2629563",
+"permit_type": "Fire Alarm",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1 Easton Oval の非住宅増改築に伴う火災報知設備許可。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-070",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-1660",
+"date": "2026-08-17",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 EASTON OVAL",
+"permit_no": "FSUPC2631866",
+"permit_type": "Fire Suppression",
+"value": 350000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 1 EASTON OVAL での「Fire Suppression」$350k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Suppression / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-003",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-1766",
+"date": "2026-08-12",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 EASTON OVAL",
+"permit_no": "ALTC2621437",
+"permit_type": "Alteration",
+"value": 350000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 1 EASTON OVAL での「Alteration」$350k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 3054 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-003",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
 }
 ]
 },
@@ -238,8 +430,64 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-59808",
 "summary": "Columbus 1 Easton Oval における機械設備(MEP)工事許可。金額不明。"
+},
+{
+"date": "2026-09-03",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-26319",
+"summary": "Columbus 1 Easton Oval における商業電気工事(MEP)。金額・所有者情報なし。"
+},
+{
+"date": "2026-09-03",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-26320",
+"summary": "Columbus 1 Easton Oval における配管(Plumbing/MEP)副許可、金額不明。"
+},
+{
+"date": "2026-09-03",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-26321",
+"summary": "Columbus 1 Easton Oval の商業施設で消防設備(スプリンクラー等)の設置・改修に関する副許可(金額不明)。"
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-21908",
+"summary": "Columbus 1 EASTON OVAL で防災設備(火災報知/スプリンクラー等) $615k。Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection"
+},
+{
+"date": "2026-08-28",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1372",
+"summary": "Columbus 1 Easton Oval の商業構造改修 5,457SF $615k(用途詳細不明)。"
+},
+{
+"date": "2026-08-19",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1608",
+"summary": "Columbus 1 Easton Oval の非住宅増改築に伴う火災報知設備許可。"
+},
+{
+"date": "2026-08-17",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1660",
+"summary": "Columbus 1 EASTON OVAL での「Fire Suppression」$350k。"
+},
+{
+"date": "2026-08-12",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1766",
+"summary": "Columbus 1 EASTON OVAL での「Alteration」$350k。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

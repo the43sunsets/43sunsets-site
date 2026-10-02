@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 1000.0,
+"count": 2,
+"value_total": 37788.0,
 "latest": "2026-09-08",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36702",
+"date": "2026-09-03",
+"applied": "2026-08-24",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2890 VAN AKEN BLVD, CLEVELAND, OH, 44120",
+"permit_no": "LEL26-036020",
+"permit_type": "Elevator Dumbwaiter",
+"value": 36788.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 2890 Van Aken Blvd のエレベーター(ダムウェーター)改修 $36,788、扉/戸開閉装置の更新(3階建・容量2500)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Elevator Dumbwaiter / New Door Operator, Car Side Equipment, Hatch Door Equipment, Car Doors, Hoist Doors, door edge CAPACITY 2500 SPEED 100 FLOORS 3 FILE # 2748 SERIAL # 2260",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-54785",
 "summary": "Van Aken Crossing LLC 所有の住居(R-2 共同住宅)212号室で浴室・寝室の配線修理 $1,000。"
+},
+{
+"date": "2026-09-03",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36702",
+"summary": "Cleveland 2890 Van Aken Blvd のエレベーター(ダムウェーター)改修 $36,788、扉/戸開閉装置の更新(3階建・容量2500)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

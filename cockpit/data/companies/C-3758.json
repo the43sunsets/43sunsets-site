@@ -23,10 +23,30 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 3151072.0,
-"latest": "2026-09-25",
+"count": 10,
+"value_total": 3176072.0,
+"latest": "2026-09-29",
 "items": [
+{
+"id": "S-70190",
+"date": "2026-09-29",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 NATIONWIDE PLZ",
+"permit_no": "EMEPC2639151",
+"permit_type": "Electrical",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": null
+},
 {
 "id": "S-67577",
 "date": "2026-09-25",
@@ -148,6 +168,78 @@
 }
 },
 {
+"id": "S-1458",
+"date": "2026-08-25",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 NATIONWIDE PLZ",
+"permit_no": "PMEPC2634186",
+"permit_type": "Plumbing",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus(1 NATIONWIDE PLZ)で商業建物向けの給排水設備(MEP)副許可(用途・規模の記載なし)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Plumbing / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-068",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2099",
+"date": "2026-07-30",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 NATIONWIDE PLZ",
+"permit_no": "ALTC2629042",
+"permit_type": "Alteration",
+"value": 25000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1 Nationwide Plzの商業建物で2,000 SFの構造改修 $25,000(汎用分類ラベルのみ、所有者不明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 2000 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-020",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2265",
+"date": "2026-07-24",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 NATIONWIDE PLZ",
+"permit_no": "EMEPC2532567",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1 Nationwide Plz、商業建物向け電気(Electrical)のMEPサブ許可、用途・金額とも記録なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-078",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
 "id": "S-2763",
 "date": "2026-07-02",
 "applied": null,
@@ -198,6 +290,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Columbus): 未評価",
+"ref": "S-70190",
+"summary": null
+},
+{
 "date": "2026-09-25",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -233,6 +332,27 @@
 "summary": "Nationwide Mutual Insurance Co の Columbus オフィス(1 Nationwide Plz)で 1,400 SQFT の改修工事 $75k。"
 },
 {
+"date": "2026-08-25",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1458",
+"summary": "Columbus(1 NATIONWIDE PLZ)で商業建物向けの給排水設備(MEP)副許可(用途・規模の記載なし)。"
+},
+{
+"date": "2026-07-30",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2099",
+"summary": "Columbus 1 Nationwide Plzの商業建物で2,000 SFの構造改修 $25,000(汎用分類ラベルのみ、所有者不明)。"
+},
+{
+"date": "2026-07-24",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2265",
+"summary": "Columbus 1 Nationwide Plz、商業建物向け電気(Electrical)のMEPサブ許可、用途・金額とも記録なし。"
+},
+{
 "date": "2026-07-02",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -240,6 +360,6 @@
 "summary": "Columbus 263 N Front St のオフィスビルで構造的な改修工事 $1.8M(8,728 SQFT)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

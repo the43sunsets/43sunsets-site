@@ -23,7 +23,7 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": 0,
 "latest": "2026-09-23",
 "items": [
@@ -49,6 +49,30 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-21891",
+"date": "2026-09-01",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "360 W 3RD AVE",
+"permit_no": "EMEPC2635260",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 360 W 3RD AVE でのElectrical許可(金額・所有者不明、種別ラベルのみ)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0903-009",
+"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
 }
 }
 ]
@@ -83,8 +107,15 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-66871",
 "summary": "Columbus 360 W 3rd Ave における 41 SQFT の看板(サイン)設置許可。金額記載なし。"
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-21891",
+"summary": "Columbus 360 W 3RD AVE でのElectrical許可(金額・所有者不明、種別ラベルのみ)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

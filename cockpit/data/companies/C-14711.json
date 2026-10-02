@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 240000.0,
+"count": 2,
+"value_total": 866500.0,
 "latest": "2026-09-24",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-27042",
+"date": "2026-07-23",
+"applied": "2025-04-09",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1111 FAIRFIELD AVE, CLEVELAND, OH, 44113",
+"permit_no": "B25011463",
+"permit_type": "New",
+"value": 626500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Driftwood Mixed Use Development 内の1階レストラン及び屋上パティオの内装等改修 $626.5k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "New / A-2 Assembly - Food and Drink Consumption / Alteration / Perform alterations for a new first floor restaurant and roof top patio at the Driftwood Mixed Use Development. Electrical, plumbing and HVAC permits are required. Separate permits are required for any alterations to the automatic fire s",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-67646",
 "summary": "Cleveland 1111 Fairfield Ave の商業ビル(B業務用途)にヒートポンプ1台と厨房フード排気2基・排気ダクトを設置する空調工事 $240k(工事費実額は$21,445)。"
+},
+{
+"date": "2026-07-23",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-27042",
+"summary": "Driftwood Mixed Use Development 内の1階レストラン及び屋上パティオの内装等改修 $626.5k。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

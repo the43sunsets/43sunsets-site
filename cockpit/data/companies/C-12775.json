@@ -23,7 +23,7 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 4,
 "value_total": 300000.0,
 "latest": "2026-09-18",
 "items": [
@@ -74,6 +74,54 @@
 "batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-1627",
+"date": "2026-08-18",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1650 WATERMARK DR",
+"permit_no": "PMEPC2633070",
+"permit_type": "Plumbing",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1650 Watermark Dr の商業配管MEP許可。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Plumbing / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-070",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-1795",
+"date": "2026-08-11",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1650 WATERMARK DR",
+"permit_no": "EMEPC2632125",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 1650 Watermark Dr の商業用電気許可(テナント・用途不明の汎用ラベルのみ)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-073",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
 }
 ]
 },
@@ -114,8 +162,22 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-54683",
 "summary": "Columbus 1650 Watermark Dr の商業施設で機械(MEP)設備工事、金額不明。"
+},
+{
+"date": "2026-08-18",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1627",
+"summary": "Columbus 1650 Watermark Dr の商業配管MEP許可。"
+},
+{
+"date": "2026-08-11",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1795",
+"summary": "Columbus 1650 Watermark Dr の商業用電気許可(テナント・用途不明の汎用ラベルのみ)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

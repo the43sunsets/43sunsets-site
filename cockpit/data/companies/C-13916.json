@@ -23,7 +23,7 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": 15000.0,
 "latest": "2026-09-16",
 "items": [
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36842",
+"date": "2026-08-26",
+"applied": "2025-09-22",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "8035 EUCLID, CLEVELAND, OH, 44103",
+"permit_no": "B25031342",
+"permit_type": "New",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "コーヒーショップへの用途変更許可(工事なし、許可証発行のみ)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "New / B Business / Change Use / CHANGE USE TO COFFEE SHOP PER APPROVED PLANS AND FIELD INSPECTION. NO WORK WITH THIS PERMIT. CERTIFICATE OF OCCUPANCY REQUIRED. HEALTH DEPARTMENT APPROVAL REQUIRED FOR FOOD SERVICE.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-63575",
 "summary": "Cleveland 8101 Euclid Ave(I-2 病院/介護施設用途)にルーフトップ空調機 1 台を設置する商業 HVAC 工事 $15k。"
+},
+{
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36842",
+"summary": "コーヒーショップへの用途変更許可(工事なし、許可証発行のみ)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

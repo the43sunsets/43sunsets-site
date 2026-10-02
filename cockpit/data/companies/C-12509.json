@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 467.0,
+"count": 2,
+"value_total": 1667.0,
 "latest": "2026-09-10",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01B5JKrVs3MKSaboGQuHfNsv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-28478",
+"date": "2026-07-08",
+"applied": "2026-06-26",
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "2818 OLD SR 32 BATAVIA OH",
+"permit_no": "B-075693-2026",
+"permit_type": "Commercial Alteration Permit",
+"value": 1200.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Batavia の商業物件で電気設備の修理工事(金額不明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ELECTRIC SERVICE REPAIR / Commercial Alteration Permit / Alteration",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Clermont County): 未分類",
 "ref": "S-52724",
 "summary": "Batavia OH 2818 Old SR 32 の商業改修許可、Boar's Head の電気サービス交換 $467。"
+},
+{
+"date": "2026-07-08",
+"face": "permits",
+"title": "建設許可(Clermont County): 未分類",
+"ref": "S-28478",
+"summary": "Batavia の商業物件で電気設備の修理工事(金額不明)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

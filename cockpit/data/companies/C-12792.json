@@ -23,7 +23,7 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 6,
 "value_total": 0,
 "latest": "2026-09-21",
 "items": [
@@ -74,6 +74,102 @@
 "batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-36629",
+"date": "2026-09-04",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2112 N HIGH ST",
+"permit_no": "FSUPC2635357",
+"permit_type": "Fire Suppression",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 2112 N High St の商業建物における防火設備(消火設備)工事、金額不明。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Suppression / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-1809",
+"date": "2026-08-10",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2112 N HIGH ST",
+"permit_no": "SIGN2600721",
+"permit_type": "NA",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 2112 N High St の看板許可(31 SQFT)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "NA / Structures Other Than Buildings / Sign / 31 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-073",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-1810",
+"date": "2026-08-10",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2112 N HIGH ST",
+"permit_no": "PMEPC2632086",
+"permit_type": "Plumbing",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 2112 N High St の商業用配管許可(テナント不明)。同住所の看板許可(信号1809)とは別件。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Plumbing / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-073",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2401",
+"date": "2026-07-17",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2118 N HIGH ST",
+"permit_no": "SIGN2501393",
+"permit_type": "NA",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 2118 N High St の看板設置(26 sqft、内容不明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "NA / Structures Other Than Buildings / Sign / 26 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-080",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
 }
 ]
 },
@@ -114,8 +210,36 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-54668",
 "summary": "University Gateway North LLC(2112 N High St)の住宅系増改築に伴う防火(Fire Suppression)工事。金額不明。"
+},
+{
+"date": "2026-09-04",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-36629",
+"summary": "Columbus 2112 N High St の商業建物における防火設備(消火設備)工事、金額不明。"
+},
+{
+"date": "2026-08-10",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1809",
+"summary": "Columbus 2112 N High St の看板許可(31 SQFT)。"
+},
+{
+"date": "2026-08-10",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1810",
+"summary": "Columbus 2112 N High St の商業用配管許可(テナント不明)。同住所の看板許可(信号1809)とは別件。"
+},
+{
+"date": "2026-07-17",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2401",
+"summary": "Columbus 2118 N High St の看板設置(26 sqft、内容不明)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

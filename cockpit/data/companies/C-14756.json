@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 1500.0,
+"count": 4,
+"value_total": 31502.0,
 "latest": "2026-09-24",
 "items": [
 {
@@ -48,6 +48,78 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36847",
+"date": "2026-08-26",
+"applied": "2026-08-24",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "3230 W 65TH ST, CLEVELAND, OH, 44102",
+"permit_no": "BCB26-036074",
+"permit_type": "Commercial Building",
+"value": 30000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "小売店舗の外装看板設置(チャンネル文字壁面サイン176 SFとフリースタンディング・パイロンサイン56 SF)$30k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / M Mercantile - Stores / Markets / Retail / Commercial Signs / MAKE EXT. ALT.: INSTALL (1) 176 SF CHANNEL LETTER ILLUMINATED WALL SIGN W/ RACEWAY + (1) DBL-SIDED 56 SF FREESTANDING PYLON SIGN PER APPROVED PLANS AND MANU. SPECS. SEP. ELECTRICAL PERMIT REQUIRED.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-27202",
+"date": "2026-07-10",
+"applied": "2025-05-23",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "3224 W 65TH ST, CLEVELAND, OH, 44102",
+"permit_no": "B25016800",
+"permit_type": "New",
+"value": 1.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cleveland 3224 W 65th St で用途変更に伴う使用確立の許可($1、工事なし、C/O 要)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "New / B Business / Change Use / ESTABLISH USE PER APPROVED PLAN AND FIELD INSPECTION. NO WORK WITH THIS PERMIT. CERTIFICATE OF OCCUPANCY REQUIRED.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-27211",
+"date": "2026-07-10",
+"applied": "2025-05-23",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "3220 W 65TH ST, CLEVELAND, OH, 44102",
+"permit_no": "B25016797",
+"permit_type": "New",
+"value": 1.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 3220 W 65TH ST で成人教育施設への用途変更、許可額 $1(工事なし・要占有証明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "New / B Business / Change Use / ESTABLISH ADULT EDUCATION PER APPROVED PLANS AND FIELD INSPECTION. NO WORK WITH THIS PERMIT. CERTIFICATE OF OCCUPANCY REQUIRED.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +155,29 @@
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-67651",
 "summary": "Cleveland 3230 W 65th St でパイロンサイン用の電源に 60A ディスコネクトスイッチを設置する電気工事 $1,500。"
+},
+{
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36847",
+"summary": "小売店舗の外装看板設置(チャンネル文字壁面サイン176 SFとフリースタンディング・パイロンサイン56 SF)$30k。"
+},
+{
+"date": "2026-07-10",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-27202",
+"summary": "Cleveland 3224 W 65th St で用途変更に伴う使用確立の許可($1、工事なし、C/O 要)。"
+},
+{
+"date": "2026-07-10",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-27211",
+"summary": "Cleveland 3220 W 65TH ST で成人教育施設への用途変更、許可額 $1(工事なし・要占有証明)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

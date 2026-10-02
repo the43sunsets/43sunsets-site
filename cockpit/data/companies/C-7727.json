@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 225000.0,
-"latest": "2026-07-09",
+"count": 2,
+"value_total": 292186.81,
+"latest": "2026-07-21",
 "items": [
+{
+"id": "S-27069",
+"date": "2026-07-21",
+"applied": "2026-07-20",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "11900 FAIRHILL RD, CLEVELAND, OH, 44120",
+"permit_no": "BCH26-030001",
+"permit_type": "Commercial HVAC",
+"value": 67186.81,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cleveland 11900 Fairhill Rd の商業用HVAC工事 $67,186.81(ダクト・排気ファン・専用外気ユニット・防火ダンパー設置、建物許可 BCB26-013334 に付随)。",
+"infer": "親許可(BCB26-013334)の設備工事と見られるが、親案件の用途が不明のため生産設備投資の判断はできない(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial HVAC / B Business / INSTALLED COST OF DUCTWORK SUPPLY/RETURN/EXH.AIR-$3,000.00, EXHAUST FAN, DEDICATED OUTDOOR AIR UNIT (DOAH), FIRE DAMPERS-$6,000.00***BLDG Permit# BCB26-013334***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-27226",
 "date": "2026-07-09",
@@ -75,6 +99,13 @@
 },
 "timeline": [
 {
+"date": "2026-07-21",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-27069",
+"summary": "Cleveland 11900 Fairhill Rd の商業用HVAC工事 $67,186.81(ダクト・排気ファン・専用外気ユニット・防火ダンパー設置、建物許可 BCB26-013334 に付随)。"
+},
+{
 "date": "2026-07-09",
 "face": "permits",
 "title": "建設許可(Cleveland): 医療施設",
@@ -82,6 +113,6 @@
 "summary": "既存 3 階建て I-2(病院/介護施設)内で患者部屋 550 SF を隔離室へ改修 $225k。電気・機械・配管は別許可。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

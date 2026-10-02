@@ -2,7 +2,7 @@
 "id": "C-15019",
 "name": "IAS BROTHERS HOLDINGS LLC",
 "city": null,
-"state": null,
+"state": "OH",
 "entity_type": "spe",
 "industry": null,
 "made": null,
@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 41000.0,
+"count": 2,
+"value_total": 81000.0,
 "latest": "2026-09-28",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-24433",
+"date": "2026-09-02",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "4299 KIMBERLY PKWY",
+"permit_no": "ROOFC2635376",
+"permit_type": "Roof",
+"value": 40000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 4299 Kimberly Pkwy の商業施設で 5,424 SQFT の屋根工事 $40k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Roof / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 5424 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-69211",
 "summary": "Columbus 1946-1958 Sullivant Ave の商業建物で屋根工事 $41k(3,150 SQFT)。"
+},
+{
+"date": "2026-09-02",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-24433",
+"summary": "Columbus 4299 Kimberly Pkwy の商業施設で 5,424 SQFT の屋根工事 $40k。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 19633.0,
-"latest": "2026-07-22",
+"count": 4,
+"value_total": 28360.0,
+"latest": "2026-08-18",
 "items": [
+{
+"id": "S-62871",
+"date": "2026-08-18",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Tinley Park",
+"address": "7733 WOODSTOCK DR, TINLEY PARK, IL 60477",
+"permit_no": "BP2026-08-1388",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 3700.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Tinley Park の住宅で 80ft の 6ft ビニールフェンス設置 $3,700。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "INSTALLING 80 FT OF 6 FT SOLID VINYL FENCING / RESIDENTIAL PERMIT / FENCING (and Gates)",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-62455",
+"date": "2026-08-04",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Tinley Park",
+"address": "8336 169TH ST, TINLEY PARK, IL 60477",
+"permit_no": "BP2026-07-1305",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 5027.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Tinley Park の住宅で 5〜6 フィートのビニールフェンス交換 $5,027。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "FENCE REPLACEMENT-INSTALLING 5 FOOT AND 6 FOOT VINYL FENCING / RESIDENTIAL PERMIT / FENCING (and Gates)",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-13158",
 "date": "2026-07-22",
@@ -102,6 +150,20 @@
 },
 "timeline": [
 {
+"date": "2026-08-18",
+"face": "permits",
+"title": "建設許可(Tinley Park): 未分類",
+"ref": "S-62871",
+"summary": "Tinley Park の住宅で 80ft の 6ft ビニールフェンス設置 $3,700。"
+},
+{
+"date": "2026-08-04",
+"face": "permits",
+"title": "建設許可(Tinley Park): 未分類",
+"ref": "S-62455",
+"summary": "Tinley Park の住宅で 5〜6 フィートのビニールフェンス交換 $5,027。"
+},
+{
 "date": "2026-07-22",
 "face": "permits",
 "title": "建設許可(Orland Park): 未分類",
@@ -116,6 +178,6 @@
 "summary": "Shorewood 1002 Regency Ct にて裏庭・側面に高さ6フィートのフェンスを設置 $8,200。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

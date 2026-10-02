@@ -23,7 +23,7 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 4,
 "value_total": 0,
 "latest": "2026-09-23",
 "items": [
@@ -74,6 +74,50 @@
 "batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-34825",
+"date": "2026-09-01",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Butler County",
+"address": "6757 LAKESIDE DR, WEST CHESTER OH 45069 United States",
+"permit_no": "BLD-CM26-03717",
+"permit_type": "Commercial Multi Family",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Rebuilding two stacks of decks on posts. / DEACTIVATED / Commercial Multi Family",
+"source_id": "SRC-024",
+"provenance": null
+},
+{
+"id": "S-34832",
+"date": "2026-09-01",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Butler County",
+"address": "6757 LAKESIDE DR, WEST CHESTER OH 45069 United States",
+"permit_no": "BLD-CN26-03738",
+"permit_type": "Commercial Tenant Finish and Alteration",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "West Chester の Lakota Lake でデッキの改修工事(金額不明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "REBUILD DECKS - LAKOTA LAKE / IN PROGRESS / Pay Fees Due / Commercial Tenant Finish and Alteration",
+"source_id": "SRC-024",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 }
 ]
 },
@@ -114,8 +158,22 @@
 "title": "建設許可(Butler County): 未分類",
 "ref": "S-60216",
 "summary": "West Chester の商業テナントスペース(ユニット D208)で2階・3階のデッキ再建工事。金額不明・提出書類不完全。"
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Butler County): 未評価",
+"ref": "S-34825",
+"summary": null
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Butler County): 未分類",
+"ref": "S-34832",
+"summary": "West Chester の Lakota Lake でデッキの改修工事(金額不明)。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

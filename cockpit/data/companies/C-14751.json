@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 109361.0,
+"count": 4,
+"value_total": 364359.0,
 "latest": "2026-09-24",
 "items": [
 {
@@ -48,6 +48,78 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36737",
+"date": "2026-09-02",
+"applied": "2026-09-01",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2840 E 116TH ST, CLEVELAND, OH, 44120",
+"permit_no": "BCP26-037584",
+"permit_type": "Commercial Plumbing",
+"value": 1500.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cleveland 2840 E 116th St で床排水1基・排水管8フィートの設置 $1,500(親許可 BCB26-027097 の配管副許可)。",
+"infer": "親建築許可の内容が不明のため、用途・規模は判定不可(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Plumbing / B Business / INSTALL 1 FLOOR DRAIN, 8 LIN FT. DRAIN, WASTE, VENT PIPING ***BUILDING PERMIT NO BCB26-027097***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36952",
+"date": "2026-08-19",
+"applied": "2026-08-18",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2840 E 116TH ST, CLEVELAND, OH, 44120",
+"permit_no": "BCE26-035082",
+"permit_type": "Commercial Electrical",
+"value": 30000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "766 SQFT の内装改修に伴う商業電気工事 $30k(親許可 BCB26-027097 の副許可)。",
+"infer": "親案件(建物許可)の用途・所有者が不明のため業種判定は不可(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Electrical / B Business / INSTALL 766 SQUARE FEET: ALT- Interior alterations per building permit BCB26-027097",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36974",
+"date": "2026-08-18",
+"applied": "2026-07-01",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2840 E 116TH ST, CLEVELAND, OH, 44120",
+"permit_no": "BCB26-027097",
+"permit_type": "Commercial Building",
+"value": 223498.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "既存 11,745 SQFT の1階建て商業建物のうち 766 SF の内外装改修 $223,498。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Interior/Exterior Remodel / MAKE INTERIOR AND EXTERIOR ALTERATIONS TO 766 SF OF EXISTING 11,745 SQFT 1-STORY BUILDING PER APPROVED PLANS. SPECIAL INSPECTIONS REQUIRED. SEPARATE PERMITS REQUIRED FOR ELECTRICAL, PLUMBING AND HVAC. SPECIAL INSPECTIONS REQUIRED. MAINTA",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +155,29 @@
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-67634",
 "summary": "Cleveland 2840 E 116th St(B用途)で冷凍システム3台(各25トン以下)を設置する商業HVAC工事 $109,361。"
+},
+{
+"date": "2026-09-02",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36737",
+"summary": "Cleveland 2840 E 116th St で床排水1基・排水管8フィートの設置 $1,500(親許可 BCB26-027097 の配管副許可)。"
+},
+{
+"date": "2026-08-19",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36952",
+"summary": "766 SQFT の内装改修に伴う商業電気工事 $30k(親許可 BCB26-027097 の副許可)。"
+},
+{
+"date": "2026-08-18",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36974",
+"summary": "既存 11,745 SQFT の1階建て商業建物のうち 766 SF の内外装改修 $223,498。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

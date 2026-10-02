@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
+"count": 2,
+"value_total": 5000.0,
 "latest": "2026-09-17",
 "items": [
 {
@@ -49,6 +49,30 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-1975",
+"date": "2026-08-04",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "900 S HIGH ST UNIT 1B",
+"permit_no": "ALTC2525454",
+"permit_type": "Alteration",
+"value": 5000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 900 S High St Unit 1B で商業建物の構造改修(200SQFT) $5.0k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 200 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-048",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -83,8 +107,15 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-63344",
 "summary": "Columbus 900 S High St Unit 1B における電気設備(MEP)工事。金額不明。"
+},
+{
+"date": "2026-08-04",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1975",
+"summary": "Columbus 900 S High St Unit 1B で商業建物の構造改修(200SQFT) $5.0k。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

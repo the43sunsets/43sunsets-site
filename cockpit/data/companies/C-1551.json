@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 33501.0,
-"latest": "2026-07-30",
+"count": 6,
+"value_total": 44501.0,
+"latest": "2026-08-24",
 "items": [
+{
+"id": "S-63059",
+"date": "2026-08-24",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Tinley Park",
+"address": "7715 167TH ST, TINLEY PARK, IL 60477",
+"permit_no": "BP2026-08-1375",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 6500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Tinley Park の住宅でサンプポンプ排水ピット交換・排水管120ft新設 $6,500。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "REPLACE DAMAGED PIT. RUN 120FT OF NEW SUMP PUMP DISCHARGE LINE TO BACK HOUSE IN BACKYARD. LINE COMES OUT THE SIDE OF THE HOUSE AT THE FRONT CORNER, RUNS THE FENCE LINE TO THE BACK, AND GOES UNDER THE FENCE AND STOPS AT THE EASEMENT IN THE BACK. / RESIDENTIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-62457",
+"date": "2026-08-04",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Tinley Park",
+"address": "17431 92ND AVE, TINLEY PARK, IL 60487",
+"permit_no": "BP2026-08-1317",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 4500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Tinley Park の住宅で基礎部の配管修理(鋳鉄パイプ交換・PVC 配管敷設)$4,500。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "DIG DOWN 5 AT FOUNDATION REMOVE SHEARED OFF 4 CAST IRON PIPE INSTALL SCH 40 PVC PIPE REPAIR WITH PROPER NO SHEAR CONNECTIONS AND OUTSIDE CLEAN OUT . BACKFILL AFTER INSPECTION. / RESIDENTIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-14027",
 "date": "2026-07-30",
@@ -150,6 +198,20 @@
 },
 "timeline": [
 {
+"date": "2026-08-24",
+"face": "permits",
+"title": "建設許可(Tinley Park): 未分類",
+"ref": "S-63059",
+"summary": "Tinley Park の住宅でサンプポンプ排水ピット交換・排水管120ft新設 $6,500。"
+},
+{
+"date": "2026-08-04",
+"face": "permits",
+"title": "建設許可(Tinley Park): 未分類",
+"ref": "S-62457",
+"summary": "Tinley Park の住宅で基礎部の配管修理(鋳鉄パイプ交換・PVC 配管敷設)$4,500。"
+},
+{
 "date": "2026-07-30",
 "face": "permits",
 "title": "建設許可(Tinley Park): 未分類",
@@ -178,6 +240,6 @@
 "summary": "Tinley Park 7607 163RD PL, TINLEY PARK, IL 60477 で下水・排水管工事。 許可種別「RESIDENTIAL PERMIT」、評価額 $15k。申請者/所有者: KEVIN SZABO JR PLUMBING INC。"
 }
 ],
-"generated_at": "2026-10-01T15:00:38+00:00",
+"generated_at": "2026-10-02T08:39:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
