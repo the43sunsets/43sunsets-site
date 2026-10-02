@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 10000.0,
-"latest": "2026-08-25",
+"count": 2,
+"value_total": 233000.0,
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-69797",
+"date": "2026-09-28",
+"applied": "2026-09-14",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1659 W MELROSE ST",
+"permit_no": "B200511486",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 223000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago Public Library(1659 W Melrose St)でエアハンドリング設備(Trane 製コンデンシングユニット)の修理・交換 $223k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "REPAIR/REPLACEMENT AFFECTING 1 SYSTEMS :   1 OTHER AIR HANDLING EQUIPMENT(TRANE RAUC GO TON CONDENSING UNIT) . ELECTRICAL WORK UNDER THIS PERMIT = NO . LOCATIONS: 0 RESIDENTIAL UNIT(S), 1 NON-RESIDENTIAL UNIT(S), EXTERIOR WORK,  GROUND LEVEL INSIDE A GATED/BRICK ENCLOSURE.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-6572",
 "date": "2026-08-25",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-69797",
+"summary": "Chicago Public Library(1659 W Melrose St)でエアハンドリング設備(Trane 製コンデンシングユニット)の修理・交換 $223k。"
+},
+{
 "date": "2026-08-25",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Chicago Public Library(400 S State St)の4階・10階でコンセント増設等の低圧電気修繕 $10k。"
 }
 ],
-"generated_at": "2026-10-02T10:32:25+00:00",
+"generated_at": "2026-10-02T12:30:39+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

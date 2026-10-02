@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": 0,
-"latest": "2026-09-28",
+"latest": "2026-10-01",
 "items": [
+{
+"id": "S-70428",
+"date": "2026-10-01",
+"applied": "2026-08-20",
+"state": "IL",
+"jurisdiction": "Highland Park",
+"address": "31 PARK AVE HIGHLAND PARK IL 60035",
+"permit_no": "ROW-2026-00479",
+"permit_type": "Right of Way Utility",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "ComEd が Highland Park 31 Park Ave 付近の湿地東側で電柱2本を交換する公共用地内工事(金額不明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ComEd proposes to replace two new utility poles east of the identified wetland in order to ensure reliable electrical service. Both pole replacements are within 30 feet of the wetland. Straw wattles will be installed around the pole replacements to limit sediment migration to the identified wetland.",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-67912",
 "date": "2026-09-28",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Highland Park): 未分類",
+"ref": "S-70428",
+"summary": "ComEd が Highland Park 31 Park Ave 付近の湿地東側で電柱2本を交換する公共用地内工事(金額不明)。"
+},
+{
 "date": "2026-09-28",
 "face": "permits",
 "title": "建設許可(Highland Park): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Highland Park East Park District によるイベント用テント設置許可(20'x40'、Oktoberfest、9月26日開催)。"
 }
 ],
-"generated_at": "2026-10-02T10:32:25+00:00",
+"generated_at": "2026-10-02T12:30:39+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

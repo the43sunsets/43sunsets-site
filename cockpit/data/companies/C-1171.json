@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 35000.0,
-"latest": "2026-08-13",
+"count": 3,
+"value_total": 50000.0,
+"latest": "2026-09-29",
 "items": [
+{
+"id": "S-69907",
+"date": "2026-09-29",
+"applied": "2026-07-31",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "400 E 107TH ST",
+"permit_no": "B200480990",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 7500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 400 E 107th St の通信鉄塔(モノポール)で既存通信設備を改修 $7,500。1 タワー上の 6 ボックス・機器を変更。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 6 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: MONOPOLE.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-69881",
+"date": "2026-09-29",
+"applied": "2026-07-31",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1823 N MONITOR AVE",
+"permit_no": "B200480909",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 7500.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 1823 N Monitor Ave のモノポール通信鉄塔で既存通信設備(6ボックス・1タワー)の改修 $7,500。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 6 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: MONOPOLE.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-5770",
 "date": "2026-08-13",
@@ -78,6 +126,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-69907",
+"summary": "Chicago 400 E 107th St の通信鉄塔(モノポール)で既存通信設備を改修 $7,500。1 タワー上の 6 ボックス・機器を変更。"
+},
+{
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-69881",
+"summary": "Chicago 1823 N Monitor Ave のモノポール通信鉄塔で既存通信設備(6ボックス・1タワー)の改修 $7,500。"
+},
+{
 "date": "2026-08-13",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +147,6 @@
 "summary": "Chicago 5330 W DIVISION ST で既存通信設備の改修(モノポールタワー、Vertical Bridge)、$35k。"
 }
 ],
-"generated_at": "2026-10-02T10:32:25+00:00",
+"generated_at": "2026-10-02T12:30:39+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 25,
-"value_total": 17649137.4,
-"latest": "2026-09-24",
+"count": 26,
+"value_total": 17714137.4,
+"latest": "2026-09-30",
 "items": [
+{
+"id": "S-70066",
+"date": "2026-09-30",
+"applied": "2026-09-30",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "900 E 57TH ST",
+"permit_no": "101089117",
+"permit_type": "PERMIT - ELEVATOR EQUIPMENT",
+"value": 65000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "University of Chicago(900 E 57th St)でエレベーター1基の巻上ケーブル・駆動シーブ・偏向シーブの交換 $65k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "REPLACEMENT OF HOIST CABLES, DRIVE SHEAVE AND DEFLECTOR SHEAVE ON ONE(1) 3500LB CAPACITY, 10-FLOOR, 400FPM, PASSENGER ELEVATOR(#1-129), PURSUANT TO THE SCOPE OF WORK SUBMITTED.(100245870)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-66766",
 "date": "2026-09-24",
@@ -651,6 +675,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-30",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-70066",
+"summary": "University of Chicago(900 E 57th St)でエレベーター1基の巻上ケーブル・駆動シーブ・偏向シーブの交換 $65k。"
+},
+{
 "date": "2026-09-24",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -826,6 +857,6 @@
 "summary": "Chicago University of Chicago Judd Lot 駐車場で既存400Aサービスに2回路追加、EV充電設備2区画を増設 $37.6k。"
 }
 ],
-"generated_at": "2026-10-02T10:32:25+00:00",
+"generated_at": "2026-10-02T12:30:39+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 8000000.0,
-"latest": "2026-07-16",
+"count": 3,
+"value_total": 50000000.0,
+"latest": "2026-09-30",
 "items": [
+{
+"id": "S-69995",
+"date": "2026-09-30",
+"applied": "2026-06-10",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "4717 S CALUMET AVE",
+"permit_no": "101084232",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 21000000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago Public Building Commission によるシニアセンター新築(2階建・地上駐車場・装飾フェンス等)の基礎・地中梁・地下埋設配管・造園工事 $21M。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SPR 2019 CBC - PBC/DFSS/2FM - #10030:  FOUNDATION, GRADE BEAMS, UNDERGROUND UTILITIES, AND LANDSCAPE. FOR NEW CONSTRUCTION OF A 2-STORY SENIOR CENTER TO INCLUDE AT-GRADE PARKING, ORNAMENTAL FENCING, TRASH ENCLOSURE AND ASSOCIATED SITE WORK AS PER PLANS. (OCCUPANCY GROUP: A-3 / TYPE IIB CONSTRUCTION)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-69872",
+"date": "2026-09-29",
+"applied": "2026-05-26",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "4717 S CALUMET AVE",
+"permit_no": "101081360",
+"permit_type": "PERMIT - NEW CONSTRUCTION",
+"value": 21000000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 4717 S Calumet Ave に2階建てシニアセンターを新築(杭工事のみの許可)$21M。39台分の駐車場・装飾フェンス・ごみ保管施設等の付帯工事を含む(A-3用途)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SPR 2019 CBC - PBC/DFSS/2FM - #10030:  PILES (VERTICAL PENETRATION) ONLY FOR NEW CONSTRUCTION OF A 2-STORY SENIOR CENTER TO INCLUDE AT-GRADE PARKING (39 AUTOMOBILE PARKING SPACES), ORNAMENTAL FENCING, TRASH ENCLOSURE AND ASSOCIATED SITE WORK AS PER PLANS. (OCCUPANCY GROUP: A-3 / TYPE IIB CONSTRUCTIO",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-236",
 "date": "2026-07-16",
@@ -78,6 +126,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-30",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-69995",
+"summary": "Chicago Public Building Commission によるシニアセンター新築(2階建・地上駐車場・装飾フェンス等)の基礎・地中梁・地下埋設配管・造園工事 $21M。"
+},
+{
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-69872",
+"summary": "Chicago 4717 S Calumet Ave に2階建てシニアセンターを新築(杭工事のみの許可)$21M。39台分の駐車場・装飾フェンス・ごみ保管施設等の付帯工事を含む(A-3用途)。"
+},
+{
 "date": "2026-07-16",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +147,6 @@
 "summary": "公園フィールドハウス(体育館付き)の新築 $8M。"
 }
 ],
-"generated_at": "2026-10-02T10:32:25+00:00",
+"generated_at": "2026-10-02T12:30:39+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

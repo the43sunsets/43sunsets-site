@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 8822000.0,
-"latest": "2026-09-11",
+"count": 5,
+"value_total": 11572000.0,
+"latest": "2026-09-29",
 "items": [
+{
+"id": "S-69983",
+"date": "2026-09-29",
+"applied": "2026-06-18",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1901 W MADISON ST",
+"permit_no": "101082925",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 2750000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "United Center(Chicago 1901 W Madison St)の駐車場・ロビー等改修許可の変更申請 $2.75M。屋上公園と歩道橋を撤去し3階レベルに駐車場を設置、エレベーターコア・MEP・電気等を改訂。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "DDS 2019 CBC.  REVISION TO PERMIT #101075068 TO UPDATE THE FOLLOWING: REVISED TO REMOVE ROOFTOP PARK AND PEDESTRIAN BRIDGE, REPLACED ROOFTOP PARK WITH PARKING ON LEVEL 3, ADDED PARKABLE RAMP FROM LEVEL 2 TO LEVEL 3, ADDED CURB CUT ON MADISON ST, REVISED PARKING LAYOUT AT ALL LEVELS, ADD PARKING GARA",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54585",
 "date": "2026-09-11",
@@ -150,6 +174,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-69983",
+"summary": "United Center(Chicago 1901 W Madison St)の駐車場・ロビー等改修許可の変更申請 $2.75M。屋上公園と歩道橋を撤去し3階レベルに駐車場を設置、エレベーターコア・MEP・電気等を改訂。"
+},
+{
 "date": "2026-09-11",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -178,6 +209,6 @@
 "summary": "6,000 席の音楽ホールを含む 2 階建て商業施設の基礎・躯体 $5M。"
 }
 ],
-"generated_at": "2026-10-02T10:32:25+00:00",
+"generated_at": "2026-10-02T12:30:39+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

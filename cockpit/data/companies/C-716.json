@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 140000.0,
-"latest": "2026-08-25",
+"count": 2,
+"value_total": 3640000.0,
+"latest": "2026-09-29",
 "items": [
+{
+"id": "S-69912",
+"date": "2026-09-29",
+"applied": "2026-09-18",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1 E WACKER DR",
+"permit_no": "101088152",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 3500000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 1 E Wacker Dr の既存オフィスビル32, 34, 35階の内装改修 $3.5M(間仕切り新設・機械電気配線・仕上げ工事)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF CERT 2019 CBRC: INTERIOR ALTERATIONS TO FLOORS 32, 34 & 35 AT EXISTING OFFICE BUILDING. WORK TO INCLUDE DEMO, NEW PARTITIONS, MECHANICAL, ELECTRICAL AND FINISHES. (1A CONSTRUCTION. B-BUSINESS USE)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-902",
 "date": "2026-08-25",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-69912",
+"summary": "Chicago 1 E Wacker Dr の既存オフィスビル32, 34, 35階の内装改修 $3.5M(間仕切り新設・機械電気配線・仕上げ工事)。"
+},
+{
 "date": "2026-08-25",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +116,6 @@
 "summary": "オフィスビル35階の選択的内装解体 $140k。"
 }
 ],
-"generated_at": "2026-10-02T10:32:25+00:00",
+"generated_at": "2026-10-02T12:30:39+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

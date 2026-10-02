@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 9,
-"value_total": 3115500.0,
-"latest": "2026-09-23",
+"count": 10,
+"value_total": 3120500.0,
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-69787",
+"date": "2026-09-28",
+"applied": "2026-09-22",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "337 E RANDOLPH ST",
+"permit_no": "B200512744",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 5000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago Park District によるGrant Park内の低電圧電気修繕 $5,000(コンセント1箇所の修理・改修)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: GRANT PARK.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-65905",
 "date": "2026-09-23",
@@ -270,6 +294,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-69787",
+"summary": "Chicago Park District によるGrant Park内の低電圧電気修繕 $5,000(コンセント1箇所の修理・改修)。"
+},
+{
 "date": "2026-09-23",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -333,6 +364,6 @@
 "summary": "Chicago 337 E Randolph St(公園地区)に、仮設プラットフォームリフト計7基(750lb級)を設置する昇降機設備許可。金額 $0。"
 }
 ],
-"generated_at": "2026-10-02T10:32:25+00:00",
+"generated_at": "2026-10-02T12:30:39+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
