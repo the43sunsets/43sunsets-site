@@ -2,7 +2,7 @@
 "id": "C-15063",
 "name": "RHD TWENTY20 LLC",
 "city": null,
-"state": null,
+"state": "OH",
 "entity_type": "spe",
 "industry": null,
 "made": null,
@@ -23,7 +23,7 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 4,
 "value_total": 0,
 "latest": "2026-09-29",
 "items": [
@@ -49,6 +49,78 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-1514",
+"date": "2026-08-24",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "5912 OLD HAMILTON RD",
+"permit_no": "FSUPC2628557",
+"permit_type": "Fire Suppression",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 5912 OLD HAMILTON RD の商業用Fire Suppression設備許可(MEP)。所有者・金額の記載なし、親工事の内容は本レコードのみでは不明。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Suppression / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-069",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2089",
+"date": "2026-07-31",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "5912 OLD HAMILTON RD",
+"permit_no": "MMEPC2630697",
+"permit_type": "Mechanical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 5912 Old Hamilton Rd の商業機械設備(MEP)許可。詳細情報なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-076",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2090",
+"date": "2026-07-31",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "5912 OLD HAMILTON RD",
+"permit_no": "FSUPC2627980",
+"permit_type": "Fire Suppression",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 5912 Old Hamilton Rd の商業消火設備許可(同一住所の関連許可)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Suppression / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-076",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -83,8 +155,29 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-70220",
 "summary": "Columbus 5912 Old Hamilton Rd の機械(MEP)設備に関する許可。金額・用途詳細は記録に記載なし。"
+},
+{
+"date": "2026-08-24",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1514",
+"summary": "Columbus 5912 OLD HAMILTON RD の商業用Fire Suppression設備許可(MEP)。所有者・金額の記載なし、親工事の内容は本レコードのみでは不明。"
+},
+{
+"date": "2026-07-31",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2089",
+"summary": "Columbus 5912 Old Hamilton Rd の商業機械設備(MEP)許可。詳細情報なし。"
+},
+{
+"date": "2026-07-31",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2090",
+"summary": "Columbus 5912 Old Hamilton Rd の商業消火設備許可(同一住所の関連許可)。"
 }
 ],
-"generated_at": "2026-10-02T15:00:43+00:00",
+"generated_at": "2026-10-03T08:29:54+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

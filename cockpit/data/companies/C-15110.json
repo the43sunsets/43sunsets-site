@@ -2,7 +2,7 @@
 "id": "C-15110",
 "name": "RED BRICK RENOVATIONS LLC",
 "city": null,
-"state": null,
+"state": "OH",
 "entity_type": "spe",
 "industry": null,
 "made": null,
@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 2000.0,
+"count": 3,
+"value_total": 59000.0,
 "latest": "2026-09-29",
 "items": [
 {
@@ -49,6 +49,54 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-24388",
+"date": "2026-09-01",
+"applied": "2026-07-17",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "3424 CARDIFF AV",
+"permit_no": "2026P06734",
+"permit_type": "Building",
+"value": 25000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 3424 Cardiff Av での増築 $25k(1-2-3 FM = 住宅系分類)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Addition / Building / 1-2-3 FM",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-8494",
+"date": "2026-08-13",
+"applied": "2026-07-07",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "3707 DAVENANT AV",
+"permit_no": "2026P06395",
+"permit_type": "Building",
+"value": 32000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 3707 DAVENANT AV で内容不明の小規模工事 $32.0k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Alteration / Building / 1-2-3 FM",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-016",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -83,8 +131,22 @@
 "title": "建設許可(Cincinnati): 未分類",
 "ref": "S-70172",
 "summary": "Cincinnati 3424 Cardiff Ave の配管工事許可 $2,000(1-2-3 家族住宅向け)。"
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-24388",
+"summary": "Cincinnati 3424 Cardiff Av での増築 $25k(1-2-3 FM = 住宅系分類)。"
+},
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8494",
+"summary": "Cincinnati 3707 DAVENANT AV で内容不明の小規模工事 $32.0k。"
 }
 ],
-"generated_at": "2026-10-02T15:00:43+00:00",
+"generated_at": "2026-10-03T08:29:54+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

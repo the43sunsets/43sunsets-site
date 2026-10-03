@@ -2,7 +2,7 @@
 "id": "C-15100",
 "name": "OH 303 MOB LLC",
 "city": null,
-"state": null,
+"state": "OH",
 "entity_type": "spe",
 "industry": null,
 "made": null,
@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
+"count": 5,
+"value_total": 35000.0,
 "latest": "2026-09-29",
 "items": [
 {
@@ -49,6 +49,102 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-1710",
+"date": "2026-08-13",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "303 E TOWN ST",
+"permit_no": "EMEPC2632463",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 303 E Town St で電気設備(MEP)の許可、詳細記載なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-072",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-1833",
+"date": "2026-08-10",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "303 E TOWN ST",
+"permit_no": "MMEPC2631912",
+"permit_type": "Mechanical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 303 E Town St の商業用機械設備許可(テナント不明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-073",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-1952",
+"date": "2026-08-05",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "303 E TOWN ST",
+"permit_no": "ALTC2612124",
+"permit_type": "Alteration",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 303 E TOWN ST で構造改修(商業、1,500SF)、$35k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 1500 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-015",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-2417",
+"date": "2026-07-17",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "303 E TOWN ST",
+"permit_no": "FALRC2628134",
+"permit_type": "Fire Alarm",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus 303 E Town St の商業物件で火災報知設備工事(用途不明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Alarm / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-080",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -83,8 +179,36 @@
 "title": "建設許可(Columbus): 未分類",
 "ref": "S-70205",
 "summary": "Columbus 303 E Town St の商業施設における防火設備(Fire Suppression)の増改築関連工事。金額記載なし。"
+},
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1710",
+"summary": "Columbus 303 E Town St で電気設備(MEP)の許可、詳細記載なし。"
+},
+{
+"date": "2026-08-10",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1833",
+"summary": "Columbus 303 E Town St の商業用機械設備許可(テナント不明)。"
+},
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1952",
+"summary": "Columbus 303 E TOWN ST で構造改修(商業、1,500SF)、$35k。"
+},
+{
+"date": "2026-07-17",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-2417",
+"summary": "Columbus 303 E Town St の商業物件で火災報知設備工事(用途不明)。"
 }
 ],
-"generated_at": "2026-10-02T15:00:43+00:00",
+"generated_at": "2026-10-03T08:29:54+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

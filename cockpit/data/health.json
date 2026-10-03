@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-02T15:00:51+00:00",
+ "generated_at": "2026-10-03T08:30:45+00:00",
  "checks": {
   "ucc_sync_mac": {
    "raw_db_synced_at": "2026-09-30T07:02:22+00:00",
-   "raw_db_age_h": 56.0,
+   "raw_db_age_h": 73.5,
    "last_status": {
     "ran_at": "2026-09-30T07:02:21Z",
     "ok": 0,
@@ -26,13 +26,13 @@
    "new_docs_text": 0
   },
   "permits_update_vps": {
-   "last_run_at": "2026-10-02T07:57:05Z",
-   "age_h": 7.1,
+   "last_run_at": "2026-10-03T08:01:48Z",
+   "age_h": 0.5,
    "state": "OK",
-   "last_day": "2026-10-02",
+   "last_day": "2026-10-03",
    "runs": 36,
-   "new_records": 969,
-   "fetched": 6422,
+   "new_records": 621,
+   "fetched": 6399,
    "errors": 0,
    "schedule": "02:00 America/Chicago"
   },
@@ -42,16 +42,16 @@
    "state": "OK"
   },
   "hiring_update_vps": {
-   "last_run_at": "2026-10-02T08:36:43+00:00",
-   "age_h": 6.4,
+   "last_run_at": "2026-10-03T08:18:28Z",
+   "age_h": 0.2,
    "state": "OK",
-   "open": 12181,
-   "new_records": 865,
+   "open": 12710,
+   "new_records": 1268,
    "schedule": "02:00 America/Chicago"
   },
   "subsidies_update_vps": {
-   "last_run_at": "2026-10-02T08:08:00Z",
-   "age_h": 6.9,
+   "last_run_at": "2026-10-03T08:13:50Z",
+   "age_h": 0.3,
    "state": "OK",
    "total": 21675,
    "new_records": 0,
@@ -59,17 +59,17 @@
    "errors": 0,
    "per_source": {
     "SRC-075": {
-     "last_ok_at": "2026-10-02T08:06:01Z",
+     "last_ok_at": "2026-10-03T08:11:51Z",
      "last_status": "ok",
      "new_raw": 0
     },
     "SRC-076": {
-     "last_ok_at": "2026-10-02T08:06:02Z",
+     "last_ok_at": "2026-10-03T08:11:51Z",
      "last_status": "ok",
      "new_raw": 0
     },
     "SRC-077": {
-     "last_ok_at": "2026-10-02T08:07:59Z",
+     "last_ok_at": "2026-10-03T08:13:48Z",
      "last_status": "ok",
      "new_raw": 0
     },
@@ -84,7 +84,7 @@
      "new_raw": 0
     },
     "SRC-082": {
-     "last_ok_at": "2026-10-02T08:08:00Z",
+     "last_ok_at": "2026-10-03T08:13:50Z",
      "last_status": "ok",
      "new_raw": 0
     }
@@ -93,32 +93,32 @@
   },
   "news_update_vps": {
    "last_run_at": "2026-10-02T10:30:02+00:00",
-   "age_h": 4.5,
+   "age_h": 22.0,
    "state": "OK",
-   "items_14d": 1894,
-   "relevant_14d": 379,
+   "items_14d": 1623,
+   "relevant_14d": 320,
    "schedule": "Mon/Wed/Fri 05:30 America/Chicago"
   },
   "watchdog": {
-   "last_run_at": "2026-10-02T08:40:06Z",
-   "age_h": 6.3,
+   "last_run_at": "2026-10-03T08:30:43Z",
+   "age_h": 0.0,
    "findings": 6,
    "state": "OK"
   },
   "foia_inbox": {
-   "last_run_at": "2026-10-02T12:31:44+00:00",
-   "age_h": 2.5,
-   "unreflected": 3,
-   "unreflected_over_24h": 0,
+   "last_run_at": "2026-10-03T08:15:01+00:00",
+   "age_h": 0.3,
+   "unreflected": 5,
+   "unreflected_over_24h": 3,
    "quarantined": 0,
    "reflected_weak": 9,
-   "state": "OK"
+   "state": "STALE"
   },
   "inbox_other": {
-   "external": 149,
-   "unmatched_72h": 1,
+   "external": 151,
+   "unmatched_72h": 0,
    "unread": 33,
-   "unread_over_24h": 32,
+   "unread_over_24h": 33,
    "noise": 30,
    "unread_human": 0,
    "unread_internal": 4,
@@ -141,7 +141,7 @@
      }
     },
     "0/future_date": {
-     "rows": 14,
+     "rows": 9,
      "reader": null,
      "terminal": "データ層に残す(未来日付)",
      "over_days": {
@@ -159,7 +159,7 @@
      }
     },
     "0/older": {
-     "rows": 2072,
+     "rows": 2140,
      "reader": null,
      "terminal": "データ層に残す(窓より古い)",
      "over_days": {
@@ -168,7 +168,7 @@
      }
     },
     "2a/pending_row_read": {
-     "rows": 8737,
+     "rows": 8935,
      "reader": "enrich/permit_read.py:select_inputs",
      "terminal": null,
      "over_days": {
@@ -186,7 +186,7 @@
      }
     },
     "2b/pending_row_read": {
-     "rows": 45417,
+     "rows": 45612,
      "reader": "enrich/permit_read.py:select_inputs",
      "terminal": null,
      "over_days": {
@@ -195,7 +195,7 @@
      }
     },
     "2c/pending_row_read": {
-     "rows": 12232,
+     "rows": 12397,
      "reader": "enrich/permit_read.py:select_inputs",
      "terminal": null,
      "over_days": {
@@ -262,7 +262,7 @@
    "days": 365,
    "stale": 0,
    "null": 0,
-   "elapsed_s": 15.6,
+   "elapsed_s": 15.4,
    "state": "OK"
   },
   "export_reasons": {
@@ -281,10 +281,10 @@
   },
   "ready": {
    "state": "OK",
-   "run_date": "2026-10-02",
-   "deadline_met": false,
+   "run_date": "2026-10-03",
+   "deadline_met": true,
    "faces": {
-    "permits": "complete",
+    "permits": "degraded",
     "ucc": "degraded",
     "subsidies": "degraded",
     "hiring": "degraded",
@@ -292,5 +292,5 @@
    }
   }
  },
- "overall": "OK"
+ "overall": "STALE"
 }
