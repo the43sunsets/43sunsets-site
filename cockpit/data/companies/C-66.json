@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 2500000.0,
-"latest": "2026-08-03",
+"count": 2,
+"value_total": 17500000.0,
+"latest": "2026-10-01",
 "items": [
+{
+"id": "S-70698",
+"date": "2026-10-01",
+"applied": "2026-06-17",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1700 W ADAMS ST",
+"permit_no": "101084556",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 15000000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 1700 W Adams St に2階建てプレキャストコンクリートの教会を新築 $15M(礼拝堂・保育エリア・事務所・ステージ裏方・物販付きロビーを含む)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "DDS 2019 CBC: CONSTRUCTION OF A NEW TWO STORY PRECAST CONCRETE CHURCH WITH AUDITORIUM SEATING, CHILD CARE AREAS, OFFICE SPACE, AND BACK-OF-HOUSE AREAS FOR STAGE AND ENTERTAINING, AND ENTRY LOBBY WITH RETAIL. ALL WORK AS PER PLANS. CONSTRUCTION TYPE IIA, OCCUPANCY A-2/A-3 ASSEMBLY AND E-2 EDUCATIONAL",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-521",
 "date": "2026-08-03",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-70698",
+"summary": "Chicago 1700 W Adams St に2階建てプレキャストコンクリートの教会を新築 $15M(礼拝堂・保育エリア・事務所・ステージ裏方・物販付きロビーを含む)。"
+},
+{
 "date": "2026-08-03",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +116,6 @@
 "summary": "教会新築の基礎工事 $2.5M。"
 }
 ],
-"generated_at": "2026-10-03T08:29:54+00:00",
+"generated_at": "2026-10-03T08:45:20+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

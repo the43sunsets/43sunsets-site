@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 10,
-"value_total": 24730182.0,
-"latest": "2026-09-22",
+"count": 11,
+"value_total": 30430182.0,
+"latest": "2026-10-01",
 "items": [
+{
+"id": "S-70772",
+"date": "2026-10-01",
+"applied": "2026-04-03",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "10000 W OHARE ST",
+"permit_no": "101079761",
+"permit_type": "PERMIT - NEW CONSTRUCTION",
+"value": 5700000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "O'Hare国際空港のサテライト2コンコース(コンコースE)ターミナルビル建設に伴うケーソン(垂直掘削)のみの許可 $5.7M。",
+"infer": "本体建築ではなく基礎工事段階の部分許可であり、空港旅客ターミナルの新設プロジェクトの一部(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "DDS 2019 CBC: CAISSONS ONLY (VERTICAL PENETRATION ONLY) PERMIT  FOR THE PROPOSED SATELLITE 2 CONCOURSE (CONCOURSE E) TERMINAL BUILDING AT O'HARE INTERNATIONAL AIRPORT (CONSTRUCTION TYPE IB, OCC GROUP A-2, A-3, F-1). CDA PROJECT NO. TAP 102.19, TAP 105.19, TAP 106.19, TAP 107.19. CONSULTANT REVIEWER:",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-65195",
 "date": "2026-09-22",
@@ -294,6 +318,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-70772",
+"summary": "O'Hare国際空港のサテライト2コンコース(コンコースE)ターミナルビル建設に伴うケーソン(垂直掘削)のみの許可 $5.7M。"
+},
+{
 "date": "2026-09-22",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -364,6 +395,6 @@
 "summary": "Chicago 11601 W TOUHY AVE(Hilton Chicago O'Hare)で既存回路の軽微な電気修理(コンセント1・照明1)。申請者: Liang, Shile / Chicago Department of Aviation。"
 }
 ],
-"generated_at": "2026-10-03T08:29:54+00:00",
+"generated_at": "2026-10-03T08:45:20+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

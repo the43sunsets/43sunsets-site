@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 82500.0,
-"latest": "2026-09-28",
+"count": 4,
+"value_total": 244000.0,
+"latest": "2026-09-30",
 "items": [
+{
+"id": "S-70804",
+"date": "2026-09-30",
+"applied": "2026-08-31",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "225 WILMER AV",
+"permit_no": "2026P08270",
+"permit_type": "Fire Protection Systems",
+"value": 161500.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 225 Wilmer Ave にて防火システム工事 $161.5k(F-1 用途)。所有者は City of Cincinnati。",
+"infer": "F-1(中危険度工場)用途だが申請者が自治体であり、公共施設内の付帯防火設備工事の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / F-1",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-69147",
 "date": "2026-09-28",
@@ -126,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-30",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-70804",
+"summary": "Cincinnati 225 Wilmer Ave にて防火システム工事 $161.5k(F-1 用途)。所有者は City of Cincinnati。"
+},
+{
 "date": "2026-09-28",
 "face": "permits",
 "title": "建設許可(Cincinnati): 未分類",
@@ -147,6 +178,6 @@
 "summary": "Cincinnati市所有の953 Eden Park Drにおける改修工事 $60k(用途区分A-5)。"
 }
 ],
-"generated_at": "2026-10-03T08:29:54+00:00",
+"generated_at": "2026-10-03T08:45:20+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -13,20 +13,43 @@
 "jp_basis": null,
 "master_checked_at": null,
 "master_status": {
-"state": "untargeted",
+"state": "queued",
 "reason": {
-"origins": [
-"permits"
-],
-"rule": "none"
+"origin": "permit",
+"rank": 1,
+"of": 1
 }
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 17500000.0,
-"latest": "2026-07-29",
+"count": 2,
+"value_total": 21173279.0,
+"latest": "2026-10-01",
 "items": [
+{
+"id": "S-70697",
+"date": "2026-10-01",
+"applied": "2026-04-10",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "250 E SUPERIOR ST",
+"permit_no": "101080617",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 3673279.0,
+"category": "医療施設",
+"confidence": "high",
+"summary": "Northwestern Memorial Healthcare の Prentice Building(250 E Superior St)下層コンコースを改修し、高線量放射線治療室・管理スイート・フードサービスエリアを新設 $3.67M(用途 B & I-2)。",
+"infer": "高線量放射線治療室の新設 = 放射線治療機器・遮蔽設備・専用空調の調達が伴う可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SPR 2019 CBC: INTERIOR ALTERATIONS TO EXISTING LOWER CONCOURSE OF THE PRENTICE BUILDING AT NMH FOR A NEW HIGH DOSE RADIATION SUITE, ADMIN SUITE & FOOD SERVICE AREA AS PER PLANS (OCCUPANCY B & I-2, TYPE IA CONSTRUCTION)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-470",
 "date": "2026-07-29",
@@ -78,6 +101,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Chicago): 医療施設",
+"ref": "S-70697",
+"summary": "Northwestern Memorial Healthcare の Prentice Building(250 E Superior St)下層コンコースを改修し、高線量放射線治療室・管理スイート・フードサービスエリアを新設 $3.67M(用途 B & I-2)。"
+},
+{
 "date": "2026-07-29",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +115,6 @@
 "summary": "新築予定地の地下基礎の解体撤去 $17.5M(病院キャンパス内)。"
 }
 ],
-"generated_at": "2026-10-03T08:29:54+00:00",
+"generated_at": "2026-10-03T08:45:20+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
