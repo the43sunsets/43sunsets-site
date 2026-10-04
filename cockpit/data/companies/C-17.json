@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 21173279.0,
-"latest": "2026-10-01",
+"count": 3,
+"value_total": 21467032.0,
+"latest": "2026-10-02",
 "items": [
+{
+"id": "S-71497",
+"date": "2026-10-02",
+"applied": "2026-09-17",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "541 N FAIRBANKS CT",
+"permit_no": "101087502",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 293753.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "既存高層オフィスビル(541 N Fairbanks Ct)の非公開区域にて、損傷した地下フィーダーに代わる新規オーバーヘッドフィーダー・消火ポンプ3台分の接続工事 $293,753。既存の事務所・小売用途に変更なし。",
+"infer": "病院法人所有だが対象建物はオフィス/リテール用途で医療機能の拡張ではなく、消火設備の配線修繕工事(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF-CERT 2019 CBRC: ***STRUCTURAL PEER REVIEW*** PROPOSED NEW OVERHEAD FEEDERS AND CONNECTIONS FOR (3) EXISTING FIRE PUMPS TO REPLACE THE EXISTING UNDERGROUND DAMAGED FEEDERS.  THE NEW OVERHEAD FEEDERS WILL REQUIRE CONCRETE ENCASEMENTS AND STRUCTURAL SUPPORT. WORK WILL TAKE PLACE IN THE NON-PUBLIC ",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-70697",
 "date": "2026-10-01",
@@ -99,6 +123,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-02",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-71497",
+"summary": "既存高層オフィスビル(541 N Fairbanks Ct)の非公開区域にて、損傷した地下フィーダーに代わる新規オーバーヘッドフィーダー・消火ポンプ3台分の接続工事 $293,753。既存の事務所・小売用途に変更なし。"
+},
+{
 "date": "2026-10-01",
 "face": "permits",
 "title": "建設許可(Chicago): 医療施設",
@@ -113,6 +144,6 @@
 "summary": "新築予定地の地下基礎の解体撤去 $17.5M(病院キャンパス内)。"
 }
 ],
-"generated_at": "2026-10-04T08:45:24+00:00",
+"generated_at": "2026-10-04T12:30:41+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
