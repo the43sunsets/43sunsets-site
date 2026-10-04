@@ -20,10 +20,35 @@
 },
 "faces": {
 "permits": {
-"count": 0,
+"count": 1,
 "value_total": 0,
-"latest": null,
-"items": []
+"latest": "2026-09-29",
+"items": [
+{
+"id": "S-68568",
+"date": "2026-09-29",
+"applied": "2026-08-31",
+"state": "IN",
+"jurisdiction": "Indiana/JEFFERSON",
+"address": "2753 Michigan Rd",
+"permit_no": "463778:2026-09-29",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Indiana Jefferson郡 2753 Michigan Rd で Super ATV の製造・倉庫施設に関する CDR リリース。金額・所有者の記載なし。",
+"infer": "ATV/UTV 部品メーカーの製造・倉庫施設拡張に関する許可の可能性(推論)。詳細な工事内容は本文からは不明。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Super ATV / Manufacturing & Warehouse",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
 },
 "ucc": {
 "count": 0,
@@ -233,6 +258,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Indiana/JEFFERSON): 未分類",
+"ref": "S-68568",
+"summary": "Indiana Jefferson郡 2753 Michigan Rd で Super ATV の製造・倉庫施設に関する CDR リリース。金額・所有者の記載なし。"
+},
+{
 "date": "2022-08-18",
 "face": "grants",
 "title": "助成(州・Indiana IEDC): 製造能力の増強",
@@ -275,6 +307,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

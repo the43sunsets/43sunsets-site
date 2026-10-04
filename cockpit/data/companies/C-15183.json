@@ -2,7 +2,7 @@
 "id": "C-15183",
 "name": "RICHARD J DALEY CENTER",
 "city": null,
-"state": null,
+"state": "IL",
 "entity_type": "public",
 "industry": null,
 "made": null,
@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 80000.0,
+"count": 3,
+"value_total": 105000.0,
 "latest": "2026-10-01",
 "items": [
 {
@@ -48,6 +48,54 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-69850",
+"date": "2026-09-28",
+"applied": "2026-09-03",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "50 W WASHINGTON ST",
+"permit_no": "B200510330",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 19000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 50 W Washington St の低層階にセキュリティ設備を設置する低電圧・通信電気工事 $19,000。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL SECURITY. SPECIFIC LOCATION: LOWER LEVEL.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-52367",
+"date": "2026-09-09",
+"applied": "2026-09-02",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "50 W WASHINGTON ST",
+"permit_no": "101087998",
+"permit_type": "PERMIT - ELEVATOR EQUIPMENT",
+"value": 6000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 50 W Washington St のビルでエレベーター4台(乗客用3台・貨物用1台)の巻上ケーブル交換 $6,000。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "REPLACEMENT OF HOIST CABLES ON ONE(1) 4000LB CAPACITY, 12-FLOOR, PASSENGER ELEVATOR(#6); ONE(1) 3500LB CAPACITY, 30-FLOOR, PASSENGER ELEVATOR(#11 JUDGE); ONE(1) 4000LB CAPACITY, 30-FLOOR, PASSENGER ELEVATOR(#20); AND ONE(1) 8000LB CAPACITY, 37-FLOOR, FREIGHT ELEVATOR(#29), PURSUANT TO THE SCOPE OF W",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01B5JKrVs3MKSaboGQuHfNsv",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +131,22 @@
 "title": "建設許可(Chicago): 未分類",
 "ref": "S-70748",
 "summary": "Richard J Daley Center(50 W Washington St)のプラザにて、既存2000アンペアサービスに回路を1つ追加する低圧電気工事 $80,000。"
+},
+{
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-69850",
+"summary": "Chicago 50 W Washington St の低層階にセキュリティ設備を設置する低電圧・通信電気工事 $19,000。"
+},
+{
+"date": "2026-09-09",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-52367",
+"summary": "Chicago 50 W Washington St のビルでエレベーター4台(乗客用3台・貨物用1台)の巻上ケーブル交換 $6,000。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

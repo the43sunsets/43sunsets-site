@@ -20,8 +20,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 96908.0,
+"count": 8,
+"value_total": 1057008.0,
 "latest": "2026-09-16",
 "items": [
 {
@@ -46,6 +46,170 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01DeZcrHnahcY1AvQRaz3JEK",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-58723",
+"date": "2026-09-15",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Hamilton County",
+"address": "6100 CENTER HILL AV , CINCINNATI OH 45232",
+"permit_no": "CIN-ELE-AST-24007-26S14",
+"permit_type": "Elevator Safety Test",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Test Submitted / Elevator Safety Test",
+"source_id": "SRC-024",
+"provenance": null
+},
+{
+"id": "S-8901",
+"date": "2026-08-28",
+"applied": "2026-08-28",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "6201 CENTER HILL AV",
+"permit_no": "2026P08236",
+"permit_type": "Building",
+"value": 75000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 6201 CENTER HILL AV の物件で改修工事 $75k(所有者情報なし)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Alteration / Building / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-009",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-8927",
+"date": "2026-08-28",
+"applied": "2026-08-28",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "301 E 6TH ST",
+"permit_no": "2026P08242",
+"permit_type": "HVAC",
+"value": 60000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "301 E 6TH ST で空調設備(RTU等)の更新・改修 $60k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "HVAC / HVAC / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-010",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-8831",
+"date": "2026-08-26",
+"applied": "2026-08-26",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "6100 CENTER HILL AV",
+"permit_no": "2026P08118",
+"permit_type": "Building",
+"value": 50000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 6100 Center Hill Av でAlteration(改修) $50.0k(用途区分B以外の詳細記述なし)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Alteration / Building / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-012",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-8647",
+"date": "2026-08-20",
+"applied": "2026-08-20",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "1 PROCTER AND GAMBLE PLAZA",
+"permit_no": "2026P08002",
+"permit_type": "Fire Protection Systems",
+"value": 100.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 1 PROCTER AND GAMBLE PLAZA の消防設備関連許可 $100(名目額)。項目は種別のみで内容欄に詳細なし。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-065",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-8618",
+"date": "2026-08-18",
+"applied": "2026-08-18",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "301 E 6TH ST",
+"permit_no": "2026P07859",
+"permit_type": "Building",
+"value": 75000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 301 E 6TH ST の物件で改修工事 $75k(所有者情報なし)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Alteration / Building / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-009",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-1044",
+"date": "2026-07-08",
+"applied": "2026-05-07",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "1 PROCTER AND GAMBLE PLZ",
+"permit_no": "2026P04211",
+"permit_type": "Building",
+"value": 700000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 1 Procter and Gamble Plz の建物改修(Alteration、B用途) $700k(所有者欄は null)。",
+"infer": "住所が P&G Plaza(本社)であることから同社関連施設の可能性があるが、内容は汎用の 'Alteration/Business' で生産設備の言及なし(推論)。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Alteration / Building / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-001",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -80,8 +244,57 @@
 "title": "建設許可(Cincinnati): 製造能力の増強",
 "ref": "S-60442",
 "summary": "Procter & Gamble の Cincinnati 施設(6090 Center Hill Ave)における消防設備工事 $96,908(B 用途)。"
+},
+{
+"date": "2026-09-15",
+"face": "permits",
+"title": "建設許可(Hamilton County): 未評価",
+"ref": "S-58723",
+"summary": null
+},
+{
+"date": "2026-08-28",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8901",
+"summary": "Cincinnati 6201 CENTER HILL AV の物件で改修工事 $75k(所有者情報なし)。"
+},
+{
+"date": "2026-08-28",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8927",
+"summary": "301 E 6TH ST で空調設備(RTU等)の更新・改修 $60k。"
+},
+{
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8831",
+"summary": "Cincinnati 6100 Center Hill Av でAlteration(改修) $50.0k(用途区分B以外の詳細記述なし)。"
+},
+{
+"date": "2026-08-20",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8647",
+"summary": "Cincinnati 1 PROCTER AND GAMBLE PLAZA の消防設備関連許可 $100(名目額)。項目は種別のみで内容欄に詳細なし。"
+},
+{
+"date": "2026-08-18",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8618",
+"summary": "Cincinnati 301 E 6TH ST の物件で改修工事 $75k(所有者情報なし)。"
+},
+{
+"date": "2026-07-08",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-1044",
+"summary": "Cincinnati 1 Procter and Gamble Plz の建物改修(Alteration、B用途) $700k(所有者欄は null)。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

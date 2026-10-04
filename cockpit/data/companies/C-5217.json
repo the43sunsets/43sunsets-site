@@ -20,10 +20,35 @@
 },
 "faces": {
 "permits": {
-"count": 0,
+"count": 1,
 "value_total": 0,
-"latest": null,
-"items": []
+"latest": "2026-09-16",
+"items": [
+{
+"id": "S-68360",
+"date": "2026-09-16",
+"applied": "2026-08-20",
+"state": "IN",
+"jurisdiction": "Indiana/ELKHART",
+"address": "66216 US Highway 33",
+"permit_no": "463578:2026-09-16",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Elkhart の Forest River 施設(66216 US Highway 33)で「Guard Shack(警備小屋)」の CDR リリース。金額・所有者情報なし。",
+"infer": "Forest River はRV(レクリエーショナルビークル)製造大手であり、施設敷地内の警備小屋設置は本体の生産能力拡張ではない可能性(推論)。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Forest River Guard Shack",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
 },
 "ucc": {
 "count": 0,
@@ -383,6 +408,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Indiana/ELKHART): 未分類",
+"ref": "S-68360",
+"summary": "Elkhart の Forest River 施設(66216 US Highway 33)で「Guard Shack(警備小屋)」の CDR リリース。金額・所有者情報なし。"
+},
+{
 "date": "2024-03-27",
 "face": "grants",
 "title": "助成(州・Indiana IEDC): 未分類",
@@ -460,6 +492,6 @@
 "summary": "インディアナ州IEDCがForest River, Inc.(RV/レジャー車両メーカー)に対しEDGE税額控除$2.73Mを承認、予定投資額$7.73M・新規雇用445人。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

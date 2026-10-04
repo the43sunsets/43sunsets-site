@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
+"count": 2,
+"value_total": 13220.0,
 "latest": "2026-09-15",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01Lv42GwnYquNdatWsieoun7",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-29360",
+"date": "2026-09-03",
+"applied": "2026-07-29",
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "4500 E FILAGER RD BATAVIA OH",
+"permit_no": "B-076628-2026",
+"permit_type": "Commercial Alteration Permit",
+"value": 13220.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Clermont County の 4500 E Filager Rd で商業改修許可「FILAGER POWER GATE」、金額不明・所有者不明。",
+"infer": "名称から電力関連の可能性(推論)だが本文情報が乏しく用途特定不可。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "FILAGER POWER GATE / Commercial Alteration Permit / Alteration",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Clermont County): 未分類",
 "ref": "S-58468",
 "summary": "Clermont County (Batavia OH, 4011 Filager Rd) の「旧 CTC ビル」で電気設備の更新工事(金額不明)。"
+},
+{
+"date": "2026-09-03",
+"face": "permits",
+"title": "建設許可(Clermont County): 未分類",
+"ref": "S-29360",
+"summary": "Clermont County の 4500 E Filager Rd で商業改修許可「FILAGER POWER GATE」、金額不明・所有者不明。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

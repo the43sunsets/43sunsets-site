@@ -1,0 +1,121 @@
+{
+"id": "C-15503",
+"name": "ROOSEVELT COLLECTIONS",
+"city": null,
+"state": null,
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"master_status": {
+"state": "untargeted",
+"reason": {
+"origins": [
+"permits"
+],
+"rule": "none"
+}
+},
+"faces": {
+"permits": {
+"count": 2,
+"value_total": 10000.0,
+"latest": "2026-09-28",
+"items": [
+{
+"id": "S-69742",
+"date": "2026-09-28",
+"applied": "2026-09-10",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "150 W ROOSEVELT RD",
+"permit_no": "B200511106",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 150 W Roosevelt Rd の既存スイッチギア室で 400A 電気幹線工事 $10k(18 回路の新設ディスコネクト)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. NEW PERMANENT 400 AMP SERVICE DISCONNECTING MEANS WITH 18 CIRCUITS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: EXISTING SWITCHGEAR ROOM.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-66020",
+"date": "2026-09-23",
+"applied": "2026-09-23",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "150 W ROOSEVELT RD",
+"permit_no": "101088891",
+"permit_type": "PERMIT - REINSTATE REVOKED PMT",
+"value": 0.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Chicago 150 W Roosevelt Rd の失効許可(No. 101072112)を再有効化する手続き。金額 $0、2027年10月までに着工・検査依頼が必要。",
+"infer": "元の許可内容が不明で用途・規模を推定できない(推論不可)。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "REINSTATE PERMIT NO 101072112 MUST BEGIN WORK AND OR REQUEST INSPECTION NO LATER THAN ***OCTOBER 2027*** ON PERMIT NO 101072112",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01662kdZo8KYBxtpVwwCDd2A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "該当なし",
+"count": 0,
+"note": "この会社の採用ページは当社の網に無い(公開 API を持つ ATS が見つからない、または求人 0)。"
+},
+"grants": {
+"status": "該当なし",
+"count": 0,
+"note": "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。"
+},
+"news": {
+"status": "該当なし",
+"count": 0,
+"note": "直近のニュース(景気の状況で収集する米製造業・5 州のニュース)にこの会社は出ていない。"
+}
+},
+"timeline": [
+{
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-69742",
+"summary": "Chicago 150 W Roosevelt Rd の既存スイッチギア室で 400A 電気幹線工事 $10k(18 回路の新設ディスコネクト)。"
+},
+{
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-66020",
+"summary": "Chicago 150 W Roosevelt Rd の失効許可(No. 101072112)を再有効化する手続き。金額 $0、2027年10月までに着工・検査依頼が必要。"
+}
+],
+"generated_at": "2026-10-04T08:35:52+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

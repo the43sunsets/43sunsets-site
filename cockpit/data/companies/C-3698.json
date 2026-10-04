@@ -23,10 +23,78 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 20000.0,
-"latest": "2026-07-28",
+"count": 5,
+"value_total": 145000.0,
+"latest": "2026-09-23",
 "items": [
+{
+"id": "S-69121",
+"date": "2026-09-23",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Rockford",
+"address": "E 1415 STATE",
+"permit_no": "MULCOM20261749",
+"permit_type": "Multifamily/Commercial Permits",
+"value": 20000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Rockford E 1415 State の既存屋上無線設備で Verizon の機器改修 $20,000。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "WIRELESS COMMUNICATION-ROOFTOP / Existing Wireless Facility/Rooftop Verizon proposed equipment modification. / REMALTCOMM",
+"source_id": "SRC-002",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-67673",
+"date": "2026-09-22",
+"applied": "2026-07-18",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "3135 BEREA RD, CLEVELAND, OH, 44111",
+"permit_no": "BCE26-029760",
+"permit_type": "Commercial Electrical",
+"value": 5000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 3135 Berea Rd の Verizon サイトで200アンペアの地下受電サービスを新設する電気工事 $5,000。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial Electrical / U Utility - Miscellaneous / SERVICE UPGRADE: Install 200 Amp Underground Service for Verizon site ***BUILDING PERMIT NO BCB26-036275***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-33075",
+"date": "2026-09-04",
+"applied": "2026-09-03",
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "",
+"permit_no": "ROW26-0920",
+"permit_type": "Right-of-Way - Telecommunications with a METRO Act Permit",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Install new underground Verizon 12-fiber optic cable in new 2” conduit by directional bore in ROW for 410’ along Research Park Dr north of Ellsworth Rd – To provide upgraded fiber service to Verizon customer at 3965 Research Park Dr. / Right-of-Way - Telecommunications with a METRO Act Permit / Tele",
+"source_id": "SRC-022",
+"provenance": null
+},
 {
 "id": "S-26994",
 "date": "2026-07-28",
@@ -49,6 +117,30 @@
 "policy": "v2-2026-09-05-highflow-filter",
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-163",
+"date": "2026-07-14",
+"applied": "2026-05-18",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "10000 W OHARE ST",
+"permit_no": "101080332",
+"permit_type": "PERMIT - NEW CONSTRUCTION",
+"value": 100000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicagoの10000 W OHARE STで改修工事を実施(詳細不明) $100k。申請者/所有者: MICHAEL MCMURRAY。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "VERIZON NEW SITE BUILD - NAME: AIRPORT HANGAR - E. SITE NUMBER: 50003608791. INSTALLATION OF (1) NEW LESSEE H-FRAME & EQUIPMENT ON ROOFTOP2. INSTALLATION OF (3) NEW ANTENNA MOUNTS ON ROOFTOP3. INSTALLATION OF (4) NEW LESSEE ANTENNAS4. INSTALLATION OF (4) NEW LESSEE ANTENNAS W/INTEGRATED RADIOS5. INS",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-008",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -78,13 +170,41 @@
 },
 "timeline": [
 {
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Rockford): 未分類",
+"ref": "S-69121",
+"summary": "Rockford E 1415 State の既存屋上無線設備で Verizon の機器改修 $20,000。"
+},
+{
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-67673",
+"summary": "Cleveland 3135 Berea Rd の Verizon サイトで200アンペアの地下受電サービスを新設する電気工事 $5,000。"
+},
+{
+"date": "2026-09-04",
+"face": "permits",
+"title": "建設許可(Ann Arbor): 未評価",
+"ref": "S-33075",
+"summary": null
+},
+{
 "date": "2026-07-28",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-26994",
 "summary": "Cleveland 10524 Euclid Ave の屋上に既存 Verizon アンテナ・通信設備の外装改修 $20k(使用承認不要)。"
+},
+{
+"date": "2026-07-14",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-163",
+"summary": "Chicagoの10000 W OHARE STで改修工事を実施(詳細不明) $100k。申請者/所有者: MICHAEL MCMURRAY。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

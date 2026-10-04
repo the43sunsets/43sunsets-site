@@ -23,10 +23,30 @@
 },
 "faces": {
 "permits": {
-"count": 9,
-"value_total": 62513.0,
-"latest": "2026-08-20",
+"count": 13,
+"value_total": 140701.0,
+"latest": "2026-08-27",
 "items": [
+{
+"id": "S-73214",
+"date": "2026-08-27",
+"applied": null,
+"state": "IL",
+"jurisdiction": "La Grange",
+"address": "728 S WAIOLA AVE, LA GRANGE, ,LA GRANGE, IL 60525",
+"permit_no": "RB-26-289",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 10831.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "ADD 61 FEET OF INTERIOR DRAIN TILE / RESIDENTIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
+"source_id": "SRC-021",
+"provenance": null
+},
 {
 "id": "S-62981",
 "date": "2026-08-20",
@@ -50,6 +70,26 @@
 "batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-72679",
+"date": "2026-08-20",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Orland Park",
+"address": "9877 145TH PLACE, ORLAND PARK, IL 60462",
+"permit_no": "PLU-26-0206",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 4521.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "28 FEET OF INTERIOR DRAIN TILE 1/2 HP SUMP PUMP EXISTING BASIN AND DISCHARGE / RESIDENTIAL PERMIT / OTHER - REMODELING",
+"source_id": "SRC-021",
+"provenance": null
 },
 {
 "id": "S-62657",
@@ -76,6 +116,26 @@
 }
 },
 {
+"id": "S-71839",
+"date": "2026-08-10",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Orland Park",
+"address": "14255 BRIGHTON COURT, ORLAND PARK, IL 60462",
+"permit_no": "PLU-26-0211",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 7891.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "EXTERIOR SEWER LINE REPAIR - BREAK BEGINS WITHIN 1 FOOT OF HOME REPLACE UP TO 10 LINEAL FEET OF PIPE SDR 26 AND INSTALL A FULL SIZE CLEANOUT. / RESIDENTIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
+"source_id": "SRC-021",
+"provenance": null
+},
+{
 "id": "S-23016",
 "date": "2026-08-07",
 "applied": null,
@@ -98,6 +158,26 @@
 "batch": "session-0903-003",
 "model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
 }
+},
+{
+"id": "S-71722",
+"date": "2026-08-07",
+"applied": null,
+"state": "IL",
+"jurisdiction": "La Grange",
+"address": "50 S LA GRANGE RD, LA GRANGE, LA GRANGE, IL 60525",
+"permit_no": "NRB-26-26",
+"permit_type": "COMMERCIAL PERMIT",
+"value": 54945.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "SUPPLEMENTAL FLOOR SUPPORT AND CRAWL ENCAPSULATION / COMMERCIAL PERMIT / REMODELING - INTERIOR ONLY",
+"source_id": "SRC-021",
+"provenance": null
 },
 {
 "id": "S-23015",
@@ -270,11 +350,25 @@
 },
 "timeline": [
 {
+"date": "2026-08-27",
+"face": "permits",
+"title": "建設許可(La Grange): 未評価",
+"ref": "S-73214",
+"summary": null
+},
+{
 "date": "2026-08-20",
 "face": "permits",
 "title": "建設許可(Tinley Park): 未分類",
 "ref": "S-62981",
 "summary": "住宅の基礎クラック補修3件とエリアウェル交換工事 $8,467。"
+},
+{
+"date": "2026-08-20",
+"face": "permits",
+"title": "建設許可(Orland Park): 未評価",
+"ref": "S-72679",
+"summary": null
 },
 {
 "date": "2026-08-11",
@@ -284,11 +378,25 @@
 "summary": "Tinley Park の住宅で防雪シールド・雨どいガード設置の外装工事 $4,654。"
 },
 {
+"date": "2026-08-10",
+"face": "permits",
+"title": "建設許可(Orland Park): 未評価",
+"ref": "S-71839",
+"summary": null
+},
+{
 "date": "2026-08-07",
 "face": "permits",
 "title": "建設許可(Geneva): 未分類",
 "ref": "S-23016",
 "summary": "Geneva 1527 Kirkwood Dr で基礎補修工事($14.6k)。 申請者/所有者: Perma Seal Basement Systems。"
+},
+{
+"date": "2026-08-07",
+"face": "permits",
+"title": "建設許可(La Grange): 未評価",
+"ref": "S-71722",
+"summary": null
 },
 {
 "date": "2026-08-06",
@@ -333,6 +441,6 @@
 "summary": "River Forest 1530 ASHLAND AVE、Perma-Seal Basement Systems, Inc. による住宅の外部下水浸水対策工事(排水槽・排水ポンプ・逆流防止弁・専用20A回路・凍結防止散水栓)。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

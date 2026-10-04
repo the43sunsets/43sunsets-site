@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 378150.0,
+"count": 4,
+"value_total": 1108028.0,
 "latest": "2026-09-08",
 "items": [
 {
@@ -52,6 +52,26 @@
 }
 },
 {
+"id": "S-50074",
+"date": "2026-09-08",
+"applied": "2026-09-02",
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "2992 S Main St Ann Arbor MI 48103",
+"permit_no": "ELECC26-1434",
+"permit_type": "Electrical (Commercial) -  General",
+"value": 200000.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "PNC Bank Renovation to Include: Power, Lighting, Manual Transfer Switch, Low Voltage (Fire Alarm by others). / Electrical (Commercial) -  General / General",
+"source_id": "SRC-022",
+"provenance": null
+},
+{
 "id": "S-16747",
 "date": "2026-08-20",
 "applied": "2026-08-17",
@@ -73,6 +93,30 @@
 "policy": "v1-2026-09-02-all",
 "batch": "session-003",
 "model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-24691",
+"date": "2026-08-19",
+"applied": "2026-07-21",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "1308 S NAPER BL",
+"permit_no": "COMM-0386-2026",
+"permit_type": "COMMERCIAL BUILDING ALTERATION",
+"value": 529878.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "PNC Bank 支店のトイレバリアフリー化・新規造作・仕上げ更新 $529,878(3,450 SQFT)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Minor interior alteration include accessibility upgrades to toilet room  new millwork and new finishes.PNC Bank / COMMERCIAL BUILDING ALTERATION / COMMERCIAL / 3450 SQFT",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0904-hv",
+"model": "claude-sonnet-5 (subagent, subscription session, foreground 11.5min)"
 }
 }
 ]
@@ -109,13 +153,27 @@
 "summary": "PNC Bank(10701 S Western Ave)の外壁で目地補修・組積補修 200 SQ. FT.、$10,500 のエクスプレス許可。"
 },
 {
+"date": "2026-09-08",
+"face": "permits",
+"title": "建設許可(Ann Arbor): 未評価",
+"ref": "S-50074",
+"summary": null
+},
+{
 "date": "2026-08-20",
 "face": "permits",
 "title": "建設許可(Park Ridge): 未分類",
 "ref": "S-16747",
 "summary": "Park Ridge 607 DEVON AVE PARK RIDGE IL 60068 での「Commercial Roofing」$368k。"
+},
+{
+"date": "2026-08-19",
+"face": "permits",
+"title": "建設許可(Naperville): 未分類",
+"ref": "S-24691",
+"summary": "PNC Bank 支店のトイレバリアフリー化・新規造作・仕上げ更新 $529,878(3,450 SQFT)。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

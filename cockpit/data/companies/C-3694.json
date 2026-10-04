@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
-"latest": "2026-09-01",
+"count": 5,
+"value_total": 250000.0,
+"latest": "2026-09-22",
 "items": [
+{
+"id": "S-68495",
+"date": "2026-09-22",
+"applied": "2026-06-16",
+"state": "IN",
+"jurisdiction": "Indiana/VANDERBURGH",
+"address": "7929 E Division St",
+"permit_no": "462158:2026-09-22",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Vanderburgh郡 7929 E Division St における Texas Roadhouse レストランの CDR release(金額不明)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Texas Roadhouse / Restaurant",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-34838",
 "date": "2026-09-01",
@@ -49,6 +73,70 @@
 "policy": "v2-2026-09-05-highflow-filter",
 "batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-34837",
+"date": "2026-09-01",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Butler County",
+"address": "7309 KINGSGATE WAY, OH",
+"permit_no": "BLD-EZ26-03713",
+"permit_type": "Commercial Electric",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "ELECTRIC FOR ADDITION- TEXAS ROADHOUSE / IN PROGRESS / Commercial Electric",
+"source_id": "SRC-024",
+"provenance": null
+},
+{
+"id": "S-34836",
+"date": "2026-09-01",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Butler County",
+"address": "7309 KINGSGATE WAY, OH",
+"permit_no": "BLD-HC26-03714",
+"permit_type": "Commercial HVAC and Gas Piping",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "HVAC FOR ADDITION- TEXAS ROADHOUSE / IN PROGRESS / Commercial HVAC and Gas Piping",
+"source_id": "SRC-024",
+"provenance": null
+},
+{
+"id": "S-1019",
+"date": "2026-07-06",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Rockford",
+"address": "7240 WALTON",
+"permit_no": "MULCOM20261553",
+"permit_type": "Multifamily/Commercial Permits",
+"value": 250000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Rockford 7240 WALTON の駐車場・外構工事 $250k。 所有者/申請者: TEXAS ROADHOUSE PARKING LOT。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "TEXAS ROADHOUSE PARKING LOT / Parking lot addition for the existing Texas Roadhouse restaurant that is located at 7240 Walton St Rockford IL 61108. The proposed parking lot addition is estimated to be +/ 0.76Acres in size (58additional parking spaces). / PARKLOT",
+"source_id": "SRC-002",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-004",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -78,13 +166,41 @@
 },
 "timeline": [
 {
+"date": "2026-09-22",
+"face": "permits",
+"title": "建設許可(Indiana/VANDERBURGH): 未分類",
+"ref": "S-68495",
+"summary": "Vanderburgh郡 7929 E Division St における Texas Roadhouse レストランの CDR release(金額不明)。"
+},
+{
 "date": "2026-09-01",
 "face": "permits",
 "title": "建設許可(Butler County): 未分類",
 "ref": "S-34838",
 "summary": "Butler County 7309 Kingsgate Way でテキサスロードハウス(飲食店)の増築工事(基礎・シェル・TF)。金額不明。"
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Butler County): 未評価",
+"ref": "S-34837",
+"summary": null
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Butler County): 未評価",
+"ref": "S-34836",
+"summary": null
+},
+{
+"date": "2026-07-06",
+"face": "permits",
+"title": "建設許可(Rockford): 未分類",
+"ref": "S-1019",
+"summary": "Rockford 7240 WALTON の駐車場・外構工事 $250k。 所有者/申請者: TEXAS ROADHOUSE PARKING LOT。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

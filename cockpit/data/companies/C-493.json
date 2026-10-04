@@ -23,10 +23,162 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 8,
 "value_total": 300000.0,
-"latest": "2026-08-21",
+"latest": "2026-09-30",
 "items": [
+{
+"id": "S-69311",
+"date": "2026-09-30",
+"applied": "2026-09-29",
+"state": "IN",
+"jurisdiction": "Indiana/MARION",
+"address": "6159 N Keystone Ave",
+"permit_no": "464400:2026-09-30",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Indiana/Marion郡 6159 N Keystone Ave の Jersey Mike's Subs に関する CDR release(許可関連書類)。金額・所有者情報なし。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Jersey Mike's Subs",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-68504",
+"date": "2026-09-24",
+"applied": "2026-09-11",
+"state": "IN",
+"jurisdiction": "Indiana/ALLEN",
+"address": "416 W Coliseum Blvd",
+"permit_no": "464029:2026-09-24",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Jersey Mike's Subs のレストランに関する CDR release(金額不明)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Jersey Mike's Subs / Restaurant",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-33444",
+"date": "2026-08-25",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Montgomery County",
+"address": "6704 COMMERCE CENTER Dr DAYTON, OH 45414",
+"permit_no": "ELEC26-0428",
+"permit_type": "Commercial Electrical Permit",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Tenant finish for Jersey Mike's Subs / Commercial Electrical Permit / (BUTLER TOWNSHIP)",
+"source_id": "SRC-024",
+"provenance": null
+},
+{
+"id": "S-33407",
+"date": "2026-08-25",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Montgomery County",
+"address": "6704 COMMERCE CENTER Dr DAYTON, OH 45414",
+"permit_no": "BLDC26-0292",
+"permit_type": "Commercial Building",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "既存テナント区画での Jersey Mike's Subs のテナント内装工事(前テナントは Subway)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Jersey Mike's Subs Tenant Finish in an existing tenant space. Previous tenant was a sub-shop for Subway / Commercial Building / (BUTLER TOWNSHIP)",
+"source_id": "SRC-024",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-33446",
+"date": "2026-08-25",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Montgomery County",
+"address": "6704 COMMERCE CENTER Dr DAYTON, OH 45414",
+"permit_no": "GASC26-0120",
+"permit_type": "Commercial Gas Piping Permit",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Tenant Finish for Jersey Mike's Subs / Commercial Gas Piping Permit / (BUTLER TOWNSHIP)",
+"source_id": "SRC-024",
+"provenance": null
+},
+{
+"id": "S-33445",
+"date": "2026-08-25",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Montgomery County",
+"address": "6704 COMMERCE CENTER Dr DAYTON, OH 45414",
+"permit_no": "HOOD26-0009",
+"permit_type": "Hood / Paint Booth Permit",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Tenant Finish for Jersey mike's subs / Hood / Paint Booth Permit / (BUTLER TOWNSHIP)",
+"source_id": "SRC-024",
+"provenance": null
+},
+{
+"id": "S-33447",
+"date": "2026-08-25",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Montgomery County",
+"address": "6704 COMMERCE CENTER Dr DAYTON, OH 45414",
+"permit_no": "MECC26-0211",
+"permit_type": "Commercial Mechanical Permit",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Tenant Finish for Jersey Mike's Subs / Commercial Mechanical Permit / (BUTLER TOWNSHIP)",
+"source_id": "SRC-024",
+"provenance": null
+},
 {
 "id": "S-18553",
 "date": "2026-08-21",
@@ -78,6 +230,55 @@
 },
 "timeline": [
 {
+"date": "2026-09-30",
+"face": "permits",
+"title": "建設許可(Indiana/MARION): 未分類",
+"ref": "S-69311",
+"summary": "Indiana/Marion郡 6159 N Keystone Ave の Jersey Mike's Subs に関する CDR release(許可関連書類)。金額・所有者情報なし。"
+},
+{
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Indiana/ALLEN): 未分類",
+"ref": "S-68504",
+"summary": "Jersey Mike's Subs のレストランに関する CDR release(金額不明)。"
+},
+{
+"date": "2026-08-25",
+"face": "permits",
+"title": "建設許可(Montgomery County): 未評価",
+"ref": "S-33444",
+"summary": null
+},
+{
+"date": "2026-08-25",
+"face": "permits",
+"title": "建設許可(Montgomery County): 未分類",
+"ref": "S-33407",
+"summary": "既存テナント区画での Jersey Mike's Subs のテナント内装工事(前テナントは Subway)。"
+},
+{
+"date": "2026-08-25",
+"face": "permits",
+"title": "建設許可(Montgomery County): 未評価",
+"ref": "S-33446",
+"summary": null
+},
+{
+"date": "2026-08-25",
+"face": "permits",
+"title": "建設許可(Montgomery County): 未評価",
+"ref": "S-33445",
+"summary": null
+},
+{
+"date": "2026-08-25",
+"face": "permits",
+"title": "建設許可(Montgomery County): 未評価",
+"ref": "S-33447",
+"summary": null
+},
+{
 "date": "2026-08-21",
 "face": "permits",
 "title": "建設許可(Niles): 未分類",
@@ -85,6 +286,6 @@
 "summary": "Niles 7201 W DEMPSTER ST Unit: B NILES IL 60714 での「Certificate of Occupancy - Certificate of Occupancy」$300k。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

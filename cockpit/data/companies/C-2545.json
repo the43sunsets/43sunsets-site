@@ -23,10 +23,82 @@
 },
 "faces": {
 "permits": {
-"count": 4,
+"count": 7,
 "value_total": 0,
-"latest": "2026-08-24",
+"latest": "2026-09-23",
 "items": [
+{
+"id": "S-65329",
+"date": "2026-09-23",
+"applied": "2026-08-26",
+"state": "IL",
+"jurisdiction": "Arlington Heights",
+"address": "706 S MITCHELL AVE ARLINGTON HEIGHTS IL 60005",
+"permit_no": "PWUU2026-00084",
+"permit_type": "Utility Underground - Public ROW",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Nicor Gas が 706 S Mitchell Ave(Arlington Heights)へ 1/2インチ PE ガス配管を新設する公道内ユーティリティ工事(NCP-2804899)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Nicor Gas to install 1/2\"PE gas service line to 706 S Mitchell Ave; NCP-2804899. Nicor to use their own crew / Utility Underground - Public ROW / Public ROW",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-65326",
+"date": "2026-09-23",
+"applied": "2026-08-26",
+"state": "IL",
+"jurisdiction": "Arlington Heights",
+"address": "704 S MITCHELL AVE ARLINGTON HEIGHTS IL 60005",
+"permit_no": "PWUU2026-00085",
+"permit_type": "Utility Underground - Public ROW",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Nicor Gas が Arlington Heights 704 S Mitchell Ave にガス供給線(1/2インチPE管)を敷設する公道占用工事(自社クルー使用)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Nicor Gas to install 1/2\"PE gas service line to 704 S Mitchell Ave, NCP-2804854. Nicor will use their own crew. / Utility Underground - Public ROW / Public ROW",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-59134",
+"date": "2026-09-16",
+"applied": "2026-09-03",
+"state": "IL",
+"jurisdiction": "Palatine",
+"address": "286 W PRESTWICK ST Palatine IL 60067",
+"permit_no": "ROW-026504-2026",
+"permit_type": "Right of Way Work Permit",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Palatine 286 W Prestwick St 付近でガス本管(2インチ PE、約652フィート)とボーリング約623フィートを敷設する道路占用工事許可。Nicor Gas が関連。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Installation of gas main and extensions - Please refer to design - WO 1616113/3616113 \nInstall approx. 652' of 2\" PE gas main and approx. 623' of 2\" boring\nOpenings/Tap Holes (4) 5x5 Location: Arcadia St., and W. Michigan Ave. at the pavement // core vac will be needed road impacted Arcadia & Michig",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-25331",
 "date": "2026-08-24",
@@ -150,6 +222,27 @@
 },
 "timeline": [
 {
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Arlington Heights): 未分類",
+"ref": "S-65329",
+"summary": "Nicor Gas が 706 S Mitchell Ave(Arlington Heights)へ 1/2インチ PE ガス配管を新設する公道内ユーティリティ工事(NCP-2804899)。"
+},
+{
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Arlington Heights): 未分類",
+"ref": "S-65326",
+"summary": "Nicor Gas が Arlington Heights 704 S Mitchell Ave にガス供給線(1/2インチPE管)を敷設する公道占用工事(自社クルー使用)。"
+},
+{
+"date": "2026-09-16",
+"face": "permits",
+"title": "建設許可(Palatine): 未分類",
+"ref": "S-59134",
+"summary": "Palatine 286 W Prestwick St 付近でガス本管(2インチ PE、約652フィート)とボーリング約623フィートを敷設する道路占用工事許可。Nicor Gas が関連。"
+},
+{
 "date": "2026-08-24",
 "face": "permits",
 "title": "建設許可(Kildeer): 未分類",
@@ -178,6 +271,6 @@
 "summary": "Arlington Heights 1342 N Race Ave の道路占用区域から建物まで1インチPEガス管を新規敷設(Nicor Gas)。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

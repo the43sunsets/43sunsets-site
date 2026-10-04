@@ -20,8 +20,8 @@
 },
 "faces": {
 "permits": {
-"count": 11,
-"value_total": 24258164.0,
+"count": 15,
+"value_total": 24343514.0,
 "latest": "2026-09-21",
 "items": [
 {
@@ -145,6 +145,54 @@
 }
 },
 {
+"id": "S-36835",
+"date": "2026-08-26",
+"applied": "2026-08-24",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "9500 EUCLID AVE, CLEVELAND, OH, 44106",
+"permit_no": "BCP26-035894",
+"permit_type": "Commercial Plumbing",
+"value": 60000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "9500 Euclid Ave の商業配管許可 $60k(シンク5台・グリーストラップ・製氷機・給排水配管の設置)。親許可 BCB26-027905 の副許可。",
+"infer": "厨房設備の設置内容から飲食店舗の内装工事の可能性(推論)。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial Plumbing / B Business / INSTALL 5 SINK, 1 GREASE INTERCEPTOR, 1 MOP SINK 2 INCE FLAKER AND ICE BIN, 170 LIN. FT. DRAIN, WASTE, VENT PIPING, 280 LIN. FT. WATER DISTRIBUTION PIPING***BUILDING PERMIT NO BCB26-027905***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36881",
+"date": "2026-08-25",
+"applied": "2026-08-25",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2119 E 93ST, CLEVELAND, OH, 44106",
+"permit_no": "BCP26-036176",
+"permit_type": "Commercial Plumbing",
+"value": 3350.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cleveland 2119 E 93ST の商業建物で配管工事(給排水管20ft設置)$3,350。親許可 BCB26-034065 の副許可。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial Plumbing / B Business / INSTALL 1 HOSE BID, 20 LIN. FT. DRAIN, WASTE, VENT PIPING***BUILDING PERMIT NO BCB26-034065***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
 "id": "S-36940",
 "date": "2026-08-19",
 "applied": "2026-08-03",
@@ -189,6 +237,54 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36970",
+"date": "2026-08-18",
+"applied": "2026-08-17",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2119 E 93RD ST, CLEVELAND, OH, 44106",
+"permit_no": "BCH26-034831",
+"permit_type": "Commercial HVAC",
+"value": 18000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cleveland 2119 E 93rd St の商業ビルでダクト(給気・還気・排気)の設置 $18,000。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial HVAC / B Business / INSTALLED COST OF DUCTWORK SUPPLY/RETURN/ EXH. AIR - $18,000",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-36986",
+"date": "2026-08-18",
+"applied": "2026-08-05",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "9500 EUCLID AVE, CLEVELAND, OH, 44195",
+"permit_no": "BCH26-032892",
+"permit_type": "Commercial HVAC",
+"value": 4000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cleveland Clinic(9500 Euclid Ave)の病院施設でダクト工事の小規模 HVAC 副許可 $4,000。",
+"infer": "親許可 BCB26-027905 の副次的な機械工事と見られる(推論)。金額が小さく単独では設備投資シグナルとは言えない。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial HVAC / I-2 Institutional - Hospitals / Nursing Home / INSTALLED COST OF DUCTWORK SUPPLY/RETURN/EXH.AIR-$3,500.00, AIR DISTRIBUTION-$500.00 ***BUILDING PERMIT NO BCB26-027905***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 },
@@ -350,6 +446,20 @@
 "summary": "Cleveland Clinic の L棟1階(1391 SQFT)の内装電気改修に伴う商業電気工事 $871k(建築許可 BCB26-034065 の副許可)。"
 },
 {
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36835",
+"summary": "9500 Euclid Ave の商業配管許可 $60k(シンク5台・グリーストラップ・製氷機・給排水配管の設置)。親許可 BCB26-027905 の副許可。"
+},
+{
+"date": "2026-08-25",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36881",
+"summary": "Cleveland 2119 E 93ST の商業建物で配管工事(給排水管20ft設置)$3,350。親許可 BCB26-034065 の副許可。"
+},
+{
 "date": "2026-08-19",
 "face": "permits",
 "title": "建設許可(Cleveland): 医療施設",
@@ -362,6 +472,20 @@
 "title": "建設許可(Cleveland): 医療施設",
 "ref": "S-36980",
 "summary": "Cleveland Clinic の施設(9500 Euclid Ave)で配管工事 $30k(シンク3台・グリース阻集器・給排水配管100フィート)。親許可 BCB26-020921 に紐づく副許可。"
+},
+{
+"date": "2026-08-18",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36970",
+"summary": "Cleveland 2119 E 93rd St の商業ビルでダクト(給気・還気・排気)の設置 $18,000。"
+},
+{
+"date": "2026-08-18",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-36986",
+"summary": "Cleveland Clinic(9500 Euclid Ave)の病院施設でダクト工事の小規模 HVAC 副許可 $4,000。"
 },
 {
 "date": "2026-08-17",
@@ -392,6 +516,6 @@
 "summary": "Cleveland Clinic(9500 Euclid Ave)でサンプポンプ1台・排水/通気配管23ftの設備配管工事 $14,660(親許可 B25018487 M19-M20 に付随)。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

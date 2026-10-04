@@ -2,7 +2,7 @@
 "id": "C-15210",
 "name": "GAMMA NU HOUSE CORP",
 "city": null,
-"state": null,
+"state": "MI",
 "entity_type": "corp",
 "industry": null,
 "made": null,
@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 65000.0,
+"count": 3,
+"value_total": 90000.0,
 "latest": "2026-10-02",
 "items": [
 {
@@ -48,6 +48,50 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-31980",
+"date": "2026-08-18",
+"applied": "2026-08-10",
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "700 Oxford Rd Ann Arbor MI 48104",
+"permit_no": "BARR26-0131",
+"permit_type": "Right-of-Way - Barricade without Scaffolding Permit",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Brick repair and building painting, requiring temporary closure of the sidewalk on Oxford Rd and Hill St around 700 Oxford Rd / Right-of-Way - Barricade without Scaffolding Permit / Barricade without Scaffolding",
+"source_id": "SRC-022",
+"provenance": null
+},
+{
+"id": "S-29692",
+"date": "2026-07-07",
+"applied": "2026-06-11",
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "700 Oxford Rd Ann Arbor MI 48104",
+"permit_no": "BLDGC26-0300",
+"permit_type": "Building (Commercial) - Alteration/Repair",
+"value": 25000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Ann Arbor 700 Oxford Rd 入口のレンガ柱と石橋の補修工事(金額不明)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Repair of the brick pillars and stone bridge at the Oxford Rd entrance / Building (Commercial) - Alteration/Repair / Alteration/Repair",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +127,22 @@
 "title": "建設許可(Ann Arbor): 未分類",
 "ref": "S-71119",
 "summary": "Ann Arbor 700 Oxford Rd のスタディルーム内装改修 $65k。"
+},
+{
+"date": "2026-08-18",
+"face": "permits",
+"title": "建設許可(Ann Arbor): 未評価",
+"ref": "S-31980",
+"summary": null
+},
+{
+"date": "2026-07-07",
+"face": "permits",
+"title": "建設許可(Ann Arbor): 未分類",
+"ref": "S-29692",
+"summary": "Ann Arbor 700 Oxford Rd 入口のレンガ柱と石橋の補修工事(金額不明)。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 0,
-"latest": "2026-09-24",
+"count": 7,
+"value_total": 15000.0,
+"latest": "2026-10-01",
 "items": [
+{
+"id": "S-70335",
+"date": "2026-10-01",
+"applied": "2026-09-17",
+"state": "IN",
+"jurisdiction": "Indiana/SCOTT",
+"address": "400 N Gardner St",
+"permit_no": "464168:2026-10-01",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Indiana/Scott 郡 400 N Gardner St の「Kroger L001」に関する CDR release(許可の詳細・金額は記録上不明)。",
+"infer": "Kroger 店舗関連の記録と読めるが(推論)、工事内容・金額が不明で設備投資シグナルとは判定できない。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Kroger L001",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-68613",
 "date": "2026-09-24",
@@ -41,6 +65,54 @@
 "role": "applicant",
 "role_label": "申請者(許可記録)",
 "verbatim": "Kroger J993 / Grocery Retail",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-68596",
+"date": "2026-09-24",
+"applied": "2026-09-10",
+"state": "IN",
+"jurisdiction": "Indiana/MADISON",
+"address": "1845 Scatterfield Rd",
+"permit_no": "464008:2026-09-24",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Indiana/Madison 郡 1845 Scatterfield Rd の Kroger 店舗(J814)に関する CDR release の記録。金額・詳細不明。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Kroger J814 bunker case",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-68616",
+"date": "2026-09-24",
+"applied": "2026-09-22",
+"state": "IN",
+"jurisdiction": "Indiana/MARION",
+"address": "5810 E 71st St",
+"permit_no": "464246:2026-09-24",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Indiana州Marion郡、5810 E 71st StでのCDRリリース許可。案件名は「Kroger J804」。",
+"infer": "Krogerは小売スーパー(食品・雑貨店)であり、店舗関連の小規模許可の可能性(推論)。金額・工事内容の記載なし。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Kroger J804",
 "source_id": "SRC-009",
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
@@ -93,6 +165,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-49884",
+"date": "2026-09-08",
+"applied": "2026-08-07",
+"state": "IL",
+"jurisdiction": "Des Plaines",
+"address": "10 E GOLF RD DES PLAINES IL 60016",
+"permit_no": "SIGN-2026-08-07-00051",
+"permit_type": "Sign - Permanent (Commercial)",
+"value": 15000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Des Plaines の Kroger 店舗でピックアップ用看板の更新・駐車場案内標識の変更・ピックアップ駐車枠の追加を行う許可 $15k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Replacing existing pickup signage at the store location to new signage per Kroger's direction.  Also updating directional signage in parking lot for pickup parking.  Adding additional pickup parking spots and restriping pickup parking spots red. / Sign - Permanent (Commercial) / Sign Permanent",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_018s9H8SdLSq6gwdHZKrG2qX",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -216,11 +312,32 @@
 },
 "timeline": [
 {
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Indiana/SCOTT): 未分類",
+"ref": "S-70335",
+"summary": "Indiana/Scott 郡 400 N Gardner St の「Kroger L001」に関する CDR release(許可の詳細・金額は記録上不明)。"
+},
+{
 "date": "2026-09-24",
 "face": "permits",
 "title": "建設許可(Indiana/MARION): 未分類",
 "ref": "S-68613",
 "summary": "Kroger J993(1330 W Southport Rd)の CDR release、用途は食料品小売。"
+},
+{
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Indiana/MADISON): 未分類",
+"ref": "S-68596",
+"summary": "Indiana/Madison 郡 1845 Scatterfield Rd の Kroger 店舗(J814)に関する CDR release の記録。金額・詳細不明。"
+},
+{
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Indiana/MARION): 未分類",
+"ref": "S-68616",
+"summary": "Indiana州Marion郡、5810 E 71st StでのCDRリリース許可。案件名は「Kroger J804」。"
 },
 {
 "date": "2026-09-23",
@@ -235,6 +352,13 @@
 "title": "建設許可(Indiana/JENNINGS): 未分類",
 "ref": "S-68401",
 "summary": "Indiana Jennings郡 2325 N State Hwy 3 の Kroger L083(食料品店)に関する CDR release。金額・詳細記載なし。"
+},
+{
+"date": "2026-09-08",
+"face": "permits",
+"title": "建設許可(Des Plaines): 未分類",
+"ref": "S-49884",
+"summary": "Des Plaines の Kroger 店舗でピックアップ用看板の更新・駐車場案内標識の変更・ピックアップ駐車枠の追加を行う許可 $15k。"
 },
 {
 "date": "2021-10-07",
@@ -258,6 +382,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

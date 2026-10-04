@@ -23,10 +23,54 @@
 },
 "faces": {
 "permits": {
-"count": 4,
+"count": 6,
 "value_total": 164615.0,
-"latest": "2026-08-25",
+"latest": "2026-09-17",
 "items": [
+{
+"id": "S-59855",
+"date": "2026-09-17",
+"applied": "2026-07-16",
+"state": "IL",
+"jurisdiction": "Arlington Heights",
+"address": "315 E OAKTON ST ARLINGTON HEIGHTS IL 60004",
+"permit_no": "SCD2026-00012",
+"permit_type": "Small Cell Device - New Utility Pole",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Verizon Wireless によるスモールセル基地局新設(公共道路内、32'6\"のスタンドアロン柱にアンテナ3基・光ファイバーボックス・ロードセンターを設置)$50,000。GC = Electric Conduit Construction Co。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Verizon Wireless Small Cell New Build Project Name 1100 N Belmont Ave_5000979969\nAddress: 315 E Oakton St, Arlington Heights, IL 60004 (in the public right-of-way)\n(42.095435, -87.978108)\nLocated approx. 45’ southwest of the intersection of N Belmont Ave and E Oakton St on the south side of E Oakton",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-34830",
+"date": "2026-09-01",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Butler County",
+"address": "5396 DUFF DR, OH",
+"permit_no": "BLD-CO26-03743",
+"permit_type": "Commercial Other",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Antenna Upgrade - Verizon Wireless / RESPONSES RECEIVED / Pay Fees Due / Commercial Other",
+"source_id": "SRC-024",
+"provenance": null
+},
 {
 "id": "S-6616",
 "date": "2026-08-25",
@@ -150,6 +194,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-17",
+"face": "permits",
+"title": "建設許可(Arlington Heights): 未分類",
+"ref": "S-59855",
+"summary": "Verizon Wireless によるスモールセル基地局新設(公共道路内、32'6\"のスタンドアロン柱にアンテナ3基・光ファイバーボックス・ロードセンターを設置)$50,000。GC = Electric Conduit Construction Co。"
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Butler County): 未評価",
+"ref": "S-34830",
+"summary": null
+},
+{
 "date": "2026-08-25",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -178,6 +236,6 @@
 "summary": "VERIZON WIRELESS(所在地 Palatine 420 E Dundee Rd)の既存55'モノポールに15ft延長・新規通信機器設置、基部に24x16ftの機器/発電機置場を増設 $75k。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

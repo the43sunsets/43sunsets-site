@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 1450000.0,
+"count": 5,
+"value_total": 1660000.0,
 "latest": "2026-09-21",
 "items": [
 {
@@ -73,6 +73,54 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-52388",
+"date": "2026-09-09",
+"applied": "2026-09-07",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "222 S RIVERSIDE PLZ",
+"permit_no": "B200510647",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 60000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 222 S Riverside Plz のリバーウォーク及びリバーポンプハウスで電気工事(コンセント24・照明8) $60k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 24 . LIGHTING OUTLETS: 8. SPECIFIC LOCATION: RIVER WALK AND RIVER PUMP HOUSE.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01B5JKrVs3MKSaboGQuHfNsv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-497",
+"date": "2026-07-30",
+"applied": "2026-07-27",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "222 S RIVERSIDE PLZ",
+"permit_no": "B200480223",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 150000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "オフィスビル スイート1400の低圧通信配線工事 $150k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL DATA/VIDEO. SPECIFIC LOCATION: SUITE 1400.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-006",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 },
 {
@@ -140,6 +188,20 @@
 "summary": "StoneX Group Inc の Chicago 222 S Riverside Plaza Suite 1400 でセキュリティ設置の低電圧・通信配線工事 $20k。"
 },
 {
+"date": "2026-09-09",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-52388",
+"summary": "Chicago 222 S Riverside Plz のリバーウォーク及びリバーポンプハウスで電気工事(コンセント24・照明8) $60k。"
+},
+{
+"date": "2026-07-30",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-497",
+"summary": "オフィスビル スイート1400の低圧通信配線工事 $150k。"
+},
+{
 "date": "2026-07-01",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -147,6 +209,6 @@
 "summary": "金融会社のオフィス 14 階内装 $1.4M。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

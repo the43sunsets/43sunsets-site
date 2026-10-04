@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 3,
 "value_total": 2000000.0,
-"latest": "2026-07-06",
+"latest": "2026-08-31",
 "items": [
+{
+"id": "S-10947",
+"date": "2026-08-31",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1499 HARD RD",
+"permit_no": "SIGN2600969",
+"permit_type": "NA",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 1499 Hard Rd に60平方フィートの看板を設置。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "NA / Sign / 60 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-067",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-1562",
+"date": "2026-08-21",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1499 HARD RD",
+"permit_no": "SIGN2600968",
+"permit_type": "NA",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 1499 HARD RD で屋外看板の設置許可(196 SQFT)。所有者・金額の記載なし。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "NA / Sign / 196 SQFT",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-069",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
 {
 "id": "S-2756",
 "date": "2026-07-06",
@@ -78,6 +126,20 @@
 },
 "timeline": [
 {
+"date": "2026-08-31",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-10947",
+"summary": "Columbus 1499 Hard Rd に60平方フィートの看板を設置。"
+},
+{
+"date": "2026-08-21",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-1562",
+"summary": "Columbus 1499 HARD RD で屋外看板の設置許可(196 SQFT)。所有者・金額の記載なし。"
+},
+{
 "date": "2026-07-06",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -85,6 +147,6 @@
 "summary": "Worthington市学区の新規構造物(建物以外)$2M、1,258 SQFT。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

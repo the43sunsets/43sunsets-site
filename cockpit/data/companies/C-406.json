@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 415000.0,
-"latest": "2026-07-09",
+"count": 2,
+"value_total": 421240.0,
+"latest": "2026-09-23",
 "items": [
+{
+"id": "S-65878",
+"date": "2026-09-23",
+"applied": "2026-09-22",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "4950 N MARINE DR",
+"permit_no": "B200512410",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 6240.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 4950 N Marine Dr の共用部・駐車場配管の修理/同等品交換許可 $6,240。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "REPAIR OR IN-KIND REPLACEMENT OF 0 PLUMBING FIXTURES AS DESCRIBED IN PERMIT APPLICATION.  INCLUDES REPAIR OR REPLACMENT OF PLUMBING PIPING.  LOCATIONS: 0 RESIDENTIAL UNIT(S), 0 NON-RESIDENTIAL UNIT(S), 1 INTERIOR COMMON AREAS, GARAGE PARKING.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01662kdZo8KYBxtpVwwCDd2A",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-103",
 "date": "2026-07-09",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-65878",
+"summary": "Chicago 4950 N Marine Dr の共用部・駐車場配管の修理/同等品交換許可 $6,240。"
+},
+{
 "date": "2026-07-09",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Chicago 4950 N MARINE DR での「PERMIT – EXPRESS PERMIT PROGRAM」$415k、申請者/所有者は SHORELINE PARK CONDOMINIUMS。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

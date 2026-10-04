@@ -16,6 +16,7 @@
 "state": "untargeted",
 "reason": {
 "origins": [
+"permits",
 "grants"
 ],
 "rule": "none"
@@ -23,10 +24,35 @@
 },
 "faces": {
 "permits": {
-"count": 0,
+"count": 1,
 "value_total": 0,
-"latest": null,
-"items": []
+"latest": "2026-09-30",
+"items": [
+{
+"id": "S-69272",
+"date": "2026-09-30",
+"applied": "2026-09-28",
+"state": "IN",
+"jurisdiction": "Indiana/BOONE",
+"address": "10650 Bennett Pkwy",
+"permit_no": "464379:2026-09-30",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Boone County 10650 Bennett Pkwy の医療オフィス『Freedom Healthworks』に関する CDR release(金額不明)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Freedom Healthworks / Medical Office",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
 },
 "ucc": {
 "count": 0,
@@ -116,6 +142,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-30",
+"face": "permits",
+"title": "建設許可(Indiana/BOONE): 未分類",
+"ref": "S-69272",
+"summary": "Boone County 10650 Bennett Pkwy の医療オフィス『Freedom Healthworks』に関する CDR release(金額不明)。"
+},
+{
 "date": "2017-08-29",
 "face": "grants",
 "title": "助成(州・Indiana IEDC): 未分類",
@@ -130,6 +163,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

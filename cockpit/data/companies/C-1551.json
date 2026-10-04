@@ -23,10 +23,30 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 44501.0,
-"latest": "2026-08-24",
+"count": 9,
+"value_total": 59601.0,
+"latest": "2026-08-26",
 "items": [
+{
+"id": "S-73126",
+"date": "2026-08-26",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Orland Park",
+"address": "15613 HARBOR TOWN DRIVE, ORLAND PARK, IL 60462",
+"permit_no": "PLU-26-0232",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 300.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "CAP OFF THE RPZ INSIDE OF THE HOME / RESIDENTIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
+"source_id": "SRC-021",
+"provenance": null
+},
 {
 "id": "S-63059",
 "date": "2026-08-24",
@@ -50,6 +70,46 @@
 "batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-72138",
+"date": "2026-08-13",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Orland Park",
+"address": "13612 86TH AVENUE, ORLAND PARK, IL 60462",
+"permit_no": "PLU-26-0219",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 10000.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "IN THE FRONT YARD REMOVE 25FT OF CAST IRON IN THE CRAWL SPACE AND REPLACE WITH SCHEDULE 40 PVC. CORE HOLE THROUGH FOUNDATION RUN NEW PVC AND DIG DOWN TO CLAY SEWER AND INSTALL OUTSIDE CLEANOUT RECONNECTING TO THE MAIN WITH NO SHEAR BANDS. / RESIDENTIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
+"source_id": "SRC-021",
+"provenance": null
+},
+{
+"id": "S-72165",
+"date": "2026-08-13",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Orland Park",
+"address": "17629 OLIVIA LANE, ORLAND PARK, IL 60467",
+"permit_no": "PLU-26-0217",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 4800.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "EMERGENCY WORK. DIG DOWN 5FT TO SHEARED OF 4 CAST IRON LINE, REMOVE BROKEN SECTION AND INSTALL A NEW 4 PVC/SDR OUTSIDE CLEANOUT. BACKFILL AFTER INSPECTION. / RESIDENTIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
+"source_id": "SRC-021",
+"provenance": null
 },
 {
 "id": "S-62457",
@@ -198,11 +258,32 @@
 },
 "timeline": [
 {
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Orland Park): 未評価",
+"ref": "S-73126",
+"summary": null
+},
+{
 "date": "2026-08-24",
 "face": "permits",
 "title": "建設許可(Tinley Park): 未分類",
 "ref": "S-63059",
 "summary": "Tinley Park の住宅でサンプポンプ排水ピット交換・排水管120ft新設 $6,500。"
+},
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Orland Park): 未評価",
+"ref": "S-72138",
+"summary": null
+},
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Orland Park): 未評価",
+"ref": "S-72165",
+"summary": null
 },
 {
 "date": "2026-08-04",
@@ -240,6 +321,6 @@
 "summary": "Tinley Park 7607 163RD PL, TINLEY PARK, IL 60477 で下水・排水管工事。 許可種別「RESIDENTIAL PERMIT」、評価額 $15k。申請者/所有者: KEVIN SZABO JR PLUMBING INC。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

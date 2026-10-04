@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 11,
-"value_total": 30430182.0,
+"count": 13,
+"value_total": 31445182.0,
 "latest": "2026-10-01",
 "items": [
 {
@@ -44,6 +44,30 @@
 "role": "owner",
 "role_label": "所有名義(許可記録・課税台帳)",
 "verbatim": "DDS 2019 CBC: CAISSONS ONLY (VERTICAL PENETRATION ONLY) PERMIT  FOR THE PROPOSED SATELLITE 2 CONCOURSE (CONCOURSE E) TERMINAL BUILDING AT O'HARE INTERNATIONAL AIRPORT (CONSTRUCTION TYPE IB, OCC GROUP A-2, A-3, F-1). CDA PROJECT NO. TAP 102.19, TAP 105.19, TAP 106.19, TAP 107.19. CONSULTANT REVIEWER:",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-70725",
+"date": "2026-10-01",
+"applied": "2026-06-09",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "10000 W OHARE ST",
+"permit_no": "101084138",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 1000000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "O'Hare国際空港の既存地下ユーティリティ・リングトンネルの改修 $1M(HVAC・火災警報・制御系統の更新、ガス検知システム新設、防火壁・防火戸新設)。CDAプロジェクト番号 H7112.19。",
+"infer": "申請者名は個人名だが、実体はシカゴ市Chicago Department of Aviation(CDA)の空港インフラ改修案件と読める(推論)。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "2019 CBRC - SPR - RENOVATIONS TO UPGRADE EXISTING HEATING, VENTILATION, FIRE ALARM AND CONTROL SYSTEMS OF THE EXISTING UNDERGROUND UTILITY RINGTUNNEL. ADDITION OF NEW GAS DETECTION SYSTEM, NEW FIRE SEPARATION WALLS AND NEW FIRE RATED DOORS IN THE EXISTING UNDERGROUND UTILITY RING TUNNEL OFO'HARE INT",
 "source_id": "SRC-001",
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
@@ -72,6 +96,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-64283",
+"date": "2026-09-21",
+"applied": "2026-09-21",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5700 S CICERO AVE",
+"permit_no": "B200512534",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 15000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Chicago 5700 S Cicero Ave でデータ/ビデオ配線の低電圧通信電気工事 $15k(無線室・MDF室・コマンドセンター)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL DATA/VIDEO. SPECIFIC LOCATION: RADIO ROOM, MDF ROOM, AND COMMAND CENTER.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 },
@@ -325,11 +373,25 @@
 "summary": "O'Hare国際空港のサテライト2コンコース(コンコースE)ターミナルビル建設に伴うケーソン(垂直掘削)のみの許可 $5.7M。"
 },
 {
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-70725",
+"summary": "O'Hare国際空港の既存地下ユーティリティ・リングトンネルの改修 $1M(HVAC・火災警報・制御系統の更新、ガス検知システム新設、防火壁・防火戸新設)。CDAプロジェクト番号 H7112.19。"
+},
+{
 "date": "2026-09-22",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
 "ref": "S-65195",
 "summary": "Chicago 5700 S Cicero Ave の SWA GSE 車両整備ショップ内で低電圧・通信配線(データ/ビデオ)工事 $10k。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-64283",
+"summary": "Chicago 5700 S Cicero Ave でデータ/ビデオ配線の低電圧通信電気工事 $15k(無線室・MDF室・コマンドセンター)。"
 },
 {
 "date": "2026-09-10",
@@ -395,6 +457,6 @@
 "summary": "Chicago 11601 W TOUHY AVE(Hilton Chicago O'Hare)で既存回路の軽微な電気修理(コンセント1・照明1)。申請者: Liang, Shile / Chicago Department of Aviation。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

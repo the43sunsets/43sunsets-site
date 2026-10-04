@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 35412.0,
-"latest": "2026-07-01",
+"count": 2,
+"value_total": 45412.0,
+"latest": "2026-09-08",
 "items": [
+{
+"id": "S-50953",
+"date": "2026-09-08",
+"applied": "2026-07-07",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "346 W ARMITAGE AVE",
+"permit_no": "101085455",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "346 W Armitage Ave の建物改修許可(親許可 #101071996)の変更申請 $10k(給湯器を電気からガスへ変更、電気サービス縮小)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "SPR 2019 CBRC: EXPANSION AND RENOVATION REVISION TO PERMIT # 101071996 PERMIT REVISION INCLUDES CHANGES IN WATER HEATERS FROM ELECTRICAL TO GAS AND ELECTRICAL SERVICE REDUCTIONS AS PER PLANS (OCCUPANCY: A-2; CONST TYPE: IIIA)**CERTIFIED CORRECTIONS SUBJECT TO FIELD INSPECTIONS & AUDIT **",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_013Ym6tbx9DgjGi7sa8ECHVX",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-2841",
 "date": "2026-07-01",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-08",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-50953",
+"summary": "346 W Armitage Ave の建物改修許可(親許可 #101071996)の変更申請 $10k(給湯器を電気からガスへ変更、電気サービス縮小)。"
+},
+{
 "date": "2026-07-01",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Chicago 346 W ARMITAGE AVE で垂直プラットフォームリフト設置(飲食店 Geja's Cafe)、$35.4k。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

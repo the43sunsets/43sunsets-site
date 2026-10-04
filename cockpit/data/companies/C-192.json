@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 7,
-"value_total": 1575406.0,
+"count": 9,
+"value_total": 1825506.0,
 "latest": "2026-09-29",
 "items": [
 {
@@ -124,6 +124,30 @@
 }
 },
 {
+"id": "S-66726",
+"date": "2026-09-24",
+"applied": "2026-09-17",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "11601 W TOUHY AVE",
+"permit_no": "B200512064",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 100.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "O'Hare 空港エリア(11601 W Touhy Ave)T5 駐車場ガレージ1階東出口で既存200A電源に1回路追加する小規模電気工事 $100。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. ADD 1 CIRCUITS TO EXISTING 200 AMP SERVICE DISCONNECTING MEANS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: 1ST FLOOR EAST EXIT OF T5 PARKING GARAGE.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
 "id": "S-64346",
 "date": "2026-09-21",
 "applied": "2026-09-21",
@@ -145,6 +169,30 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-921",
+"date": "2026-08-26",
+"applied": "2026-06-19",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "11601 W TOUHY AVE",
+"permit_no": "101083366",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 250000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago O'Hare空港 K コンコース(ターミナル3)K7・K10 ゲートおよびエプロンレベルのレディルームを改修 $250k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "SELF-CERT 2019 CBRC: ALTERATIONS TO EXISTING PASSENGER GATES K7 & K10 AT CONCOURSE LEVEL AND READY ROOM AT APRON LEVEL LOCATED IN THE K CONCOURSE TERMINAL 3 PER PLANS AND STRUCTURAL PEER REVIEW REPORT. (USE GROUP B CONSTRUCTION TYPE IA)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-004",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 },
 {
@@ -250,11 +298,25 @@
 "summary": "United Airlines のオヘア空港(11601 W Touhy Ave)ハンガー扉における電気設備の小規模修繕 $35k(コンセント2・照明10)。"
 },
 {
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-66726",
+"summary": "O'Hare 空港エリア(11601 W Touhy Ave)T5 駐車場ガレージ1階東出口で既存200A電源に1回路追加する小規模電気工事 $100。"
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
 "ref": "S-64346",
 "summary": "United Airlines のオハレ空港ターミナル1にてコンセント5個の増設等、既存回路の電気修繕工事 $35k。"
+},
+{
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-921",
+"summary": "Chicago O'Hare空港 K コンコース(ターミナル3)K7・K10 ゲートおよびエプロンレベルのレディルームを改修 $250k。"
 },
 {
 "date": "2026-08-05",
@@ -271,6 +333,6 @@
 "summary": "Arlington Heights 1421 W Shure Dr の United Airlines オフィス 1 階西側の内装改修 $1.3M。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

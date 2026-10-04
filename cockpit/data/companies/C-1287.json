@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 25000.0,
+"count": 2,
+"value_total": 462200.0,
 "latest": "2026-08-24",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-019",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-566",
+"date": "2026-08-06",
+"applied": "2026-06-26",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1135 N STATE ST",
+"permit_no": "101085255",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 437200.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 1135 N State St の1・2階小売スペース改修(内部階段更新・2次避難経路追加)$437.2k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "SELF-CERT 2019 CBRC: ALTERATION OF THE EXISTING 1ST AND 2ND FLOOR RETAIL SPACE, INCLUDEDING REPLACEMENT OF THE INTIOER OPEN STAIRS, INSTALLATION OF SECOND MEANS OF EGRESS AT THE EAST SIDE OF THE 2ND FLOOR, AND REPLACEMENT OF THE EXISTING 1ST FLOR STORE FRONT.  (OCCUPANCY GROUP M; TYPE IIIA CONSTRUCT",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-002",
 "model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Chicago): 未分類",
 "ref": "S-6495",
 "summary": "Chicago 3155 N BROADWAY の屋根葺き替え/修繕 $25.0k(所有者: GENERAL AUTO SERVICE STATION, LLC)。"
+},
+{
+"date": "2026-08-06",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-566",
+"summary": "Chicago 1135 N State St の1・2階小売スペース改修(内部階段更新・2次避難経路追加)$437.2k。"
 }
 ],
-"generated_at": "2026-10-03T15:00:25+00:00",
+"generated_at": "2026-10-04T08:35:52+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -1,0 +1,175 @@
+{
+"id": "C-15675",
+"name": "Sephora",
+"city": null,
+"state": null,
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"master_status": {
+"state": "untargeted",
+"reason": {
+"origins": [
+"permits"
+],
+"rule": "none"
+}
+},
+"faces": {
+"permits": {
+"count": 4,
+"value_total": 987500.0,
+"latest": "2026-09-24",
+"items": [
+{
+"id": "S-68639",
+"date": "2026-09-24",
+"applied": "2026-04-29",
+"state": "IN",
+"jurisdiction": "Indiana/MONROE",
+"address": "Lilia  Lozano",
+"permit_no": "461058:2026-09-24",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Indiana/Monroe の CDR release 記録。所有者不明・金額なし、記載内容は「Sephora」のみ。",
+"infer": "小売店(化粧品店)の内装関連リリースの可能性(推論)。詳細不明で設備投資シグナルとは判断できない。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Sephora",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-60699",
+"date": "2026-09-18",
+"applied": "2026-09-15",
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "100 Briarwood Cir Ann Arbor MI 48108",
+"permit_no": "PLUMC26-0517",
+"permit_type": "Plumbing (Commercial) - General",
+"value": 2500.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Install clean out interior, future tenant Sephora  / Plumbing (Commercial) - General / General",
+"source_id": "SRC-022",
+"provenance": null
+},
+{
+"id": "S-52780",
+"date": "2026-09-10",
+"applied": "2026-09-01",
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "100 Briarwood Cir Ann Arbor MI 48108",
+"permit_no": "MESA26-0138",
+"permit_type": "MESA - Fire Suppression",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Modify existing fire protection to accommodate tenant renovation Space #G124C Project Sephora/Briarwood Mall / MESA - Fire Suppression / Fire Suppression",
+"source_id": "SRC-022",
+"provenance": null
+},
+{
+"id": "S-32485",
+"date": "2026-09-01",
+"applied": "2026-06-08",
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "228 Briarwood Cir Ann Arbor MI 48108",
+"permit_no": "BLDGC26-0292",
+"permit_type": "Building (Commercial) - Alteration/Repair",
+"value": 985000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Ann Arbor のショッピングモール内で Sephora の約5,141 SFのテナント内装工事(店舗什器・内装・一部MEP)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "THIS PROJECT IS AN INTERIOR TENANT FIT-OUT FOR SEPHORA OF APPROXIMATELY 5,141 SF. WORK INCLUDES BUT IS NOT LIMITED TO, CONSTRUCTION OF STOREFRONTS, INTERIOR WALLS / PARTITIONS, WALL FIXTURES, FLOORING, CEILING, LIGHT FIXTURES AND PARTIAL MECHANICAL, ELECTRICAL, AND PLUMBING. / Building (Commercial) ",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "該当なし",
+"count": 0,
+"note": "この会社の採用ページは当社の網に無い(公開 API を持つ ATS が見つからない、または求人 0)。"
+},
+"grants": {
+"status": "該当なし",
+"count": 0,
+"note": "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。"
+},
+"news": {
+"status": "該当なし",
+"count": 0,
+"note": "直近のニュース(景気の状況で収集する米製造業・5 州のニュース)にこの会社は出ていない。"
+}
+},
+"timeline": [
+{
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Indiana/MONROE): 未分類",
+"ref": "S-68639",
+"summary": "Indiana/Monroe の CDR release 記録。所有者不明・金額なし、記載内容は「Sephora」のみ。"
+},
+{
+"date": "2026-09-18",
+"face": "permits",
+"title": "建設許可(Ann Arbor): 未評価",
+"ref": "S-60699",
+"summary": null
+},
+{
+"date": "2026-09-10",
+"face": "permits",
+"title": "建設許可(Ann Arbor): 未評価",
+"ref": "S-52780",
+"summary": null
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Ann Arbor): 未分類",
+"ref": "S-32485",
+"summary": "Ann Arbor のショッピングモール内で Sephora の約5,141 SFのテナント内装工事(店舗什器・内装・一部MEP)。"
+}
+],
+"generated_at": "2026-10-04T08:35:52+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}
