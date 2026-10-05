@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 1580775.0,
-"latest": "2026-09-10",
+"count": 7,
+"value_total": 3392205.1100000003,
+"latest": "2026-09-29",
 "items": [
+{
+"id": "S-73866",
+"date": "2026-09-29",
+"applied": "2026-08-05",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "18101 LORAIN AVE, CLEVELAND, OH, 44111",
+"permit_no": "BCB26-033085",
+"permit_type": "Commercial Building",
+"value": 1811430.11,
+"category": "医療施設",
+"confidence": "high",
+"summary": "Fairview Park Hospital(Cleveland 18101 Lorain Ave)の下層階1,200 SFおよび8,090 SF区画・1階付帯スペースの内装改修 $1.81M(新規機器設置含む)。",
+"infer": "I-2病院用途の内装改修で新規機器設置を含む = 医療機器・院内設備の更新投資の可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / I-2 Institutional - Hospitals / Nursing Home / Interior/Exterior Remodel / INTERIOR ALTERATIONS TO 1200 SF OF EXISTING LOWER LEVEL, 8,090 SF SPACE AND 1ST FLR ANCILLARY SPACE INCLUDING NEW EQUIPMENT PER APPROVED PLANS. SEPARATE PERMITS REQUIRED FOR PLUMBING, HVAC, AND ELECTRICA",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54749",
 "date": "2026-09-10",
@@ -195,6 +219,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Cleveland): 医療施設",
+"ref": "S-73866",
+"summary": "Fairview Park Hospital(Cleveland 18101 Lorain Ave)の下層階1,200 SFおよび8,090 SF区画・1階付帯スペースの内装改修 $1.81M(新規機器設置含む)。"
+},
+{
 "date": "2026-09-10",
 "face": "permits",
 "title": "建設許可(Cleveland): 医療施設",
@@ -237,6 +268,6 @@
 "summary": "Fairview Park Hospital(I-2 施設)で商業用 HVAC 工事 $605k(ダクトヒーター14台・屋上冷暖房ユニット1台・VAV14台・ファン2台など)。親許可 BCB26-013373 の副許可。"
 }
 ],
-"generated_at": "2026-10-05T08:18:36+00:00",
+"generated_at": "2026-10-05T08:45:22+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

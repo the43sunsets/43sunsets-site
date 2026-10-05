@@ -23,10 +23,82 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 12082783.0,
-"latest": "2026-09-25",
+"count": 9,
+"value_total": 12942783.0,
+"latest": "2026-10-01",
 "items": [
+{
+"id": "S-73835",
+"date": "2026-10-01",
+"applied": "2026-10-01",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2511 E 46TH ST, CLEVELAND, OH, 44104",
+"permit_no": "BCH26-042634",
+"permit_type": "Commercial HVAC",
+"value": 80000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland市所有のA-3用途(礼拝・レクリエーション・娯楽)施設(2511 E 46th St)で屋上ユニット2台・VRF冷房ユニット2台・ダクト工事$80,000の商業用HVAC工事。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial HVAC / A-3 Assembly - Worship, Recreation, Amusement / 2 ROOF TOP UNITS AND 2 VRF COOLING UNITS. AND $80,000 OF DUCTWORK. BUILDING PERMIT NO. BCB26-009206",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-73911",
+"date": "2026-09-28",
+"applied": "2026-09-24",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2511 E 46TH ST, CLEVELAND, OH, 44104",
+"permit_no": "BCP26-041456",
+"permit_type": "Commercial Plumbing",
+"value": 390000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland市(2511 E 46th St)のA-3集会施設(レクリエーション/娯楽用途)における配管工事 $390k。トイレ・シャワー・洗面台等多数設置。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Plumbing / A-3 Assembly - Worship, Recreation, Amusement / INSTALL 16 WATER CLOSET/TOILET, 2 URINALS, 10 BATHTUB OR SHOWER, 15 LAVATORY SINK, 4 SINK, 4 DRINKING FOUNTIAN, 4 FLOOR DRAIN, 3 MOP BASIN, 600 LIN. FT. WATER DISTRIBUTION PIPING ***Building Permit BCB26-009206***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-73908",
+"date": "2026-09-28",
+"applied": "2026-09-24",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2511 E 46TH ST, CLEVELAND, OH, 44104",
+"permit_no": "BCH26-041455",
+"permit_type": "Commercial HVAC",
+"value": 390000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland市(2511 E 46th St)のA-3用途(礼拝・レクリエーション・娯楽)施設でガス配管100リニアフィートを設置する商業HVAC工事 $390k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial HVAC / A-3 Assembly - Worship, Recreation, Amusement / INSTALL 100 LIN. FT. FUEL GAS PIPING ***Building Permit BCB26-009206***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-67614",
 "date": "2026-09-25",
@@ -198,6 +270,27 @@
 },
 "timeline": [
 {
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-73835",
+"summary": "Cleveland市所有のA-3用途(礼拝・レクリエーション・娯楽)施設(2511 E 46th St)で屋上ユニット2台・VRF冷房ユニット2台・ダクト工事$80,000の商業用HVAC工事。"
+},
+{
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-73911",
+"summary": "Cleveland市(2511 E 46th St)のA-3集会施設(レクリエーション/娯楽用途)における配管工事 $390k。トイレ・シャワー・洗面台等多数設置。"
+},
+{
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-73908",
+"summary": "Cleveland市(2511 E 46th St)のA-3用途(礼拝・レクリエーション・娯楽)施設でガス配管100リニアフィートを設置する商業HVAC工事 $390k。"
+},
+{
 "date": "2026-09-25",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -240,6 +333,6 @@
 "summary": "Cleveland 1979 W 25th St(小売・マーケット区分)で燃料ガス配管1,750フィートを設置する商業HVAC許可 $1.9M。"
 }
 ],
-"generated_at": "2026-10-05T08:18:36+00:00",
+"generated_at": "2026-10-05T08:45:22+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

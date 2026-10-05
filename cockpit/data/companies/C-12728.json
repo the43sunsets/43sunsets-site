@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 149009.87,
-"latest": "2026-09-10",
+"count": 4,
+"value_total": 151009.87,
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-73903",
+"date": "2026-09-28",
+"applied": "2026-09-28",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1910 WEST BLVD, CLEVELAND, OH, 44102",
+"permit_no": "BCH26-041961",
+"permit_type": "Commercial HVAC",
+"value": 2000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland市の集会用途施設(1910 West Blvd)で排気グリル18個設置の小規模HVAC工事 $2,000(本体工事$900)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial HVAC / A-3 Assembly - Worship, Recreation, Amusement / INSTALL MISC. DEVICES-18 EXHAUST GRILLES-$900.00 ***BUILDING PERMIT NO B25002824***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-54740",
 "date": "2026-09-10",
@@ -126,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-73903",
+"summary": "Cleveland市の集会用途施設(1910 West Blvd)で排気グリル18個設置の小規模HVAC工事 $2,000(本体工事$900)。"
+},
+{
 "date": "2026-09-10",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -147,6 +178,6 @@
 "summary": "クリーブランド空港内の1階建て建物(Bldg #204、S-2低危険物倉庫)の解体 $77,777。"
 }
 ],
-"generated_at": "2026-10-05T08:18:36+00:00",
+"generated_at": "2026-10-05T08:45:22+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -37,15 +37,19 @@
 "permit_no": "2026P08926",
 "permit_type": "Fire Protection Systems",
 "value": 7200.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 4850 Red Bank Expy の消防設備工事 $7.2k(用途 B)。",
+"infer": "金額が小規模かつ所有者名義は開発SPEで、既存建物への消防設備小改修の可能性(推論)。用途・業種は記録から判別不可。",
 "role": "owner",
 "role_label": "所有名義(許可記録・課税台帳)",
 "verbatim": "Fire Protection Systems / Fire Protection Systems / B",
 "source_id": "SRC-003",
-"provenance": null
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 },
 {
 "id": "S-54665",
@@ -124,9 +128,9 @@
 {
 "date": "2026-10-02",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未評価",
+"title": "建設許可(Cincinnati): 未分類",
 "ref": "S-73768",
-"summary": null
+"summary": "Cincinnati 4850 Red Bank Expy の消防設備工事 $7.2k(用途 B)。"
 },
 {
 "date": "2026-09-11",
@@ -143,6 +147,6 @@
 "summary": "Cincinnati 4850 Red Bank Exwy の建物改修(用途区分 B) $1.4M。詳細不明。"
 }
 ],
-"generated_at": "2026-10-05T08:18:36+00:00",
+"generated_at": "2026-10-05T08:45:22+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -13,12 +13,11 @@
 "jp_basis": null,
 "master_checked_at": null,
 "master_status": {
-"state": "untargeted",
+"state": "queued",
 "reason": {
-"origins": [
-"permits"
-],
-"rule": "none"
+"origin": "permit",
+"rank": 4,
+"of": 5
 }
 },
 "faces": {
@@ -37,15 +36,19 @@
 "permit_no": "BCE26-021135",
 "permit_type": "Commercial Electrical",
 "value": 85000.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
+"category": "製造能力の増強",
+"confidence": "high",
+"summary": "Cleveland 2324 Lakeside Ave(F-1 工場用途)で新規ミルワークショップと設備への電源供給のための内装電気工事 $85k。関連許可 BCB26-035003。",
+"infer": "QOZB(Qualified Opportunity Zone Business)名義の SPE による木工・建具加工設備の新規導入に伴う電気工事であり、小規模な生産設備投資の可能性(推論)。",
 "role": "owner",
 "role_label": "所有名義(許可記録・課税台帳)",
 "verbatim": "Commercial Electrical / F-1 Factory Industrial Moderate Hazard / MAKE INTERIOR ALTERATIONS TO PROVIDE POWER FOR NEW MILLWORK SHOP AND EQUIPMENT PER APPROVED PLANS AND EQUIPMENT SCHEDULE. MAINTAIN OBC CHAPTER 33 SAFEGUARDS DURING CONSTRUCTION. RELATED PERMIT BCB26-035003.",
 "source_id": "SRC-068",
-"provenance": null
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 },
 {
 "id": "S-73873",
@@ -57,15 +60,19 @@
 "permit_no": "BCB26-035003",
 "permit_type": "Commercial Building",
 "value": 156000.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cleveland 2324 Lakeside Ave の既存22,782 SFの1・2階のうち2,816 SFを内装改修し用途設定 $156k(F-1 用途)。",
+"infer": "QOZB(Qualified Opportunity Zone Business)名義の小規模内装工事であり、規模・金額から本格的な生産設備投資とは考えにくい(推論)。テナント確定前の軽微な改修の可能性。",
 "role": "owner",
 "role_label": "所有名義(許可記録・課税台帳)",
 "verbatim": "Commercial Building / F-1 Factory Industrial Moderate Hazard / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO 2,816 SF OF EXISTING 22,782 SF 1ST AND 2ND FLRS AND ESTABLISH USE PER APPROVED PLANS. SEPARATE PERMITS FOR PLUMBING, HVAC AND ELECTRICAL REQUIRED. GAS LINE WORK PER 2021 IFGC. SUBMIT S",
 "source_id": "SRC-068",
-"provenance": null
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 },
 {
 "id": "S-63573",
@@ -144,16 +151,16 @@
 {
 "date": "2026-09-30",
 "face": "permits",
-"title": "建設許可(Cleveland): 未評価",
+"title": "建設許可(Cleveland): 製造能力の増強",
 "ref": "S-73861",
-"summary": null
+"summary": "Cleveland 2324 Lakeside Ave(F-1 工場用途)で新規ミルワークショップと設備への電源供給のための内装電気工事 $85k。関連許可 BCB26-035003。"
 },
 {
 "date": "2026-09-29",
 "face": "permits",
-"title": "建設許可(Cleveland): 未評価",
+"title": "建設許可(Cleveland): 未分類",
 "ref": "S-73873",
-"summary": null
+"summary": "Cleveland 2324 Lakeside Ave の既存22,782 SFの1・2階のうち2,816 SFを内装改修し用途設定 $156k(F-1 用途)。"
 },
 {
 "date": "2026-09-16",
@@ -170,6 +177,6 @@
 "summary": "Cleveland 2324 Lakeside Ave にて新設シャフトウェイの垂直搬送機(ダムウェーター)設置 $43,280(2階建、容量750、速度10)。"
 }
 ],
-"generated_at": "2026-10-05T08:18:36+00:00",
+"generated_at": "2026-10-05T08:45:22+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

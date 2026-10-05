@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 19,
+"count": 20,
 "value_total": 60000.0,
-"latest": "2026-10-01",
+"latest": "2026-10-02",
 "items": [
+{
+"id": "S-73806",
+"date": "2026-10-02",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "4080 CENTRAL COLLEGE RD",
+"permit_no": "EMEPC2639807",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "City of Columbus による商業施設の電気設備工事(MEP)、4080 Central College Rd。金額不明。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-73610",
 "date": "2026-10-01",
@@ -510,6 +534,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-02",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-73806",
+"summary": "City of Columbus による商業施設の電気設備工事(MEP)、4080 Central College Rd。金額不明。"
+},
+{
 "date": "2026-10-01",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -643,6 +674,6 @@
 "summary": "Columbus 3675 PARSONS AVE の商業用火災報知工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。"
 }
 ],
-"generated_at": "2026-10-05T08:18:36+00:00",
+"generated_at": "2026-10-05T08:45:22+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
