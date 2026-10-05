@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 589000.0,
+"count": 5,
+"value_total": 849000.0,
 "latest": "2026-09-23",
 "items": [
 {
@@ -98,6 +98,54 @@
 "batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-1141",
+"date": "2026-08-11",
+"applied": "2026-06-24",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "5050 KINGSLEY DR",
+"permit_no": "2026P05672",
+"permit_type": "Building",
+"value": 250000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 5050 KINGSLEY DR のBuilding(Alteration) $250k(用途区分 B)。所有者記載なし。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Alteration / Building / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-004",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-8346",
+"date": "2026-08-10",
+"applied": "2026-07-28",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "5040 KINGSLEY DR",
+"permit_no": "2026P07070",
+"permit_type": "Fire Protection Systems",
+"value": 10000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 5040 Kingsley Dr(商業/B用途)での消防設備工事 $10k(詳細記載なし)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-037",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
 }
 ]
 },
@@ -145,8 +193,22 @@
 "title": "建設許可(Cincinnati): 未分類",
 "ref": "S-26293",
 "summary": "Cincinnati 5050 Kingsley Dr の建物改修(用途区分 B)$500k。詳細不明。"
+},
+{
+"date": "2026-08-11",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-1141",
+"summary": "Cincinnati 5050 KINGSLEY DR のBuilding(Alteration) $250k(用途区分 B)。所有者記載なし。"
+},
+{
+"date": "2026-08-10",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8346",
+"summary": "Cincinnati 5040 Kingsley Dr(商業/B用途)での消防設備工事 $10k(詳細記載なし)。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

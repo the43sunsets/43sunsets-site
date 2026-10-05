@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 24000.0,
+"count": 5,
+"value_total": 59250.0,
 "latest": "2026-08-17",
 "items": [
 {
@@ -72,6 +72,54 @@
 "provenance": {
 "policy": "v1-2026-09-02-all",
 "batch": "session-0903-007",
+"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
+}
+},
+{
+"id": "S-22487",
+"date": "2026-08-07",
+"applied": "2026-06-16",
+"state": "IL",
+"jurisdiction": "Blue Island",
+"address": null,
+"permit_no": "2020016386",
+"permit_type": "ELP",
+"value": 250.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Blue Island で住宅の小規模工事($250)。詳細: Commercial / Harold's Chicken-Install wallsig 81.5 sq ft. Change face only on po",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial / Harold's Chicken-Install wallsig 81.5 sq ft. Change face only on pole double sided.",
+"source_id": "SRC-042",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0903-009",
+"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
+}
+},
+{
+"id": "S-22486",
+"date": "2026-08-07",
+"applied": "2026-06-15",
+"state": "IL",
+"jurisdiction": "Blue Island",
+"address": null,
+"permit_no": "2020016379",
+"permit_type": "BLP",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "飲食店(Harold's Chicken)の壁面看板81.5SF設置・ポール看板面replace $35k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial / Harold's Chicken-Install wallsig 81.5 sq ft. Change face only on pole double sided.",
+"source_id": "SRC-042",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-0903-002",
 "model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
 }
 },
@@ -140,6 +188,20 @@
 "summary": "Blue Island(住所非開示)、Harold's Chicken、BLP $3k。"
 },
 {
+"date": "2026-08-07",
+"face": "permits",
+"title": "建設許可(Blue Island): 未分類",
+"ref": "S-22487",
+"summary": "Blue Island で住宅の小規模工事($250)。詳細: Commercial / Harold's Chicken-Install wallsig 81.5 sq ft. Change face only on po"
+},
+{
+"date": "2026-08-07",
+"face": "permits",
+"title": "建設許可(Blue Island): 未分類",
+"ref": "S-22486",
+"summary": "飲食店(Harold's Chicken)の壁面看板81.5SF設置・ポール看板面replace $35k。"
+},
+{
 "date": "2026-07-13",
 "face": "permits",
 "title": "建設許可(Blue Island): 未分類",
@@ -147,6 +209,6 @@
 "summary": "Blue Island (住所不明) で商業テナント内装(小規模)の工事(許可種別: BLP)$6.0k。申請者/所有者は Harold's Chicken。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

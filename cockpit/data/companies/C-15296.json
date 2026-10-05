@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 13,
-"value_total": 90000.0,
+"count": 15,
+"value_total": 104000.0,
 "latest": "2026-10-02",
 "items": [
 {
@@ -290,6 +290,54 @@
 "batch": "session-008",
 "model": "claude-sonnet-5 (subagent, subscription session)"
 }
+},
+{
+"id": "S-8471",
+"date": "2026-08-13",
+"applied": "2026-08-13",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "2021 AUBURN AV",
+"permit_no": "2026P07686",
+"permit_type": "Fire Protection Systems",
+"value": 0.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 2021 Auburn Av で防火設備の許可、詳細記載なし。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-072",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-8343",
+"date": "2026-08-10",
+"applied": "2026-07-02",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "2139 AUBURN AV",
+"permit_no": "2026P06348",
+"permit_type": "Fire Protection Systems",
+"value": 14000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 2139 AUBURN AV で消防設備工事(用途区分の記載なし) $14.0k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / No Use Group Entered",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-031",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
 }
 ]
 },
@@ -407,8 +455,22 @@
 "title": "建設許可(Cincinnati): 未分類",
 "ref": "S-8678",
 "summary": "Cincinnatiの2139 AUBURN AVで給排水に該当する簡易な工事(occupancy: I-2)を実施 $90k。"
+},
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8471",
+"summary": "Cincinnati 2021 Auburn Av で防火設備の許可、詳細記載なし。"
+},
+{
+"date": "2026-08-10",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8343",
+"summary": "Cincinnati 2139 AUBURN AV で消防設備工事(用途区分の記載なし) $14.0k。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

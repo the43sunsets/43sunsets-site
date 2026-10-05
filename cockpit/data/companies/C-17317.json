@@ -1,0 +1,152 @@
+{
+"id": "C-17317",
+"name": "UC PIKES HOUSING CORPORATION INC",
+"city": null,
+"state": null,
+"entity_type": "corp",
+"industry": null,
+"made": null,
+"size": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"master_checked_at": null,
+"master_status": {
+"state": "untargeted",
+"reason": {
+"origins": [
+"permits"
+],
+"rule": "none"
+}
+},
+"faces": {
+"permits": {
+"count": 3,
+"value_total": 19500.0,
+"latest": "2026-08-06",
+"items": [
+{
+"id": "S-8259",
+"date": "2026-08-06",
+"applied": "2026-07-30",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "2711 STRATFORD AV",
+"permit_no": "2026P07193",
+"permit_type": "Fire Protection Systems",
+"value": 12000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 2711 STRATFORD AVで改修工事(詳細不明)(消防設備、用途A-3、詳細記載なし)$12k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / A-3 (1)",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-034",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-7652",
+"date": "2026-07-17",
+"applied": "2026-07-17",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "2716 DIGBY AV",
+"permit_no": "2026P06737",
+"permit_type": "Fire Protection Systems",
+"value": 6000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati 2716 DIGBY AV で「Fire Protection Systems」$6k。Fire Protection Systems / Fire Protection Systems / R-2",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / R-2",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-046",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-7553",
+"date": "2026-07-14",
+"applied": "2026-05-11",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "2711 STRATFORD AV",
+"permit_no": "2026P04359",
+"permit_type": "Signs",
+"value": 1500.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "2711 STRATFORD AV(Cincinnati)のSigns $1.5k。所有者記載なし、本文は 'Signs / Signs / A-3 (1)' のみ。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Signs / Signs / A-3 (1)",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-061",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+}
+]
+},
+"ucc": {
+"count": 0,
+"machines": 0,
+"makers": [],
+"latest": null,
+"items": []
+},
+"hiring": {
+"status": "該当なし",
+"count": 0,
+"note": "この会社の採用ページは当社の網に無い(公開 API を持つ ATS が見つからない、または求人 0)。"
+},
+"grants": {
+"status": "該当なし",
+"count": 0,
+"note": "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。"
+},
+"news": {
+"status": "該当なし",
+"count": 0,
+"note": "直近のニュース(景気の状況で収集する米製造業・5 州のニュース)にこの会社は出ていない。"
+}
+},
+"timeline": [
+{
+"date": "2026-08-06",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8259",
+"summary": "Cincinnati 2711 STRATFORD AVで改修工事(詳細不明)(消防設備、用途A-3、詳細記載なし)$12k。"
+},
+{
+"date": "2026-07-17",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-7652",
+"summary": "Cincinnati 2716 DIGBY AV で「Fire Protection Systems」$6k。Fire Protection Systems / Fire Protection Systems / R-2"
+},
+{
+"date": "2026-07-14",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-7553",
+"summary": "2711 STRATFORD AV(Cincinnati)のSigns $1.5k。所有者記載なし、本文は 'Signs / Signs / A-3 (1)' のみ。"
+}
+],
+"generated_at": "2026-10-05T08:18:36+00:00",
+"note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
+}

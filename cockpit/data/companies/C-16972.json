@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 400.0,
+"count": 2,
+"value_total": 800.0,
 "latest": "2026-08-19",
 "items": [
 {
@@ -44,6 +44,30 @@
 "role": "operator",
 "role_label": "operator",
 "verbatim": "Mobile Home Demo - 1819 C St., Normal, IL 61761 / Residential Building / DEMO - STRUCTURE",
+"source_id": "SRC-018",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-064",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-10198",
+"date": "2026-08-12",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Normal",
+"address": "906 3rd St",
+"permit_no": "BLDR2026-4307",
+"permit_type": "Residential Building",
+"value": 400.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Normal 906 3rd St のモバイルホーム解体 $400(10171と同一運営者・同一プログラム)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Mobile Home Demo - 906 3rd St., Normal, IL 61761 / Residential Building / DEMO - STRUCTURE",
 "source_id": "SRC-018",
 "provenance": {
 "policy": "v1-2026-09-02-all",
@@ -83,8 +107,15 @@
 "title": "建設許可(Normal): 未分類",
 "ref": "S-10171",
 "summary": "Normal 1819 C St のモバイルホーム解体 $400(Northmeadow Village モバイルホームパーク運営者名義)。"
+},
+{
+"date": "2026-08-12",
+"face": "permits",
+"title": "建設許可(Normal): 未分類",
+"ref": "S-10198",
+"summary": "Normal 906 3rd St のモバイルホーム解体 $400(10171と同一運営者・同一プログラム)。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

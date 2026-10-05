@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 17,
-"value_total": 1790216.0,
+"count": 19,
+"value_total": 1816031.0,
 "latest": "2026-09-30",
 "items": [
 {
@@ -304,6 +304,30 @@
 "provenance": null
 },
 {
+"id": "S-8459",
+"date": "2026-08-12",
+"applied": "2026-06-30",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "3000 HENSHAW AV",
+"permit_no": "2026P05948",
+"permit_type": "HVAC",
+"value": 25815.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 3000 HENSHAW AV の HVAC 許可 $25.8k(記述: 「HVAC / HVAC / B」)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "HVAC / HVAC / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-019",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
 "id": "S-24807",
 "date": "2026-08-11",
 "applied": "2026-07-23",
@@ -422,6 +446,26 @@
 "batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-36451",
+"date": "2026-08-10",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Hamilton County",
+"address": "10708 LOVELAND MADEIRA RD , SYMMES TOWNSHIP OH 45140",
+"permit_no": "26HAM-PMT-004223",
+"permit_type": "OBC Mechanical Permit",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "OBC Mechanical Permit",
+"source_id": "SRC-024",
+"provenance": null
 }
 ]
 },
@@ -534,6 +578,13 @@
 "summary": null
 },
 {
+"date": "2026-08-12",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8459",
+"summary": "Cincinnati 3000 HENSHAW AV の HVAC 許可 $25.8k(記述: 「HVAC / HVAC / B」)。"
+},
+{
 "date": "2026-08-11",
 "face": "permits",
 "title": "建設許可(Naperville): 未分類",
@@ -567,8 +618,15 @@
 "title": "建設許可(Naperville): 未分類",
 "ref": "S-24805",
 "summary": "Naperville 1296 Rickert Dr の Fifth Third Bank の壁面サイン改装許可(金額不明)。"
+},
+{
+"date": "2026-08-10",
+"face": "permits",
+"title": "建設許可(Hamilton County): 未評価",
+"ref": "S-36451",
+"summary": null
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

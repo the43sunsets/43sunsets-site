@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 2425000.0,
+"count": 6,
+"value_total": 2546000.0,
 "latest": "2026-09-28",
 "items": [
 {
@@ -100,6 +100,54 @@
 }
 },
 {
+"id": "S-73434",
+"date": "2026-08-31",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Countryside",
+"address": "102 COUNTRYSIDE PLZ, COUNTRYSIDE, IL 60525",
+"permit_no": "P26-00461",
+"permit_type": "COMMERCIAL PERMIT",
+"value": 16000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Planet Fitness の壁面看板設置とロードサイドの看板コピー交換 $16k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "INSTALL WALL SIGN FOR PLANET FITNESS REPLACE PYLON COPY IN ROADWAY FREESTANDING SIGN. / COMMERCIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-58047",
+"date": "2026-08-07",
+"applied": "2026-08-07",
+"state": "IL",
+"jurisdiction": "Peoria",
+"address": "3425 N University DR",
+"permit_no": "MECH-001669-2026",
+"permit_type": "Mechanical",
+"value": 105000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Peoria 3425 N University Dr の Planet Fitness でRTU(屋上空調ユニット)4台を撤去・更新し、新規ダクト・グリルを設置する機械工事 $105k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Planet Fitness - Remove 4 RTUS and replace with new. Provide new duct distribution and grills / Mechanical / Commercial",
+"source_id": "SRC-142",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01HZT6nzCByNgVCjPNEUS1RR",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
 "id": "S-48",
 "date": "2026-07-06",
 "applied": "2025-12-08",
@@ -171,6 +219,20 @@
 "summary": "Chicago 5033 N Elston Ave にて Planet Fitness のテナント内装工事 $750k(セルフ証明)。"
 },
 {
+"date": "2026-08-31",
+"face": "permits",
+"title": "建設許可(Countryside): 未分類",
+"ref": "S-73434",
+"summary": "Planet Fitness の壁面看板設置とロードサイドの看板コピー交換 $16k。"
+},
+{
+"date": "2026-08-07",
+"face": "permits",
+"title": "建設許可(Peoria): 未分類",
+"ref": "S-58047",
+"summary": "Peoria 3425 N University Dr の Planet Fitness でRTU(屋上空調ユニット)4台を撤去・更新し、新規ダクト・グリルを設置する機械工事 $105k。"
+},
+{
 "date": "2026-07-06",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -178,6 +240,6 @@
 "summary": "Chicago 2558 W Cermak Rd の既存 Planet Fitness の内装改修 $850k。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

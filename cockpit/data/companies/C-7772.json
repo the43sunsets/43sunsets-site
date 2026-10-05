@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 774590.0,
-"latest": "2026-07-28",
+"count": 2,
+"value_total": 804590.0,
+"latest": "2026-08-06",
 "items": [
+{
+"id": "S-37912",
+"date": "2026-08-06",
+"applied": "2026-04-29",
+"state": "OH",
+"jurisdiction": "Worthington",
+"address": "245 E DUBLIN-GRANVILLE RD WORTHINGTON OH 43085",
+"permit_no": "BLDC2026-0089",
+"permit_type": "Alteration/Repair  (OBC)",
+"value": 30000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "公園に電気サービスがなかったため、新設の温水囲い設備用に新規電気引込を設置(OBC 改修/修理許可)。金額記載なし。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "The park did not have an electrical service. A new electrical service is being provided to serve a new heated water enclosure. / Alteration/Repair  (OBC) / Alteration/Repair",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_01RNEaVa4EJ6wXAWe8nA2ERt",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-38032",
 "date": "2026-07-28",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-08-06",
+"face": "permits",
+"title": "建設許可(Worthington): 未分類",
+"ref": "S-37912",
+"summary": "公園に電気サービスがなかったため、新設の温水囲い設備用に新規電気引込を設置(OBC 改修/修理許可)。金額記載なし。"
+},
+{
 "date": "2026-07-28",
 "face": "permits",
 "title": "建設許可(Worthington): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Worthington 市所有施設(380 Highland Ave)の空調設備更新工事 $774.6k(AHU/RTU 交換、VAV ボックス増設、給湯器交換等)。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

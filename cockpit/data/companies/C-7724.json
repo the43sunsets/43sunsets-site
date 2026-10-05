@@ -20,8 +20,8 @@
 },
 "faces": {
 "permits": {
-"count": 15,
-"value_total": 24343514.0,
+"count": 19,
+"value_total": 25485729.82,
 "latest": "2026-09-21",
 "items": [
 {
@@ -313,6 +313,30 @@
 }
 },
 {
+"id": "S-37004",
+"date": "2026-08-17",
+"applied": "2026-08-12",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2119 E 93 ST, CLEVELAND, OH, 44106",
+"permit_no": "BCB26-034065",
+"permit_type": "Commercial Building",
+"value": 192215.82,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 2119 E 93 St の商業ビル1階オフィスの内装改修 $192,216(B用途)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INT ALT TO L BLD 1FL OFFICES PER APPROVED PLANS. SEPARATE PLUMBING, HVAC AND ELECTRICAL PERMITS REQUIRED. CERTIFICATE OF OCCUPANCY REQUIRED. SUBMIT SEPARATE PLANS TO FPB FOR ALTERATIONS TO FIRE PROTECTION SYSTEMS.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
 "id": "S-26689",
 "date": "2026-08-13",
 "applied": "2025-12-23",
@@ -333,6 +357,78 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01XgsSA1e25Aj1Yf3Gg5cRhN",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-26795",
+"date": "2026-08-06",
+"applied": "2026-08-06",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2083 E 89TH, CLEVELAND, OH, 44106",
+"permit_no": "BCP26-033118",
+"permit_type": "Commercial Plumbing",
+"value": 200000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "A-2(飲食施設)用途で流し7台・床排水9箇所・キッチン21箇所を設置する商業配管工事 $200k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial Plumbing / A-2 Assembly - Food and Drink Consumption / INSTALL 7 SINK, 9 FLOOR DRAIN, 21 KITCHEN ***BUILDING PERMIT NO BCB26-027697***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-26836",
+"date": "2026-08-05",
+"applied": "2026-07-06",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2083 E 89TH ST, CLEVELAND, OH, 44106",
+"permit_no": "BCB26-027697",
+"permit_type": "Commercial Building",
+"value": 450000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "5,162 SF のカフェ内装改修 $450k(A-2 用途・飲食)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial Building / A-2 Assembly - Food and Drink Consumption / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO 5,162 SF CAFE PER APPROVED PLANS. SEPARATE PLUMBING, HVAC, ELECTRICAL AND FIRE PROTECTION PERMITS ARE REQUIRED.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-26838",
+"date": "2026-08-05",
+"applied": "2026-07-15",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "9410 CARNEGIE AVE 0, CLEVELAND, OH, 44115",
+"permit_no": "BCB26-029251",
+"permit_type": "Commercial Building",
+"value": 300000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cleveland 9410 Carnegie Ave のオフィスビル(B用途)5階の内装解体・下地工事 $300k。今後の内装工事(build-out)は別許可扱い。",
+"infer": "選択的解体と啓発工事のみで、用途(テナント)は不明。後続の build-out 許可を追跡すれば用途判明の可能性(推論)。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INTERIOR ALTERATIONS SELECTIVE DEMOLITION OF 5TH-FLOOR AND ENABLING WORK. FOLLOW-ON PERMITS REQUIRED FOR BUILD-OUT AND TO ESTABLISH OCCUPANCY. MAINTAIN OBC CHAPTER 33 SAFEGUARDS DURING CONSTRUCTION. NO CERTIFICATE OF OCCUPANCY REQUIRED ",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 },
@@ -495,11 +591,39 @@
 "summary": "Cleveland Clinic Foundation の施設(2060 E 89th St)3 階 32,156 SQFT に対する電気工事許可 $1.48M(親許可 #BCB25-041723 に付随)。"
 },
 {
+"date": "2026-08-17",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-37004",
+"summary": "Cleveland 2119 E 93 St の商業ビル1階オフィスの内装改修 $192,216(B用途)。"
+},
+{
 "date": "2026-08-13",
 "face": "permits",
 "title": "建設許可(Cleveland): 医療施設",
 "ref": "S-26689",
 "summary": "Cleveland Clinic の複数棟(サブ地下・地下・1階 Building MM、2階 Building M、3階 Building G)32,156 SQ FT を滅菌処理部門(Sterile Processing Department)向けに内装改修 $12.5M。配管・空調・電気・防火の各設備許可が必要。"
+},
+{
+"date": "2026-08-06",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-26795",
+"summary": "A-2(飲食施設)用途で流し7台・床排水9箇所・キッチン21箇所を設置する商業配管工事 $200k。"
+},
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-26836",
+"summary": "5,162 SF のカフェ内装改修 $450k(A-2 用途・飲食)。"
+},
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-26838",
+"summary": "Cleveland 9410 Carnegie Ave のオフィスビル(B用途)5階の内装解体・下地工事 $300k。今後の内装工事(build-out)は別許可扱い。"
 },
 {
 "date": "2026-08-04",
@@ -516,6 +640,6 @@
 "summary": "Cleveland Clinic(9500 Euclid Ave)でサンプポンプ1台・排水/通気配管23ftの設備配管工事 $14,660(親許可 B25018487 M19-M20 に付随)。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

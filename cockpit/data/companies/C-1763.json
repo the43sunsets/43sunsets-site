@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 12000.0,
+"count": 4,
+"value_total": 24650.0,
 "latest": "2026-08-14",
 "items": [
 {
@@ -74,6 +74,54 @@
 "batch": "session-040",
 "model": "claude-sonnet-5 (subagent, subscription session)"
 }
+},
+{
+"id": "S-5732",
+"date": "2026-08-13",
+"applied": "2026-07-29",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "123 N WACKER DR",
+"permit_no": "101086656",
+"permit_type": "PERMIT - SIGNS",
+"value": 650.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago(123 N Wacker Dr)でJust Saladのビニール製ウィンドウサイン(高さ6ft×幅4.75ft、29平方フィート)を設置$650。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "JUST SALAD: VINYL WINDOW SIGN (N WACKER DR ELEVATION) - 6'-0\" H X 4'-9\" W (29 SQ FT)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-063",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
+{
+"id": "S-5737",
+"date": "2026-08-13",
+"applied": "2026-07-29",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "123 N WACKER DR",
+"permit_no": "101086657",
+"permit_type": "PERMIT - SIGNS",
+"value": 12000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 123 N WACKER DRで商業用サイン工事(Just Salad 店舗の吊り下げ照明サイン)$12k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "JUST SALAD: INTERNALLY ILLUMINATED FACE-LIT SUSPENDED SIGN, EXTERIOR MOUNTED (N WACKER DR ELEVATION) - 2'-9\" H X 14'-0\" W (39 SQ FT)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-034",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
 }
 ]
 },
@@ -114,8 +162,22 @@
 "title": "建設許可(Chicago): 未分類",
 "ref": "S-5799",
 "summary": "Chicago 123 N Wacker Dr の Just Salad 店舗で内照式ウィンドウサイン設置(3'4”x9'5”)$8.5k。"
+},
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-5732",
+"summary": "Chicago(123 N Wacker Dr)でJust Saladのビニール製ウィンドウサイン(高さ6ft×幅4.75ft、29平方フィート)を設置$650。"
+},
+{
+"date": "2026-08-13",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-5737",
+"summary": "Chicago 123 N WACKER DRで商業用サイン工事(Just Salad 店舗の吊り下げ照明サイン)$12k。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

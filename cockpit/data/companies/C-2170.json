@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 2522.0,
-"latest": "2026-07-31",
+"count": 3,
+"value_total": 6834.0,
+"latest": "2026-08-28",
 "items": [
+{
+"id": "S-73306",
+"date": "2026-08-28",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Schaumburg",
+"address": "263 BUCKINGHAM CT A1, SCHAUM, SCHAUMBURG, IL 60193",
+"permit_no": "REXP-26-739",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 2062.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Schaumburg 263 Buckingham Ct A1 の住宅屋根の葺き替え $2,062。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "ROOF/REROOF / RESIDENTIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-73304",
+"date": "2026-08-28",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Schaumburg",
+"address": "275 WILMETTE CT A1, SCHAUMBU, SCHAUMBURG, IL 60193",
+"permit_no": "REXP-26-734",
+"permit_type": "RESIDENTIAL PERMIT",
+"value": 2250.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Schaumburg 275 Wilmette Ct A1 の住宅屋根の再葺き替え工事 $2,250。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "ROOF/REROOF / RESIDENTIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-14089",
 "date": "2026-07-31",
@@ -78,6 +126,20 @@
 },
 "timeline": [
 {
+"date": "2026-08-28",
+"face": "permits",
+"title": "建設許可(Schaumburg): 未分類",
+"ref": "S-73306",
+"summary": "Schaumburg 263 Buckingham Ct A1 の住宅屋根の葺き替え $2,062。"
+},
+{
+"date": "2026-08-28",
+"face": "permits",
+"title": "建設許可(Schaumburg): 未分類",
+"ref": "S-73304",
+"summary": "Schaumburg 275 Wilmette Ct A1 の住宅屋根の再葺き替え工事 $2,250。"
+},
+{
 "date": "2026-07-31",
 "face": "permits",
 "title": "建設許可(Schaumburg): 未分類",
@@ -85,6 +147,6 @@
 "summary": "Schaumburg 374 GREYSTONE CT D1, SCHAUMB, SCHAUMBURG, IL 60193 のコンドミニアム(Lexington Green II)で屋根の葺き替え $2.5k。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

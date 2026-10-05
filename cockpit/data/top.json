@@ -1,8 +1,8 @@
 {
-"generated_at": "2026-09-30T14:23:01+00:00",
-"updated_ct": "2026-09-30",
-"week_start": "2026-09-28",
-"next_update_ct": "2026-10-05",
+"generated_at": "2026-10-05T08:19:55+00:00",
+"updated_ct": "2026-10-05",
+"week_start": "2026-10-05",
+"next_update_ct": "2026-10-12",
 "window_days": 90,
 "rule": "直近 90 日の記録から、目立つ投資の動きを 5 つ選ぶ(建屋と設備の両方/日系/大型の建設/続けて機械を入れた会社/自動化つきの導入)。同じ会社は 1 回。毎週月曜に選び直す。各件の選定理由は why に。",
 "intro": "直近 90 日の記録から、毎週月曜に選び直す 5 件。記録日は 90 日前まで遡ることがある。",
@@ -31,7 +31,7 @@
 "date": "2026-08-21",
 "karte": "C-138",
 "company": "OHIOHEALTH CORP",
-"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 31 件中の上位)。工事費 $1M 以上 = 設備の入る建屋。"
+"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 35 件中の上位)。工事費 $1M 以上 = 設備の入る建屋。"
 },
 {
 "kind": "permit",
@@ -44,33 +44,59 @@
 "date": "2026-07-30",
 "karte": null,
 "company": "所有者・申請者の記載なし",
-"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 31 件中の上位)。工事費 $1M 以上 = 設備の入る建屋。"
+"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 35 件中の上位)。工事費 $1M 以上 = 設備の入る建屋。"
+},
+{
+"kind": "multi",
+"tag": "連続投資",
+"title": "TK MACHINE LLC が 3 か月で機械 2 台を導入",
+"body": "Elroy, WI。CNC切削加工・カスタム機械加工とデザインを提供。Haas Automation の機械を続けて入れている = 生産能力を増やしている動き。",
+"move": "TK MACHINE LLC が 3 か月で機械 2 台を導入",
+"link": "ucc/",
+"face": "UCC",
+"date": "2026-09-01",
+"karte": "C-12921",
+"company": "TK MACHINE LLC",
+"why": "直近 90 日で機械 2 台・登記 1 件と、続けて設備を入れている会社。1 件ずつより、連続した導入の方が増産の意思が読める。"
+},
+{
+"kind": "auto",
+"tag": "自動化",
+"title": "STEIGER STEEL & FABRICATING, INC. が自動化つきのロータリードローパイプベンダーを導入",
+"body": "La Crosse, WI。8月に登記。搬入出やロボットまで含めた導入 = 省人化と量産化の動き。",
+"move": "STEIGER STEEL & FABRICATING, INC. が自動化つきのロータリードローパイプベンダーを導入",
+"link": "ucc/",
+"face": "UCC",
+"date": "2026-08-07",
+"karte": "C-12917",
+"company": "STEIGER STEEL & FABRICATING, INC.",
+"why": "直近 90 日の登記で、搬入出やロボットまで含む自動化つきの導入。省人化と量産化の両方を読める型なので 1 枠。"
 }
 ],
 "counts": {
-"permits_targets": 152,
-"permits_new90": 111,
-"ucc_read": 12,
-"ucc_new90": 12,
-"ucc_companies": 0,
-"jp_companies": 2
+"permits_targets": 176,
+"permits_new90": 128,
+"ucc_read": 20,
+"ucc_new90": 20,
+"ucc_companies": 8,
+"jp_companies": 3
 },
 "permits_meta": {
-"generated_at": "2026-09-30T14:22:21+00:00",
+"generated_at": "2026-10-05T08:18:28+00:00",
 "funnel": {
-"signals_total": 67890,
-"candidates": 920,
-"enriched": 45282,
-"targets": 165,
-"unclassified": 45117,
-"unevaluated": 22608,
+"signals_total": 72710,
+"candidates": 1002,
+"enriched": 49267,
+"targets": 183,
+"unclassified": 49084,
+"unevaluated": 23443,
 "by_category": {
 "データセンター建設": 11,
-"医療施設": 89,
-"未分類": 45117,
-"物流・倉庫の新設": 16,
-"研究・ラボ施設": 15,
-"製造能力の増強": 34
+"医療施設": 100,
+"未分類": 49084,
+"物流・倉庫の新設": 17,
+"研究・ラボ施設": 16,
+"製造能力の増強": 39
 }
 },
 "states": [
@@ -82,13 +108,13 @@
 ]
 },
 "ucc_meta": {
-"generated_at": "2026-09-30T14:22:52+00:00",
+"generated_at": "2026-10-04T15:00:37+00:00",
 "funnel": {
-"filings_total": 957,
-"with_collateral": 942,
+"filings_total": 8002,
+"with_collateral": 954,
 "read": 915,
-"unread": 27,
-"no_text_yet": 15,
+"unread": 39,
+"no_text_yet": 7048,
 "by_kind": {
 "与信枠の新設": 60,
 "未分類": 28,
@@ -96,16 +122,16 @@
 "資金繰り警戒": 2,
 "雑音": 69
 },
-"wi_index": 6588,
+"wi_index": 6944,
 "wi_purchased": 12,
-"wi_candidates": 572
+"wi_candidates": 596
 },
 "catalog": {
 "equipment_rows": 280,
-"equipment_hits": 0,
+"equipment_hits": 6,
 "equipment_misses": 0,
-"companies_checked": 3173,
-"companies_total": 0
+"companies_checked": 3247,
+"companies_total": 8
 }
 }
 }

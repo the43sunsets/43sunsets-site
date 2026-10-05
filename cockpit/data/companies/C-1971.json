@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 11,
-"value_total": 1653784.0,
+"count": 13,
+"value_total": 1685674.0,
 "latest": "2026-09-27",
 "items": [
 {
@@ -76,6 +76,30 @@
 }
 },
 {
+"id": "S-73511",
+"date": "2026-09-03",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Rockford",
+"address": "E 7370 STATE",
+"permit_no": "MULCOM20261502",
+"permit_type": "Multifamily/Commercial Permits",
+"value": 1890.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Rockford E 7370 State に Dunkin の独立サインと高さ制限バーを設置 $1,890。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "DUNKIN- FREESTANDING SIGN / Installing freestanding height clearance bar / SIGNS",
+"source_id": "SRC-002",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
 "id": "S-55524",
 "date": "2026-08-24",
 "applied": null,
@@ -97,6 +121,30 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01HZT6nzCByNgVCjPNEUS1RR",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-18474",
+"date": "2026-08-06",
+"applied": "2026-07-14",
+"state": "IL",
+"jurisdiction": "Niles",
+"address": "8080 N MILWAUKEE AVE NILES IL 60714",
+"permit_no": "BLDNR-01265-14-07-2026",
+"permit_type": "Building Non-Residential (Alteration)",
+"value": 30000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Niles 8080 N MILWAUKEE AVE NILES IL 60714 でドーナツ店(Dunkin')の小規模内装改修・看板更新 $30.0k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "ONLINE - Minor interior renovations for an existing Dunkin' restaurant, with limited exterior modifications associated with menu boards, signage, and other brand identity elements, in accordance with current Dunkin' brand standards. / Building Non-Residential (Alteration) / Alteration",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-017",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 },
 {
@@ -332,11 +380,25 @@
 "summary": "Niles 8080 N Milwaukee Ave にてダンキンの看板リブランディング(壁面/独立看板)、金額不明。"
 },
 {
+"date": "2026-09-03",
+"face": "permits",
+"title": "建設許可(Rockford): 未分類",
+"ref": "S-73511",
+"summary": "Rockford E 7370 State に Dunkin の独立サインと高さ制限バーを設置 $1,890。"
+},
+{
 "date": "2026-08-24",
 "face": "permits",
 "title": "建設許可(Chicago Ridge): 未分類",
 "ref": "S-55524",
 "summary": "Chicago Ridge 11007 S Major Avenue の Dunkin における屋根工事(roof)$16k。"
+},
+{
+"date": "2026-08-06",
+"face": "permits",
+"title": "建設許可(Niles): 未分類",
+"ref": "S-18474",
+"summary": "Niles 8080 N MILWAUKEE AVE NILES IL 60714 でドーナツ店(Dunkin')の小規模内装改修・看板更新 $30.0k。"
 },
 {
 "date": "2026-07-27",
@@ -395,6 +457,6 @@
 "summary": "Rockford 3225 11TH で看板の設置・交換 $2.31k。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

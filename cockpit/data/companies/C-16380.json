@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 52000.0,
+"count": 4,
+"value_total": 700000.0,
 "latest": "2026-08-28",
 "items": [
 {
@@ -74,6 +74,54 @@
 "batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-62479",
+"date": "2026-08-05",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Palatine",
+"address": "80 W NORTHWEST HWY, PALATINE, IL 60067",
+"permit_no": "BLDC-026046-2026",
+"permit_type": "COMMERCIAL PERMIT",
+"value": 324000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Palatine 80 W Northwest Hwy の工場建物の修繕・改修工事(COMMERCIAL - ALTERATION)$324k。",
+"infer": "「REPLACE-REPAIR」との記述から老朽化対応の修繕工事の可能性(推論)。所有者・入居企業は記録上不明。",
+"role": "operator",
+"role_label": "operator",
+"verbatim": "COMMERCIAL - ALTERATION / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"source_id": "SRC-021",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-16248",
+"date": "2026-08-05",
+"applied": "2026-07-30",
+"state": "IL",
+"jurisdiction": "Palatine",
+"address": "80 W NORTHWEST HWY Palatine IL 60067",
+"permit_no": "BLDC-026046-2026",
+"permit_type": "Building Permit for Commercial Alteration\r\n",
+"value": 324000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Palatine 80 W NORTHWEST HWY Palatine IL 60067 での「Building Permit for Commercial Alteration\r\n」$324k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Modernization of center elevator, controller, machine, door operator and fixtures. / Building Permit for Commercial Alteration\r\n / Commercial - Alteration",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-003",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
 }
 ]
 },
@@ -114,8 +162,22 @@
 "title": "建設許可(Palatine): 未分類",
 "ref": "S-63235",
 "summary": "Palatine 80 W Northwest Hwy の工場建物における修繕・補修工事(商業改修)$26,000。"
+},
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Palatine): 未分類",
+"ref": "S-62479",
+"summary": "Palatine 80 W Northwest Hwy の工場建物の修繕・改修工事(COMMERCIAL - ALTERATION)$324k。"
+},
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Palatine): 未分類",
+"ref": "S-16248",
+"summary": "Palatine 80 W NORTHWEST HWY Palatine IL 60067 での「Building Permit for Commercial Alteration\r\n」$324k。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 109400.0,
-"latest": "2026-09-02",
+"count": 5,
+"value_total": 115800.0,
+"latest": "2026-10-01",
 "items": [
+{
+"id": "S-73557",
+"date": "2026-10-01",
+"applied": "2026-09-23",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "1796 DREMAN AV",
+"permit_no": "2026P08362",
+"permit_type": "Plumbing Permits",
+"value": 3200.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati 1796 Dreman Ave の配管許可 $3,200(1-2-3 家族住宅)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Plumbing Permits / Plumbing Permits / 1-2-3 FM",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-73554",
+"date": "2026-10-01",
+"applied": "2026-09-22",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "1798 DREMAN AV",
+"permit_no": "2026P08353",
+"permit_type": "Plumbing Permits",
+"value": 3200.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati 1798 Dreman Ave の配管設備許可 $3,200(1-2-3家族住宅)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Plumbing Permits / Plumbing Permits / 1-2-3 FM",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-26273",
 "date": "2026-09-02",
@@ -126,6 +174,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-73557",
+"summary": "Cincinnati 1796 Dreman Ave の配管許可 $3,200(1-2-3 家族住宅)。"
+},
+{
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-73554",
+"summary": "Cincinnati 1798 Dreman Ave の配管設備許可 $3,200(1-2-3家族住宅)。"
+},
+{
 "date": "2026-09-02",
 "face": "permits",
 "title": "建設許可(Cincinnati): 未分類",
@@ -147,6 +209,6 @@
 "summary": "Cincinnati の物件でHVAC工事 $9.4k(所有者・詳細不明)。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

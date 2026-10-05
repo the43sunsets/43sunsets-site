@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 15,
-"value_total": 690850.0,
+"count": 17,
+"value_total": 1729050.0,
 "latest": "2026-09-28",
 "items": [
 {
@@ -386,6 +386,50 @@
 "batch": "session-0903-008",
 "model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
 }
+},
+{
+"id": "S-26747",
+"date": "2026-08-11",
+"applied": "2026-06-18",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "3299 STEELYARD DR, CLEVELAND, OH, 44105",
+"permit_no": "BCB26-025149",
+"permit_type": "Commercial Building",
+"value": 1038200.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "既存バーガーキング店舗(3299 Steelyard Dr)の内外装レベル1改修 $1.04M。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial Building / A-2 Assembly - Food and Drink Consumption / Interior/Exterior Remodel / INTERIOR AND EXTERIOR OEBC LEVEL 1 ALTERATIONS TO EXISTING BURGER KING FACILITY PER APPROVED PLANS. SEPARATE PERMITS REQUIRED FOR ELECTRICAL, HVAC, AND PLUMBING. MAINTAIN OBC CHAPTER 33 SAFEGUARDS DURING CO",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XgsSA1e25Aj1Yf3Gg5cRhN",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-40641",
+"date": "2026-08-06",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Mansfield",
+"address": "2242 S Main St, Mansfield OH 44902",
+"permit_no": "COM-SPK-F2600526",
+"permit_type": "Commercial Sprinkler System",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "BURGER KING FIRE SPRINKLER / Commercial Sprinkler System",
+"source_id": "SRC-024",
+"provenance": null
 }
 ]
 },
@@ -517,8 +561,22 @@
 "title": "建設許可(Melrose Park): 未分類",
 "ref": "S-22002",
 "summary": "Melrose Park 5875 1931 N MANNHEIM RDでBURGER KING CORPが『TINT』 $850。"
+},
+{
+"date": "2026-08-11",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-26747",
+"summary": "既存バーガーキング店舗(3299 Steelyard Dr)の内外装レベル1改修 $1.04M。"
+},
+{
+"date": "2026-08-06",
+"face": "permits",
+"title": "建設許可(Mansfield): 未評価",
+"ref": "S-40641",
+"summary": null
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

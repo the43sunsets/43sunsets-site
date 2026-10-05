@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 29,
-"value_total": 4929714.0,
+"count": 32,
+"value_total": 7607489.0,
 "latest": "2026-08-25",
 "items": [
 {
@@ -292,6 +292,30 @@
 }
 },
 {
+"id": "S-25659",
+"date": "2026-08-10",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Sugar Grove",
+"address": "457 CHERRYWOOD LN",
+"permit_no": "PB26-0506",
+"permit_type": "Residential",
+"value": 210079.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Sugar Grove 457 Cherrywood Ln に 4,078 sqft の戸建て住宅を新築 $210k(Lennar Chicago LLC)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "DETACHED SINGLE FAMIL Y DWELLING Lennar Chicago LLC / Residential / 4,078 sqft",
+"source_id": "SRC-059",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
 "id": "S-25627",
 "date": "2026-08-05",
 "applied": null,
@@ -332,6 +356,54 @@
 "role": "applicant",
 "role_label": "申請者(許可記録)",
 "verbatim": "DETACHED SINGLE FAMIL Y DWELLING Lennar Chicago LLC / Residential / 3,783 sqft",
+"source_id": "SRC-059",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-25626",
+"date": "2026-08-05",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Sugar Grove",
+"address": "433 BEECH LN",
+"permit_no": "PB26-0476",
+"permit_type": "Commercial",
+"value": 2285171.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Sugar Grove 433 Beech Ln に戸建て住宅(4,234 sqft)を新築 $2.29M(許可種別は Commercial だが用途は一戸建て住宅)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "DETACHED SINGLE FAMIL Y DWELLING Lennar Chicago LLC / Commercial / 4,234 sqft",
+"source_id": "SRC-059",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "msgbatch_0173EeGPAtquMc5r1mhKkSSM",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-25623",
+"date": "2026-08-05",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Sugar Grove",
+"address": "421 BEECH LANE",
+"permit_no": "PB26-0475",
+"permit_type": "Residential",
+"value": 182525.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Sugar Grove 421 Beech Lane に戸建住宅(2,859 sqft)を新築 $182,525。建築者は Lennar Chicago LLC。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "DETACHED SINGLE FAMIL Y DWELLING Lennar Chicago LLC / Residential / 2,859 sqft",
 "source_id": "SRC-059",
 "provenance": {
 "policy": "v1-2026-09-02-all",
@@ -827,6 +899,13 @@
 "summary": "Sugar Grove 452 Ashbury Dr に 4,235 sqft の一戸建て住宅を新築 $226,224(Lennar Chicago LLC 関連)。"
 },
 {
+"date": "2026-08-10",
+"face": "permits",
+"title": "建設許可(Sugar Grove): 未分類",
+"ref": "S-25659",
+"summary": "Sugar Grove 457 Cherrywood Ln に 4,078 sqft の戸建て住宅を新築 $210k(Lennar Chicago LLC)。"
+},
+{
 "date": "2026-08-05",
 "face": "permits",
 "title": "建設許可(Sugar Grove): 未分類",
@@ -839,6 +918,20 @@
 "title": "建設許可(Sugar Grove): 未分類",
 "ref": "S-25625",
 "summary": "Sugar Grove 429 Beech Ln に一戸建て住宅(3,783 sqft)を新築 $204,189。"
+},
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Sugar Grove): 未分類",
+"ref": "S-25626",
+"summary": "Sugar Grove 433 Beech Ln に戸建て住宅(4,234 sqft)を新築 $2.29M(許可種別は Commercial だが用途は一戸建て住宅)。"
+},
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Sugar Grove): 未分類",
+"ref": "S-25623",
+"summary": "Sugar Grove 421 Beech Lane に戸建住宅(2,859 sqft)を新築 $182,525。建築者は Lennar Chicago LLC。"
 },
 {
 "date": "2026-08-03",
@@ -953,6 +1046,6 @@
 "summary": "Shorewood 20816 S Auburn Dr に一戸建て住宅を建築 $176,539。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

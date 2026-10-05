@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 60000.0,
-"latest": "2026-07-06",
+"count": 2,
+"value_total": 72081.0,
+"latest": "2026-08-05",
 "items": [
+{
+"id": "S-5233",
+"date": "2026-08-05",
+"applied": "2026-07-30",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1229 W WASHINGTON BLVD",
+"permit_no": "B200480686",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 12081.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 1229 W Washington Blvd のスイートで低圧通信配線(データ/映像)工事 $12.1k。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL DATA/VIDEO. SPECIFIC LOCATION: LOW VOLTAGE WORK TO SERVICE ENTIRE SUITE.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-033",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
+},
 {
 "id": "S-3063",
 "date": "2026-07-06",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-5233",
+"summary": "Chicago 1229 W Washington Blvd のスイートで低圧通信配線(データ/映像)工事 $12.1k。"
+},
+{
 "date": "2026-07-06",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +116,6 @@
 "summary": "1229 W WASHINGTON BLVDの商業テナント/オフィス内装改修 $60k。"
 }
 ],
-"generated_at": "2026-10-04T15:00:38+00:00",
+"generated_at": "2026-10-05T08:18:36+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
