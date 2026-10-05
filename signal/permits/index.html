@@ -309,6 +309,7 @@ let COMPANIES = [];
 const STATES = ["IL","IN","MI","OH","WI"];
 const CATEGORIES = ["製造能力の増強","物流・倉庫の新設","データセンター建設","医療施設","研究・ラボ施設"];
 const INDUSTRIES = ["半導体・電子","医薬・ライフサイエンス","航空宇宙","軍事・防衛","自動車部品","機械・金属","食品・素材加工","物流・EC","データセンター","その他製造","未分類"];
+function facetVocab(meta, key, fallback){ const v = meta && meta.vocab && meta.vocab[key]; return (Array.isArray(v) && v.length > 0 && v.every(x => typeof x === "string")) ? v : fallback; }   // meta.vocab(cockpit の工程の版が書く)があればそれ・無ければ今の定数(旧経路は 1 文字も変わらない)
 const PAGE_SIZE = 8;
 let page = 1;
 
@@ -359,7 +360,7 @@ function refreshCounts(){
   }
 }
 function renderFilters(){
-  const defs = [["f-state","state",STATES],["f-category","category",CATEGORIES],["f-industry","industry",INDUSTRIES]];
+  const defs = [["f-state","state",STATES],["f-category","category",facetVocab(META,"category",CATEGORIES)],["f-industry","industry",facetVocab(META,"industry",INDUSTRIES)]];
   for(const [elId, field, vocab] of defs){
     const counts = countBy(field);
     const el = document.getElementById(elId);
