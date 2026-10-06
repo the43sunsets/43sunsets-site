@@ -75,8 +75,13 @@ test("F2: buttons, extraction markers, CRM function and filtered call each occur
   }
 });
 
-test("F2: adjacent button rule and both download filename prefixes each occur once", () => {
-  for (const needle of [".exportbtn + .exportbtn{margin-left:8px;}", "43sunsets-cockpit-ucc-machines-", "43sunsets-signal-ucc-crm-"]) {
+test("F2: exports wrapper rule and both download filename prefixes each occur once", () => {
+  assert.equal(count(".exportbtn + .exportbtn{margin-left:8px;}"), 0);
+  for (const needle of [".exports{margin-left:auto; display:flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:8px;} .exports .exportbtn{margin-left:0;}", "43sunsets-cockpit-ucc-machines-", "43sunsets-signal-ucc-crm-"]) {
     assert.equal(count(needle), 1, needle);
   }
+});
+
+test("F2: both export buttons are adjacent inside one exports wrapper", () => {
+  assert.equal((html.match(/<span class="exports">\n\s*<button class="exportbtn" id="export"[^\n]*\n\s*<button class="exportbtn" id="export-crm"[^\n]*\n\s*<\/span>/g) || []).length, 1);
 });

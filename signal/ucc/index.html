@@ -83,7 +83,7 @@ main{padding:18px 28px 60px; min-width:0;}
 .hitsub{font-size:12px; color:var(--sub);}
 .exportbtn{margin-left:auto; border:1.5px solid var(--ai-accent); color:var(--ai-accent); background:transparent; font-family:inherit; font-weight:700; font-size:13px; padding:7px 16px; border-radius:5px; cursor:pointer;}
 .exportbtn:hover{background:var(--ai-accent); color:var(--paper);}
-.exportbtn + .exportbtn{margin-left:8px;}
+.exports{margin-left:auto; display:flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:8px;} .exports .exportbtn{margin-left:0;}
 
 .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px;}
 .card{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:15px 17px 13px; display:flex; flex-direction:column; gap:7px;}
@@ -278,8 +278,10 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
       <span class="hitsub" id="hitsub"></span>
       <div class="seg" id="seg-period" title="期間 = 提出日。件数は他のフィルタ適用後"></div>
     </div>
+    <span class="exports">
     <button class="exportbtn" id="export" title="左のフィルタで絞った結果を、機械 1 台 1 行で書き出します(カタログ列つき)">CSV エクスポート(機械単位)</button>
     <button class="exportbtn" id="export-crm" title="左のフィルタで絞った結果を、登記 1 件 1 行で書き出します(会社名・市・州・出来事・日付・担保権者・記録の参照と検索画面の URL・企業ページの URL = CRM にそのまま取り込める列)">CSV エクスポート(CRM 用・登記単位)</button>
+    </span>
   </div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" hidden>条件に一致する登記はありません。フィルタを緩めてください。</div>
