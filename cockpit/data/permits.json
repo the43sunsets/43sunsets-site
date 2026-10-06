@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-10-06T08:39:33+00:00",
+"generated_at": "2026-10-06T12:30:17+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,17 +17,17 @@
 "funnel": {
 "signals_total": 73304,
 "candidates": 1011,
-"enriched": 49437,
-"targets": 187,
-"unclassified": 49250,
-"unevaluated": 23867,
+"enriched": 49828,
+"targets": 189,
+"unclassified": 49639,
+"unevaluated": 23476,
 "by_category": {
 "データセンター建設": 11,
 "医療施設": 102,
-"未分類": 49250,
-"物流・倉庫の新設": 17,
+"未分類": 49639,
+"物流・倉庫の新設": 18,
 "研究・ラボ施設": 16,
-"製造能力の増強": 41
+"製造能力の増強": 42
 }
 },
 "sources": [
@@ -247,7 +247,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-10-06",
 "owner_coverage": 12560,
-"targets": 12,
+"targets": 13,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -281,7 +281,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-09-30",
 "owner_coverage": 436,
-"targets": 2,
+"targets": 3,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -1523,21 +1523,21 @@
 "permits-more-IL-4.json",
 "permits-more-IL-5.json"
 ],
-"OH": [
-"permits-more-OH-1.json"
-],
 "MI": [
 "permits-more-MI-1.json"
+],
+"OH": [
+"permits-more-OH-1.json"
 ],
 "WI": [
 "permits-more-WI-1.json"
 ]
 },
 "unclassified_by_state": {
-"IN": 514,
-"IL": 37330,
-"OH": 7231,
-"MI": 1859,
+"IN": 575,
+"IL": 37639,
+"MI": 1867,
+"OH": 7242,
 "WI": 576
 }
 },
@@ -1590,6 +1590,56 @@
 "batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-10-02T12:30:25+00:00"
+}
+},
+{
+"investor": {
+"name": "COOPER STEEL OF OHIO LLC",
+"basis": "owner_occupier",
+"label": "自社所有",
+"source": "parcel",
+"source_label": "登記(郡台帳)"
+},
+"parties": {
+"owner_of_record": "COOPER STEEL OF OHIO LLC",
+"owner_kind": "課税台帳",
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-74223",
+"state": "OH",
+"city": "Clermont County・2565 OLD SR 32 BATAVIA OH",
+"company": "COOPER STEEL OF OHIO LLC",
+"entity_type": "corp",
+"company_basis": "owner",
+"industry": "機械・金属",
+"category": "製造能力の増強",
+"category_raw": "製造能力の増強",
+"confidence": "high",
+"date": "2026-10-05",
+"applied": "2026-06-12",
+"jp": false,
+"new": true,
+"summary": "Cooper Steel of Ohio の工場(2565 Old SR 32, Batavia OH)の改修工事 $16M。",
+"infer": "鉄骨製造工場の大規模改修 = 生産ライン更新・製缶/溶接設備の調達が竣工まで続く窓の可能性(推論)。",
+"note": null,
+"fact": {
+"src": "Clermont County 建築許可(公開記録)",
+"ref": "許可 B-075373-2026 Commercial Alteration Permit",
+"value": 16000000.0,
+"verbatim": "COOPER STEEL OF OHIO FACTORY REMODEL / Commercial Alteration Permit / Alteration",
+"gc": null,
+"pin": "012014A033.",
+"owner_source": "parcel:clermont_oh"
+},
+"karte": null,
+"company_id": "C-15484",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0187iVtZaxs9yZi2kQ1byUGq",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-10-06T12:30:10+00:00"
 }
 },
 {
@@ -2290,6 +2340,56 @@
 "batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
 "model": "claude-sonnet-5 (batch api v1)",
 "generated_at": "2026-09-26T15:00:24+00:00"
+}
+},
+{
+"investor": {
+"name": null,
+"basis": "unknown",
+"label": "未特定",
+"source": null,
+"source_label": null
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-74487",
+"state": "IL",
+"city": "Woodridge・11231 KATHERINES XING VALLEY FIRE PROTECTION (FP)",
+"company": "VALLEY FIRE PROTECTION",
+"entity_type": "corp",
+"company_basis": "gc",
+"industry": "物流・EC",
+"category": "物流・倉庫の新設",
+"category_raw": "物流・倉庫の新設",
+"confidence": "high",
+"date": "2026-09-24",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "Woodridge 11231 Katherines Xing の新築商業建物向け消火スプリンクラー設置工事 $525k。施工者 = Valley Fire Protection。",
+"infer": "同住所で新築倉庫の記録があり、本件はその副許可(防火設備)の可能性(推論)。所有者・用途は記録上不明。",
+"note": null,
+"fact": {
+"src": "ウッドリッジ村 月次許可報告(公開記録)",
+"ref": "FIRE PROTECTION COMMERCIAL",
+"value": 525000.0,
+"verbatim": "FIRE SPRINKLERS FOR NEW COMMERCIAL BUILDING / FIRE PROTECTION COMMERCIAL",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-17858",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_0187iVtZaxs9yZi2kQ1byUGq",
+"model": "claude-sonnet-5 (batch api v1)",
+"generated_at": "2026-10-06T12:30:10+00:00"
 }
 },
 {
@@ -11923,6 +12023,22 @@
 ]
 },
 {
+"id": "C-15484",
+"name": "COOPER STEEL OF OHIO LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 16000000.0,
+"states": "OH",
+"latest": "2026-10-05",
+"targets": 1,
+"signal_ids": [
+"S-67969",
+"S-67969",
+"S-74223"
+]
+},
+{
 "id": "C-828",
 "name": "KEELEY CONSTRUCTION",
 "entity_type": "corp",
@@ -12381,6 +12497,20 @@
 "targets": 1,
 "signal_ids": [
 "S-56178"
+]
+},
+{
+"id": "C-17858",
+"name": "VALLEY FIRE PROTECTION",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 525000.0,
+"states": "IL",
+"latest": "2026-09-24",
+"targets": 1,
+"signal_ids": [
+"S-74487"
 ]
 },
 {
@@ -14105,6 +14235,23 @@
 ]
 },
 {
+"id": "C-158",
+"name": "DETROIT PUBLIC SCHOOLS",
+"entity_type": "public",
+"jp": false,
+"signals": 4,
+"value_total": 16848342.0,
+"states": "MI",
+"latest": "2026-10-04",
+"targets": 0,
+"signal_ids": [
+"S-1216",
+"S-1216",
+"S-1297",
+"S-73957"
+]
+},
+{
 "id": "C-160",
 "name": "SOUTHWEST HOUSING SOLUTION CORP",
 "entity_type": "corp",
@@ -14137,22 +14284,6 @@
 "S-7945",
 "S-63329",
 "S-63329"
-]
-},
-{
-"id": "C-158",
-"name": "DETROIT PUBLIC SCHOOLS",
-"entity_type": "public",
-"jp": false,
-"signals": 3,
-"value_total": 16055342.0,
-"states": "MI",
-"latest": "2026-08-25",
-"targets": 0,
-"signal_ids": [
-"S-1216",
-"S-1216",
-"S-1297"
 ]
 },
 {
@@ -15649,6 +15780,20 @@
 ]
 },
 {
+"id": "C-17856",
+"name": "SUNVEST SOLAR",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 5701434.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-74493"
+]
+},
+{
 "id": "C-15105",
 "name": "NEWBERRY PLAZA CONDOMINIUM ASSOCIATION",
 "entity_type": "spe",
@@ -16960,8 +17105,8 @@
 "name": "COEN DEVELOPERS LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 4,
-"value_total": 3425000.0,
+"signals": 5,
+"value_total": 3445000.0,
 "states": "IL",
 "latest": "2026-09-23",
 "targets": 0,
@@ -18509,6 +18654,21 @@
 ]
 },
 {
+"id": "C-17866",
+"name": "JNF BUILDERS LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 2205000.0,
+"states": "IL",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-74148",
+"S-74159"
+]
+},
+{
 "id": "C-70",
 "name": "BELMONT PAULINA CORP",
 "entity_type": "corp",
@@ -18520,6 +18680,69 @@
 "targets": 0,
 "signal_ids": [
 "S-166"
+]
+},
+{
+"id": "C-614",
+"name": "CITY OF CHICAGO DEMO DEPT.",
+"entity_type": "public",
+"jp": false,
+"signals": 50,
+"value_total": 2158680.0,
+"states": "IL",
+"latest": "2026-10-01",
+"targets": 0,
+"signal_ids": [
+"S-241",
+"S-241",
+"S-2829",
+"S-3887",
+"S-3888",
+"S-3889",
+"S-3890",
+"S-4035",
+"S-4108",
+"S-4524",
+"S-4758",
+"S-4916",
+"S-4917",
+"S-4918",
+"S-4919",
+"S-5029",
+"S-5713",
+"S-5860",
+"S-5860",
+"S-6273",
+"S-6396",
+"S-6915",
+"S-24209",
+"S-24209",
+"S-24211",
+"S-24211",
+"S-24212",
+"S-24212",
+"S-24300",
+"S-24300",
+"S-24303",
+"S-24303",
+"S-58129",
+"S-58129",
+"S-58130",
+"S-64334",
+"S-64334",
+"S-64364",
+"S-64389",
+"S-64389",
+"S-64423",
+"S-64423",
+"S-67793",
+"S-67794",
+"S-67794",
+"S-67795",
+"S-73933",
+"S-73934",
+"S-73936",
+"S-73938"
 ]
 },
 {
@@ -18992,65 +19215,6 @@
 "targets": 0,
 "signal_ids": [
 "S-72440"
-]
-},
-{
-"id": "C-614",
-"name": "CITY OF CHICAGO DEMO DEPT.",
-"entity_type": "public",
-"jp": false,
-"signals": 46,
-"value_total": 1956480.0,
-"states": "IL",
-"latest": "2026-09-22",
-"targets": 0,
-"signal_ids": [
-"S-241",
-"S-241",
-"S-2829",
-"S-3887",
-"S-3888",
-"S-3889",
-"S-3890",
-"S-4035",
-"S-4108",
-"S-4524",
-"S-4758",
-"S-4916",
-"S-4917",
-"S-4918",
-"S-4919",
-"S-5029",
-"S-5713",
-"S-5860",
-"S-5860",
-"S-6273",
-"S-6396",
-"S-6915",
-"S-24209",
-"S-24209",
-"S-24211",
-"S-24211",
-"S-24212",
-"S-24212",
-"S-24300",
-"S-24300",
-"S-24303",
-"S-24303",
-"S-58129",
-"S-58129",
-"S-58130",
-"S-64334",
-"S-64334",
-"S-64364",
-"S-64389",
-"S-64389",
-"S-64423",
-"S-64423",
-"S-67793",
-"S-67794",
-"S-67794",
-"S-67795"
 ]
 },
 {
@@ -23455,6 +23619,25 @@
 ]
 },
 {
+"id": "C-384",
+"name": "EP ALBANY 3404 LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 6,
+"value_total": 960000.0,
+"states": "IL",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-905",
+"S-910",
+"S-69736",
+"S-69847",
+"S-73929",
+"S-73930"
+]
+},
+{
 "id": "C-12581",
 "name": "TMB POLARIS LLC",
 "entity_type": "spe",
@@ -23503,10 +23686,10 @@
 "name": "WALMART",
 "entity_type": "corp",
 "jp": false,
-"signals": 13,
+"signals": 14,
 "value_total": 950000.0,
 "states": "IL,OH,IN",
-"latest": "2026-10-02",
+"latest": "2026-10-05",
 "targets": 0,
 "signal_ids": [
 "S-25231",
@@ -23522,7 +23705,8 @@
 "S-68677",
 "S-69326",
 "S-69326",
-"S-70908"
+"S-70908",
+"S-73973"
 ]
 },
 {
@@ -23698,25 +23882,6 @@
 "S-24218",
 "S-26171",
 "S-26171"
-]
-},
-{
-"id": "C-384",
-"name": "EP ALBANY 3404 LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 4,
-"value_total": 930000.0,
-"states": "IL",
-"latest": "2026-09-28",
-"targets": 0,
-"signal_ids": [
-"S-905",
-"S-910",
-"S-69736",
-"S-69847",
-"S-73929",
-"S-73930"
 ]
 },
 {
@@ -24705,6 +24870,22 @@
 ]
 },
 {
+"id": "C-3613",
+"name": "1438 W HENDERSON LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 3,
+"value_total": 802250.0,
+"states": "IL",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-36539",
+"S-69860",
+"S-73932"
+]
+},
+{
 "id": "C-255",
 "name": "2250 W. AINSLIE LLC",
 "entity_type": "spe",
@@ -25035,22 +25216,6 @@
 "signal_ids": [
 "S-63582",
 "S-63582"
-]
-},
-{
-"id": "C-3613",
-"name": "1438 W HENDERSON LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 2,
-"value_total": 777250.0,
-"states": "IL",
-"latest": "2026-09-28",
-"targets": 0,
-"signal_ids": [
-"S-36539",
-"S-69860",
-"S-73932"
 ]
 },
 {
@@ -35968,6 +36133,22 @@
 ]
 },
 {
+"id": "C-14184",
+"name": "COMPASS MINERALS",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": 210000.0,
+"states": "IL",
+"latest": "2026-09-23",
+"targets": 0,
+"signal_ids": [
+"S-66009",
+"S-66009",
+"S-73926"
+]
+},
+{
 "id": "C-831",
 "name": "US HOME RESTORATION AUTHORITY INC",
 "entity_type": "corp",
@@ -37569,6 +37750,22 @@
 ]
 },
 {
+"id": "C-3127",
+"name": "275 S ARLINGTON LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 3,
+"value_total": 180825.0,
+"states": "IL",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-25085",
+"S-70400",
+"S-74155"
+]
+},
+{
 "id": "C-624",
 "name": "WOODLAWN 6100, LLC",
 "entity_type": "spe",
@@ -38245,6 +38442,21 @@
 "signal_ids": [
 "S-24414",
 "S-24418"
+]
+},
+{
+"id": "C-3195",
+"name": "MLRP 888 CENTRAL LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 166900.0,
+"states": "IL",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-26405",
+"S-74161"
 ]
 },
 {
@@ -40283,21 +40495,6 @@
 "targets": 0,
 "signal_ids": [
 "S-61215"
-]
-},
-{
-"id": "C-14184",
-"name": "COMPASS MINERALS",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": 140000.0,
-"states": "IL",
-"latest": "2026-09-23",
-"targets": 0,
-"signal_ids": [
-"S-66009",
-"S-66009"
 ]
 },
 {
@@ -46060,6 +46257,21 @@
 ]
 },
 {
+"id": "C-2492",
+"name": "HARVEST BIBLE CHAPEL NORTHSHORE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 80000.0,
+"states": "IL",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-19355",
+"S-74196"
+]
+},
+{
 "id": "C-13661",
 "name": "CHICAGO BOARD OF TRADE",
 "entity_type": "corp",
@@ -47950,6 +48162,21 @@
 ]
 },
 {
+"id": "C-15158",
+"name": "CORNELIA 1211 LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 70000.0,
+"states": "IL",
+"latest": "2026-10-01",
+"targets": 0,
+"signal_ids": [
+"S-70776",
+"S-73939"
+]
+},
+{
 "id": "C-15198",
 "name": "5400-06 S WOODLAWN LLC",
 "entity_type": "spe",
@@ -48242,14 +48469,15 @@
 "name": "CIRCLE K",
 "entity_type": "corp",
 "jp": false,
-"signals": 2,
+"signals": 3,
 "value_total": 68500.0,
-"states": "IL",
-"latest": "2026-08-13",
+"states": "IL,IN",
+"latest": "2026-10-05",
 "targets": 0,
 "signal_ids": [
 "S-13309",
-"S-62744"
+"S-62744",
+"S-74015"
 ]
 },
 {
@@ -49544,6 +49772,20 @@
 ]
 },
 {
+"id": "C-17855",
+"name": "K & R STADIUM, LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 60589.0,
+"states": "MI",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-74240"
+]
+},
+{
 "id": "C-1016",
 "name": "HAYES PROPERTIES",
 "entity_type": "corp",
@@ -50025,6 +50267,20 @@
 "targets": 0,
 "signal_ids": [
 "S-16680"
+]
+},
+{
+"id": "C-17861",
+"name": "REBEL DOGS DETROIT INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 60000.0,
+"states": "MI",
+"latest": "2026-10-04",
+"targets": 0,
+"signal_ids": [
+"S-73953"
 ]
 },
 {
@@ -50655,22 +50911,6 @@
 "targets": 0,
 "signal_ids": [
 "S-26570"
-]
-},
-{
-"id": "C-3127",
-"name": "275 S ARLINGTON LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 2,
-"value_total": 55825.0,
-"states": "IL",
-"latest": "2026-10-01",
-"targets": 0,
-"signal_ids": [
-"S-25085",
-"S-70400",
-"S-74155"
 ]
 },
 {
@@ -52417,6 +52657,21 @@
 "S-2526",
 "S-2731",
 "S-67581"
+]
+},
+{
+"id": "C-15031",
+"name": "917 W FLETCHER LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 2,
+"value_total": 50000.0,
+"states": "IL",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-69861",
+"S-73931"
 ]
 },
 {
@@ -55830,6 +56085,21 @@
 ]
 },
 {
+"id": "C-14642",
+"name": "PRO HOMES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 38000.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-67395",
+"S-73928"
+]
+},
+{
 "id": "C-15124",
 "name": "LONGXING LLC",
 "entity_type": "spe",
@@ -56707,21 +56977,6 @@
 "targets": 0,
 "signal_ids": [
 "S-63610"
-]
-},
-{
-"id": "C-15158",
-"name": "CORNELIA 1211 LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 35000.0,
-"states": "IL",
-"latest": "2026-10-01",
-"targets": 0,
-"signal_ids": [
-"S-70776",
-"S-73939"
 ]
 },
 {
@@ -58615,10 +58870,10 @@
 "name": "J&A CANTORE LP",
 "entity_type": "spe",
 "jp": false,
-"signals": 4,
+"signals": 5,
 "value_total": 30000.0,
 "states": "IL",
-"latest": "2026-09-02",
+"latest": "2026-10-05",
 "targets": 0,
 "signal_ids": [
 "S-17583",
@@ -59724,6 +59979,20 @@
 "S-8086",
 "S-8092",
 "S-26274"
+]
+},
+{
+"id": "C-17857",
+"name": "DOCI INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 28575.0,
+"states": "IL",
+"latest": "2026-09-28",
+"targets": 0,
+"signal_ids": [
+"S-74500"
 ]
 },
 {
@@ -61443,21 +61712,6 @@
 "targets": 0,
 "signal_ids": [
 "S-67656"
-]
-},
-{
-"id": "C-15031",
-"name": "917 W FLETCHER LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 25000.0,
-"states": "IL",
-"latest": "2026-09-28",
-"targets": 0,
-"signal_ids": [
-"S-69861",
-"S-73931"
 ]
 },
 {
@@ -65509,21 +65763,6 @@
 ]
 },
 {
-"id": "C-14642",
-"name": "PRO HOMES INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 19000.0,
-"states": "IL",
-"latest": "2026-09-25",
-"targets": 0,
-"signal_ids": [
-"S-67395",
-"S-73928"
-]
-},
-{
 "id": "C-15039",
 "name": "PANTHER PROPERTY DEVELOPMENT LLC",
 "entity_type": "spe",
@@ -67047,6 +67286,20 @@
 ]
 },
 {
+"id": "C-17868",
+"name": "BRIDGE COMMUNITITES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 16500.0,
+"states": "IL",
+"latest": "2026-09-22",
+"targets": 0,
+"signal_ids": [
+"S-74462"
+]
+},
+{
 "id": "C-2841",
 "name": "SKILL MANAGMENT LLC",
 "entity_type": "spe",
@@ -67385,6 +67638,23 @@
 "targets": 0,
 "signal_ids": [
 "S-61583"
+]
+},
+{
+"id": "C-14213",
+"name": "JMG CAPITAL GROUP LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 4,
+"value_total": 16000.0,
+"states": "IL",
+"latest": "2026-09-30",
+"targets": 0,
+"signal_ids": [
+"S-65902",
+"S-67796",
+"S-70114",
+"S-73937"
 ]
 },
 {
@@ -68566,10 +68836,10 @@
 "name": "Kroger Company",
 "entity_type": "corp",
 "jp": false,
-"signals": 9,
+"signals": 10,
 "value_total": 15000.0,
 "states": "IN,IL",
-"latest": "2026-10-01",
+"latest": "2026-10-05",
 "targets": 0,
 "signal_ids": [
 "S-49884",
@@ -68580,7 +68850,8 @@
 "S-68600",
 "S-68613",
 "S-68616",
-"S-70335"
+"S-70335",
+"S-73999"
 ]
 },
 {
@@ -71925,20 +72196,18 @@
 ]
 },
 {
-"id": "C-14213",
-"name": "JMG CAPITAL GROUP LLC",
+"id": "C-14120",
+"name": "GABALA HOLDING LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 3,
+"signals": 2,
 "value_total": 12000.0,
 "states": "IL",
-"latest": "2026-09-30",
+"latest": "2026-09-22",
 "targets": 0,
 "signal_ids": [
-"S-65902",
-"S-67796",
-"S-70114",
-"S-73937"
+"S-65197",
+"S-73925"
 ]
 },
 {
@@ -73209,6 +73478,21 @@
 "signal_ids": [
 "S-7247",
 "S-63733"
+]
+},
+{
+"id": "C-12458",
+"name": "ABRAHAM MEDICAL CONSULTING, INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": 10300.0,
+"states": "IL",
+"latest": "2026-10-04",
+"targets": 0,
+"signal_ids": [
+"S-50967",
+"S-73947"
 ]
 },
 {
@@ -75033,6 +75317,33 @@
 ]
 },
 {
+"id": "C-2608",
+"name": "7-ELEVEN",
+"entity_type": "corp",
+"jp": false,
+"signals": 6,
+"value_total": 9500.0,
+"states": "IL,IN",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-10636",
+"S-10637",
+"S-28908",
+"S-29115",
+"S-29157",
+"S-35221",
+"S-35223",
+"S-59960",
+"S-66274",
+"S-68320",
+"S-68450",
+"S-69432",
+"S-70926",
+"S-74175"
+]
+},
+{
 "id": "C-3123",
 "name": "LAND TRUST CO",
 "entity_type": "spe",
@@ -76136,21 +76447,6 @@
 "targets": 0,
 "signal_ids": [
 "S-49627"
-]
-},
-{
-"id": "C-12458",
-"name": "ABRAHAM MEDICAL CONSULTING, INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": 8500.0,
-"states": "IL",
-"latest": "2026-09-08",
-"targets": 0,
-"signal_ids": [
-"S-50967",
-"S-73947"
 ]
 },
 {
@@ -78171,6 +78467,20 @@
 ]
 },
 {
+"id": "C-17859",
+"name": "JUPITER WOODRIDGE LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 7166.0,
+"states": "IL",
+"latest": "2026-09-30",
+"targets": 0,
+"signal_ids": [
+"S-74513"
+]
+},
+{
 "id": "C-2026",
 "name": "RITE PLUMBING INC",
 "entity_type": "corp",
@@ -79746,10 +80056,10 @@
 "name": "GRAND AVENUE LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 2,
+"signals": 3,
 "value_total": 6000.0,
 "states": "IL",
-"latest": "2026-08-07",
+"latest": "2026-10-05",
 "targets": 0,
 "signal_ids": [
 "S-16961",
@@ -80179,21 +80489,6 @@
 ]
 },
 {
-"id": "C-14120",
-"name": "GABALA HOLDING LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 6000.0,
-"states": "IL",
-"latest": "2026-09-22",
-"targets": 0,
-"signal_ids": [
-"S-65197",
-"S-73925"
-]
-},
-{
 "id": "C-14140",
 "name": "OAKDALE PROPERTIES LLC",
 "entity_type": "spe",
@@ -80503,21 +80798,6 @@
 "signal_ids": [
 "S-7273",
 "S-7273"
-]
-},
-{
-"id": "C-3195",
-"name": "MLRP 888 CENTRAL LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 5900.0,
-"states": "IL",
-"latest": "2026-09-04",
-"targets": 0,
-"signal_ids": [
-"S-26405",
-"S-74161"
 ]
 },
 {
@@ -81059,6 +81339,20 @@
 "targets": 0,
 "signal_ids": [
 "S-71501"
+]
+},
+{
+"id": "C-17871",
+"name": "TRUE PROPERTIES III LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 5500.0,
+"states": "IL",
+"latest": "2026-09-25",
+"targets": 0,
+"signal_ids": [
+"S-74492"
 ]
 },
 {
@@ -87097,6 +87391,20 @@
 "signal_ids": [
 "S-7587",
 "S-73799"
+]
+},
+{
+"id": "C-17862",
+"name": "SHUN SUSHI INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 3000.0,
+"states": "IL",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-74063"
 ]
 },
 {
@@ -93930,6 +94238,20 @@
 ]
 },
 {
+"id": "C-17867",
+"name": "COCIAL LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 50.0,
+"states": "IL",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-74034"
+]
+},
+{
 "id": "C-17765",
 "name": "HOLLY HOUSE STYLING, LLC",
 "entity_type": "corp",
@@ -95498,21 +95820,6 @@
 ]
 },
 {
-"id": "C-2492",
-"name": "HARVEST BIBLE CHAPEL NORTHSHORE LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": 0,
-"states": "IL",
-"latest": "2026-08-07",
-"targets": 0,
-"signal_ids": [
-"S-19355",
-"S-74196"
-]
-},
-{
 "id": "C-2493",
 "name": "NORTH SUBURBAN LUBAVITCH CHABAD",
 "entity_type": "corp",
@@ -96845,33 +97152,6 @@
 "targets": 0,
 "signal_ids": [
 "S-3752"
-]
-},
-{
-"id": "C-2608",
-"name": "7-ELEVEN",
-"entity_type": "corp",
-"jp": false,
-"signals": 5,
-"value_total": 0,
-"states": "IL,IN",
-"latest": "2026-10-02",
-"targets": 0,
-"signal_ids": [
-"S-10636",
-"S-10637",
-"S-28908",
-"S-29115",
-"S-29157",
-"S-35221",
-"S-35223",
-"S-59960",
-"S-66274",
-"S-68320",
-"S-68450",
-"S-69432",
-"S-70926",
-"S-74175"
 ]
 },
 {
@@ -99088,6 +99368,34 @@
 ]
 },
 {
+"id": "C-5807",
+"name": "Butler University",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-73994"
+]
+},
+{
+"id": "C-5822",
+"name": "Red Gold, Inc.",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-73990"
+]
+},
+{
 "id": "C-5966",
 "name": "Heartland Dental, LLC",
 "entity_type": "corp",
@@ -99808,10 +100116,10 @@
 "name": "9540 COLERAIN LLC",
 "entity_type": "spe",
 "jp": false,
-"signals": 2,
+"signals": 3,
 "value_total": 0,
 "states": "OH",
-"latest": "2026-09-08",
+"latest": "2026-10-05",
 "targets": 0,
 "signal_ids": [
 "S-37437",
@@ -106909,6 +107217,24 @@
 ]
 },
 {
+"id": "C-15380",
+"name": "CHERRY GROVE SAVINGS & LOAN CO",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-69692",
+"S-69692",
+"S-71254",
+"S-71254",
+"S-74410"
+]
+},
+{
 "id": "C-15382",
 "name": "IES Brownsburg",
 "entity_type": "corp",
@@ -109413,13 +109739,14 @@
 "name": "Gleaners Food Bank",
 "entity_type": "corp",
 "jp": false,
-"signals": 1,
+"signals": 2,
 "value_total": 0,
 "states": "IN",
-"latest": "2026-09-16",
+"latest": "2026-10-02",
 "targets": 0,
 "signal_ids": [
-"S-70918"
+"S-70918",
+"S-73991"
 ]
 },
 {
@@ -115202,6 +115529,104 @@
 "targets": 0,
 "signal_ids": [
 "S-73793"
+]
+},
+{
+"id": "C-17854",
+"name": "Lewis Bakery",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-73987"
+]
+},
+{
+"id": "C-17860",
+"name": "20188WY 62 LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IL",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-74174"
+]
+},
+{
+"id": "C-17863",
+"name": "Midwest America FCU",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-73961"
+]
+},
+{
+"id": "C-17864",
+"name": "HARPERS STATION LLC",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "OH",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-74409"
+]
+},
+{
+"id": "C-17865",
+"name": "BARLETTA",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-73974"
+]
+},
+{
+"id": "C-17869",
+"name": "RTT Investments",
+"entity_type": "spe",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-74020"
+]
+},
+{
+"id": "C-17870",
+"name": "Randolph County Highway Garage",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": 0,
+"states": "IN",
+"latest": "2026-10-05",
+"targets": 0,
+"signal_ids": [
+"S-74009"
 ]
 }
 ]
