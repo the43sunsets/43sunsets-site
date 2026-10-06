@@ -83,6 +83,7 @@ main{padding:18px 28px 60px; min-width:0;}
 .hitsub{font-size:12px; color:var(--sub);}
 .exportbtn{margin-left:auto; border:1.5px solid var(--ai-accent); color:var(--ai-accent); background:transparent; font-family:inherit; font-weight:700; font-size:13px; padding:7px 16px; border-radius:5px; cursor:pointer;}
 .exportbtn:hover{background:var(--ai-accent); color:var(--paper);}
+.exportbtn + .exportbtn{margin-left:8px;}
 
 .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px;}
 .card{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:15px 17px 13px; display:flex; flex-direction:column; gap:7px;}
@@ -278,6 +279,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
       <div class="seg" id="seg-period" title="期間 = 提出日。件数は他のフィルタ適用後"></div>
     </div>
     <button class="exportbtn" id="export" title="左のフィルタで絞った結果を、機械 1 台 1 行で書き出します(カタログ列つき)">CSV エクスポート(機械単位)</button>
+    <button class="exportbtn" id="export-crm" title="左のフィルタで絞った結果を、登記 1 件 1 行で書き出します(会社名・市・州・出来事・日付・担保権者・記録の参照と検索画面の URL・企業ページの URL = CRM にそのまま取り込める列)">CSV エクスポート(CRM 用・登記単位)</button>
   </div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" hidden>条件に一致する登記はありません。フィルタを緩めてください。</div>
@@ -431,6 +433,25 @@ document.getElementById("export").addEventListener("click", ()=>{
   const csv = "\ufeff" + [head, ...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n");
   const blob = new Blob([csv], {type:"text/csv;charset=utf-8"}); const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
   a.download = `43sunsets-cockpit-ucc-machines-${new Date().toISOString().slice(0,10)}.csv`; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+});
+/* ---- CSV(CRM 用): 絞った結果を登記 1 件 1 行で(V-3-4 (a) 甲・10/6)。列 = 会社名・市・州・出来事・日付・失効日・担保権者・記録の参照・記録のURL・情報源・企業ページ・要約・登記ID。記録のURL と情報源は州の表から ---- */
+/* crmRows:begin */
+const CRM_HEAD = ["会社名","市","州","出来事","日付","失効日","担保権者","記録の参照","記録のURL","情報源","企業ページ","要約(AI付与)","Signalの登記ID"];
+const RECORD_SOURCE = {WI: {url: "https://wims.dfi.wi.gov/uccsearch", src: "ウィスコンシン州 DFI UCC 登記(wims.dfi.wi.gov・公開検索)"}, OH: {url: "https://ucc.ohiosos.gov/search", src: "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)"}};   // 登記ごとの深いリンクは両州とも無い = 検索画面で「記録の参照」の番号を引く。情報源も州で引く(fact.src は読み行で OH に固定されている)
+function crmRows(list, origin){
+  const pick = new Map();   // 同じ登記 ID は 1 行に畳む(企業ページ karte のある読み行 > 索引行・それ以外は先に出た行。copy.status は読み行が free・索引行が purchased なので優先の鍵にしない)
+  for(const s of list){ const cur = pick.get(s.id); const hasK = !!s.karte; const curK = !!(cur && cur.karte);
+    if(!cur || (hasK && !curK)) pick.set(s.id, s); }
+  const rows = [];
+  for(const s of pick.values()){ const city = String(s.city || ""); const i = city.lastIndexOf(", "); const cityOnly = i >= 0 ? city.slice(0, i) : city;
+    rows.push([s.company ?? "", cityOnly, s.state ?? "", `UCC 登記(${s.kind ?? "未分類"})`, s.date ?? "", s.lapse ?? "", s.secured_party ?? "", (s.fact && s.fact.ref) ?? "", (RECORD_SOURCE[s.state] || {}).url ?? "", (RECORD_SOURCE[s.state] || {}).src ?? ((s.fact && s.fact.src) ?? ""), s.karte ? `${origin}/signal/company/?id=${s.karte}` : "", s.summary ?? "", s.id ?? ""]); }
+  return [CRM_HEAD, ...rows];
+}
+/* crmRows:end */
+document.getElementById("export-crm").addEventListener("click", ()=>{
+  const csv = "\ufeff" + crmRows(filtered(), location.origin).map(r=>r.map(csvEscape).join(",")).join("\r\n");
+  const blob = new Blob([csv], {type:"text/csv;charset=utf-8"}); const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = `43sunsets-signal-ucc-crm-${new Date().toISOString().slice(0,10)}.csv`; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
 });
 /* ---- 企業カルテ = /signal/company/?id=C-<id>(9/5 CEO 裁定: 4 面が同じカルテを参照)。旧リンク #karte=UC-<id> / #karte=C-<id> は転送 ---- */
 (function(){ const m = location.hash.match(/^#karte=(?:UC|C)-(\d+)$/); if(m){ location.replace("/signal/company/?id=C-" + m[1]); } })();
