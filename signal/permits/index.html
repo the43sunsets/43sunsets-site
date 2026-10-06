@@ -82,6 +82,7 @@ main{padding:18px 28px 60px; min-width:0;}
 .hitsub{font-size:12px; color:var(--sub);}
 .exportbtn{margin-left:auto; border:1.5px solid var(--ai-accent); color:var(--ai-accent); background:transparent; font-family:inherit; font-weight:700; font-size:13px; padding:7px 16px; border-radius:5px; cursor:pointer;}
 .exportbtn:hover{background:var(--ai-accent); color:var(--paper);}
+.exports{margin-left:auto; display:flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:8px;} .exports .exportbtn{margin-left:0;}
 
 .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px;}
 .card{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:15px 17px 13px; display:flex; flex-direction:column; gap:7px;}
@@ -271,7 +272,10 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
       <span class="hitsub" id="hitsub"></span>
       <div class="seg" id="seg-period" title="期間 = 申請日(無い源は発行日)。件数は他のフィルタ適用後"></div>
     </div>
+    <span class="exports">
     <button class="exportbtn" id="export">CSV エクスポート</button>
+    <button class="exportbtn" id="export-crm" title="左のフィルタで絞った結果を、許可 1 件 1 行で書き出します(会社名・市・州・住所・出来事・日付・申請日・評価額・記録の参照・情報源・企業ページの URL = CRM にそのまま取り込める列)">CSV エクスポート(CRM 用)</button>
+    </span>
   </div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" hidden>条件に一致するシグナルはありません。フィルタを緩めてください。</div>
@@ -530,6 +534,26 @@ document.getElementById("export").addEventListener("click", ()=>{
   document.body.appendChild(a);
   a.click();
   setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+});
+/* ---- CSV(CRM 用): 絞った結果を許可 1 件 1 行で(V-3-4 (a) 甲・10/6・permits-crm-csv)。列 = 会社名・市・州・住所・出来事・日付・申請日・評価額USD・記録の参照・情報源・企業ページ・要約・許可ID。記録の URL の列は無い(許可の行にも源の登録簿にも人が開く URL が無い = 推測して書かない) ---- */
+/* crmRows:begin */
+const CRM_HEAD = ["会社名","市","州","住所","出来事","日付","申請日","評価額USD","記録の参照","情報源","企業ページ","要約(AI付与)","Signalの許可ID"];
+function crmRows(list, origin){
+  const rows = [];
+  for(const s of list){
+    const inv = s.investor || {name: s.company};   // カード(405 行)と同じ: 投資主体の名前・無ければ旧 company
+    const f = s.fact || {};
+    const loc = String(s.city || ""); const i = loc.indexOf("・"); const city = i >= 0 ? loc.slice(0, i) : loc; const addr = i >= 0 ? loc.slice(i + 1) : "";   // city = 「自治体・住所」の 1 列(export.py 247 行)
+    const cid = String(s.company_id || ""); const page = /^C-\d+$/.test(cid) ? `${origin}/signal/company/?id=${cid}` : "";   // 411 行と同じ条件
+    rows.push([inv.name ?? "", city, s.state ?? "", addr, `建設許可(${s.category ?? "未分類"})`, s.date ?? "", s.applied ?? "", f.value ?? "", f.ref ?? "", f.src ?? "", page, s.summary ?? "", s.id ?? ""]);
+  }
+  return [CRM_HEAD, ...rows];
+}
+/* crmRows:end */
+document.getElementById("export-crm").addEventListener("click", ()=>{
+  const csv = "\ufeff" + crmRows(filtered(), location.origin).map(r=>r.map(csvEscape).join(",")).join("\r\n");
+  const blob = new Blob([csv], {type:"text/csv;charset=utf-8"}); const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = `43sunsets-signal-permits-crm-${new Date().toISOString().slice(0,10)}.csv`; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
 });
 
 /* 企業カルテ: 事実 = 公的記録の逐語(2026-09-01 照会)/推論 = バッジ表示 */
