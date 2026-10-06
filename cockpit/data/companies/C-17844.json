@@ -2,7 +2,7 @@
 "id": "C-17844",
 "name": "4179 PEARL, LLC",
 "city": null,
-"state": null,
+"state": "OH",
 "entity_type": "spe",
 "industry": null,
 "made": null,
@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 52194.31,
+"count": 3,
+"value_total": 87394.31,
 "latest": "2026-09-28",
 "items": [
 {
@@ -48,6 +48,54 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-26973",
+"date": "2026-07-29",
+"applied": "2026-07-29",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "4179 PEARL RD, CLEVELAND, OH, 44109",
+"permit_no": "BCE26-031671",
+"permit_type": "Commercial Electrical",
+"value": 14000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "商業ビル2階のパネル9台の交換と、ハウスメーターへの電源復旧($14k、3000 SF)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Electrical / B Business / INSTALL 3000 SQUARE FEET: Replace panels on second floor a total of 9 and restore power to house meter.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-27218",
+"date": "2026-07-09",
+"applied": "2026-06-17",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "4179 PEARL RD, CLEVELAND, OH, 44109",
+"permit_no": "BCP26-024883",
+"permit_type": "Commercial Plumbing",
+"value": 21200.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 4179 Pearl Rd の商業店舗(Mercantile)にて、トイレ5・小便器1・洗面台4・シンク1を設置する配管工事 $21.2k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Plumbing / M Mercantile - Stores / Markets / Retail / INSTALL 5 WATER CLOSET/TOILET, 1 URNINAL, 4 LAVATORY SINK, 1 SINK ***BUILDING PERMIT NO BCB26-025931***",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +131,22 @@
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-73893",
 "summary": "Cleveland 4183 Pearl Rd(B Business 用途)で商業用HVAC工事 $52,194(炉4台、ダクト工事、25トン以下の冷凍システム4台を設置)。"
+},
+{
+"date": "2026-07-29",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-26973",
+"summary": "商業ビル2階のパネル9台の交換と、ハウスメーターへの電源復旧($14k、3000 SF)。"
+},
+{
+"date": "2026-07-09",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-27218",
+"summary": "Cleveland 4179 Pearl Rd の商業店舗(Mercantile)にて、トイレ5・小便器1・洗面台4・シンク1を設置する配管工事 $21.2k。"
 }
 ],
-"generated_at": "2026-10-05T15:00:35+00:00",
+"generated_at": "2026-10-06T08:39:41+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

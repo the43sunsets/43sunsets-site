@@ -2,7 +2,7 @@
 "id": "C-17843",
 "name": "7006 DETROIT ROAD LLC",
 "city": null,
-"state": null,
+"state": "OH",
 "entity_type": "spe",
 "industry": null,
 "made": null,
@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 3500.0,
+"count": 2,
+"value_total": 12065.6,
 "latest": "2026-09-30",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-26712",
+"date": "2026-08-12",
+"applied": "2026-08-10",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "7006 DETROIT AVE A7, CLEVELAND, OH, 44102",
+"permit_no": "BCH26-033735",
+"permit_type": "Commercial HVAC",
+"value": 8565.6,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 7006 Detroit Ave の住宅用建物にファーネス1台と屋上冷暖房ユニット1台を設置 $8.6k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial HVAC / R-3 Residential - Permanent Housing - Independent Egress / INSTALL 1 FURNACE, 1 ROOFTOP HEATING/COOILING UNIT",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-73852",
 "summary": "Cleveland 7006 Detroit Ave B7(R-2 住宅用途)にて炉1台・屋上冷暖房ユニット1台を設置する商業HVAC工事 $3,500。"
+},
+{
+"date": "2026-08-12",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-26712",
+"summary": "Cleveland 7006 Detroit Ave の住宅用建物にファーネス1台と屋上冷暖房ユニット1台を設置 $8.6k。"
 }
 ],
-"generated_at": "2026-10-05T15:00:35+00:00",
+"generated_at": "2026-10-06T08:39:41+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

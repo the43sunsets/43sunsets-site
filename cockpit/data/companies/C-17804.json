@@ -2,7 +2,7 @@
 "id": "C-17804",
 "name": "JDH CAPITAL LLC",
 "city": null,
-"state": null,
+"state": "OH",
 "entity_type": "spe",
 "industry": null,
 "made": null,
@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 5000.0,
+"count": 2,
+"value_total": 25000.0,
 "latest": "2026-09-30",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-26850",
+"date": "2026-08-05",
+"applied": "2026-08-05",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "3214 EUCLID AVE, CLEVELAND, OH, 44115",
+"permit_no": "BCH26-032880",
+"permit_type": "Commercial HVAC",
+"value": 20000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 3214 Euclid Ave の集合住宅(R-3・独立避難経路)にファーネス20台を設置する商業HVAC工事 $20k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial HVAC / R-3 Residential - Permanent Housing - Independent Egress / INSTALL 20 FURNACES, INSTALLED COST OF DUCTWORK SUPPLY/RETURN/EXH.AIR-$1000.00",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Cleveland): 未分類",
 "ref": "S-73846",
 "summary": "Cleveland 3214 Euclid Ave の R-2 住宅用建物で給湯器 18 台を設置する配管工事 $5k。"
+},
+{
+"date": "2026-08-05",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-26850",
+"summary": "Cleveland 3214 Euclid Ave の集合住宅(R-3・独立避難経路)にファーネス20台を設置する商業HVAC工事 $20k。"
 }
 ],
-"generated_at": "2026-10-05T15:00:35+00:00",
+"generated_at": "2026-10-06T08:39:41+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-05T15:00:47+00:00",
+ "generated_at": "2026-10-06T08:40:42+00:00",
  "checks": {
   "ucc_sync_mac": {
    "raw_db_synced_at": "2026-09-30T07:02:22+00:00",
-   "raw_db_age_h": 128.0,
+   "raw_db_age_h": 145.6,
    "last_status": {
     "ran_at": "2026-09-30T07:02:21Z",
     "ok": 0,
@@ -26,14 +26,14 @@
    "new_docs_text": 0
   },
   "permits_update_vps": {
-   "last_run_at": "2026-10-05T11:31:41Z",
-   "age_h": 3.5,
+   "last_run_at": "2026-10-06T08:09:06Z",
+   "age_h": 0.5,
    "state": "OK",
-   "last_day": "2026-10-05",
-   "runs": 38,
-   "new_records": 178,
-   "fetched": 6739,
-   "errors": 0,
+   "last_day": "2026-10-06",
+   "runs": 36,
+   "new_records": 594,
+   "fetched": 6426,
+   "errors": 1,
    "schedule": "02:00 America/Chicago"
   },
   "enrich_vps": {
@@ -42,16 +42,16 @@
    "state": "OK"
   },
   "hiring_update_vps": {
-   "last_run_at": "2026-10-05T08:05:08Z",
-   "age_h": 6.9,
+   "last_run_at": "2026-10-06T08:26:15Z",
+   "age_h": 0.2,
    "state": "OK",
-   "open": 12656,
-   "new_records": 151,
+   "open": 12489,
+   "new_records": 897,
    "schedule": "02:00 America/Chicago"
   },
   "subsidies_update_vps": {
-   "last_run_at": "2026-10-05T08:02:25Z",
-   "age_h": 7.0,
+   "last_run_at": "2026-10-06T08:23:37Z",
+   "age_h": 0.3,
    "state": "OK",
    "total": 21675,
    "new_records": 0,
@@ -59,17 +59,17 @@
    "errors": 0,
    "per_source": {
     "SRC-075": {
-     "last_ok_at": "2026-10-05T08:00:12Z",
+     "last_ok_at": "2026-10-06T08:21:38Z",
      "last_status": "ok",
      "new_raw": 0
     },
     "SRC-076": {
-     "last_ok_at": "2026-10-05T08:00:13Z",
+     "last_ok_at": "2026-10-06T08:21:38Z",
      "last_status": "ok",
      "new_raw": 0
     },
     "SRC-077": {
-     "last_ok_at": "2026-10-05T08:02:24Z",
+     "last_ok_at": "2026-10-06T08:23:36Z",
      "last_status": "ok",
      "new_raw": 0
     },
@@ -84,7 +84,7 @@
      "new_raw": 0
     },
     "SRC-082": {
-     "last_ok_at": "2026-10-05T08:02:25Z",
+     "last_ok_at": "2026-10-06T08:23:37Z",
      "last_status": "ok",
      "new_raw": 0
     }
@@ -93,30 +93,32 @@
   },
   "news_update_vps": {
    "last_run_at": "2026-10-05T10:30:00+00:00",
-   "age_h": 4.5,
+   "age_h": 22.2,
    "state": "OK",
-   "items_14d": 1863,
-   "relevant_14d": 417,
+   "items_14d": 1638,
+   "relevant_14d": 349,
    "schedule": "Mon/Wed/Fri 05:30 America/Chicago"
   },
   "watchdog": {
-   "last_run_at": "2026-10-05T08:19:35Z",
-   "age_h": 6.7,
-   "findings": 5,
+   "last_run_at": "2026-10-06T08:40:40Z",
+   "age_h": 0.0,
+   "findings": 6,
    "state": "OK"
   },
   "foia_inbox": {
-   "last_run_at": "2026-10-05T12:30:10+00:00",
-   "age_h": 2.5,
-   "unreflected": 0,
+   "last_run_at": "2026-10-06T08:15:14+00:00",
+   "age_h": 0.4,
+   "unreflected": 1,
    "unreflected_over_24h": 0,
-   "unreflected_at": [],
+   "unreflected_at": [
+    "2026-10-05T19:48Z"
+   ],
    "quarantined": 0,
    "reflected_weak": 11,
    "state": "OK"
   },
   "inbox_other": {
-   "external": 151,
+   "external": 152,
    "unmatched_72h": 0,
    "unread": 33,
    "unread_over_24h": 33,
@@ -161,7 +163,7 @@
      }
     },
     "0/older": {
-     "rows": 4091,
+     "rows": 5293,
      "reader": null,
      "terminal": "データ層に残す(窓より古い)",
      "over_days": {
@@ -170,12 +172,12 @@
      }
     },
     "2a/pending_row_read": {
-     "rows": 3532,
+     "rows": 3589,
      "reader": "enrich/permit_read.py:select_inputs",
      "terminal": null,
      "over_days": {
       "days": 3,
-      "rows": 3020
+      "rows": 2876
      }
     },
     "2b/pending_name_match": {
@@ -188,25 +190,25 @@
      }
     },
     "2b/pending_row_read": {
-     "rows": 17469,
+     "rows": 16810,
      "reader": "enrich/permit_read.py:select_inputs",
      "terminal": null,
      "over_days": {
       "days": 3,
-      "rows": 17277
+      "rows": 16405
      }
     },
     "2c/pending_row_read": {
-     "rows": 3580,
+     "rows": 3738,
      "reader": "enrich/permit_read.py:select_inputs",
      "terminal": null,
      "over_days": {
       "days": 3,
-      "rows": 3568
+      "rows": 3426
      }
     },
     "2d/subject_individual": {
-     "rows": 23738,
+     "rows": 23703,
      "reader": null,
      "terminal": "データ層に残す・待ち行列に積まない(設計 §2.1 2-d ①)",
      "over_days": {
@@ -215,7 +217,7 @@
      }
     },
     "2d/subject_unknown": {
-     "rows": 12707,
+     "rows": 12644,
      "reader": "enrich/hop3_web.py:select_places",
      "terminal": null,
      "over_days": {
@@ -224,7 +226,7 @@
      }
     },
     "3/industry_pending": {
-     "rows": 6586,
+     "rows": 5325,
      "reader": "enrich/catalog_batch.py:select_industry_targets",
      "terminal": null,
      "over_days": {
@@ -233,7 +235,7 @@
      }
     },
     "3/industry_unresolved": {
-     "rows": 0,
+     "rows": 222,
      "reader": null,
      "terminal": "データ層に残す(現行の版で調べたが会社を特定できない・面に出ない・滞留に数えない・設計 v1.5 §5.5 凍結時の追記 ①)",
      "over_days": {
@@ -242,7 +244,7 @@
      }
     },
     "4/pending_fold": {
-     "rows": 0,
+     "rows": 973,
      "reader": null,
      "terminal": "畳み込み(Q-a-5)が入るまで待つ・面に出ない・点検 = Q-a-5 の統合の日",
      "over_days": {
@@ -253,9 +255,9 @@
    },
    "unattended": {},
    "stale_readers": {
-    "2a/pending_row_read": 3020,
-    "2b/pending_row_read": 17277,
-    "2c/pending_row_read": 3568
+    "2a/pending_row_read": 2876,
+    "2b/pending_row_read": 16405,
+    "2c/pending_row_read": 3426
    }
   },
   "permit_stage": {
@@ -264,11 +266,11 @@
   },
   "reading_as_of": {
    "version": "qa-1-rev6-2026-09-26",
-   "n": 43031,
+   "n": 42867,
    "days": 365,
    "stale": 0,
    "null": 0,
-   "elapsed_s": 20.8,
+   "elapsed_s": 18.2,
    "state": "OK"
   },
   "export_reasons": {
@@ -287,8 +289,8 @@
   },
   "ready": {
    "state": "OK",
-   "run_date": "2026-10-05",
-   "deadline_met": false,
+   "run_date": "2026-10-06",
+   "deadline_met": true,
    "faces": {
     "permits": "degraded",
     "ucc": "degraded",
