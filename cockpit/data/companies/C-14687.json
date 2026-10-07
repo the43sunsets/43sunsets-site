@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 2059000.0,
-"latest": "2026-09-24",
+"count": 3,
+"value_total": 2060650.0,
+"latest": "2026-09-30",
 "items": [
+{
+"id": "S-73849",
+"date": "2026-09-30",
+"applied": "2025-10-03",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1650 E 115TH ST, CLEVELAND, OH, 44106",
+"permit_no": "BCB25-032715",
+"permit_type": "Commercial Building",
+"value": 1650.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Case Western Reserve University のイベント用に20'x40'のテントを一時設置($1,650、2025年10月9日〜13日)。",
+"infer": null,
+"role": "operator",
+"role_label": "operator",
+"verbatim": "Commercial Building / U Utility - Miscellaneous / Tent-Stage / INSTALL 20' X 40' TENT IN GRASS FROM 10-9-25 TO 10-13-25 FOR CASE WESTERN RESERVE UNIVERSITY EVENT PER APPROVED PLANS.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-67633",
 "date": "2026-09-24",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-09-30",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-73849",
+"summary": "Case Western Reserve University のイベント用に20'x40'のテントを一時設置($1,650、2025年10月9日〜13日)。"
+},
+{
 "date": "2026-09-24",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -116,6 +147,6 @@
 "summary": "Case Western Reserve University の学生寮(10525 SF)内装改修 $1.9M(R-2 用途)。"
 }
 ],
-"generated_at": "2026-10-06T15:00:29+00:00",
+"generated_at": "2026-10-07T08:29:06+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
