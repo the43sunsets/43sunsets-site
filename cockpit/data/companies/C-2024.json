@@ -13,20 +13,43 @@
 "jp_basis": null,
 "master_checked_at": null,
 "master_status": {
-"state": "untargeted",
+"state": "queued",
 "reason": {
-"origins": [
-"permits"
-],
-"rule": "none"
+"origin": "permit",
+"rank": 6,
+"of": 6
 }
 },
 "faces": {
 "permits": {
-"count": 5,
+"count": 6,
 "value_total": 17000.0,
-"latest": "2026-09-29",
+"latest": "2026-10-06",
 "items": [
+{
+"id": "S-74873",
+"date": "2026-10-06",
+"applied": "2026-06-01",
+"state": "IN",
+"jurisdiction": "Indiana/MARION",
+"address": "5425 Exploration Dr",
+"permit_no": "461821:2026-10-06",
+"permit_type": "CDR release",
+"value": null,
+"category": "物流・倉庫の新設",
+"confidence": "high",
+"summary": "Marion County 5425 Exploration Dr にて「World Connect 3 - FedEx Build-Out / Cold Storage」の CDR release(金額不明)。",
+"infer": "FedEx 向けのコールドストレージ併設の物流施設ビルドアウトであり、保税・輸送拠点の冷凍冷蔵設備・ラック・搬送機器の調達が動く窓の可能性(推論)。",
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "World Connect 3 - FedEx Build-Out / Cold Storage",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UE99VkaXx2bAgR3Mc7osyr",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-68629",
 "date": "2026-09-29",
@@ -174,6 +197,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Indiana/MARION): 物流・倉庫の新設",
+"ref": "S-74873",
+"summary": "Marion County 5425 Exploration Dr にて「World Connect 3 - FedEx Build-Out / Cold Storage」の CDR release(金額不明)。"
+},
+{
 "date": "2026-09-29",
 "face": "permits",
 "title": "建設許可(Indiana/MARION): 未分類",
@@ -209,6 +239,6 @@
 "summary": "Chicago 1315 E 57th St でFedEx向け照明付き壁面サイン(北面・62平方フィート)設置 $4.0k。"
 }
 ],
-"generated_at": "2026-10-07T08:29:06+00:00",
+"generated_at": "2026-10-07T08:45:35+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 200000.0,
-"latest": "2026-09-21",
+"count": 2,
+"value_total": 400000.0,
+"latest": "2026-10-06",
 "items": [
+{
+"id": "S-75073",
+"date": "2026-10-06",
+"applied": "2026-07-29",
+"state": "OH",
+"jurisdiction": "Independence",
+"address": "4600 Rockside Rd Independence OH 44131",
+"permit_no": "2026-0033-BLDC",
+"permit_type": "Commercial - Tenant Alteration",
+"value": 200000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Century Federal Credit Union 本部(4600 Rockside Rd, Independence OH)のテナント改修工事 $200k。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Tenant Alteration; Century Federal Credit Union; Headquarters. **Drawings on File. **All Sub-Contractors Need to Register w/ The City & Pull Their Own Permits. / Commercial - Tenant Alteration / Tenant Alteration",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UE99VkaXx2bAgR3Mc7osyr",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-63962",
 "date": "2026-09-21",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Independence): 未分類",
+"ref": "S-75073",
+"summary": "Century Federal Credit Union 本部(4600 Rockside Rd, Independence OH)のテナント改修工事 $200k。"
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Independence): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Independence 4600 Rockside Rd の Century Federal Credit Union 支店エリアのテナント改修 $200k。"
 }
 ],
-"generated_at": "2026-10-07T08:29:06+00:00",
+"generated_at": "2026-10-07T08:45:35+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

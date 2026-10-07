@@ -13,20 +13,91 @@
 "jp_basis": null,
 "master_checked_at": null,
 "master_status": {
-"state": "untargeted",
+"state": "queued",
 "reason": {
-"origins": [
-"permits"
-],
-"rule": "none"
+"origin": "permit",
+"rank": 5,
+"of": 6
 }
 },
 "faces": {
 "permits": {
-"count": 14,
-"value_total": 8459739.82,
-"latest": "2026-08-27",
+"count": 17,
+"value_total": 8555238.82,
+"latest": "2026-09-30",
 "items": [
+{
+"id": "S-74724",
+"date": "2026-09-30",
+"applied": "2026-08-17",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "1971 BROOKDALE RD",
+"permit_no": "FIRE-0347-2026",
+"permit_type": "FIRE SUPPRESSION SYSTEM",
+"value": 26540.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Naperville 1971 Brookdale Rd で既存ドライシステムへの接続による消火設備工事 $26,540(増築部・地下/1階改修エリアのヘッド移設、3,930 SQFT)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Tie-in to existing dry system for new addition. Head relocates for basement and first floor renovation areas. / FIRE SUPPRESSION SYSTEM / FIRE DEPARTMENT PERMIT / 3930 SQFT",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UE99VkaXx2bAgR3Mc7osyr",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-74728",
+"date": "2026-09-30",
+"applied": "2026-07-27",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "320 JACKSON CT",
+"permit_no": "TEMP-0057-2026",
+"permit_type": "TENT PERMIT (SPECIAL EVENT)",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Naperville ハーフマラソン開催のための仮設テント設置許可(320 W Jackson, Park District Administration Building)。金額記載なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Request Tent Setup for the Naperville Half Marathon Races 17th- 18th. Setup location will be at the Park District Administration Building at 320 W Jackson / TENT PERMIT (SPECIAL EVENT) / TEMPORARY IMPROVEMENTS",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UE99VkaXx2bAgR3Mc7osyr",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-74758",
+"date": "2026-09-28",
+"applied": "2026-07-27",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "400 S EAGLE ST",
+"permit_no": "FIRE-0319-2026",
+"permit_type": "FIRE SUPPRESSION SYSTEM",
+"value": 68959.0,
+"category": "データセンター建設",
+"confidence": "high",
+"summary": "Naperville市のサーバー室(400 S Eagle St, 1,110 SQFT)で既存配管・スプリンクラーヘッドを撤去し、新しいクリーンエージェント消火システムを設置する消防設備工事 $68,959。",
+"infer": "サーバー室向けの専用消火設備更新であり、市の小規模データセンター/サーバー施設の防災設備投資の可能性(推論)。規模は小さく大型電源・冷却増強は読み取れない。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Demo of pipe and sprinkler heads in server room to make room for new clean agent system. / FIRE SUPPRESSION SYSTEM / FIRE DEPARTMENT PERMIT / 1110 SQFT",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UE99VkaXx2bAgR3Mc7osyr",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-24538",
 "date": "2026-08-27",
@@ -390,6 +461,27 @@
 },
 "timeline": [
 {
+"date": "2026-09-30",
+"face": "permits",
+"title": "建設許可(Naperville): 未分類",
+"ref": "S-74724",
+"summary": "Naperville 1971 Brookdale Rd で既存ドライシステムへの接続による消火設備工事 $26,540(増築部・地下/1階改修エリアのヘッド移設、3,930 SQFT)。"
+},
+{
+"date": "2026-09-30",
+"face": "permits",
+"title": "建設許可(Naperville): 未分類",
+"ref": "S-74728",
+"summary": "Naperville ハーフマラソン開催のための仮設テント設置許可(320 W Jackson, Park District Administration Building)。金額記載なし。"
+},
+{
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Naperville): データセンター建設",
+"ref": "S-74758",
+"summary": "Naperville市のサーバー室(400 S Eagle St, 1,110 SQFT)で既存配管・スプリンクラーヘッドを撤去し、新しいクリーンエージェント消火システムを設置する消防設備工事 $68,959。"
+},
+{
 "date": "2026-08-27",
 "face": "permits",
 "title": "建設許可(Naperville): 未分類",
@@ -488,6 +580,6 @@
 "summary": "Naperville 305 JACKSON AV のエレベーター設備工事 $177.9k。所有者/申請者: CITY OF NAPERVILLE。"
 }
 ],
-"generated_at": "2026-10-07T08:29:06+00:00",
+"generated_at": "2026-10-07T08:45:35+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

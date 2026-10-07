@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 10000.0,
-"latest": "2026-07-26",
+"count": 4,
+"value_total": 90000.0,
+"latest": "2026-09-28",
 "items": [
+{
+"id": "S-74770",
+"date": "2026-09-28",
+"applied": "2026-09-17",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "240 S ROUTE 59  ",
+"permit_no": "COMM-0521-2026",
+"permit_type": "BUSINESS OCCUPANCY",
+"value": 50000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Naperville 240 S Route 59 の旧 Painted Tree 店舗跡に「Going Going Gone」店舗が入居する内装工事 $50k(壁付・独立陳列棚の新設、表面補修等)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "This project is a Going Going Gone store that would be at the former Painted Tree store. The scope of work consists is primarily interior which includes new wall mounted fixtures and free-standing fixtures. There is also cosmetic work such as patching/re / BUSINESS OCCUPANCY / COMMERCIAL / 31181 SQF",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UE99VkaXx2bAgR3Mc7osyr",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-74823",
+"date": "2026-09-23",
+"applied": "2026-07-21",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "2603 AURORA AV",
+"permit_no": "COMM-0387-2026",
+"permit_type": "COMMERCIAL BUILDING ALTERATION",
+"value": 30000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Naperville 2603 Aurora Ave の空きテナントスペースに対する最小限のオーナー工事(電気/HVAC)$30k。新テナントの改修は別許可で実施予定。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "existing vacant tenant space to have minor landlord work done (elec / hvac). All other improvements to be done separately by new tenent under a separate permit. / COMMERCIAL BUILDING ALTERATION / COMMERCIAL / 2000 SQFT",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UE99VkaXx2bAgR3Mc7osyr",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-10490",
 "date": "2026-07-26",
@@ -102,6 +150,20 @@
 },
 "timeline": [
 {
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Naperville): 未分類",
+"ref": "S-74770",
+"summary": "Naperville 240 S Route 59 の旧 Painted Tree 店舗跡に「Going Going Gone」店舗が入居する内装工事 $50k(壁付・独立陳列棚の新設、表面補修等)。"
+},
+{
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Naperville): 未分類",
+"ref": "S-74823",
+"summary": "Naperville 2603 Aurora Ave の空きテナントスペースに対する最小限のオーナー工事(電気/HVAC)$30k。新テナントの改修は別許可で実施予定。"
+},
+{
 "date": "2026-07-26",
 "face": "permits",
 "title": "建設許可(Naperville): 未分類",
@@ -116,6 +178,6 @@
 "summary": "Naperville 336 S Route 59 の既存商業テナント区画に 'L.L.Bean' の内照式チャンネルレター壁面看板を設置。"
 }
 ],
-"generated_at": "2026-10-07T08:29:06+00:00",
+"generated_at": "2026-10-07T08:45:35+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
