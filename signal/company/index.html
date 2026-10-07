@@ -316,10 +316,10 @@ function render(c){
       <div class="ksub" style="margin-top:6px">${c.made ? esc(c.made) + " · " : ""}${c.size ? "規模 " + esc(c.size) + " · " : ""}${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website)}</a>` : "サイト —"}${masterLabel(c)}</div></div>
       </div>
     <div class="faces4">
-      ${faceTile("#permits", "建設許可", f.permits.count + " 件", f.permits.count ? (f.permits.value_total ? "工事費 合計 " + usd(f.permits.value_total) : "最新 " + (f.permits.latest || "")) : "当社の網に無い", false)}
-      ${faceTile("#ucc", "UCC 登記", f.ucc.count + " 件", f.ucc.locked ? "登録すると内容が開きます" : (f.ucc.count ? "機械 " + f.ucc.machines + " 台 · " + (f.ucc.makers || []).join("・") : "当社の網に無い"), false)}
+      ${faceTile("#permits", "建設許可", f.permits.count + " 件", f.permits.count ? (f.permits.value_total ? "工事費 合計 " + usd(f.permits.value_total) : "最新 " + (f.permits.latest || "")) + (f.permits.n_amount_excluded ? "(金額未記載・異常値 " + f.permits.n_amount_excluded + " 件)" : "") : "当社の網に無い", false)}
+      ${faceTile("#ucc", "UCC 登記", f.ucc.count + " 件", f.ucc.locked ? "登録すると内容が開きます" : (f.ucc.count ? (f.ucc.machines_unconfirmed >= 1 ? (f.ucc.machines === 0 ? "台数未確認(登記 " + f.ucc.count + " 件)· " : "機械 " + f.ucc.machines + " 台(台数未確認 " + f.ucc.machines_unconfirmed + " 件)· ") : "機械 " + f.ucc.machines + " 台 · ") + (f.ucc.makers || []).join("・") : "当社の網に無い"), false)}
       ${faceTile("#hiring", "企業採用状況", hcount + " 件", f.hiring.locked ? "登録すると内容が開きます" : (hcount ? ("製造職 " + (f.hiring.mfg||0) + " · " + hroles.slice(0,3).map(([k,v])=>k+" "+v).join("・")) : "採用ページが当社の網に無い"), false)}
-      ${faceTile("#grants", "政府補助金", gcount + " 件", f.grants.locked ? "登録すると内容が開きます" : (gcount ? (f.grants.amount_total ? "交付・融資 合計 " + usd(f.grants.amount_total) : "最新 " + (f.grants.latest || "")) : "連邦の網に無い(州・市郡は順次)"), false)}
+      ${faceTile("#grants", "政府補助金", gcount + " 件", f.grants.locked ? "登録すると内容が開きます" : (gcount ? (f.grants.amount_total ? "交付・融資 合計 " + usd(f.grants.amount_total) : "最新 " + (f.grants.latest || "")) + (f.grants.n_amount_excluded ? "(金額未記載 " + f.grants.n_amount_excluded + " 件)" : "") : "連邦の網に無い(州・市郡は順次)"), false)}
       ${faceTile("#news", "ニュース", ncount + " 件", (f.news && f.news.locked) ? "登録すると内容が開きます" : (ncount ? "最新 " + (f.news.latest || "") : "直近のニュースに無い"), false)}
     </div>
     <section class="ksec" id="permits"><h3>建設許可(${f.permits.count})</h3>${f.permits.items.length ? f.permits.items.map(permitItem).join("") : `<div class="kempty">この会社の建設許可は当社の網に無い(未収集の自治体か、名義が別会社)。</div>`}</section>
