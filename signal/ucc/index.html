@@ -264,10 +264,10 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
   <div class="fgroup"><h2>設備の種類(領域)</h2><div id="f-domain"></div></div>
   <div class="fgroup"><h2>メーカー(カタログ判定)</h2><div id="f-maker"></div></div>
   <div class="fgroup"><h2>対象企業の業種</h2><div id="f-industry"></div></div>
-  <label class="fitem unc-toggle" title="索引のみ = ウィスコンシン州の登記索引(債務者・担保権者・日付)だけで、担保物の逐語は未取得の行(推論段)。写しを依頼すると事実段に昇格します"><input type="checkbox" id="hideidx" onchange="page=1;render()">索引のみ(推論段)の行を隠す <span class="cnt" id="idxcnt"></span></label>
+  <label class="fitem unc-toggle" title="索引のみ = ウィスコンシン州の登記索引(債務者・担保権者・日付)だけで、担保物の記載はまだ無い行。写しを依頼すると担保物の記載が付きます"><input type="checkbox" id="hideidx" onchange="page=1;render()">索引のみの行を隠す <span class="cnt" id="idxcnt"></span></label>
   <label class="fitem unc-toggle" title="未分類 = 本文が汎用文のみで種別を決められなかった記録。雑音(個人名義・車両 1 台の割賦・住宅・農業リーエン・公共財務)も含みます。入れると未分類だけを表示します"><input type="checkbox" id="showunc">未分類のみ表示 <span class="cnt" id="unccnt"></span></label>
   <button class="clearbtn" id="clear">フィルタをすべて解除</button>
-  <div class="fnote">設備の種類・メーカーは型式ごとの設備カタログ(メーカー製品ページを AI が読み・出典 URL つき)、業種は会社マスター(自社サイト)からの割り当てです。型式が担保物欄に無い登記(Mazak・Makino = 製番のみ)は領域だけを担保権者から判定し、機種は「不明(製番のみ)」と表示します。雑音・未分類は既定で表示しません(下のトグルでそれだけを表示できます)。</div>
+  <div class="fnote">設備の種類・メーカーは型式ごとの設備カタログ(メーカー製品ページを AI が読み・出典 URL つき)、業種は各社の自社サイトの調査からの割り当てです。型式が担保物欄に無い登記(Mazak・Makino = 製番のみ)は領域だけを担保権者から判定し、機種は「不明(製番のみ)」と表示します。雑音・未分類は既定で表示しません(下のトグルでそれだけを表示できます)。</div>
 </aside>
 
 <main>
@@ -293,9 +293,9 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
     <ul id="scopenotes">
       <li>UCC-1 登記は「債務者がその設備を担保にお金を借りた(購入・リースした)」という公的記録です。提出から 5 年で失効し、継続届で延長されます。金額は載りません。大きさは担保物の逐語(機械の型式・台数)と貸し手の種類で読みます。</li>
       <li>オハイオ州は担保権者(機械メーカー)名で検索した登記のみで、担保物の逐語まで無料で取れます。銀行・リース会社を担保権者とする登記は網に入っていません。</li>
-      <li><b>ウィスコンシン州(2026-09-09〜)</b>は登記索引の全行(法人の UCC-1・債務者・担保権者・提出日)を「索引のみ・推論」段で載せています。担保物の逐語は州の写し($4/件)でしか取れないため、当社の購入規則(債務者名が製造業らしい、または担保権者が機械商社/工作機械系)に当たる行は順次購入して「事実」段に昇格し、それ以外は各行の「写しを依頼」で取得します(ベータ期間は無料・月 10 件まで・週 1 回まとめて購入)。写しに別紙が付かず判定できない登記もあります。個人名義の登記は載せていません。</li>
+      <li><b>ウィスコンシン州(2026-09-09〜)</b>は登記索引の全行(法人の UCC-1・債務者・担保権者・提出日)を「索引のみ」の行として載せています。担保物の逐語は州の写し($4/件)でしか取れないため、当社の購入規則(債務者名が製造業らしい、または担保権者が機械商社/工作機械系)に当たる行は順次購入して「事実」段に昇格し、それ以外は各行の「写しを依頼」で取得します(ベータ期間は無料・月 10 件まで・週 1 回まとめて購入)。写しに別紙が付かず判定できない登記もあります。個人名義の登記は載せていません。</li>
       <li>設備の種類は型式ごとに 1 回だけメーカーの製品ページを調べて付けています(出典 URL と調べた日を CSV に出します)。会社の業種は自社サイトを調べて付けています。どちらも「人の確認」欄を持ち、確認済みかを CSV に出します。</li>
-      <li>会社名を押すと、その会社の登記と建設許可(同じ会社マスターに紐づく場合)が 1 本の時系列で見られます。</li>
+      <li>会社名を押すと、その会社の登記と建設許可(同じ会社に紐づく場合)が 1 本の時系列で見られます。</li>
     </ul>
   </details>
 </main>
@@ -303,7 +303,7 @@ header{border-top:0; border-bottom:1px solid var(--line); padding:12px 28px; dis
 
 <footer>
   <b>Signal by 43 Sunsets(BETA・先行版)</b> — 公的記録から中西部の設備投資シグナルを検出する無料の実験的サービスです。
-  出典: オハイオ州務長官 UCC 公開検索(ucc.ohiosos.gov)・登記書類の担保物欄・各メーカーの製品ページ(設備カタログ)・各社の自社サイト(会社マスター)。事実欄はすべて記録の逐語転記、推論欄と分類は当社 AI の読みで、出典と確信度を添えています。
+  出典: オハイオ州務長官 UCC 公開検索(ucc.ohiosos.gov)・登記書類の担保物欄・各メーカーの製品ページ(設備カタログ)・各社の自社サイト。事実欄はすべて記録の逐語転記、推論欄と分類は当社 AI の読みで、出典と確信度を添えています。
   情報は公的記録に基づきますが、正確性・完全性を保証するものではなく、投資・法務・与信等の助言でもありません。個人名義の記録は個人名を表示しません。
   ご意見・掲載に関するご連絡(掲載内容の訂正・削除のご依頼を含む)は <span class="mono">hello@43sunsets.com</span> まで。
   © <a href="/" style="color:inherit">43 Sunsets</a>
@@ -356,9 +356,9 @@ function eqHtml(eq){
 function cardHtml(s){
   const jp  = s.jp ? `<span class="chip jp" title="${s.jp_basis==="roster" ? "総領事館 2025 名簿で確定" : "人の確認で確定"}">日系</span>` : (s.jp_candidate ? `<span class="chip" title="AI 判定のみ(名簿・人の確認なし)= 候補">日系?</span>` : ""); const nw = s.new ? `<span class="chip newchip" title="${META ? META.new_rule : ''}">NEW</span>` : "";
   const kind = NOISE.has(s.kind) ? `<span class="chip">${s.kind}</span>` : "";
-  const tier = s.tier==="infer" ? `<span class="chip tier-infer" title="索引のみ(債務者・担保権者・日付)。担保物の逐語は未取得 = 推論段">索引のみ・推論</span>` : (s.copy && s.copy.status==="purchased" ? `<span class="chip tier-fact" title="写しを取得済み(担保物の逐語あり)= 事実段">写し取得済み・事実</span>` : "");
-  const cand = s.candidate ? `<span class="chip cand" title="当社の購入規則に当たる行(${esc(s.candidate_reason||"")})。順次、写しを購入して事実段に昇格します">候補</span>` : "";
-  const ind = `<span class="chip" title="${s.industry_basis==="master" ? "会社マスター(自社サイト)から" : "登記の読みから(会社マスター未調査)"}">${esc(s.industry)}${s.industry_basis==="master" ? "" : "?"}</span>`;
+  const tier = s.tier==="infer" ? `<span class="chip tier-infer" title="索引のみ(債務者・担保権者・日付)。担保物の記載はまだ無い">索引のみ</span>` : (s.copy && s.copy.status==="purchased" ? `<span class="chip tier-fact" title="写しを取得済み(担保物の逐語あり)">写し取得済み・事実</span>` : "");
+  const cand = s.candidate ? `<span class="chip cand" title="当社の購入規則に当たる行(${esc(s.candidate_reason||"")})。順次、写しを購入して担保物の記載を付けます">候補</span>` : "";
+  const ind = `<span class="chip" title="${s.industry_basis==="master" ? "自社サイトの調査から" : "登記の読みから(自社サイト未調査)"}">${esc(s.industry)}${s.industry_basis==="master" ? "" : "?"}</span>`;
   const inf = s.infer ? `<div class="infer"><span class="badge-infer">推論</span>${esc(s.infer)}</div>` : "";
   const sp = s.secured_party ? `<div class="parties">担保権者: ${esc(s.secured_party)}${s.secured_party_city ? "(" + esc(s.secured_party_city) + ")" : ""}・${esc(s.lender_label)}${s.scope==="all_assets" ? "・包括担保" : s.scope==="mixed" ? "・特定設備+包括" : ""}</div>` : "";
   const made = s.made ? `${esc(s.made)}${s.website ? ` · <a href="${esc(s.website)}" target="_blank" rel="noopener">サイト</a>` : ""}` : "";
@@ -430,7 +430,7 @@ document.getElementById("export").addEventListener("click", ()=>{
   const head = ["登記id","州","会社","市","業種(マスター)","業種の根拠","作っている物","自社サイト","日系(名簿/人の確認=1・AI候補=?)","担保権者","貸し手の種類","担保の範囲","提出日","失効日","領域","工程","機種","メーカー(判定)","メーカー(逐語)","型式","製番","台数","自動化","出典URL","調べた日","確信度","人の確認","要約","推論","出典","登記番号"];
   const rows = [];
   for(const s of list){ const eq = (s.equipment && s.equipment.length) ? s.equipment : [{}];
-    for(const e of eq){ rows.push([s.id,s.state,s.company,s.city,s.industry,s.industry_basis==="master"?"会社マスター":"登記の読み",s.made??"",s.website??"",s.jp?"1":(s.jp_candidate?"?":""),s.secured_party??"",s.lender_label??"",s.scope??"",s.date,s.lapse??"",
+    for(const e of eq){ rows.push([s.id,s.state,s.company,s.city,s.industry,s.industry_basis==="master"?"自社サイト":"登記の読み",s.made??"",s.website??"",s.jp?"1":(s.jp_candidate?"?":""),s.secured_party??"",s.lender_label??"",s.scope??"",s.date,s.lapse??"",
       e.domain??"",e.process??"",e.type??"",e.maker??"",e.maker_raw??"",e.model??"",e.serial??"",e.qty??"",e.automation?"1":"",e.source_url??"",e.checked_at??"",e.confidence??"",e.verified?"済":"未",s.summary??"",s.infer??"",s.fact.src,s.fact.ref]); } }
   const csv = "\ufeff" + [head, ...rows].map(r=>r.map(csvEscape).join(",")).join("\r\n");
   const blob = new Blob([csv], {type:"text/csv;charset=utf-8"}); const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
@@ -461,10 +461,10 @@ function fmtCT(iso){ const d = new Date(iso); const o = {timeZone:"America/Chica
   const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", o).formatToParts(d).filter(x => x.type !== "literal").map(x => [x.type, x.value])); return `${p.year}-${p.month}-${p.day} ${p.hour === "24" ? "00" : p.hour}:${p.minute}`; }
 function renderScope(){
   const m = META; if(!m) return; const f = m.funnel, k = m.catalog||{};
-  document.getElementById("scopebox").innerHTML = `<div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>
+  document.getElementById("scopebox").innerHTML = `<div class="fact" style="margin:10px 0"><span class="flabel">収録の範囲(全件)</span>
     登記 <span class="mono">${f.filings_total}</span> 件(担保権者名で検索: ${Object.entries(m.makers_searched||{}).map(([a,b])=>`${a} ${b}`).join("・")})→ 担保物の逐語あり <span class="mono">${f.with_collateral}</span> 件 → AI 読了 <span class="mono">${f.read}</span> 件・未評価 <span class="mono">${f.unread + f.no_text_yet}</span> 件<br>
-    設備カタログ <span class="mono">${k.equipment_rows||0}</span> 型式(設備の要素 ${k.equipment_hits||0} 件に適用・未適用 ${k.equipment_misses||0})・会社マスター 調査済 <span class="mono">${k.companies_checked||0}</span> / ${k.companies_total||0} 社<br>
-    書き出し <span class="mono">${fmtCT(m.generated_at)}</span>(米中部時間)・読み手: ${m.reader}</div>`;
+    設備カタログ <span class="mono">${k.equipment_rows||0}</span> 型式(設備の要素 ${k.equipment_hits||0} 件に適用・未適用 ${k.equipment_misses||0})・自社サイトの調査済 <span class="mono">${k.companies_checked||0}</span> / ${k.companies_total||0} 社<br>
+    更新 <span class="mono">${fmtCT(m.generated_at)}</span>(米中部時間)</div>`;
 }
 function setHeadH(){ const h=document.querySelector('header'); if(h) document.documentElement.style.setProperty('--headh', h.offsetHeight+'px'); }
 window.addEventListener('resize', setHeadH);
@@ -483,7 +483,7 @@ async function boot(){
     try{ const me = await fetch("/signal/me", {cache:"no-store", credentials:"same-origin"}).then(x=>x.json()); ME = me;
       if(me && me.loggedIn){ const q = await fetch("/signal/copy-request", {cache:"no-store", credentials:"same-origin"}).then(x=>x.json()); if(q && q.ok){ MYREQ = q.requests||{}; CAP = q.cap||CAP; USED = q.used||0; } } }catch(e){}
     const f = META.funnel;
-    document.getElementById("metaline").innerHTML = `${(META.states_present||[]).join("・")} 先行 / 登記 <span class="mono">${f.filings_total}</span> 件・会社 <span class="mono">${COMPANIES.length}</span> 社${f.machines != null ? `・機械 <span class="mono">${f.machines}</span> 台${f.machines_unconfirmed_filings ? `(台数未確認の登記 ${f.machines_unconfirmed_filings} 件)` : ""}` : ""}${META.wi ? `・WI 索引 <span class="mono">${META.wi.n}</span> 行(推論段・候補 ${META.wi.candidates})` : ""}・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
+    document.getElementById("metaline").innerHTML = `${(META.states_present||[]).join("・")} 先行 / 登記 <span class="mono">${f.filings_total}</span> 件・会社 <span class="mono">${COMPANIES.length}</span> 社${f.machines != null ? `・機械 <span class="mono">${f.machines}</span> 台${f.machines_unconfirmed_filings ? `(台数未確認の登記 ${f.machines_unconfirmed_filings} 件)` : ""}` : ""}${META.wi ? `・WI 索引 <span class="mono">${META.wi.n}</span> 行(索引のみ・候補 ${META.wi.candidates})` : ""}・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     renderFilters(); render(); renderScope();
     if(d.demo && window.sgDemo) sgDemo(META.demo);   // 見本モード(未ログイン): 古い実例 数枚・絞り込み不活性・登録案内
   }catch(err){ document.getElementById("metaline").textContent = "データの読み込みに失敗しました(" + err.message + ")。"; document.getElementById("empty").hidden = false; document.getElementById("empty").textContent = "データ(ucc.json)を読み込めませんでした。時間をおいて再読み込みしてください。"; }

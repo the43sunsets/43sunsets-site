@@ -272,26 +272,26 @@ const usd = v => v == null ? "" : (v >= 1e6 ? "$" + (v/1e6).toFixed(1) + "M" : "
 const ORIGIN_JA = {view: "閲覧起点", ucc: "UCC 登記", permit: "建設許可", subsidy: "政府補助金", permits: "建設許可", grants: "政府補助金", hiring: "採用", news: "ニュース", roster: "名簿"};
 function masterLabel(c){
   const m = c.master_status; const r = (m && m.reason) || {};
-  if (!m || !m.state) return c.master_checked_at ? ` · 会社マスター調査 ${esc(c.master_checked_at)}` : " · 会社マスター未調査";
-  if (m.state === "checked") return ` · 会社マスター調査 ${esc((r.checked_at || c.master_checked_at || "").slice(0,10))}`;
-  if (m.state === "queued") return ` · 会社マスター 調査待ち(${esc(ORIGIN_JA[r.origin] || r.origin || "")}${r.rank ? ` ${r.rank}/${r.of} 番目` : ""})`;
-  if (m.state === "untargeted") return ` · 会社マスター 対象外(由来: ${esc((r.origins || []).map(o => ORIGIN_JA[o] || o).join("・") || "なし")})`;
-  return " · 会社マスター未調査";
+  if (!m || !m.state) return c.master_checked_at ? ` · 自社サイトの調査 ${esc(c.master_checked_at)}` : " · 自社サイト未調査";
+  if (m.state === "checked") return ` · 自社サイトの調査 ${esc((r.checked_at || c.master_checked_at || "").slice(0,10))}`;
+  if (m.state === "queued") return ` · 自社サイトの調査待ち(${esc(ORIGIN_JA[r.origin] || r.origin || "")}${r.rank ? ` ${r.rank}/${r.of} 番目` : ""})`;
+  if (m.state === "untargeted") return ` · 自社サイトの調査 対象外(由来: ${esc((r.origins || []).map(o => ORIGIN_JA[o] || o).join("・") || "なし")})`;
+  return " · 自社サイト未調査";
 }
 function faceTile(href, label, n, sub, soon){ return `<a class="face4${soon ? " soon" : ""}" href="${href}"><div class="fl">${label}</div><div class="fn">${soon ? "Coming soon" : n}</div><div class="fs">${esc(sub)}</div></a>`; }
 function permitItem(i){
-  const cat = i.category === "未評価" ? `<span class="kchip">未評価(AI 読み待ち)</span>` : `<span class="kchip">${esc(i.category)}${i.confidence === "low" ? "・低確度" : ""}</span>`;
+  const cat = i.category === "未評価" ? `<span class="kchip">未評価(AI の読み前)</span>` : `<span class="kchip">${esc(i.category)}${i.confidence === "low" ? "・低確度" : ""}</span>`;
   return `<div class="kitem" id="${esc(i.id)}"><div class="khead"><span class="kdate">${esc(i.date || i.applied || "")}</span><span class="kloc">${esc(i.jurisdiction)}</span><span>${esc(i.address || "")}</span>${cat}<span class="kchip role">${esc(i.role_label)}</span>${i.value ? `<span class="kchip">工事費 ${usd(i.value)}</span>` : ""}</div>
     ${i.summary ? `<div class="ksum">${esc(i.summary)}</div>` : ""}${i.infer ? `<div class="ksum"><span class="badge-infer">推論</span>${esc(i.infer)}</div>` : ""}
     ${i.verbatim ? `<div class="kfact"><span class="badge-fact">事実</span>${esc(i.verbatim)}</div>` : ""}
-    <div class="kref">${esc([i.permit_no ? "許可 " + i.permit_no : null, i.permit_type, i.source_id, i.id].filter(Boolean).join(" · "))}</div></div>`;
+    <div class="kref">${esc([i.permit_no ? "許可 " + i.permit_no : null, i.permit_type].filter(Boolean).join(" · "))}</div></div>`;
 }
 function uccItem(u){
   const eq = (u.equipment || []).map(e => `<li>${esc([e.type, e.maker, e.model].filter(Boolean).join(" · "))}${e.qty ? ` × ${esc(e.qty)}` : ""}${e.domain ? ` <span class="kchip">${esc(e.domain)}</span>` : ""}</li>`).join("");
   return `<div class="kitem" id="${esc(u.id)}"><div class="khead"><span class="kdate">${esc(u.date)}</span><span class="kloc">${esc(u.kind)}</span>${u.lender ? `<span class="kchip">${esc(u.lender)}</span>` : ""}<span class="kchip role">${esc(u.role_label)}</span>${u.status ? `<span class="kchip">${esc(u.status)}</span>` : ""}</div>
     ${eq ? `<ul class="keq">${eq}</ul>` : ""}${u.summary ? `<div class="ksum">${esc(u.summary)}</div>` : ""}${u.infer ? `<div class="ksum"><span class="badge-infer">推論</span>${esc(u.infer)}</div>` : ""}
     ${u.secured_party ? `<div class="kfact"><span class="badge-fact">事実</span>担保権者: ${esc(u.secured_party)}${u.lapse ? ` · 失効 ${esc(u.lapse)}` : ""}</div>` : ""}
-    <div class="kref">${esc([u.ref, u.id].filter(Boolean).join(" · "))}</div></div>`;
+    <div class="kref">${esc([u.ref].filter(Boolean).join(" · "))}</div></div>`;
 }
 function grantItem(g){
   const cat = `<span class="kchip">${esc(g.category)}${g.confidence === "low" ? "・低確度" : ""}</span>`;
@@ -299,16 +299,16 @@ function grantItem(g){
   return `<div class="kitem" id="${esc(g.id)}"><div class="khead"><span class="kdate">${esc(g.date || "")}</span><span class="kloc">${esc(g.kind_label)}・${esc(g.issuer_level)}</span><span>${esc(g.issuer || "")}</span>${cat}${prov}<span class="kchip role">${esc(g.role_label)}</span>${g.amount != null ? `<span class="kchip">${g.kind === "grant" ? "交付額" : "融資額"} ${usd(g.amount)}</span>` : ""}</div>
     ${g.summary ? `<div class="ksum">${esc(g.summary)}</div>` : ""}${g.infer ? `<div class="ksum"><span class="badge-infer">推論</span>${esc(g.infer)}</div>` : ""}
     ${g.verbatim ? `<div class="kfact"><span class="badge-fact">事実</span>${esc(g.verbatim)}</div>` : ""}
-    <div class="kref">${esc([g.program_name || (g.program ? "CFDA " + g.program : null), g.start ? "履行 " + g.start + "〜" + (g.end || "") : null, g.id].filter(Boolean).join(" · "))}${g.url ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener">USAspending ↗</a>` : ""}</div></div>`;
+    <div class="kref">${esc([g.program_name || (g.program ? "CFDA " + g.program : null), g.start ? "履行 " + g.start + "〜" + (g.end || "") : null].filter(Boolean).join(" · "))}${g.url ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener">USAspending ↗</a>` : ""}</div></div>`;
 }
 function hireItem(h){ return `<div class="kitem"><div class="khead"><span class="kdate">${esc(h.posted || h.first_seen || "")}</span><span class="kloc">${esc([h.city, h.state].filter(Boolean).join(", "))}</span><span class="kchip">${esc(h.role)}</span></div><div class="kfact"><span class="badge-fact">事実</span>${h.url ? `<a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.title)}</a>` : esc(h.title)}</div></div>`; }
 // 見本モード(未ログイン): 許可以外の節はぼかした見本文+登録案内(データ自体はサーバーが返していない)
-function lockBody(label){ const here = encodeURIComponent(location.pathname + location.search); return `<div class="sg-lock-body" aria-hidden="true"><div class="kitem"><div class="khead"><span class="kdate">20XX-XX-XX</span><span class="kloc">—</span><span class="kchip">${esc(label)}</span></div><div class="kfact">登録した方には、この会社の${esc(label)}の記録をここに表示します。</div></div><div class="kitem"><div class="khead"><span class="kdate">20XX-XX-XX</span></div><div class="kfact">見本モードでは内容を伏せています。</div></div></div><div class="sg-lock-note"><a href="/signal/join/?next=${here}">登録すると${esc(label)}の節が開きます(無料・日系製造業の方)</a></div>`; }
+function lockBody(label, count){ const here = encodeURIComponent(location.pathname + location.search); return `<div class="sg-lock-note"><a href="/signal/join/?next=${here}">登録すると、この会社の ${label}${count ? `(${count} 件)` : ""}がここに開きます(無料・日系製造業の方)</a></div>`; }
 function render(c){
   document.title = `${c.name} — 企業カルテ | Signal by 43 Sunsets`;
   const f = c.faces; const jp = c.jp ? `<span class="chip jp">日系(${c.jp_basis === "roster" ? "名簿" : "人の確認"})</span>` : (c.jp_candidate ? `<span class="chip">日系?(AI 候補)</span>` : "");
   const gcount = (f.grants && f.grants.count) || 0; const ncount = (f.news && f.news.count) || 0; const nitems = (f.news && f.news.items) || []; const gitems = (f.grants && f.grants.items) || []; const hcount = (f.hiring && f.hiring.count) || 0; const hitems = (f.hiring && f.hiring.items) || []; const hroles = Object.entries((f.hiring && f.hiring.by_role) || {}).sort((a,b)=>b[1]-a[1]);
-  document.getElementById("metaline").innerHTML = `書き出し <span class="mono">${esc((c.generated_at || "").slice(0,10))}</span>`;   // 9/7 CEO: 社名と各源の件数は下段と重複するため帯は書き出し日だけ;
+  document.getElementById("metaline").innerHTML = `更新 <span class="mono">${esc((c.generated_at || "").slice(0,10))}</span>`;   // 9/7 CEO: 社名と各源の件数は下段と重複するため帯は書き出し日だけ;
   // 9/7 CEO: カルテは新しいタブで開く仕様のため「‹ 戻る」は置かない(閉じるは上部の ✕)
   document.getElementById("main").innerHTML = `
     <div class="kprof"><div><div class="kicker">SIGNAL by 43 SUNSETS — COMPANY KARTE(BETA)</div><h2>${window.faviFromWebsite ? faviFromWebsite(c.website, c.name) : ""}${esc(c.name)}</h2>
@@ -323,11 +323,11 @@ function render(c){
       ${faceTile("#news", "ニュース", ncount + " 件", (f.news && f.news.locked) ? "登録すると内容が開きます" : (ncount ? "最新 " + (f.news.latest || "") : "直近のニュースに無い"), false)}
     </div>
     <section class="ksec" id="permits"><h3>建設許可(${f.permits.count})</h3>${f.permits.items.length ? f.permits.items.map(permitItem).join("") : `<div class="kempty">この会社の建設許可は当社の網に無い(未収集の自治体か、名義が別会社)。</div>`}</section>
-    <section class="ksec${f.ucc.locked ? " sg-lock" : ""}" id="ucc"><h3>UCC 登記(${f.ucc.count})</h3>${f.ucc.locked ? lockBody("UCC 登記") : (f.ucc.items.length ? f.ucc.items.map(uccItem).join("") : `<div class="kempty">この会社の UCC 登記は当社の網に無い(オハイオ先行・担保権者名で検索した範囲)。</div>`)}</section>
-    <section class="ksec${f.hiring.locked ? " sg-lock" : ""}" id="hiring"><h3>採用(${hcount})</h3>${f.hiring.locked ? lockBody("採用") : hcount ? `<div class="ksub" style="margin-bottom:8px">開いている求人 ${hcount}(製造職 ${f.hiring.mfg||0})・内訳: ${hroles.map(([k,v])=>`${esc(k)} <span class="mono">${v}</span>`).join("・")}・拠点: ${Object.entries(f.hiring.sites||{}).map(([k,v])=>`${esc(k)} ${v}`).join("・")}・出典 ${esc(f.hiring.source||"")}。職種の型は題名の規則。求人票の本文(設備・工程・人数)の AI 読みは順次。</div>` + hitems.map(hireItem).join("") : `<div class="kempty">${esc((f.hiring && f.hiring.note) || "この会社の採用ページは当社の網に無い。")}</div>`}</section>
-    <section class="ksec${f.grants.locked ? " sg-lock" : ""}" id="grants"><h3>政府補助金(${gcount})</h3>${f.grants.locked ? lockBody("政府補助金") : gitems.length ? gitems.map(grantItem).join("") : `<div class="kempty">${esc((f.grants && f.grants.note) || "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。")}</div>`}</section>
-    <section class="ksec${f.news && f.news.locked ? " sg-lock" : ""}" id="news"><h3>ニュース(${ncount})</h3>${f.news && f.news.locked ? lockBody("ニュース") : (nitems.length ? nitems.map(n => `<div class="nitem"><a href="${esc(n.url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph">${n.thumb ? `<img src="${esc(n.thumb)}" alt="" loading="lazy">` : ""}</span></a><div><h4><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a></h4>${n.summary ? `<p>${esc(n.summary)}</p>` : ""}<div class="m">${esc(n.source || "")}・${esc(n.date || "")}${(n.tags||[]).length ? "・" + n.tags.map(esc).join("・") : ""}</div></div></div>`).join("") : `<div class="kempty">${esc((f.news && f.news.note) || "直近のニュース(米製造業・5 州)にこの会社は出ていない。")}</div>`)}</section>
-    <section class="ksec"><h3>時系列(5 つの情報源を合流)${c.demo ? `<span class="ksub" style="font-weight:400;margin-left:8px">見本モード: 建設許可のみ</span>` : ""}</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : (t.face === "grants" ? "grant" : (t.face === "hiring" ? "hire" : (t.face === "news" ? "news" : "permit")))}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
+    <section class="ksec${f.ucc.locked ? " sg-lock" : ""}" id="ucc"><h3>UCC 登記(${f.ucc.count})</h3>${f.ucc.locked ? lockBody("UCC 登記", f.ucc.count) : (f.ucc.items.length ? f.ucc.items.map(uccItem).join("") : `<div class="kempty">この会社の UCC 登記は当社の網に無い(オハイオ先行・担保権者名で検索した範囲)。</div>`)}</section>
+    <section class="ksec${f.hiring.locked ? " sg-lock" : ""}" id="hiring"><h3>採用(${hcount})</h3>${f.hiring.locked ? lockBody("採用", f.hiring.count) : hcount ? `<div class="ksub" style="margin-bottom:8px">開いている求人 ${hcount}(製造職 ${f.hiring.mfg||0})・内訳: ${hroles.map(([k,v])=>`${esc(k)} <span class="mono">${v}</span>`).join("・")}・拠点: ${Object.entries(f.hiring.sites||{}).map(([k,v])=>`${esc(k)} ${v}`).join("・")}・出典 ${esc(f.hiring.source||"")}。職種の型は題名の規則。求人票の本文(設備・工程・人数)の AI 読みは順次。</div>` + hitems.map(hireItem).join("") : `<div class="kempty">${esc((f.hiring && f.hiring.note) || "この会社の採用ページは当社の網に無い。")}</div>`}</section>
+    <section class="ksec${f.grants.locked ? " sg-lock" : ""}" id="grants"><h3>政府補助金(${gcount})</h3>${f.grants.locked ? lockBody("政府補助金", f.grants.count) : gitems.length ? gitems.map(grantItem).join("") : `<div class="kempty">${esc((f.grants && f.grants.note) || "連邦(USAspending)の網にこの会社の助成・融資は無い。州・市郡の源は順次追加。")}</div>`}</section>
+    <section class="ksec${f.news && f.news.locked ? " sg-lock" : ""}" id="news"><h3>ニュース(${ncount})</h3>${f.news && f.news.locked ? lockBody("ニュース", f.news.count) : (nitems.length ? nitems.map(n => `<div class="nitem"><a href="${esc(n.url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="ph">${n.thumb ? `<img src="${esc(n.thumb)}" alt="" loading="lazy">` : ""}</span></a><div><h4><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a></h4>${n.summary ? `<p>${esc(n.summary)}</p>` : ""}<div class="m">${esc(n.source || "")}・${esc(n.date || "")}${(n.tags||[]).length ? "・" + n.tags.map(esc).join("・") : ""}</div></div></div>`).join("") : `<div class="kempty">${esc((f.news && f.news.note) || "直近のニュース(米製造業・5 州)にこの会社は出ていない。")}</div>`)}</section>
+    <section class="ksec"><h3>時系列(5 つの情報源を合流)${c.demo ? `<span class="ksub" style="font-weight:400;margin-left:8px">見本: 建設許可のみ</span>` : ""}</h3><div class="timeline">${(c.timeline || []).map(t => `<div class="tl-item ${t.face === "ucc" ? "ucc" : (t.face === "grants" ? "grant" : (t.face === "hiring" ? "hire" : (t.face === "news" ? "news" : "permit")))}"><div class="tl-date">${esc(t.date)}</div><div class="tl-title"><a href="#${esc(t.ref)}">${esc(t.title)}</a></div><div class="tl-body">${esc(t.summary || "")}</div></div>`).join("") || `<div class="kempty">出来事なし</div>`}</div></section>
     <div class="knote">${esc(c.note)}</div>`;
 }
 async function boot(){
@@ -338,7 +338,7 @@ async function boot(){
     const r = await fetch(`/cockpit/data/companies/${id}.json`, {cache:"no-store"});
     if(!r.ok) throw new Error("HTTP " + r.status);
     render(await r.json());
-  }catch(err){ main.innerHTML = `<div class="kempty">このカルテ(${esc(id)})は見つかりません(${esc(err.message)})。会社マスターの更新で ID が変わった可能性があります。一覧から開き直してください。</div>`; document.getElementById("metaline").textContent = "見つかりません"; }
+  }catch(err){ main.innerHTML = `<div class="kempty">このカルテ(${esc(id)})は見つかりません(${esc(err.message)})。会社情報の更新で ID が変わった可能性があります。一覧から開き直してください。</div>`; document.getElementById("metaline").textContent = "見つかりません"; }
 }
 boot();
 </script>
