@@ -22,7 +22,7 @@ function run(el){
     else if(c.state === "STALE"){ cls = "hb-fail"; label = "収集が 30 時間以上止まっています"; }
     else if(!ranToday){ cls = "hb-wait"; label = `当日の収集 待ち(予定 ${(c.schedule||"").replace("America/Chicago","CT")})`; }
     const gen = fmt(h.generated_at, true);
-    const title = `運行状態(${LABEL} の収集)\n判定 ${c.state||"—"}・health.json 生成 ${gen} CT\n収集の予定: ${c.schedule||"—"}\n最終収集: ${lastCT} CT${n!=null?`・新規 ${n>=0?"+":""}${n} 件`:""}${c.fetched!=null?`・取得 ${c.fetched} 件`:""}${c.errors?`・源の障害 ${c.errors}`:""}\n${c.last_status && c.last_status.ok===0 ? "最終実行に失敗した工程があります" : ""}`.trim();
+    const title = `運行状態(${LABEL} の収集)\n判定 ${c.state||"—"}・health.json 生成 ${gen} CT\n収集の予定: ${c.schedule||"—"}\n最終収集: ${lastCT} CT${n!=null?`・新規 ${n>=0?"+":""}${n} 件`:""}${c.fetched!=null?`・取得 ${c.fetched} 件`:""}${c.errors?`・取得できない情報源 ${c.errors}`:""}\n${c.last_status && c.last_status.ok===0 ? "最終実行に失敗した工程があります" : ""}`.trim();
     const tile = el.classList.contains("hb-tile");
     el.className = "hb " + (tile ? "hb-tile " : "") + cls; el.title = title;
     if(tile){ el.innerHTML = `<div class="t-top"><span class="hb-dot"></span><b>${LABEL}</b><span class="go">›</span></div><div class="t-st">${label}</div><div class="t-sub">最終 <span class="mono">${lastCT}</span> CT${n!=null?`・新規 <span class="mono">${n>=0?"+":""}${n}</span> 件`:""}</div>`; return; }

@@ -219,7 +219,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
 
 <footer>
   <b>Signal by 43 Sunsets(BETA)</b> — 公的記録から中西部の設備投資シグナルを検出する無料の実験的サービスです。
-  出典: USAspending.gov(米国連邦支出の公開データ・取得日は射程欄のとおり)。事実欄はすべて記録の逐語転記、分類は規則による割り当てで「規則」の札を付けて分離表示しています。
+  出典: USAspending.gov(米国連邦支出の公開データ・取得日は上の「収録の範囲」のとおり)。事実欄はすべて記録の逐語転記、分類は規則による割り当てで「規則」の札を付けて分離表示しています。
   情報は公的記録に基づきますが、正確性・完全性を保証するものではなく、投資・法務等の助言でもありません。個人名義の記録は個人名を表示しません。
   ご意見・掲載に関するご連絡(掲載内容の訂正・削除のご依頼を含む)は <span class="mono">hello@43sunsets.com</span> または <a href="https://43sunsets.com/">43sunsets.com</a> まで。
   © <a href="/" style="color:inherit">43 Sunsets</a>
@@ -347,7 +347,7 @@ function renderScope(){
   const m = META; if(!m) return;
   const src = m.sources.map(s=>`${esc(s.label)} <span class="mono">${s.n}</span> 件`).join("・");
   const pend = (m.pending_sources||[]).map(esc).join("・");
-  document.getElementById("scopebox").innerHTML = `<div class="fact" style="margin:10px 0"><span class="flabel">射程(全件 COUNT)</span>保存 <span class="mono">${m.n.toLocaleString()}</span> 件(${src})・個人事業のマスク <span class="mono">${m.n_masked}</span> 件・書き出し <span class="mono">${fmtCT(m.generated_at)}</span>(米中部時間)<br><span class="ng">未収集の源:</span> ${pend}</div>`;
+  document.getElementById("scopebox").innerHTML = `<div class="fact" style="margin:10px 0"><span class="flabel">収録の範囲(全件)</span>保存 <span class="mono">${m.n.toLocaleString()}</span> 件(${src})・個人事業のマスク <span class="mono">${m.n_masked}</span> 件・更新 <span class="mono">${fmtCT(m.generated_at)}</span>(米中部時間)<br><span class="ng">未収集の源:</span> ${pend}</div>`;
 }
 function setHeadH(){ const h=document.querySelector('header'); if(h) document.documentElement.style.setProperty('--headh', h.offsetHeight+'px'); }
 window.addEventListener('resize', setHeadH);

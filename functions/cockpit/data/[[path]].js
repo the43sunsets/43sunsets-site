@@ -77,7 +77,7 @@ function demoMacro(m) { return { ...m, demo: true, ai_news: m.ai_news ? { locked
 function demoNews(n) {
   const states = {}; for (const [k, v] of Object.entries(n.states || {})) states[k] = (v || []).slice(0, 2);
   const total = (n.us || []).length + Object.values(n.states || {}).reduce((a, v) => a + (v || []).length, 0);
-  return { ...n, demo: true, us: (n.us || []).slice(0, 3), states, meta_demo: { total, sample: 3 + Object.values(states).reduce((a, v) => a + v.length, 0), note: `見本モード: 直近のニュース ${total} 本のうち一部を表示。登録すると全件と AI の読み(② ③)、会社名からの企業カルテが使えます。` } };
+  return { ...n, demo: true, us: (n.us || []).slice(0, 3), states, meta_demo: { total, sample: 3 + Object.values(states).reduce((a, v) => a + v.length, 0), note: `見本: 直近のニュース ${total} 本のうち一部を表示。登録すると全件と AI の読み(② ③)、会社名からの企業カルテが使えます。` } };
 }
 function demoCompany(c) {
   const f = c.faces || {};
