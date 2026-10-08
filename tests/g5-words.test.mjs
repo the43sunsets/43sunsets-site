@@ -7,9 +7,9 @@ const words = JSON.parse(read("cockpit/data/g5-words.json"));
 const blank = text => text.replace(/[^\r\n]/g, " ");
 function withoutComments(source) {
   return source
-    .replace(/\/\*[\s\S]*?\*\/|<!--[\s\S]*?-->/g, blank)
     .replace(/^[\t ]*\/\/[^\r\n]*/gm, blank)
-    .replace(/([;}\{),][\t ]{2,})\/\/[^\r\n]*/g, (match, prefix) => prefix + blank(match.slice(prefix.length)));
+    .replace(/([;}\{),][\t ]{2,})\/\/[^\r\n]*/g, (match, prefix) => prefix + blank(match.slice(prefix.length)))
+    .replace(/\/\*[\s\S]*?\*\/|<!--[\s\S]*?-->/g, blank);
 }
 function indexFiles(path) {
   return readdirSync(new URL("../" + path, import.meta.url), { withFileTypes: true }).flatMap(entry => {
