@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 100000.0,
-"latest": "2026-09-23",
+"count": 2,
+"value_total": 300000.0,
+"latest": "2026-10-06",
 "items": [
+{
+"id": "S-75348",
+"date": "2026-10-06",
+"applied": "2026-09-17",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1918 N DRAKE AVE",
+"permit_no": "101087711",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 200000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 1918 N Drake Ave の既存19戸住宅建物(3階建+地下)のうち7戸と共用部ロビー・階段を改修 $200k(R-2用途)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF-CERT 2019 CBRC ALTERATION TO 7 UNITS AND COMMON AREA LOBBY AND STAIR IN ONE PORTION OF EXISTING 3 STORY WITH BASEMENT 19 UNIT RESIDENTIAL BUILDING. FULL RENOVATION OF GROUND FLOOR UNIT WITH RECONFIGURATION OF KITCHENS AND REPAIRS/FINISHES IN UNITS ABOVE. NEW FINISHES IN COMMON AREAS. OCCUPANCY ",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-66018",
 "date": "2026-09-23",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-75348",
+"summary": "Chicago 1918 N Drake Ave の既存19戸住宅建物(3階建+地下)のうち7戸と共用部ロビー・階段を改修 $200k(R-2用途)。"
+},
+{
 "date": "2026-09-23",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -85,6 +116,6 @@
 "summary": "既存3階建て・地下付き34戸住宅(R-2)に1200A新規電気サービスを設置する改修 $100k。"
 }
 ],
-"generated_at": "2026-10-08T08:26:13+00:00",
+"generated_at": "2026-10-08T12:30:42+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

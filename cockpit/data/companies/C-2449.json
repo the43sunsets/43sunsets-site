@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 23864.86,
-"latest": "2026-10-02",
+"count": 4,
+"value_total": 34339.86,
+"latest": "2026-10-07",
 "items": [
+{
+"id": "S-75533",
+"date": "2026-10-07",
+"applied": "2026-10-01",
+"state": "IL",
+"jurisdiction": "Wood Dale",
+"address": "404 N WOOD DALE RD WOOD DALE IL 60191",
+"permit_no": "COM-2026-0207",
+"permit_type": "Commercial Mechanical",
+"value": 10475.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Wood Dale市(404 N Wood Dale Rd)での商業用機械設備工事 $10,475。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Mechanical / Mechanical",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-71027",
 "date": "2026-10-02",
@@ -126,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-07",
+"face": "permits",
+"title": "建設許可(Wood Dale): 未分類",
+"ref": "S-75533",
+"summary": "Wood Dale市(404 N Wood Dale Rd)での商業用機械設備工事 $10,475。"
+},
+{
 "date": "2026-10-02",
 "face": "permits",
 "title": "建設許可(Wood Dale): 未分類",
@@ -147,6 +178,6 @@
 "summary": "Wood Dale の道路占用許可(内容不明)。"
 }
 ],
-"generated_at": "2026-10-08T08:26:13+00:00",
+"generated_at": "2026-10-08T12:30:42+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

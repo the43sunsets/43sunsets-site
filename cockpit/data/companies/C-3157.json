@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 150000.0,
-"latest": "2026-09-21",
+"count": 6,
+"value_total": 220000.0,
+"latest": "2026-10-06",
 "items": [
+{
+"id": "S-75252",
+"date": "2026-10-06",
+"applied": "2026-09-15",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "4533 W HARRISON ST",
+"permit_no": "B200511706",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 4533 W Harrison St の通信タワーで既存通信設備の改修 $35k(1 タワー・0 ボックス)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 0 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: TELECOMMUNICATIONS TOWER.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-75296",
+"date": "2026-10-06",
+"applied": "2026-09-15",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2459 W NORTH AVE",
+"permit_no": "B200511715",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 2459 W North Ave の通信タワーで既存通信設備の改修工事 $35k(1 タワー上の機器改修)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 0 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: TELECOMMUNICATIONS TOWER.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-64414",
 "date": "2026-09-21",
@@ -150,6 +198,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-75252",
+"summary": "Chicago 4533 W Harrison St の通信タワーで既存通信設備の改修 $35k(1 タワー・0 ボックス)。"
+},
+{
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-75296",
+"summary": "Chicago 2459 W North Ave の通信タワーで既存通信設備の改修工事 $35k(1 タワー上の機器改修)。"
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -178,6 +240,6 @@
 "summary": "American Tower Corp が Mendota 203 12th St に通信塔用機器の新規コンクリートパッドを設置 $45k。"
 }
 ],
-"generated_at": "2026-10-08T08:26:13+00:00",
+"generated_at": "2026-10-08T12:30:42+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 5,
-"value_total": 23049575.0,
-"latest": "2026-09-24",
+"count": 7,
+"value_total": 23076575.0,
+"latest": "2026-10-06",
 "items": [
+{
+"id": "S-75438",
+"date": "2026-10-06",
+"applied": "2026-05-19",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "5250 Conner St",
+"permit_no": "BLD2026-00839",
+"permit_type": "New",
+"value": 2000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Detroit 5250 Conner St に4階建て42戸の集合住宅を新築($2,000はFee記載の可能性、建築費本体はBLD2026-00616参照)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Construct New 4 Story, 42 Unit Multiple-Family Dwelling (Building 1.01B) & Site Work to Code per plans. Subject to Field Approval. See BLD2026-00616 for fees. Separate Trade, DPW Right-of-Way, & DWSD Permits required. / Multi-Family Dwelling (42 Units) / New",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-75444",
+"date": "2026-10-06",
+"applied": "2026-09-03",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "203 Randolph St",
+"permit_no": "BLD2026-01450",
+"permit_type": "Alteration",
+"value": 25000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Detroit 203 Randolph St の既存建物設置型テレコム設備の改修工事 $25k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Modifications to existing building mounted (Telecom Facility) per provided plans & documents. (Subject to field approval.) / Telecom Facility/Building Mounted / Alteration",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-66931",
 "date": "2026-09-24",
@@ -174,6 +222,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Detroit): 未分類",
+"ref": "S-75438",
+"summary": "Detroit 5250 Conner St に4階建て42戸の集合住宅を新築($2,000はFee記載の可能性、建築費本体はBLD2026-00616参照)。"
+},
+{
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Detroit): 未分類",
+"ref": "S-75444",
+"summary": "Detroit 203 Randolph St の既存建物設置型テレコム設備の改修工事 $25k。"
+},
+{
 "date": "2026-09-24",
 "face": "permits",
 "title": "建設許可(Detroit): 未分類",
@@ -209,6 +271,6 @@
 "summary": "5250 Conner St(Detroit)で将来の複合住宅用地における整地・地下瓦礫撤去(案件9134関連、BLD2026-00615)。$2,000(許可種別: Other)。"
 }
 ],
-"generated_at": "2026-10-08T08:26:13+00:00",
+"generated_at": "2026-10-08T12:30:42+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -37,15 +37,19 @@
 "permit_no": "2026P09270",
 "permit_type": "Elevator Permit",
 "value": 163000.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 3941 Brotherton Rd(F-1 用途)でエレベーター設置許可 $163k。",
+"infer": "工場用途(F-1)建物の昇降機設備工事であり、生産能力増強そのものを示す記録ではない(推論)。",
 "role": "owner",
 "role_label": "所有名義(許可記録・課税台帳)",
 "verbatim": "Elevator Permit / Elevator Permit / F-1",
 "source_id": "SRC-003",
-"provenance": null
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 },
 {
 "id": "S-75397",
@@ -57,15 +61,19 @@
 "permit_no": "2026P09269",
 "permit_type": "Elevator Permit",
 "value": 165000.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 3941 Brotherton Rd(F-1 用途)でのエレベーター設置許可 $165k。",
+"infer": "F-1(中危険度工場)用途の建物に付随するエレベーター工事であり、生産設備そのものの増強を示す情報は記録に無い(推論不可)。",
 "role": "owner",
 "role_label": "所有名義(許可記録・課税台帳)",
 "verbatim": "Elevator Permit / Elevator Permit / F-1",
 "source_id": "SRC-003",
-"provenance": null
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 },
 {
 "id": "S-73777",
@@ -144,16 +152,16 @@
 {
 "date": "2026-10-05",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未評価",
+"title": "建設許可(Cincinnati): 未分類",
 "ref": "S-75371",
-"summary": null
+"summary": "Cincinnati 3941 Brotherton Rd(F-1 用途)でエレベーター設置許可 $163k。"
 },
 {
 "date": "2026-10-05",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未評価",
+"title": "建設許可(Cincinnati): 未分類",
 "ref": "S-75397",
-"summary": null
+"summary": "Cincinnati 3941 Brotherton Rd(F-1 用途)でのエレベーター設置許可 $165k。"
 },
 {
 "date": "2026-10-02",
@@ -170,6 +178,6 @@
 "summary": "Cincinnati 3941 Brotherton Rd の F-1 用途施設に消火設備工事 $571,250。"
 }
 ],
-"generated_at": "2026-10-08T08:26:13+00:00",
+"generated_at": "2026-10-08T12:30:42+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

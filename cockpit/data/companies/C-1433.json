@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
+"count": 4,
 "value_total": 30495.0,
-"latest": "2026-09-25",
+"latest": "2026-10-07",
 "items": [
+{
+"id": "S-75518",
+"date": "2026-10-07",
+"applied": "2026-10-07",
+"state": "IL",
+"jurisdiction": "Elmhurst",
+"address": "219 W WRIGHTWOOD AVE ELMHURST IL 60126",
+"permit_no": "CO-011464-2026",
+"permit_type": "Certificate of Occupancy",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Elmhurst 219 W Wrightwood Ave の使用許可証(Certificate of Occupancy)発行、所有者は Ranger II Urban Logistics。金額記載なし。",
+"infer": "名称から物流施設の使用開始手続きの可能性があるが、工事内容・規模が記録上不明のため設備投資シグナルとしては判定不可(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Certificate of Occupancy / Certificate of Occupancy",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-66993",
 "date": "2026-09-25",
@@ -126,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-07",
+"face": "permits",
+"title": "建設許可(Elmhurst): 未分類",
+"ref": "S-75518",
+"summary": "Elmhurst 219 W Wrightwood Ave の使用許可証(Certificate of Occupancy)発行、所有者は Ranger II Urban Logistics。金額記載なし。"
+},
+{
 "date": "2026-09-25",
 "face": "permits",
 "title": "建設許可(Elmhurst): 未分類",
@@ -147,6 +178,6 @@
 "summary": "Wood Dale 955 Lively St(Ranger II Urban Logistics)の商業用フェンス/ダンパー囲い設置 $18.7k。"
 }
 ],
-"generated_at": "2026-10-08T08:26:13+00:00",
+"generated_at": "2026-10-08T12:30:42+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

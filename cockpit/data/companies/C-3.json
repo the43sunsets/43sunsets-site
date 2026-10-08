@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 83530000.0,
-"latest": "2026-09-18",
+"count": 5,
+"value_total": 84180000.0,
+"latest": "2026-10-06",
 "items": [
+{
+"id": "S-75311",
+"date": "2026-10-06",
+"applied": "2026-10-01",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "251 E HURON ST",
+"permit_no": "101088154",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 650000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Northwestern Memorial Hospital(251 E Huron St)の4階にあるレジデントワークルーム・会議室・ラウンジの内装改修 $650k(家具・天井・壁の更新、MEPFP軽微対応)。用途変更なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELF-CERT 2019 CBRC: INTERIOR ALTERATIONS TO EXISTING RESIDENT'S WORK ROOM, CONFERENCE ROOM AND LOUNGE TO INCLUDE REMOVAL OF EXISTING FURNITURE AND SELECTIVE DEMOLITION OF PORTIONS OF WALLS AND EXISTING CEILING. NEW CEILING AND PATCHING EXISTING WALLS, NEW MILLWORK, NEW FURNITURE, NEW INTERIOR FINIS",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-62014",
 "date": "2026-09-18",
@@ -147,6 +171,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-75311",
+"summary": "Northwestern Memorial Hospital(251 E Huron St)の4階にあるレジデントワークルーム・会議室・ラウンジの内装改修 $650k(家具・天井・壁の更新、MEPFP軽微対応)。用途変更なし。"
+},
+{
 "date": "2026-09-18",
 "face": "permits",
 "title": "建設許可(Chicago): 医療施設",
@@ -175,6 +206,6 @@
 "summary": "病院のラボ/オフィス棟 5 フロア(2, 4, 6, 7 階とペントハウス1)を改修しラボを拡張 $81.3M(4 階に機械ペントハウス増設)。"
 }
 ],
-"generated_at": "2026-10-08T08:26:13+00:00",
+"generated_at": "2026-10-08T12:30:42+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

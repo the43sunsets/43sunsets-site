@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 9,
-"value_total": 1067008.0,
-"latest": "2026-09-16",
+"count": 10,
+"value_total": 1085371.0,
+"latest": "2026-10-05",
 "items": [
+{
+"id": "S-75392",
+"date": "2026-10-05",
+"applied": "2026-10-05",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "6331 CENTER HILL AV",
+"permit_no": "2026P09320",
+"permit_type": "Fire Protection Systems",
+"value": 18363.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Procter & Gamble の Cincinnati 施設(6331 Center Hill Ave)における消防設備工事 $18,363(用途 B)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-60442",
 "date": "2026-09-16",
@@ -263,6 +287,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-05",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-75392",
+"summary": "Procter & Gamble の Cincinnati 施設(6331 Center Hill Ave)における消防設備工事 $18,363(用途 B)。"
+},
+{
 "date": "2026-09-16",
 "face": "permits",
 "title": "建設許可(Cincinnati): 製造能力の増強",
@@ -326,6 +357,6 @@
 "summary": "Cincinnati 1 Procter and Gamble Plz の建物改修(Alteration、B用途) $700k(所有者欄は null)。"
 }
 ],
-"generated_at": "2026-10-08T08:26:13+00:00",
+"generated_at": "2026-10-08T12:30:42+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

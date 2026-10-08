@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 199460.0,
-"latest": "2026-09-14",
+"count": 4,
+"value_total": 271310.0,
+"latest": "2026-10-06",
 "items": [
+{
+"id": "S-75288",
+"date": "2026-10-06",
+"applied": "2026-10-05",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5946 N WINTHROP AVE",
+"permit_no": "B200514521",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 35870.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 5946 N Winthrop Ave の既存建物の外壁タックポインティング・ユニット積みれんが補修(1,000 SQ FT、まぐさ3箇所)とパラペット再構築(500 SQ FT)$35,870。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "TUCKPOINTING AND UNIT MASONRY REPAIR / REPLACEMENT: 1000 SQ. FT., LINTEL QTY. 3, MAX. LENGTH 3. PARAPET REBUILDING: 500 SQ. FT. LOCATION: REPER EXISTING BRICK EXTERIOR WALL AND PARAET WALL.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-75258",
+"date": "2026-10-06",
+"applied": "2026-10-05",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5518 N WINTHROP AVE",
+"permit_no": "B200514508",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 35980.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 5518 N Winthrop Ave にてパラペット(700 SQ FT)の再建工事 $35,980。既存外壁・パラペット壁の修復。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "PARAPET REBUILDING: 700 SQ. FT. LOCATION: REPER EXISTING EXTERIOR BRICK WALLS & PARAPET WALL.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-58252",
 "date": "2026-09-14",
@@ -102,6 +150,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-75288",
+"summary": "Chicago 5946 N Winthrop Ave の既存建物の外壁タックポインティング・ユニット積みれんが補修(1,000 SQ FT、まぐさ3箇所)とパラペット再構築(500 SQ FT)$35,870。"
+},
+{
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-75258",
+"summary": "Chicago 5518 N Winthrop Ave にてパラペット(700 SQ FT)の再建工事 $35,980。既存外壁・パラペット壁の修復。"
+},
+{
 "date": "2026-09-14",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -116,6 +178,6 @@
 "summary": "Chicago 5220 N KENMORE AVE で共用部の配管修理・地下グリース配管の交換 $30.4k。 名義: KENWIN VENTURE LLLP。"
 }
 ],
-"generated_at": "2026-10-08T08:26:13+00:00",
+"generated_at": "2026-10-08T12:30:42+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
