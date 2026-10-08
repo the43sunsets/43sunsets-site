@@ -303,7 +303,7 @@ function grantItem(g){
 }
 function hireItem(h){ return `<div class="kitem"><div class="khead"><span class="kdate">${esc(h.posted || h.first_seen || "")}</span><span class="kloc">${esc([h.city, h.state].filter(Boolean).join(", "))}</span><span class="kchip">${esc(h.role)}</span></div><div class="kfact"><span class="badge-fact">事実</span>${h.url ? `<a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.title)}</a>` : esc(h.title)}</div></div>`; }
 // 見本モード(未ログイン): 許可以外の節はぼかした見本文+登録案内(データ自体はサーバーが返していない)
-function lockBody(label, count){ const here = encodeURIComponent(location.pathname + location.search); return `<div class="sg-lock-note"><a href="/signal/join/?next=${here}">登録すると、この会社の${label}(${count} 件)がここに開きます(無料・日系製造業の方)</a></div>`; }
+function lockBody(label, count){ const here = encodeURIComponent(location.pathname + location.search); return `<div class="sg-lock-note"><a href="/signal/join/?next=${here}">登録すると、この会社の ${label}${count ? `(${count} 件)` : ""}がここに開きます(無料・日系製造業の方)</a></div>`; }
 function render(c){
   document.title = `${c.name} — 企業カルテ | Signal by 43 Sunsets`;
   const f = c.faces; const jp = c.jp ? `<span class="chip jp">日系(${c.jp_basis === "roster" ? "名簿" : "人の確認"})</span>` : (c.jp_candidate ? `<span class="chip">日系?(AI 候補)</span>` : "");
