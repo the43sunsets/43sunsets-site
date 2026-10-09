@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 15,
-"value_total": 0,
-"latest": "2026-09-29",
+"count": 16,
+"value_total": 27000.0,
+"latest": "2026-10-06",
 "items": [
+{
+"id": "S-75893",
+"date": "2026-10-06",
+"applied": "2026-09-09",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "2800 WINSLOW AV",
+"permit_no": "2026P08592",
+"permit_type": "Building",
+"value": 27000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati Children's Hospital Medical Center(2800 Winslow Ave)の建物改修工事 $27k(用途 B)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Alteration / Building / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016imNAt4wnykoG718XmQ8eb",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-69031",
 "date": "2026-09-29",
@@ -388,6 +412,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-75893",
+"summary": "Cincinnati Children's Hospital Medical Center(2800 Winslow Ave)の建物改修工事 $27k(用途 B)。"
+},
+{
 "date": "2026-09-29",
 "face": "permits",
 "title": "建設許可(Hamilton County): 未評価",
@@ -500,6 +531,6 @@
 "summary": "National Science FoundationがCHILDRENS HOSPITAL MEDICAL CENTER(OH)に$600kを交付し、ヒト血液-脊髄バリアを模した3Dチップ(BSCB-on-a-chip)をバイオエンジニアリングするCAREER研究プロジェクトに使われる。"
 }
 ],
-"generated_at": "2026-10-09T10:32:49+00:00",
+"generated_at": "2026-10-09T12:30:29+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

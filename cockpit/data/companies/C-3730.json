@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 27,
+"count": 29,
 "value_total": 21699058.0,
-"latest": "2026-10-01",
+"latest": "2026-10-06",
 "items": [
+{
+"id": "S-75911",
+"date": "2026-10-06",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "580 E WOODROW AVE",
+"permit_no": "EMEPC2638927",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus市(580 E Woodrow Ave)の商業施設における電気設備(MEP)工事。金額は記録上不明。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016imNAt4wnykoG718XmQ8eb",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-75898",
+"date": "2026-10-06",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1111 E BROAD ST",
+"permit_no": "EMEPC2640239",
+"permit_type": "Electrical",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Columbus市(1111 E Broad St)の電気設備(MEP)工事。金額は記録なし。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016imNAt4wnykoG718XmQ8eb",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-73591",
 "date": "2026-10-01",
@@ -702,6 +750,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-75911",
+"summary": "Columbus市(580 E Woodrow Ave)の商業施設における電気設備(MEP)工事。金額は記録上不明。"
+},
+{
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-75898",
+"summary": "Columbus市(1111 E Broad St)の電気設備(MEP)工事。金額は記録なし。"
+},
+{
 "date": "2026-10-01",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -891,6 +953,6 @@
 "summary": "コロンバス市所有の建物(1265 Marion Rd)で 22,600 SF の構造改修 $1.4M。"
 }
 ],
-"generated_at": "2026-10-09T10:32:49+00:00",
+"generated_at": "2026-10-09T12:30:29+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

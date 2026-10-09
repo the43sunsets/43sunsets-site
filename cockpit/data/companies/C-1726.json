@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 10000.0,
-"latest": "2026-07-02",
+"count": 2,
+"value_total": 220000.0,
+"latest": "2026-10-08",
 "items": [
+{
+"id": "S-76104",
+"date": "2026-10-08",
+"applied": "2026-07-13",
+"state": "IL",
+"jurisdiction": "Wood Dale",
+"address": "111 S WOOD DALE RD WOOD DALE IL 60191",
+"permit_no": "COM-2026-0109",
+"permit_type": "Commercial Parking Lot and Parking Lot Lighting",
+"value": 210000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Wood Dale Park District による商業用駐車場および駐車場照明の設置工事 $210k(111 S Wood Dale Rd)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Parking Lot and Parking Lot Lighting / Commercial Parking Lot and Parking Lot Lighting",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_016imNAt4wnykoG718XmQ8eb",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-17644",
 "date": "2026-07-02",
@@ -78,6 +102,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-08",
+"face": "permits",
+"title": "建設許可(Wood Dale): 未分類",
+"ref": "S-76104",
+"summary": "Wood Dale Park District による商業用駐車場および駐車場照明の設置工事 $210k(111 S Wood Dale Rd)。"
+},
+{
 "date": "2026-07-02",
 "face": "permits",
 "title": "建設許可(Wood Dale): 未分類",
@@ -85,6 +116,6 @@
 "summary": "Wood Dale 100 E Montrose Ave のパークディストリクト施設で商業用フェンス/ダンプスター囲いを設置 $10,000。"
 }
 ],
-"generated_at": "2026-10-09T10:32:49+00:00",
+"generated_at": "2026-10-09T12:30:29+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
