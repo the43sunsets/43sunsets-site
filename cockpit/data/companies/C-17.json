@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 23467032.0,
-"latest": "2026-10-06",
+"count": 5,
+"value_total": 23877032.0,
+"latest": "2026-10-07",
 "items": [
+{
+"id": "S-76443",
+"date": "2026-10-07",
+"applied": "2026-09-10",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "676 N ST CLAIR ST",
+"permit_no": "101088227",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"value": 410000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Northwestern Memorial Healthcare の Chicago 676 N St Clair St、15階オフィススペースの内装改修 $410k(IDFルームは別許可 #101087780、用途変更なし)。",
+"infer": "既存オフィスの軽微な内装改修であり、医療機能の拡張ではない(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "SELFCERT 2019 CBRC: INTERIOR ALTERATIONS TO EXISTING 15TH FLOOR OFFICE SPACE. IDF ROOM UNDER PERMIT #101087780. NO CHANGE TO EXISTING USE. (BUSINESS / 1A)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XHcggG2rrCtkynq14uLAKE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-75269",
 "date": "2026-10-06",
@@ -147,6 +171,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-07",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-76443",
+"summary": "Northwestern Memorial Healthcare の Chicago 676 N St Clair St、15階オフィススペースの内装改修 $410k(IDFルームは別許可 #101087780、用途変更なし)。"
+},
+{
 "date": "2026-10-06",
 "face": "permits",
 "title": "建設許可(Chicago): 医療施設",
@@ -175,6 +206,6 @@
 "summary": "新築予定地の地下基礎の解体撤去 $17.5M(病院キャンパス内)。"
 }
 ],
-"generated_at": "2026-10-10T10:40:15+00:00",
+"generated_at": "2026-10-10T12:30:35+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

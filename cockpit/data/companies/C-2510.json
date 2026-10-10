@@ -20,10 +20,34 @@
 },
 "faces": {
 "permits": {
-"count": 4,
+"count": 5,
 "value_total": 8187500.0,
-"latest": "2026-09-24",
+"latest": "2026-10-07",
 "items": [
+{
+"id": "S-76459",
+"date": "2026-10-07",
+"applied": "2026-10-07",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1725 W HARRISON ST",
+"permit_no": "101089350",
+"permit_type": "PERMIT - ELEVATOR EQUIPMENT",
+"value": 0.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Rush University Medical Center(1725 W Harrison St)でエレベーター1基(#74, 2500LB・9階・100FPM)の水損復旧・交換工事。許可額 $0。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "WATER DAMAGE REPAIRS/REPLACEMENT ON ONE(1) 2500LB CAPACITY, 9-FLOOR, 100FPM, PASSENGER ELEVATOR(#74), PURSUANT TO THE SCOPE OF WORK SUBMITTED ON SITE AT TIME OF INSPECTION.(EV002615)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XHcggG2rrCtkynq14uLAKE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-66737",
 "date": "2026-09-24",
@@ -143,6 +167,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-07",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-76459",
+"summary": "Rush University Medical Center(1725 W Harrison St)でエレベーター1基(#74, 2500LB・9階・100FPM)の水損復旧・交換工事。許可額 $0。"
+},
+{
 "date": "2026-09-24",
 "face": "permits",
 "title": "建設許可(Chicago): 医療施設",
@@ -171,6 +202,6 @@
 "summary": "Chicago 1520 W Harrison St(Rush University Medical Center)で11階建・3500lb旅客用エレベーター#301の巻上ベルトを交換。"
 }
 ],
-"generated_at": "2026-10-10T10:40:15+00:00",
+"generated_at": "2026-10-10T12:30:35+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 566000.0,
-"latest": "2026-09-22",
+"count": 4,
+"value_total": 626000.0,
+"latest": "2026-10-08",
 "items": [
+{
+"id": "S-76687",
+"date": "2026-10-08",
+"applied": "2026-07-15",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "4795 Lonyo St",
+"permit_no": "BLD2026-01176",
+"permit_type": "Alteration",
+"value": 60000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Detroit 4795 Lonyo St の公園に 24'x28' のプレエンジニアード金属パークシェルターを設置 $60k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Install 24' x 28' Pre-engineered Metal Park Shelter to Code per plans. Subject to Field Approval. / Public Park / Alteration",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XHcggG2rrCtkynq14uLAKE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-65303",
 "date": "2026-09-22",
@@ -126,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-08",
+"face": "permits",
+"title": "建設許可(Detroit): 未分類",
+"ref": "S-76687",
+"summary": "Detroit 4795 Lonyo St の公園に 24'x28' のプレエンジニアード金属パークシェルターを設置 $60k。"
+},
+{
 "date": "2026-09-22",
 "face": "permits",
 "title": "建設許可(Detroit): 未分類",
@@ -147,6 +178,6 @@
 "summary": "レクリエーションセンターの倉庫室増築 $250k。"
 }
 ],
-"generated_at": "2026-10-10T10:40:15+00:00",
+"generated_at": "2026-10-10T12:30:35+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 3,
+"count": 5,
 "value_total": 25000.0,
-"latest": "2026-08-05",
+"latest": "2026-10-07",
 "items": [
+{
+"id": "S-76434",
+"date": "2026-10-07",
+"applied": "2026-10-07",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "335 S LA SALLE ST",
+"permit_no": "101089344",
+"permit_type": "PERMIT - ELEVATOR EQUIPMENT",
+"value": 0.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 335 S La Salle St のオフィスビルでエレベーター4基(乗用)を廃止する許可、金額 $0。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "DECOMMISSION OF ONE(1) 3000LB CAPACITY, 4-FLOOR, PASSENGER ELEVATOR(1/C); ONE(1) 3000LB CAPACITY, 3-FLOOR, PASSENGER ELEVATOR(2/S); TWO(2) 3000LB CAPACITY, 2-FLOOR, PASSENGER ELEVATORS(3/N,4/N), PURSUANT TO THE SCOPE OF WORK SUBMITTED.(EV016424)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XHcggG2rrCtkynq14uLAKE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-76425",
+"date": "2026-10-07",
+"applied": "2026-10-07",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "335 S LA SALLE ST",
+"permit_no": "101089343",
+"permit_type": "PERMIT - ELEVATOR EQUIPMENT",
+"value": 0.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 335 S La Salle St にてエスカレーター8基(1,2,3E,4E,5E,6E,7,8)を廃止する許可(金額$0)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "DECOMMISSION OF EIGHT(8) PASSENGER ESCALATORS(1,2,3E,4E,5E,6E,7,& 8), PURSUANT TO THE SCOPE OF WORK SUBMITTED.(EV016242)",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01XHcggG2rrCtkynq14uLAKE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-61042",
 "date": "2026-08-05",
@@ -126,6 +174,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-07",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-76434",
+"summary": "Chicago 335 S La Salle St のオフィスビルでエレベーター4基(乗用)を廃止する許可、金額 $0。"
+},
+{
+"date": "2026-10-07",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-76425",
+"summary": "Chicago 335 S La Salle St にてエスカレーター8基(1,2,3E,4E,5E,6E,7,8)を廃止する許可(金額$0)。"
+},
+{
 "date": "2026-08-05",
 "face": "permits",
 "title": "建設許可(Crestwood): 未分類",
@@ -147,6 +209,6 @@
 "summary": "Justice 8300 S. Roberts Rd に ComEd が変圧器バンク付きの電柱を設置。"
 }
 ],
-"generated_at": "2026-10-10T10:40:15+00:00",
+"generated_at": "2026-10-10T12:30:35+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
