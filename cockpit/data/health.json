@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-09T15:00:40+00:00",
+ "generated_at": "2026-10-10T10:41:18+00:00",
  "checks": {
   "ucc_sync_mac": {
    "raw_db_synced_at": "2026-09-30T07:02:22+00:00",
-   "raw_db_age_h": 224.0,
+   "raw_db_age_h": 243.6,
    "last_status": {
     "ran_at": "2026-09-30T07:02:21Z",
     "ok": 0,
@@ -26,13 +26,13 @@
    "new_docs_text": 0
   },
   "permits_update_vps": {
-   "last_run_at": "2026-10-09T07:57:31Z",
-   "age_h": 7.1,
+   "last_run_at": "2026-10-10T09:48:27Z",
+   "age_h": 0.9,
    "state": "OK",
-   "last_day": "2026-10-09",
+   "last_day": "2026-10-10",
    "runs": 36,
-   "new_records": 547,
-   "fetched": 6098,
+   "new_records": 592,
+   "fetched": 6120,
    "errors": 1,
    "schedule": "02:00 America/Chicago"
   },
@@ -42,36 +42,36 @@
    "state": "OK"
   },
   "hiring_update_vps": {
-   "last_run_at": "2026-10-09T09:22:13+00:00",
-   "age_h": 5.6,
+   "last_run_at": "2026-10-10T10:33:47+00:00",
+   "age_h": 0.1,
    "state": "OK",
-   "open": 12613,
-   "new_records": 911,
+   "open": 12627,
+   "new_records": 800,
    "schedule": "02:00 America/Chicago"
   },
   "subsidies_update_vps": {
-   "last_run_at": "2026-10-09T08:18:40Z",
-   "age_h": 6.7,
+   "last_run_at": "2026-10-10T10:07:18Z",
+   "age_h": 0.6,
    "state": "OK",
-   "total": 21677,
+   "total": 21678,
    "new_records": 1,
    "runs": 5,
    "errors": 0,
    "per_source": {
     "SRC-075": {
-     "last_ok_at": "2026-10-09T08:16:23Z",
+     "last_ok_at": "2026-10-10T10:05:09Z",
      "last_status": "ok",
      "new_raw": 0
     },
     "SRC-076": {
-     "last_ok_at": "2026-10-09T08:16:23Z",
-     "last_status": "ok",
-     "new_raw": 1
-    },
-    "SRC-077": {
-     "last_ok_at": "2026-10-09T08:18:38Z",
+     "last_ok_at": "2026-10-10T10:05:10Z",
      "last_status": "ok",
      "new_raw": 0
+    },
+    "SRC-077": {
+     "last_ok_at": "2026-10-10T10:07:16Z",
+     "last_status": "ok",
+     "new_raw": 1
     },
     "SRC-080": {
      "last_ok_at": "2026-09-29T07:03:15Z",
@@ -84,7 +84,7 @@
      "new_raw": 0
     },
     "SRC-082": {
-     "last_ok_at": "2026-10-09T08:18:40Z",
+     "last_ok_at": "2026-10-10T10:07:18Z",
      "last_status": "ok",
      "new_raw": 0
     }
@@ -93,21 +93,21 @@
   },
   "news_update_vps": {
    "last_run_at": "2026-10-09T10:30:18+00:00",
-   "age_h": 4.5,
+   "age_h": 24.2,
    "state": "OK",
-   "items_14d": 1964,
-   "relevant_14d": 435,
+   "items_14d": 1660,
+   "relevant_14d": 352,
    "schedule": "Mon/Wed/Fri 05:30 America/Chicago"
   },
   "watchdog": {
-   "last_run_at": "2026-10-09T09:29:33Z",
-   "age_h": 5.5,
+   "last_run_at": "2026-10-10T10:41:15Z",
+   "age_h": 0.0,
    "findings": 6,
    "state": "OK"
   },
   "foia_inbox": {
-   "last_run_at": "2026-10-09T12:31:47+00:00",
-   "age_h": 2.5,
+   "last_run_at": "2026-10-10T08:45:01+00:00",
+   "age_h": 1.9,
    "unreflected": 0,
    "unreflected_over_24h": 0,
    "unreflected_at": [],
@@ -119,7 +119,7 @@
    "external": 155,
    "unmatched_72h": 3,
    "unread": 38,
-   "unread_over_24h": 35,
+   "unread_over_24h": 38,
    "noise": 32,
    "unread_human": 1,
    "unread_internal": 6,
@@ -143,7 +143,7 @@
      }
     },
     "0/future_date": {
-     "rows": 12,
+     "rows": 10,
      "reader": null,
      "terminal": "データ層に残す(未来日付)",
      "over_days": {
@@ -161,21 +161,21 @@
      }
     },
     "0/older": {
-     "rows": 7584,
+     "rows": 7601,
      "reader": null,
      "terminal": "データ層に残す(窓より古い)",
      "over_days": {
       "days": 7,
-      "rows": 2072
+      "rows": 2140
      }
     },
     "2a/pending_row_read": {
-     "rows": 3763,
+     "rows": 3989,
      "reader": "enrich/permit_read.py:select_inputs",
      "terminal": null,
      "over_days": {
       "days": 3,
-      "rows": 3118
+      "rows": 3325
      }
     },
     "2b/pending_name_match": {
@@ -188,25 +188,25 @@
      }
     },
     "2b/pending_row_read": {
-     "rows": 16043,
+     "rows": 16450,
      "reader": "enrich/permit_read.py:select_inputs",
      "terminal": null,
      "over_days": {
       "days": 3,
-      "rows": 14848
+      "rows": 15304
      }
     },
     "2c/pending_row_read": {
-     "rows": 3713,
+     "rows": 3842,
      "reader": "enrich/permit_read.py:select_inputs",
      "terminal": null,
      "over_days": {
       "days": 3,
-      "rows": 3115
+      "rows": 3315
      }
     },
     "2d/subject_individual": {
-     "rows": 23861,
+     "rows": 23827,
      "reader": null,
      "terminal": "データ層に残す・待ち行列に積まない(設計 §2.1 2-d ①)",
      "over_days": {
@@ -215,7 +215,7 @@
      }
     },
     "2d/subject_unknown": {
-     "rows": 12667,
+     "rows": 12595,
      "reader": "enrich/hop3_web.py:select_places",
      "terminal": null,
      "over_days": {
@@ -224,7 +224,7 @@
      }
     },
     "3/industry_pending": {
-     "rows": 5381,
+     "rows": 5322,
      "reader": "enrich/catalog_batch.py:select_industry_targets",
      "terminal": null,
      "over_days": {
@@ -233,7 +233,7 @@
      }
     },
     "3/industry_unresolved": {
-     "rows": 222,
+     "rows": 219,
      "reader": null,
      "terminal": "データ層に残す(現行の版で調べたが会社を特定できない・面に出ない・滞留に数えない・設計 v1.5 §5.5 凍結時の追記 ①)",
      "over_days": {
@@ -251,12 +251,12 @@
      }
     },
     "5/pending_agg_read": {
-     "rows": 929,
+     "rows": 912,
      "reader": "enrich/agg_read.py:select_targets",
      "terminal": null,
      "over_days": {
       "days": 3,
-      "rows": 0
+      "rows": 912
      }
     },
     "6/ready": {
@@ -271,9 +271,10 @@
    },
    "unattended": {},
    "stale_readers": {
-    "2a/pending_row_read": 3118,
-    "2b/pending_row_read": 14848,
-    "2c/pending_row_read": 3115
+    "2a/pending_row_read": 3325,
+    "2b/pending_row_read": 15304,
+    "2c/pending_row_read": 3315,
+    "5/pending_agg_read": 912
    }
   },
   "permit_stage": {
@@ -282,11 +283,11 @@
   },
   "reading_as_of": {
    "version": "qa-1-rev6-2026-09-26",
-   "n": 43060,
+   "n": 42875,
    "days": 365,
    "stale": 0,
    "null": 0,
-   "elapsed_s": 16.4,
+   "elapsed_s": 17.7,
    "state": "OK"
   },
   "export_reasons": {
@@ -305,8 +306,8 @@
   },
   "ready": {
    "state": "OK",
-   "run_date": "2026-10-09",
-   "deadline_met": false,
+   "run_date": "2026-10-10",
+   "deadline_met": true,
    "faces": {
     "permits": "degraded",
     "ucc": "degraded",
