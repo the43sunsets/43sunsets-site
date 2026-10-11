@@ -102,6 +102,14 @@ test("T-2 invalid messages identify fields, verification and actual restoration"
     assert.match(api.invalidMessage(why, ["email"], true), /残っています/);
   }
 });
+test("T-2 unknown field names are excluded and fall back to all labels", () => {
+  const unknown = api.invalidMessage("fields", ["zzz"], true);
+  for (const word of ["会社名", "氏名", "会社のメールアドレス"]) assert.ok(unknown.includes(word));
+  assert.doesNotMatch(unknown, /undefined/);
+  const mixed = api.invalidMessage("fields", ["email", "zzz"], false);
+  assert.match(mixed, /会社のメールアドレス/);
+  assert.doesNotMatch(mixed, /会社名|氏名|undefined|残っています/);
+});
 test("T-2 invalid fields get aria-invalid, red border class and first focus only", () => {
   const inputs = Object.fromEntries(["company", "name", "email"].map(name => [name, {
     attrs: {}, classes: new Set(), focused: 0,
@@ -158,4 +166,50 @@ test("T-4 G-5 script enumeration includes join.js", () => {
   const files = readdirSync(new URL("../signal/assets/", import.meta.url))
     .filter(name => name.endsWith(".js")).map(name => "signal/assets/" + name);
   assert.ok(files.includes("signal/assets/join.js"));
+});
+
+async function joinPage(search, fetch) {
+  const element = () => ({
+    innerHTML: "", hidden: false, value: "", checked: false,
+    attrs: {}, classList: new Set(), listeners: {},
+    setAttribute(key, value) { this.attrs[key] = value; },
+    focus() { this.focused = true; },
+    addEventListener(type, listener) { this.listeners[type] = listener; }
+  });
+  const inputs = Object.fromEntries(["company", "name", "title", "email"].map(name => [name, element()]));
+  const interests = ["IL", "UCC"].map(value => Object.assign(element(), { value }));
+  const form = element(), box = element(), next = element();
+  form.querySelector = selector => inputs[selector.match(/name="([^"]+)"/)[1]] || null;
+  form.querySelectorAll = selector => selector.endsWith(":checked") ? interests.filter(input => input.checked) : interests;
+  const document = Object.assign(element(), {
+    getElementById: id => ({ regform: form, state: box, next })[id] || null,
+    querySelector: form.querySelector,
+    querySelectorAll: form.querySelectorAll
+  });
+  const storage = storageStub();
+  api.draftSave(storage, { ...valid, title: "President", interest: ["UCC"] });
+  runInNewContext(read("signal/assets/join.js"), {
+    document, location: { search }, sessionStorage: storage, fetch, URLSearchParams
+  });
+  await new Promise(resolve => setImmediate(resolve));
+  await new Promise(resolve => setImmediate(resolve));
+  return { form, box, storage };
+}
+test("T-5 sent clears the saved draft and hides the registration form", async () => {
+  const { form, storage } = await joinPage("?state=sent", async () => ({ json: async () => ({ loggedIn: false }) }));
+  assert.equal(storage.getItem("sg-join-draft"), null);
+  assert.equal(form.hidden, true);
+});
+test("T-5 logged-in company is escaped in the registration page", async () => {
+  const { form, box } = await joinPage("?state=invalid&why=fields&missing=email",
+    async () => ({ json: async () => ({ loggedIn: true, company: "<b>X</b>" }) }));
+  assert.equal(form.hidden, true);
+  assert.ok(box.innerHTML.includes("&lt;b&gt;X&lt;/b&gt;"));
+  assert.ok(!box.innerHTML.includes("<b>X</b>"));
+});
+test("T-5 failed login-state fetch keeps the form and field error visible", async () => {
+  const { form, box } = await joinPage("?state=invalid&why=fields&missing=email",
+    async () => { throw new Error("unavailable"); });
+  assert.notEqual(form.hidden, true);
+  assert.match(box.innerHTML, /会社のメールアドレス/);
 });

@@ -3,7 +3,7 @@
   const fields = ["company", "name", "title", "email"];
   const labels = { company: "会社名", name: "氏名", email: "会社のメールアドレス" };
   const missingFields = missing => {
-    const names = Array.isArray(missing) ? missing.filter(name => Object.hasOwn(labels, name)) : [];
+    const names = Array.isArray(missing) ? missing.filter(name => Object.prototype.hasOwnProperty.call(labels, name)) : [];
     return names.length ? names : Object.keys(labels);
   };
   const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
