@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 5,
-"value_total": 1280500.0,
+"count": 7,
+"value_total": 1320000.0,
 "latest": "2026-10-08",
 "items": [
 {
@@ -76,6 +76,26 @@
 }
 },
 {
+"id": "S-76986",
+"date": "2026-09-29",
+"applied": "2026-08-06",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2142 N LEAVITT ST",
+"permit_no": "B101086991",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 16550.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "WRECK AND REMOVE A 2 STORY MASONRY/FRAME RESIDENCE AND A DETACHED FRAME GARAGE",
+"source_id": "SRC-001",
+"provenance": null
+},
+{
 "id": "S-64419",
 "date": "2026-09-21",
 "applied": "2026-06-15",
@@ -98,6 +118,26 @@
 "batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-76985",
+"date": "2026-09-21",
+"applied": "2026-06-15",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2117 W MELROSE ST",
+"permit_no": "B101084749",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"value": 22950.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "WRECK AND REMOVE A 3 STORY FRAME MULTI UNIT RESIDENCE AND A DETACHED FRAME GARAGE",
+"source_id": "SRC-001",
+"provenance": null
 },
 {
 "id": "S-54546",
@@ -188,11 +228,25 @@
 "summary": "Chicago 2142 N Leavitt St にある2階建て住宅と離れのガレージの解体 $16,550。"
 },
 {
+"date": "2026-09-29",
+"face": "permits",
+"title": "建設許可(Chicago): 未評価",
+"ref": "S-76986",
+"summary": null
+},
+{
 "date": "2026-09-21",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
 "ref": "S-64419",
 "summary": "Chicago 2117 W Melrose St の3階建て木造集合住宅と離れの木造ガレージを解体・撤去 $22,950。"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
+"title": "建設許可(Chicago): 未評価",
+"ref": "S-76985",
+"summary": null
 },
 {
 "date": "2026-09-11",
@@ -209,6 +263,6 @@
 "summary": "Chicago 2117 W Melrose St に 2,700 SQ FT の 2 階建て戸建住宅を新築 $620,500(付属ガレージ・デッキ含む)。"
 }
 ],
-"generated_at": "2026-10-10T15:00:31+00:00",
+"generated_at": "2026-10-11T08:14:39+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
