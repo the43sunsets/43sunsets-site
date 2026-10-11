@@ -81,6 +81,7 @@
   root.fetch("/signal/me", {cache:"no-store", credentials:"same-origin"}).then(r => r.json()).then(m => {
     if (succeeded || !m || !m.loggedIn) return;
     form.hidden = true;
+    root.document.querySelectorAll("main > p.note").forEach(n => { n.hidden = true; });
     box.innerHTML = `<div class="msg">すでに <strong>${esc(m.company || m.email)}</strong> としてログイン中です。</div><p><a class="btn" href="${esc(next)}">Signal へ進む</a></p><form method="post" action="/signal/logout"><input type="hidden" name="next" value="/signal/join/"><button class="btn alt" type="submit">別のアドレスで登録する(いまのログインを終了)</button></form>`;
   }).catch(() => {});
 })(typeof window !== "undefined" ? window : globalThis);
