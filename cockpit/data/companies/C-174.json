@@ -13,20 +13,91 @@
 "jp_basis": null,
 "master_checked_at": null,
 "master_status": {
-"state": "untargeted",
+"state": "queued",
 "reason": {
-"origins": [
-"permits"
-],
-"rule": "none"
+"origin": "permit",
+"rank": 1,
+"of": 1
 }
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 1662000.0,
-"latest": "2026-09-04",
+"count": 6,
+"value_total": 6952000.0,
+"latest": "2026-10-09",
 "items": [
+{
+"id": "S-77178",
+"date": "2026-10-09",
+"applied": "2026-06-22",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "4001 W McNichols Rd",
+"permit_no": "BLD2026-01046",
+"permit_type": "Alteration",
+"value": 3000000.0,
+"category": "研究・ラボ施設",
+"confidence": "high",
+"summary": "University of Detroit Mercy の化学実験棟(4001 W McNichols Rd)地下 4,100 SF 部分の内装改修と 650 SF の避難階段新設 $3M。",
+"infer": "大学化学ラボの改修 = 実験設備・ドラフトチャンバー等の調達を伴う可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Interior alterations in 4,100 sq ft portion of Basement & construct 650 sq ft egress stair at UDM Chemistry Lab to Code per plans. Subject to Field Approval. / College / Alteration",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-77166",
+"date": "2026-10-09",
+"applied": "2026-06-24",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "4001 W McNichols Rd",
+"permit_no": "BLD2026-01044",
+"permit_type": "Alteration",
+"value": 690000.0,
+"category": "研究・ラボ施設",
+"confidence": "high",
+"summary": "University of Detroit Mercy の 4001 W McNichols Rd で、1,660 SF の新物理学スタジオへの内装改修 $690k。",
+"infer": "大学の物理学教育・研究スペースの改修であり、小規模な実験・教育設備の調達が伴う可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Interior alterations in a 1,660 sq ft space for new UDM Physics Studio to Code per plans. Subject to Field Approval. / College / Alteration",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-77190",
+"date": "2026-10-09",
+"applied": "2026-06-24",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "4001 W McNichols Rd",
+"permit_no": "BLD2026-01047",
+"permit_type": "Alteration",
+"value": 1600000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "University of Detroit Mercy の Engineering Building 内 3,900 SF を内装改修 $1.6M。",
+"infer": "工学部棟の改修であり、研究・実験設備の更新に伴う可能性(推論)。用途の詳細(研究室か教室か)は記録上不明。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Interior alterations in a 3,900 sq ft portion of the UDM Engineering Building to Code per plans. Subject to Field Approval. / College / Alteration",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-26345",
 "date": "2026-09-04",
@@ -126,6 +197,27 @@
 },
 "timeline": [
 {
+"date": "2026-10-09",
+"face": "permits",
+"title": "建設許可(Detroit): 研究・ラボ施設",
+"ref": "S-77178",
+"summary": "University of Detroit Mercy の化学実験棟(4001 W McNichols Rd)地下 4,100 SF 部分の内装改修と 650 SF の避難階段新設 $3M。"
+},
+{
+"date": "2026-10-09",
+"face": "permits",
+"title": "建設許可(Detroit): 研究・ラボ施設",
+"ref": "S-77166",
+"summary": "University of Detroit Mercy の 4001 W McNichols Rd で、1,660 SF の新物理学スタジオへの内装改修 $690k。"
+},
+{
+"date": "2026-10-09",
+"face": "permits",
+"title": "建設許可(Detroit): 未分類",
+"ref": "S-77190",
+"summary": "University of Detroit Mercy の Engineering Building 内 3,900 SF を内装改修 $1.6M。"
+},
+{
 "date": "2026-09-04",
 "face": "permits",
 "title": "建設許可(Detroit): 未分類",
@@ -147,6 +239,6 @@
 "summary": "大学施設改修の第 2 期 変更許可 $1M。"
 }
 ],
-"generated_at": "2026-10-11T08:14:39+00:00",
+"generated_at": "2026-10-11T08:45:24+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

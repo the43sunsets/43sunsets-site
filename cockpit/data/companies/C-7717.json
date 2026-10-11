@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 7,
-"value_total": 2977294.0,
-"latest": "2026-09-29",
+"count": 8,
+"value_total": 2982294.0,
+"latest": "2026-10-08",
 "items": [
+{
+"id": "S-77146",
+"date": "2026-10-08",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2130 IKEA WAY UNIT 200",
+"permit_no": "FALRC2636233",
+"permit_type": "Fire Alarm",
+"value": 5000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Columbus 2130 Ikea Way Unit 200 における火災報知設備工事 $5,000(所有者は Galaxy at Polaris Phase I LLC)。",
+"infer": "IKEA店舗所在地と見られるが、金額が小規模な火災報知設備工事であり生産設備投資とは言えない(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"source_id": "SRC-017",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-70216",
 "date": "2026-09-29",
@@ -222,6 +246,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-08",
+"face": "permits",
+"title": "建設許可(Columbus): 未分類",
+"ref": "S-77146",
+"summary": "Columbus 2130 Ikea Way Unit 200 における火災報知設備工事 $5,000(所有者は Galaxy at Polaris Phase I LLC)。"
+},
+{
 "date": "2026-09-29",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -271,6 +302,6 @@
 "summary": "Columbus 2130 Ikea Way Unit 200 における商業施設の構造的改修 $1.0M(6,100 SQFT)。"
 }
 ],
-"generated_at": "2026-10-11T08:14:39+00:00",
+"generated_at": "2026-10-11T08:45:24+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

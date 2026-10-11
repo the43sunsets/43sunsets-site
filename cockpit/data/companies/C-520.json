@@ -37,15 +37,19 @@
 "permit_no": "COMM-0456-2026",
 "permit_type": "COMMERCIAL BUILDING ALTERATION",
 "value": 40000.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Naperville 2607 W 75th St の商業建物で外部ドア設置工事 $40k(600 SQFT)。",
 "infer": null,
 "role": "owner",
 "role_label": "所有名義(許可記録・課税台帳)",
 "verbatim": "Installation of Exterior Door / COMMERCIAL BUILDING ALTERATION / COMMERCIAL / 600 SQFT",
 "source_id": "SRC-019",
-"provenance": null
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 },
 {
 "id": "S-77474",
@@ -57,15 +61,19 @@
 "permit_no": "FIRE-0344-2026",
 "permit_type": "FIRE ALARM",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Naperville 2555 W 75th St でテナント内装工事に伴う火災警報システム設置(2,743 SQFT)。金額記載なし。",
+"infer": "テナント向けの小規模火災警報工事であり、所有者名義は開発・保有目的のSPEで、入居企業・用途は記録上不明(推論不可)。",
 "role": "owner",
 "role_label": "所有名義(許可記録・課税台帳)",
 "verbatim": "THE CONTRACTOR SHALL INSTALL AN ALARMSYSTEM TO ACCOMODATE A TENANTBUILDOUT AS INDICATED ON THESEDRAWINGS. / FIRE ALARM / FIRE DEPARTMENT PERMIT / 2743 SQFT",
 "source_id": "SRC-019",
-"provenance": null
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 },
 {
 "id": "S-24775",
@@ -216,16 +224,16 @@
 {
 "date": "2026-09-10",
 "face": "permits",
-"title": "建設許可(Naperville): 未評価",
+"title": "建設許可(Naperville): 未分類",
 "ref": "S-77417",
-"summary": null
+"summary": "Naperville 2607 W 75th St の商業建物で外部ドア設置工事 $40k(600 SQFT)。"
 },
 {
 "date": "2026-09-03",
 "face": "permits",
-"title": "建設許可(Naperville): 未評価",
+"title": "建設許可(Naperville): 未分類",
 "ref": "S-77474",
-"summary": null
+"summary": "Naperville 2555 W 75th St でテナント内装工事に伴う火災警報システム設置(2,743 SQFT)。金額記載なし。"
 },
 {
 "date": "2026-08-13",
@@ -263,6 +271,6 @@
 "summary": "Naperville 2555 W 75TH ST の内装・改修工事(COMMERCIAL BUILDING ALTERATION) $275k。 所有者/申請者: MEPT SPRINGBROOK LLC。 概要: Tenant Finish for a Fitness Studio in a prior Shoe store space subdivided under separate permit.This new space should be #113 now. / COMMERC"
 }
 ],
-"generated_at": "2026-10-11T08:14:39+00:00",
+"generated_at": "2026-10-11T08:45:24+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

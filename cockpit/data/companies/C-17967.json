@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
+"count": 2,
+"value_total": 150000.0,
 "latest": "2026-09-25",
 "items": [
 {
@@ -48,6 +48,30 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01UE99VkaXx2bAgR3Mc7osyr",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-77407",
+"date": "2026-09-10",
+"applied": "2026-06-24",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "1580 W OGDEN AV",
+"permit_no": "COMM-0325-2026",
+"permit_type": "COMMERCIAL BUILDING ALTERATION",
+"value": 150000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Naperville 1580 W Ogden Ave の商業用建物(2200 SQFT)の内装改修 $150k(新規設備・内装仕上げ、外装塗装・看板は別許可)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Interior remodel  new equipment  new finishes.  Exterior painting  new signage under separate permit. / COMMERCIAL BUILDING ALTERATION / COMMERCIAL / 2200 SQFT",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 }
@@ -83,8 +107,15 @@
 "title": "建設許可(Naperville): 未分類",
 "ref": "S-74795",
 "summary": "Naperville 1580 W Ogden Ave に内照式チャンネルレター壁面看板を設置する許可(金額不明)。"
+},
+{
+"date": "2026-09-10",
+"face": "permits",
+"title": "建設許可(Naperville): 未分類",
+"ref": "S-77407",
+"summary": "Naperville 1580 W Ogden Ave の商業用建物(2200 SQFT)の内装改修 $150k(新規設備・内装仕上げ、外装塗装・看板は別許可)。"
 }
 ],
-"generated_at": "2026-10-11T08:14:39+00:00",
+"generated_at": "2026-10-11T08:45:24+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

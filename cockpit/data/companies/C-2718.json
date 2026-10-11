@@ -23,10 +23,58 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 450000.0,
-"latest": "2026-09-02",
+"count": 3,
+"value_total": 454000.0,
+"latest": "2026-10-09",
 "items": [
+{
+"id": "S-77192",
+"date": "2026-10-09",
+"applied": "2025-04-05",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "9143 Cameron St",
+"permit_no": "BLD2025-00691",
+"permit_type": "Change of Use",
+"value": 2000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Detroit 9143 Cameron St で住宅用途から都市農園への用途変更 $2,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "CHANGE OF USE FROM RESIDENTIAL TO URBAN GARDEN / UBAN GARDEN / Change of Use",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-77176",
+"date": "2026-10-09",
+"applied": "2025-03-29",
+"state": "MI",
+"jurisdiction": "Detroit",
+"address": "9225 Cameron St",
+"permit_no": "BLD2025-00590",
+"permit_type": "Change of Use",
+"value": 2000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Detroit 9225 Cameron St の用途変更(住宅→都市型コミュニティガーデン)$2,000。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "CHANGE OF USE FROM RESIDENTIAL TO URBAN GARDEN PER PLOT PLAN\r\n\r\nSUBJECT TO FIELD APPROVAL / UBAN GARDEN / Change of Use",
+"source_id": "SRC-016",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-21932",
 "date": "2026-09-02",
@@ -78,6 +126,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-09",
+"face": "permits",
+"title": "建設許可(Detroit): 未分類",
+"ref": "S-77192",
+"summary": "Detroit 9143 Cameron St で住宅用途から都市農園への用途変更 $2,000。"
+},
+{
+"date": "2026-10-09",
+"face": "permits",
+"title": "建設許可(Detroit): 未分類",
+"ref": "S-77176",
+"summary": "Detroit 9225 Cameron St の用途変更(住宅→都市型コミュニティガーデン)$2,000。"
+},
+{
 "date": "2026-09-02",
 "face": "permits",
 "title": "建設許可(Detroit): 未分類",
@@ -85,6 +147,6 @@
 "summary": "Detroit 9125 Cameron St で Detroit Cultivator Community Land Trust 名義の戸建て住宅(3BR/2BA)新築 $450k。"
 }
 ],
-"generated_at": "2026-10-11T08:14:39+00:00",
+"generated_at": "2026-10-11T08:45:24+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

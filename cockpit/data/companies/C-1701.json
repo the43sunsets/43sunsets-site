@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 90000.0,
+"count": 6,
+"value_total": 1325000.0,
 "latest": "2026-09-28",
 "items": [
 {
@@ -72,6 +72,54 @@
 "provenance": {
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01UE99VkaXx2bAgR3Mc7osyr",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-77362",
+"date": "2026-09-14",
+"applied": "2026-09-02",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "2835 AURORA AV",
+"permit_no": "COMM-0495-2026",
+"permit_type": "BUSINESS OCCUPANCY",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Naperville 2835 Aurora Ave の100 SQFTスペースでヘアサロン営業のための業務占有許可(金額記載なし)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "I will be providing hair salon services / BUSINESS OCCUPANCY / COMMERCIAL / 100 SQFT",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-77386",
+"date": "2026-09-11",
+"applied": "2026-04-09",
+"state": "IL",
+"jurisdiction": "Naperville",
+"address": "2639 AURORA AV",
+"permit_no": "COMM-0183-2026",
+"permit_type": "COMMERCIAL BUILDING ALTERATION",
+"value": 1235000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Naperville 2639 Aurora Ave の既存商業スペース 26,909 SF のテナント改修工事 $1.235M(内装解体・新規間仕切り・仕上げ・配管・機械分配、既存RTU継続使用)。",
+"infer": "汎用的な商業テナント改修であり、用途・業種を特定できる情報がない(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "TENANT IMPROVEMENT/REMODEL OF AN EXISTING 26 909 SF COMMERCIAL SPACE. THE SCOPE OF THE TI INCLUDES DEMOLITION OF EXISTING INTERIOR SPACE  NEW INTERIOR WALLS  FINISHES  FIXTURES  MILLWORK  NEW PLUMBING  MECHANICAL DISTRIBUTION WITH EXISTING RTUs TO REMAIN / COMMERCIAL BUILDING ALTERATION / COMMERCIAL",
+"source_id": "SRC-019",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
 "model": "claude-sonnet-5 (batch api v1)"
 }
 },
@@ -164,6 +212,20 @@
 "summary": "Naperville 2603 Aurora Ave の空きテナントスペースに対する最小限のオーナー工事(電気/HVAC)$30k。新テナントの改修は別許可で実施予定。"
 },
 {
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Naperville): 未分類",
+"ref": "S-77362",
+"summary": "Naperville 2835 Aurora Ave の100 SQFTスペースでヘアサロン営業のための業務占有許可(金額記載なし)。"
+},
+{
+"date": "2026-09-11",
+"face": "permits",
+"title": "建設許可(Naperville): 未分類",
+"ref": "S-77386",
+"summary": "Naperville 2639 Aurora Ave の既存商業スペース 26,909 SF のテナント改修工事 $1.235M(内装解体・新規間仕切り・仕上げ・配管・機械分配、既存RTU継続使用)。"
+},
+{
 "date": "2026-07-26",
 "face": "permits",
 "title": "建設許可(Naperville): 未分類",
@@ -178,6 +240,6 @@
 "summary": "Naperville 336 S Route 59 の既存商業テナント区画に 'L.L.Bean' の内照式チャンネルレター壁面看板を設置。"
 }
 ],
-"generated_at": "2026-10-11T08:14:39+00:00",
+"generated_at": "2026-10-11T08:45:24+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
