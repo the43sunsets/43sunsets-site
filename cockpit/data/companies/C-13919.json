@@ -23,10 +23,82 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 65000.0,
-"latest": "2026-09-15",
+"count": 4,
+"value_total": 101138000.0,
+"latest": "2026-10-05",
 "items": [
+{
+"id": "S-78052",
+"date": "2026-10-05",
+"applied": "2026-09-29",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "8927 CEDAR AVE, CLEVELAND, OH, 44106",
+"permit_no": "BCB26-042272",
+"permit_type": "Commercial Building",
+"value": 36360.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland Clinic Foundation 所有の 8927 Cedar Ave にある2.5階建て木造構造物を解体 $36,360。",
+"infer": "解体のみの小規模工事であり、新規設備投資や生産能力拡張とは読み取れない(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / U Utility - Miscellaneous / Demolition / RAZE 2.5 STORY WOOD FRAME STRUCTURE PER CLEVELAND BUILDING CODE CHAPTER 3115, BULKHEAD SEWERS PER WATER POLLUTION CONTROL, CONTROL DUST PER ORD. 277.07, REMOVE ALL FOUNDATIONS, DISCONTINUE AND CAP ALL UTILITY CONNECTIONS, HAUL AWAY ALL D",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01VkMZhyQCztZmJpdHZZNNTS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-78048",
+"date": "2026-10-05",
+"applied": "2026-08-28",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "8501 CARNEGIE AVE, CLEVELAND, OH, 44106",
+"permit_no": "BCB26-036979",
+"permit_type": "Commercial Building",
+"value": 101000000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "The Cleveland Clinic Foundation(8501 Carnegie Ave, Cleveland OH)敷地に8階建て831,193 SFの立体駐車場(歩行者通路付)を新築 $101M。",
+"infer": "S-2低危険度倉庫扱いの駐車場構造物であり、医療機能そのものの拡張ではない(推論)。病院敷地内の付帯インフラ整備の可能性。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / S-2 Storage - Low Hazard / New Building / ERECT 831,193 SF, 8-STORY CONCRETE PARKING GARAGE WITH PEDESTRIAN WALKWAY PER APPROVED PLANS. SEPARATE PLUMBING, HVAC, ELECTRICAL AND FIRE PROTECTION PERMITS ARE REQUIRED. SPECIAL INSPECTIONS ARE REQUIRED.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01VkMZhyQCztZmJpdHZZNNTS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-78045",
+"date": "2026-10-05",
+"applied": "2026-09-29",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "8931 CEDAR AVE, CLEVELAND, OH, 44106",
+"permit_no": "BCB26-042273",
+"permit_type": "Commercial Building",
+"value": 36640.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland Clinic Foundation 所有の8931 Cedar Aveにある2階建て組積造構造物を解体 $36,640(基礎撤去・ユーティリティ切断・アスベスト対応含む)。",
+"infer": "解体のみの小規模許可であり、跡地利用は記録上不明(推論不可)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / U Utility - Miscellaneous / Demolition / RAZE 2 STORY MASONRY STRUCTURE PER CLEVELAND BUILDING CODE CHAPTER 3115, BULKHEAD SEWERS PER WATER POLLUTION CONTROL, CONTROL DUST PER ORD. 277.07, REMOVE ALL FOUNDATIONS, DISCONTINUE AND CAP ALL UTILITY CONNECTIONS, HAUL AWAY ALL DEBRIS",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01VkMZhyQCztZmJpdHZZNNTS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-63590",
 "date": "2026-09-15",
@@ -78,6 +150,27 @@
 },
 "timeline": [
 {
+"date": "2026-10-05",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-78052",
+"summary": "Cleveland Clinic Foundation 所有の 8927 Cedar Ave にある2.5階建て木造構造物を解体 $36,360。"
+},
+{
+"date": "2026-10-05",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-78048",
+"summary": "The Cleveland Clinic Foundation(8501 Carnegie Ave, Cleveland OH)敷地に8階建て831,193 SFの立体駐車場(歩行者通路付)を新築 $101M。"
+},
+{
+"date": "2026-10-05",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-78045",
+"summary": "Cleveland Clinic Foundation 所有の8931 Cedar Aveにある2階建て組積造構造物を解体 $36,640(基礎撤去・ユーティリティ切断・アスベスト対応含む)。"
+},
+{
 "date": "2026-09-15",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -85,6 +178,6 @@
 "summary": "Cleveland Clinic Foundation(8501 Carnegie Ave)の新設「PL WEST PARKING GARAGE」建設現場を支援する仮設電気工事 $65k(親許可 #BCB26-036979)。"
 }
 ],
-"generated_at": "2026-10-12T07:47:12+00:00",
+"generated_at": "2026-10-12T08:15:45+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 206950.0,
-"latest": "2026-09-24",
+"count": 7,
+"value_total": 456950.0,
+"latest": "2026-10-07",
 "items": [
+{
+"id": "S-77992",
+"date": "2026-10-07",
+"applied": "2026-09-10",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1481 W 117TH ST, CLEVELAND, OH, 44107",
+"permit_no": "BCB26-038827",
+"permit_type": "Commercial Building",
+"value": 250000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland 1481 W 117th St の 861 SF テイクアウトレストランの内装改修 $250k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO 861 SF CARRY-OUT RESTAURANT PER APPROVED PLANS. SEPARATE PLUMBING, HVAC AND ELECTRICAL PERMITS ARE REQUIRED.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01VkMZhyQCztZmJpdHZZNNTS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-67465",
 "date": "2026-09-24",
@@ -198,6 +222,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-07",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-77992",
+"summary": "Cleveland 1481 W 117th St の 861 SF テイクアウトレストランの内装改修 $250k。"
+},
+{
 "date": "2026-09-24",
 "face": "permits",
 "title": "建設許可(Columbus): 未分類",
@@ -240,6 +271,6 @@
 "summary": "Columbus 700 Georgesville Rd の商業建物改修(840 SQFT)$170k。"
 }
 ],
-"generated_at": "2026-10-12T07:47:12+00:00",
+"generated_at": "2026-10-12T08:15:45+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

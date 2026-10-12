@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 7809559.0,
-"latest": "2026-08-20",
+"count": 3,
+"value_total": 7959559.0,
+"latest": "2026-10-08",
 "items": [
+{
+"id": "S-77984",
+"date": "2026-10-08",
+"applied": "2026-10-08",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1560 MISTLETOE DR D, CLEVELAND, OH, 44106",
+"permit_no": "BCP26-043794",
+"permit_type": "Commercial Plumbing",
+"value": 150000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cleveland Music School Settlement(1560 Mistletoe Dr D)の配管改修工事 $150k。トイレ・洗面台・給湯器等の新設配管設備を含む。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Plumbing / U Utility - Miscellaneous / Renovation adding new plumbing system. BUILDING PERMIT NO. BCB26-011162 9 Water Closet/Toilet, 2 Urinals, 11 Lavatory Sink, 1 Sink, 6 Floor Drain, 1 Hot Water Heater, 1 Sump Pump, 4 roof drain, 1 booster pump; 300 Lin. Ft. Drain, Waste, Vent Piping; ",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01VkMZhyQCztZmJpdHZZNNTS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-36926",
 "date": "2026-08-20",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-08",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-77984",
+"summary": "Cleveland Music School Settlement(1560 Mistletoe Dr D)の配管改修工事 $150k。トイレ・洗面台・給湯器等の新設配管設備を含む。"
+},
+{
 "date": "2026-08-20",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -116,6 +147,6 @@
 "summary": "Cleveland Music School Settlement(1560 Mistletoe Dr D)の既存建物への増築・改修 $6.9M。"
 }
 ],
-"generated_at": "2026-10-12T07:47:12+00:00",
+"generated_at": "2026-10-12T08:15:45+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

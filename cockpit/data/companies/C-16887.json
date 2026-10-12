@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 95728.26999999999,
-"latest": "2026-09-30",
+"count": 3,
+"value_total": 414671.27,
+"latest": "2026-10-09",
 "items": [
+{
+"id": "S-77978",
+"date": "2026-10-09",
+"applied": "2026-10-05",
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2130 ADELBERT RD, CLEVELAND, OH, 44106",
+"permit_no": "BCB26-043011",
+"permit_type": "Commercial Building",
+"value": 318943.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Case Western Reserve University のフィットネスセンター(1,896 SF)のロビー・オフィス内装改修 $318,943(2130 Adelbert Rd)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial Building / A-3 Assembly - Worship, Recreation, Amusement / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO 1,896 SF FITNESS CENTER LOBBY AND OFFICES PER APPROVED PLANS. SEPARATE PLUMBING, HVAC, ELECTRICAL AND FIRE PROTECTION PERMITS ARE REQUIRED.",
+"source_id": "SRC-068",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01VkMZhyQCztZmJpdHZZNNTS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-73863",
 "date": "2026-09-30",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-09",
+"face": "permits",
+"title": "建設許可(Cleveland): 未分類",
+"ref": "S-77978",
+"summary": "Case Western Reserve University のフィットネスセンター(1,896 SF)のロビー・オフィス内装改修 $318,943(2130 Adelbert Rd)。"
+},
+{
 "date": "2026-09-30",
 "face": "permits",
 "title": "建設許可(Cleveland): 未分類",
@@ -116,6 +147,6 @@
 "summary": "小売店舗向けの商業用HVAC工事、DX方式冷凍システム(R448A・25トン以下)の設置 $45.7k。"
 }
 ],
-"generated_at": "2026-10-12T07:47:12+00:00",
+"generated_at": "2026-10-12T08:15:45+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

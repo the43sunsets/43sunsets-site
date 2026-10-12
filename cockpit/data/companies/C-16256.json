@@ -23,10 +23,34 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 110360.0,
-"latest": "2026-08-28",
+"count": 3,
+"value_total": 110460.0,
+"latest": "2026-10-09",
 "items": [
+{
+"id": "S-77925",
+"date": "2026-10-09",
+"applied": "2026-10-07",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "1740 LANGDON FARM RD",
+"permit_no": "2026P08832",
+"permit_type": "Plumbing Permits",
+"value": 100.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Cincinnati-Hamilton County Community Action Agency の建物(1740 Langdon Farm Rd)で配管許可 $100。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing Permits / Plumbing Permits / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01VkMZhyQCztZmJpdHZZNNTS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-8931",
 "date": "2026-08-28",
@@ -102,6 +126,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-09",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-77925",
+"summary": "Cincinnati-Hamilton County Community Action Agency の建物(1740 Langdon Farm Rd)で配管許可 $100。"
+},
+{
 "date": "2026-08-28",
 "face": "permits",
 "title": "建設許可(Cincinnati): 未分類",
@@ -116,6 +147,6 @@
 "summary": "Cincinnatiの1740 LANGDON FARM RDで改修に該当する簡易な工事(occupancy: B)を実施 $95k。"
 }
 ],
-"generated_at": "2026-10-12T07:47:12+00:00",
+"generated_at": "2026-10-12T08:15:45+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
