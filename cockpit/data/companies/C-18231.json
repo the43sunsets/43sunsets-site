@@ -2,7 +2,7 @@
 "id": "C-18231",
 "name": "3858 DRAKE AVE LLC",
 "city": null,
-"state": null,
+"state": "OH",
 "entity_type": "spe",
 "industry": null,
 "made": null,
@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 1,
-"value_total": 0,
+"count": 2,
+"value_total": 12000.0,
 "latest": "2026-10-08",
 "items": [
 {
@@ -49,6 +49,30 @@
 "policy": "v3-2026-09-06-five-categories",
 "batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
 "model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-8533",
+"date": "2026-08-14",
+"applied": "2026-08-11",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "3858 DRAKE AV",
+"permit_no": "2026P07278",
+"permit_type": "Plumbing Permits",
+"value": 12000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 3858 DRAKE AVで住宅配管工事(詳細記載なし)$12k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Plumbing Permits / Plumbing Permits / 1-2-3 FM",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-034",
+"model": "claude-sonnet-5 (subagent, subscription session)"
 }
 }
 ]
@@ -83,8 +107,15 @@
 "title": "建設許可(Cincinnati): 未分類",
 "ref": "S-77103",
 "summary": "Cincinnati 3858 Drake Ave の HVAC 工事(金額記載なし、用途 1-2-3 FM)。"
+},
+{
+"date": "2026-08-14",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8533",
+"summary": "Cincinnati 3858 DRAKE AVで住宅配管工事(詳細記載なし)$12k。"
 }
 ],
-"generated_at": "2026-10-11T15:00:33+00:00",
+"generated_at": "2026-10-12T07:44:54+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

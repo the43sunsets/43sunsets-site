@@ -2,7 +2,7 @@
 "id": "C-18234",
 "name": "MERCER COMMONS LP",
 "city": null,
-"state": null,
+"state": "OH",
 "entity_type": "spe",
 "industry": null,
 "made": null,
@@ -23,8 +23,8 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 16584.0,
+"count": 3,
+"value_total": 41584.0,
 "latest": "2026-10-08",
 "items": [
 {
@@ -74,6 +74,30 @@
 "batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
 "model": "claude-sonnet-5 (batch api v1)"
 }
+},
+{
+"id": "S-8271",
+"date": "2026-08-06",
+"applied": "2026-05-19",
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "1315 WALNUT ST",
+"permit_no": "2026P04585",
+"permit_type": "Building",
+"value": 25000.0,
+"category": "未分類",
+"confidence": "low",
+"summary": "Cincinnati 1315 Walnut Stの改修 $25,000(用途コード\"B\"=商業、詳細記述なし)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Alteration / Building / B",
+"source_id": "SRC-003",
+"provenance": {
+"policy": "v1-2026-09-02-all",
+"batch": "session-020",
+"model": "claude-sonnet-5 (subagent, subscription session)"
+}
 }
 ]
 },
@@ -114,8 +138,15 @@
 "title": "建設許可(Cincinnati): 未分類",
 "ref": "S-77088",
 "summary": "Cincinnati 1331 Walnut St(用途 B)における配管工事許可 $5,900。"
+},
+{
+"date": "2026-08-06",
+"face": "permits",
+"title": "建設許可(Cincinnati): 未分類",
+"ref": "S-8271",
+"summary": "Cincinnati 1315 Walnut Stの改修 $25,000(用途コード\"B\"=商業、詳細記述なし)。"
 }
 ],
-"generated_at": "2026-10-11T15:00:33+00:00",
+"generated_at": "2026-10-12T07:44:54+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
