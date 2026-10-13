@@ -23,10 +23,31 @@
 },
 "faces": {
 "permits": {
-"count": 4,
+"count": 5,
 "value_total": 1340000.0,
-"latest": "2026-09-22",
+"n_amount_excluded": 3,
+"latest": "2026-10-10",
 "items": [
+{
+"id": "S-78085",
+"date": "2026-10-10",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3940 MORSE RD",
+"permit_no": "EMEPC2641048",
+"permit_type": "Electrical",
+"value": null,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"source_id": "SRC-017",
+"provenance": null
+},
 {
 "id": "S-68455",
 "date": "2026-09-22",
@@ -128,6 +149,7 @@
 "ucc": {
 "count": 0,
 "machines": 0,
+"machines_unconfirmed": 0,
 "makers": [],
 "latest": null,
 "items": []
@@ -149,6 +171,13 @@
 }
 },
 "timeline": [
+{
+"date": "2026-10-10",
+"face": "permits",
+"title": "建設許可(Columbus): 未評価",
+"ref": "S-78085",
+"summary": null
+},
 {
 "date": "2026-09-22",
 "face": "permits",
@@ -178,6 +207,6 @@
 "summary": "Columbus 3690 Fishinger Blvd に 4,847 SQFT の商業新築構造物 $1.3M。"
 }
 ],
-"generated_at": "2026-10-12T15:00:28+00:00",
+"generated_at": "2026-10-13T08:22:07+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

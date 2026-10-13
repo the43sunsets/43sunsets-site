@@ -23,8 +23,9 @@
 },
 "faces": {
 "permits": {
-"count": 5,
-"value_total": 0,
+"count": 6,
+"value_total": 349940.0,
+"n_amount_excluded": 5,
 "latest": "2026-09-15",
 "items": [
 {
@@ -138,12 +139,37 @@
 "verbatim": "REFRIGERATION - 7-ELEVEN / READY FOR PICKUP / Commercial Refrigeration and Walk Ins",
 "source_id": "SRC-024",
 "provenance": null
+},
+{
+"id": "S-15314",
+"date": "2026-07-30",
+"applied": "2026-04-06",
+"state": "IL",
+"jurisdiction": "Arlington Heights",
+"address": "1902 N ARLINGTON HEIGHTS RD ARLINGTON HEIGHTS IL 60004",
+"permit_no": "BLDC2026-00072",
+"permit_type": "Alteration, Remodel, Repair - Commercial/Industrial/Multi-Family",
+"value": 349940.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Arlington Heights 7-Eleven の給油設備・地下タンク付帯更新 $350k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "7-ELEVEN---Remove existing and install new dispensers, submersible pumps, double-wall product piping, vent piping, and tank top equipment on existing underground storage tanks, along with new concrete slabs, islands, bollards, and electrical connections. / Alteration, Remodel, Repair - Commercial/In",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v0-2026-09-02",
+"batch": "batch-v0-06",
+"model": "claude-fable-5-1 (manual batch, sparring session)"
+}
 }
 ]
 },
 "ucc": {
 "count": 0,
 "machines": 0,
+"machines_unconfirmed": 0,
 "makers": [],
 "latest": null,
 "items": []
@@ -199,8 +225,15 @@
 "title": "建設許可(Butler County): 未評価",
 "ref": "S-35223",
 "summary": null
+},
+{
+"date": "2026-07-30",
+"face": "permits",
+"title": "建設許可(Arlington Heights): 未分類",
+"ref": "S-15314",
+"summary": "Arlington Heights 7-Eleven の給油設備・地下タンク付帯更新 $350k。"
 }
 ],
-"generated_at": "2026-10-12T15:00:28+00:00",
+"generated_at": "2026-10-13T08:22:07+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -21,36 +21,74 @@
 "faces": {
 "permits": {
 "count": 0,
-"value_total": 0,
+"value_total": null,
+"n_amount_excluded": 0,
 "latest": null,
 "items": []
 },
 "ucc": {
 "count": 0,
 "machines": 0,
+"machines_unconfirmed": 0,
 "makers": [],
 "latest": null,
 "items": []
 },
 "hiring": {
 "status": "収集中",
-"count": 158,
-"mfg": 18,
+"count": 159,
+"mfg": 19,
 "by_role": {
 "その他": 140,
+"生産": 12,
 "設備保全": 5,
-"生産": 11,
 "物流": 1,
 "生産技術": 1
 },
 "sites": {
-"": 15,
+"": 16,
 "Kincaid, IL": 1,
 "Oak Harbor, OH": 1,
 "Perry, OH": 1
 },
-"latest": "2026-10-09",
+"latest": "2026-10-12",
 "items": [
+{
+"title": "Records Management & Document Control Clerk",
+"role": "その他",
+"city": null,
+"state": null,
+"posted": "2026-10-12",
+"first_seen": "2026-10-13",
+"url": "https://vst.wd5.myworkdayjobs.com/vistra_careers/job/Shippingport-Pennsylvania/Records-Management---Document-Control-Clerk_40016589-1"
+},
+{
+"title": "Lube Truck Operator",
+"role": "生産",
+"city": null,
+"state": null,
+"posted": "2026-10-12",
+"first_seen": "2026-10-13",
+"url": "https://vst.wd5.myworkdayjobs.com/vistra_careers/job/Kosse-Texas/Lube-Truck-Operator_40016759-2"
+},
+{
+"title": "System Protection Engineer (Staff thru Consulting)",
+"role": "その他",
+"city": null,
+"state": null,
+"posted": "2026-10-12",
+"first_seen": "2026-10-13",
+"url": "https://vst.wd5.myworkdayjobs.com/vistra_careers/job/Irving-Texas/System-Protection-Engineer--Staff-thru-Consulting-_40016763-2"
+},
+{
+"title": "Electrician and Instrument Technician",
+"role": "その他",
+"city": null,
+"state": null,
+"posted": "2026-10-12",
+"first_seen": "2026-10-13",
+"url": "https://vst.wd5.myworkdayjobs.com/vistra_careers/job/San-Marcos-Texas/Electrician-and-Instrument-Technician_40016629-1"
+},
 {
 "title": "Real Time Trader",
 "role": "その他",
@@ -70,7 +108,7 @@
 "url": "https://vst.wd5.myworkdayjobs.com/vistra_careers/job/Shippingport-Pennsylvania/Major-Projects---Senior-ALARA-Planner---Specialist-for-Steam-Generator-Replacement-Project_40016687-1"
 },
 {
-"title": "Principal Engineer - Generation Services",
+"title": "Principal Engineer – Generation Services Fire Protection",
 "role": "その他",
 "city": null,
 "state": null,
@@ -374,42 +412,6 @@
 "posted": "2026-09-21",
 "first_seen": "2026-09-22",
 "url": "https://vst.wd5.myworkdayjobs.com/vistra_careers/job/Reading-PA/Power-Plant-Technician---Control-Room-Operator_40016655-1"
-},
-{
-"title": "Power Plant Maintenance Technician -Instrumentation, Controls and Electrical (IC&E)",
-"role": "設備保全",
-"city": null,
-"state": null,
-"posted": "2026-09-18",
-"first_seen": "2026-09-19",
-"url": "https://vst.wd5.myworkdayjobs.com/vistra_careers/job/Morrisville-PA/Power-Plant-Maintenance-Technician--Instrumentation--Controls-and-Electrical--IC-E-_40016652-1"
-},
-{
-"title": "Internal Audit Specialist III",
-"role": "その他",
-"city": null,
-"state": null,
-"posted": "2026-09-18",
-"first_seen": "2026-09-19",
-"url": "https://vst.wd5.myworkdayjobs.com/vistra_careers/job/Irving-Texas/Internal-Audit-Specialist-III_40016654-1"
-},
-{
-"title": "Auxiliary Operator III - Kincaid",
-"role": "生産",
-"city": "Kincaid",
-"state": "IL",
-"posted": "2026-09-17",
-"first_seen": "2026-09-18",
-"url": "https://vst.wd5.myworkdayjobs.com/vistra_careers/job/Kincaid-Illinois/Aux-Operator-III_40016648-1"
-},
-{
-"title": "Protection & Control Technician Senior -Granbury TX",
-"role": "その他",
-"city": null,
-"state": null,
-"posted": "2026-09-16",
-"first_seen": "2026-09-17",
-"url": "https://vst.wd5.myworkdayjobs.com/vistra_careers/job/Granbury-Texas/Protection---Control-Technician-Senior--Granbury-TX_40016646-2"
 }
 ],
 "source": "workday(採用ページの公開 API)"
@@ -418,6 +420,7 @@
 "status": "収集中",
 "count": 1,
 "amount_total": 10488484.8,
+"n_amount_excluded": 0,
 "latest": "2021-09-27",
 "items": [
 {
@@ -459,6 +462,13 @@
 }
 },
 "timeline": [
+{
+"date": "2026-10-12",
+"face": "hiring",
+"title": "求人: Lube Truck Operator(生産・ )",
+"ref": "#hiring",
+"summary": null
+},
 {
 "date": "2026-10-06",
 "face": "hiring",
@@ -523,13 +533,6 @@
 "summary": null
 },
 {
-"date": "2026-09-08",
-"face": "hiring",
-"title": "求人: Power Plant Maintenance Technician - Instrumentation, Controls and Electrical (IC&E)(設備保全・ )",
-"ref": "#hiring",
-"summary": null
-},
-{
 "date": "2021-09-27",
 "face": "grants",
 "title": "助成(連邦・Department of Energy): 研究開発",
@@ -537,6 +540,6 @@
 "summary": "Department of Energyが先進原子力技術開発の競争的協力協定(FOA #DE-FOA-0001817)としてEnergy Harbor Corp.に$10.5Mを交付。"
 }
 ],
-"generated_at": "2026-10-12T15:00:28+00:00",
+"generated_at": "2026-10-13T08:22:07+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

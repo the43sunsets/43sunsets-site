@@ -21,13 +21,15 @@
 "faces": {
 "permits": {
 "count": 0,
-"value_total": 0,
+"value_total": null,
+"n_amount_excluded": 0,
 "latest": null,
 "items": []
 },
 "ucc": {
 "count": 0,
 "machines": 0,
+"machines_unconfirmed": 0,
 "makers": [],
 "latest": null,
 "items": []
@@ -35,20 +37,83 @@
 "hiring": {
 "status": "収集中",
 "count": 200,
-"mfg": 56,
+"mfg": 59,
 "by_role": {
-"その他": 144,
+"その他": 141,
+"生産技術": 7,
+"生産": 17,
+"品質": 26,
 "設備保全": 3,
-"品質": 25,
-"生産": 16,
-"物流": 6,
-"生産技術": 6
+"物流": 6
 },
 "sites": {
-"": 56
+"": 59
 },
-"latest": "2026-10-10",
+"latest": "2026-10-13",
 "items": [
+{
+"title": "Title Senior Engineer 2, CQV",
+"role": "その他",
+"city": null,
+"state": null,
+"posted": null,
+"first_seen": "2026-10-13",
+"url": "https://uscareers-fujifilm.icims.com/jobs/39033/senior-engineer-2%2c-cqv/job"
+},
+{
+"title": "Title CQV Engineer 3",
+"role": "その他",
+"city": null,
+"state": null,
+"posted": null,
+"first_seen": "2026-10-13",
+"url": "https://uscareers-fujifilm.icims.com/jobs/39027/cqv-engineer-3/job"
+},
+{
+"title": "Title Senior Engineer, Cleaning Validation",
+"role": "生産技術",
+"city": null,
+"state": null,
+"posted": null,
+"first_seen": "2026-10-13",
+"url": "https://uscareers-fujifilm.icims.com/jobs/39026/senior-engineer%2c-cleaning-validation/job"
+},
+{
+"title": "Title Production Technology Chemist",
+"role": "生産",
+"city": null,
+"state": null,
+"posted": null,
+"first_seen": "2026-10-13",
+"url": "https://uscareers-fujifilm.icims.com/jobs/39018/production-technology-chemist/job"
+},
+{
+"title": "Title Senior Quality Engineer",
+"role": "品質",
+"city": null,
+"state": null,
+"posted": null,
+"first_seen": "2026-10-13",
+"url": "https://uscareers-fujifilm.icims.com/jobs/38943/senior-quality-engineer/job"
+},
+{
+"title": "Title Distinguished Natl Support Eng",
+"role": "その他",
+"city": null,
+"state": null,
+"posted": null,
+"first_seen": "2026-10-13",
+"url": "https://uscareers-fujifilm.icims.com/jobs/38933/distinguished-natl-support-eng/job"
+},
+{
+"title": "Title Powder Milling &amp; Cleaning Tech - 1st Shift",
+"role": "生産技術",
+"city": null,
+"state": null,
+"posted": null,
+"first_seen": "2026-10-13",
+"url": "https://uscareers-fujifilm.icims.com/jobs/38767/powder-milling-%26-cleaning-tech---1st-shift/job"
+},
 {
 "title": "Title Scientist 2",
 "role": "その他",
@@ -345,69 +410,6 @@
 "posted": null,
 "first_seen": "2026-10-05",
 "url": "https://uscareers-fujifilm.icims.com/jobs/38983/associate-director--director-maintenance/job"
-},
-{
-"title": "Title Technical Program Manager/Sr. Technical Program Manager",
-"role": "その他",
-"city": null,
-"state": null,
-"posted": null,
-"first_seen": "2026-10-03",
-"url": "https://uscareers-fujifilm.icims.com/jobs/38962/technical-program-manager-sr.-technical-program-manager/job"
-},
-{
-"title": "Title Solutions &amp; Sales Enablement Specialist",
-"role": "その他",
-"city": null,
-"state": null,
-"posted": null,
-"first_seen": "2026-10-03",
-"url": "https://uscareers-fujifilm.icims.com/jobs/38958/solutions-%26-sales-enablement-specialist/job"
-},
-{
-"title": "Title Counsel- Biopharma",
-"role": "その他",
-"city": null,
-"state": null,
-"posted": null,
-"first_seen": "2026-10-03",
-"url": "https://uscareers-fujifilm.icims.com/jobs/38919/counsel--biopharma/job"
-},
-{
-"title": "Title Aseptic Filling Technician- 2nd shift",
-"role": "その他",
-"city": null,
-"state": null,
-"posted": null,
-"first_seen": "2026-10-03",
-"url": "https://uscareers-fujifilm.icims.com/jobs/38902/aseptic-filling-technician--2nd-shift/job"
-},
-{
-"title": "Title Aseptic Filling Technician-3rd Shift",
-"role": "その他",
-"city": null,
-"state": null,
-"posted": null,
-"first_seen": "2026-10-03",
-"url": "https://uscareers-fujifilm.icims.com/jobs/38901/aseptic-filling-technician-3rd-shift/job"
-},
-{
-"title": "Title Product Quality Engineer II",
-"role": "品質",
-"city": null,
-"state": null,
-"posted": null,
-"first_seen": "2026-10-01",
-"url": "https://uscareers-fujifilm.icims.com/jobs/38959/product-quality-engineer-ii/job"
-},
-{
-"title": "Title Associate Supplier Quality Engineer",
-"role": "品質",
-"city": null,
-"state": null,
-"posted": null,
-"first_seen": "2026-10-01",
-"url": "https://uscareers-fujifilm.icims.com/jobs/38956/associate-supplier-quality-engineer/job"
 }
 ],
 "source": "icims(採用ページの公開 API)"
@@ -424,6 +426,34 @@
 }
 },
 "timeline": [
+{
+"date": "2026-10-13",
+"face": "hiring",
+"title": "求人: Title Senior Engineer, Cleaning Validation(生産技術・ )",
+"ref": "#hiring",
+"summary": null
+},
+{
+"date": "2026-10-13",
+"face": "hiring",
+"title": "求人: Title Production Technology Chemist(生産・ )",
+"ref": "#hiring",
+"summary": null
+},
+{
+"date": "2026-10-13",
+"face": "hiring",
+"title": "求人: Title Senior Quality Engineer(品質・ )",
+"ref": "#hiring",
+"summary": null
+},
+{
+"date": "2026-10-13",
+"face": "hiring",
+"title": "求人: Title Powder Milling &amp; Cleaning Tech - 1st Shift(生産技術・ )",
+"ref": "#hiring",
+"summary": null
+},
 {
 "date": "2026-10-10",
 "face": "hiring",
@@ -465,36 +495,8 @@
 "title": "求人: Title Analyst 1, QC Compendial Testing(品質・ )",
 "ref": "#hiring",
 "summary": null
-},
-{
-"date": "2026-10-07",
-"face": "hiring",
-"title": "求人: Title Process Operator - PTG(生産・ )",
-"ref": "#hiring",
-"summary": null
-},
-{
-"date": "2026-10-07",
-"face": "hiring",
-"title": "求人: Title Warehouse Worker(物流・ )",
-"ref": "#hiring",
-"summary": null
-},
-{
-"date": "2026-10-06",
-"face": "hiring",
-"title": "求人: Title Manufacturing Associate Hiring Event (October 24th)(生産・ )",
-"ref": "#hiring",
-"summary": null
-},
-{
-"date": "2026-10-06",
-"face": "hiring",
-"title": "求人: Title Inventory Control Specialist(物流・ )",
-"ref": "#hiring",
-"summary": null
 }
 ],
-"generated_at": "2026-10-12T15:00:28+00:00",
+"generated_at": "2026-10-13T08:22:07+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
