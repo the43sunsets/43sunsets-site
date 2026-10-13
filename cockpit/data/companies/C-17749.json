@@ -23,11 +23,35 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": null,
-"n_amount_excluded": 1,
-"latest": "2026-08-05",
+"n_amount_excluded": 2,
+"latest": "2026-10-12",
 "items": [
+{
+"id": "S-78288",
+"date": "2026-10-12",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Hamilton County",
+"address": "6910 SALEM RD , ANDERSON TOWNSHIP OH 45230",
+"permit_no": "26HAM-PMT-005382",
+"permit_type": "OBC Alteration",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Anderson Township Park District(6910 Salem Rd)の改修許可(OBC Alteration)。金額不明。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Distributed for Review / OBC Alteration",
+"source_id": "SRC-024",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01DbgU1p2UDgCxJX65DhyYnS",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-37066",
 "date": "2026-08-05",
@@ -80,6 +104,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-12",
+"face": "permits",
+"title": "建設許可(Hamilton County): 未分類",
+"ref": "S-78288",
+"summary": "Anderson Township Park District(6910 Salem Rd)の改修許可(OBC Alteration)。金額不明。"
+},
+{
 "date": "2026-08-05",
 "face": "permits",
 "title": "建設許可(Hamilton County): 未分類",
@@ -87,6 +118,6 @@
 "summary": "Anderson Township の仮設構造物許可(OBC Temporary Structure Permit)。金額・所有者・用途の記載なし。"
 }
 ],
-"generated_at": "2026-10-13T08:22:07+00:00",
+"generated_at": "2026-10-13T08:45:41+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
