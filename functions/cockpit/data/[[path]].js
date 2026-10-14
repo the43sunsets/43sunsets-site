@@ -4,6 +4,7 @@
 // を返す。建設許可・鮮度・景気・health・top・sources はそのまま通す(ログイン前フルアクセスの面)。
 // ログイン済みは静的ファイルをそのまま返す(next() = Pages の静的配信)。
 import { store, currentSession, json, logFaceDay, logCompanyView } from "../../signal/_lib.js";
+import { sessionLimited } from "../../signal/_rate.js";
 
 const GATED = new Set(["ucc.json", "ucc-wi.json", "subsidies.json", "hiring.json", "news.json", "macro.json"]);   // 9/9: ucc-wi.json = WI の索引行(推論段)   // 9/8 CEO: 景気の状況(ニュース 2 軸と AI の読み ②③)も見本モード
 const SAMPLE_N = 4;                    // 見本の枚数
@@ -31,26 +32,7 @@ export async function onRequestGet(context) {
 }
 
 function withHeaders(r, mode, sid) { const h = new Headers(r.headers); h.set("x-signal-mode", mode); h.set("cache-control", "no-store"); h.set("vary", "cookie"); if (sid) h.set("x-signal-mark", sid.slice(0, 8)); return new Response(r.body, { status: r.status, headers: h }); }
-const SESSION_PER_MINUTE = 60;
-// 9/8 実測: KV は結果整合で連打を数えられない → 同一拠点で即時反映される Cache API の分カウンタ。拠点をまたぐ分散取得は Cloudflare のレート制限ルール(CEO 操作済み)が本命。
 // 🔴 9/8 22:1x の事故: この関数を「ある行から末尾まで」の置換で足したため demo* 4 関数が消え、匿名の見本配布が全面 500(1101)。以後、この関数群は demo* より前に置き、末尾置換はしない。
-async function sessionLimited(env, sid) {
-  const minute = Math.floor(Date.now() / 60000);
-  let n = 1;
-  try {
-    const cache = caches.default; const key = new Request(`https://signal-rl.invalid/rlq/${sid}/${minute}`);
-    const hit = await cache.match(key); if (hit) n = (parseInt(await hit.text(), 10) || 0) + 1;
-    await cache.put(key, new Response(String(n), { headers: { "cache-control": "max-age=120", "content-type": "text/plain" } }));
-  } catch (e) { n = 1; }
-  try {
-    const kv = store(env);
-    if (kv && (n === 1 || n % 10 === 0)) {
-      const day = new Date().toISOString().slice(0, 10);
-      for (let i = 0; i < (n === 1 ? 1 : 10); i++) await kv.bumpDl(day, sid);
-    }
-  } catch (e) { /* 控えは best effort */ }
-  return n > SESSION_PER_MINUTE;
-}
 
 function demoFace(path, d, cutoff) {
   const meta = { ...(d.meta || {}) };
