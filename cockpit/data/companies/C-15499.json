@@ -23,11 +23,31 @@
 },
 "faces": {
 "permits": {
-"count": 18,
-"value_total": 3126220.96,
+"count": 20,
+"value_total": 4255220.96,
 "n_amount_excluded": 10,
-"latest": "2026-10-09",
+"latest": "2026-10-13",
 "items": [
+{
+"id": "S-78681",
+"date": "2026-10-13",
+"applied": "2026-10-07",
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "228 Briarwood Cir Ann Arbor MI 48108",
+"permit_no": "ELECC26-1626",
+"permit_type": "Electrical (Commercial) -  General",
+"value": 144000.0,
+"category": "未評価",
+"confidence": null,
+"summary": null,
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "general electrical / Electrical (Commercial) -  General / General",
+"source_id": "SRC-022",
+"provenance": null
+},
 {
 "id": "S-76868",
 "date": "2026-10-09",
@@ -67,6 +87,30 @@
 "verbatim": "Install a Napco SLE-MAX2-CFBPS Cellular Communicator to an existing Fire Alarm System. For service & monitoring. / MESA - Fire Alarm Permit / Fire Alarm",
 "source_id": "SRC-022",
 "provenance": null
+},
+{
+"id": "S-32485",
+"date": "2026-09-01",
+"applied": "2026-06-08",
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "228 Briarwood Cir Ann Arbor MI 48108",
+"permit_no": "BLDGC26-0292",
+"permit_type": "Building (Commercial) - Alteration/Repair",
+"value": 985000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Ann Arbor のショッピングモール内で Sephora の約5,141 SFのテナント内装工事(店舗什器・内装・一部MEP)。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "THIS PROJECT IS AN INTERIOR TENANT FIT-OUT FOR SEPHORA OF APPROXIMATELY 5,141 SF. WORK INCLUDES BUT IS NOT LIMITED TO, CONSTRUCTION OF STOREFRONTS, INTERIOR WALLS / PARTITIONS, WALL FIXTURES, FLOORING, CEILING, LIGHT FIXTURES AND PARTIAL MECHANICAL, ELECTRICAL, AND PLUMBING. / Building (Commercial) ",
+"source_id": "SRC-022",
+"provenance": {
+"policy": "v2-2026-09-05-highflow-filter",
+"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
+"model": "claude-sonnet-5 (batch api v1)"
+}
 },
 {
 "id": "S-31824",
@@ -424,6 +468,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-13",
+"face": "permits",
+"title": "建設許可(Ann Arbor): 未評価",
+"ref": "S-78681",
+"summary": null
+},
+{
 "date": "2026-10-09",
 "face": "permits",
 "title": "建設許可(Ann Arbor): 未評価",
@@ -436,6 +487,13 @@
 "title": "建設許可(Ann Arbor): 未評価",
 "ref": "S-67991",
 "summary": null
+},
+{
+"date": "2026-09-01",
+"face": "permits",
+"title": "建設許可(Ann Arbor): 未分類",
+"ref": "S-32485",
+"summary": "Ann Arbor のショッピングモール内で Sephora の約5,141 SFのテナント内装工事(店舗什器・内装・一部MEP)。"
 },
 {
 "date": "2026-08-28",
@@ -550,6 +608,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-10-13T15:00:30+00:00",
+"generated_at": "2026-10-14T10:35:06+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
