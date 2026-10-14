@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-14T10:34:39+00:00",
+ "generated_at": "2026-10-14T10:37:54+00:00",
  "checks": {
   "ucc_sync_mac": {
    "raw_db_synced_at": "2026-10-13T07:02:01+00:00",
-   "raw_db_age_h": 27.5,
+   "raw_db_age_h": 27.6,
    "last_status": {
     "ran_at": "2026-10-13T07:02:01Z",
     "ok": 1,
@@ -43,7 +43,7 @@
   },
   "hiring_update_vps": {
    "last_run_at": "2026-10-14T10:08:56Z",
-   "age_h": 0.4,
+   "age_h": 0.5,
    "state": "OK",
    "open": 12547,
    "new_records": 865,
@@ -100,14 +100,14 @@
    "schedule": "Mon/Wed/Fri 05:30 America/Chicago"
   },
   "watchdog": {
-   "last_run_at": "2026-10-13T08:23:09Z",
-   "age_h": 26.2,
-   "findings": 6,
+   "last_run_at": "2026-10-14T10:36:11Z",
+   "age_h": 0.0,
+   "findings": 5,
    "state": "OK"
   },
   "foia_inbox": {
    "last_run_at": "2026-10-14T08:45:02+00:00",
-   "age_h": 1.8,
+   "age_h": 1.9,
    "unreflected": 1,
    "unreflected_over_24h": 0,
    "unreflected_at": [
@@ -298,7 +298,7 @@
    "days": 365,
    "stale": 0,
    "null": 0,
-   "elapsed_s": 21.8,
+   "elapsed_s": 24.2,
    "state": "OK"
   },
   "export_reasons": {
@@ -331,7 +331,7 @@
    "baseline_version": "g7-baseline-v1-2026-10-06",
    "baseline_date": "2026-10-06",
    "tolerance_points": 1.0,
-   "coverage_generated_at": "2026-10-13T15:01:05+00:00",
+   "coverage_generated_at": "2026-10-14T10:36:11+00:00",
    "states": {
     "IL": {
      "baseline": 45.49,
@@ -359,16 +359,14 @@
     },
     "IN": {
      "baseline": 100.0,
-     "current": 0.48,
-     "delta": -99.52,
-     "regressed": true
+     "current": 100.0,
+     "delta": 0.0,
+     "regressed": false
     }
    },
-   "regressed": [
-    "IN"
-   ],
+   "regressed": [],
    "missing": [],
-   "state": "STALE"
+   "state": "OK"
   }
  },
  "overall": "STALE"
