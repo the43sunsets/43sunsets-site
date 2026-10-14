@@ -23,11 +23,35 @@
 },
 "faces": {
 "permits": {
-"count": 21,
-"value_total": 51585540.0,
+"count": 22,
+"value_total": 51655540.0,
 "n_amount_excluded": 0,
-"latest": "2026-09-29",
+"latest": "2026-10-12",
 "items": [
+{
+"id": "S-78410",
+"date": "2026-10-12",
+"applied": "2026-10-05",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1915 W 35TH ST",
+"permit_no": "B200514545",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 70000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 市所有の建物(1915 W 35th St)で、ADA対応改善のためのトイレ等の非構造的内装改修 $70k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": ".SCOPE: NONSTRUCTURAL INTERIOR ALTERATION TO RESTROOMS FOR ADA IMPROVEMENTS.LOCATIONS: 0 RESIDENTIAL UNIT(S), 0 NON-RESIDENTIAL UNIT(S), 3 INTERIOR COMMON AREAS, LOBBY, PUBLIC TOILET, STAFF TOILET, STAFF LOUNGE.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01Fjjsxafu8FjLLqxYHgtFc2",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-69880",
 "date": "2026-09-29",
@@ -560,6 +584,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-12",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-78410",
+"summary": "Chicago 市所有の建物(1915 W 35th St)で、ADA対応改善のためのトイレ等の非構造的内装改修 $70k。"
+},
+{
 "date": "2026-09-29",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -707,6 +738,6 @@
 "summary": "Chicago 2255 E 103RD STでエレベーター・リフトの改修/部品交換 $18k(申請者: CITY OF CHICAGO)。"
 }
 ],
-"generated_at": "2026-10-14T10:39:24+00:00",
+"generated_at": "2026-10-14T12:30:28+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
