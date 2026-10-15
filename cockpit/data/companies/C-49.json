@@ -20,11 +20,35 @@
 },
 "faces": {
 "permits": {
-"count": 27,
-"value_total": 17724137.4,
+"count": 28,
+"value_total": 17748177.4,
 "n_amount_excluded": 1,
-"latest": "2026-10-12",
+"latest": "2026-10-13",
 "items": [
+{
+"id": "S-78918",
+"date": "2026-10-13",
+"applied": "2026-10-11",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "5800 S STONY ISLAND AVE",
+"permit_no": "B200515469",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 24040.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "シカゴ大学(Earl Shapiro Hall、5800 S Stony Island Ave)での低電圧・通信電気工事、防犯設備設置 $24,040。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL SECURITY. SPECIFIC LOCATION: EARL SHAPIRO.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01MoH2kWYCFeWLZmpbpfYBjG",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-78364",
 "date": "2026-10-12",
@@ -701,6 +725,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-13",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-78918",
+"summary": "シカゴ大学(Earl Shapiro Hall、5800 S Stony Island Ave)での低電圧・通信電気工事、防犯設備設置 $24,040。"
+},
+{
 "date": "2026-10-12",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -890,6 +921,6 @@
 "summary": "Chicago University of Chicago Judd Lot 駐車場で既存400Aサービスに2回路追加、EV充電設備2区画を増設 $37.6k。"
 }
 ],
-"generated_at": "2026-10-15T08:40:49+00:00",
+"generated_at": "2026-10-15T12:30:32+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

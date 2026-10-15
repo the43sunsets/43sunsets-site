@@ -24,11 +24,35 @@
 },
 "faces": {
 "permits": {
-"count": 15,
+"count": 16,
 "value_total": 950000.0,
-"n_amount_excluded": 14,
-"latest": "2026-10-07",
+"n_amount_excluded": 15,
+"latest": "2026-10-14",
 "items": [
+{
+"id": "S-79128",
+"date": "2026-10-14",
+"applied": "2026-10-09",
+"state": "IN",
+"jurisdiction": "Indiana/MADISON",
+"address": "2321 Charles St",
+"permit_no": "464637:2026-10-14",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "high",
+"summary": "Walmart Store 1728(Anderson IN、2321 Charles St)の改修工事(CDR release)。金額不明。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Walmart Store 1728 Remodel - Anderson IN / Retail",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01MoH2kWYCFeWLZmpbpfYBjG",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-76026",
 "date": "2026-10-07",
@@ -428,6 +452,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-14",
+"face": "permits",
+"title": "建設許可(Indiana/MADISON): 未分類",
+"ref": "S-79128",
+"summary": "Walmart Store 1728(Anderson IN、2321 Charles St)の改修工事(CDR release)。金額不明。"
+},
+{
 "date": "2026-10-07",
 "face": "permits",
 "title": "建設許可(Indiana/WHITE): 未分類",
@@ -540,6 +571,6 @@
 "summary": "Wood River の店舗にオンライン受取(Online Pickup)用の増築 $950k(施工: Poettker)。"
 }
 ],
-"generated_at": "2026-10-15T08:40:49+00:00",
+"generated_at": "2026-10-15T12:30:32+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

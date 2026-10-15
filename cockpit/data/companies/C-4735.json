@@ -20,11 +20,59 @@
 },
 "faces": {
 "permits": {
-"count": 9,
+"count": 11,
 "value_total": 15000.0,
-"n_amount_excluded": 8,
-"latest": "2026-10-09",
+"n_amount_excluded": 10,
+"latest": "2026-10-14",
 "items": [
+{
+"id": "S-79106",
+"date": "2026-10-14",
+"applied": "2026-09-29",
+"state": "IN",
+"jurisdiction": "Indiana/FRANKLIN",
+"address": "1034 SR 229 N",
+"permit_no": "464385:2026-10-14",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Kroger の食料品店(1034 SR 229 N)でピックアップ(ネットスーパー受取)拡張工事。金額不明。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Kroger - Pickup Expansion / Grocery Store",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01MoH2kWYCFeWLZmpbpfYBjG",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
+{
+"id": "S-79101",
+"date": "2026-10-14",
+"applied": "2025-12-09",
+"state": "IN",
+"jurisdiction": "Indiana/BOONE",
+"address": "2420 N Lebanon St",
+"permit_no": "458161:2026-10-14",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Indiana州Boone郡 2420 N Lebanon Stの「Kroger J-940」小売食料品店に関するCDRリリース記録(金額・申請者情報なし)。",
+"infer": null,
+"role": "applicant",
+"role_label": "申請者(許可記録)",
+"verbatim": "Kroger J-940 / Grocery",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01MoH2kWYCFeWLZmpbpfYBjG",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-76724",
 "date": "2026-10-09",
@@ -363,6 +411,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-14",
+"face": "permits",
+"title": "建設許可(Indiana/FRANKLIN): 未分類",
+"ref": "S-79106",
+"summary": "Kroger の食料品店(1034 SR 229 N)でピックアップ(ネットスーパー受取)拡張工事。金額不明。"
+},
+{
+"date": "2026-10-14",
+"face": "permits",
+"title": "建設許可(Indiana/BOONE): 未分類",
+"ref": "S-79101",
+"summary": "Indiana州Boone郡 2420 N Lebanon Stの「Kroger J-940」小売食料品店に関するCDRリリース記録(金額・申請者情報なし)。"
+},
+{
 "date": "2026-10-09",
 "face": "permits",
 "title": "建設許可(Indiana/MONTGOMERY): 未分類",
@@ -447,6 +509,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-10-15T08:40:49+00:00",
+"generated_at": "2026-10-15T12:30:32+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

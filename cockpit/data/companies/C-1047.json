@@ -23,11 +23,35 @@
 },
 "faces": {
 "permits": {
-"count": 23,
-"value_total": 683222.55,
+"count": 24,
+"value_total": 718222.55,
 "n_amount_excluded": 2,
-"latest": "2026-10-08",
+"latest": "2026-10-13",
 "items": [
+{
+"id": "S-78995",
+"date": "2026-10-13",
+"applied": "2026-09-22",
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "410 S MICHIGAN AVE",
+"permit_no": "B200512263",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 35000.0,
+"category": "未分類",
+"confidence": "high",
+"summary": "Chicago 410 S Michigan Ave 屋上の通信設備(タワー1基上の機器2台)を改修 $35k。",
+"infer": null,
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 2 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: ROOFTOP.",
+"source_id": "SRC-001",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01MoH2kWYCFeWLZmpbpfYBjG",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-76571",
 "date": "2026-10-08",
@@ -600,6 +624,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-13",
+"face": "permits",
+"title": "建設許可(Chicago): 未分類",
+"ref": "S-78995",
+"summary": "Chicago 410 S Michigan Ave 屋上の通信設備(タワー1基上の機器2台)を改修 $35k。"
+},
+{
 "date": "2026-10-08",
 "face": "permits",
 "title": "建設許可(Chicago): 未分類",
@@ -761,6 +792,6 @@
 "summary": "Chicago の既存屋上共用通信設備でT-Mobileがアンテナ2基新設、ラック1台新設、無線機4台新設等のセクター追加 $50.0k。"
 }
 ],
-"generated_at": "2026-10-15T08:40:49+00:00",
+"generated_at": "2026-10-15T12:30:32+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

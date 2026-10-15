@@ -23,11 +23,35 @@
 },
 "faces": {
 "permits": {
-"count": 20,
+"count": 21,
 "value_total": 3496000.0,
-"n_amount_excluded": 14,
-"latest": "2026-10-05",
+"n_amount_excluded": 15,
+"latest": "2026-10-14",
 "items": [
+{
+"id": "S-79109",
+"date": "2026-10-14",
+"applied": "2026-10-12",
+"state": "IN",
+"jurisdiction": "Indiana/HAMILTON",
+"address": "900 E 96th Street",
+"permit_no": "464671:2026-10-14",
+"permit_type": "CDR release",
+"value": null,
+"category": "未分類",
+"confidence": "low",
+"summary": "Hamilton County 900 E 96th Street の CDR release(開発関連書類)。申請者は Drees。金額・用途の詳細は記録になし。",
+"infer": "Drees Homes は住宅開発業者であり、住宅関連の許可プロセスの可能性(推論)。",
+"role": "owner",
+"role_label": "所有名義(許可記録・課税台帳)",
+"verbatim": "Drees",
+"source_id": "SRC-009",
+"provenance": {
+"policy": "v3-2026-09-06-five-categories",
+"batch": "msgbatch_01MoH2kWYCFeWLZmpbpfYBjG",
+"model": "claude-sonnet-5 (batch api v1)"
+}
+},
 {
 "id": "S-74212",
 "date": "2026-10-05",
@@ -456,6 +480,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-14",
+"face": "permits",
+"title": "建設許可(Indiana/HAMILTON): 未分類",
+"ref": "S-79109",
+"summary": "Hamilton County 900 E 96th Street の CDR release(開発関連書類)。申請者は Drees。金額・用途の詳細は記録になし。"
+},
+{
 "date": "2026-10-05",
 "face": "permits",
 "title": "建設許可(Clermont County): 未評価",
@@ -596,6 +627,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-10-15T08:40:49+00:00",
+"generated_at": "2026-10-15T12:30:32+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
