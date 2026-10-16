@@ -24,33 +24,43 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 28795046.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-16",
 "items": [
 {
 "id": "S-59702",
 "date": "2026-09-16",
-"applied": "2026-02-04",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "136 N KEDZIE AVE",
 "permit_no": "101078161",
 "permit_type": "PERMIT - NEW CONSTRUCTION",
-"value": 28795046.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago 136 N Kedzie Ave に5階建て混合用途建物(1階商業・オフィス、51戸の低価格住宅ユニット)を新築 $28.8M(屋内駐車12台、緑化屋根含む)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "DDS 2019 CBC: FULL BUILDING PERMIT FOR A 5-STORY MIXED-USE BUILDING WITH GROUND FLOOR COMMERCIAL AND OFFICE SPACE WITH 51 AFFORDABLE DWELLING UNITS. INCLUDES 12 INDOOR PARKING SPACES, TRASH ENCLOSURE, AND GREEN ROOFS  (OCC GROUP A-2, A-3, B, M, R-2, U; TYPE IIIA CONSTRUCTION). CONSULTANT REVIEWER: G",
 "source_id": "SRC-001",
+"value": 28795046.0,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "THE MICHAELS ORGANIZATIONがChicagoで増築・新築の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "DDS 2019 CBC: FULL BUILDING PERMIT FOR A 5-STORY MIXED-USE BUILDING WITH GROUND FLOOR COMMERCIAL AND OFFICE SPACE WITH 51 AFFORDABLE DWELLING UNITS. INCLUDES 12 INDOOR PARKING SPACES, TRASH ENCLOSURE, AND GREEN ROOFS  (OCC GROUP A-2, A-3, B, M, R-2, U; TYPE IIIA CONSTRUCTION). CONSULTANT REVIEWER: G",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:56.912092+00:00",
+"reading_id": "01M4W24NMG6JBNG6F8S4TSVM5D"
+},
+"n_permits": 1,
+"member_ids": [
+"S-59702"
+],
+"kinds": [
+"増築・新築"
+],
+"amount_band": "10m_100m",
+"amount_band_label": "$10M〜$100M"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-16",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): THE MICHAELS ORGANIZATIONがChicagoで増築・新築の許可を取得(1件)",
 "ref": "S-59702",
-"summary": "Chicago 136 N Kedzie Ave に5階建て混合用途建物(1階商業・オフィス、51戸の低価格住宅ユニット)を新築 $28.8M(屋内駐車12台、緑化屋根含む)。"
+"summary": "THE MICHAELS ORGANIZATIONがChicagoで増築・新築の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

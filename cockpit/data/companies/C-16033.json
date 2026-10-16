@@ -25,32 +25,42 @@
 "permits": {
 "count": 1,
 "value_total": null,
-"n_amount_excluded": 1,
+"n_amount_excluded": 0,
 "latest": "2026-09-15",
 "items": [
 {
 "id": "S-58341",
 "date": "2026-09-15",
-"applied": "2026-09-15",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Elmhurst",
 "address": "555 S SPRING RD ELMHURST IL 60126",
 "permit_no": "CO-011061-2026",
 "permit_type": "Certificate of Occupancy",
+"source_id": "SRC-022",
 "value": null,
-"category": "未分類",
+"category": "工事でない記録",
 "confidence": "high",
-"summary": "Elmhurst 555 S Spring Rd の「KieKate Couture」に関する使用許可証(既存事業の入居記録)。金額情報なし。",
+"summary": "KieKate CoutureがElmhurstで記録取得の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "KieKate Couture - Occupancy of 555 S. Spring - Business is existing and occupancy is on file only for 559 S. Spring Road address. See notes. / Certificate of Occupancy / Certificate of Occupancy",
-"source_id": "SRC-022",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01Lv42GwnYquNdatWsieoun7",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:46.152357+00:00",
+"reading_id": "01M4W265Q8ZT5M29G5G3QQMY5R"
+},
+"n_permits": 1,
+"member_ids": [
+"S-58341"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-15",
 "face": "permits",
-"title": "建設許可(Elmhurst): 未分類",
+"title": "建設許可(Elmhurst): KieKate CoutureがElmhurstで記録取得の許可を取得(1件)",
 "ref": "S-58341",
-"summary": "Elmhurst 555 S Spring Rd の「KieKate Couture」に関する使用許可証(既存事業の入居記録)。金額情報なし。"
+"summary": "KieKate CoutureがElmhurstで記録取得の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,82 +23,46 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 240140.0,
-"n_amount_excluded": 1,
+"count": 1,
+"value_total": null,
+"n_amount_excluded": 0,
 "latest": "2026-09-15",
 "items": [
 {
-"id": "S-58293",
-"date": "2026-09-15",
-"applied": "2026-09-02",
-"state": "IL",
-"jurisdiction": "Arlington Heights",
-"address": "100 E ALGONQUIN RD ARLINGTON HEIGHTS IL 60005",
-"permit_no": "FIREC2026-00092",
-"permit_type": "Fire Commercial Systems - Fire Alarm",
-"value": 4000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Arlington Heights の Mitsuwa Marketplace(日系スーパー)における火災報知システム改修 $4,000。HVAC2026-00099 と関連。",
-"infer": null,
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "Mitsuwa Marketplace -Fire alarm system modifications\nLINKED TO HVAC2026-00099 / Fire Commercial Systems - Fire Alarm / Fire Alarm",
-"source_id": "SRC-022",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01Lv42GwnYquNdatWsieoun7",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-26370",
-"date": "2026-09-04",
-"applied": "2026-07-27",
+"date": "2026-09-15",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Arlington Heights",
 "address": "100 E ALGONQUIN RD ARLINGTON HEIGHTS IL 60005",
 "permit_no": "HVAC2026-00099",
 "permit_type": "HVAC - Commercial Replacement or Modification",
+"source_id": "SRC-022",
 "value": 236140.0,
-"category": "未分類",
+"category": "保全",
 "confidence": "high",
-"summary": "Mitsuwa Marketplace のレストラン4区画向け HVAC 改修 $236.1k(商業用RTU)。",
+"summary": "Mitsuwa MarketplaceがArlington Heightsで更新・修繕と警備設備の許可を取得(2件)",
 "infer": null,
-"role": "applicant",
-"role_label": "申請者(許可記録)",
+"role": "operator",
+"role_label": "操業事業者",
 "verbatim": "Mitsuwa Marketplace - HVAC Improvements to four Mitsuwa Marketplace restaurant spaces  / HVAC - Commercial Replacement or Modification / Commercial RTU",
-"source_id": "SRC-022",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:57.689565+00:00",
+"reading_id": "01M4W26GZS7506D52CKH2XEX41"
 },
-{
-"id": "S-14395",
-"date": "2026-07-18",
-"applied": "2026-05-25",
-"state": "IL",
-"jurisdiction": "Arlington Heights",
-"address": "100 E ALGONQUIN RD Unit: 108 ARLINGTON HEIGHTS IL 60005",
-"permit_no": "SPEV2026-00016",
-"permit_type": "Event - General Special Event Permit (run, 5K, parade, carnival, food truck, festival, concert, motorcade, fair)",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Arlington Heights の Mitsuwa Marketplace(Kinokuniya 側)敷地で屋外テント設営とキャンプ調理のフードサンプリングイベント。",
-"infer": "Mitsuwa Marketplace は日系スーパーマーケットチェーンとして知られる(推論、本記録内に資本関係の明記はなし)。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "Date: July 18th (Sat) and 19th (Sun), 2026\nTime: [9:30 AM – 4:30 PM] (Tentative)\nLocation: Private property outside the west entrance (Kinokuniya side) of Mitsuwa Marketplace and sections of Mitsuwa parking lot.\nActivity: Setting up some outdoor & pop up tents and demonstrating \"camp-style cooking\" ",
-"source_id": "SRC-022",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-080",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"n_permits": 2,
+"member_ids": [
+"S-26370",
+"S-58293"
+],
+"kinds": [
+"更新・修繕",
+"警備"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 }
 ]
 },
@@ -130,25 +94,11 @@
 {
 "date": "2026-09-15",
 "face": "permits",
-"title": "建設許可(Arlington Heights): 未分類",
-"ref": "S-58293",
-"summary": "Arlington Heights の Mitsuwa Marketplace(日系スーパー)における火災報知システム改修 $4,000。HVAC2026-00099 と関連。"
-},
-{
-"date": "2026-09-04",
-"face": "permits",
-"title": "建設許可(Arlington Heights): 未分類",
+"title": "建設許可(Arlington Heights): Mitsuwa MarketplaceがArlington Heightsで更新・修繕と警備設備の許可を取得(2件)",
 "ref": "S-26370",
-"summary": "Mitsuwa Marketplace のレストラン4区画向け HVAC 改修 $236.1k(商業用RTU)。"
-},
-{
-"date": "2026-07-18",
-"face": "permits",
-"title": "建設許可(Arlington Heights): 未分類",
-"ref": "S-14395",
-"summary": "Arlington Heights の Mitsuwa Marketplace(Kinokuniya 側)敷地で屋外テント設営とキャンプ調理のフードサンプリングイベント。"
+"summary": "Mitsuwa MarketplaceがArlington Heightsで更新・修繕と警備設備の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

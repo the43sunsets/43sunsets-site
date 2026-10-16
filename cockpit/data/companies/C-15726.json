@@ -23,58 +23,46 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 1,
 "value_total": null,
-"n_amount_excluded": 2,
+"n_amount_excluded": 0,
 "latest": "2026-09-22",
 "items": [
 {
-"id": "S-64551",
-"date": "2026-09-22",
-"applied": "2026-08-20",
-"state": "IL",
-"jurisdiction": "Palatine",
-"address": "1000 S QUENTIN RD PALATINE IL 60067",
-"permit_no": "FOOD-026320-2026",
-"permit_type": "Temporary Food Event Coordinator",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Fremd High School(1000 S Quentin Rd, Palatine)でのフードトラックイベントに関する臨時食品イベント許可。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Food truck event @ Fremd High School / Temporary Food Event Coordinator / Temporary Food Event Coordinator",
-"source_id": "SRC-022",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-25006",
-"date": "2026-09-03",
-"applied": "2026-08-25",
+"date": "2026-09-22",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Palatine",
 "address": "1000 S QUENTIN RD PALATINE IL 60067",
 "permit_no": "FOOD-026366-2026",
 "permit_type": "Temporary Food Establishment Single Event Permit",
+"source_id": "SRC-022",
 "value": null,
-"category": "未分類",
+"category": "事務所・その他",
 "confidence": "high",
-"summary": "Fremd High School の売店における単発イベント向け仮設飲食営業許可(金額情報なし)。",
+"summary": "Fremd High Schoolがパラタインで事務所・その他の許可を取得(2件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Fremd High School Concession Stand / Temporary Food Establishment Single Event Permit / Temporary Single Event Food Permit",
-"source_id": "SRC-022",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:58.462478+00:00",
+"reading_id": "01M4W26HQYMVB2MQ2QYEF7EYCF"
+},
+"n_permits": 2,
+"member_ids": [
+"S-25006",
+"S-64551"
+],
+"kinds": [
+"事務所・その他",
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -106,18 +94,11 @@
 {
 "date": "2026-09-22",
 "face": "permits",
-"title": "建設許可(Palatine): 未分類",
-"ref": "S-64551",
-"summary": "Fremd High School(1000 S Quentin Rd, Palatine)でのフードトラックイベントに関する臨時食品イベント許可。"
-},
-{
-"date": "2026-09-03",
-"face": "permits",
-"title": "建設許可(Palatine): 未分類",
+"title": "建設許可(Palatine): Fremd High Schoolがパラタインで事務所・その他の許可を取得(2件)",
 "ref": "S-25006",
-"summary": "Fremd High School の売店における単発イベント向け仮設飲食営業許可(金額情報なし)。"
+"summary": "Fremd High Schoolがパラタインで事務所・その他の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

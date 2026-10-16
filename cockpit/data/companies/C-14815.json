@@ -25,32 +25,42 @@
 "permits": {
 "count": 1,
 "value_total": null,
-"n_amount_excluded": 1,
+"n_amount_excluded": 0,
 "latest": "2026-09-29",
 "items": [
 {
 "id": "S-68681",
 "date": "2026-09-29",
-"applied": "2026-09-25",
+"applied": null,
 "state": "IN",
 "jurisdiction": "Indiana/WAYNE",
 "address": "14600 Gateway Rd",
 "permit_no": "464331:2026-09-29",
 "permit_type": "CDR release",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Wayne(Indiana)14600 Gateway Rd の DOT Foods 関連 CDR release 許可(金額不明)。",
-"infer": "DOT Foods は食品流通の再配送業者であり、当該許可は物流施設(配送センター)関連の工事の可能性(推論)。詳細な工事内容は記録から不明。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "DOT Foods",
 "source_id": "SRC-009",
+"value": null,
+"category": "内容不明",
+"confidence": "high",
+"summary": "DOT FoodsがWAYNEで内容不明の許可を取得(1 件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "DOT Foods",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:04.332541+00:00",
+"reading_id": "01M4W2329CAYZ7APGVZ0ZKSTKE"
+},
+"n_permits": 1,
+"member_ids": [
+"S-68681"
+],
+"kinds": [
+"内容不明"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-29",
 "face": "permits",
-"title": "建設許可(Indiana/WAYNE): 未分類",
+"title": "建設許可(Indiana/WAYNE): DOT FoodsがWAYNEで内容不明の許可を取得(1 件)",
 "ref": "S-68681",
-"summary": "Wayne(Indiana)14600 Gateway Rd の DOT Foods 関連 CDR release 許可(金額不明)。"
+"summary": "DOT FoodsがWAYNEで内容不明の許可を取得(1 件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

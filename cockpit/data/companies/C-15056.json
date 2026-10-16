@@ -24,33 +24,43 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 19800.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-28",
 "items": [
 {
 "id": "S-69838",
 "date": "2026-09-28",
-"applied": "2026-09-15",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "4701 W MAYPOLE AVE",
 "permit_no": "B200511850",
 "permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 19800.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago 4701 W Maypole Ave でのタックポインティング・組積補修工事 $19,800(1,500 SQ FT、まぐさ11箇所)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "TUCKPOINTING AND UNIT MASONRY REPAIR / REPLACEMENT: 1500 SQ. FT., LINTEL QTY. 11, MAX. LENGTH 10. LOCATION: MASONRY REPAIRS.",
 "source_id": "SRC-001",
+"value": 19800.0,
+"category": "保全",
+"confidence": "high",
+"summary": "JAMGAR LLCがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "TUCKPOINTING AND UNIT MASONRY REPAIR / REPLACEMENT: 1500 SQ. FT., LINTEL QTY. 11, MAX. LENGTH 10. LOCATION: MASONRY REPAIRS.",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:11.117035+00:00",
+"reading_id": "01M4W238XDQNA3ZP7NBTB4CT84"
+},
+"n_permits": 1,
+"member_ids": [
+"S-69838"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): JAMGAR LLCがChicagoで更新・修繕の許可を取得(1件)",
 "ref": "S-69838",
-"summary": "Chicago 4701 W Maypole Ave でのタックポインティング・組積補修工事 $19,800(1,500 SQ FT、まぐさ11箇所)。"
+"summary": "JAMGAR LLCがChicagoで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

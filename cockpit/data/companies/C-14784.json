@@ -23,58 +23,44 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 1,
 "value_total": null,
-"n_amount_excluded": 2,
-"latest": "2026-10-01",
+"n_amount_excluded": 0,
+"latest": "2026-09-28",
 "items": [
-{
-"id": "S-70428",
-"date": "2026-10-01",
-"applied": "2026-08-20",
-"state": "IL",
-"jurisdiction": "Highland Park",
-"address": "31 PARK AVE HIGHLAND PARK IL 60035",
-"permit_no": "ROW-2026-00479",
-"permit_type": "Right of Way Utility",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "ComEd が Highland Park 31 Park Ave 付近の湿地東側で電柱2本を交換する公共用地内工事(金額不明)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "ComEd proposes to replace two new utility poles east of the identified wetland in order to ensure reliable electrical service. Both pole replacements are within 30 feet of the wetland. Straw wattles will be installed around the pole replacements to limit sediment migration to the identified wetland.",
-"source_id": "SRC-022",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
 {
 "id": "S-67912",
 "date": "2026-09-28",
-"applied": "2026-07-31",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Highland Park",
 "address": "486 ROGER WILLIAMS AVE HIGHLAND PARK IL 60035",
 "permit_no": "FPRE-2026-00095",
 "permit_type": "Fire Prevention - Tent",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Highland Park East Park District によるイベント用テント設置許可(20'x40'、Oktoberfest、9月26日開催)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "20' x 40' tent to be placed on desan avenue toward roger williams to hold oktoberfest on Sept 26 from 4-8pm. / Fire Prevention - Tent / Fire Prevention - Tent",
 "source_id": "SRC-022",
+"value": null,
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "HIGHLAND PARK EAST PARK DISTRICTがHighland Parkで記録を取得(1 件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "20' x 40' tent to be placed on desan avenue toward roger williams to hold oktoberfest on Sept 26 from 4-8pm. / Fire Prevention - Tent / Fire Prevention - Tent",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01J6EcFwV8uazhCACYSmWzsV",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:07.217868+00:00",
+"reading_id": "01M4W26T9HFYCMTMDJXF47YEJ2"
+},
+"n_permits": 1,
+"member_ids": [
+"S-67912"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -104,20 +90,13 @@
 },
 "timeline": [
 {
-"date": "2026-10-01",
-"face": "permits",
-"title": "建設許可(Highland Park): 未分類",
-"ref": "S-70428",
-"summary": "ComEd が Highland Park 31 Park Ave 付近の湿地東側で電柱2本を交換する公共用地内工事(金額不明)。"
-},
-{
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Highland Park): 未分類",
+"title": "建設許可(Highland Park): HIGHLAND PARK EAST PARK DISTRICTがHighland Parkで記録を取得(1 件)",
 "ref": "S-67912",
-"summary": "Highland Park East Park District によるイベント用テント設置許可(20'x40'、Oktoberfest、9月26日開催)。"
+"summary": "HIGHLAND PARK EAST PARK DISTRICTがHighland Parkで記録を取得(1 件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

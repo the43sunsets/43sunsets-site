@@ -20,82 +20,78 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 21006315.0,
+"count": 2,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-18",
 "items": [
 {
 "id": "S-62064",
 "date": "2026-09-18",
-"applied": "2026-09-14",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "5215 N CALIFORNIA AVE",
 "permit_no": "101086549",
 "permit_type": "PERMIT - RENOVATION/ALTERATION",
-"value": 20690000.0,
-"category": "医療施設",
-"confidence": "high",
-"summary": "Swedish Covenant Hospital 敷地内 Foster Medical Pavilion 1階の既存商業スペースを外来診療スペース(B用途)へ内装改修 $20.69M。",
-"infer": "病院キャンパス内の外来診療施設への転換 = 医療機器・診断設備の調達を伴う可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "SELF CERT 2019 CBC: INTERIOR ALTERATIONS TO EXISTING MERCANTILE SPACE ON THE GROUND FLOOR OF THE FOSTER MEDICAL PAILION WITHIN THE SWEDISH COVENANT HOSPITAL CAMPUS FOR A NEW BUSINESS OCCUPANCY OUTPATIENT SPACE AS PER PLANS (OCCUPANCY B, TYPE IIA CONSTRUCTION)",
 "source_id": "SRC-001",
+"value": 20690000.0,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "ENDEAVOR HEALTHがChicagoで用途転換の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SELF CERT 2019 CBC: INTERIOR ALTERATIONS TO EXISTING MERCANTILE SPACE ON THE GROUND FLOOR OF THE FOSTER MEDICAL PAILION WITHIN THE SWEDISH COVENANT HOSPITAL CAMPUS FOR A NEW BUSINESS OCCUPANCY OUTPATIENT SPACE AS PER PLANS (OCCUPANCY B, TYPE IIA CONSTRUCTION)",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:04.746530+00:00",
+"reading_id": "01M4W26QWAHSFEF7HKMTMYRWJ5"
+},
+"n_permits": 1,
+"member_ids": [
+"S-62064"
+],
+"kinds": [
+"新拠点・用途転換"
+],
+"amount_band": "10m_100m",
+"amount_band_label": "$10M〜$100M"
 },
 {
 "id": "S-54572",
 "date": "2026-09-11",
-"applied": "2026-09-08",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "2740 W FOSTER AVE",
 "permit_no": "101086555",
 "permit_type": "PERMIT - RENOVATION/ALTERATION",
-"value": 311565.0,
-"category": "医療施設",
-"confidence": "high",
-"summary": "Endeavor Health のメディカルオフィスビル(2740 W Foster Ave)4階の既存オフィススペース 2,055 SF を内装改修 $311.6k(用途・スイート面積の変更なし)。",
-"infer": "小規模なオフィス内装改修であり、医療機器等の大型設備投資には直結しない可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "SELF CERT 2019 CBC: 2,055 SF INTERIOR RENOVATION OF AN EXISITNG OFFICE SPACE ON THE 4TH FLOOR OF EXISTING 4 STORY MEDICAL OFFICE BUILDING AS PER PLANS (OCCUPANCY B, TYPE IIA CONSTRUCTION). NO CHANGE IN OCCUPANCY, NO CHANGE IN SUITE AREA",
 "source_id": "SRC-001",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-17034",
-"date": "2026-07-14",
-"applied": "2026-05-01",
-"state": "IL",
-"jurisdiction": "Elmhurst",
-"address": "1100 S YORK ST ELMHURST IL 60126",
-"permit_no": "SIGN-008884-2026",
-"permit_type": "Sign ",
-"value": 4750.0,
-"category": "未分類",
+"value": 311565.0,
+"category": "保全",
 "confidence": "high",
-"summary": "Elmhurst 1100 S York St で Endeavor Health のロゴサイン(アルミ/アクリル製チャンネルレター)取付 $4.8k。",
+"summary": "ENDEAVOR HEALTHがChicagoで更新・修繕の許可を取得(1件)",
 "infer": null,
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "CL.04) Aluminum/acrylic channel letterset of \"Endeavor Health\" logotype mounted to raceways which are flush mounted to the building. / Sign  / Sign",
-"source_id": "SRC-022",
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SELF CERT 2019 CBC: 2,055 SF INTERIOR RENOVATION OF AN EXISITNG OFFICE SPACE ON THE 4TH FLOOR OF EXISTING 4 STORY MEDICAL OFFICE BUILDING AS PER PLANS (OCCUPANCY B, TYPE IIA CONSTRUCTION). NO CHANGE IN OCCUPANCY, NO CHANGE IN SUITE AREA",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-050",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:31.077616+00:00",
+"reading_id": "01M4W25Q05DXKFFZHFMR026R3X"
+},
+"n_permits": 1,
+"member_ids": [
+"S-54572"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 }
 ]
 },
@@ -127,25 +123,18 @@
 {
 "date": "2026-09-18",
 "face": "permits",
-"title": "建設許可(Chicago): 医療施設",
+"title": "建設許可(Chicago): ENDEAVOR HEALTHがChicagoで用途転換の許可を取得(1件)",
 "ref": "S-62064",
-"summary": "Swedish Covenant Hospital 敷地内 Foster Medical Pavilion 1階の既存商業スペースを外来診療スペース(B用途)へ内装改修 $20.69M。"
+"summary": "ENDEAVOR HEALTHがChicagoで用途転換の許可を取得(1件)"
 },
 {
 "date": "2026-09-11",
 "face": "permits",
-"title": "建設許可(Chicago): 医療施設",
+"title": "建設許可(Chicago): ENDEAVOR HEALTHがChicagoで更新・修繕の許可を取得(1件)",
 "ref": "S-54572",
-"summary": "Endeavor Health のメディカルオフィスビル(2740 W Foster Ave)4階の既存オフィススペース 2,055 SF を内装改修 $311.6k(用途・スイート面積の変更なし)。"
-},
-{
-"date": "2026-07-14",
-"face": "permits",
-"title": "建設許可(Elmhurst): 未分類",
-"ref": "S-17034",
-"summary": "Elmhurst 1100 S York St で Endeavor Health のロゴサイン(アルミ/アクリル製チャンネルレター)取付 $4.8k。"
+"summary": "ENDEAVOR HEALTHがChicagoで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -24,33 +24,43 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 1000.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-29",
 "items": [
 {
 "id": "S-73868",
 "date": "2026-09-29",
-"applied": "2026-09-29",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cleveland",
 "address": "2040 ADELBERT RD, CLEVELAND, OH, 44106",
 "permit_no": "BCE26-042139",
 "permit_type": "Commercial Electrical",
-"value": 1000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Case Western Reserve University の 2040 Adelbert Rd(A-1 集会・舞台芸術用途)でイベント向け電気接地工事のみ $1,000。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial Electrical / A-1 Assembly - Performing Arts / Electrical grounding ONLY - 2040 Adelbert Rd. 10.20.2026 Event.",
 "source_id": "SRC-068",
+"value": 1000.0,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "WESTERN RESERVE UNIVがClevelandで事務所・その他の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial Electrical / A-1 Assembly - Performing Arts / Electrical grounding ONLY - 2040 Adelbert Rd. 10.20.2026 Event.",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:48.406750+00:00",
+"reading_id": "01M4W22JQPFGTFQGQEBGRCM2ZB"
+},
+"n_permits": 1,
+"member_ids": [
+"S-73868"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-29",
 "face": "permits",
-"title": "建設許可(Cleveland): 未分類",
+"title": "建設許可(Cleveland): WESTERN RESERVE UNIVがClevelandで事務所・その他の許可を取得(1件)",
 "ref": "S-73868",
-"summary": "Case Western Reserve University の 2040 Adelbert Rd(A-1 集会・舞台芸術用途)でイベント向け電気接地工事のみ $1,000。"
+"summary": "WESTERN RESERVE UNIVがClevelandで事務所・その他の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

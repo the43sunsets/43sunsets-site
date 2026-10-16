@@ -23,82 +23,78 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 16118342.0,
+"count": 2,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-10-04",
 "items": [
 {
 "id": "S-73957",
 "date": "2026-10-04",
-"applied": "2025-11-26",
+"applied": null,
 "state": "MI",
 "jurisdiction": "Detroit",
 "address": "2715 Macomb St",
 "permit_no": "BLD2025-02974",
 "permit_type": "Alteration",
-"value": 793000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Detroit Public Schools の小学校(2715 Macomb St)でエレベーターを規定に合わせて改修する内装工事 $793k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Interior alterations to modernize Elevator to Code per plans. Subject to Field Approval. / Elementary School / Alteration",
 "source_id": "SRC-016",
+"value": 793000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "DETROIT PUBLIC SCHOOLSがDetroitで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Interior alterations to modernize Elevator to Code per plans. Subject to Field Approval. / Elementary School / Alteration",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0187iVtZaxs9yZi2kQ1byUGq",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:15.173729+00:00",
+"reading_id": "01M4W257F50X386WCM59BTG2AX"
+},
+"n_permits": 1,
+"member_ids": [
+"S-73957"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 },
 {
 "id": "S-1216",
 "date": "2026-08-25",
-"applied": "2025-10-14",
+"applied": null,
 "state": "MI",
 "jurisdiction": "Detroit",
 "address": "2425 Tuxedo St",
 "permit_no": "BLD2025-02720",
 "permit_type": "Alteration",
+"source_id": "SRC-016",
 "value": 730000.0,
-"category": "未分類",
+"category": "保全",
 "confidence": "high",
-"summary": "Detroit 2425 Tuxedo St の高校でエレベーター近代化改修 $730k。",
+"summary": "DETROIT PUBLIC SCHOOLSがDetroitで更新・修繕の許可を取得(1件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
+"role": "operator",
+"role_label": "操業事業者",
 "verbatim": "Alterations for Elevator Modernization project to Code per plans. Subject to Field Approval. Separate Trade Permits required. / High School / Alteration",
-"source_id": "SRC-016",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-001",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:07.139884+00:00",
+"reading_id": "01M4W235133BMDXK7Q5TX44NNP"
 },
-{
-"id": "S-1297",
-"date": "2026-07-08",
-"applied": "2026-02-04",
-"state": "MI",
-"jurisdiction": "Detroit",
-"address": "19501 Berg Rd",
-"permit_no": "BLD2026-00374",
-"permit_type": "Addition",
-"value": 14595342.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "学校の体育館増築 8,351 SF $14.6M。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Construct 8,351 sq ft Gymnasium Addition to Code per plans. Subject to Field Approval. / School / Addition",
-"source_id": "SRC-016",
-"provenance": {
-"policy": "v0-2026-09-02",
-"batch": "05",
-"model": "claude-fable-5-1 (manual batch, sparring session)"
-}
+"n_permits": 1,
+"member_ids": [
+"S-1216"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 }
 ]
 },
@@ -130,25 +126,18 @@
 {
 "date": "2026-10-04",
 "face": "permits",
-"title": "建設許可(Detroit): 未分類",
+"title": "建設許可(Detroit): DETROIT PUBLIC SCHOOLSがDetroitで更新・修繕の許可を取得(1件)",
 "ref": "S-73957",
-"summary": "Detroit Public Schools の小学校(2715 Macomb St)でエレベーターを規定に合わせて改修する内装工事 $793k。"
+"summary": "DETROIT PUBLIC SCHOOLSがDetroitで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-08-25",
 "face": "permits",
-"title": "建設許可(Detroit): 未分類",
+"title": "建設許可(Detroit): DETROIT PUBLIC SCHOOLSがDetroitで更新・修繕の許可を取得(1件)",
 "ref": "S-1216",
-"summary": "Detroit 2425 Tuxedo St の高校でエレベーター近代化改修 $730k。"
-},
-{
-"date": "2026-07-08",
-"face": "permits",
-"title": "建設許可(Detroit): 未分類",
-"ref": "S-1297",
-"summary": "学校の体育館増築 8,351 SF $14.6M。"
+"summary": "DETROIT PUBLIC SCHOOLSがDetroitで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

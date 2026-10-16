@@ -25,32 +25,42 @@
 "permits": {
 "count": 1,
 "value_total": null,
-"n_amount_excluded": 1,
+"n_amount_excluded": 0,
 "latest": "2026-09-18",
 "items": [
 {
 "id": "S-60525",
 "date": "2026-09-18",
-"applied": "2026-08-13",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Palatine",
 "address": "55 N SMITH ST Palatine IL 60067",
 "permit_no": "FOOD-026232-2026",
 "permit_type": "Temporary Food Establishment Single Event Permit",
+"source_id": "SRC-022",
 "value": null,
-"category": "未分類",
+"category": "工事でない記録",
 "confidence": "high",
-"summary": "Palatine 55 N Smith St で Rotary Club Octoberfest の臨時飲食営業許可(単発イベント)。",
+"summary": "Rotary ClubがPalatineで記録取得の許可を取得(1 件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Rotary Club Octoberfest / Temporary Food Establishment Single Event Permit / Temporary Single Event Food Permit",
-"source_id": "SRC-022",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01DeZcrHnahcY1AvQRaz3JEK",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:47.874853+00:00",
+"reading_id": "01M4W22J72E2558CNJ2RTT52KZ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-60525"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-18",
 "face": "permits",
-"title": "建設許可(Palatine): 未分類",
+"title": "建設許可(Palatine): Rotary ClubがPalatineで記録取得の許可を取得(1 件)",
 "ref": "S-60525",
-"summary": "Palatine 55 N Smith St で Rotary Club Octoberfest の臨時飲食営業許可(単発イベント)。"
+"summary": "Rotary ClubがPalatineで記録取得の許可を取得(1 件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

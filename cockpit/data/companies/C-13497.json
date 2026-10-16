@@ -24,57 +24,77 @@
 "faces": {
 "permits": {
 "count": 2,
-"value_total": 50000.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-15",
 "items": [
 {
 "id": "S-58476",
 "date": "2026-09-15",
-"applied": "2026-09-08",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Clermont County",
 "address": "201 FRONT ST NEW RICHMOND OH",
 "permit_no": "B-077997-2026",
 "permit_type": "Commercial Alteration Permit",
-"value": 45000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "New Richmond 村による Haussermann Park内「Liberty Landing Control Center」電源プラットフォームの商業改修許可 $45k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NR LIBERTY LANDING CONTROL CTR POWER PLAT.- HAUSSERMANN PARK / Commercial Alteration Permit / Alteration",
 "source_id": "SRC-022",
+"value": 45000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "VILLAGE OF NEW RICHMONDがNEW RICHMONDでユーティリティ更新の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "NR LIBERTY LANDING CONTROL CTR POWER PLAT.- HAUSSERMANN PARK / Commercial Alteration Permit / Alteration",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01Lv42GwnYquNdatWsieoun7",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:18.152601+00:00",
+"reading_id": "01M4W21N68QJPT03T2N6YQCBK2"
+},
+"n_permits": 1,
+"member_ids": [
+"S-58476"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "id": "S-28971",
 "date": "2026-08-26",
-"applied": "2026-08-18",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Clermont County",
 "address": "83 GEORGE ST NEW RICHMOND OH 45157",
 "permit_no": "B-077170-2026",
 "permit_type": "Commercial Alteration Permit",
+"source_id": "SRC-022",
 "value": 5000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "New Richmond の EV 充電器設置に伴う商業改修許可(所有者・金額不明)。",
+"category": "保全",
+"confidence": "high",
+"summary": "VILLAGE OF NEW RICHMONDがNEW RICHMONDでユーティリティ整備の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "NEW RICHMOND EV CHARGER / Commercial Alteration Permit / Alteration",
-"source_id": "SRC-022",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:29.249712+00:00",
+"reading_id": "01M4W22011PKXTQX061J8PANMR"
+},
+"n_permits": 1,
+"member_ids": [
+"S-28971"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -106,18 +126,18 @@
 {
 "date": "2026-09-15",
 "face": "permits",
-"title": "建設許可(Clermont County): 未分類",
+"title": "建設許可(Clermont County): VILLAGE OF NEW RICHMONDがNEW RICHMONDでユーティリティ更新の許可を取得(1件)",
 "ref": "S-58476",
-"summary": "New Richmond 村による Haussermann Park内「Liberty Landing Control Center」電源プラットフォームの商業改修許可 $45k。"
+"summary": "VILLAGE OF NEW RICHMONDがNEW RICHMONDでユーティリティ更新の許可を取得(1件)"
 },
 {
 "date": "2026-08-26",
 "face": "permits",
-"title": "建設許可(Clermont County): 未分類",
+"title": "建設許可(Clermont County): VILLAGE OF NEW RICHMONDがNEW RICHMONDでユーティリティ整備の許可を取得(1件)",
 "ref": "S-28971",
-"summary": "New Richmond の EV 充電器設置に伴う商業改修許可(所有者・金額不明)。"
+"summary": "VILLAGE OF NEW RICHMONDがNEW RICHMONDでユーティリティ整備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

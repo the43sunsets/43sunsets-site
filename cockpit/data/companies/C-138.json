@@ -20,106 +20,48 @@
 },
 "faces": {
 "permits": {
-"count": 60,
-"value_total": 216350000.0,
-"n_amount_excluded": 51,
-"latest": "2026-10-07",
+"count": 6,
+"value_total": null,
+"n_amount_excluded": 0,
+"latest": "2026-10-02",
 "items": [
 {
-"id": "S-76644",
-"date": "2026-10-07",
+"id": "S-1542",
+"date": "2026-09-24",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "FALRC2635779",
-"permit_type": "Fire Alarm",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth Corporation(Columbus 111 S Grant Ave)の火災警報設備工事。金額記載なし。",
-"infer": "病院施設の防災設備更新であり、設備投資規模は不明(推論不可)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
+"address": "3420 OHIOHEALTH PKWY",
+"permit_no": "ADDC2605078",
+"permit_type": "Addition",
 "source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XHcggG2rrCtkynq14uLAKE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-76659",
-"date": "2026-10-07",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601168",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
+"value": 115000000.0,
+"category": "操業の変化",
 "confidence": "high",
-"summary": "OhioHealth(3535 Olentangy River Rd)の看板設置許可、66 SQFT。金額記載なし。",
+"summary": "OHIOHEALTH CORPがColumbusで増築・修繕等の許可を取得(3件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Sign / 66 SQFT",
-"source_id": "SRC-017",
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Addition / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 467645 SQFT",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XHcggG2rrCtkynq14uLAKE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:59.419061+00:00",
+"reading_id": "01M4W26JNVZJSS73QZ4HX5FFXV"
 },
-{
-"id": "S-76660",
-"date": "2026-10-07",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601149",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "OhioHealth Corp(3535 Olentangy River Rd)の看板設置許可、1,319 SQFT。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Sign / 1319 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XHcggG2rrCtkynq14uLAKE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-75912",
-"date": "2026-10-06",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD UNIT TOWR",
-"permit_no": "MMEPC2640253",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd Unit Towr)における機械設備(MEP)工事。金額記載なし。",
-"infer": "病院法人の付帯機械設備(空調等)工事であり、親プロジェクトの一部である可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_016imNAt4wnykoG718XmQ8eb",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"n_permits": 3,
+"member_ids": [
+"S-1542",
+"S-36659",
+"S-67475"
+],
+"kinds": [
+"増築・新築",
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "ge_100m",
+"amount_band_label": "$100M 以上"
 },
 {
 "id": "S-73798",
@@ -130,572 +72,73 @@
 "address": "800 W NORTH BROADWAY",
 "permit_no": "MMEPC2639813",
 "permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth の Columbus 施設(800 W North Broadway)における機械設備(MEP)工事。金額記載なし。",
-"infer": "病院法人の機械設備工事であり、空調・配管等の付帯設備更新の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
 "source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "OHIOHEALTH CORPがColumbusで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Mechanical / MEP",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:26.129513+00:00",
+"reading_id": "01M4W25J5HYZ45QJM8N0Y5ZE20"
+},
+"n_permits": 1,
+"member_ids": [
+"S-73798"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
-"id": "S-70187",
+"id": "S-1778",
 "date": "2026-09-29",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
 "address": "285 E STATE ST",
-"permit_no": "MMEPC2639209",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth Corporation(Columbus 285 E State St)における機械設備(MEP)工事。金額は記録なし。",
-"infer": "病院法人の MEP 工事であり、空調・配管等の付帯設備更新の可能性(推論)。規模・内容の詳細は記録からは不明。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-70188",
-"date": "2026-09-29",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "MMEPC2639197",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth Corporation の Columbus 施設(285 E State St)で機械設備(MEP)工事。金額記載なし。",
-"infer": "病院法人による MEP 工事であり、既存施設の空調・配管等の維持・更新工事の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67573",
-"date": "2026-09-25",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "EMEPC2638699",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth Corporation(285 E State St, Columbus)における電気設備(MEP)工事。金額は未記載。",
-"infer": "病院法人の電気/MEP工事 = 施設維持・拡張に伴う付帯設備投資の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67592",
-"date": "2026-09-25",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3565 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601142",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "OhioHealth の Columbus 施設(3565 Olentangy River Rd)における 653 SQFT のサイン(看板)設置許可。金額記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Sign / 653 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67588",
-"date": "2026-09-25",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601155",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "OhioHealth(3535 Olentangy River Rd)における 19 SQFT の看板設置許可。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Sign / 19 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67593",
-"date": "2026-09-25",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3565 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601147",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "OhioHealth(3565 Olentangy River Rd)における 286 SQFT の看板設置許可。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Sign / 286 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67594",
-"date": "2026-09-25",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3565 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601157",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "OhioHealth(3565 Olentangy River Rd)の看板設置 44 SQFT。金額記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Sign / 44 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67589",
-"date": "2026-09-25",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601151",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における 41 SQFT の看板設置許可(金額記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Structures Other Than Buildings / Sign / 41 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67591",
-"date": "2026-09-25",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601148",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth(3535 Olentangy River Rd)における 384 SQFT の看板設置許可(金額不明)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Hospitals and Institutional Buildings / Sign / 384 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67590",
-"date": "2026-09-25",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601150",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における 719 SQFT のサイン(看板)設置許可。金額記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Sign / 719 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67472",
-"date": "2026-09-24",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601164",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)で 65 SQFT の看板設置許可。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Sign / 65 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01KZ9X6bWKjoQSoTnywC8LfN",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67475",
-"date": "2026-09-24",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3420 OHIOHEALTH PKWY",
-"permit_no": "EMEPC2638607",
-"permit_type": "Electrical",
-"value": null,
-"category": "医療施設",
-"confidence": "high",
-"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)での電気(MEP)工事の副許可。金額不明。",
-"infer": "同住所の大規模増築案件($115M)に付随する電気工事の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01KZ9X6bWKjoQSoTnywC8LfN",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67474",
-"date": "2026-09-24",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601152",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "OhioHealth Corp(3535 Olentangy River Rd)による 43 SQFT の看板設置許可。金額記録なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Structures Other Than Buildings / Sign / 43 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01KZ9X6bWKjoQSoTnywC8LfN",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-67473",
-"date": "2026-09-24",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "SIGN2601153",
-"permit_type": "NA",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における 329 SQFT の看板設置許可(金額不明)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "NA / Structures Other Than Buildings / Sign / 329 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01KZ9X6bWKjoQSoTnywC8LfN",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-65261",
-"date": "2026-09-21",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "EMEPC2637908",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における電気工事(MEP)許可。金額記載なし。",
-"infer": "病院法人の電気/MEP工事であり、既存施設の設備更新・拡張に付随する工事の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-63520",
-"date": "2026-09-18",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "EMEPC2637633",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における電気設備(MEP)工事。金額は記録に記載なし。",
-"infer": "病院法人による電気系統工事 = 既存医療施設の設備更新・拡張に伴う付帯工事の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_012Z3u24vYEiyTFeFp8apKgi",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-63340",
-"date": "2026-09-17",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "FSUPC2636534",
-"permit_type": "Fire Suppression",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth Corporation の Columbus 施設(285 E State St)で消防設備(Fire Suppression)の増設・改修工事。金額記載なし。",
-"infer": "病院法人による付帯設備工事 = 既存医療施設の改修に伴う消防・安全設備更新の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Suppression / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-59073",
-"date": "2026-09-14",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "ALTC2628738",
-"permit_type": "Alteration",
-"value": 650000.0,
-"category": "医療施設",
-"confidence": "high",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)で 4,644 SQFT の改修工事 $650k。",
-"infer": "病院法人による小規模改修 = 既存施設の内装・設備更新の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 4644 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-59059",
-"date": "2026-09-14",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "FALRC2632174",
-"permit_type": "Fire Alarm",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth Corporation の Columbus 施設(111 S Grant Ave)における火災報知設備(Fire Alarm)工事。金額記載なし。",
-"infer": "病院法人の付帯設備工事であり、既存医療施設の維持管理に伴う工事の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Alarm / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-54704",
-"date": "2026-09-10",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "800 W NORTH BROADWAY",
-"permit_no": "FALRC2624895",
-"permit_type": "Fire Alarm",
-"value": 95000000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "OhioHealth(800 W North Broadway)の駐車場ガレージに関する火災報知設備許可 $95M。",
-"infer": "用途分類が「Parking Garages」であり、病院機能そのものの拡張ではなく附属駐車施設の工事の可能性(推論)。金額は火災報知設備単体としては高額で、駐車場新築等の親案件の一部を表している可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Alarm / Parking Garages (Buildings and Open Decked) / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-36659",
-"date": "2026-09-04",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3420 OHIOHEALTH PKWY",
-"permit_no": "ALTC2605180",
-"permit_type": "Alteration",
-"value": 500000.0,
-"category": "医療施設",
-"confidence": "high",
-"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)で 9,090 SQFT の改修工事 $500k。",
-"infer": "同施設は過去に大規模増築($115M)があり、その関連または継続的な内装改修の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 9090 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-36627",
-"date": "2026-09-04",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "PMEPC2635782",
+"permit_no": "PMEPC2632227",
 "permit_type": "Plumbing",
+"source_id": "SRC-017",
 "value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 111 S Grant Ave での商業配管(MEP)工事、金額不明。",
+"category": "保全",
+"confidence": "high",
+"summary": "OHIOHEALTH CORPORATIONがColumbusで更新・修繕等の許可を取得(8件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
+"role": "operator",
+"role_label": "操業事業者",
 "verbatim": "Commercial - Other / Plumbing / MEP",
-"source_id": "SRC-017",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:04.058374+00:00",
+"reading_id": "01M4W26Q6T2E024D3X8RDFAZTP"
 },
-{
-"id": "S-36628",
-"date": "2026-09-04",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "MMEPC2635748",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 111 S Grant Ave の商業機械(MEP)関連許可、金額・所有者情報なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"n_permits": 8,
+"member_ids": [
+"S-1524",
+"S-1563",
+"S-1617",
+"S-1778",
+"S-63340",
+"S-67573",
+"S-70187",
+"S-70188"
+],
+"kinds": [
+"ユーティリティ",
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-36664",
@@ -706,328 +149,30 @@
 "address": "3555 OLENTANGY RIVER RD",
 "permit_no": "FSUPC2635263",
 "permit_type": "Fire Suppression",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 3555 Olentangy River Rd の商業施設における消防設備(スプリンクラー等)の許可。金額・所有者情報なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Suppression / Fire Protection",
 "source_id": "SRC-017",
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-40738",
-"date": "2026-09-02",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Dublin",
-"address": "6905 HOSPITAL Dr, DUBLIN OH 43016",
-"permit_no": "FALM-26-30057",
-"permit_type": "Commercial Fire Alarm",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Dublin Urgent Care / Submitted / Fire alarm panel upgrade / Commercial Fire Alarm",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-1360",
-"date": "2026-08-28",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "EMEPC2634797",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 111 S GRANT AVE の商業物件で電気工事(『Commercial - Other』の汎用ラベルのみ、規模・内容の記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-067",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1383",
-"date": "2026-08-27",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "EMEPC2634658",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus(111 S GRANT AVE)で商業建物向けの電気設備(MEP)副許可(用途・規模の記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-068",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1384",
-"date": "2026-08-27",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "FALRC2627827",
-"permit_type": "Fire Alarm",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus(111 S GRANT AVE)で商業建物向けの火災報知設備の副許可(1383と同一住所の関連案件、用途記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-068",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1401",
-"date": "2026-08-27",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "500 THOMAS LN",
-"permit_no": "PMEPC2634566",
-"permit_type": "Plumbing",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus(500 THOMAS LN)で商業建物向けの給排水設備(MEP)副許可(用途・規模の記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-068",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1406",
-"date": "2026-08-27",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "FALRC2630240",
-"permit_type": "Fire Alarm",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus(3535 OLENTANGY RIVER RD)で商業建物向けの火災報知設備工事(用途・規模の記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-068",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1542",
-"date": "2026-08-21",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3420 OHIOHEALTH PKWY",
-"permit_no": "ADDC2605078",
-"permit_type": "Addition",
-"value": 115000000.0,
-"category": "医療施設",
+"category": "保全",
 "confidence": "high",
-"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)で 467,645 SQFT の増築工事 $115M。",
-"infer": "病院法人による大規模増築 = 医療機器・画像診断・特殊空調設備の調達が竣工まで続く窓(推論)。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "Commercial - Other / Addition / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 467645 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-1524",
-"date": "2026-08-21",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "PMEPC2633728",
-"permit_type": "Plumbing",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 285 E STATE ST の商業用Plumbing設備許可(MEP)。所有者・金額の記載なし、親工事の内容は本レコードのみでは不明。",
+"summary": "OHIOHEALTH CORPがColumbusで警備設備の許可を取得(1件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-069",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1563",
-"date": "2026-08-20",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "PMEPC2633474",
-"permit_type": "Plumbing",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 285 E State St の商業配管MEP許可。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-070",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1617",
-"date": "2026-08-18",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "EMEPC2633091",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 285 E State St の商業電気MEP許可(1563の配管許可と同住所)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-070",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1649",
-"date": "2026-08-17",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "800 W NORTH BROADWAY",
-"permit_no": "FSUPC2619600",
-"permit_type": "Fire Suppression",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "800 W NORTH BROADWAY の許可(種別: Fire Suppression)。MEP副許可(親案件不明・所有者/金額の記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
+"role": "operator",
+"role_label": "操業事業者",
 "verbatim": "Commercial - Other / Fire Suppression / Fire Protection",
-"source_id": "SRC-017",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-071",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:42.961465+00:00",
+"reading_id": "01M4W22DDHSM1GS15J5EDP62VV"
 },
-{
-"id": "S-1737",
-"date": "2026-08-12",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "ALTC2627989",
-"permit_type": "Alteration",
-"value": 1000000.0,
-"category": "医療施設",
-"confidence": "high",
-"summary": "OhioHealth の Columbus 施設(111 S Grant Ave)で 1,304 SQFT の改修工事 $1.0M。",
-"infer": "小規模改修 = 既存医療施設内の部分的な設備更新の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 1304 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-1778",
-"date": "2026-08-11",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "PMEPC2632227",
-"permit_type": "Plumbing",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 285 E State St の商業用配管許可(テナント・用途不明の汎用ラベルのみ)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-073",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"n_permits": 1,
+"member_ids": [
+"S-36664"
+],
+"kinds": [
+"警備"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-1812",
@@ -1038,420 +183,66 @@
 "address": "340 E TOWN ST",
 "permit_no": "ALTC2628102",
 "permit_type": "Alteration",
+"source_id": "SRC-017",
 "value": 100000.0,
-"category": "未分類",
+"category": "保全",
 "confidence": "high",
-"summary": "Columbusの340 E TOWN STで非住宅の商業建物でAlteration工事を実施(用途不明) $100k。",
+"summary": "OHIOHEALTH CORPORATIONがColumbusで更新・修繕の許可を取得(1件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
+"role": "operator",
+"role_label": "操業事業者",
 "verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 200 SQFT",
-"source_id": "SRC-017",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-008",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:55.712562+00:00",
+"reading_id": "01M4W24MF0A52H2T61MZ4A9W1X"
+},
+"n_permits": 1,
+"member_ids": [
+"S-1812"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 },
 {
-"id": "S-1855",
-"date": "2026-08-07",
+"id": "S-67592",
+"date": "2026-09-25",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "ALTC2629458",
-"permit_type": "Alteration",
-"value": 2000000.0,
-"category": "医療施設",
+"address": "3565 OLENTANGY RIVER RD",
+"permit_no": "SIGN2601142",
+"permit_type": "NA",
+"source_id": "SRC-017",
+"value": null,
+"category": "事務所・その他",
 "confidence": "high",
-"summary": "OhioHealth の Columbus 施設(111 S Grant Ave)で 12,000 SQFT の改修工事 $2M。",
-"infer": "病院法人による構造改修 = 内装・設備更新に伴う医療関連機器の調達が発生する可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 12000 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-1941",
-"date": "2026-08-05",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "MMEPC2631295",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbus 111 S GRANT AVE の商業用機械設備工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。",
+"summary": "OHIOHEALTH CORPがColumbusで看板設置の許可を取得(3件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "NA / Sign / 653 SQFT",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-074",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:44.441456+00:00",
+"reading_id": "01M4W249ES7SD6YVEHN0RZ79K2"
 },
-{
-"id": "S-2005",
-"date": "2026-08-03",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "EMEPC2630811",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 111 S Grant Ave の商業電気工事副許可(詳細不明、親案件不明)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-075",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-2232",
-"date": "2026-07-27",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD UNIT TOWR",
-"permit_no": "FALRC2617282",
-"permit_type": "Fire Alarm",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 3535 OLENTANGY RIVER RD UNIT TOWR の商業建物で火災警報のサブ許可(所有者記載なし、工事内容の詳細記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-077",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-2297",
-"date": "2026-07-23",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "FALRC2621033",
-"permit_type": "Fire Alarm",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 3535 Olentangy River Rd、「病院・施設系建物(Hospitals and Institutional Buildings)」区分の火災報知設備工事、規模・金額は記録なし。",
-"infer": "許可区分から病院・医療施設向けの可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Alarm / Hospitals and Institutional Buildings / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-078",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-2333",
-"date": "2026-07-21",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "FSUPC2626027",
-"permit_type": "Fire Suppression",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbus 111 S Grant Ave の消防設備(Fire Suppression)工事。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Suppression / Mechanical Permits or NA / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-079",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-2377",
-"date": "2026-07-20",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3535 OLENTANGY RIVER RD",
-"permit_no": "EMEPC2628677",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbus 3535 Olentangy River Rd の商業用電気工事(MEP)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-079",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-41177",
-"date": "2026-07-20",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Dublin",
-"address": "5350 FRANTZ Rd, 3, DUBLIN OH 43016",
-"permit_no": "FSUP-26-00222-001",
-"permit_type": "Revision Request",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Submitted / Alteration to the existing fire suppression system to add/ relocate 201 sprinkler heads for tenant improvement. / Revision Request",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-2446",
-"date": "2026-07-16",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "ALTC2621758",
-"permit_type": "Alteration",
-"value": 2000000.0,
-"category": "医療施設",
-"confidence": "high",
-"summary": "OhioHealth の Columbus 施設(285 E State St)で 4,130 SQFT の改修工事 $2.0M。",
-"infer": "病院法人による中規模改修 = 医療機器・内装設備の更新に伴う調達の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 4130 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-2482",
-"date": "2026-07-15",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "MMEPC2628110",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 111 S Grant Ave、機械設備(MEP)の商業許可(詳細・所有者記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-081",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-2552",
-"date": "2026-07-13",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "ALTC2612118",
-"permit_type": "Alteration",
-"value": 100000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbusの111 S GRANT AVEで非住宅の商業建物でAlteration工事を実施(用途不明) $100k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 5000 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-008",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-2554",
-"date": "2026-07-13",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "MMEPC2627692",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 285 E STATE ST の商業建物向け機械(Mechanical)副許可(親プロジェクト・所有者・金額の記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-082",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-2620",
-"date": "2026-07-09",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "PMEPC2627145",
-"permit_type": "Plumbing",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 111 S GRANT AVE の商業建物向け給排水(Plumbing)副許可(親プロジェクト・所有者・金額の記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-082",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-41282",
-"date": "2026-07-09",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Dublin",
-"address": "6905 HOSPITAL Dr, DUBLIN OH 43016",
-"permit_no": "CMEC-26-60482",
-"permit_type": "Commercial HVAC Replacement",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Ohio Health / Replacement of (1) RTU / Commercial HVAC Replacement",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-2693",
-"date": "2026-07-07",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "EMEPC2626647",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 285 E STATE ST の商業用Electrical許可、スコープ記載なし・金額/所有者情報なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-083",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-2694",
-"date": "2026-07-07",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "285 E STATE ST",
-"permit_no": "FSUPC2625320",
-"permit_type": "Fire Suppression",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 285 E STATE ST の商業用Fire Suppression許可、スコープ記載なし・金額/所有者情報なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Suppression / Mechanical Permits or NA / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-083",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-2722",
-"date": "2026-07-06",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "111 S GRANT AVE",
-"permit_no": "PMEPC2626355",
-"permit_type": "Plumbing",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 111 S GRANT AVE の商業建物向け MEP 副許可(Plumbing)。親案件・用途・金額の記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-084",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"n_permits": 3,
+"member_ids": [
+"S-67592",
+"S-67593",
+"S-67594"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -1474,13 +265,13 @@
 "latest": "2026-09-03",
 "items": [
 {
-"title": "Exp OR RN-Work on Weekends",
+"title": "Radiology Technologist",
 "role": "その他",
 "city": null,
 "state": null,
 "posted": "2026-09-03",
 "first_seen": "2026-09-07",
-"url": "https://ohiohealth.wd5.myworkdayjobs.com/OhioHealthJobs/job/GRANT-MEDICAL-CENTER/Exp-OR-RN-Work-on-Weekends_JR153180"
+"url": "https://ohiohealth.wd5.myworkdayjobs.com/OhioHealthJobs/job/GRANT-MEDICAL-CENTER/Radiology-Technologist_JR153722"
 }
 ],
 "source": "workday(採用ページの公開 API)"
@@ -1498,426 +289,48 @@
 },
 "timeline": [
 {
-"date": "2026-10-07",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-76644",
-"summary": "OhioHealth Corporation(Columbus 111 S Grant Ave)の火災警報設備工事。金額記載なし。"
-},
-{
-"date": "2026-10-07",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-76659",
-"summary": "OhioHealth(3535 Olentangy River Rd)の看板設置許可、66 SQFT。金額記載なし。"
-},
-{
-"date": "2026-10-07",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-76660",
-"summary": "OhioHealth Corp(3535 Olentangy River Rd)の看板設置許可、1,319 SQFT。"
-},
-{
-"date": "2026-10-06",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-75912",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd Unit Towr)における機械設備(MEP)工事。金額記載なし。"
-},
-{
 "date": "2026-10-02",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): OHIOHEALTH CORPがColumbusで更新・修繕の許可を取得(1件)",
 "ref": "S-73798",
-"summary": "OhioHealth の Columbus 施設(800 W North Broadway)における機械設備(MEP)工事。金額記載なし。"
+"summary": "OHIOHEALTH CORPがColumbusで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-09-29",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-70187",
-"summary": "OhioHealth Corporation(Columbus 285 E State St)における機械設備(MEP)工事。金額は記録なし。"
-},
-{
-"date": "2026-09-29",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-70188",
-"summary": "OhioHealth Corporation の Columbus 施設(285 E State St)で機械設備(MEP)工事。金額記載なし。"
-},
-{
-"date": "2026-09-25",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67573",
-"summary": "OhioHealth Corporation(285 E State St, Columbus)における電気設備(MEP)工事。金額は未記載。"
-},
-{
-"date": "2026-09-25",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67592",
-"summary": "OhioHealth の Columbus 施設(3565 Olentangy River Rd)における 653 SQFT のサイン(看板)設置許可。金額記載なし。"
-},
-{
-"date": "2026-09-25",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67588",
-"summary": "OhioHealth(3535 Olentangy River Rd)における 19 SQFT の看板設置許可。"
-},
-{
-"date": "2026-09-25",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67593",
-"summary": "OhioHealth(3565 Olentangy River Rd)における 286 SQFT の看板設置許可。"
-},
-{
-"date": "2026-09-25",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67594",
-"summary": "OhioHealth(3565 Olentangy River Rd)の看板設置 44 SQFT。金額記載なし。"
-},
-{
-"date": "2026-09-25",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67589",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における 41 SQFT の看板設置許可(金額記載なし)。"
-},
-{
-"date": "2026-09-25",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67591",
-"summary": "OhioHealth(3535 Olentangy River Rd)における 384 SQFT の看板設置許可(金額不明)。"
-},
-{
-"date": "2026-09-25",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67590",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における 719 SQFT のサイン(看板)設置許可。金額記載なし。"
-},
-{
-"date": "2026-09-24",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67472",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)で 65 SQFT の看板設置許可。"
-},
-{
-"date": "2026-09-24",
-"face": "permits",
-"title": "建設許可(Columbus): 医療施設",
-"ref": "S-67475",
-"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)での電気(MEP)工事の副許可。金額不明。"
-},
-{
-"date": "2026-09-24",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67474",
-"summary": "OhioHealth Corp(3535 Olentangy River Rd)による 43 SQFT の看板設置許可。金額記録なし。"
-},
-{
-"date": "2026-09-24",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-67473",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における 329 SQFT の看板設置許可(金額不明)。"
-},
-{
-"date": "2026-09-21",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-65261",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における電気工事(MEP)許可。金額記載なし。"
-},
-{
-"date": "2026-09-18",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-63520",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)における電気設備(MEP)工事。金額は記録に記載なし。"
-},
-{
-"date": "2026-09-17",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-63340",
-"summary": "OhioHealth Corporation の Columbus 施設(285 E State St)で消防設備(Fire Suppression)の増設・改修工事。金額記載なし。"
-},
-{
-"date": "2026-09-14",
-"face": "permits",
-"title": "建設許可(Columbus): 医療施設",
-"ref": "S-59073",
-"summary": "OhioHealth の Columbus 施設(3535 Olentangy River Rd)で 4,644 SQFT の改修工事 $650k。"
-},
-{
-"date": "2026-09-14",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-59059",
-"summary": "OhioHealth Corporation の Columbus 施設(111 S Grant Ave)における火災報知設備(Fire Alarm)工事。金額記載なし。"
-},
-{
-"date": "2026-09-10",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-54704",
-"summary": "OhioHealth(800 W North Broadway)の駐車場ガレージに関する火災報知設備許可 $95M。"
-},
-{
-"date": "2026-09-04",
-"face": "permits",
-"title": "建設許可(Columbus): 医療施設",
-"ref": "S-36659",
-"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)で 9,090 SQFT の改修工事 $500k。"
-},
-{
-"date": "2026-09-04",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-36627",
-"summary": "Columbus 111 S Grant Ave での商業配管(MEP)工事、金額不明。"
-},
-{
-"date": "2026-09-04",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-36628",
-"summary": "Columbus 111 S Grant Ave の商業機械(MEP)関連許可、金額・所有者情報なし。"
-},
-{
-"date": "2026-09-04",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-36664",
-"summary": "Columbus 3555 Olentangy River Rd の商業施設における消防設備(スプリンクラー等)の許可。金額・所有者情報なし。"
-},
-{
-"date": "2026-09-02",
-"face": "permits",
-"title": "建設許可(Dublin): 未評価",
-"ref": "S-40738",
-"summary": null
-},
-{
-"date": "2026-08-28",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1360",
-"summary": "Columbus 111 S GRANT AVE の商業物件で電気工事(『Commercial - Other』の汎用ラベルのみ、規模・内容の記載なし)。"
-},
-{
-"date": "2026-08-27",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1383",
-"summary": "Columbus(111 S GRANT AVE)で商業建物向けの電気設備(MEP)副許可(用途・規模の記載なし)。"
-},
-{
-"date": "2026-08-27",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1384",
-"summary": "Columbus(111 S GRANT AVE)で商業建物向けの火災報知設備の副許可(1383と同一住所の関連案件、用途記載なし)。"
-},
-{
-"date": "2026-08-27",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1401",
-"summary": "Columbus(500 THOMAS LN)で商業建物向けの給排水設備(MEP)副許可(用途・規模の記載なし)。"
-},
-{
-"date": "2026-08-27",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1406",
-"summary": "Columbus(3535 OLENTANGY RIVER RD)で商業建物向けの火災報知設備工事(用途・規模の記載なし)。"
-},
-{
-"date": "2026-08-21",
-"face": "permits",
-"title": "建設許可(Columbus): 医療施設",
-"ref": "S-1542",
-"summary": "OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)で 467,645 SQFT の増築工事 $115M。"
-},
-{
-"date": "2026-08-21",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1524",
-"summary": "Columbus 285 E STATE ST の商業用Plumbing設備許可(MEP)。所有者・金額の記載なし、親工事の内容は本レコードのみでは不明。"
-},
-{
-"date": "2026-08-20",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1563",
-"summary": "Columbus 285 E State St の商業配管MEP許可。"
-},
-{
-"date": "2026-08-18",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1617",
-"summary": "Columbus 285 E State St の商業電気MEP許可(1563の配管許可と同住所)。"
-},
-{
-"date": "2026-08-17",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1649",
-"summary": "800 W NORTH BROADWAY の許可(種別: Fire Suppression)。MEP副許可(親案件不明・所有者/金額の記載なし)。"
-},
-{
-"date": "2026-08-12",
-"face": "permits",
-"title": "建設許可(Columbus): 医療施設",
-"ref": "S-1737",
-"summary": "OhioHealth の Columbus 施設(111 S Grant Ave)で 1,304 SQFT の改修工事 $1.0M。"
-},
-{
-"date": "2026-08-11",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): OHIOHEALTH CORPORATIONがColumbusで更新・修繕等の許可を取得(8件)",
 "ref": "S-1778",
-"summary": "Columbus 285 E State St の商業用配管許可(テナント・用途不明の汎用ラベルのみ)。"
+"summary": "OHIOHEALTH CORPORATIONがColumbusで更新・修繕等の許可を取得(8件)"
+},
+{
+"date": "2026-09-25",
+"face": "permits",
+"title": "建設許可(Columbus): OHIOHEALTH CORPがColumbusで看板設置の許可を取得(3件)",
+"ref": "S-67592",
+"summary": "OHIOHEALTH CORPがColumbusで看板設置の許可を取得(3件)"
+},
+{
+"date": "2026-09-24",
+"face": "permits",
+"title": "建設許可(Columbus): OHIOHEALTH CORPがColumbusで増築・修繕等の許可を取得(3件)",
+"ref": "S-1542",
+"summary": "OHIOHEALTH CORPがColumbusで増築・修繕等の許可を取得(3件)"
+},
+{
+"date": "2026-09-04",
+"face": "permits",
+"title": "建設許可(Columbus): OHIOHEALTH CORPがColumbusで警備設備の許可を取得(1件)",
+"ref": "S-36664",
+"summary": "OHIOHEALTH CORPがColumbusで警備設備の許可を取得(1件)"
 },
 {
 "date": "2026-08-10",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): OHIOHEALTH CORPORATIONがColumbusで更新・修繕の許可を取得(1件)",
 "ref": "S-1812",
-"summary": "Columbusの340 E TOWN STで非住宅の商業建物でAlteration工事を実施(用途不明) $100k。"
-},
-{
-"date": "2026-08-07",
-"face": "permits",
-"title": "建設許可(Columbus): 医療施設",
-"ref": "S-1855",
-"summary": "OhioHealth の Columbus 施設(111 S Grant Ave)で 12,000 SQFT の改修工事 $2M。"
-},
-{
-"date": "2026-08-05",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1941",
-"summary": "Columbus 111 S GRANT AVE の商業用機械設備工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。"
-},
-{
-"date": "2026-08-03",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2005",
-"summary": "Columbus 111 S Grant Ave の商業電気工事副許可(詳細不明、親案件不明)。"
-},
-{
-"date": "2026-07-27",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2232",
-"summary": "Columbus 3535 OLENTANGY RIVER RD UNIT TOWR の商業建物で火災警報のサブ許可(所有者記載なし、工事内容の詳細記載なし)。"
-},
-{
-"date": "2026-07-23",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2297",
-"summary": "Columbus 3535 Olentangy River Rd、「病院・施設系建物(Hospitals and Institutional Buildings)」区分の火災報知設備工事、規模・金額は記録なし。"
-},
-{
-"date": "2026-07-21",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2333",
-"summary": "Columbus 111 S Grant Ave の消防設備(Fire Suppression)工事。"
-},
-{
-"date": "2026-07-20",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2377",
-"summary": "Columbus 3535 Olentangy River Rd の商業用電気工事(MEP)。"
-},
-{
-"date": "2026-07-20",
-"face": "permits",
-"title": "建設許可(Dublin): 未評価",
-"ref": "S-41177",
-"summary": null
-},
-{
-"date": "2026-07-16",
-"face": "permits",
-"title": "建設許可(Columbus): 医療施設",
-"ref": "S-2446",
-"summary": "OhioHealth の Columbus 施設(285 E State St)で 4,130 SQFT の改修工事 $2.0M。"
-},
-{
-"date": "2026-07-15",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2482",
-"summary": "Columbus 111 S Grant Ave、機械設備(MEP)の商業許可(詳細・所有者記載なし)。"
-},
-{
-"date": "2026-07-13",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2552",
-"summary": "Columbusの111 S GRANT AVEで非住宅の商業建物でAlteration工事を実施(用途不明) $100k。"
-},
-{
-"date": "2026-07-13",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2554",
-"summary": "Columbus 285 E STATE ST の商業建物向け機械(Mechanical)副許可(親プロジェクト・所有者・金額の記載なし)。"
-},
-{
-"date": "2026-07-09",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2620",
-"summary": "Columbus 111 S GRANT AVE の商業建物向け給排水(Plumbing)副許可(親プロジェクト・所有者・金額の記載なし)。"
-},
-{
-"date": "2026-07-09",
-"face": "permits",
-"title": "建設許可(Dublin): 未評価",
-"ref": "S-41282",
-"summary": null
-},
-{
-"date": "2026-07-07",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2693",
-"summary": "Columbus 285 E STATE ST の商業用Electrical許可、スコープ記載なし・金額/所有者情報なし。"
-},
-{
-"date": "2026-07-07",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2694",
-"summary": "Columbus 285 E STATE ST の商業用Fire Suppression許可、スコープ記載なし・金額/所有者情報なし。"
-},
-{
-"date": "2026-07-06",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-2722",
-"summary": "Columbus 111 S GRANT AVE の商業建物向け MEP 副許可(Plumbing)。親案件・用途・金額の記載なし。"
+"summary": "OHIOHEALTH CORPORATIONがColumbusで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -24,33 +24,43 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 6107.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-28",
 "items": [
 {
 "id": "S-73910",
 "date": "2026-09-28",
-"applied": "2026-09-23",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cleveland",
 "address": "10820 EAST BLVD, CLEVELAND, OH, 44106",
 "permit_no": "BCB26-041206",
 "permit_type": "Commercial Building",
-"value": 6107.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Cleveland市が10820 East Blvdにテント(20x40×1、20x20×2、10x20×3、10x10×18)を設営 $6,107。Blood Cancer United/Light the Nightイベント用。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial Building / A-2 Reduced to B-Business / Tent-Stage / ERECT (1) 20X40 TENT, (2) 20X20 TENTS, (3) 10X20 TENTS, AND (18) 10X10 TENTS PER APPROVED SITE PLAN + MANU. SPECS. FOR BLOOD CANCER UNITED/LIGHT THE NIGHT EVENT ON 09/30/26.",
 "source_id": "SRC-068",
+"value": 6107.0,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "BLOOD CANCER UNITEDがクリーブランドでテント設営の許可を取得(1件)",
+"infer": "09/30/26",
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial Building / A-2 Reduced to B-Business / Tent-Stage / ERECT (1) 20X40 TENT, (2) 20X20 TENTS, (3) 10X20 TENTS, AND (18) 10X10 TENTS PER APPROVED SITE PLAN + MANU. SPECS. FOR BLOOD CANCER UNITED/LIGHT THE NIGHT EVENT ON 09/30/26.",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:41.103254+00:00",
+"reading_id": "01M4W260SF5YRTTK4JJVNF9D7Q"
+},
+"n_permits": 1,
+"member_ids": [
+"S-73910"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Cleveland): 未分類",
+"title": "建設許可(Cleveland): BLOOD CANCER UNITEDがクリーブランドでテント設営の許可を取得(1件)",
 "ref": "S-73910",
-"summary": "Cleveland市が10820 East Blvdにテント(20x40×1、20x20×2、10x20×3、10x10×18)を設営 $6,107。Blood Cancer United/Light the Nightイベント用。"
+"summary": "BLOOD CANCER UNITEDがクリーブランドでテント設営の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

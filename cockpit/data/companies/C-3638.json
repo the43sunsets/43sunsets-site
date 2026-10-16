@@ -23,54 +23,44 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 38675.0,
+"count": 1,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-25",
 "items": [
 {
 "id": "S-67077",
 "date": "2026-09-25",
-"applied": "2026-09-10",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Clermont County",
 "address": "4225 CURLISS LN BATAVIA OH",
 "permit_no": "B-078041-2026",
 "permit_type": "Commercial - Sign",
+"source_id": "SRC-022",
 "value": 8675.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "DAINTY USAがBATAVIAで看板設置の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "DAINTY USA WALL SIGNS / Commercial - Sign / Sign",
-"source_id": "SRC-022",
-"provenance": null
-},
-{
-"id": "S-28481",
-"date": "2026-07-13",
-"applied": "2026-07-06",
-"state": "OH",
-"jurisdiction": "Clermont County",
-"address": "4225 CURLISS LN BATAVIA OH",
-"permit_no": "B-075873-2026",
-"permit_type": "Commercial Alteration Permit",
-"value": 30000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Dainty USA(Batavia OH)における屋根補強の商業改修許可(金額不明)。",
-"infer": "屋根補強は構造・防水目的の可能性が高く、生産設備投資とは読みにくい(推論)。社名 'Dainty' はパン・製菓関連企業である可能性(推論)。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "DAINTY USA ROOF REINFORCEMENT / Commercial Alteration Permit / Alteration",
-"source_id": "SRC-022",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:45.178101+00:00",
+"reading_id": "01M4W24A5TQMQQ4TP5ZTGN28NA"
+},
+"n_permits": 1,
+"member_ids": [
+"S-67077"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -102,18 +92,11 @@
 {
 "date": "2026-09-25",
 "face": "permits",
-"title": "建設許可(Clermont County): 未評価",
+"title": "建設許可(Clermont County): DAINTY USAがBATAVIAで看板設置の許可を取得(1件)",
 "ref": "S-67077",
-"summary": null
-},
-{
-"date": "2026-07-13",
-"face": "permits",
-"title": "建設許可(Clermont County): 未分類",
-"ref": "S-28481",
-"summary": "Dainty USA(Batavia OH)における屋根補強の商業改修許可(金額不明)。"
+"summary": "DAINTY USAがBATAVIAで看板設置の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

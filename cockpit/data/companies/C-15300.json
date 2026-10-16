@@ -24,33 +24,44 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 348066.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-10-01",
 "items": [
 {
 "id": "S-70346",
 "date": "2026-10-01",
-"applied": "2026-09-16",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Arlington Heights",
 "address": "1501 W SHURE DR ARLINGTON HEIGHTS IL 60004",
 "permit_no": "FIREC2026-00099",
 "permit_type": "Fire Commercial Systems - Fire Alarm",
-"value": 348066.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Arlington Heights 1501 W Shure Dr で火災報知設備の改修($348,066)。ポンプ室・ファイアライザー室のスプリンクラー監視モジュール追加、煙検知器/VESDA検知器の再設定、3箇所にグラフィック表示器を増設(64,328 SF)。",
-"infer": "既存建物の防災設備更新(副次的工事)であり、所有者・用途が不明のため生産設備投資シグナルとは判定できない(推論)。",
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Program new and re program existing monitor modules for added sprinkler devices in pump room and fire riser room.\nRe program existing smoke detectors and vesda detectors from alarm points to supervisory points (24 hr manned panel)\nAdd 3 graphic annunciators at Lobby 1003, Security Office 1022 and Ma",
 "source_id": "SRC-022",
+"value": 348066.0,
+"category": "保全",
+"confidence": "high",
+"summary": "MOTOROLA INC CLG EDDY LがArlington Heightsで更新・修繕/警備の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Program new and re program existing monitor modules for added sprinkler devices in pump room and fire riser room.\nRe program existing smoke detectors and vesda detectors from alarm points to supervisory points (24 hr manned panel)\nAdd 3 graphic annunciators at Lobby 1003, Security Office 1022 and Ma",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:32.997653+00:00",
+"reading_id": "01M4W25RW5GYTWWCR9S283CX7X"
+},
+"n_permits": 1,
+"member_ids": [
+"S-70346"
+],
+"kinds": [
+"更新・修繕",
+"警備"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 }
 ]
 },
@@ -82,11 +93,11 @@
 {
 "date": "2026-10-01",
 "face": "permits",
-"title": "建設許可(Arlington Heights): 未分類",
+"title": "建設許可(Arlington Heights): MOTOROLA INC CLG EDDY LがArlington Heightsで更新・修繕/警備の許可を取得(1件)",
 "ref": "S-70346",
-"summary": "Arlington Heights 1501 W Shure Dr で火災報知設備の改修($348,066)。ポンプ室・ファイアライザー室のスプリンクラー監視モジュール追加、煙検知器/VESDA検知器の再設定、3箇所にグラフィック表示器を増設(64,328 SF)。"
+"summary": "MOTOROLA INC CLG EDDY LがArlington Heightsで更新・修繕/警備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

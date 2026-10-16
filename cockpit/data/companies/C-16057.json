@@ -24,7 +24,7 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 10.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-18",
 "items": [
@@ -37,20 +37,30 @@
 "address": "W 420 STATE",
 "permit_no": "MULCOM20261816",
 "permit_type": "Multifamily/Commercial Permits",
+"source_id": "SRC-002",
 "value": 10.0,
-"category": "未分類",
+"category": "事務所・その他",
 "confidence": "high",
-"summary": "Winnebago County Courthouse の非照明文字サインの設置許可($10)。",
+"summary": "Winnebago County CourthouseがRockfordで事務所・その他の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "SIGN / 24 NonIlluminated LettersWinnebago County Courthouse / SIGNS",
-"source_id": "SRC-002",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:23.100888+00:00",
+"reading_id": "01M4W279SW1NVX1Q168T9KB8HT"
+},
+"n_permits": 1,
+"member_ids": [
+"S-69133"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-18",
 "face": "permits",
-"title": "建設許可(Rockford): 未分類",
+"title": "建設許可(Rockford): Winnebago County CourthouseがRockfordで事務所・その他の許可を取得(1件)",
 "ref": "S-69133",
-"summary": "Winnebago County Courthouse の非照明文字サインの設置許可($10)。"
+"summary": "Winnebago County CourthouseがRockfordで事務所・その他の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

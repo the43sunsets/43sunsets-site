@@ -23,58 +23,45 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 1,
 "value_total": null,
-"n_amount_excluded": 2,
+"n_amount_excluded": 0,
 "latest": "2026-09-29",
 "items": [
 {
-"id": "S-69294",
-"date": "2026-09-29",
-"applied": "2026-08-07",
-"state": "IN",
-"jurisdiction": "Indiana/LAKE",
-"address": "831 Joliet St",
-"permit_no": "463270:2026-09-29",
-"permit_type": "CDR release",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Indiana/Lake 郡 831 Joliet St の Geitonia Restaurant に関する CDR release(許可種別)。金額・所有者情報なし。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Geitonia Restaurant / Restaurant",
-"source_id": "SRC-009",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-68586",
-"date": "2026-09-15",
-"applied": "2026-08-07",
+"date": "2026-09-29",
+"applied": null,
 "state": "IN",
 "jurisdiction": "Indiana/LAKE",
 "address": "831 Joliet St",
 "permit_no": "463270:2026-09-15",
 "permit_type": "CDR release",
+"source_id": "SRC-009",
 "value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Indiana/Lake 郡 831 Joliet St の Geitonia Restaurant に関する CDR release(金額・所有者情報なし)。",
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "Geitonia Restaurantがレイク郡で記録の許可を取得(2件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Geitonia Restaurant / Restaurant",
-"source_id": "SRC-009",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:26.883485+00:00",
+"reading_id": "01M4W23RA3BEGAH9YM16FS5X9P"
+},
+"n_permits": 2,
+"member_ids": [
+"S-68586",
+"S-69294"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -106,18 +93,11 @@
 {
 "date": "2026-09-29",
 "face": "permits",
-"title": "建設許可(Indiana/LAKE): 未分類",
-"ref": "S-69294",
-"summary": "Indiana/Lake 郡 831 Joliet St の Geitonia Restaurant に関する CDR release(許可種別)。金額・所有者情報なし。"
-},
-{
-"date": "2026-09-15",
-"face": "permits",
-"title": "建設許可(Indiana/LAKE): 未分類",
+"title": "建設許可(Indiana/LAKE): Geitonia Restaurantがレイク郡で記録の許可を取得(2件)",
 "ref": "S-68586",
-"summary": "Indiana/Lake 郡 831 Joliet St の Geitonia Restaurant に関する CDR release(金額・所有者情報なし)。"
+"summary": "Geitonia Restaurantがレイク郡で記録の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

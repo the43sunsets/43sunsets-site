@@ -23,58 +23,44 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 265807.0,
+"count": 1,
+"value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-14",
+"latest": "2026-09-17",
 "items": [
-{
-"id": "S-79171",
-"date": "2026-10-14",
-"applied": "2026-10-13",
-"state": "IL",
-"jurisdiction": "Arlington Heights",
-"address": "3722 N VENTURA DR ARLINGTON HEIGHTS IL 60004",
-"permit_no": "CO2026-00064",
-"permit_type": "Certificate of Occupancy",
-"value": 250000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "WITRON のオフィスビルド・アウト工事 $250k(Arlington Heights 3722 N Ventura Dr)。既存オフィス改修とAHU更新、倉庫部分への新規屋上HVAC2台設置を含む。",
-"infer": "WITRON は独系の物流・マテハン(倉庫自動化)システム企業であり、既存倉庫併設オフィスの小規模改修・空調更新にとどまる(推論)。生産設備投資ではなく既存拠点の維持管理工事の可能性。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "WITRON OFFICE BUILD OUT- The scope of work consists of an interior remodel of an existing office space. The remodel includes four private offices, an open office area, and one conference room. \n\nThe project also includes replacement of the existing air handling unit (AHU) currently serving the offic",
-"source_id": "SRC-022",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01MoH2kWYCFeWLZmpbpfYBjG",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
 {
 "id": "S-59854",
 "date": "2026-09-17",
-"applied": "2026-08-18",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Arlington Heights",
 "address": "3722 N VENTURA DR ARLINGTON HEIGHTS IL 60004",
 "permit_no": "FIREC2026-00089",
 "permit_type": "Fire Commercial Systems - Fire Alarm",
-"value": 15807.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Arlington Heights 3722 N Ventura Dr の WITRON オフィス内装工事に伴う火災報知器増設 $15,807。",
-"infer": "WITRON は物流・マテハン(倉庫自動化)システムメーカーであり、オフィス内装の小規模付帯工事のため設備投資シグナルとしては弱い(推論)。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "WITRON OFFICE BUILD OUT- ADD FIRE ALARM DEVICES / Fire Commercial Systems - Fire Alarm / Fire Alarm",
 "source_id": "SRC-022",
+"value": 15807.0,
+"category": "保全",
+"confidence": "high",
+"summary": "WITRONがアーリントンハイツで警備設備の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "WITRON OFFICE BUILD OUT- ADD FIRE ALARM DEVICES / Fire Commercial Systems - Fire Alarm / Fire Alarm",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:21.807237+00:00",
+"reading_id": "01M4W278HFE0SG7JB78F3RTASF"
+},
+"n_permits": 1,
+"member_ids": [
+"S-59854"
+],
+"kinds": [
+"警備"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -104,20 +90,13 @@
 },
 "timeline": [
 {
-"date": "2026-10-14",
-"face": "permits",
-"title": "建設許可(Arlington Heights): 未分類",
-"ref": "S-79171",
-"summary": "WITRON のオフィスビルド・アウト工事 $250k(Arlington Heights 3722 N Ventura Dr)。既存オフィス改修とAHU更新、倉庫部分への新規屋上HVAC2台設置を含む。"
-},
-{
 "date": "2026-09-17",
 "face": "permits",
-"title": "建設許可(Arlington Heights): 未分類",
+"title": "建設許可(Arlington Heights): WITRONがアーリントンハイツで警備設備の許可を取得(1件)",
 "ref": "S-59854",
-"summary": "Arlington Heights 3722 N Ventura Dr の WITRON オフィス内装工事に伴う火災報知器増設 $15,807。"
+"summary": "WITRONがアーリントンハイツで警備設備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -24,33 +24,43 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 1500.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-17",
 "items": [
 {
 "id": "S-61946",
 "date": "2026-09-17",
-"applied": "2026-07-29",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "1933 N MARCEY ST",
 "permit_no": "101086588",
 "permit_type": "PERMIT - SIGNS",
+"source_id": "SRC-001",
 "value": 1500.0,
-"category": "未分類",
+"category": "事務所・その他",
 "confidence": "high",
-"summary": "PAWS Chicago Training Center(1933 N Marcey St)の看板許可、オーニング設置 $1,500(30 SQ FT)。",
+"summary": "PAWS CHICAGO TRAINING CENTERがChicagoで看板設置の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "PAWS CHICAGO TRAINING CENTER: AWNING (N MARCEY ST ELEVATION) - 6'-0\" H X 5'-0\" W (30 SQ FT; 20 SQ FT OF SIGN ELEMENTS)",
-"source_id": "SRC-001",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:31.144540+00:00",
+"reading_id": "01M4W221W8KTWF9BX732AFR4RV"
+},
+"n_permits": 1,
+"member_ids": [
+"S-61946"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-17",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): PAWS CHICAGO TRAINING CENTERがChicagoで看板設置の許可を取得(1件)",
 "ref": "S-61946",
-"summary": "PAWS Chicago Training Center(1933 N Marcey St)の看板許可、オーニング設置 $1,500(30 SQ FT)。"
+"summary": "PAWS CHICAGO TRAINING CENTERがChicagoで看板設置の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

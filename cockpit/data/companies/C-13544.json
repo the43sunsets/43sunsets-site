@@ -23,82 +23,78 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 17233.0,
+"count": 2,
+"value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-08",
+"latest": "2026-09-15",
 "items": [
-{
-"id": "S-76516",
-"date": "2026-10-08",
-"applied": "2026-10-08",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "5001 W MADISON ST",
-"permit_no": "B200515175",
-"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 5376.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago 5001 W Madison St の Advance Auto Parts 店舗で低電圧・通信電気工事(データ/ビデオ設置)$5,376。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL DATA/VIDEO. SPECIFIC LOCATION: STORE.",
-"source_id": "SRC-001",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XHcggG2rrCtkynq14uLAKE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
 {
 "id": "S-58998",
 "date": "2026-09-15",
-"applied": "2026-09-04",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "4015 W HIRSCH ST",
 "permit_no": "B200510516",
 "permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 5668.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Advance Auto Parts(4015 W Hirsch St)にて防犯カメラ交換に伴う低電圧/通信配線工事 $5,668。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL DATA/VIDEO. SPECIFIC LOCATION: REPLACE OLD CAMERAS.",
 "source_id": "SRC-001",
+"value": 5668.0,
+"category": "保全",
+"confidence": "high",
+"summary": "ADVANCE AUTO PARTSがChicagoで警備設備の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL DATA/VIDEO. SPECIFIC LOCATION: REPLACE OLD CAMERAS.",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:53.683891+00:00",
+"reading_id": "01M4W22QWK2H6NZW33RJF9WNYJ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-58998"
+],
+"kinds": [
+"警備"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "id": "S-59014",
 "date": "2026-09-15",
-"applied": "2026-09-04",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "2320 W 47TH ST",
 "permit_no": "B200510527",
 "permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 6189.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Advance Auto Parts(2320 W 47th St)で低電圧通信配線工事 $6,189、既存カメラの交換。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL DATA/VIDEO. SPECIFIC LOCATION: REPLACE EXISTING CAMERAS.",
 "source_id": "SRC-001",
+"value": 6189.0,
+"category": "保全",
+"confidence": "high",
+"summary": "ADVANCE AUTO PARTSがChicagoで警備設備の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL DATA/VIDEO. SPECIFIC LOCATION: REPLACE EXISTING CAMERAS.",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:09.930534+00:00",
+"reading_id": "01M4W26WYAY647ED8WSGMDFCAW"
+},
+"n_permits": 1,
+"member_ids": [
+"S-59014"
+],
+"kinds": [
+"警備"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -128,27 +124,20 @@
 },
 "timeline": [
 {
-"date": "2026-10-08",
-"face": "permits",
-"title": "建設許可(Chicago): 未分類",
-"ref": "S-76516",
-"summary": "Chicago 5001 W Madison St の Advance Auto Parts 店舗で低電圧・通信電気工事(データ/ビデオ設置)$5,376。"
-},
-{
 "date": "2026-09-15",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): ADVANCE AUTO PARTSがChicagoで警備設備の許可を取得(1件)",
 "ref": "S-58998",
-"summary": "Advance Auto Parts(4015 W Hirsch St)にて防犯カメラ交換に伴う低電圧/通信配線工事 $5,668。"
+"summary": "ADVANCE AUTO PARTSがChicagoで警備設備の許可を取得(1件)"
 },
 {
 "date": "2026-09-15",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): ADVANCE AUTO PARTSがChicagoで警備設備の許可を取得(1件)",
 "ref": "S-59014",
-"summary": "Advance Auto Parts(2320 W 47th St)で低電圧通信配線工事 $6,189、既存カメラの交換。"
+"summary": "ADVANCE AUTO PARTSがChicagoで警備設備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,82 +23,78 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 80100.0,
-"n_amount_excluded": 1,
-"latest": "2026-09-16",
+"count": 2,
+"value_total": null,
+"n_amount_excluded": 0,
+"latest": "2026-09-03",
 "items": [
-{
-"id": "S-59343",
-"date": "2026-09-16",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Hamilton County",
-"address": "246 BONHAM RD , SPRINGFIELD TOWNSHIP OH 45215",
-"permit_no": "25HAM-B25000674P-T1",
-"permit_type": "OBC Temporary CO (Discuss with inspector before applying)",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Hamilton County(Springfield Township, 246 Bonham Rd)における仮設使用許可(Temporary CO)の申請。金額・用途の詳細記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "OBC Temporary CO (Discuss with inspector before applying)",
-"source_id": "SRC-024",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
 {
 "id": "S-36599",
 "date": "2026-09-03",
-"applied": "2026-09-03",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cincinnati",
 "address": "120 E MEHRING WY",
 "permit_no": "2026P08311",
 "permit_type": "Misc. Structures",
+"source_id": "SRC-003",
 "value": 1600.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 120 E Mehring Wy の雑構造物許可 $1,600(A-5 用途)。",
+"category": "内容不明",
+"confidence": "high",
+"summary": "HAMILTON COUNTY COMMRS BOARD OFがCincinnatiで内容不明の許可を取得(1 件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Misc. Structures / Misc. Structures / A-5",
-"source_id": "SRC-003",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:05.647778+00:00",
+"reading_id": "01M4W26RRFX91NSCWE9R6QHRJP"
+},
+"n_permits": 1,
+"member_ids": [
+"S-36599"
+],
+"kinds": [
+"内容不明"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "id": "S-24386",
 "date": "2026-09-01",
-"applied": "2026-08-25",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cincinnati",
 "address": "55 E FREEDOM WY",
 "permit_no": "2026P08093",
 "permit_type": "Misc. Structures",
+"source_id": "SRC-003",
 "value": 78500.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 55 E Freedom Wy(A-5 用途)における雑構造物の許可 $78.5k。",
+"category": "内容不明",
+"confidence": "high",
+"summary": "HAMILTON COUNTY COMMRS BOARD OFがCincinnatiで内容不明の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Misc. Structures / Misc. Structures / A-5",
-"source_id": "SRC-003",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "msgbatch_01UUctXZXGDUu9CwGdcCZy5M",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:06.401113+00:00",
+"reading_id": "01M4W26SG1DPNA2ZKM9CFD09Q6"
+},
+"n_permits": 1,
+"member_ids": [
+"S-24386"
+],
+"kinds": [
+"内容不明"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -128,27 +124,20 @@
 },
 "timeline": [
 {
-"date": "2026-09-16",
-"face": "permits",
-"title": "建設許可(Hamilton County): 未分類",
-"ref": "S-59343",
-"summary": "Hamilton County(Springfield Township, 246 Bonham Rd)における仮設使用許可(Temporary CO)の申請。金額・用途の詳細記載なし。"
-},
-{
 "date": "2026-09-03",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
+"title": "建設許可(Cincinnati): HAMILTON COUNTY COMMRS BOARD OFがCincinnatiで内容不明の許可を取得(1 件)",
 "ref": "S-36599",
-"summary": "Cincinnati 120 E Mehring Wy の雑構造物許可 $1,600(A-5 用途)。"
+"summary": "HAMILTON COUNTY COMMRS BOARD OFがCincinnatiで内容不明の許可を取得(1 件)"
 },
 {
 "date": "2026-09-01",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
+"title": "建設許可(Cincinnati): HAMILTON COUNTY COMMRS BOARD OFがCincinnatiで内容不明の許可を取得(1件)",
 "ref": "S-24386",
-"summary": "Cincinnati 55 E Freedom Wy(A-5 用途)における雑構造物の許可 $78.5k。"
+"summary": "HAMILTON COUNTY COMMRS BOARD OFがCincinnatiで内容不明の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

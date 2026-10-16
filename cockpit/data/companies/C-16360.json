@@ -23,74 +23,45 @@
 },
 "faces": {
 "permits": {
-"count": 3,
-"value_total": 5000.0,
-"n_amount_excluded": 2,
+"count": 1,
+"value_total": null,
+"n_amount_excluded": 0,
 "latest": "2026-10-05",
 "items": [
 {
-"id": "S-74414",
-"date": "2026-10-05",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Hamilton County",
-"address": "215 E 14TH ST , CINCINNATI OH 45202",
-"permit_no": "26CIN-CSRV-000075",
-"permit_type": "Coordinated Site Review",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Coordinated Site Review",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
 "id": "S-35889",
-"date": "2026-08-31",
+"date": "2026-10-05",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Hamilton County",
 "address": "215 E 14TH ST , CINCINNATI OH 45202",
 "permit_no": "26CIN-CSRV-000060",
 "permit_type": "Coordinated Site Review",
+"source_id": "SRC-024",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "PEASLEE NEIGHBORHOOD CENTER INCがCINCINNATIで内容不明の許可を取得(2件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Accepted / Coordinated Site Review",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-7822",
-"date": "2026-07-24",
-"applied": "2025-06-18",
-"state": "OH",
-"jurisdiction": "Cincinnati",
-"address": "215 E 14TH ST",
-"permit_no": "2025P05343",
-"permit_type": "Building",
-"value": 5000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 215 E 14TH STで改修工事($5.0k)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Alteration / Building / I-4",
-"source_id": "SRC-003",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-049",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:41.706055+00:00",
+"reading_id": "01M4W246SA7P40JC08Z4C8A3PF"
+},
+"n_permits": 2,
+"member_ids": [
+"S-35889",
+"S-74414"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -122,25 +93,11 @@
 {
 "date": "2026-10-05",
 "face": "permits",
-"title": "建設許可(Hamilton County): 未評価",
-"ref": "S-74414",
-"summary": null
-},
-{
-"date": "2026-08-31",
-"face": "permits",
-"title": "建設許可(Hamilton County): 未評価",
+"title": "建設許可(Hamilton County): PEASLEE NEIGHBORHOOD CENTER INCがCINCINNATIで内容不明の許可を取得(2件)",
 "ref": "S-35889",
-"summary": null
-},
-{
-"date": "2026-07-24",
-"face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
-"ref": "S-7822",
-"summary": "Cincinnati 215 E 14TH STで改修工事($5.0k)。"
+"summary": "PEASLEE NEIGHBORHOOD CENTER INCがCINCINNATIで内容不明の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

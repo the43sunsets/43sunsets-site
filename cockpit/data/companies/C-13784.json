@@ -24,33 +24,44 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 1362000.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-17",
 "items": [
 {
 "id": "S-61944",
 "date": "2026-09-17",
-"applied": "2026-06-08",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "190 N STATE ST",
 "permit_no": "101083701",
 "permit_type": "PERMIT - RENOVATION/ALTERATION",
-"value": 1362000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago 190 N State St の WLS Television 施設で、地下階に4時間耐火区画を新設し二重壁ディーゼル貯蔵タンクを既存の単壁タンクから交換 $1.36M。付帯するベント配管・排気ファン・電気制御を含む(用途変更なし)。",
-"infer": "テレビ局施設の非常用発電機用燃料タンク更新工事の可能性(推論)。生産設備投資ではない。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "SPR 2019 CBRC: INTERIOR ALTERATIONS TO LOWER LEVEL TO CREATE A NEW 4 HOUR FIRE-RATED ENCLOSURE FOR INSTALLATION OF A NEW DOUBLE WALL DIESEL STORAGE TANK.  NEW TANK TO REPLACE THE EXISTING SINGLE WALL TANK.  WORK TO INCLUDE ASSOCIATED VENT PIPING, EXHAUST FAN,  AND ELECTRICAL CONTROLS. NO CHANGE IN U",
 "source_id": "SRC-001",
+"value": 1362000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "WLS TELEVISION INCがChicagoでユーティリティ・更新修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SPR 2019 CBRC: INTERIOR ALTERATIONS TO LOWER LEVEL TO CREATE A NEW 4 HOUR FIRE-RATED ENCLOSURE FOR INSTALLATION OF A NEW DOUBLE WALL DIESEL STORAGE TANK.  NEW TANK TO REPLACE THE EXISTING SINGLE WALL TANK.  WORK TO INCLUDE ASSOCIATED VENT PIPING, EXHAUST FAN,  AND ELECTRICAL CONTROLS. NO CHANGE IN U",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:45.712724+00:00",
+"reading_id": "01M4W24APGGA6C9NMCW31Q0H23"
+},
+"n_permits": 1,
+"member_ids": [
+"S-61944"
+],
+"kinds": [
+"ユーティリティ",
+"更新・修繕"
+],
+"amount_band": "1m_10m",
+"amount_band_label": "$1M〜$10M"
 }
 ]
 },
@@ -82,11 +93,11 @@
 {
 "date": "2026-09-17",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): WLS TELEVISION INCがChicagoでユーティリティ・更新修繕の許可を取得(1件)",
 "ref": "S-61944",
-"summary": "Chicago 190 N State St の WLS Television 施設で、地下階に4時間耐火区画を新設し二重壁ディーゼル貯蔵タンクを既存の単壁タンクから交換 $1.36M。付帯するベント配管・排気ファン・電気制御を含む(用途変更なし)。"
+"summary": "WLS TELEVISION INCがChicagoでユーティリティ・更新修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

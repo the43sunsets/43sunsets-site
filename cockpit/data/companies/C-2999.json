@@ -23,82 +23,79 @@
 },
 "faces": {
 "permits": {
-"count": 4,
-"value_total": 14900.0,
-"n_amount_excluded": 1,
+"count": 3,
+"value_total": null,
+"n_amount_excluded": 0,
 "latest": "2026-09-18",
 "items": [
 {
-"id": "S-62045",
-"date": "2026-09-18",
-"applied": "2026-07-23",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "4051 N LINCOLN AVE",
-"permit_no": "101086392",
-"permit_type": "PERMIT - SIGNS",
-"value": 1500.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago 4051 N Lincoln Ave の建物北面に CVS のチャンネルレター看板を設置する許可 $1,500。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "SIGN #1 CVS CHANNEL LETTERS ON NORTH BUILDING FACADE",
-"source_id": "SRC-001",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-62034",
-"date": "2026-09-18",
-"applied": "2026-07-23",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "4051 N LINCOLN AVE",
-"permit_no": "101086400",
-"permit_type": "PERMIT - SIGNS",
-"value": 900.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago 4051 N Lincoln Ave の建物東側外壁に CVS のチャンネルレター看板を設置 $900。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "SIGN #8 CVS CHANNEL LETTERS ON EAST BUILDING FACADE",
-"source_id": "SRC-001",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-36560",
 "date": "2026-09-04",
-"applied": "2026-09-02",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "3940 W FULLERTON AVE",
 "permit_no": "B200510065",
 "permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 12500.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "CVS 店舗内でデータ/映像設備の低電圧・通信配線工事 $12.5k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. ALTER EXISTING DATA/VIDEO. SPECIFIC LOCATION: IN STORE.",
 "source_id": "SRC-001",
+"value": 12500.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CVSがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. ALTER EXISTING DATA/VIDEO. SPECIFIC LOCATION: IN STORE.",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:44.130614+00:00",
+"reading_id": "01M4W24952BDBCCX179G9Q31YV"
+},
+"n_permits": 1,
+"member_ids": [
+"S-36560"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-62034",
+"date": "2026-09-18",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "4051 N LINCOLN AVE",
+"permit_no": "101086400",
+"permit_type": "PERMIT - SIGNS",
+"source_id": "SRC-001",
+"value": 1500.0,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "CVSがChicagoで看板設置の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SIGN #8 CVS CHANNEL LETTERS ON EAST BUILDING FACADE",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:17.705129+00:00",
+"reading_id": "01M4W23FB92T8X93VSDXVVTQH2"
+},
+"n_permits": 2,
+"member_ids": [
+"S-62034",
+"S-62045"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "id": "S-23594",
@@ -109,20 +106,30 @@
 "address": "8811 W 87 St",
 "permit_no": "457-2026",
 "permit_type": null,
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Hickory Hills 8811 W 87 St の CVS 店舗が仮設看板を申請。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Temporary sign",
 "source_id": "SRC-046",
+"value": null,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "CVSがHickory Hillsで事務所・その他の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Temporary sign",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-0903-010",
-"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:37.387314+00:00",
+"reading_id": "01M4W25X5BF7JFQSFQ41Q7W497"
+},
+"n_permits": 1,
+"member_ids": [
+"S-23594"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -154,32 +161,25 @@
 {
 "date": "2026-09-18",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
-"ref": "S-62045",
-"summary": "Chicago 4051 N Lincoln Ave の建物北面に CVS のチャンネルレター看板を設置する許可 $1,500。"
-},
-{
-"date": "2026-09-18",
-"face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): CVSがChicagoで看板設置の許可を取得(2件)",
 "ref": "S-62034",
-"summary": "Chicago 4051 N Lincoln Ave の建物東側外壁に CVS のチャンネルレター看板を設置 $900。"
+"summary": "CVSがChicagoで看板設置の許可を取得(2件)"
 },
 {
 "date": "2026-09-04",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): CVSがChicagoで更新・修繕の許可を取得(1件)",
 "ref": "S-36560",
-"summary": "CVS 店舗内でデータ/映像設備の低電圧・通信配線工事 $12.5k。"
+"summary": "CVSがChicagoで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-08-20",
 "face": "permits",
-"title": "建設許可(Hickory Hills): 未分類",
+"title": "建設許可(Hickory Hills): CVSがHickory Hillsで事務所・その他の許可を取得(1件)",
 "ref": "S-23594",
-"summary": "Hickory Hills 8811 W 87 St の CVS 店舗が仮設看板を申請。"
+"summary": "CVSがHickory Hillsで事務所・その他の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

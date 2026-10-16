@@ -24,29 +24,43 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 66700000.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-18",
 "items": [
 {
 "id": "S-60681",
 "date": "2026-09-18",
-"applied": "2026-08-26",
+"applied": null,
 "state": "MI",
 "jurisdiction": "Ann Arbor",
 "address": "920 Briarwood Cir Ann Arbor MI 48108",
 "permit_no": "COFO26-0345",
 "permit_type": "Certificate of Occupancy",
+"source_id": "SRC-022",
 "value": 66700000.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "THE HARLANがAnn Arborで記録取得の許可を取得(1 件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Temporary Certificate of Occupancy application for Phase 1 of 920 Briarwood - within Redevelopment B of the 900 Briarwood project. / Certificate of Occupancy / Certificate of Occupancy",
-"source_id": "SRC-022",
-"provenance": null
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:04.806461+00:00",
+"reading_id": "01M4W24XB6JJVP4STCC2MAMXA3"
+},
+"n_permits": 1,
+"member_ids": [
+"S-60681"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "10m_100m",
+"amount_band_label": "$10M〜$100M"
 }
 ]
 },
@@ -78,11 +92,11 @@
 {
 "date": "2026-09-18",
 "face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
+"title": "建設許可(Ann Arbor): THE HARLANがAnn Arborで記録取得の許可を取得(1 件)",
 "ref": "S-60681",
-"summary": null
+"summary": "THE HARLANがAnn Arborで記録取得の許可を取得(1 件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

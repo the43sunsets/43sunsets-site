@@ -25,32 +25,42 @@
 "permits": {
 "count": 1,
 "value_total": null,
-"n_amount_excluded": 1,
+"n_amount_excluded": 0,
 "latest": "2026-09-28",
 "items": [
 {
 "id": "S-68655",
 "date": "2026-09-28",
-"applied": "2026-07-21",
+"applied": null,
 "state": "IN",
 "jurisdiction": "Indiana/ST JOSEPH",
 "address": "611 E Douglas Rd",
 "permit_no": "462896:2026-09-28",
 "permit_type": "CDR release",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "St Joseph Medical Center のがんセンター(611 E Douglas Rd)に関する CDR release(許可条件解除)記録。金額・申請者情報なし。",
-"infer": "がんセンター関連施設 = 放射線治療・画像診断機器等の設備調達が伴う可能性(推論)。",
-"role": "operator",
-"role_label": "operator",
-"verbatim": "St Joseph Medical Center - Cancer Center",
 "source_id": "SRC-009",
+"value": null,
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "St Joseph Medical Centerが611 E Douglas Rdで記録を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "St Joseph Medical Center - Cancer Center",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:55.081728+00:00",
+"reading_id": "01M4W24KV972K8K5YTH9289552"
+},
+"n_permits": 1,
+"member_ids": [
+"S-68655"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Indiana/ST JOSEPH): 未分類",
+"title": "建設許可(Indiana/ST JOSEPH): St Joseph Medical Centerが611 E Douglas Rdで記録を取得(1件)",
 "ref": "S-68655",
-"summary": "St Joseph Medical Center のがんセンター(611 E Douglas Rd)に関する CDR release(許可条件解除)記録。金額・申請者情報なし。"
+"summary": "St Joseph Medical Centerが611 E Douglas Rdで記録を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -24,7 +24,7 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 45427.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-22",
 "items": [
@@ -37,20 +37,30 @@
 "address": "1351 LOCKBOURNE AVE",
 "permit_no": "ROOFC2638030",
 "permit_type": "Roof",
-"value": 45427.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbus 1351 Lockbourne Ave の商業建物で 3,800 SQFT の屋根工事 $45,427。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Roof / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 3800 SQFT",
 "source_id": "SRC-017",
+"value": 45427.0,
+"category": "保全",
+"confidence": "high",
+"summary": "WILLGLO SERVICES INCがColumbusで屋根の修繕許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Roof / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 3800 SQFT",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01662kdZo8KYBxtpVwwCDd2A",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:39.683403+00:00",
+"reading_id": "01M4W25ZD317VTWVY4AXSH83GT"
+},
+"n_permits": 1,
+"member_ids": [
+"S-66073"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-22",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): WILLGLO SERVICES INCがColumbusで屋根の修繕許可を取得(1件)",
 "ref": "S-66073",
-"summary": "Columbus 1351 Lockbourne Ave の商業建物で 3,800 SQFT の屋根工事 $45,427。"
+"summary": "WILLGLO SERVICES INCがColumbusで屋根の修繕許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

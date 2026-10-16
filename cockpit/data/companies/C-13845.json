@@ -24,33 +24,43 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 10000.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-18",
 "items": [
 {
 "id": "S-62060",
 "date": "2026-09-18",
-"applied": "2026-09-17",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "516 N CLARK ST",
 "permit_no": "B200512089",
 "permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 10000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago 516 N Clark St の地下厨房で既存回路の修理・改修を行う電気工事許可 $10k(コンセント10・照明1)。",
-"infer": null,
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 10 . LIGHTING OUTLETS: 1. SPECIFIC LOCATION: BASEMENT KITCHEN.",
 "source_id": "SRC-001",
+"value": 10000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "BOSS ELECTRIC, INC.がChicagoで更新・修繕の許可を取得(1 件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 10 . LIGHTING OUTLETS: 1. SPECIFIC LOCATION: BASEMENT KITCHEN.",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:11.327610+00:00",
+"reading_id": "01M4W2393ZXG0GKG9ETZ7JEGXS"
+},
+"n_permits": 1,
+"member_ids": [
+"S-62060"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-18",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): BOSS ELECTRIC, INC.がChicagoで更新・修繕の許可を取得(1 件)",
 "ref": "S-62060",
-"summary": "Chicago 516 N Clark St の地下厨房で既存回路の修理・改修を行う電気工事許可 $10k(コンセント10・照明1)。"
+"summary": "BOSS ELECTRIC, INC.がChicagoで更新・修繕の許可を取得(1 件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

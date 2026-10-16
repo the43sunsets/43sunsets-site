@@ -23,154 +23,115 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 374000.0,
+"count": 3,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-30",
 "items": [
 {
-"id": "S-70804",
-"date": "2026-09-30",
-"applied": "2026-08-31",
-"state": "OH",
-"jurisdiction": "Cincinnati",
-"address": "225 WILMER AV",
-"permit_no": "2026P08270",
-"permit_type": "Fire Protection Systems",
-"value": 161500.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 225 Wilmer Ave にて防火システム工事 $161.5k(F-1 用途)。所有者は City of Cincinnati。",
-"infer": "F-1(中危険度工場)用途だが申請者が自治体であり、公共施設内の付帯防火設備工事の可能性(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Fire Protection Systems / Fire Protection Systems / F-1",
-"source_id": "SRC-003",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-69147",
-"date": "2026-09-28",
-"applied": "2026-09-16",
-"state": "OH",
-"jurisdiction": "Cincinnati",
-"address": "150 W 5TH ST",
-"permit_no": "2026P08724",
-"permit_type": "Misc. Structures",
-"value": 20000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 市(150 W 5th St)による雑構造物の工事 $20k(A-5 用途)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Misc. Structures / Misc. Structures / A-5",
-"source_id": "SRC-003",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-69174",
-"date": "2026-09-28",
-"applied": "2026-09-17",
-"state": "OH",
-"jurisdiction": "Cincinnati",
-"address": "150 W 5TH ST",
-"permit_no": "2026P08761",
-"permit_type": "Misc. Structures",
-"value": 2500.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Cincinnati市による雑構造物の許可 $2,500(150 W 5th St、用途A-5)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Misc. Structures / Misc. Structures / A-5",
-"source_id": "SRC-003",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-64459",
-"date": "2026-09-18",
-"applied": "2026-08-24",
-"state": "OH",
-"jurisdiction": "Cincinnati",
-"address": "953 EDEN PARK DR",
-"permit_no": "2026P08045",
-"permit_type": "Building",
-"value": 60000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Cincinnati市所有の953 Eden Park Drにおける改修工事 $60k(用途区分A-5)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Alteration / Building / A-5",
-"source_id": "SRC-003",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-36602",
-"date": "2026-09-03",
-"applied": "2026-08-27",
+"date": "2026-09-30",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cincinnati",
 "address": "225 WILMER AV",
 "permit_no": "2026P08205",
 "permit_type": "Elevator Permit",
-"value": 100000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 225 Wilmer Av でのエレベーター許可 $100k。所有者・用途の詳細は記録に記載なし。",
+"source_id": "SRC-003",
+"value": 161500.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CITY OF CINCINNATIがCincinnatiで更新・修繕と警備設備の許可を取得(2件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Elevator Permit / Elevator Permit / U",
-"source_id": "SRC-003",
 "provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:21.889049+00:00",
+"reading_id": "01M4W25E11A61DCN6XFNM4AJBR"
+},
+"n_permits": 2,
+"member_ids": [
+"S-36602",
+"S-70804"
+],
+"kinds": [
+"更新・修繕",
+"警備"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 },
 {
 "id": "S-8643",
 "date": "2026-08-19",
-"applied": "2026-08-18",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cincinnati",
 "address": "3100 READING RD",
 "permit_no": "2026P07851",
 "permit_type": "Misc. Structures",
+"source_id": "SRC-003",
 "value": 30000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 3100 READING RD で雑構造物工事 $30.0k。",
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "CITY OF CINCINNATIがCincinnatiで事務所・その他の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Misc. Structures / Misc. Structures / A-5",
-"source_id": "SRC-003",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-017",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:28.674721+00:00",
+"reading_id": "01M4W23T22ZW6EV1B2VS18ABFQ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-8643"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-69147",
+"date": "2026-09-28",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "150 W 5TH ST",
+"permit_no": "2026P08724",
+"permit_type": "Misc. Structures",
+"source_id": "SRC-003",
+"value": 20000.0,
+"category": "内容不明",
+"confidence": "high",
+"summary": "CITY OF CINCINNATIがCincinnatiで許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Misc. Structures / Misc. Structures / A-5",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:44.851187+00:00",
+"reading_id": "01M4W264EKPW5ARZX1BYXD1BS4"
+},
+"n_permits": 2,
+"member_ids": [
+"S-69147",
+"S-69174"
+],
+"kinds": [
+"内容不明"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -202,46 +163,25 @@
 {
 "date": "2026-09-30",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
-"ref": "S-70804",
-"summary": "Cincinnati 225 Wilmer Ave にて防火システム工事 $161.5k(F-1 用途)。所有者は City of Cincinnati。"
-},
-{
-"date": "2026-09-28",
-"face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
-"ref": "S-69147",
-"summary": "Cincinnati 市(150 W 5th St)による雑構造物の工事 $20k(A-5 用途)。"
-},
-{
-"date": "2026-09-28",
-"face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
-"ref": "S-69174",
-"summary": "Cincinnati市による雑構造物の許可 $2,500(150 W 5th St、用途A-5)。"
-},
-{
-"date": "2026-09-18",
-"face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
-"ref": "S-64459",
-"summary": "Cincinnati市所有の953 Eden Park Drにおける改修工事 $60k(用途区分A-5)。"
-},
-{
-"date": "2026-09-03",
-"face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
+"title": "建設許可(Cincinnati): CITY OF CINCINNATIがCincinnatiで更新・修繕と警備設備の許可を取得(2件)",
 "ref": "S-36602",
-"summary": "Cincinnati 225 Wilmer Av でのエレベーター許可 $100k。所有者・用途の詳細は記録に記載なし。"
+"summary": "CITY OF CINCINNATIがCincinnatiで更新・修繕と警備設備の許可を取得(2件)"
+},
+{
+"date": "2026-09-28",
+"face": "permits",
+"title": "建設許可(Cincinnati): CITY OF CINCINNATIがCincinnatiで許可を取得(2件)",
+"ref": "S-69147",
+"summary": "CITY OF CINCINNATIがCincinnatiで許可を取得(2件)"
 },
 {
 "date": "2026-08-19",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
+"title": "建設許可(Cincinnati): CITY OF CINCINNATIがCincinnatiで事務所・その他の許可を取得(1件)",
 "ref": "S-8643",
-"summary": "Cincinnati 3100 READING RD で雑構造物工事 $30.0k。"
+"summary": "CITY OF CINCINNATIがCincinnatiで事務所・その他の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

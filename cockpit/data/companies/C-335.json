@@ -23,35 +23,11 @@
 },
 "faces": {
 "permits": {
-"count": 17,
-"value_total": 1025550.0,
-"n_amount_excluded": 12,
-"latest": "2026-10-08",
+"count": 10,
+"value_total": null,
+"n_amount_excluded": 0,
+"latest": "2026-10-01",
 "items": [
-{
-"id": "S-77130",
-"date": "2026-10-08",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "1790 W HENDERSON RD",
-"permit_no": "ALTC2612549",
-"permit_type": "Alteration",
-"value": 150000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Speedway Superamerica LLC の Columbus 1790 W Henderson Rd 店舗(5,663 SQFT)の改修工事 $150k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 5663 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01UYLczAZtguU8Kkjh2sGHmZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
 {
 "id": "S-73602",
 "date": "2026-10-01",
@@ -61,68 +37,66 @@
 "address": "6421 E BROAD ST",
 "permit_no": "MMEPC2639502",
 "permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Speedway SuperAmerica LLC(6421 E Broad St)の機械設備(MEP)工事。金額記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
 "source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "SPEEDWAY SUPERAMERICAがコロンバスで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Mechanical / MEP",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:08.526134+00:00",
+"reading_id": "01M4W236CERB6HP0YPE8D11H3D"
+},
+"n_permits": 1,
+"member_ids": [
+"S-73602"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
-"id": "S-70839",
+"id": "S-1906",
 "date": "2026-09-30",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
 "address": "4901 E MAIN ST",
-"permit_no": "EMEPC2639392",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Speedway SuperAmerica LLC(4901 E Main St)の電気工事(MEP)。金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
+"permit_no": "MMEPC2631603",
+"permit_type": "Mechanical",
 "source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "SPEEDWAY SUPERAMERICAがColumbusで更新・修繕等の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Mechanical / MEP",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:09.217018+00:00",
+"reading_id": "01M4W251N1TMD0VA30W8M63RC8"
 },
-{
-"id": "S-69238",
-"date": "2026-09-28",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "3233 REFUGEE RD",
-"permit_no": "EMEPC2638990",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Speedway SuperAmerica LLC(3233 Refugee Rd)の電気設備工事(MEP)。金額не記載。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"n_permits": 2,
+"member_ids": [
+"S-1906",
+"S-70839"
+],
+"kinds": [
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-67598",
@@ -133,20 +107,30 @@
 "address": "1442 N CASSADY AVE",
 "permit_no": "MMEPC2638597",
 "permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Speedway SuperAmerica LLC(1442 N Cassady Ave)の機械設備(MEP)工事。金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
 "source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "SPEEDWAY SUPERAMERICAがColumbusで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Mechanical / MEP",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:40.959046+00:00",
+"reading_id": "01M4W2461ZJ9G59GFWTV5MRRZ9"
+},
+"n_permits": 1,
+"member_ids": [
+"S-67598"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-67484",
@@ -157,20 +141,30 @@
 "address": "7860 E BROAD ST",
 "permit_no": "MMEPC2638452",
 "permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Speedway SuperAmerica LLC(7860 E Broad St)の機械設備(MEP)工事許可。金額の記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
 "source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "SPEEDWAY SUPERAMERICAがColumbusでユーティリティ更新の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Mechanical / MEP",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01KZ9X6bWKjoQSoTnywC8LfN",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:40.298152+00:00",
+"reading_id": "01M4W22ATAAGF077178N5W87YY"
+},
+"n_permits": 1,
+"member_ids": [
+"S-67484"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-65271",
@@ -181,20 +175,30 @@
 "address": "955 GALLOWAY RD",
 "permit_no": "MMEPC2637637",
 "permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Speedway SuperAmerica LLC(955 Galloway Rd)における機械設備(MEP)工事。金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
 "source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "SPEEDWAY SUPERAMERICAがColumbusで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Mechanical / MEP",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:02.576442+00:00",
+"reading_id": "01M4W24V5GFQMDM85MSRAXB7X2"
+},
+"n_permits": 1,
+"member_ids": [
+"S-65271"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-65283",
@@ -205,20 +209,30 @@
 "address": "6399 REFUGEE RD",
 "permit_no": "MMEPC2637728",
 "permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Speedway SuperAmerica LLC(6399 Refugee Rd)における機械設備(MEP)工事、金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
 "source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "SPEEDWAY SUPERAMERICAがColumbusで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Mechanical / MEP",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01FkihL391iP8bK5ua4fkBK6",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:26.243709+00:00",
+"reading_id": "01M4W21X338S1J0NKSAMDXT7QT"
+},
+"n_permits": 1,
+"member_ids": [
+"S-65283"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-35008",
@@ -229,40 +243,64 @@
 "address": "9738 PRINCETON GLENDALE RD, UNKNOWN OH 45",
 "permit_no": "BLD-HC26-03551",
 "permit_type": "Commercial HVAC and Gas Piping",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "HVAC - SPEEDWAY / Commercial HVAC and Gas Piping",
 "source_id": "SRC-024",
-"provenance": null
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "SPEEDWAY SUPERAMERICA LLCが同住所でHVAC更新の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "HVAC - SPEEDWAY / Commercial HVAC and Gas Piping",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:11.150065+00:00",
+"reading_id": "01M4W26Y4EA4YYDB5CY6V4FCT4"
+},
+"n_permits": 1,
+"member_ids": [
+"S-35008"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-1145",
 "date": "2026-08-12",
-"applied": "2026-05-19",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cincinnati",
 "address": "124 E GALBRAITH RD",
 "permit_no": "2026P04572",
 "permit_type": "Building",
-"value": 250000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 124 E GALBRAITH RD のBuilding(Alteration) $250k(用途区分 B)。所有者記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Alteration / Building / B",
 "source_id": "SRC-003",
+"value": 250000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "SPEEDWAY SUPERAMERICA LLCがCincinnatiで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Alteration / Building / B",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-004",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:04.467610+00:00",
+"reading_id": "01M4W24X0KTYJYVF6QBSF12CS1"
+},
+"n_permits": 1,
+"member_ids": [
+"S-1145"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 },
 {
 "id": "S-40205",
@@ -273,148 +311,64 @@
 "address": "1020 E DOROTHY Ln, KETTERING OH 45429",
 "permit_no": "H26-04665",
 "permit_type": "HVAC Permit",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Replace 2 AC split systems at Speedway / Awaiting Client Reply / Replace 2 AC split systems, condensers on ground behind building / HVAC Permit",
 "source_id": "SRC-024",
-"provenance": null
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "SPEEDWAY SUPERAMERICAがKETTERINGで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Replace 2 AC split systems at Speedway / Awaiting Client Reply / Replace 2 AC split systems, condensers on ground behind building / HVAC Permit",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:44.644423+00:00",
+"reading_id": "01M4W249N47ZF8HHJN37FRFTR8"
+},
+"n_permits": 1,
+"member_ids": [
+"S-40205"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
-"id": "S-1906",
-"date": "2026-08-06",
+"id": "S-69238",
+"date": "2026-09-28",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
-"address": "4901 E MAIN ST",
-"permit_no": "MMEPC2631603",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbus 4901 E MAIN ST の商業用機械設備工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
+"address": "3233 REFUGEE RD",
+"permit_no": "EMEPC2638990",
+"permit_type": "Electrical",
 "source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-074",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-28454",
-"date": "2026-08-03",
-"applied": "2026-07-20",
-"state": "OH",
-"jurisdiction": "Clermont County",
-"address": "520 SYCAMORE ST NEW RICHMOND OH",
-"permit_no": "B-076389-2026",
-"permit_type": "Commercial HVAC - Like for Like Replacement",
-"value": 23800.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "HVAC REPLACEMENT / Commercial HVAC - Like for Like Replacement / HVAC Like for Like Replacement",
-"source_id": "SRC-022",
-"provenance": null
-},
-{
-"id": "S-7826",
-"date": "2026-07-24",
-"applied": "2026-07-13",
-"state": "OH",
-"jurisdiction": "Cincinnati",
-"address": "124 E GALBRAITH RD",
-"permit_no": "2026P06525",
-"permit_type": "Building",
-"value": 39750.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati で改修工事 $39.8k(用途区分Mのみ、詳細記載なし)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Alteration / Building / M",
-"source_id": "SRC-003",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-014",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-34244",
-"date": "2026-07-24",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Montgomery County",
-"address": "2001 SHILOH SPRINGS Rd TROTWOOD, OH 45426",
-"permit_no": "MECC26-0173",
-"permit_type": "Commercial Mechanical Permit",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Replacement of 10-ton split system. / Commercial Mechanical Permit / (TROTWOOD)",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-34265",
-"date": "2026-07-23",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Montgomery County",
-"address": "1488 AUSTIN Rd DAYTON, OH 45342",
-"permit_no": "ELEC26-0357",
-"permit_type": "Commercial Electrical Permit",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "vehicle collide w/carwash transformer.AES removed. Damaged wiring from transformer to cabinet. need wire replaced and reinspection. Like for like. / Commercial Electrical Permit / (WASHINGTON TOWNSHIP)",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-11550",
-"date": "2026-07-07",
-"applied": null,
-"state": "IL",
-"jurisdiction": "Hickory Hills",
-"address": "8759 W 95TH ST, HICKORY HILLS, IL 60457",
-"permit_no": "267-2026",
-"permit_type": "COMMERCIAL PERMIT",
-"value": 562000.0,
-"category": "未分類",
+"category": "事務所・その他",
 "confidence": "high",
-"summary": "Hickory Hills 8759 W 95th St の Speedway 給油所でディスペンサー用回路4系統・新100Aパネルを設置 $562k。",
+"summary": "SPEEDWAY SUPERAMERICAがColumbusで事務所・その他の許可を取得(1件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "INSTALL 4 CIRCUITS FOR DISPENSERS, SUBMERSIBLES, VALVE CONTROL NEW 100 AMP AND PANEL / COMMERCIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION / OTHER REMODELING",
-"source_id": "SRC-021",
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Electrical / MEP",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-002",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:18.118000+00:00",
+"reading_id": "01M4W25AB6EW2S4HM5RPT9YD20"
+},
+"n_permits": 1,
+"member_ids": [
+"S-69238"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -444,125 +398,76 @@
 },
 "timeline": [
 {
-"date": "2026-10-08",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-77130",
-"summary": "Speedway Superamerica LLC の Columbus 1790 W Henderson Rd 店舗(5,663 SQFT)の改修工事 $150k。"
-},
-{
 "date": "2026-10-01",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): SPEEDWAY SUPERAMERICAがコロンバスで更新・修繕の許可を取得(1件)",
 "ref": "S-73602",
-"summary": "Speedway SuperAmerica LLC(6421 E Broad St)の機械設備(MEP)工事。金額記載なし。"
+"summary": "SPEEDWAY SUPERAMERICAがコロンバスで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-09-30",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-70839",
-"summary": "Speedway SuperAmerica LLC(4901 E Main St)の電気工事(MEP)。金額不明。"
+"title": "建設許可(Columbus): SPEEDWAY SUPERAMERICAがColumbusで更新・修繕等の許可を取得(2件)",
+"ref": "S-1906",
+"summary": "SPEEDWAY SUPERAMERICAがColumbusで更新・修繕等の許可を取得(2件)"
 },
 {
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): SPEEDWAY SUPERAMERICAがColumbusで事務所・その他の許可を取得(1件)",
 "ref": "S-69238",
-"summary": "Speedway SuperAmerica LLC(3233 Refugee Rd)の電気設備工事(MEP)。金額не記載。"
+"summary": "SPEEDWAY SUPERAMERICAがColumbusで事務所・その他の許可を取得(1件)"
 },
 {
 "date": "2026-09-25",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): SPEEDWAY SUPERAMERICAがColumbusで更新・修繕の許可を取得(1件)",
 "ref": "S-67598",
-"summary": "Speedway SuperAmerica LLC(1442 N Cassady Ave)の機械設備(MEP)工事。金額不明。"
+"summary": "SPEEDWAY SUPERAMERICAがColumbusで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-09-24",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): SPEEDWAY SUPERAMERICAがColumbusでユーティリティ更新の許可を取得(1件)",
 "ref": "S-67484",
-"summary": "Speedway SuperAmerica LLC(7860 E Broad St)の機械設備(MEP)工事許可。金額の記載なし。"
+"summary": "SPEEDWAY SUPERAMERICAがColumbusでユーティリティ更新の許可を取得(1件)"
 },
 {
 "date": "2026-09-21",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): SPEEDWAY SUPERAMERICAがColumbusで更新・修繕の許可を取得(1件)",
 "ref": "S-65271",
-"summary": "Speedway SuperAmerica LLC(955 Galloway Rd)における機械設備(MEP)工事。金額不明。"
+"summary": "SPEEDWAY SUPERAMERICAがColumbusで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-09-21",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): SPEEDWAY SUPERAMERICAがColumbusで更新・修繕の許可を取得(1件)",
 "ref": "S-65283",
-"summary": "Speedway SuperAmerica LLC(6399 Refugee Rd)における機械設備(MEP)工事、金額不明。"
+"summary": "SPEEDWAY SUPERAMERICAがColumbusで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-08-20",
 "face": "permits",
-"title": "建設許可(Butler County): 未評価",
+"title": "建設許可(Butler County): SPEEDWAY SUPERAMERICA LLCが同住所でHVAC更新の許可を取得(1件)",
 "ref": "S-35008",
-"summary": null
+"summary": "SPEEDWAY SUPERAMERICA LLCが同住所でHVAC更新の許可を取得(1件)"
 },
 {
 "date": "2026-08-12",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
+"title": "建設許可(Cincinnati): SPEEDWAY SUPERAMERICA LLCがCincinnatiで更新・修繕の許可を取得(1件)",
 "ref": "S-1145",
-"summary": "Cincinnati 124 E GALBRAITH RD のBuilding(Alteration) $250k(用途区分 B)。所有者記載なし。"
+"summary": "SPEEDWAY SUPERAMERICA LLCがCincinnatiで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-08-07",
 "face": "permits",
-"title": "建設許可(Kettering): 未評価",
+"title": "建設許可(Kettering): SPEEDWAY SUPERAMERICAがKETTERINGで更新・修繕の許可を取得(1件)",
 "ref": "S-40205",
-"summary": null
-},
-{
-"date": "2026-08-06",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1906",
-"summary": "Columbus 4901 E MAIN ST の商業用機械設備工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。"
-},
-{
-"date": "2026-08-03",
-"face": "permits",
-"title": "建設許可(Clermont County): 未評価",
-"ref": "S-28454",
-"summary": null
-},
-{
-"date": "2026-07-24",
-"face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
-"ref": "S-7826",
-"summary": "Cincinnati で改修工事 $39.8k(用途区分Mのみ、詳細記載なし)。"
-},
-{
-"date": "2026-07-24",
-"face": "permits",
-"title": "建設許可(Montgomery County): 未評価",
-"ref": "S-34244",
-"summary": null
-},
-{
-"date": "2026-07-23",
-"face": "permits",
-"title": "建設許可(Montgomery County): 未評価",
-"ref": "S-34265",
-"summary": null
-},
-{
-"date": "2026-07-07",
-"face": "permits",
-"title": "建設許可(Hickory Hills): 未分類",
-"ref": "S-11550",
-"summary": "Hickory Hills 8759 W 95th St の Speedway 給油所でディスペンサー用回路4系統・新100Aパネルを設置 $562k。"
+"summary": "SPEEDWAY SUPERAMERICAがKETTERINGで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -25,32 +25,42 @@
 "permits": {
 "count": 1,
 "value_total": null,
-"n_amount_excluded": 1,
+"n_amount_excluded": 0,
 "latest": "2026-09-30",
 "items": [
 {
 "id": "S-69320",
 "date": "2026-09-30",
-"applied": "2026-06-03",
+"applied": null,
 "state": "IN",
 "jurisdiction": "Indiana/SULLIVAN",
 "address": "W CR 200 S (Old 54)",
 "permit_no": "461858:2026-09-30",
 "permit_type": "CDR release",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Indiana州Sullivan郡 W CR 200 S (Old 54) の『Heartland Industrial Park』に関する CDR release 記録(金額・所有者不明)。",
-"infer": "産業団地関連の規制上の手続き(CDR release)とみられるが、具体的な建設内容・入居企業は記録から不明(推論)。",
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Heartland Industrial Park - IND101",
 "source_id": "SRC-009",
+"value": null,
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "Heartland Industrial ParkがSULLIVANで記録を取得(1 件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Heartland Industrial Park - IND101",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:50.201380+00:00",
+"reading_id": "01M4W24F2SX80S9TDE8R50HCYG"
+},
+"n_permits": 1,
+"member_ids": [
+"S-69320"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-30",
 "face": "permits",
-"title": "建設許可(Indiana/SULLIVAN): 未分類",
+"title": "建設許可(Indiana/SULLIVAN): Heartland Industrial ParkがSULLIVANで記録を取得(1 件)",
 "ref": "S-69320",
-"summary": "Indiana州Sullivan郡 W CR 200 S (Old 54) の『Heartland Industrial Park』に関する CDR release 記録(金額・所有者不明)。"
+"summary": "Heartland Industrial ParkがSULLIVANで記録を取得(1 件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

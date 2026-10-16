@@ -24,118 +24,49 @@
 },
 "faces": {
 "permits": {
-"count": 5,
+"count": 1,
 "value_total": null,
-"n_amount_excluded": 5,
-"latest": "2026-10-14",
+"n_amount_excluded": 0,
+"latest": "2026-09-18",
 "items": [
 {
-"id": "S-79151",
-"date": "2026-10-14",
-"applied": "2026-10-13",
-"state": "IN",
-"jurisdiction": "Indiana/TIPPECANOE",
-"address": "Andrew  Goodman",
-"permit_no": "464689:2026-10-14",
-"permit_type": "CDR release",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Tippecanoe 郡で Heartland Dental のシェルビルディングに関する CDR リリース(許可)。金額等の詳細は記録になし。",
-"infer": "歯科クリニック向けシェル建物の可能性があるが、記録情報が乏しく用途・規模が不明(推論不可)。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "Heartland Dental - Shell Building",
-"source_id": "SRC-009",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01MoH2kWYCFeWLZmpbpfYBjG",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-63649",
-"date": "2026-09-18",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Butler County",
-"address": "4706 Old Kyles Station RD, H OH 45011",
-"permit_no": "BLD-EZ26-04023",
-"permit_type": "Commercial Electric",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "ELECTRIC FOR TENANT FINISH - HEARTLAND DENTAL / READY FOR PICKUP / Pay Fees Due / Commercial Electric",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-63648",
-"date": "2026-09-18",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Butler County",
-"address": "4706 Old Kyles Station RD, H OH 45011",
-"permit_no": "BLD-HC26-04024",
-"permit_type": "Commercial HVAC and Gas Piping",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "HVAC FOR TENANT FINISH - HEARTLAND DENTAL / READY FOR PICKUP / Commercial HVAC and Gas Piping",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-59314",
-"date": "2026-09-16",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Butler County",
-"address": "4706 Old Kyles Station RD, H OH 45011",
-"permit_no": "BLD-CN26-03985",
-"permit_type": "Commercial Tenant Finish and Alteration",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Butler County 4706 Old Kyles Station Rd で Heartland Dental のテナント内装工事(金額不明、進行中)。",
-"infer": "歯科クリニックのテナント内装であり小規模な内装工事の可能性(推論)。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "TENANT FINISH - HEARTLAND DENTAL / IN PROGRESS / Pay Fees Due / Commercial Tenant Finish and Alteration",
-"source_id": "SRC-024",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-58662",
-"date": "2026-09-15",
+"date": "2026-09-18",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Butler County",
 "address": "4706 Old Kyles Station RD, H OH 45011",
 "permit_no": "BLD-HC26-03956",
 "permit_type": "Commercial HVAC and Gas Piping",
+"source_id": "SRC-024",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "HEARTLAND DENTALがHで用途転換・改修の許可を取得(4件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "GAS PIPING - HEARTLAND DENTAL / Commercial HVAC and Gas Piping",
-"source_id": "SRC-024",
-"provenance": null
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:58.503468+00:00",
+"reading_id": "01M4W22WK7RSBT1M4GJAXD2W5N"
+},
+"n_permits": 4,
+"member_ids": [
+"S-58662",
+"S-59314",
+"S-63648",
+"S-63649"
+],
+"kinds": [
+"新拠点・用途転換",
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -259,39 +190,11 @@
 },
 "timeline": [
 {
-"date": "2026-10-14",
-"face": "permits",
-"title": "建設許可(Indiana/TIPPECANOE): 未分類",
-"ref": "S-79151",
-"summary": "Tippecanoe 郡で Heartland Dental のシェルビルディングに関する CDR リリース(許可)。金額等の詳細は記録になし。"
-},
-{
 "date": "2026-09-18",
 "face": "permits",
-"title": "建設許可(Butler County): 未評価",
-"ref": "S-63649",
-"summary": null
-},
-{
-"date": "2026-09-18",
-"face": "permits",
-"title": "建設許可(Butler County): 未評価",
-"ref": "S-63648",
-"summary": null
-},
-{
-"date": "2026-09-16",
-"face": "permits",
-"title": "建設許可(Butler County): 未分類",
-"ref": "S-59314",
-"summary": "Butler County 4706 Old Kyles Station Rd で Heartland Dental のテナント内装工事(金額不明、進行中)。"
-},
-{
-"date": "2026-09-15",
-"face": "permits",
-"title": "建設許可(Butler County): 未評価",
+"title": "建設許可(Butler County): HEARTLAND DENTALがHで用途転換・改修の許可を取得(4件)",
 "ref": "S-58662",
-"summary": null
+"summary": "HEARTLAND DENTALがHで用途転換・改修の許可を取得(4件)"
 },
 {
 "date": "2021-11-08",
@@ -315,6 +218,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

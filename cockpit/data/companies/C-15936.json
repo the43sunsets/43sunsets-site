@@ -23,58 +23,44 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 360000.0,
+"count": 1,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-21",
 "items": [
 {
 "id": "S-67728",
 "date": "2026-09-21",
-"applied": "2026-08-31",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cleveland",
 "address": "3804 W 150TH ST, CLEVELAND, OH, 44111",
 "permit_no": "BCB26-037296",
 "permit_type": "Commercial Building",
+"source_id": "SRC-068",
 "value": 180000.0,
-"category": "未分類",
+"category": "保全",
 "confidence": "high",
-"summary": "Cleveland 3804 W 150th St の既存クイックサーブ Rally's レストランの外装リブランディング工事 $180k(外装仕上げ・アクセントタワー・キャノピー・照明改修、内装工事なし)。",
+"summary": "RALLY'SがClevelandで更新・修繕の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Commercial Building / B Business / Exterior only remodel / MAKE EXTERIOR ALTERATIONS: EXTERIOR REBRANDING IMPROVEMENTS OF EXISTING QUICK SERVE RALLY'S RESTAURANT INCLUDING EXTERIOR FINISHES MISC. EXTERIOR DEMOLITION/REFRAMING OF NEW ACCENT TOWER + CANOPIES, AND EXTERIOR LIGHTING MODIFICATIONS PER AP",
-"source_id": "SRC-068",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:18.019446+00:00",
+"reading_id": "01M4W23FN3B85EM7BWP5WYAPPD"
 },
-{
-"id": "S-36803",
-"date": "2026-08-28",
-"applied": "2026-07-31",
-"state": "OH",
-"jurisdiction": "Cleveland",
-"address": "3502 CLARK AVE, CLEVELAND, OH, 44109",
-"permit_no": "BCB26-032167",
-"permit_type": "Commercial Building",
-"value": 180000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "既存のRally'sファストフード店(3502 Clark Ave)の外装リブランディング改修 $180k。内装工事なし。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial Building / B Business / Exterior only remodel / MAKE EXTERIOR ALTERATIONS EXTERIOR REBRANDING IMPROVEMENTS OF EXISTING QUICK SERVE RALLY'S RESTAURANT INCLUDING EXTERIOR FINISHES MISC. EXTERIOR DEMOLITION/REFRAMING OF NEW ACCENT TOWER + CANOPIES, AND EXTERIOR LIGHTING MODIFICATIONS PER APP",
-"source_id": "SRC-068",
-"provenance": {
-"policy": "v2-2026-09-05-highflow-filter",
-"batch": "msgbatch_0148CAhFmpUVgvDTpQ5YadXE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"n_permits": 1,
+"member_ids": [
+"S-67728"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 }
 ]
 },
@@ -106,18 +92,11 @@
 {
 "date": "2026-09-21",
 "face": "permits",
-"title": "建設許可(Cleveland): 未分類",
+"title": "建設許可(Cleveland): RALLY'SがClevelandで更新・修繕の許可を取得(1件)",
 "ref": "S-67728",
-"summary": "Cleveland 3804 W 150th St の既存クイックサーブ Rally's レストランの外装リブランディング工事 $180k(外装仕上げ・アクセントタワー・キャノピー・照明改修、内装工事なし)。"
-},
-{
-"date": "2026-08-28",
-"face": "permits",
-"title": "建設許可(Cleveland): 未分類",
-"ref": "S-36803",
-"summary": "既存のRally'sファストフード店(3502 Clark Ave)の外装リブランディング改修 $180k。内装工事なし。"
+"summary": "RALLY'SがClevelandで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

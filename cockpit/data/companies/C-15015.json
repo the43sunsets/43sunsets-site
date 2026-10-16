@@ -24,33 +24,43 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 4100.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-28",
 "items": [
 {
 "id": "S-69195",
 "date": "2026-09-28",
-"applied": "2026-09-14",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cincinnati",
 "address": "44 W COURT ST",
 "permit_no": "2026P08648",
 "permit_type": "Misc. Structures",
-"value": 4100.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 44 W Court St の雑構造物(Misc. Structures)工事 $4,100(A-5 用途)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Misc. Structures / Misc. Structures / A-5",
 "source_id": "SRC-003",
+"value": 4100.0,
+"category": "内容不明",
+"confidence": "high",
+"summary": "AAA CINCINNATIがCincinnatiで内容不明の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Misc. Structures / Misc. Structures / A-5",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:54.465954+00:00",
+"reading_id": "01M4W26DV1NT4VHJRR21BDV2T4"
+},
+"n_permits": 1,
+"member_ids": [
+"S-69195"
+],
+"kinds": [
+"内容不明"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
+"title": "建設許可(Cincinnati): AAA CINCINNATIがCincinnatiで内容不明の許可を取得(1件)",
 "ref": "S-69195",
-"summary": "Cincinnati 44 W Court St の雑構造物(Misc. Structures)工事 $4,100(A-5 用途)。"
+"summary": "AAA CINCINNATIがCincinnatiで内容不明の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

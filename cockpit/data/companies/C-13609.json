@@ -23,83 +23,11 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 213525.6,
-"n_amount_excluded": 1,
-"latest": "2026-10-09",
+"count": 3,
+"value_total": null,
+"n_amount_excluded": 0,
+"latest": "2026-09-17",
 "items": [
-{
-"id": "S-77912",
-"date": "2026-10-09",
-"applied": "2026-10-09",
-"state": "OH",
-"jurisdiction": "Cincinnati",
-"address": "500 E 5TH ST",
-"permit_no": "2026P09470",
-"permit_type": "Misc. Structures",
-"value": 12000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Ohio州(500 E 5th St, Cincinnati)における雑構造物工事 $12,000(用途 A-5)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Misc. Structures / Misc. Structures / A-5",
-"source_id": "SRC-003",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01VkMZhyQCztZmJpdHZZNNTS",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-70868",
-"date": "2026-09-30",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "4400 CURRENCY DR",
-"permit_no": "ALTC2634619",
-"permit_type": "Alteration",
-"value": 7000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 4400 Currency Dr の州所有物件で構造的改修 $7,000。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-69176",
-"date": "2026-09-28",
-"applied": "2026-09-17",
-"state": "OH",
-"jurisdiction": "Cincinnati",
-"address": "650 WALNUT ST",
-"permit_no": "2026P08762",
-"permit_type": "Misc. Structures",
-"value": 4100.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Ohio州(650 Walnut St, Cincinnati)によるMisc. Structures(雑構造物)工事 $4,100(A-5用途)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Misc. Structures / Misc. Structures / A-5",
-"source_id": "SRC-003",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
 {
 "id": "S-63354",
 "date": "2026-09-17",
@@ -109,68 +37,98 @@
 "address": "300 W LANE AVE",
 "permit_no": "FALRC2632516",
 "permit_type": "Fire Alarm",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 300 W Lane Ave における州所有物件の火災報知器設置に関する機械系許可(金額不明)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Alarm / Mechanical Permits or NA / Fire Protection",
 "source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-59756",
-"date": "2026-09-15",
-"applied": "2026-09-15",
-"state": "OH",
-"jurisdiction": "Cincinnati",
-"address": "2815 COMMONS WY",
-"permit_no": "2026P08689",
-"permit_type": "Misc. Structures",
-"value": 2025.6,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 2815 Commons Wy にて雑構造物(Misc. Structures)$2,026(A-5用途)。",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "STATE OF OHIOがColumbusで警備設備の許可を取得(1件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Misc. Structures / Misc. Structures / A-5",
-"source_id": "SRC-003",
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Fire Alarm / Mechanical Permits or NA / Fire Protection",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:57.775860+00:00",
+"reading_id": "01M4W24PFFM3MD6MBJVWYVFY27"
+},
+"n_permits": 1,
+"member_ids": [
+"S-63354"
+],
+"kinds": [
+"警備"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-1147",
 "date": "2026-08-12",
-"applied": "2026-05-08",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cincinnati",
 "address": "700 W PETE ROSE WY",
 "permit_no": "2026P04217",
 "permit_type": "Elevator Permit",
+"source_id": "SRC-003",
 "value": 188400.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 700 W PETE ROSE WY のエレベーター設備工事 $188.4k。所有者/申請者: 不明。",
+"category": "保全",
+"confidence": "high",
+"summary": "STATE OF OHIOがCincinnatiで更新・修繕の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Elevator Permit / Elevator Permit / B",
-"source_id": "SRC-003",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-005",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:11.876627+00:00",
+"reading_id": "01M4W239N4CN28W202B3QXF9TZ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-1147"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-59756",
+"date": "2026-09-15",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "2815 COMMONS WY",
+"permit_no": "2026P08689",
+"permit_type": "Misc. Structures",
+"source_id": "SRC-003",
+"value": 2025.6,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "STATE OF OHIOがCincinnatiで事務所・その他の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Misc. Structures / Misc. Structures / A-5",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:15.855774+00:00",
+"reading_id": "01M4W2584FRAGQ23QYZX14Q8KE"
+},
+"n_permits": 1,
+"member_ids": [
+"S-59756"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -200,48 +158,27 @@
 },
 "timeline": [
 {
-"date": "2026-10-09",
-"face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
-"ref": "S-77912",
-"summary": "Ohio州(500 E 5th St, Cincinnati)における雑構造物工事 $12,000(用途 A-5)。"
-},
-{
-"date": "2026-09-30",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-70868",
-"summary": "Columbus 4400 Currency Dr の州所有物件で構造的改修 $7,000。"
-},
-{
-"date": "2026-09-28",
-"face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
-"ref": "S-69176",
-"summary": "Ohio州(650 Walnut St, Cincinnati)によるMisc. Structures(雑構造物)工事 $4,100(A-5用途)。"
-},
-{
 "date": "2026-09-17",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): STATE OF OHIOがColumbusで警備設備の許可を取得(1件)",
 "ref": "S-63354",
-"summary": "Columbus 300 W Lane Ave における州所有物件の火災報知器設置に関する機械系許可(金額不明)。"
+"summary": "STATE OF OHIOがColumbusで警備設備の許可を取得(1件)"
 },
 {
 "date": "2026-09-15",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
+"title": "建設許可(Cincinnati): STATE OF OHIOがCincinnatiで事務所・その他の許可を取得(1件)",
 "ref": "S-59756",
-"summary": "Cincinnati 2815 Commons Wy にて雑構造物(Misc. Structures)$2,026(A-5用途)。"
+"summary": "STATE OF OHIOがCincinnatiで事務所・その他の許可を取得(1件)"
 },
 {
 "date": "2026-08-12",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
+"title": "建設許可(Cincinnati): STATE OF OHIOがCincinnatiで更新・修繕の許可を取得(1件)",
 "ref": "S-1147",
-"summary": "Cincinnati 700 W PETE ROSE WY のエレベーター設備工事 $188.4k。所有者/申請者: 不明。"
+"summary": "STATE OF OHIOがCincinnatiで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

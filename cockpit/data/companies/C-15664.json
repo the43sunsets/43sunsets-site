@@ -25,48 +25,76 @@
 "permits": {
 "count": 2,
 "value_total": null,
-"n_amount_excluded": 2,
+"n_amount_excluded": 0,
 "latest": "2026-09-23",
 "items": [
 {
-"id": "S-65552",
-"date": "2026-09-23",
-"applied": "2026-09-21",
-"state": "MI",
-"jurisdiction": "Ann Arbor",
-"address": "315 N State St Ann Arbor MI 48104",
-"permit_no": "PLUMR26-1563",
-"permit_type": "Plumbing (Residential) - Water/Sewer/Storm",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "PIPE BURST FROM HOME TO RIGHT OF WAY / Plumbing (Residential) - Water/Sewer/Storm / Water/Sewer/Storm",
-"source_id": "SRC-022",
-"provenance": null
-},
-{
 "id": "S-65549",
 "date": "2026-09-23",
-"applied": "2026-09-21",
+"applied": null,
 "state": "MI",
 "jurisdiction": "Ann Arbor",
 "address": "307 N State St Ann Arbor MI 48104",
 "permit_no": "PLUMR26-1562",
 "permit_type": "Plumbing (Residential) - Water/Sewer/Storm",
+"source_id": "SRC-022",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "保全",
+"confidence": "high",
+"summary": "INTER-COOPERATIVE COUNCILがAnn Arborで更新・修繕の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "PIPE BURST FROM HOME TO RIGHT OF WAY / Plumbing (Residential) - Water/Sewer/Storm / Water/Sewer/Storm",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:52.488137+00:00",
+"reading_id": "01M4W26BX8WVQZXJE0CFEETKFA"
+},
+"n_permits": 1,
+"member_ids": [
+"S-65549"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-65552",
+"date": "2026-09-23",
+"applied": null,
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "315 N State St Ann Arbor MI 48104",
+"permit_no": "PLUMR26-1563",
+"permit_type": "Plumbing (Residential) - Water/Sewer/Storm",
 "source_id": "SRC-022",
-"provenance": null
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "INTER-COOPERATIVE COUNCILがAnn Arborで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "PIPE BURST FROM HOME TO RIGHT OF WAY / Plumbing (Residential) - Water/Sewer/Storm / Water/Sewer/Storm",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:12.905081+00:00",
+"reading_id": "01M4W26ZV9AMS7A0A12292HGWF"
+},
+"n_permits": 1,
+"member_ids": [
+"S-65552"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -98,18 +126,18 @@
 {
 "date": "2026-09-23",
 "face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
-"ref": "S-65552",
-"summary": null
+"title": "建設許可(Ann Arbor): INTER-COOPERATIVE COUNCILがAnn Arborで更新・修繕の許可を取得(1件)",
+"ref": "S-65549",
+"summary": "INTER-COOPERATIVE COUNCILがAnn Arborで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-09-23",
 "face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
-"ref": "S-65549",
-"summary": null
+"title": "建設許可(Ann Arbor): INTER-COOPERATIVE COUNCILがAnn Arborで更新・修繕の許可を取得(1件)",
+"ref": "S-65552",
+"summary": "INTER-COOPERATIVE COUNCILがAnn Arborで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

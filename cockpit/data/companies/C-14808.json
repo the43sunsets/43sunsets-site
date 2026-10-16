@@ -25,32 +25,43 @@
 "permits": {
 "count": 1,
 "value_total": null,
-"n_amount_excluded": 1,
+"n_amount_excluded": 0,
 "latest": "2026-09-25",
 "items": [
 {
 "id": "S-68497",
 "date": "2026-09-25",
-"applied": "2026-01-13",
+"applied": null,
 "state": "IN",
 "jurisdiction": "Indiana/ADAMS",
 "address": "1418 S 13th St",
 "permit_no": "458710:2026-09-25",
 "permit_type": "CDR release",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Indiana/Adams郡 1418 S 13th St で Champion Homes による建物増築(倉庫)。金額不明・CDR release扱い。",
-"infer": "Champion Homesはプレハブ/モジュラー住宅メーカーで、倉庫増築は生産・保管能力の拡張の可能性(推論)。ただし金額・詳細が不明で判断材料不足。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Champion Homes  Building Addition / Warehouse",
 "source_id": "SRC-009",
+"value": null,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "Champion HomesがADAMSで増築・倉庫整備の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Champion Homes  Building Addition / Warehouse",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:22.522202+00:00",
+"reading_id": "01M4W2797T69JANWVGG49A3M03"
+},
+"n_permits": 1,
+"member_ids": [
+"S-68497"
+],
+"kinds": [
+"増築・新築",
+"倉庫・搬送"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -82,11 +93,11 @@
 {
 "date": "2026-09-25",
 "face": "permits",
-"title": "建設許可(Indiana/ADAMS): 未分類",
+"title": "建設許可(Indiana/ADAMS): Champion HomesがADAMSで増築・倉庫整備の許可を取得(1件)",
 "ref": "S-68497",
-"summary": "Indiana/Adams郡 1418 S 13th St で Champion Homes による建物増築(倉庫)。金額不明・CDR release扱い。"
+"summary": "Champion HomesがADAMSで増築・倉庫整備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

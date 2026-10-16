@@ -24,57 +24,77 @@
 "faces": {
 "permits": {
 "count": 2,
-"value_total": 233000.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-28",
 "items": [
 {
 "id": "S-69797",
 "date": "2026-09-28",
-"applied": "2026-09-14",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "1659 W MELROSE ST",
 "permit_no": "B200511486",
 "permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 223000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago Public Library(1659 W Melrose St)でエアハンドリング設備(Trane 製コンデンシングユニット)の修理・交換 $223k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "REPAIR/REPLACEMENT AFFECTING 1 SYSTEMS :   1 OTHER AIR HANDLING EQUIPMENT(TRANE RAUC GO TON CONDENSING UNIT) . ELECTRICAL WORK UNDER THIS PERMIT = NO . LOCATIONS: 0 RESIDENTIAL UNIT(S), 1 NON-RESIDENTIAL UNIT(S), EXTERIOR WORK,  GROUND LEVEL INSIDE A GATED/BRICK ENCLOSURE.",
 "source_id": "SRC-001",
+"value": 223000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CHICAGO PUBLIC LIBRARYがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "REPAIR/REPLACEMENT AFFECTING 1 SYSTEMS :   1 OTHER AIR HANDLING EQUIPMENT(TRANE RAUC GO TON CONDENSING UNIT) . ELECTRICAL WORK UNDER THIS PERMIT = NO . LOCATIONS: 0 RESIDENTIAL UNIT(S), 1 NON-RESIDENTIAL UNIT(S), EXTERIOR WORK,  GROUND LEVEL INSIDE A GATED/BRICK ENCLOSURE.",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:48.866314+00:00",
+"reading_id": "01M4W268C2KNXYMT07RHVWTB32"
+},
+"n_permits": 1,
+"member_ids": [
+"S-69797"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 },
 {
 "id": "S-6572",
 "date": "2026-08-25",
-"applied": "2026-08-25",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "400 S STATE ST",
 "permit_no": "B200508838",
 "permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 10000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago Public Library(400 S State St)の4階・10階でコンセント増設等の低圧電気修繕 $10k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: 4TH AND 10TH FLOOR.",
 "source_id": "SRC-001",
+"value": 10000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CHICAGO PUBLIC LIBRARYがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: 4TH AND 10TH FLOOR.",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-037",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:23.785872+00:00",
+"reading_id": "01M4W21TP93C1GJTVHMXTXKRJ1"
+},
+"n_permits": 1,
+"member_ids": [
+"S-6572"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -106,18 +126,18 @@
 {
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): CHICAGO PUBLIC LIBRARYがChicagoで更新・修繕の許可を取得(1件)",
 "ref": "S-69797",
-"summary": "Chicago Public Library(1659 W Melrose St)でエアハンドリング設備(Trane 製コンデンシングユニット)の修理・交換 $223k。"
+"summary": "CHICAGO PUBLIC LIBRARYがChicagoで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-08-25",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): CHICAGO PUBLIC LIBRARYがChicagoで更新・修繕の許可を取得(1件)",
 "ref": "S-6572",
-"summary": "Chicago Public Library(400 S State St)の4階・10階でコンセント増設等の低圧電気修繕 $10k。"
+"summary": "CHICAGO PUBLIC LIBRARYがChicagoで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

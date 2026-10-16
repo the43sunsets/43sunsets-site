@@ -24,33 +24,43 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 2000.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-17",
 "items": [
 {
 "id": "S-61960",
 "date": "2026-09-17",
-"applied": "2026-09-16",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "1250 W 119TH ST",
 "permit_no": "101088549",
 "permit_type": "PERMIT - NEW CONSTRUCTION",
-"value": 2000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago 1250 W 119th St でチャリティウォーク「Sista Strut 3K」用の仮設移動ステージ設置許可 $2,000(2026年10月2日設営・10月3日撤去)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "PERMIT EXPIRES ON 11/17/2026 ERECTION STARTS: 10/2/2026, ERECTION ENDS: 10/3/2026.  CBC2019. REINST OF 2023 PERMIT 101032561 FOR THE 2026 SISTA STRUT 3K - BREAST CANCER WALK STAGE ON OCT 3, 2026. SAME 1-24X16 MOBILE STAGE WITH WINGS. SETUP OCT 2 AND TAKEDOWN OCT 3, 2026. IHEART MEDIA WITH AYRE STAGI",
 "source_id": "SRC-001",
+"value": 2000.0,
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "IHEART MEDIAがChicagoで記録取得(仮設ステージ関連、1件)",
+"infer": "PERMIT EXPIRES ON 11/17/2026 ERECTION STARTS: 10/2/2026, ERECTION ENDS: 10/3/2026.",
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "PERMIT EXPIRES ON 11/17/2026 ERECTION STARTS: 10/2/2026, ERECTION ENDS: 10/3/2026.  CBC2019. REINST OF 2023 PERMIT 101032561 FOR THE 2026 SISTA STRUT 3K - BREAST CANCER WALK STAGE ON OCT 3, 2026. SAME 1-24X16 MOBILE STAGE WITH WINGS. SETUP OCT 2 AND TAKEDOWN OCT 3, 2026. IHEART MEDIA WITH AYRE STAGI",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:43.984424+00:00",
+"reading_id": "01M4W22EDGJXW2J65C3AK4F7Y2"
+},
+"n_permits": 1,
+"member_ids": [
+"S-61960"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-17",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): IHEART MEDIAがChicagoで記録取得(仮設ステージ関連、1件)",
 "ref": "S-61960",
-"summary": "Chicago 1250 W 119th St でチャリティウォーク「Sista Strut 3K」用の仮設移動ステージ設置許可 $2,000(2026年10月2日設営・10月3日撤去)。"
+"summary": "IHEART MEDIAがChicagoで記録取得(仮設ステージ関連、1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

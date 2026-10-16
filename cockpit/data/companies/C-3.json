@@ -20,130 +20,44 @@
 },
 "faces": {
 "permits": {
-"count": 5,
-"value_total": 84180000.0,
+"count": 1,
+"value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-06",
+"latest": "2026-09-18",
 "items": [
-{
-"id": "S-75311",
-"date": "2026-10-06",
-"applied": "2026-10-01",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "251 E HURON ST",
-"permit_no": "101088154",
-"permit_type": "PERMIT - RENOVATION/ALTERATION",
-"value": 650000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Northwestern Memorial Hospital(251 E Huron St)の4階にあるレジデントワークルーム・会議室・ラウンジの内装改修 $650k(家具・天井・壁の更新、MEPFP軽微対応)。用途変更なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "SELF-CERT 2019 CBRC: INTERIOR ALTERATIONS TO EXISTING RESIDENT'S WORK ROOM, CONFERENCE ROOM AND LOUNGE TO INCLUDE REMOVAL OF EXISTING FURNITURE AND SELECTIVE DEMOLITION OF PORTIONS OF WALLS AND EXISTING CEILING. NEW CEILING AND PATCHING EXISTING WALLS, NEW MILLWORK, NEW FURNITURE, NEW INTERIOR FINIS",
-"source_id": "SRC-001",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01DnZWP1peDSQgUxQrBeCfdE",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
 {
 "id": "S-62014",
 "date": "2026-09-18",
-"applied": "2026-09-09",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "333 E HURON ST",
 "permit_no": "101088149",
 "permit_type": "PERMIT - NEW CONSTRUCTION",
+"source_id": "SRC-001",
 "value": 90000.0,
-"category": "医療施設",
+"category": "保全",
 "confidence": "high",
-"summary": "Northwestern Memorial Hospital(333 E Huron St)で 2000A の仮設電気設備2台を設置 $90k。",
-"infer": "仮設電源設置は大規模な本工事(増築・改修等)に付随する準備工事の可能性(推論)。金額自体は小さく単体では大型投資シグナルとは言えない。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "SPR / 2019 CBC: INSTALLATION OF TWO (2) 2000 AMP TEMPORARY ELECTRICAL SERVICE AS PER PLANS.",
-"source_id": "SRC-001",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0126zGVcFYbtfgVcwn8dPQc4",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-24250",
-"date": "2026-09-02",
-"applied": "2026-08-03",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "676 N ST CLAIR ST",
-"permit_no": "101085277",
-"permit_type": "PERMIT - RENOVATION/ALTERATION",
-"value": 355000.0,
-"category": "医療施設",
-"confidence": "high",
-"summary": "病院 2 階 X 線室の内装改修 $355k。既存 X 線装置を新型に入替え、新規コントロールアルコーブを設置(MEP 対応含む)。",
-"infer": "X 線装置の入替 = 画像診断機器メーカーの調達が発生する小規模設備更新(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "SELF-CERT 2019 CBRC: ***STRUCTURAL PEER REVIEW*** INTERIOR ALTERATIONS TO 2ND FLOOR X-RAY ROOM TO REPLACE EXISTING X-RAY EQUIPMENT WITH NEW AND PROVIDING NEW CONTROL ALCOVE. SCOPE INCLUDES MECHANICAL, ELECTRICAL AND PLUMBING TO ACCOMMODATE NEW EQUIPMENT. CONSTRUCTION TYPE IA. NO CHANGE IN EXISTING B",
-"source_id": "SRC-001",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-79",
-"date": "2026-07-08",
-"applied": "2026-07-08",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "710 N FAIRBANKS CT",
-"permit_no": "B200477794",
-"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 1770000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "ラボ拡張(#51)と同じフロアのデータ/映像配線工事 $1.8M。",
+"summary": "NORTHWESTERN MEMORIAL HOSPITALがChicagoでユーティリティ整備の許可を取得(1件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL DATA/VIDEO. SPECIFIC LOCATION: FLOORS 2, 4, 6, 7, P.",
-"source_id": "SRC-001",
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SPR / 2019 CBC: INSTALLATION OF TWO (2) 2000 AMP TEMPORARY ELECTRICAL SERVICE AS PER PLANS.",
 "provenance": {
-"policy": "v0-2026-09-02",
-"batch": "02",
-"model": "claude-fable-5-1 (manual batch, sparring session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:28.212471+00:00",
+"reading_id": "01M4W25M6MZMDTTYJ6Q6ACFZT2"
 },
-{
-"id": "S-51",
-"date": "2026-07-06",
-"applied": "2026-05-12",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "710 N FAIRBANKS CT",
-"permit_no": "101082660",
-"permit_type": "PERMIT - RENOVATION/ALTERATION",
-"value": 81315000.0,
-"category": "研究・ラボ施設",
-"confidence": "high",
-"summary": "病院のラボ/オフィス棟 5 フロア(2, 4, 6, 7 階とペントハウス1)を改修しラボを拡張 $81.3M(4 階に機械ペントハウス増設)。",
-"infer": "ラボ拡張 = 分析機器・実験設備・特殊空調の調達が竣工まで続く窓(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "DDS 2019 CBRC: RENOVATION TO EXISTING LAB/OFFICE BUILDING ON FLOORS 2, 4, 6, 7 AND PENTHOUSE 1 FOR EXPANSION OF LABS TO INCLUDE MECHANICAL PENTHOUSE ADDITION ON LEVEL 4. CONSTRUCTION TYPE IA. EXISTING OCCUPANCY CLASSIFICATION B AND I TO REMAIN. CONSULTANT REVIEWER: GLOBETROTTERS ENGINEERING",
-"source_id": "SRC-001",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0168QrSzLA9XSk4G2A8kMm3D",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"n_permits": 1,
+"member_ids": [
+"S-62014"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -173,41 +87,13 @@
 },
 "timeline": [
 {
-"date": "2026-10-06",
-"face": "permits",
-"title": "建設許可(Chicago): 未分類",
-"ref": "S-75311",
-"summary": "Northwestern Memorial Hospital(251 E Huron St)の4階にあるレジデントワークルーム・会議室・ラウンジの内装改修 $650k(家具・天井・壁の更新、MEPFP軽微対応)。用途変更なし。"
-},
-{
 "date": "2026-09-18",
 "face": "permits",
-"title": "建設許可(Chicago): 医療施設",
+"title": "建設許可(Chicago): NORTHWESTERN MEMORIAL HOSPITALがChicagoでユーティリティ整備の許可を取得(1件)",
 "ref": "S-62014",
-"summary": "Northwestern Memorial Hospital(333 E Huron St)で 2000A の仮設電気設備2台を設置 $90k。"
-},
-{
-"date": "2026-09-02",
-"face": "permits",
-"title": "建設許可(Chicago): 医療施設",
-"ref": "S-24250",
-"summary": "病院 2 階 X 線室の内装改修 $355k。既存 X 線装置を新型に入替え、新規コントロールアルコーブを設置(MEP 対応含む)。"
-},
-{
-"date": "2026-07-08",
-"face": "permits",
-"title": "建設許可(Chicago): 未分類",
-"ref": "S-79",
-"summary": "ラボ拡張(#51)と同じフロアのデータ/映像配線工事 $1.8M。"
-},
-{
-"date": "2026-07-06",
-"face": "permits",
-"title": "建設許可(Chicago): 研究・ラボ施設",
-"ref": "S-51",
-"summary": "病院のラボ/オフィス棟 5 フロア(2, 4, 6, 7 階とペントハウス1)を改修しラボを拡張 $81.3M(4 階に機械ペントハウス増設)。"
+"summary": "NORTHWESTERN MEMORIAL HOSPITALがChicagoでユーティリティ整備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

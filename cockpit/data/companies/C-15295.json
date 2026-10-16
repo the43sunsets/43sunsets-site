@@ -23,58 +23,46 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 1,
 "value_total": null,
-"n_amount_excluded": 2,
+"n_amount_excluded": 0,
 "latest": "2026-10-01",
 "items": [
 {
-"id": "S-70306",
-"date": "2026-10-01",
-"applied": "2026-09-29",
-"state": "IN",
-"jurisdiction": "Indiana/ALLEN",
-"address": "1115 E Washington Blvd",
-"permit_no": "464409:2026-10-01",
-"permit_type": "CDR release",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Indiana Tech の学生寮(2027 Student Housing / Residence Apartments)に関する CDR release(許可額не記載)。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Indiana Tech - 2027 Student Housing / Residence Apartments",
-"source_id": "SRC-009",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-69269",
-"date": "2026-09-30",
-"applied": "2026-09-29",
+"date": "2026-10-01",
+"applied": null,
 "state": "IN",
 "jurisdiction": "Indiana/ALLEN",
 "address": "1115 E Washington Blvd",
 "permit_no": "464409:2026-09-30",
 "permit_type": "CDR release",
+"source_id": "SRC-009",
 "value": null,
-"category": "未分類",
+"category": "操業の変化",
 "confidence": "high",
-"summary": "Indiana Tech の学生寮(2027年完成予定・住居アパート)に関する CDR release。金額記載なし。",
+"summary": "Indiana TechがAllenで学生寮の新築・用途転換の許可を取得(2件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Indiana Tech - 2027 Student Housing / Residence Apartments",
-"source_id": "SRC-009",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:55.974563+00:00",
+"reading_id": "01M4W22T46Z782G2BQ3KC3E28R"
+},
+"n_permits": 2,
+"member_ids": [
+"S-69269",
+"S-70306"
+],
+"kinds": [
+"増築・新築",
+"新拠点・用途転換"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -106,18 +94,11 @@
 {
 "date": "2026-10-01",
 "face": "permits",
-"title": "建設許可(Indiana/ALLEN): 未分類",
-"ref": "S-70306",
-"summary": "Indiana Tech の学生寮(2027 Student Housing / Residence Apartments)に関する CDR release(許可額не記載)。"
-},
-{
-"date": "2026-09-30",
-"face": "permits",
-"title": "建設許可(Indiana/ALLEN): 未分類",
+"title": "建設許可(Indiana/ALLEN): Indiana TechがAllenで学生寮の新築・用途転換の許可を取得(2件)",
 "ref": "S-69269",
-"summary": "Indiana Tech の学生寮(2027年完成予定・住居アパート)に関する CDR release。金額記載なし。"
+"summary": "Indiana TechがAllenで学生寮の新築・用途転換の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -24,57 +24,77 @@
 "faces": {
 "permits": {
 "count": 2,
-"value_total": 3503500.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-16",
 "items": [
 {
 "id": "S-59633",
 "date": "2026-09-16",
-"applied": "2026-03-22",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "7601 S LAWNDALE AVE",
 "permit_no": "101080961",
 "permit_type": "PERMIT - RENOVATION/ALTERATION",
-"value": 3500000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "ComEd(Exelon傘下)の Chicago South 施設(7601 S Lawndale Ave)で南側駐車場の再舗装・レイアウト変更 $3.5M。既存建物への工事なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "SPR 2019 CBRC: COMED CHICAGO SOUTH - EXISTING PARKING LOT REPAVING, SOUTH PARKING LOT ONLY. NEW PARKING LAYOUT AND LANDSCAPE. NO CHANGE IN EXISTING BUILDING CONSTRUCTION TYPE AND OCCUPANCY (TYPE II-A, B). EXTERIOR WORK ONLY, NO WORK ON THE EXISTING BUILDINGS ON SITE.",
 "source_id": "SRC-001",
+"value": 3500000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "COMED AN EXELON COMPANYがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SPR 2019 CBRC: COMED CHICAGO SOUTH - EXISTING PARKING LOT REPAVING, SOUTH PARKING LOT ONLY. NEW PARKING LAYOUT AND LANDSCAPE. NO CHANGE IN EXISTING BUILDING CONSTRUCTION TYPE AND OCCUPANCY (TYPE II-A, B). EXTERIOR WORK ONLY, NO WORK ON THE EXISTING BUILDINGS ON SITE.",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01E6FFgBSqmgk923j5ptshQL",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:10.772806+00:00",
+"reading_id": "01M4W238JMA23HZ17JQYXP2SSR"
+},
+"n_permits": 1,
+"member_ids": [
+"S-59633"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "1m_10m",
+"amount_band_label": "$1M〜$10M"
 },
 {
 "id": "S-6714",
 "date": "2026-08-26",
-"applied": "2025-07-15",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "3536 S IRON ST",
 "permit_no": "101071745",
 "permit_type": "PERMIT - SIGNS",
-"value": 3500.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago の建物に「ComEd an Exelon Company」看板を設置(北面)$3.5k。",
-"infer": "同一物件で3方位の看板許可 = 一体プロジェクトの副許可。",
-"role": "operator",
-"role_label": "operator",
-"verbatim": "INSTALLATION OF \"COMED AN EXELON COMPANY\" SIGN ON NORTH ELEVATION",
 "source_id": "SRC-001",
+"value": 3500.0,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "COMED AN EXELON COMPANYがChicagoで看板設置の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "INSTALLATION OF \"COMED AN EXELON COMPANY\" SIGN ON NORTH ELEVATION",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-053",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:34.875891+00:00",
+"reading_id": "01M4W2403V6B73WZ4Q7Q4K8X68"
+},
+"n_permits": 1,
+"member_ids": [
+"S-6714"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -106,18 +126,18 @@
 {
 "date": "2026-09-16",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): COMED AN EXELON COMPANYがChicagoで更新・修繕の許可を取得(1件)",
 "ref": "S-59633",
-"summary": "ComEd(Exelon傘下)の Chicago South 施設(7601 S Lawndale Ave)で南側駐車場の再舗装・レイアウト変更 $3.5M。既存建物への工事なし。"
+"summary": "COMED AN EXELON COMPANYがChicagoで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-08-26",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): COMED AN EXELON COMPANYがChicagoで看板設置の許可を取得(1件)",
 "ref": "S-6714",
-"summary": "Chicago の建物に「ComEd an Exelon Company」看板を設置(北面)$3.5k。"
+"summary": "COMED AN EXELON COMPANYがChicagoで看板設置の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

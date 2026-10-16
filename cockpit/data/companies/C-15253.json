@@ -23,82 +23,112 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 2546000.0,
-"n_amount_excluded": 1,
+"count": 5,
+"value_total": null,
+"n_amount_excluded": 0,
 "latest": "2026-09-28",
 "items": [
 {
-"id": "S-69853",
-"date": "2026-09-28",
-"applied": "2026-09-22",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "555 W ROOSEVELT RD",
-"permit_no": "101087641",
-"permit_type": "PERMIT - RENOVATION/ALTERATION",
-"value": 825000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago 555 W Roosevelt Rd の既存 Planet Fitness 店舗の内装改修 $825k(セルフ証明)。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "SELF CERT: INTERIOR REMODEL OF EXISTING PLANET FITNESS; AS PER PLANS",
-"source_id": "SRC-001",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-68396",
-"date": "2026-09-22",
-"applied": "2026-04-27",
-"state": "IN",
-"jurisdiction": "Indiana/HENRY",
-"address": "427 S Memorial Dr",
-"permit_no": "460995:2026-09-22",
-"permit_type": "CDR release",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Indiana New Castle の Planet Fitness フィットネスセンターに関する CDR release(金額不明)。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Planet Fitness - New Castle IN / Fitness Center",
-"source_id": "SRC-009",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-26252",
 "date": "2026-09-03",
-"applied": "2026-08-27",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "5033 N ELSTON AVE",
 "permit_no": "101086905",
 "permit_type": "PERMIT - RENOVATION/ALTERATION",
+"source_id": "SRC-001",
 "value": 750000.0,
-"category": "未分類",
+"category": "操業の変化",
 "confidence": "high",
-"summary": "Chicago 5033 N Elston Ave にて Planet Fitness のテナント内装工事 $750k(セルフ証明)。",
+"summary": "PLANET FITNESSがChicagoで新拠点・用途転換の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "SELF CERT: TENANT BUILDOUT OF A PLANET FITNESS; AS PER PLANS",
-"source_id": "SRC-001",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "msgbatch_01MRgcMEtQwchzcohwJSxY5o",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:46.345966+00:00",
+"reading_id": "01M4W22GQAXZHAQ6579B6W1DQZ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-26252"
+],
+"kinds": [
+"新拠点・用途転換"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-69853",
+"date": "2026-09-28",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "555 W ROOSEVELT RD",
+"permit_no": "101087641",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"source_id": "SRC-001",
+"value": 825000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "PLANET FITNESSがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SELF CERT: INTERIOR REMODEL OF EXISTING PLANET FITNESS; AS PER PLANS",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:11.724700+00:00",
+"reading_id": "01M4W26YPCPD4CF5RC2GGVZJSZ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-69853"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-58047",
+"date": "2026-08-07",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Peoria",
+"address": "3425 N University DR",
+"permit_no": "MECH-001669-2026",
+"permit_type": "Mechanical",
+"source_id": "SRC-142",
+"value": 105000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "Planet FitnessがPeoriaで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Planet Fitness - Remove 4 RTUS and replace with new. Provide new duct distribution and grills / Mechanical / Commercial",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:49.029146+00:00",
+"reading_id": "01M4W24DY5GCDBTZJ8CJSS6W8R"
+},
+"n_permits": 1,
+"member_ids": [
+"S-58047"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 },
 {
 "id": "S-73434",
@@ -109,68 +139,64 @@
 "address": "102 COUNTRYSIDE PLZ, COUNTRYSIDE, IL 60525",
 "permit_no": "P26-00461",
 "permit_type": "COMMERCIAL PERMIT",
-"value": 16000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Planet Fitness の壁面看板設置とロードサイドの看板コピー交換 $16k。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "INSTALL WALL SIGN FOR PLANET FITNESS REPLACE PYLON COPY IN ROADWAY FREESTANDING SIGN. / COMMERCIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
 "source_id": "SRC-021",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-58047",
-"date": "2026-08-07",
-"applied": "2026-08-07",
-"state": "IL",
-"jurisdiction": "Peoria",
-"address": "3425 N University DR",
-"permit_no": "MECH-001669-2026",
-"permit_type": "Mechanical",
-"value": 105000.0,
-"category": "未分類",
+"value": 16000.0,
+"category": "事務所・その他",
 "confidence": "high",
-"summary": "Peoria 3425 N University Dr の Planet Fitness でRTU(屋上空調ユニット)4台を撤去・更新し、新規ダクト・グリルを設置する機械工事 $105k。",
+"summary": "PLANET FITNESSがCOUNTRYSIDEで事務所・その他の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
-"verbatim": "Planet Fitness - Remove 4 RTUS and replace with new. Provide new duct distribution and grills / Mechanical / Commercial",
-"source_id": "SRC-142",
+"role_label": "操業事業者",
+"verbatim": "INSTALL WALL SIGN FOR PLANET FITNESS REPLACE PYLON COPY IN ROADWAY FREESTANDING SIGN. / COMMERCIAL PERMIT / OTHER - MINOR NEW CONSTRUCTION",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01HZT6nzCByNgVCjPNEUS1RR",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:33.523314+00:00",
+"reading_id": "01M4W2246KCJ5HH3GKXHC2GZS1"
+},
+"n_permits": 1,
+"member_ids": [
+"S-73434"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
-"id": "S-48",
-"date": "2026-07-06",
-"applied": "2025-12-08",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "2558 W CERMAK RD",
-"permit_no": "101077311",
-"permit_type": "PERMIT - RENOVATION/ALTERATION",
-"value": 850000.0,
-"category": "未分類",
+"id": "S-68396",
+"date": "2026-09-22",
+"applied": null,
+"state": "IN",
+"jurisdiction": "Indiana/HENRY",
+"address": "427 S Memorial Dr",
+"permit_no": "460995:2026-09-22",
+"permit_type": "CDR release",
+"source_id": "SRC-009",
+"value": null,
+"category": "内容不明",
 "confidence": "high",
-"summary": "Chicago 2558 W Cermak Rd の既存 Planet Fitness の内装改修 $850k。",
+"summary": "Planet FitnessがNew Castleで許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
-"verbatim": "SELF CERT: INTERIOR RENOVATION TO EXISTING PLANET FITNESS; AS PER PLANS",
-"source_id": "SRC-001",
+"role_label": "操業事業者",
+"verbatim": "Planet Fitness - New Castle IN / Fitness Center",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-001",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:36.717747+00:00",
+"reading_id": "01M4W25WGDV2R09H9VSD883NV0"
+},
+"n_permits": 1,
+"member_ids": [
+"S-68396"
+],
+"kinds": [
+"内容不明"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -202,46 +228,39 @@
 {
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): PLANET FITNESSがChicagoで更新・修繕の許可を取得(1件)",
 "ref": "S-69853",
-"summary": "Chicago 555 W Roosevelt Rd の既存 Planet Fitness 店舗の内装改修 $825k(セルフ証明)。"
+"summary": "PLANET FITNESSがChicagoで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-09-22",
 "face": "permits",
-"title": "建設許可(Indiana/HENRY): 未分類",
+"title": "建設許可(Indiana/HENRY): Planet FitnessがNew Castleで許可を取得(1件)",
 "ref": "S-68396",
-"summary": "Indiana New Castle の Planet Fitness フィットネスセンターに関する CDR release(金額不明)。"
+"summary": "Planet FitnessがNew Castleで許可を取得(1件)"
 },
 {
 "date": "2026-09-03",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): PLANET FITNESSがChicagoで新拠点・用途転換の許可を取得(1件)",
 "ref": "S-26252",
-"summary": "Chicago 5033 N Elston Ave にて Planet Fitness のテナント内装工事 $750k(セルフ証明)。"
+"summary": "PLANET FITNESSがChicagoで新拠点・用途転換の許可を取得(1件)"
 },
 {
 "date": "2026-08-31",
 "face": "permits",
-"title": "建設許可(Countryside): 未分類",
+"title": "建設許可(Countryside): PLANET FITNESSがCOUNTRYSIDEで事務所・その他の許可を取得(1件)",
 "ref": "S-73434",
-"summary": "Planet Fitness の壁面看板設置とロードサイドの看板コピー交換 $16k。"
+"summary": "PLANET FITNESSがCOUNTRYSIDEで事務所・その他の許可を取得(1件)"
 },
 {
 "date": "2026-08-07",
 "face": "permits",
-"title": "建設許可(Peoria): 未分類",
+"title": "建設許可(Peoria): Planet FitnessがPeoriaで更新・修繕の許可を取得(1件)",
 "ref": "S-58047",
-"summary": "Peoria 3425 N University Dr の Planet Fitness でRTU(屋上空調ユニット)4台を撤去・更新し、新規ダクト・グリルを設置する機械工事 $105k。"
-},
-{
-"date": "2026-07-06",
-"face": "permits",
-"title": "建設許可(Chicago): 未分類",
-"ref": "S-48",
-"summary": "Chicago 2558 W Cermak Rd の既存 Planet Fitness の内装改修 $850k。"
+"summary": "Planet FitnessがPeoriaで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

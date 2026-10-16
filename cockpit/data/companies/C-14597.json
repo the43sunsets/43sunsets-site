@@ -23,35 +23,11 @@
 },
 "faces": {
 "permits": {
-"count": 8,
-"value_total": 86000.0,
-"n_amount_excluded": 7,
+"count": 5,
+"value_total": null,
+"n_amount_excluded": 0,
 "latest": "2026-09-23",
 "items": [
-{
-"id": "S-66907",
-"date": "2026-09-23",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "1850 SUTTER PKWY",
-"permit_no": "EMEPC2638348",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 1850 Sutter Pkwy の教育委員会施設で電気設備(MEP)工事。金額記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
 {
 "id": "S-1398",
 "date": "2026-08-27",
@@ -61,68 +37,67 @@
 "address": "40 STEWART AVE",
 "permit_no": "FALRC2629948",
 "permit_type": "Fire Alarm",
+"source_id": "SRC-017",
 "value": 86000.0,
-"category": "未分類",
+"category": "保全",
 "confidence": "high",
-"summary": "Columbusの40 STEWART AVEで消防設備の工事を実施 $86k。",
+"summary": "BOARD OF EDUCATIONがColumbusで警備設備の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Commercial - Other / Fire Alarm / Schools and Other Educational Buildings / Fire Protection",
-"source_id": "SRC-017",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-008",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:49.641764+00:00",
+"reading_id": "01M4W26949D94N1PD8991DZYG8"
+},
+"n_permits": 1,
+"member_ids": [
+"S-1398"
+],
+"kinds": [
+"警備"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
-"id": "S-1751",
+"id": "S-1947",
 "date": "2026-08-12",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
 "address": "4841 E LIVINGSTON AVE",
-"permit_no": "FALRC2628465",
-"permit_type": "Fire Alarm",
+"permit_no": "MMEPC2631262",
+"permit_type": "Mechanical",
+"source_id": "SRC-017",
 "value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 4841 E Livingston Ave で防火警報設備の許可(1750と同一住所の別許可)。",
+"category": "保全",
+"confidence": "high",
+"summary": "BOARD OF EDUCATIONがColumbusで警備設備・修繕の許可を取得(3件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Other / Fire Alarm / Fire Protection",
-"source_id": "SRC-017",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Mechanical / MEP",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-072",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:21.053269+00:00",
+"reading_id": "01M4W21R0XP1TYBC481Q480RS9"
 },
-{
-"id": "S-1750",
-"date": "2026-08-12",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "4841 E LIVINGSTON AVE",
-"permit_no": "FALRC2628459",
-"permit_type": "Fire Alarm",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 4841 E Livingston Ave で防火警報設備の許可、詳細記載なし。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Other / Fire Alarm / Schools and Other Educational Buildings / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-072",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"n_permits": 3,
+"member_ids": [
+"S-1750",
+"S-1751",
+"S-1947"
+],
+"kinds": [
+"更新・修繕",
+"警備"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-1824",
@@ -133,20 +108,30 @@
 "address": "2345 W MOUND ST",
 "permit_no": "MMEPC2632021",
 "permit_type": "Mechanical",
+"source_id": "SRC-017",
 "value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 2345 W Mound St の商業用機械設備許可(テナント不明)。",
+"category": "保全",
+"confidence": "high",
+"summary": "BOARD OF EDUCATIONがコロンバスで更新・修繕の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-073",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:20.693967+00:00",
+"reading_id": "01M4W277ENQ9ZMK4S9SR3EV6K5"
+},
+"n_permits": 1,
+"member_ids": [
+"S-1824"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-1912",
@@ -157,68 +142,66 @@
 "address": "1040 GARVEY RD",
 "permit_no": "SIGN2600901",
 "permit_type": "NA",
+"source_id": "SRC-017",
 "value": null,
-"category": "未分類",
+"category": "保全",
 "confidence": "high",
-"summary": "Columbus 1040 GARVEY RD の看板設置許可(32 SQFT)。",
+"summary": "BOARD OF EDUCATIONがColumbusで看板・警備設備の許可を取得(2件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "NA / Sign / 32 SQFT",
-"source_id": "SRC-017",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-074",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:11.027885+00:00",
+"reading_id": "01M4W26Y0KWSAF9XVBTWC5M8WC"
+},
+"n_permits": 2,
+"member_ids": [
+"S-1912",
+"S-1913"
+],
+"kinds": [
+"警備",
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
-"id": "S-1913",
-"date": "2026-08-06",
+"id": "S-66907",
+"date": "2026-09-23",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
-"address": "1040 GARVEY RD",
-"permit_no": "FALRC2626951",
-"permit_type": "Fire Alarm",
+"address": "1850 SUTTER PKWY",
+"permit_no": "EMEPC2638348",
+"permit_type": "Electrical",
+"source_id": "SRC-017",
 "value": null,
-"category": "未分類",
+"category": "事務所・その他",
 "confidence": "high",
-"summary": "Columbus 1040 GARVEY RD の火災報知設備工事(学校等教育施設区分)。",
+"summary": "BOARD OF EDUCATIONがColumbusで事務所・その他の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Other / Fire Alarm / Schools and Other Educational Buildings / Fire Protection",
-"source_id": "SRC-017",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Electrical / MEP",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-074",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:19.593882+00:00",
+"reading_id": "01M4W21PK9FR5A3YYCFYPG90TQ"
 },
-{
-"id": "S-1947",
-"date": "2026-08-05",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "4841 E LIVINGSTON AVE",
-"permit_no": "MMEPC2631262",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbus 4841 E LIVINGSTON AVE の商業用機械設備工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-074",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"n_permits": 1,
+"member_ids": [
+"S-66907"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -250,60 +233,39 @@
 {
 "date": "2026-09-23",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): BOARD OF EDUCATIONがColumbusで事務所・その他の許可を取得(1件)",
 "ref": "S-66907",
-"summary": "Columbus 1850 Sutter Pkwy の教育委員会施設で電気設備(MEP)工事。金額記載なし。"
+"summary": "BOARD OF EDUCATIONがColumbusで事務所・その他の許可を取得(1件)"
 },
 {
 "date": "2026-08-27",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): BOARD OF EDUCATIONがColumbusで警備設備の許可を取得(1件)",
 "ref": "S-1398",
-"summary": "Columbusの40 STEWART AVEで消防設備の工事を実施 $86k。"
+"summary": "BOARD OF EDUCATIONがColumbusで警備設備の許可を取得(1件)"
 },
 {
 "date": "2026-08-12",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1751",
-"summary": "Columbus 4841 E Livingston Ave で防火警報設備の許可(1750と同一住所の別許可)。"
-},
-{
-"date": "2026-08-12",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1750",
-"summary": "Columbus 4841 E Livingston Ave で防火警報設備の許可、詳細記載なし。"
+"title": "建設許可(Columbus): BOARD OF EDUCATIONがColumbusで警備設備・修繕の許可を取得(3件)",
+"ref": "S-1947",
+"summary": "BOARD OF EDUCATIONがColumbusで警備設備・修繕の許可を取得(3件)"
 },
 {
 "date": "2026-08-10",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): BOARD OF EDUCATIONがコロンバスで更新・修繕の許可を取得(1件)",
 "ref": "S-1824",
-"summary": "Columbus 2345 W Mound St の商業用機械設備許可(テナント不明)。"
+"summary": "BOARD OF EDUCATIONがコロンバスで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-08-06",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): BOARD OF EDUCATIONがColumbusで看板・警備設備の許可を取得(2件)",
 "ref": "S-1912",
-"summary": "Columbus 1040 GARVEY RD の看板設置許可(32 SQFT)。"
-},
-{
-"date": "2026-08-06",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1913",
-"summary": "Columbus 1040 GARVEY RD の火災報知設備工事(学校等教育施設区分)。"
-},
-{
-"date": "2026-08-05",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1947",
-"summary": "Columbus 4841 E LIVINGSTON AVE の商業用機械設備工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。"
+"summary": "BOARD OF EDUCATIONがColumbusで看板・警備設備の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

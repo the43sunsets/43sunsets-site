@@ -23,70 +23,45 @@
 },
 "faces": {
 "permits": {
-"count": 3,
+"count": 1,
 "value_total": null,
-"n_amount_excluded": 3,
+"n_amount_excluded": 0,
 "latest": "2026-09-23",
 "items": [
 {
 "id": "S-65543",
 "date": "2026-09-23",
-"applied": "2026-09-15",
+"applied": null,
 "state": "MI",
 "jurisdiction": "Ann Arbor",
 "address": "600 W Huron St Ann Arbor MI 48103",
 "permit_no": "MESA26-0142",
 "permit_type": "MESA - Fire Alarm Permit",
+"source_id": "SRC-022",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "保全",
+"confidence": "high",
+"summary": "ANN ARBOR AFFORDABLE HOUSING CORPがAnn Arborで警備設備の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "This is a continuation to the on-going fire alarm/fire suppression project at the Lurie Terrace site. This scope is for the monitoring of the stairwell flows and tampers in the stairwell area. / MESA - Fire Alarm Permit / Fire Alarm",
-"source_id": "SRC-022",
-"provenance": null
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:17.117655+00:00",
+"reading_id": "01M4W23ERXG9VYZ3TT4HCWMH0H"
 },
-{
-"id": "S-31090",
-"date": "2026-07-23",
-"applied": "2026-07-20",
-"state": "MI",
-"jurisdiction": "Ann Arbor",
-"address": "600 W Huron St Ann Arbor MI 48103",
-"permit_no": "ELECC26-0879",
-"permit_type": "Electrical (Commercial)  - Reconnect",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Mini-split reconnect / Electrical (Commercial)  - Reconnect / Reconnect",
-"source_id": "SRC-022",
-"provenance": null
-},
-{
-"id": "S-31093",
-"date": "2026-07-23",
-"applied": "2026-07-08",
-"state": "MI",
-"jurisdiction": "Ann Arbor",
-"address": "600 W Huron St Ann Arbor MI 48103",
-"permit_no": "MECHC26-0452",
-"permit_type": "Mechanical (Commercial) - General HVAC",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Remove and replace mini-split that services the lobby area / Mechanical (Commercial) - General HVAC / General HVAC",
-"source_id": "SRC-022",
-"provenance": null
+"n_permits": 1,
+"member_ids": [
+"S-65543"
+],
+"kinds": [
+"更新・修繕",
+"警備"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -118,25 +93,11 @@
 {
 "date": "2026-09-23",
 "face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
+"title": "建設許可(Ann Arbor): ANN ARBOR AFFORDABLE HOUSING CORPがAnn Arborで警備設備の許可を取得(1件)",
 "ref": "S-65543",
-"summary": null
-},
-{
-"date": "2026-07-23",
-"face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
-"ref": "S-31090",
-"summary": null
-},
-{
-"date": "2026-07-23",
-"face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
-"ref": "S-31093",
-"summary": null
+"summary": "ANN ARBOR AFFORDABLE HOUSING CORPがAnn Arborで警備設備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

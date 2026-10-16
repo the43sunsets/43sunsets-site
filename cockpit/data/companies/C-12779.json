@@ -23,58 +23,46 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 15000.0,
-"n_amount_excluded": 1,
+"count": 1,
+"value_total": null,
+"n_amount_excluded": 0,
 "latest": "2026-09-14",
 "items": [
 {
-"id": "S-59080",
-"date": "2026-09-14",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "6000 S HIGH ST",
-"permit_no": "EMEPC2636727",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Scioto Downs Inc(競馬場・カジノ施設)の電気工事(MEP)、金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-54691",
-"date": "2026-09-11",
+"date": "2026-09-14",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
 "address": "6000 S HIGH ST",
 "permit_no": "ALTC2632262",
 "permit_type": "Alteration",
-"value": 15000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Scioto Downs Inc(Columbus 6000 S High St)で345 SQFTの構造改修 $15k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 345 SQFT",
 "source_id": "SRC-017",
+"value": 15000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "SCIOTO DOWNS INCがコロンバスで更新・修繕の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 345 SQFT",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01Gjq2UrPYUF3ii8F4LrWT3A",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:29.600164+00:00",
+"reading_id": "01M4W25NJ051FHV7CAAQDK9D38"
+},
+"n_permits": 2,
+"member_ids": [
+"S-54691",
+"S-59080"
+],
+"kinds": [
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -106,18 +94,11 @@
 {
 "date": "2026-09-14",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-59080",
-"summary": "Scioto Downs Inc(競馬場・カジノ施設)の電気工事(MEP)、金額不明。"
-},
-{
-"date": "2026-09-11",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): SCIOTO DOWNS INCがコロンバスで更新・修繕の許可を取得(2件)",
 "ref": "S-54691",
-"summary": "Scioto Downs Inc(Columbus 6000 S High St)で345 SQFTの構造改修 $15k。"
+"summary": "SCIOTO DOWNS INCがコロンバスで更新・修繕の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -24,57 +24,77 @@
 "faces": {
 "permits": {
 "count": 2,
-"value_total": 9000.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-10-01",
 "items": [
 {
 "id": "S-73562",
 "date": "2026-10-01",
-"applied": "2026-10-01",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cincinnati",
 "address": "365 PURCELL AV",
 "permit_no": "2026P09265",
 "permit_type": "Building",
-"value": 6000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Cincinnati 365 Purcell Ave の建物改修 $6,000(1-2-3 Family 住宅用途)。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Alteration / Building / 1-2-3 FM",
 "source_id": "SRC-003",
+"value": 6000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "PROSPECT HOUSE INCがCincinnatiで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Alteration / Building / 1-2-3 FM",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:48.084659+00:00",
+"reading_id": "01M4W22JDM00TZZS5ZWEDWE025"
+},
+"n_permits": 1,
+"member_ids": [
+"S-73562"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "id": "S-66828",
 "date": "2026-09-23",
-"applied": "2026-09-23",
+"applied": null,
 "state": "OH",
 "jurisdiction": "Cincinnati",
 "address": "562 GRAND AV",
 "permit_no": "2026P08962",
 "permit_type": "Building",
-"value": 3000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Cincinnati 562 Grand Ave の I-1 用途建物の改修工事 $3,000。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Alteration / Building / I-1",
 "source_id": "SRC-003",
+"value": 3000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "PROSPECT HOUSE INCがシンシナティで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Alteration / Building / I-1",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01QYxGnDjrhbTccfP8C4EgZg",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:13.298959+00:00",
+"reading_id": "01M4W23B1JD4YCV9Y0KVYMKBJ0"
+},
+"n_permits": 1,
+"member_ids": [
+"S-66828"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -106,18 +126,18 @@
 {
 "date": "2026-10-01",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
+"title": "建設許可(Cincinnati): PROSPECT HOUSE INCがCincinnatiで更新・修繕の許可を取得(1件)",
 "ref": "S-73562",
-"summary": "Cincinnati 365 Purcell Ave の建物改修 $6,000(1-2-3 Family 住宅用途)。"
+"summary": "PROSPECT HOUSE INCがCincinnatiで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-09-23",
 "face": "permits",
-"title": "建設許可(Cincinnati): 未分類",
+"title": "建設許可(Cincinnati): PROSPECT HOUSE INCがシンシナティで更新・修繕の許可を取得(1件)",
 "ref": "S-66828",
-"summary": "Cincinnati 562 Grand Ave の I-1 用途建物の改修工事 $3,000。"
+"summary": "PROSPECT HOUSE INCがシンシナティで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

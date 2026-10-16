@@ -23,70 +23,47 @@
 },
 "faces": {
 "permits": {
-"count": 3,
+"count": 1,
 "value_total": null,
-"n_amount_excluded": 3,
+"n_amount_excluded": 0,
 "latest": "2026-10-02",
 "items": [
 {
-"id": "S-71225",
-"date": "2026-10-02",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Butler County",
-"address": "8370 LIBERTY WAY, SUITE D, WEST CHESTER OH",
-"permit_no": "BLD-FA26-04233",
-"permit_type": "Commercial Fire Alarm",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "FIRE ALARM - CAFE PATACHOU / INCOMPLETE SUBMITTAL / Commercial Fire Alarm",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-53698",
-"date": "2026-09-11",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Butler County",
-"address": "8370 LIBERTY WAY, SUITE D, WEST CHESTER OH",
-"permit_no": "BLD-SS26-03898",
-"permit_type": "Commercial Hood Suppression",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "HOOD SUPPRESSION - CAFE PATACHOU / IN PROGRESS / Commercial Hood Suppression",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
 "id": "S-35006",
-"date": "2026-08-20",
+"date": "2026-10-02",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Butler County",
 "address": "8370 LIBERTY WAY, SUITE D, WEST CHESTER OH",
 "permit_no": "BLD-SK26-03553",
 "permit_type": "Commercial Sprinkler",
+"source_id": "SRC-024",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "保全",
+"confidence": "high",
+"summary": "CAFE PATACHOUがWEST CHESTERで更新・修繕と警備設備の許可を取得(3件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "SPRINKLER FOR TENANT FINISH - CAFE PATACHOU / READY FOR PICKUP / Commercial Sprinkler",
-"source_id": "SRC-024",
-"provenance": null
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:28.021007+00:00",
+"reading_id": "01M4W21YTND4GYN6J80ECY85WX"
+},
+"n_permits": 3,
+"member_ids": [
+"S-35006",
+"S-53698",
+"S-71225"
+],
+"kinds": [
+"更新・修繕",
+"警備"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -118,25 +95,11 @@
 {
 "date": "2026-10-02",
 "face": "permits",
-"title": "建設許可(Butler County): 未評価",
-"ref": "S-71225",
-"summary": null
-},
-{
-"date": "2026-09-11",
-"face": "permits",
-"title": "建設許可(Butler County): 未評価",
-"ref": "S-53698",
-"summary": null
-},
-{
-"date": "2026-08-20",
-"face": "permits",
-"title": "建設許可(Butler County): 未評価",
+"title": "建設許可(Butler County): CAFE PATACHOUがWEST CHESTERで更新・修繕と警備設備の許可を取得(3件)",
 "ref": "S-35006",
-"summary": null
+"summary": "CAFE PATACHOUがWEST CHESTERで更新・修繕と警備設備の許可を取得(3件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

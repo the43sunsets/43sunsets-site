@@ -23,118 +23,50 @@
 },
 "faces": {
 "permits": {
-"count": 5,
+"count": 1,
 "value_total": null,
-"n_amount_excluded": 5,
+"n_amount_excluded": 0,
 "latest": "2026-09-30",
 "items": [
 {
-"id": "S-69708",
-"date": "2026-09-30",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Hamilton County",
-"address": "10843 MONTGOMERY RD , SYCAMORE TOWNSHIP OH 45242",
-"permit_no": "26HAM-PMT-001575-PMPI1",
-"permit_type": "OBC Permit Modification Post Issuance (Change submitted for review after permit issuance)",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Hamilton County Sycamore Township(10843 Montgomery Rd)における許可発行後の変更申請(OBC Permit Modification Post Issuance)。金額・用途の詳細記載なし。",
-"infer": "所有者名から石油/ガソリンスタンド関連施設の可能性があるが、変更内容が不明で設備投資シグナルとしての判定は不可(推論)。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Distributed for Review / OBC Permit Modification Post Issuance (Change submitted for review after permit issuance)",
-"source_id": "SRC-024",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-68117",
-"date": "2026-09-28",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Hamilton County",
-"address": "10843 MONTGOMERY RD , SYCAMORE TOWNSHIP OH 45242",
-"permit_no": "26HAM-PMT-004612-R1",
-"permit_type": "Revision (Submitted in response to correction letter)",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Revision (Submitted in response to correction letter)",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-64925",
-"date": "2026-09-22",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Hamilton County",
-"address": "10843 MONTGOMERY RD , SYCAMORE TOWNSHIP OH 45242",
-"permit_no": "26HAM-PMT-005035",
-"permit_type": "OBC Suppression Permit",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Sycamore Township(10843 Montgomery Rd)で N&G Takhar Oil LLC 名義の消防抑制設備(OBC Suppression Permit)許可、金額不明。",
-"infer": "所有者名から石油/ガソリンスタンド関連施設への消火設備設置の可能性(推論)。生産設備投資とは読めない。",
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Distributed for Review / OBC Suppression Permit",
-"source_id": "SRC-024",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_012FaTcVuWrvFgS1WA8HAPc5",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-35940",
-"date": "2026-08-28",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Hamilton County",
-"address": "10843 MONTGOMERY RD , SYCAMORE TOWNSHIP OH 45242",
-"permit_no": "26HAM-PMT-004612",
-"permit_type": "OBC Mechanical Permit",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Distributed for Review / OBC Mechanical Permit",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
 "id": "S-36229",
-"date": "2026-08-18",
+"date": "2026-09-30",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Hamilton County",
 "address": "10843 MONTGOMERY RD , SYCAMORE TOWNSHIP OH 45242",
 "permit_no": "26HAM-PMT-004406",
 "permit_type": "OBC Mechanical Permit",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "OBC Mechanical Permit",
 "source_id": "SRC-024",
-"provenance": null
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "N&G TAKHAR OIL LLCがサイカモアタウンシップで更新・修繕等の許可を取得(5件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "OBC Mechanical Permit",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:27.012990+00:00",
+"reading_id": "01M4W21XV52MQ204D47Y18ZF69"
+},
+"n_permits": 5,
+"member_ids": [
+"S-35940",
+"S-36229",
+"S-64925",
+"S-68117",
+"S-69708"
+],
+"kinds": [
+"更新・修繕",
+"警備",
+"内容不明"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -166,39 +98,11 @@
 {
 "date": "2026-09-30",
 "face": "permits",
-"title": "建設許可(Hamilton County): 未分類",
-"ref": "S-69708",
-"summary": "Hamilton County Sycamore Township(10843 Montgomery Rd)における許可発行後の変更申請(OBC Permit Modification Post Issuance)。金額・用途の詳細記載なし。"
-},
-{
-"date": "2026-09-28",
-"face": "permits",
-"title": "建設許可(Hamilton County): 未評価",
-"ref": "S-68117",
-"summary": null
-},
-{
-"date": "2026-09-22",
-"face": "permits",
-"title": "建設許可(Hamilton County): 未分類",
-"ref": "S-64925",
-"summary": "Sycamore Township(10843 Montgomery Rd)で N&G Takhar Oil LLC 名義の消防抑制設備(OBC Suppression Permit)許可、金額不明。"
-},
-{
-"date": "2026-08-28",
-"face": "permits",
-"title": "建設許可(Hamilton County): 未評価",
-"ref": "S-35940",
-"summary": null
-},
-{
-"date": "2026-08-18",
-"face": "permits",
-"title": "建設許可(Hamilton County): 未評価",
+"title": "建設許可(Hamilton County): N&G TAKHAR OIL LLCがサイカモアタウンシップで更新・修繕等の許可を取得(5件)",
 "ref": "S-36229",
-"summary": null
+"summary": "N&G TAKHAR OIL LLCがサイカモアタウンシップで更新・修繕等の許可を取得(5件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

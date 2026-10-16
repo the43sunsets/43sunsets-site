@@ -23,58 +23,48 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 1,
 "value_total": null,
-"n_amount_excluded": 2,
+"n_amount_excluded": 0,
 "latest": "2026-10-01",
 "items": [
 {
-"id": "S-70910",
-"date": "2026-10-01",
-"applied": "2026-07-13",
-"state": "IN",
-"jurisdiction": "Indiana/JOHNSON",
-"address": "598 Chaney Ave",
-"permit_no": "462695:2026-10-01",
-"permit_type": "CDR release",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Wurth Industry(598 Chaney Ave)でラボ改修・オフィス・倉庫関連の工事(CDR release)。金額情報なし。",
-"infer": "ラボ改修を含むため試験・検査設備の調達が伴う可能性(推論)。Wurth は独系ファスナー・産業資材商社であり、国内倉庫・ラボ機能の更新の可能性(推論)。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "Wurth Industry - Lab Remodel / Office / Warehouse",
-"source_id": "SRC-009",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-68405",
-"date": "2026-09-22",
-"applied": "2026-05-01",
+"date": "2026-10-01",
+"applied": null,
 "state": "IN",
 "jurisdiction": "Indiana/JOHNSON",
 "address": "598 Chaney Ave",
 "permit_no": "461099:2026-09-22",
 "permit_type": "CDR release",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Indiana/Johnson 郡 598 Chaney Ave の Würth Industry に関する CDR release(許可種別のみ、金額・詳細記載なし)。",
-"infer": "Würth Industry はドイツ Würth Group 系の産業用品・締結部品ディストリビューターであり、拠点関連の許可の可能性(推論)だが工事内容が不明で用途判定不可。",
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "Wurth Industry",
 "source_id": "SRC-009",
+"value": null,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "Wurth IndustryがJOHNSONでラボ整備・倉庫搬送設備の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Wurth Industry",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01RU4wrpKBkesC5PhRJeaSfi",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:20.700744+00:00",
+"reading_id": "01M4W23J8WYZDAG2ZFXNCX8RZY"
+},
+"n_permits": 2,
+"member_ids": [
+"S-68405",
+"S-70910"
+],
+"kinds": [
+"倉庫・搬送",
+"ラボ",
+"事務所・その他",
+"内容不明"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -106,18 +96,11 @@
 {
 "date": "2026-10-01",
 "face": "permits",
-"title": "建設許可(Indiana/JOHNSON): 未分類",
-"ref": "S-70910",
-"summary": "Wurth Industry(598 Chaney Ave)でラボ改修・オフィス・倉庫関連の工事(CDR release)。金額情報なし。"
-},
-{
-"date": "2026-09-22",
-"face": "permits",
-"title": "建設許可(Indiana/JOHNSON): 未分類",
+"title": "建設許可(Indiana/JOHNSON): Wurth IndustryがJOHNSONでラボ整備・倉庫搬送設備の許可を取得(2件)",
 "ref": "S-68405",
-"summary": "Indiana/Johnson 郡 598 Chaney Ave の Würth Industry に関する CDR release(許可種別のみ、金額・詳細記載なし)。"
+"summary": "Wurth IndustryがJOHNSONでラボ整備・倉庫搬送設備の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

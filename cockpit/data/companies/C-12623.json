@@ -23,130 +23,49 @@
 },
 "faces": {
 "permits": {
-"count": 20,
-"value_total": 60000.0,
-"n_amount_excluded": 16,
+"count": 10,
+"value_total": null,
+"n_amount_excluded": 0,
 "latest": "2026-10-02",
 "items": [
 {
-"id": "S-73806",
-"date": "2026-10-02",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "4080 CENTRAL COLLEGE RD",
-"permit_no": "EMEPC2639807",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "City of Columbus による商業施設の電気設備工事(MEP)、4080 Central College Rd。金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01JYNa5goxkExMvwHY37QHrV",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-73610",
-"date": "2026-10-01",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "4080 CENTRAL COLLEGE RD",
-"permit_no": "EMLSC2639734",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 市(City of Columbus)による 4080 Central College Rd の商業用電気(MEP)工事許可。金額の記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_016v81Nku6LoQv6XKaMjRbjt",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-70842",
+"id": "S-1705",
 "date": "2026-09-30",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
-"address": "2260 LOCKBOURNE RD UNIT A",
-"permit_no": "EMEPC2639434",
-"permit_type": "Electrical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus市による商業施設(2260 Lockbourne Rd Unit A)の電気設備工事(MEP)。金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Electrical / MEP",
+"address": "2260 LOCKBOURNE RD",
+"permit_no": "DEMO2626323",
+"permit_type": "NA",
 "source_id": "SRC-017",
+"value": 20000.0,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "CITY OF COLUMBUSがコロンバスで建物の解体の許可を取得(5件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Demolition / NA / All Other Buildings and Structures Demolition / Demolition / 2900 SQFT",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_019uLJpw9p9yoEh6YQ4UmCqk",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:01.435466+00:00",
+"reading_id": "01M4W22ZEVXMRE84ZRAD11ZKGQ"
 },
-{
-"id": "S-59088",
-"date": "2026-09-14",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "4250 MORSE RD UNIT 4",
-"permit_no": "MMEPC2636838",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 市(City of Columbus)による 4250 Morse Rd Unit 4 の機械設備(MEP)工事許可。金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-59068",
-"date": "2026-09-14",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "910 DUBLIN RD",
-"permit_no": "MMEPC2636859",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "City of Columbus(910 Dublin Rd)の商業施設における機械設備(MEP)工事。金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"n_permits": 5,
+"member_ids": [
+"S-1705",
+"S-1706",
+"S-1707",
+"S-1709",
+"S-70842"
+],
+"kinds": [
+"縮小・撤去",
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "id": "S-59083",
@@ -157,44 +76,138 @@
 "address": "3003 FRAZELL RD",
 "permit_no": "NEWC2633330",
 "permit_type": "New Structure",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 市による 1,244 SQFT のその他非住宅建物の新築(3003 Frazell Rd)。金額記載なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - New Structure / New Structure / Other Nonresidential Buildings / Structural / 1244 SQFT",
 "source_id": "SRC-017",
+"value": null,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "CITY OF COLUMBUSがColumbusで増築・新築の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - New Structure / New Structure / Other Nonresidential Buildings / Structural / 1244 SQFT",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:29.935171+00:00",
+"reading_id": "01M4W23V9FCVE771046Y6HSGHV"
+},
+"n_permits": 1,
+"member_ids": [
+"S-59083"
+],
+"kinds": [
+"増築・新築"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
-"id": "S-59069",
+"id": "S-1834",
+"date": "2026-09-14",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "910 DUBLIN RD",
+"permit_no": "PMEPC2631943",
+"permit_type": "Plumbing",
+"source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "CITY OF COLUMBUSがコロンバスでユーティリティ更新の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Plumbing / MEP",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:57:33.836467+00:00",
+"reading_id": "01M4W224GCGHPGB8HYKFWK7KGF"
+},
+"n_permits": 2,
+"member_ids": [
+"S-1834",
+"S-59068"
+],
+"kinds": [
+"ユーティリティ",
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-1835",
 "date": "2026-09-14",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
 "address": "940 DUBLIN RD",
-"permit_no": "MMEPC2636862",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "City of Columbus(940 Dublin Rd)の商業施設における機械設備(MEP)工事。金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
+"permit_no": "PMEPC2631946",
+"permit_type": "Plumbing",
 "source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "CITY OF COLUMBUSがColumbusで設備更新の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Plumbing / MEP",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:05.015786+00:00",
+"reading_id": "01M4W24XHQCTHFHPWDEXN1PXFS"
+},
+"n_permits": 2,
+"member_ids": [
+"S-1835",
+"S-59069"
+],
+"kinds": [
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-1847",
+"date": "2026-09-14",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "5600 PARSONS AVE UNIT AGST",
+"permit_no": "PMEPC2631949",
+"permit_type": "Plumbing",
+"source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "CITY OF COLUMBUSがColumbusで事務所・その他とユーティリティの許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Plumbing / MEP",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:36.078165+00:00",
+"reading_id": "01M4W2419EZS9GJHAFNNCBGGW9"
+},
+"n_permits": 2,
+"member_ids": [
+"S-1847",
+"S-59082"
+],
+"kinds": [
+"ユーティリティ",
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-59078",
@@ -205,260 +218,30 @@
 "address": "1860 SULLIVANT AVE",
 "permit_no": "FALRC2625985",
 "permit_type": "Fire Alarm",
+"source_id": "SRC-017",
 "value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 市(1860 Sullivant Ave)の商業施設における火災報知器工事(金額不明)。",
+"category": "保全",
+"confidence": "high",
+"summary": "CITY OF COLUMBUSがColumbusで警備設備の許可を取得(1件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
+"role": "operator",
+"role_label": "操業事業者",
 "verbatim": "Commercial - Other / Fire Alarm / Fire Protection",
-"source_id": "SRC-017",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:22.775856+00:00",
+"reading_id": "01M4W279FQ0XV276V3D8PM1H9N"
 },
-{
-"id": "S-59082",
-"date": "2026-09-14",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "5600 PARSONS AVE UNIT AGST",
-"permit_no": "MMEPC2636853",
-"permit_type": "Mechanical",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "City of Columbus 名義の Parsons Ave 施設で機械設備(MEP)工事。金額情報なし。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01XfpC8qg7DYa9D2vNXZquJZ",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-53364",
-"date": "2026-09-09",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "4260 MORSE RD",
-"permit_no": "FSUPC2632977",
-"permit_type": "Fire Suppression",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 市(所有者)の 4260 Morse Rd 施設で消防設備(Fire Suppression)工事、金額不明。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Commercial - Other / Fire Suppression / Fire Protection",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0111czRsgdugDWzXi3UgsAT1",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
-"id": "S-1619",
-"date": "2026-08-18",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "1410 CLEVELAND AVE",
-"permit_no": "FEST2630091",
-"permit_type": "Festival",
-"value": null,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbus 1410 Cleveland Ave のフェスティバル(特別イベント)許可。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Other / Festival / Special",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-070",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1705",
-"date": "2026-08-13",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "2260 LOCKBOURNE RD",
-"permit_no": "DEMO2626323",
-"permit_type": "NA",
-"value": 10000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 2260 Lockbourne Rd で建物解体(その他建物、2900 SQFT)$10k(所有者不明)。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Demolition / NA / All Other Buildings and Structures Demolition / Demolition / 2900 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-037",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1709",
-"date": "2026-08-13",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "2260 LOCKBOURNE RD",
-"permit_no": "DEMO2626315",
-"permit_type": "NA",
-"value": 20000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbus 2260 LOCKBOURNE RD で商業建物の解体(1432SF、同一敷地の1706・1708と関連) $20.0k。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Demolition / NA / All Other Buildings and Structures Demolition / Demolition / 1432 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-023",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1706",
-"date": "2026-08-13",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "2260 LOCKBOURNE RD",
-"permit_no": "DEMO2626284",
-"permit_type": "NA",
-"value": 20000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbus 2260 LOCKBOURNE RD で商業建物の解体(3190SF、同一敷地の1708・1709と関連) $20.0k。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Demolition / NA / All Other Buildings and Structures Demolition / Demolition / 3190 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-023",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1707",
-"date": "2026-08-13",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "2260 LOCKBOURNE RD",
-"permit_no": "DEMO2626328",
-"permit_type": "NA",
-"value": 10000.0,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 2260 Lockbourne Rd で建物解体(その他建物、1000 SQFT、上記と同一地番の別許可)$10k(所有者不明)。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Demolition / NA / All Other Buildings and Structures Demolition / Demolition / 1000 SQFT",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-037",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1847",
-"date": "2026-08-10",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "5600 PARSONS AVE UNIT AGST",
-"permit_no": "PMEPC2631949",
-"permit_type": "Plumbing",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 5600 Parsons Ave Unit AGST の商業用配管許可(テナント不明)。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-073",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1835",
-"date": "2026-08-10",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "940 DUBLIN RD",
-"permit_no": "PMEPC2631946",
-"permit_type": "Plumbing",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 940 Dublin Rd の商業用配管許可(テナント不明)。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-073",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-1834",
-"date": "2026-08-10",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "910 DUBLIN RD",
-"permit_no": "PMEPC2631943",
-"permit_type": "Plumbing",
-"value": null,
-"category": "未分類",
-"confidence": "low",
-"summary": "Columbus 910 Dublin Rd の商業用配管許可(テナント不明)。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-073",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"n_permits": 1,
+"member_ids": [
+"S-59078"
+],
+"kinds": [
+"警備"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-1910",
@@ -469,44 +252,133 @@
 "address": "3675 PARSONS AVE",
 "permit_no": "FALRC2627391",
 "permit_type": "Fire Alarm",
+"source_id": "SRC-017",
 "value": null,
-"category": "未分類",
+"category": "保全",
 "confidence": "high",
-"summary": "Columbus 3675 PARSONS AVE の商業用火災報知工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。",
+"summary": "CITY OF COLUMBUSがColumbusで警備設備の許可を取得(2件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Commercial - Other / Fire Alarm / Fire Protection",
-"source_id": "SRC-017",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-074",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:09.826181+00:00",
+"reading_id": "01M4W26WV27TJECBST4PCJ0TJS"
+},
+"n_permits": 2,
+"member_ids": [
+"S-1910",
+"S-1911"
+],
+"kinds": [
+"警備"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
-"id": "S-1911",
-"date": "2026-08-06",
+"id": "S-73806",
+"date": "2026-10-02",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
-"address": "3675 PARSONS AVE",
-"permit_no": "FALRC2627440",
-"permit_type": "Fire Alarm",
+"address": "4080 CENTRAL COLLEGE RD",
+"permit_no": "EMEPC2639807",
+"permit_type": "Electrical",
+"source_id": "SRC-017",
 "value": null,
-"category": "未分類",
+"category": "事務所・その他",
 "confidence": "high",
-"summary": "Columbus 3675 PARSONS AVE の商業用火災報知工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。",
+"summary": "CITY OF COLUMBUSがColumbusで事務所・その他の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Other / Fire Alarm / Fire Protection",
-"source_id": "SRC-017",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Electrical / MEP",
 "provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-074",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:27.808918+00:00",
+"reading_id": "01M4W25KT0JS8EPC65YT3D23A0"
+},
+"n_permits": 1,
+"member_ids": [
+"S-73806"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-59088",
+"date": "2026-09-14",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "4250 MORSE RD UNIT 4",
+"permit_no": "MMEPC2636838",
+"permit_type": "Mechanical",
+"source_id": "SRC-017",
+"value": null,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "CITY OF COLUMBUSがColumbusで事務所・その他の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:06.505675+00:00",
+"reading_id": "01M4W234D9PWTNDKJ1F439SJ5K"
+},
+"n_permits": 1,
+"member_ids": [
+"S-59088"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-1619",
+"date": "2026-08-18",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1410 CLEVELAND AVE",
+"permit_no": "FEST2630091",
+"permit_type": "Festival",
+"source_id": "SRC-017",
+"value": null,
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "CITY OF COLUMBUSがColumbusで記録を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Festival / Special",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:06.814401+00:00",
+"reading_id": "01M4W234PYK5N5G647HJ4CCE3H"
+},
+"n_permits": 1,
+"member_ids": [
+"S-1619"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -538,144 +410,74 @@
 {
 "date": "2026-10-02",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): CITY OF COLUMBUSがColumbusで事務所・その他の許可を取得(1件)",
 "ref": "S-73806",
-"summary": "City of Columbus による商業施設の電気設備工事(MEP)、4080 Central College Rd。金額不明。"
-},
-{
-"date": "2026-10-01",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-73610",
-"summary": "Columbus 市(City of Columbus)による 4080 Central College Rd の商業用電気(MEP)工事許可。金額の記載なし。"
+"summary": "CITY OF COLUMBUSがColumbusで事務所・その他の許可を取得(1件)"
 },
 {
 "date": "2026-09-30",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-70842",
-"summary": "Columbus市による商業施設(2260 Lockbourne Rd Unit A)の電気設備工事(MEP)。金額不明。"
+"title": "建設許可(Columbus): CITY OF COLUMBUSがコロンバスで建物の解体の許可を取得(5件)",
+"ref": "S-1705",
+"summary": "CITY OF COLUMBUSがコロンバスで建物の解体の許可を取得(5件)"
 },
 {
 "date": "2026-09-14",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-59088",
-"summary": "Columbus 市(City of Columbus)による 4250 Morse Rd Unit 4 の機械設備(MEP)工事許可。金額不明。"
-},
-{
-"date": "2026-09-14",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-59068",
-"summary": "City of Columbus(910 Dublin Rd)の商業施設における機械設備(MEP)工事。金額不明。"
-},
-{
-"date": "2026-09-14",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): CITY OF COLUMBUSがColumbusで増築・新築の許可を取得(1件)",
 "ref": "S-59083",
-"summary": "Columbus 市による 1,244 SQFT のその他非住宅建物の新築(3003 Frazell Rd)。金額記載なし。"
+"summary": "CITY OF COLUMBUSがColumbusで増築・新築の許可を取得(1件)"
 },
 {
 "date": "2026-09-14",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-59069",
-"summary": "City of Columbus(940 Dublin Rd)の商業施設における機械設備(MEP)工事。金額不明。"
+"title": "建設許可(Columbus): CITY OF COLUMBUSがコロンバスでユーティリティ更新の許可を取得(2件)",
+"ref": "S-1834",
+"summary": "CITY OF COLUMBUSがコロンバスでユーティリティ更新の許可を取得(2件)"
 },
 {
 "date": "2026-09-14",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): CITY OF COLUMBUSがColumbusで設備更新の許可を取得(2件)",
+"ref": "S-1835",
+"summary": "CITY OF COLUMBUSがColumbusで設備更新の許可を取得(2件)"
+},
+{
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Columbus): CITY OF COLUMBUSがColumbusで事務所・その他とユーティリティの許可を取得(2件)",
+"ref": "S-1847",
+"summary": "CITY OF COLUMBUSがColumbusで事務所・その他とユーティリティの許可を取得(2件)"
+},
+{
+"date": "2026-09-14",
+"face": "permits",
+"title": "建設許可(Columbus): CITY OF COLUMBUSがColumbusで警備設備の許可を取得(1件)",
 "ref": "S-59078",
-"summary": "Columbus 市(1860 Sullivant Ave)の商業施設における火災報知器工事(金額不明)。"
+"summary": "CITY OF COLUMBUSがColumbusで警備設備の許可を取得(1件)"
 },
 {
 "date": "2026-09-14",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-59082",
-"summary": "City of Columbus 名義の Parsons Ave 施設で機械設備(MEP)工事。金額情報なし。"
-},
-{
-"date": "2026-09-09",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-53364",
-"summary": "Columbus 市(所有者)の 4260 Morse Rd 施設で消防設備(Fire Suppression)工事、金額不明。"
+"title": "建設許可(Columbus): CITY OF COLUMBUSがColumbusで事務所・その他の許可を取得(1件)",
+"ref": "S-59088",
+"summary": "CITY OF COLUMBUSがColumbusで事務所・その他の許可を取得(1件)"
 },
 {
 "date": "2026-08-18",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): CITY OF COLUMBUSがColumbusで記録を取得(1件)",
 "ref": "S-1619",
-"summary": "Columbus 1410 Cleveland Ave のフェスティバル(特別イベント)許可。"
-},
-{
-"date": "2026-08-13",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1705",
-"summary": "Columbus 2260 Lockbourne Rd で建物解体(その他建物、2900 SQFT)$10k(所有者不明)。"
-},
-{
-"date": "2026-08-13",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1709",
-"summary": "Columbus 2260 LOCKBOURNE RD で商業建物の解体(1432SF、同一敷地の1706・1708と関連) $20.0k。"
-},
-{
-"date": "2026-08-13",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1706",
-"summary": "Columbus 2260 LOCKBOURNE RD で商業建物の解体(3190SF、同一敷地の1708・1709と関連) $20.0k。"
-},
-{
-"date": "2026-08-13",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1707",
-"summary": "Columbus 2260 Lockbourne Rd で建物解体(その他建物、1000 SQFT、上記と同一地番の別許可)$10k(所有者不明)。"
-},
-{
-"date": "2026-08-10",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1847",
-"summary": "Columbus 5600 Parsons Ave Unit AGST の商業用配管許可(テナント不明)。"
-},
-{
-"date": "2026-08-10",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1835",
-"summary": "Columbus 940 Dublin Rd の商業用配管許可(テナント不明)。"
-},
-{
-"date": "2026-08-10",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1834",
-"summary": "Columbus 910 Dublin Rd の商業用配管許可(テナント不明)。"
+"summary": "CITY OF COLUMBUSがColumbusで記録を取得(1件)"
 },
 {
 "date": "2026-08-06",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): CITY OF COLUMBUSがColumbusで警備設備の許可を取得(2件)",
 "ref": "S-1910",
-"summary": "Columbus 3675 PARSONS AVE の商業用火災報知工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。"
-},
-{
-"date": "2026-08-06",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-1911",
-"summary": "Columbus 3675 PARSONS AVE の商業用火災報知工事許可(用途・所有者・金額の記載なし、汎用 MEP ラベルのみ)。"
+"summary": "CITY OF COLUMBUSがColumbusで警備設備の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,58 +23,44 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 207470.85,
+"count": 1,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-30",
 "items": [
 {
 "id": "S-70093",
 "date": "2026-09-30",
-"applied": "2026-09-30",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "2342 W BLOOMINGDALE AVE",
 "permit_no": "101089122",
 "permit_type": "PERMIT - ELEVATOR EQUIPMENT",
+"source_id": "SRC-001",
 "value": 143661.45,
-"category": "未分類",
+"category": "保全",
 "confidence": "high",
-"summary": "Chicago 2342 W Bloomingdale Ave で5階建て・2500lb容量の油圧式エレベーター1台の改修(モダニゼーション)$143,661.45。シリンダー交換は別許可。",
+"summary": "HALES PROPERTY MANAGEMENTがChicagoで更新・修繕の許可を取得(1件)",
 "infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
+"role": "operator",
+"role_label": "操業事業者",
 "verbatim": "MODERNIZATION OF ONE(1) 2500LB CAPACITY, 5-FLOOR, HYDRAULIC, PASSENGER ELEVATOR(ONLY), PURSUANT TO THE SCOPE OF WORK SUBMITTED.(B20109145) CYLINDER REPLACEMENT UNDER SEPERATE PERMIT",
-"source_id": "SRC-001",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:53.385248+00:00",
+"reading_id": "01M4W24J69ZVB7BPQNGCQKZ85M"
 },
-{
-"id": "S-6720",
-"date": "2026-08-26",
-"applied": "2026-08-26",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "515 W WRIGHTWOOD AVE",
-"permit_no": "101087748",
-"permit_type": "PERMIT - ELEVATOR EQUIPMENT",
-"value": 63809.4,
-"category": "未分類",
-"confidence": "high",
-"summary": "515 W WRIGHTWOOD AVE のエレベーター/リフト設備の更新・改修工事 $63.8k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "CYLINDER REPLACEMENT ON ONE(1) 2000LB CAPACITY, 5-FLOOR, PASSENGER ELEVATOR(1S), PURSUANT TO THE SCOPE OF WORKL SUBMITTED.(EV007748)",
-"source_id": "SRC-001",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-010",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
+"n_permits": 1,
+"member_ids": [
+"S-70093"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 }
 ]
 },
@@ -106,18 +92,11 @@
 {
 "date": "2026-09-30",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): HALES PROPERTY MANAGEMENTがChicagoで更新・修繕の許可を取得(1件)",
 "ref": "S-70093",
-"summary": "Chicago 2342 W Bloomingdale Ave で5階建て・2500lb容量の油圧式エレベーター1台の改修(モダニゼーション)$143,661.45。シリンダー交換は別許可。"
-},
-{
-"date": "2026-08-26",
-"face": "permits",
-"title": "建設許可(Chicago): 未分類",
-"ref": "S-6720",
-"summary": "515 W WRIGHTWOOD AVE のエレベーター/リフト設備の更新・改修工事 $63.8k。"
+"summary": "HALES PROPERTY MANAGEMENTがChicagoで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

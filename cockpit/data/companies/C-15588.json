@@ -24,33 +24,43 @@
 "faces": {
 "permits": {
 "count": 1,
-"value_total": 5000.0,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-28",
 "items": [
 {
 "id": "S-69823",
 "date": "2026-09-28",
-"applied": "2026-09-16",
+"applied": null,
 "state": "IL",
 "jurisdiction": "Chicago",
 "address": "643 N ORLEANS ST",
 "permit_no": "101088575",
 "permit_type": "PERMIT - NEW CONSTRUCTION",
-"value": 5000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Chicago 643 N Orleans St で Oktoberfest 用テント(40ft×80ft)の一時設置許可 $5,000。設置は9/30、撤去は10/1。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "PERMIT EXPIRES ON 11/21/2026 ERECTION STARTS: 9/30/2026, ERECTION ENDS: 10/1/2026.  SELF CERT CBC 2019 - PEPPER CONSTRUCTION OKTOBERFEST TENT ON SEPT 30, 2026. SET-UP IS SEPT 30 AND TAKEDOWN IS OCT 1, 2026. 1-40FT X 80FT TENT. BLUE PEAK TENTS.",
 "source_id": "SRC-001",
+"value": 5000.0,
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "TASTY CATERINGがChicagoで記録取得の許可を取得(1 件)",
+"infer": "ERECTION STARTS: 9/30/2026, ERECTION ENDS: 10/1/2026",
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "PERMIT EXPIRES ON 11/21/2026 ERECTION STARTS: 9/30/2026, ERECTION ENDS: 10/1/2026.  SELF CERT CBC 2019 - PEPPER CONSTRUCTION OKTOBERFEST TENT ON SEPT 30, 2026. SET-UP IS SEPT 30 AND TAKEDOWN IS OCT 1, 2026. 1-40FT X 80FT TENT. BLUE PEAK TENTS.",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0129Qbo6pDWwARUpVnRBTs8b",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:12.669005+00:00",
+"reading_id": "01M4W26ZKX9VM7K6T1ABNNFEYH"
+},
+"n_permits": 1,
+"member_ids": [
+"S-69823"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -82,11 +92,11 @@
 {
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Chicago): 未分類",
+"title": "建設許可(Chicago): TASTY CATERINGがChicagoで記録取得の許可を取得(1 件)",
 "ref": "S-69823",
-"summary": "Chicago 643 N Orleans St で Oktoberfest 用テント(40ft×80ft)の一時設置許可 $5,000。設置は9/30、撤去は10/1。"
+"summary": "TASTY CATERINGがChicagoで記録取得の許可を取得(1 件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -23,130 +23,181 @@
 },
 "faces": {
 "permits": {
-"count": 6,
-"value_total": 6000.0,
-"n_amount_excluded": 5,
+"count": 5,
+"value_total": null,
+"n_amount_excluded": 0,
 "latest": "2026-10-02",
 "items": [
 {
-"id": "S-71122",
-"date": "2026-10-02",
-"applied": "2026-09-29",
-"state": "MI",
-"jurisdiction": "Ann Arbor",
-"address": "2376 Arrowwood Trl Ann Arbor MI 48105",
-"permit_no": "ELECR26-2462",
-"permit_type": "Electrical (Residential) - General",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "replace jumper wire from living room outlet to exterior gfci receptacle due to vehicle impact / Electrical (Residential) - General / General",
-"source_id": "SRC-022",
-"provenance": null
-},
-{
 "id": "S-32437",
-"date": "2026-09-03",
-"applied": "2026-08-20",
+"date": "2026-10-02",
+"applied": null,
 "state": "MI",
 "jurisdiction": "Ann Arbor",
 "address": "2376 Arrowwood Trl Ann Arbor MI 48105",
 "permit_no": "BLDGR26-1373",
 "permit_type": "Building (Residential) - Alteration/Repair",
+"source_id": "SRC-022",
 "value": 6000.0,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "保全",
+"confidence": "high",
+"summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(2件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Vehicle Impact repair-\nRebuild wall, insulation, drywall, trim,paint, siding / Building (Residential) - Alteration/Repair / Alteration/Repair",
-"source_id": "SRC-022",
-"provenance": null
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:23.234089+00:00",
+"reading_id": "01M4W25FB2E4JH560RX7D367XQ"
+},
+"n_permits": 2,
+"member_ids": [
+"S-32437",
+"S-71122"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "id": "S-31849",
 "date": "2026-08-28",
-"applied": "2026-08-26",
+"applied": null,
 "state": "MI",
 "jurisdiction": "Ann Arbor",
 "address": "2399 Arrowwood Trl Ann Arbor MI 48105",
 "permit_no": "MECHR26-1808",
 "permit_type": "Mechanical (Residential) - General HVAC",
+"source_id": "SRC-022",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "保全",
+"confidence": "high",
+"summary": "ARROWWOOD HILLS COOPERATIVEがアナーバーで更新・修繕の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Replace 40gal water heater / Mechanical (Residential) - General HVAC / General HVAC",
-"source_id": "SRC-022",
-"provenance": null
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:58:22.393980+00:00",
+"reading_id": "01M4W23KXS09WM9HAG95PA4E8W"
 },
-{
-"id": "S-31889",
-"date": "2026-08-25",
-"applied": "2026-08-20",
-"state": "MI",
-"jurisdiction": "Ann Arbor",
-"address": "2651 Arrowwood Trl Ann Arbor MI 48105",
-"permit_no": "MECHR26-1755",
-"permit_type": "Mechanical (Residential) - General HVAC",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Replace 40gal water heater / Mechanical (Residential) - General HVAC / General HVAC",
-"source_id": "SRC-022",
-"provenance": null
+"n_permits": 1,
+"member_ids": [
+"S-31849"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-31886",
 "date": "2026-08-25",
-"applied": "2026-08-20",
+"applied": null,
 "state": "MI",
 "jurisdiction": "Ann Arbor",
 "address": "2661 Arrowwood Trl Ann Arbor MI 48105",
 "permit_no": "MECHR26-1756",
 "permit_type": "Mechanical (Residential) - General HVAC",
+"source_id": "SRC-022",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "保全",
+"confidence": "high",
+"summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Replace 40gal power vent water heater (exist) / Mechanical (Residential) - General HVAC / General HVAC",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T02:00:19.377876+00:00",
+"reading_id": "01M4W2765HJVK9KXT9KTPH1B86"
+},
+"n_permits": 1,
+"member_ids": [
+"S-31886"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-31889",
+"date": "2026-08-25",
+"applied": null,
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "2651 Arrowwood Trl Ann Arbor MI 48105",
+"permit_no": "MECHR26-1755",
+"permit_type": "Mechanical (Residential) - General HVAC",
 "source_id": "SRC-022",
-"provenance": null
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Replace 40gal water heater / Mechanical (Residential) - General HVAC / General HVAC",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:54.672916+00:00",
+"reading_id": "01M4W26E1GB2W1MX13BW2CQ4VP"
+},
+"n_permits": 1,
+"member_ids": [
+"S-31889"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-33088",
 "date": "2026-08-17",
-"applied": "2026-08-12",
+"applied": null,
 "state": "MI",
 "jurisdiction": "Ann Arbor",
 "address": "2414 Arrowwood Trl Ann Arbor MI 48105",
 "permit_no": "MECHR26-1692",
 "permit_type": "Mechanical (Residential) - General HVAC",
+"source_id": "SRC-022",
 "value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
+"category": "保全",
+"confidence": "high",
+"summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Replace 40gal water heater / Mechanical (Residential) - General HVAC / General HVAC",
-"source_id": "SRC-022",
-"provenance": null
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:57.357589+00:00",
+"reading_id": "01M4W26GND2A6GEB5K8J2V13WJ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-33088"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 }
 ]
 },
@@ -178,46 +229,39 @@
 {
 "date": "2026-10-02",
 "face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
-"ref": "S-71122",
-"summary": null
-},
-{
-"date": "2026-09-03",
-"face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
+"title": "建設許可(Ann Arbor): ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(2件)",
 "ref": "S-32437",
-"summary": null
+"summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(2件)"
 },
 {
 "date": "2026-08-28",
 "face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
+"title": "建設許可(Ann Arbor): ARROWWOOD HILLS COOPERATIVEがアナーバーで更新・修繕の許可を取得(1件)",
 "ref": "S-31849",
-"summary": null
+"summary": "ARROWWOOD HILLS COOPERATIVEがアナーバーで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-08-25",
 "face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
-"ref": "S-31889",
-"summary": null
-},
-{
-"date": "2026-08-25",
-"face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
+"title": "建設許可(Ann Arbor): ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)",
 "ref": "S-31886",
-"summary": null
+"summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-08-25",
+"face": "permits",
+"title": "建設許可(Ann Arbor): ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)",
+"ref": "S-31889",
+"summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-08-17",
 "face": "permits",
-"title": "建設許可(Ann Arbor): 未評価",
+"title": "建設許可(Ann Arbor): ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)",
 "ref": "S-33088",
-"summary": null
+"summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

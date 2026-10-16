@@ -23,58 +23,46 @@
 },
 "faces": {
 "permits": {
-"count": 2,
-"value_total": 20055000.0,
+"count": 1,
+"value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-28",
 "items": [
 {
-"id": "S-69232",
-"date": "2026-09-28",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "9300 LYRA DR",
-"permit_no": "FNCEC2635435",
-"permit_type": "Fence, Retaining Wall",
-"value": 55000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Columbus 9300 Lyra Dr でフェンス・擁壁の設置工事 $55k。",
-"infer": null,
-"role": "operator",
-"role_label": "operator",
-"verbatim": "Commercial - Other / Fence, Retaining Wall / Structures Other Than Buildings / Structural",
-"source_id": "SRC-017",
-"provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_0125QnnbHvYYSmhwK9ex7wUv",
-"model": "claude-sonnet-5 (batch api v1)"
-}
-},
-{
 "id": "S-67601",
-"date": "2026-09-25",
+"date": "2026-09-28",
 "applied": null,
 "state": "OH",
 "jurisdiction": "Columbus",
 "address": "9300 LYRA DR",
 "permit_no": "NEWC2620847",
 "permit_type": "New Structure",
+"source_id": "SRC-017",
 "value": 20000000.0,
-"category": "未分類",
+"category": "操業の変化",
 "confidence": "high",
-"summary": "Columbus 9300 Lyra Dr に 96,500 SQFT のアミューズメント・社交・レクリエーション用途の新築建物 $20M。",
+"summary": "SUPERCHARGED ENTERTAINMENTがColumbusで新築・修繕の許可を取得(2件)",
 "infer": null,
 "role": "operator",
-"role_label": "operator",
+"role_label": "操業事業者",
 "verbatim": "Commercial - New Structure / New Structure / Amusement, Social, and Recreational / Structural / 96500 SQFT",
-"source_id": "SRC-017",
 "provenance": {
-"policy": "v3-2026-09-06-five-categories",
-"batch": "msgbatch_01He7wdJfUEck1tJFvdCestf",
-"model": "claude-sonnet-5 (batch api v1)"
-}
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-10-14T01:59:55.052745+00:00",
+"reading_id": "01M4W26EDCYDS9PM1B33J2YV8Y"
+},
+"n_permits": 2,
+"member_ids": [
+"S-67601",
+"S-69232"
+],
+"kinds": [
+"増築・新築",
+"更新・修繕"
+],
+"amount_band": "10m_100m",
+"amount_band_label": "$10M〜$100M"
 }
 ]
 },
@@ -106,18 +94,11 @@
 {
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Columbus): 未分類",
-"ref": "S-69232",
-"summary": "Columbus 9300 Lyra Dr でフェンス・擁壁の設置工事 $55k。"
-},
-{
-"date": "2026-09-25",
-"face": "permits",
-"title": "建設許可(Columbus): 未分類",
+"title": "建設許可(Columbus): SUPERCHARGED ENTERTAINMENTがColumbusで新築・修繕の許可を取得(2件)",
 "ref": "S-67601",
-"summary": "Columbus 9300 Lyra Dr に 96,500 SQFT のアミューズメント・社交・レクリエーション用途の新築建物 $20M。"
+"summary": "SUPERCHARGED ENTERTAINMENTがColumbusで新築・修繕の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

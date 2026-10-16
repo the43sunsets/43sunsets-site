@@ -24,124 +24,11 @@
 },
 "faces": {
 "permits": {
-"count": 5,
-"value_total": 108732.0,
-"n_amount_excluded": 2,
-"latest": "2026-09-03",
-"items": [
-{
-"id": "S-34780",
-"date": "2026-09-03",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Butler County",
-"address": "6562 WINFORD AVE, HAMILTON OH 45011 United States",
-"permit_no": "BLD-CO26-03769",
-"permit_type": "Commercial Other",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Replace existing fire pump with new fire pump with the same rating. / INCOMPLETE SUBMITTAL / Commercial Other",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-34781",
-"date": "2026-09-03",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Butler County",
-"address": "6562 WINFORD AVE, HAMILTON OH 45011 United States",
-"permit_no": "26TMP-000146",
-"permit_type": "Commercial Sprinkler",
-"value": null,
-"category": "未評価",
-"confidence": null,
-"summary": null,
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Replace existing fire pump with a new fire pump of the same rating. / Commercial Sprinkler",
-"source_id": "SRC-024",
-"provenance": null
-},
-{
-"id": "S-5819",
-"date": "2026-08-13",
-"applied": "2026-05-01",
-"state": "IL",
-"jurisdiction": "Chicago",
-"address": "1232 W NORTH AVE",
-"permit_no": "101081985",
-"permit_type": "PERMIT - NEW CONSTRUCTION",
-"value": 75000.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "THE HOME DEPOT USA(所在地 Chicago 1232 W NORTH AVE)で内装改修工事 $75k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "DDS 2019 CBC: INTERIOR ALTERATION FOR 1 STORY HOME DEPOT BUILDING INCLUDES RECONFIGURATION OF THE SELF-CHECKOUT PAYMENT KIOSKS. CLOSING OF EGRESS DOORS ON THE LEFT ENTRY VESTIBULE,& A DOUBLE DOOR NEAR THE RIGHT ENTRY VESTIBULE & ADD AN EGRESS DOOR AT THE GARDEN CENTER (OCC: M,B,S-1; TYPE IIB CONSTRU",
-"source_id": "SRC-001",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-009",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-},
-{
-"id": "S-23017",
-"date": "2026-07-31",
-"applied": null,
-"state": "IL",
-"jurisdiction": "Geneva",
-"address": "2309 Sudbury Ln",
-"permit_no": "2026-00001131",
-"permit_type": "Histrc-Wndw-Res - Historic Window Residential",
-"value": 22818.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "歴史地区住宅の窓交換 $22.8k。",
-"infer": null,
-"role": "owner",
-"role_label": "所有名義(許可記録・課税台帳)",
-"verbatim": "Histrc-Wndw-Res - Historic Window Residential",
-"source_id": "SRC-043",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-0903-002",
-"model": "claude-sonnet-5 (subagent, subscription session) + fable second-read x4"
-}
-},
-{
-"id": "S-13179",
-"date": "2026-07-22",
-"applied": null,
-"state": "IL",
-"jurisdiction": "Tinley Park",
-"address": "8568 SCHEER DR, TINLEY PARK, IL 60487",
-"permit_no": "BP2026-07-1198",
-"permit_type": "RESIDENTIAL PERMIT",
-"value": 10914.0,
-"category": "未分類",
-"confidence": "high",
-"summary": "Tinley Park 8568 SCHEER DR, TINLEY PARK, IL 60487 で窓・ドア交換 $10.9k(申請者/所有者: HOME DEPOT USA)。",
-"infer": null,
-"role": "applicant",
-"role_label": "申請者(許可記録)",
-"verbatim": "REMOVING AND REPLACING 5 WINDOWS, REPLACING LIKE WITH LIKE, NO STRUCTURAL CHANGES. / RESIDENTIAL PERMIT / OTHER - REMODELING",
-"source_id": "SRC-021",
-"provenance": {
-"policy": "v1-2026-09-02-all",
-"batch": "session-035",
-"model": "claude-sonnet-5 (subagent, subscription session)"
-}
-}
-]
+"count": 0,
+"value_total": null,
+"n_amount_excluded": 0,
+"latest": null,
+"items": []
 },
 "ucc": {
 "count": 0,
@@ -203,41 +90,6 @@
 },
 "timeline": [
 {
-"date": "2026-09-03",
-"face": "permits",
-"title": "建設許可(Butler County): 未評価",
-"ref": "S-34780",
-"summary": null
-},
-{
-"date": "2026-09-03",
-"face": "permits",
-"title": "建設許可(Butler County): 未評価",
-"ref": "S-34781",
-"summary": null
-},
-{
-"date": "2026-08-13",
-"face": "permits",
-"title": "建設許可(Chicago): 未分類",
-"ref": "S-5819",
-"summary": "THE HOME DEPOT USA(所在地 Chicago 1232 W NORTH AVE)で内装改修工事 $75k。"
-},
-{
-"date": "2026-07-31",
-"face": "permits",
-"title": "建設許可(Geneva): 未分類",
-"ref": "S-23017",
-"summary": "歴史地区住宅の窓交換 $22.8k。"
-},
-{
-"date": "2026-07-22",
-"face": "permits",
-"title": "建設許可(Tinley Park): 未分類",
-"ref": "S-13179",
-"summary": "Tinley Park 8568 SCHEER DR, TINLEY PARK, IL 60487 で窓・ドア交換 $10.9k(申請者/所有者: HOME DEPOT USA)。"
-},
-{
 "date": "2021-05-11",
 "face": "grants",
 "title": "助成(州・Indiana IEDC): 未分類",
@@ -245,6 +97,6 @@
 "summary": "Indiana IEDCがHome Depot U.S.A., Inc.(Whitestown)に雇用創出を条件としたEDGE税額控除$110,000を承認、予定投資額は$1.0M、新規雇用18人。"
 }
 ],
-"generated_at": "2026-10-15T15:00:32+00:00",
+"generated_at": "2026-10-16T09:07:18+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
