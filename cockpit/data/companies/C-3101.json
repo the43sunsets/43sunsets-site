@@ -13,17 +13,16 @@
 "jp_basis": null,
 "master_checked_at": null,
 "master_status": {
-"state": "untargeted",
+"state": "queued",
 "reason": {
-"origins": [
-"permits"
-],
-"rule": "none"
+"origin": "view",
+"rank": 10,
+"of": 17
 }
 },
 "faces": {
 "permits": {
-"count": 12,
+"count": 11,
 "value_total": null,
 "n_amount_excluded": 1,
 "latest": "2026-10-01",
@@ -335,40 +334,6 @@
 "amount_band_label": "$100k 未満"
 },
 {
-"id": "S-18746",
-"date": "2026-08-13",
-"applied": null,
-"state": "IL",
-"jurisdiction": "Highland Park",
-"address": "150 PIERCE RD HIGHLAND PARK IL 60035",
-"permit_no": "ROW-2026-00474",
-"permit_type": "Right of Way Utility",
-"source_id": "SRC-022",
-"value": null,
-"category": "保全",
-"confidence": "high",
-"summary": "AT&TがHighland Parkでユーティリティの許可を取得(1件)",
-"infer": null,
-"role": "operator",
-"role_label": "操業事業者",
-"verbatim": "AT&T TO PLACE 20’ OF 1-2” CONDUIT FROM EX. UTILITY POLE TO CUSTOMER PROVIDED HANDHOLE .  REMOVAL AND RESTORAL OF 4'X5' SECTION OF CONCRETE SIDEWALK REQUIRED. / Right of Way Utility / Right of Way Utility ",
-"provenance": {
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:31.669369+00:00",
-"reading_id": "01M4W23WZNC8KP50QJ98D1MSCX"
-},
-"n_permits": 1,
-"member_ids": [
-"S-18746"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
 "id": "S-682",
 "date": "2026-08-12",
 "applied": null,
@@ -527,13 +492,6 @@
 "summary": "AT&Tがナイルズで既存携帯電話基地局のユーティリティ更新の許可を取得(1件)"
 },
 {
-"date": "2026-08-13",
-"face": "permits",
-"title": "建設許可(Highland Park): AT&TがHighland Parkでユーティリティの許可を取得(1件)",
-"ref": "S-18746",
-"summary": "AT&TがHighland Parkでユーティリティの許可を取得(1件)"
-},
-{
 "date": "2026-08-12",
 "face": "permits",
 "title": "建設許可(Chicago): AT&Tがシカゴで更新・修繕の許可を取得(1件)",
@@ -548,6 +506,6 @@
 "summary": "AT&TがCrestwoodでユーティリティの許可を取得(1件)"
 }
 ],
-"generated_at": "2026-10-16T15:12:31+00:00",
+"generated_at": "2026-10-17T09:47:28+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
