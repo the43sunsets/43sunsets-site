@@ -190,8 +190,8 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
     <div class="tabs" id="tabs" role="tablist"></div>
     <h2 class="railh">このページの読み方</h2>
   <div class="defs">
-    <div class="def"><h3><span class="st fresh">fresh</span> 最新</h3><p>取得が周期どおりに続いていて、最新の許可日が 45 日以内。小規模な自治体で件数が少ないだけの場合も、源全体が新しければ fresh と判定します。</p></div>
-    <div class="def"><h3><span class="st stale">stale</span> データが古い</h3><p>取得そのものは成功しているのに、源が出す記録が 45 日より古い(自治体側の公開遅延)。取れていないのではなく、まだ出ていない状態です。</p></div>
+    <div class="def"><h3><span class="st fresh">fresh</span> 最新</h3><p>取得が周期どおりに続いていて、最新の許可日が <span data-stale-days>60</span> 日以内。小規模な自治体で件数が少ないだけの場合も、源全体が新しければ fresh と判定します。</p></div>
+    <div class="def"><h3><span class="st stale">stale</span> データが古い</h3><p>取得そのものは成功しているのに、源が出す記録が <span data-stale-days>60</span> 日より古い(自治体側の公開遅延)。取れていないのではなく、まだ出ていない状態です。</p></div>
     <div class="def"><h3><span class="st overdue">overdue</span> 取得停止</h3><p>期待周期の 2 倍以上、取得に成功していない。または FOIA の次回予定日を過ぎている。当社側で手当てが要る状態です。</p></div>
     <div class="def"><h3><span class="st never">never</span> 未取得</h3><p>経路は決まっているが記録が一件も入っていない。FOIA 依頼の送信待ち、州 DB の障害中、配線したが 0 件、など。</p></div>
     <div class="def"><h3><span class="st na">n/a</span> 経路なし</h3><p>公開ポータルが無い、または閲覧にログインが要るなどの理由で、まだ取得経路を決めていない自治体。網羅の穴として数えます。</p></div>
@@ -291,6 +291,7 @@ footer{border-top:1px solid var(--line); padding:18px 40px 40px; font-size:12px;
   }
 
   // ---- 見出し: 最終更新と次回収集(生成時刻の次の 02:00 America/Chicago・夏冬時間は CT 表示で判定・9/6 に 12:00 UTC から変更)
+  const sd = Number(COV.meta && COV.meta.stale_days); if (Number.isInteger(sd) && sd > 0) document.querySelectorAll("[data-stale-days]").forEach(el => el.textContent = String(sd));
   const gen = new Date(COV.meta.generated_at);
   const ct = d => {
     const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", {timeZone:"America/Chicago", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hour12:false}).formatToParts(d).filter(x => x.type !== "literal").map(x => [x.type, x.value]));
