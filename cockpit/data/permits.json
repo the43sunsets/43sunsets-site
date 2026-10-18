@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-10-17T09:35:51+00:00",
+"generated_at": "2026-10-18T09:08:11+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,31 +15,31 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 79358,
-"candidates": 64321,
-"targets": 1469,
-"permits_folded": 1899,
+"signals_total": 81536,
+"candidates": 65241,
+"targets": 1450,
+"permits_folded": 1839,
 "unclassified": 0,
-"unevaluated": 35000,
+"unevaluated": 36623,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 222,
-"保全": 868,
-"事務所・その他": 172,
+"操業の変化": 218,
+"保全": 856,
+"事務所・その他": 169,
 "内容不明": 56,
 "工事でない記録": 151
 },
 "stages": {
-"0": 15037,
-"2a": 4604,
-"2b": 24035,
-"2c": 6361,
-"2d": 23152,
-"3": 3986,
+"0": 16295,
+"2a": 4726,
+"2b": 25295,
+"2c": 6602,
+"2d": 22577,
+"3": 3918,
 "5": 209,
-"6": 1974
+"6": 1914
 },
-"enriched": 29321
+"enriched": 28618
 },
 "sources": [
 {
@@ -47,14 +47,14 @@
 "state": "IL",
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
-"last_run_status": "error",
-"last_run_at": "2026-10-17T07:02:18Z",
-"last_run_reason": "upstream_error",
-"signals": 9077,
+"last_run_status": "ok",
+"last_run_at": "2026-10-18T07:02:43Z",
+"last_run_reason": "ok",
+"signals": 9468,
 "date_min": "2026-07-01",
-"date_max": "2026-10-13",
-"owner_coverage": 8744,
-"targets": 438,
+"date_max": "2026-10-16",
+"owner_coverage": 9100,
+"targets": 425,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -64,8 +64,8 @@
 "state": "IL",
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-17T07:02:27Z",
+"last_run_status": "ok",
+"last_run_at": "2026-10-18T07:03:21Z",
 "last_run_reason": "ok",
 "signals": 223,
 "date_min": "2026-07-01",
@@ -82,13 +82,13 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-17T07:02:27Z",
+"last_run_at": "2026-10-18T07:03:26Z",
 "last_run_reason": "ok",
-"signals": 2998,
+"signals": 3062,
 "date_min": "2026-07-01",
-"date_max": "2026-10-14",
-"owner_coverage": 2871,
-"targets": 118,
+"date_max": "2026-10-15",
+"owner_coverage": 2934,
+"targets": 113,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -99,13 +99,13 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-17T07:02:28Z",
+"last_run_at": "2026-10-18T07:03:28Z",
 "last_run_reason": "ok",
-"signals": 2594,
+"signals": 2667,
 "date_min": "2026-07-01",
-"date_max": "2026-10-13",
-"owner_coverage": 2581,
-"targets": 174,
+"date_max": "2026-10-15",
+"owner_coverage": 2654,
+"targets": 157,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -116,7 +116,7 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-17T07:02:29Z",
+"last_run_at": "2026-10-18T07:03:34Z",
 "last_run_reason": "ok",
 "signals": 1425,
 "date_min": "2026-07-07",
@@ -133,7 +133,7 @@
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-17T08:00:51Z",
+"last_run_at": "2026-10-18T08:13:23Z",
 "last_run_reason": "ok",
 "signals": 111,
 "date_min": "2026-07-07",
@@ -150,13 +150,13 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-17T07:02:30Z",
+"last_run_at": "2026-10-18T07:03:35Z",
 "last_run_reason": "ok",
-"signals": 1973,
+"signals": 2014,
 "date_min": "2026-07-01",
-"date_max": "2026-10-15",
-"owner_coverage": 1964,
-"targets": 41,
+"date_max": "2026-10-16",
+"owner_coverage": 2005,
+"targets": 40,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -184,11 +184,11 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-17T07:02:31Z",
+"last_run_at": "2026-10-18T07:03:37Z",
 "last_run_reason": "ok",
-"signals": 931,
+"signals": 933,
 "date_min": "2024-11-18",
-"date_max": "2026-10-16",
+"date_max": "2026-10-17",
 "owner_coverage": 0,
 "targets": 279,
 "cadence": "daily",
@@ -200,8 +200,8 @@
 "state": "IL",
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-17T07:02:30Z",
+"last_run_status": "ok",
+"last_run_at": "2026-10-18T07:03:36Z",
 "last_run_reason": "ok",
 "signals": 358,
 "date_min": "2026-07-01",
@@ -217,8 +217,8 @@
 "state": "IL",
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-17T07:02:31Z",
+"last_run_status": "ok",
+"last_run_at": "2026-10-18T07:03:36Z",
 "last_run_reason": "ok",
 "signals": 1533,
 "date_min": "2026-07-01",
@@ -235,13 +235,13 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-17T07:02:26Z",
+"last_run_at": "2026-10-18T07:03:06Z",
 "last_run_reason": "ok",
-"signals": 6547,
+"signals": 8120,
 "date_min": "2026-07-01",
 "date_max": "2026-10-09",
-"owner_coverage": 112,
-"targets": 6,
+"owner_coverage": 122,
+"targets": 5,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -252,13 +252,13 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-17T07:49:18Z",
+"last_run_at": "2026-10-18T07:50:15Z",
 "last_run_reason": "ok",
-"signals": 20785,
+"signals": 20789,
 "date_min": "2026-07-01",
 "date_max": "2026-10-17",
-"owner_coverage": 14022,
-"targets": 510,
+"owner_coverage": 14025,
+"targets": 506,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -269,13 +269,13 @@
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-17T07:55:53Z",
+"last_run_at": "2026-10-18T08:02:19Z",
 "last_run_reason": "ok",
-"signals": 12163,
+"signals": 12167,
 "date_min": "2026-07-01",
-"date_max": "2026-10-16",
-"owner_coverage": 6334,
-"targets": 213,
+"date_max": "2026-10-17",
+"owner_coverage": 6337,
+"targets": 194,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -285,8 +285,8 @@
 "state": "IL",
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-17T07:58:57Z",
+"last_run_status": "ok",
+"last_run_at": "2026-10-18T08:11:18Z",
 "last_run_reason": "ok",
 "signals": 712,
 "date_min": "2026-07-01",
@@ -302,10 +302,10 @@
 "state": "IL",
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-17T08:00:49Z",
+"last_run_status": "ok",
+"last_run_at": "2026-10-18T08:13:18Z",
 "last_run_reason": "ok",
-"signals": 89,
+"signals": 115,
 "date_min": "2026-07-01",
 "date_max": "2026-09-30",
 "owner_coverage": 0,
@@ -1560,14 +1560,14 @@
 ]
 },
 "stages": {
-"0": 15037,
-"2a": 4604,
-"2b": 24035,
-"2c": 6361,
-"2d": 23152,
-"3": 3986,
+"0": 16295,
+"2a": 4726,
+"2b": 25295,
+"2c": 6602,
+"2d": 22577,
+"3": 3918,
 "5": 209,
-"6": 1974
+"6": 1914
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 17170,
+"checked": 16953,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -4038,75 +4038,6 @@
 },
 {
 "investor": {
-"name": "CITY OF COLUMBUS",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-1705",
-"state": "OH",
-"city": "Columbus・2260 LOCKBOURNE RD",
-"company": "CITY OF COLUMBUS",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-30",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CITY OF COLUMBUSがコロンバスで建物の解体の許可を取得(5件)",
-"infer": null,
-"note": "縮小・撤去・事務所・その他",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 DEMO2626323 NA",
-"value": 10000.0,
-"verbatim": "Commercial - Demolition / NA / All Other Buildings and Structures Demolition / Demolition / 2900 SQFT",
-"gc": "S G LOEWENDICK & SONS INC",
-"pin": "010116037",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-12623",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:01.435466+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 20000.0,
-"headline_en": "CITY OF COLUMBUS obtained permits to demolish structures in Columbus (5 permits)",
-"not_construction": false,
-"as_of": "2026-09-30",
-"n_permits": 5,
-"member_ids": [
-"S-1705",
-"S-1706",
-"S-1707",
-"S-1709",
-"S-70842"
-],
-"kinds": [
-"縮小・撤去",
-"事務所・その他"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "Malarkey Ind",
 "basis": "operator",
 "label": "操業事業者",
@@ -4619,74 +4550,6 @@
 ],
 "amount_band": "1m_10m",
 "amount_band_label": "$1M〜$10M"
-},
-{
-"investor": {
-"name": "CRISTO HOMES INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-1159",
-"state": "OH",
-"city": "Cincinnati・6720 DANIELS WALK",
-"company": "CRISTO HOMES INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-29",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CRISTO HOMES INCがCincinnatiで新築・修繕の許可を取得(3件)",
-"infer": null,
-"note": "増築・新築・更新・修繕・内容不明",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P06255 Building",
-"value": 125000.0,
-"verbatim": "New Building / Building / 1-2-3 FM",
-"gc": "CRISTO HOMES INC",
-"pin": "016600040005",
-"owner_source": "parcel:hamilton_oh:addr"
-},
-"karte": null,
-"company_id": "C-13515",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:08.093499+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 125000.0,
-"headline_en": "CRISTO HOMES INC obtained permits to build and repair in Cincinnati (3 permits)",
-"not_construction": false,
-"as_of": "2026-09-29",
-"n_permits": 3,
-"member_ids": [
-"S-1159",
-"S-59038",
-"S-70182"
-],
-"kinds": [
-"増築・新築",
-"更新・修繕",
-"内容不明"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -14741,72 +14604,6 @@
 },
 {
 "investor": {
-"name": "HARPER COLLEGE (WILLIAM RAINE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-62601",
-"state": "IL",
-"city": "Palatine・1200 W ALGONQUIN RD, STUDENT CENT, PALATINE, IL 60067",
-"company": "HARPER COLLEGE (WILLIAM RAINE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "教育",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-08-21",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "HARPER COLLEGEがPalatineで増築の許可を取得(2件)",
-"infer": null,
-"note": "増築・新築・工事でない記録",
-"fact": {
-"src": "Palatine 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
-"ref": "許可 BLDC-025994-2026 COMMERCIAL PERMIT",
-"value": 360000.0,
-"verbatim": "COMMERCIAL - ADDITION / COMMERCIAL PERMIT / ADDITIONS",
-"gc": null,
-"pin": "02283020030000",
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-15638",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:01.092194+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 360000.0,
-"headline_en": "HARPER COLLEGE obtained a permit for an addition in Palatine (2 records)",
-"not_construction": false,
-"as_of": "2026-09-23",
-"n_permits": 2,
-"member_ids": [
-"S-16004",
-"S-62601"
-],
-"kinds": [
-"増築・新築",
-"工事でない記録"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
 "name": "DR HORTON INDIANA LLC",
 "basis": "operator",
 "label": "操業事業者",
@@ -14993,71 +14790,6 @@
 ],
 "kinds": [
 "ラボ"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
-},
-{
-"investor": {
-"name": "Chick-fil-A",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-1967",
-"state": "OH",
-"city": "Columbus・3690 FISHINGER BLVD",
-"company": "Chick-fil-A",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-08-14",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Chick-fil-Aがコロンバスで新築の許可を取得(2件)",
-"infer": null,
-"note": "増築・新築",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 NEWC2612172 New Structure",
-"value": 1300000.0,
-"verbatim": "Commercial - New Structure / New Structure / Structural / 4847 SQFT",
-"gc": "GPD Group on behalf of Chick-fil-A",
-"pin": "560347629",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-16074",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:19.632279+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 1300000.0,
-"headline_en": "Chick-fil-A obtained permits to construct new structures in Columbus (2 permits)",
-"not_construction": false,
-"as_of": "2026-08-14",
-"n_permits": 2,
-"member_ids": [
-"S-1693",
-"S-1967"
-],
-"kinds": [
-"増築・新築"
 ],
 "amount_band": "1m_10m",
 "amount_band_label": "$1M〜$10M"
@@ -19636,7 +19368,7 @@
 "date": "2026-10-03",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "SHILOH SENIOR HOUSING INCがCINCINNATIで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -19671,84 +19403,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "CHRIST HOSPITAL THE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-8343",
-"state": "OH",
-"city": "Cincinnati・2139 AUBURN AV",
-"company": "CHRIST HOSPITAL THE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-02",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CHRIST HOSPITAL THEがシンシナティで更新・修繕の許可を取得(14件)",
-"infer": null,
-"note": "更新・修繕・工事でない記録",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P06348 Fire Protection Systems",
-"value": 14000.0,
-"verbatim": "Fire Protection Systems / Fire Protection Systems / No Use Group Entered",
-"gc": "MAYERS ELECTRIC CO INC",
-"pin": "008800080170",
-"owner_source": "parcel:hamilton_oh"
-},
-"karte": null,
-"company_id": "C-15296",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:05.320463+00:00"
-},
-"meaning": "保全",
-"amount_usd": 90000.0,
-"headline_en": "Christ Hospital The obtained repair/renovation permits in Cincinnati (14 records)",
-"not_construction": false,
-"as_of": "2026-10-02",
-"n_permits": 14,
-"member_ids": [
-"S-8343",
-"S-8678",
-"S-71283",
-"S-71284",
-"S-71285",
-"S-71290",
-"S-71291",
-"S-71295",
-"S-71296",
-"S-71297",
-"S-71298",
-"S-71300",
-"S-71301",
-"S-71307"
-],
-"kinds": [
-"更新・修繕",
-"工事でない記録"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -20656,77 +20310,6 @@
 ],
 "kinds": [
 "更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "KROGER CO THE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-71281",
-"state": "OH",
-"city": "Hamilton County・1014 VINE ST , CINCINNATI OH 45202",
-"company": "KROGER CO THE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-02",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "KROGER CO THEがCINCINNATIでエレベーター更新・修繕の許可を取得(7件)",
-"infer": null,
-"note": "更新・修繕・工事でない記録",
-"fact": {
-"src": "Hamilton County 建築許可(公開記録)",
-"ref": "許可 CIN-ELE-AST-20340-26S11 Elevator Safety Test",
-"value": null,
-"verbatim": "Test Submitted / Elevator Safety Test",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:hamilton_oh:addr"
-},
-"karte": null,
-"company_id": "C-14197",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:13.746519+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "KROGER CO THE obtained permits for elevator repair/maintenance and related records in Cincinnati (7 permits)",
-"not_construction": false,
-"as_of": "2026-10-02",
-"n_permits": 7,
-"member_ids": [
-"S-71281",
-"S-71282",
-"S-71292",
-"S-71293",
-"S-71294",
-"S-71302",
-"S-71306"
-],
-"kinds": [
-"更新・修繕",
-"工事でない記録"
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
@@ -24529,77 +24112,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "WEST-WARD COLUMBUS INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-1515",
-"state": "OH",
-"city": "Columbus・1809 N WILSON RD",
-"company": "WEST-WARD COLUMBUS INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医薬・医療機器",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-30",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "WEST-WARD COLUMBUS INCがコロンバスで更新・修繕等の許可を取得(5件)",
-"infer": null,
-"note": "ユーティリティ・更新・修繕・警備・事務所・その他",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 ALTC2617366 Alteration",
-"value": 459095.0,
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 13615 SQFT",
-"gc": "BW Design Group",
-"pin": "560138818",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-15002",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:54.725918+00:00"
-},
-"meaning": "保全",
-"amount_usd": 459095.0,
-"headline_en": "WEST-WARD COLUMBUS INC obtained permits for repair/renovation and utility work in Columbus (5 permits)",
-"not_construction": false,
-"as_of": "2026-09-30",
-"n_permits": 5,
-"member_ids": [
-"S-1515",
-"S-69239",
-"S-70221",
-"S-70222",
-"S-70869"
-],
-"kinds": [
-"ユーティリティ",
-"更新・修繕",
-"警備",
-"事務所・その他"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -30187,72 +29699,6 @@
 },
 {
 "investor": {
-"name": "ROOSEVELT COLLECTIONS",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-66020",
-"state": "IL",
-"city": "Chicago・150 W ROOSEVELT RD",
-"company": "ROOSEVELT COLLECTIONS",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-28",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "ROOSEVELT COLLECTIONSがChicagoでユーティリティ更新等の許可を取得(2件)",
-"infer": null,
-"note": "ユーティリティ・工事でない記録",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101088891 PERMIT - REINSTATE REVOKED PMT",
-"value": 0.0,
-"verbatim": "REINSTATE PERMIT NO 101072112 MUST BEGIN WORK AND OR REQUEST INSPECTION NO LATER THAN ***OCTOBER 2027*** ON PERMIT NO 101072112",
-"gc": "G.A. JOHNSON & SON",
-"pin": null,
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-15503",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:31.973317+00:00"
-},
-"meaning": "保全",
-"amount_usd": 10000.0,
-"headline_en": "ROOSEVELT COLLECTIONS obtained permits for utility work and a record in Chicago (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-28",
-"n_permits": 2,
-"member_ids": [
-"S-66020",
-"S-69742"
-],
-"kinds": [
-"ユーティリティ",
-"工事でない記録"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "XAVIER UNIVERSITY",
 "basis": "operator",
 "label": "操業事業者",
@@ -31923,70 +31369,6 @@
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
-"name": "TISHMAN SPEGER",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-69833",
-"state": "IL",
-"city": "Chicago・222 W ADAMS ST",
-"company": "TISHMAN SPEGER",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-28",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "TISHMAN SPEGERがChicagoで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101086966 PERMIT - RENOVATION/ALTERATION",
-"value": 7993887.0,
-"verbatim": "SELF CERT 2019 CBRC: STRUCTURAL PEER REVIEW INCLUDED. INTERIOR ALTERATIONS TO 26TH AND 27TH FLOOR OFFICE SPACE. WORK TO INCLUDE DEMO, NEW PARTITIONS, ELECTRICAL, MECHANICAL, AND PLUMBING. STRUCTURAL SCOPE TO ADD ADDITIONAL STEEL SUPPORT FOR TWO OPERABLE PARTITIONS ON THE 26TH FLOOR. ALL WORK AS PER PLANS.  CONSTRUCTION TYPE IA, OCCUPANCY GROUP B.",
-"gc": "JC ANDERSON INC",
-"pin": "1716209008",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-15617",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:22.823772+00:00"
-},
-"meaning": "保全",
-"amount_usd": 7993887.0,
-"headline_en": "TISHMAN SPEGER obtained a repair/renovation permit in Chicago (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-01",
-"n_permits": 1,
-"member_ids": [
-"S-69833"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
 },
 {
 "investor": {
@@ -34052,72 +33434,6 @@
 ],
 "amount_band": "1m_10m",
 "amount_band_label": "$1M〜$10M"
-},
-{
-"investor": {
-"name": "2 FM FLEET AND FACILITY MANAGEMENT",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-65201",
-"state": "IL",
-"city": "Chicago・5101 S WENTWORTH AVE",
-"company": "2 FM FLEET AND FACILITY MANAGEMENT",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-24",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "2 FMがシカゴで更新・修繕の許可を取得(3件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200512599 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 100000.0,
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 0 . LIGHTING OUTLETS: 150. SPECIFIC LOCATION: FIRST LEVEL AND BASEMENT.",
-"gc": null,
-"pin": "2009404118",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-13353",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:15.631615+00:00"
-},
-"meaning": "保全",
-"amount_usd": 250000.0,
-"headline_en": "2 FM Fleet and Facility Management obtained repair/renovation permits in Chicago (3 permits)",
-"not_construction": false,
-"as_of": "2026-09-24",
-"n_permits": 3,
-"member_ids": [
-"S-65201",
-"S-65916",
-"S-66775"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -41648,73 +40964,6 @@
 },
 {
 "investor": {
-"name": "TAJS INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-63381",
-"state": "OH",
-"city": "Columbus・4404 WESTERVILLE RD",
-"company": "TAJS INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-21",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "TAJS INCがコロンバスで更新・修繕の許可を取得(4件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 ALTC2623817 Alteration",
-"value": 500000.0,
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 4440 SQFT",
-"gc": "Mary Dietsch Architecture & Design",
-"pin": "600137545",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-13746",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:05.879244+00:00"
-},
-"meaning": "保全",
-"amount_usd": 500000.0,
-"headline_en": "TAJS INC obtained repair/renovation permits in Columbus (4 permits)",
-"not_construction": false,
-"as_of": "2026-09-21",
-"n_permits": 4,
-"member_ids": [
-"S-63381",
-"S-65293",
-"S-65294",
-"S-65295"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
 "name": "Nicor",
 "basis": "operator",
 "label": "操業事業者",
@@ -48073,74 +47322,6 @@
 },
 {
 "investor": {
-"name": "GAP INC.",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-309",
-"state": "IL",
-"city": "Chicago・3416 N SOUTHPORT AVE",
-"company": "GAP INC.",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-16",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "GAP INC.がChicagoで更新・修繕の許可を取得(4件)",
-"infer": null,
-"note": "更新・修繕・事務所・その他",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200477603 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 225000.0,
-"verbatim": "SCOPE: NONSTRUCTURAL INTERIOR ALTERATION TO EXISTING GAP STORE AT SECOND FLR, INCLUDES NEW LIGHT FIXTURES, SHELVING AND FURNITURE.LOCATIONS: 0 RESIDENTIAL UNIT(S), 1 NON-RESIDENTIAL UNIT(S), SECOND FLOOR GAP STORE.",
-"gc": "RETAIL CONSTRUCTION SERVICES, INC",
-"pin": "1420311029",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-564",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:14.692112+00:00"
-},
-"meaning": "保全",
-"amount_usd": 225000.0,
-"headline_en": "GAP INC. obtained permits for repair/renovation work in Chicago (4 permits)",
-"not_construction": false,
-"as_of": "2026-09-16",
-"n_permits": 4,
-"member_ids": [
-"S-309",
-"S-50879",
-"S-59664",
-"S-59725"
-],
-"kinds": [
-"更新・修繕",
-"事務所・その他"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
 "name": "SUMMERLIN HOMEOWNERS ASSOCIATION INC",
 "basis": "operator",
 "label": "操業事業者",
@@ -48268,70 +47449,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "MARIANOS #505-531",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-59124",
-"state": "IL",
-"city": "Palatine・545 N HICKS RD Palatine IL 60067",
-"company": "MARIANOS #505-531",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-16",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "MARIANOS #505-531がPalatineで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Palatine 建築許可(公開記録)",
-"ref": "許可 BLDC-024504-2026 Building Permit for Commercial Alteration\r\n",
-"value": 130000.0,
-"verbatim": "Minor interior remodel of an existing grocery store / Building Permit for Commercial Alteration\r\n / Commercial - Alteration",
-"gc": null,
-"pin": "02142000140000",
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-15829",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:29.829840+00:00"
-},
-"meaning": "保全",
-"amount_usd": 130000.0,
-"headline_en": "MARIANOS #505-531 obtained a repair/renovation permit in Palatine (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-23",
-"n_permits": 1,
-"member_ids": [
-"S-59124"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -51027,72 +50144,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "MITSUWA MARKETPLACE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-26370",
-"state": "IL",
-"city": "Arlington Heights・100 E ALGONQUIN RD ARLINGTON HEIGHTS IL 60005",
-"company": "MITSUWA MARKETPLACE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-15",
-"applied": null,
-"jp": true,
-"new": false,
-"summary": "Mitsuwa MarketplaceがArlington Heightsで更新・修繕と警備設備の許可を取得(2件)",
-"infer": null,
-"note": "更新・修繕・警備",
-"fact": {
-"src": "Arlington Heights 建築許可(公開記録)",
-"ref": "許可 HVAC2026-00099 HVAC - Commercial Replacement or Modification",
-"value": 236140.0,
-"verbatim": "Mitsuwa Marketplace - HVAC Improvements to four Mitsuwa Marketplace restaurant spaces  / HVAC - Commercial Replacement or Modification / Commercial RTU",
-"gc": null,
-"pin": "08162020280000",
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-2592",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:57.689565+00:00"
-},
-"meaning": "保全",
-"amount_usd": 236140.0,
-"headline_en": "Mitsuwa Marketplace obtained permits for repair/renovation and security equipment in Arlington Heights (2 records).",
-"not_construction": false,
-"as_of": "2026-09-15",
-"n_permits": 2,
-"member_ids": [
-"S-26370",
-"S-58293"
-],
-"kinds": [
-"更新・修繕",
-"警備"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -62927,70 +61978,6 @@
 },
 {
 "investor": {
-"name": "CHICAGO PUBLIC LIBRARY",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-6572",
-"state": "IL",
-"city": "Chicago・400 S STATE ST",
-"company": "CHICAGO PUBLIC LIBRARY",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-25",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CHICAGO PUBLIC LIBRARYがChicagoで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200508838 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 10000.0,
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: 4TH AND 10TH FLOOR.",
-"gc": null,
-"pin": "1716247060",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-1680",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:23.785872+00:00"
-},
-"meaning": "保全",
-"amount_usd": 10000.0,
-"headline_en": "CHICAGO PUBLIC LIBRARY obtained a repair/renovation permit in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-08-25",
-"n_permits": 1,
-"member_ids": [
-"S-6572"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "CROWN CASTLE INTERNATIONAL CORP.",
 "basis": "operator",
 "label": "操業事業者",
@@ -71782,70 +70769,6 @@
 },
 {
 "investor": {
-"name": "CHICAGO PUBLIC SCHOOLS",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-303",
-"state": "IL",
-"city": "Chicago・4415 S DR MARTIN L KING JR DR",
-"company": "CHICAGO PUBLIC SCHOOLS",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-07-20",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CHICAGO PUBLIC SCHOOLSがChicagoで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101084154 PERMIT - RENOVATION/ALTERATION",
-"value": 3000000.0,
-"verbatim": "SELF-CERT 2019 CBRB: ALTERATIONS TO A TWO-STORY ELEMENTARY SCHOOL, INCLUDING SECOND FLOOR CEILINGS AND LIGHTING, FIRST FLOOR STOREFRONT, LANDSCAPING, AND STRUCTURE. NO CHANGES TO EXISTING OCCUPANCY, E-1 SCHOOLS; TYPE IB CONSTRUCTION.",
-"gc": "THE GEORGE SOLLITT CONSTRUCTION CO",
-"pin": "2003407049",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-55",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:22.171194+00:00"
-},
-"meaning": "保全",
-"amount_usd": 3000000.0,
-"headline_en": "CHICAGO PUBLIC SCHOOLS obtained a permit for repair/renovation work in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-07-20",
-"n_permits": 1,
-"member_ids": [
-"S-303"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
-},
-{
-"investor": {
 "name": "Epcon",
 "basis": "operator",
 "label": "操業事業者",
@@ -72294,134 +71217,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "BLUE CROSS/BLUE SHIELD OF MICHIGAN",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-73632",
-"state": "MI",
-"city": "Detroit・600 E Lafayette Ave",
-"company": "BLUE CROSS/BLUE SHIELD OF MICHIGAN",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "金融・保険",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-10-02",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "BLUE CROSS/BLUE SHIELD OF MICHIGANがDetroitで事務所内装の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "デトロイト市 建築許可(公開記録)",
-"ref": "許可 BLD2026-01461 Alteration",
-"value": 263913.0,
-"verbatim": "Interior alterations/renovations (10th floor) per provided plans & documents. (Subject to field approval.) / Office / Alteration",
-"gc": null,
-"pin": "03000100-63",
-"owner_source": "parcel:detroit"
-},
-"karte": null,
-"company_id": "C-13519",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:16.562478+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": 263913.0,
-"headline_en": "BLUE CROSS/BLUE SHIELD OF MICHIGAN obtained a permit for office fit-out in Detroit (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-02",
-"n_permits": 1,
-"member_ids": [
-"S-73632"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
-"name": "THIRTY FOUR CORP",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-73790",
-"state": "OH",
-"city": "Columbus・34 N HIGH ST",
-"company": "THIRTY FOUR CORP",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-10-02",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "THIRTY FOUR CORPがColumbusで看板設置の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 SIGN2601167 NA",
-"value": null,
-"verbatim": "NA / Sign / 660 SQFT",
-"gc": "SIGN SMITH LLC",
-"pin": "010001072",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-17799",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:08.219776+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": null,
-"headline_en": "THIRTY FOUR CORP obtained a sign permit in Columbus (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-02",
-"n_permits": 1,
-"member_ids": [
-"S-73790"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -77248,70 +76043,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "EXTRA SPACE STORAGE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-65086",
-"state": "IL",
-"city": "Chicago・1625 S ASHLAND AVE",
-"company": "EXTRA SPACE STORAGE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-09-22",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "EXTRA SPACE STORAGEがChicagoで事務所・その他の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101070559 PERMIT - SIGNS",
-"value": 4500.0,
-"verbatim": "SIGN 1 OF 5. WEST ELEVATION - CHANNEL LETTERS - ILLUMINATED ON RACEWAY :REMOVE AND DISPOSE OF THE EXISTING SIGN. FOR EXTRA SPACE STORAGE ON RACEWAYS, PATCH WITH COLORED CAULK TO MATCH THE FACADE, AND INSTALL A NEW SIGN.",
-"gc": "KDN SIGNS INC",
-"pin": null,
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-439",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:43.879958+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": 4500.0,
-"headline_en": "EXTRA SPACE STORAGE obtained a permit for office/other work in Chicago (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-22",
-"n_permits": 1,
-"member_ids": [
-"S-65086"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -96471,35 +95202,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-55",
-"name": "CHICAGO PUBLIC SCHOOLS",
-"entity_type": "public",
-"jp": false,
-"signals": 15,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-15",
-"targets": 15,
-"signal_ids": [
-"S-799",
-"S-58946",
-"S-26176",
-"S-53156",
-"S-52382",
-"S-6459",
-"S-24317",
-"S-844",
-"S-6171",
-"S-6261",
-"S-759",
-"S-693",
-"S-430",
-"S-417",
-"S-303"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-49",
 "name": "THE UNIVERSITY OF CHICAGO",
 "entity_type": "corp",
@@ -96552,6 +95254,34 @@
 "S-18903",
 "S-48873",
 "S-6649"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-55",
+"name": "CHICAGO PUBLIC SCHOOLS",
+"entity_type": "public",
+"jp": false,
+"signals": 14,
+"value_total": null,
+"states": "IL",
+"latest": "2026-09-15",
+"targets": 14,
+"signal_ids": [
+"S-799",
+"S-58946",
+"S-26176",
+"S-53156",
+"S-52382",
+"S-6459",
+"S-24317",
+"S-844",
+"S-6171",
+"S-6261",
+"S-759",
+"S-693",
+"S-430",
+"S-417"
 ],
 "n_amount_excluded": 0
 },
@@ -96634,30 +95364,6 @@
 "n_amount_excluded": 1
 },
 {
-"id": "C-12623",
-"name": "CITY OF COLUMBUS",
-"entity_type": "public",
-"jp": false,
-"signals": 10,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-02",
-"targets": 10,
-"signal_ids": [
-"S-1705",
-"S-59083",
-"S-1834",
-"S-1835",
-"S-1847",
-"S-59078",
-"S-1910",
-"S-73806",
-"S-59088",
-"S-1619"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15553",
 "name": "MARONDA HOMES OF CINCINNATI LLC",
 "entity_type": "corp",
@@ -96702,6 +95408,29 @@
 "S-1145",
 "S-40205",
 "S-69238"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-12623",
+"name": "CITY OF COLUMBUS",
+"entity_type": "public",
+"jp": false,
+"signals": 9,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-02",
+"targets": 9,
+"signal_ids": [
+"S-59083",
+"S-1834",
+"S-1835",
+"S-1847",
+"S-59078",
+"S-1910",
+"S-73806",
+"S-59088",
+"S-1619"
 ],
 "n_amount_excluded": 0
 },
@@ -97378,24 +96107,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-14197",
-"name": "KROGER CO THE",
-"entity_type": "corp",
-"jp": false,
-"signals": 4,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-02",
-"targets": 4,
-"signal_ids": [
-"S-66509",
-"S-71281",
-"S-71286",
-"S-69162"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15189",
 "name": "TRUE NORTH ENERGY LLC",
 "entity_type": "corp",
@@ -97556,40 +96267,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13353",
-"name": "2 FM FLEET AND FACILITY MANAGEMENT",
-"entity_type": "public",
-"jp": false,
-"signals": 3,
-"value_total": null,
-"states": "IL",
-"latest": "2026-10-02",
-"targets": 3,
-"signal_ids": [
-"S-71430",
-"S-65201",
-"S-734"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-13515",
-"name": "CRISTO HOMES INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 3,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-01",
-"targets": 3,
-"signal_ids": [
-"S-1160",
-"S-1159",
-"S-8894"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-13609",
 "name": "STATE OF OHIO",
 "entity_type": "public",
@@ -97620,6 +96297,23 @@
 "S-36602",
 "S-8643",
 "S-69147"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-14197",
+"name": "KROGER CO THE",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-02",
+"targets": 3,
+"signal_ids": [
+"S-66509",
+"S-71286",
+"S-69162"
 ],
 "n_amount_excluded": 0
 },
@@ -97722,23 +96416,6 @@
 "S-49813",
 "S-5533",
 "S-68669"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-16074",
-"name": "Chick-fil-A",
-"entity_type": "corp",
-"jp": false,
-"signals": 3,
-"value_total": null,
-"states": "IN,OH",
-"latest": "2026-09-22",
-"targets": 3,
-"signal_ids": [
-"S-1967",
-"S-33740",
-"S-68455"
 ],
 "n_amount_excluded": 0
 },
@@ -97895,6 +96572,22 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-13353",
+"name": "2 FM FLEET AND FACILITY MANAGEMENT",
+"entity_type": "public",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "IL",
+"latest": "2026-10-02",
+"targets": 2,
+"signal_ids": [
+"S-71430",
+"S-734"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-13492",
 "name": "CLERMONT COUNTY BOARD OF",
 "entity_type": "public",
@@ -97927,18 +96620,18 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13519",
-"name": "BLUE CROSS/BLUE SHIELD OF MICHIGAN",
+"id": "C-13515",
+"name": "CRISTO HOMES INC",
 "entity_type": "corp",
 "jp": false,
 "signals": 2,
 "value_total": null,
-"states": "MI",
-"latest": "2026-10-02",
+"states": "OH",
+"latest": "2026-10-01",
 "targets": 2,
 "signal_ids": [
-"S-73632",
-"S-67505"
+"S-1160",
+"S-8894"
 ],
 "n_amount_excluded": 0
 },
@@ -98247,22 +96940,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15296",
-"name": "CHRIST HOSPITAL THE",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-02",
-"targets": 2,
-"signal_ids": [
-"S-8343",
-"S-8471"
-],
-"n_amount_excluded": 1
-},
-{
 "id": "C-15385",
 "name": "Longhorn Steakhouse",
 "entity_type": "corp",
@@ -98403,22 +97080,6 @@
 "signal_ids": [
 "S-69768",
 "S-59726"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15638",
-"name": "HARPER COLLEGE (WILLIAM RAINE",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-23",
-"targets": 2,
-"signal_ids": [
-"S-62601",
-"S-65351"
 ],
 "n_amount_excluded": 0
 },
@@ -98567,6 +97228,22 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-16074",
+"name": "Chick-fil-A",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "IN,OH",
+"latest": "2026-09-22",
+"targets": 2,
+"signal_ids": [
+"S-33740",
+"S-68455"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-16399",
 "name": "HICKORY WOODS DEVELOPMENT CO LLC",
 "entity_type": "corp",
@@ -98579,22 +97256,6 @@
 "signal_ids": [
 "S-74375",
 "S-52912"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-1680",
-"name": "CHICAGO PUBLIC LIBRARY",
-"entity_type": "public",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-28",
-"targets": 2,
-"signal_ids": [
-"S-69797",
-"S-6572"
 ],
 "n_amount_excluded": 0
 },
@@ -98771,22 +97432,6 @@
 "signal_ids": [
 "S-34836",
 "S-68495"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-439",
-"name": "EXTRA SPACE STORAGE",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-22",
-"targets": 2,
-"signal_ids": [
-"S-7027",
-"S-65086"
 ],
 "n_amount_excluded": 0
 },
@@ -99329,6 +97974,21 @@
 "targets": 1,
 "signal_ids": [
 "S-73583"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-13519",
+"name": "BLUE CROSS/BLUE SHIELD OF MICHIGAN",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "MI",
+"latest": "2026-09-25",
+"targets": 1,
+"signal_ids": [
+"S-67505"
 ],
 "n_amount_excluded": 0
 },
@@ -99899,21 +98559,6 @@
 "targets": 1,
 "signal_ids": [
 "S-62053"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-13746",
-"name": "TAJS INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-21",
-"targets": 1,
-"signal_ids": [
-"S-63381"
 ],
 "n_amount_excluded": 0
 },
@@ -102078,21 +100723,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15002",
-"name": "WEST-WARD COLUMBUS INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-30",
-"targets": 1,
-"signal_ids": [
-"S-1515"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15005",
 "name": "PIG WORKS INC",
 "entity_type": "corp",
@@ -102706,6 +101336,21 @@
 "S-69269"
 ],
 "n_amount_excluded": 0
+},
+{
+"id": "C-15296",
+"name": "CHRIST HOSPITAL THE",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "OH",
+"latest": "2026-08-13",
+"targets": 1,
+"signal_ids": [
+"S-8471"
+],
+"n_amount_excluded": 1
 },
 {
 "id": "C-15297",
@@ -104328,21 +102973,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15503",
-"name": "ROOSEVELT COLLECTIONS",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-28",
-"targets": 1,
-"signal_ids": [
-"S-66020"
-],
-"n_amount_excluded": 1
-},
-{
 "id": "C-15504",
 "name": "TIMBER GLEN II LTD",
 "entity_type": "corp",
@@ -105063,21 +103693,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15617",
-"name": "TISHMAN SPEGER",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-28",
-"targets": 1,
-"signal_ids": [
-"S-69833"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15625",
 "name": "MICHAEL BEST & FRIEDRICH LLP",
 "entity_type": "corp",
@@ -105149,6 +103764,21 @@
 "targets": 1,
 "signal_ids": [
 "S-65587"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15638",
+"name": "HARPER COLLEGE (WILLIAM RAINE",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IL",
+"latest": "2026-09-23",
+"targets": 1,
+"signal_ids": [
+"S-65351"
 ],
 "n_amount_excluded": 0
 },
@@ -106514,21 +105144,6 @@
 "targets": 1,
 "signal_ids": [
 "S-62006"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15829",
-"name": "MARIANOS #505-531",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-16",
-"targets": 1,
-"signal_ids": [
-"S-59124"
 ],
 "n_amount_excluded": 0
 },
@@ -108588,6 +107203,21 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-1680",
+"name": "CHICAGO PUBLIC LIBRARY",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IL",
+"latest": "2026-09-28",
+"targets": 1,
+"signal_ids": [
+"S-69797"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-16910",
 "name": "BUTLER TECHNOLOGY & CAREER DEV SCHOOLS",
 "entity_type": "corp",
@@ -108974,21 +107604,6 @@
 "targets": 1,
 "signal_ids": [
 "S-73856"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-17799",
-"name": "THIRTY FOUR CORP",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-02",
-"targets": 1,
-"signal_ids": [
-"S-73790"
 ],
 "n_amount_excluded": 0
 },
@@ -109713,21 +108328,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-2592",
-"name": "MITSUWA MARKETPLACE",
-"entity_type": "corp",
-"jp": true,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-15",
-"targets": 1,
-"signal_ids": [
-"S-26370"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-2977",
 "name": "US bank",
 "entity_type": "corp",
@@ -109923,6 +108523,21 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-439",
+"name": "EXTRA SPACE STORAGE",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IL",
+"latest": "2026-08-31",
+"targets": 1,
+"signal_ids": [
+"S-7027"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-4838",
 "name": "DMG MORI Federal Services, Inc.",
 "entity_type": "corp",
@@ -109994,21 +108609,6 @@
 "targets": 1,
 "signal_ids": [
 "S-64317"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-564",
-"name": "GAP INC.",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-16",
-"targets": 1,
-"signal_ids": [
-"S-309"
 ],
 "n_amount_excluded": 0
 },
