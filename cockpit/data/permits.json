@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-10-18T09:08:11+00:00",
+"generated_at": "2026-10-19T08:46:38+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,31 +15,31 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 81536,
-"candidates": 65241,
-"targets": 1450,
-"permits_folded": 1839,
+"signals_total": 81725,
+"candidates": 64189,
+"targets": 1443,
+"permits_folded": 1830,
 "unclassified": 0,
-"unevaluated": 36623,
+"unevaluated": 35638,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 218,
-"保全": 856,
+"操業の変化": 216,
+"保全": 852,
 "事務所・その他": 169,
-"内容不明": 56,
+"内容不明": 55,
 "工事でない記録": 151
 },
 "stages": {
-"0": 16295,
-"2a": 4726,
-"2b": 25295,
-"2c": 6602,
-"2d": 22577,
-"3": 3918,
+"0": 17536,
+"2a": 4591,
+"2b": 24605,
+"2c": 6442,
+"2d": 22530,
+"3": 3907,
 "5": 209,
-"6": 1914
+"6": 1905
 },
-"enriched": 28618
+"enriched": 28551
 },
 "sources": [
 {
@@ -48,7 +48,7 @@
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-18T07:02:43Z",
+"last_run_at": "2026-10-19T07:02:03Z",
 "last_run_reason": "ok",
 "signals": 9468,
 "date_min": "2026-07-01",
@@ -64,8 +64,8 @@
 "state": "IL",
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-10-18T07:03:21Z",
+"last_run_status": "empty",
+"last_run_at": "2026-10-19T07:02:19Z",
 "last_run_reason": "ok",
 "signals": 223,
 "date_min": "2026-07-01",
@@ -82,12 +82,12 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-18T07:03:26Z",
+"last_run_at": "2026-10-19T07:02:20Z",
 "last_run_reason": "ok",
-"signals": 3062,
+"signals": 3110,
 "date_min": "2026-07-01",
-"date_max": "2026-10-15",
-"owner_coverage": 2934,
+"date_max": "2026-10-16",
+"owner_coverage": 2981,
 "targets": 113,
 "cadence": "daily",
 "next_run_at": null,
@@ -99,13 +99,13 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-18T07:03:28Z",
+"last_run_at": "2026-10-19T07:02:21Z",
 "last_run_reason": "ok",
-"signals": 2667,
+"signals": 2684,
 "date_min": "2026-07-01",
-"date_max": "2026-10-15",
-"owner_coverage": 2654,
-"targets": 157,
+"date_max": "2026-10-16",
+"owner_coverage": 2671,
+"targets": 153,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -116,13 +116,13 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-18T07:03:34Z",
+"last_run_at": "2026-10-19T07:02:37Z",
 "last_run_reason": "ok",
-"signals": 1425,
+"signals": 1515,
 "date_min": "2026-07-07",
-"date_max": "2026-10-09",
-"owner_coverage": 1370,
-"targets": 85,
+"date_max": "2026-10-16",
+"owner_coverage": 1459,
+"targets": 80,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -133,7 +133,7 @@
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-18T08:13:23Z",
+"last_run_at": "2026-10-19T07:58:30Z",
 "last_run_reason": "ok",
 "signals": 111,
 "date_min": "2026-07-07",
@@ -150,12 +150,12 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-18T07:03:35Z",
+"last_run_at": "2026-10-19T07:02:38Z",
 "last_run_reason": "ok",
-"signals": 2014,
+"signals": 2036,
 "date_min": "2026-07-01",
-"date_max": "2026-10-16",
-"owner_coverage": 2005,
+"date_max": "2026-10-17",
+"owner_coverage": 2027,
 "targets": 40,
 "cadence": "daily",
 "next_run_at": null,
@@ -184,9 +184,9 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-18T07:03:37Z",
+"last_run_at": "2026-10-19T07:02:39Z",
 "last_run_reason": "ok",
-"signals": 933,
+"signals": 935,
 "date_min": "2024-11-18",
 "date_max": "2026-10-17",
 "owner_coverage": 0,
@@ -200,8 +200,8 @@
 "state": "IL",
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-10-18T07:03:36Z",
+"last_run_status": "empty",
+"last_run_at": "2026-10-19T07:02:38Z",
 "last_run_reason": "ok",
 "signals": 358,
 "date_min": "2026-07-01",
@@ -217,8 +217,8 @@
 "state": "IL",
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-10-18T07:03:36Z",
+"last_run_status": "empty",
+"last_run_at": "2026-10-19T07:02:39Z",
 "last_run_reason": "ok",
 "signals": 1533,
 "date_min": "2026-07-01",
@@ -235,7 +235,7 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-18T07:03:06Z",
+"last_run_at": "2026-10-19T07:02:19Z",
 "last_run_reason": "ok",
 "signals": 8120,
 "date_min": "2026-07-01",
@@ -252,12 +252,12 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-18T07:50:15Z",
+"last_run_at": "2026-10-19T07:47:38Z",
 "last_run_reason": "ok",
-"signals": 20789,
+"signals": 20793,
 "date_min": "2026-07-01",
-"date_max": "2026-10-17",
-"owner_coverage": 14025,
+"date_max": "2026-10-19",
+"owner_coverage": 14028,
 "targets": 506,
 "cadence": "daily",
 "next_run_at": null,
@@ -269,12 +269,12 @@
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-18T08:02:19Z",
+"last_run_at": "2026-10-19T07:53:49Z",
 "last_run_reason": "ok",
-"signals": 12167,
+"signals": 12173,
 "date_min": "2026-07-01",
-"date_max": "2026-10-17",
-"owner_coverage": 6337,
+"date_max": "2026-10-18",
+"owner_coverage": 6341,
 "targets": 194,
 "cadence": "daily",
 "next_run_at": null,
@@ -285,8 +285,8 @@
 "state": "IL",
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-10-18T08:11:18Z",
+"last_run_status": "empty",
+"last_run_at": "2026-10-19T07:56:34Z",
 "last_run_reason": "ok",
 "signals": 712,
 "date_min": "2026-07-01",
@@ -302,8 +302,8 @@
 "state": "IL",
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-10-18T08:13:18Z",
+"last_run_status": "empty",
+"last_run_at": "2026-10-19T07:58:28Z",
 "last_run_reason": "ok",
 "signals": 115,
 "date_min": "2026-07-01",
@@ -1560,14 +1560,14 @@
 ]
 },
 "stages": {
-"0": 16295,
-"2a": 4726,
-"2b": 25295,
-"2c": 6602,
-"2d": 22577,
-"3": 3918,
+"0": 17536,
+"2a": 4591,
+"2b": 24605,
+"2c": 6442,
+"2d": 22530,
+"3": 3907,
 "5": 209,
-"6": 1914
+"6": 1905
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 16953,
+"checked": 16872,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -2387,7 +2387,7 @@
 "date": "2026-10-04",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "REBEL DOGS DETROIT INCがDetroitで増築・新築の許可を取得(1件)",
 "infer": null,
 "note": "増築・新築",
@@ -3971,70 +3971,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "CLEVELAND CLINIC FOUNDATION",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-73828",
-"state": "OH",
-"city": "Cleveland・9105 CEDAR AVE E, CLEVELAND, OH, 44195",
-"company": "CLEVELAND CLINIC FOUNDATION",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-10-01",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CLEVELAND CLINIC FOUNDATIONがClevelandで駐車場撤去の許可を取得(1件)",
-"infer": null,
-"note": "縮小・撤去",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCB26-036525 Commercial Building",
-"value": 1566725.0,
-"verbatim": "Commercial Building / I-2 Institutional - Hospitals / Nursing Home / Site Work Only / RAZE PARKING LOT AND ASSOCIATED UTILITES PER APPROVED PLANS. SEPARATE PLUMBING, HVAC AND ELECTRICAL PERMITS ARE REQUIRED. SWPPP INSPECTIONS REQUIRED.",
-"gc": "TURNER CONSTRUCTION COMPANY",
-"pin": "11923058",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-7724",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:32.936719+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 1566725.0,
-"headline_en": "CLEVELAND CLINIC FOUNDATION obtained a permit to demolish a parking lot in Cleveland (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-01",
-"n_permits": 1,
-"member_ids": [
-"S-73828"
-],
-"kinds": [
-"縮小・撤去"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
 },
 {
 "investor": {
@@ -6687,74 +6623,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "OHIOHEALTH CORP",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-1542",
-"state": "OH",
-"city": "Columbus・3420 OHIOHEALTH PKWY",
-"company": "OHIOHEALTH CORP",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-24",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "OHIOHEALTH CORPがColumbusで増築・修繕等の許可を取得(3件)",
-"infer": null,
-"note": "増築・新築・更新・修繕・事務所・その他",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 ADDC2605078 Addition",
-"value": 115000000.0,
-"verbatim": "Commercial - Other / Addition / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 467645 SQFT",
-"gc": "OHIOHEALTH CORP",
-"pin": "010183740",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-138",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:59.419061+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 115000000.0,
-"headline_en": "OHIOHEALTH CORP obtained permits for addition and repair work in Columbus (3 records)",
-"not_construction": false,
-"as_of": "2026-09-24",
-"n_permits": 3,
-"member_ids": [
-"S-1542",
-"S-36659",
-"S-67475"
-],
-"kinds": [
-"増築・新築",
-"更新・修繕",
-"事務所・その他"
-],
-"amount_band": "ge_100m",
-"amount_band_label": "$100M 以上"
 },
 {
 "investor": {
@@ -19240,7 +19108,7 @@
 "date": "2026-10-04",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "ANCHOR BAPTIST CHURCH INCがRIVERSIDEで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -19304,7 +19172,7 @@
 "date": "2026-10-04",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "DETROIT PUBLIC SCHOOLSがDetroitで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -29237,70 +29105,6 @@
 },
 {
 "investor": {
-"name": "FAIRVIEW PARK HOSPITAL",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-73866",
-"state": "OH",
-"city": "Cleveland・18101 LORAIN AVE, CLEVELAND, OH, 44111",
-"company": "FAIRVIEW PARK HOSPITAL",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-29",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "FAIRVIEW PARK HOSPITALがClevelandで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCB26-033085 Commercial Building",
-"value": 1811430.11,
-"verbatim": "Commercial Building / I-2 Institutional - Hospitals / Nursing Home / Interior/Exterior Remodel / INTERIOR ALTERATIONS TO 1200 SF OF EXISTING LOWER LEVEL, 8,090 SF SPACE AND 1ST FLR ANCILLARY SPACE INCLUDING NEW EQUIPMENT PER APPROVED PLANS. SEPARATE PERMITS REQUIRED FOR PLUMBING, HVAC, AND ELECTRICAL. SUBMIT FIRE PROTECTION PLANS TO FPB FOR ALTERATIONS TO THE FIRE PROTECTION SYSTEMS. MAINTAIN OBC ",
-"gc": "REGENCY CONSTRUCTION SERVICES, INC.",
-"pin": "02601001",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-7726",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:37.102982+00:00"
-},
-"meaning": "保全",
-"amount_usd": 1811430.11,
-"headline_en": "FAIRVIEW PARK HOSPITAL obtained a repair/renovation permit in Cleveland (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-29",
-"n_permits": 1,
-"member_ids": [
-"S-73866"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
-},
-{
-"investor": {
 "name": "EMIR PROPERTIES LLC",
 "basis": "operator",
 "label": "操業事業者",
@@ -31558,70 +31362,6 @@
 ],
 "kinds": [
 "更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "Browns",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-73892",
-"state": "OH",
-"city": "Cleveland・100 ALFRED LERNER WAY, CLEVELAND, OH, 44114",
-"company": "Browns",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "その他の事業体",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-28",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "BrownsがClevelandでユーティリティ整備の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCE26-041672 Commercial Electrical",
-"value": 10000.0,
-"verbatim": "Commercial Electrical / U Utility - Miscellaneous / Need to pull a permit for the generator for Browns Thursday Night Football 10/1",
-"gc": "EINHEIT ELECTRIC CONSTRUCTION COMPANY",
-"pin": "10102014",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-17874",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:22.498144+00:00"
-},
-"meaning": "保全",
-"amount_usd": 10000.0,
-"headline_en": "Browns obtained a utility-work permit in Cleveland (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-28",
-"n_permits": 1,
-"member_ids": [
-"S-73892"
-],
-"kinds": [
-"ユーティリティ"
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
@@ -34586,70 +34326,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "STATE OF OHIO (CSU)",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-67635",
-"state": "OH",
-"city": "Cleveland・2303 CHESTER AVE 1204, CLEVELAND, OH, 44114",
-"company": "STATE OF OHIO (CSU)",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "教育",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-24",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "STATE OF OHIO (CSU)がClevelandで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCP26-041273 Commercial Plumbing",
-"value": 900.0,
-"verbatim": "Commercial Plumbing / U Utility - Miscellaneous / INSTALL 1 HOT WATER HEATER ****UNIT 1204*****",
-"gc": "WIESE PLUMBING & HEATING INC.",
-"pin": "10232054",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-14743",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:52.731682+00:00"
-},
-"meaning": "保全",
-"amount_usd": 900.0,
-"headline_en": "STATE OF OHIO (CSU) obtained a repair/renovation permit in Cleveland (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-24",
-"n_permits": 1,
-"member_ids": [
-"S-67635"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -39792,70 +39468,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "CLEVELAND CITY OF",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-67671",
-"state": "OH",
-"city": "Cleveland・750 E 88TH ST, CLEVELAND, OH, 44108",
-"company": "CLEVELAND CITY OF",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-22",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 B24006295 New",
-"value": 7100000.0,
-"verbatim": "New / B Business / Alteration / MAKE ALTERATIONS TO ADMINISTRATION BUILDING PER APPROVED PLANS. SEPARATE PLUMBING, HVAC AND ELECTRICAL PERMITS REQUIRED. CERTIFICATE OF OCCUPANCY REQUIRED.",
-"gc": "FEGHALI BROTHERS LLC.",
-"pin": "10701001",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-7752",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:58.241034+00:00"
-},
-"meaning": "保全",
-"amount_usd": 7100000.0,
-"headline_en": "CLEVELAND CITY OF obtained a repair/renovation permit in Cleveland (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-22",
-"n_permits": 1,
-"member_ids": [
-"S-67671"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
 },
 {
 "investor": {
@@ -91398,70 +91010,6 @@
 },
 {
 "investor": {
-"name": "FRANK BRUNCKHORST COMPANY LLC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-65281",
-"state": "OH",
-"city": "Columbus・2225 SPIEGEL DR",
-"company": "FRANK BRUNCKHORST COMPANY LLC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "食品・飲料",
-"category": "内容不明",
-"category_raw": "内容不明",
-"confidence": "high",
-"date": "2026-09-21",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "FRANK BRUNCKHORST COMPANY LLCがColumbusで内容不明の許可を取得(1件)",
-"infer": null,
-"note": "内容不明",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 MMEPC2637590 Mechanical",
-"value": null,
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"gc": "AMERICAN MECHANICAL GROUP INC",
-"pin": "495239587",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-14087",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:03.833977+00:00"
-},
-"meaning": "内容不明",
-"amount_usd": null,
-"headline_en": "FRANK BRUNCKHORST COMPANY LLC obtained a permit of unclear scope in Columbus (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-24",
-"n_permits": 1,
-"member_ids": [
-"S-65281"
-],
-"kinds": [
-"内容不明"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "DeMotte Christian High School",
 "basis": "operator",
 "label": "操業事業者",
@@ -95502,50 +95050,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-7724",
-"name": "CLEVELAND CLINIC FOUNDATION",
-"entity_type": "corp",
-"jp": false,
-"signals": 8,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-01",
-"targets": 8,
-"signal_ids": [
-"S-73828",
-"S-26836",
-"S-36970",
-"S-36881",
-"S-26689",
-"S-37004",
-"S-26795",
-"S-26838"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-7752",
-"name": "CLEVELAND CITY OF",
-"entity_type": "public",
-"jp": false,
-"signals": 8,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-01",
-"targets": 8,
-"signal_ids": [
-"S-73839",
-"S-73850",
-"S-73902",
-"S-73909",
-"S-67671",
-"S-26687",
-"S-36989",
-"S-26823"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15551",
 "name": "UNIVERSITY OF MICHIGAN",
 "entity_type": "corp",
@@ -95630,22 +95134,44 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-138",
-"name": "OHIOHEALTH CORP",
+"id": "C-7724",
+"name": "CLEVELAND CLINIC FOUNDATION",
 "entity_type": "corp",
 "jp": false,
-"signals": 6,
+"signals": 7,
 "value_total": null,
 "states": "OH",
-"latest": "2026-10-02",
-"targets": 6,
+"latest": "2026-09-21",
+"targets": 7,
 "signal_ids": [
-"S-1542",
-"S-73798",
-"S-1778",
-"S-36664",
-"S-1812",
-"S-67592"
+"S-26836",
+"S-36970",
+"S-36881",
+"S-26689",
+"S-37004",
+"S-26795",
+"S-26838"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-7752",
+"name": "CLEVELAND CITY OF",
+"entity_type": "public",
+"jp": false,
+"signals": 7,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-01",
+"targets": 7,
+"signal_ids": [
+"S-73839",
+"S-73850",
+"S-73902",
+"S-73909",
+"S-26687",
+"S-36989",
+"S-26823"
 ],
 "n_amount_excluded": 0
 },
@@ -95803,6 +95329,25 @@
 "S-8618",
 "S-8901",
 "S-8647"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-138",
+"name": "OHIOHEALTH CORP",
+"entity_type": "corp",
+"jp": false,
+"signals": 5,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-02",
+"targets": 5,
+"signal_ids": [
+"S-73798",
+"S-1778",
+"S-36664",
+"S-1812",
+"S-67592"
 ],
 "n_amount_excluded": 0
 },
@@ -99133,21 +98678,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-14087",
-"name": "FRANK BRUNCKHORST COMPANY LLC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-21",
-"targets": 1,
-"signal_ids": [
-"S-65281"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-14102",
 "name": "FRANKLINTON DEVELOPMENT ASSOCIATION",
 "entity_type": "corp",
@@ -99954,21 +99484,6 @@
 "targets": 1,
 "signal_ids": [
 "S-67688"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-14743",
-"name": "STATE OF OHIO (CSU)",
-"entity_type": "public",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-24",
-"targets": 1,
-"signal_ids": [
-"S-67635"
 ],
 "n_amount_excluded": 0
 },
@@ -107818,21 +107333,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-17874",
-"name": "Browns",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-28",
-"targets": 1,
-"signal_ids": [
-"S-73892"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-17875",
 "name": "Epcon",
 "entity_type": "corp",
@@ -108804,21 +108304,6 @@
 "targets": 1,
 "signal_ids": [
 "S-70912"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-7726",
-"name": "FAIRVIEW PARK HOSPITAL",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-29",
-"targets": 1,
-"signal_ids": [
-"S-73866"
 ],
 "n_amount_excluded": 0
 },

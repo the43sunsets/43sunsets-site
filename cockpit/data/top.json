@@ -1,103 +1,127 @@
 {
-"generated_at": "2026-10-12T07:02:39+00:00",
-"updated_ct": "2026-10-12",
-"week_start": "2026-10-12",
-"next_update_ct": "2026-10-19",
+"generated_at": "2026-10-19T09:05:52+00:00",
+"updated_ct": "2026-10-19",
+"week_start": "2026-10-19",
+"next_update_ct": "2026-10-26",
 "window_days": 90,
-"rule": "直近 90 日の記録から、目立つ投資の動きを 5 つ選ぶ(建屋と設備の両方/日系/大型の建設/続けて機械を入れた会社/自動化つきの導入)。同じ会社は 1 回。毎週月曜に選び直す。各件の選定理由は why に。",
-"intro": "直近 90 日の記録から、毎週月曜に選び直す 5 件。記録日は 90 日前まで遡ることがある。",
+"rule": "直近 90 日の記録から最大 5 件を選ぶ(交差/日系/大型の許可/連続した担保登記/自動化つき設備)。同じ会社は 1 回。主体未特定・雑音は選ばず、足りなくても埋めない。見出しは記録の種類の言葉だけで書く。毎週月曜に選び直す。選定理由は why に。",
+"intro": "直近 90 日の記録から、毎週月曜に選び直す最大 5 件。見出しは記録の種類の言葉だけで書く。記録日は 90 日前まで遡ることがある。",
+"g4": {
+"n": 5,
+"unidentified": 0,
+"unidentified_excluded": 4,
+"noise_excluded": 1180,
+"verbs_checked": 265,
+"verbs_rejected": 0,
+"verbs_version": {
+"kinds": "headline-verbs-v1-2026-10-04",
+"ucc": "ucc-verbs-v1-2026-10-07",
+"cross": "cross-verbs-v1-2026-10-07"
+}
+},
 "picks": [
 {
 "kind": "jp",
 "tag": "日系",
-"title": "KAO USA INC(日系)が 工場を増強",
-"body": "Cincinnati。9月に建設許可(工事費 $153k)。",
-"move": "KAO USA INC(日系)が 工場を増強",
+"title": "DMG MORI FEDERAL SERVICESがChicagoで増築・修繕の許可を取得(1件)",
+"body": "Chicago。9月に建設許可(工事費 $10.0M)。",
+"move": "DMG MORI FEDERAL SERVICESがChicagoで増築・修繕の許可を取得(1件)",
 "link": "permits/",
 "face": "許可",
-"date": "2026-09-08",
-"karte": "C-12534",
-"company": "KAO USA INC",
+"date": "2026-09-23",
+"karte": "C-4838",
+"company": "DMG MORI Federal Services, Inc.",
 "why": "直近 90 日で日系企業の建設許可(用途が読めたもの)としては最新。日系は読者に最も近い相手なので 1 枠を当てる。"
 },
 {
 "kind": "permit",
 "tag": "大型",
-"title": "OHIOHEALTH CORP が 医療施設を建設(工事費 $115.0M)",
-"body": "Columbus。8月に建設許可。OhioHealth の Columbus 施設(3420 OhioHealth Pkwy)で 467,645 SQFT の増築工事 $115M。",
-"move": "OHIOHEALTH CORP が 医療施設を建設(工事費 $115.0M)",
+"title": "LEGACY GI TC 400 LASALLE LLCがChicagoで新拠点・用途転換の許可を取得(1件)",
+"body": "Chicago。9月に建設許可。工事費 $151.1M。",
+"move": "LEGACY GI TC 400 LASALLE LLCがChicagoで新拠点・用途転換の許可を取得(1件)",
 "link": "permits/",
 "face": "許可",
-"date": "2026-08-21",
-"karte": "C-138",
-"company": "OHIOHEALTH CORP",
-"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 31 件中の上位)。工事費 $1M 以上 = 設備の入る建屋。"
+"date": "2026-09-16",
+"karte": "C-4",
+"company": "LEGACY GI TC 400 LASALLE LLC",
+"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 9 件中の上位)。工事費 $1M 以上 = 設備の入る建屋の型。"
 },
 {
 "kind": "permit",
 "tag": "大型",
-"title": "所有者・申請者の記載なし が データセンターを建設(工事費 $54.1M)",
-"body": "Grayslake。7月に建設許可。Grayslake 1700 Cornerstone Pkwy にデータセンター「Building 1」の基礎工事(Foundation Only)$54.1M。",
-"move": "所有者・申請者の記載なし が データセンターを建設(工事費 $54.1M)",
+"title": "FORD MOTOR COMPANYがDetroitで用途転換・改修の許可を取得(2件)",
+"body": "Detroit。9月に建設許可。工事費 $24.0M。",
+"move": "FORD MOTOR COMPANYがDetroitで用途転換・改修の許可を取得(2件)",
 "link": "permits/",
 "face": "許可",
-"date": "2026-07-30",
-"karte": null,
-"company": "所有者・申請者の記載なし",
-"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 31 件中の上位)。工事費 $1M 以上 = 設備の入る建屋。"
+"date": "2026-09-28",
+"karte": "C-154",
+"company": "FORD MOTOR COMPANY",
+"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 9 件中の上位)。工事費 $1M 以上 = 設備の入る建屋の型。"
 },
 {
 "kind": "multi",
 "tag": "連続投資",
-"title": "TK MACHINE LLC が 3 か月で機械 2 台を導入",
-"body": "Elroy, WI。CNC切削加工・カスタム機械加工とデザインを提供。Haas Automation の機械を続けて入れている = 生産能力を増やしている動き。",
-"move": "TK MACHINE LLC が 3 か月で機械 2 台を導入",
+"title": "TK MACHINE LLC が 3 か月に 1 件を担保に登記(機械 2 台)",
+"body": "Elroy, WI。直近 90 日に機械の担保登記 1 件。",
+"move": "TK MACHINE LLC が 3 か月に 1 件を担保に登記(機械 2 台)",
 "link": "ucc/",
 "face": "UCC",
 "date": "2026-09-01",
 "karte": "C-12921",
 "company": "TK MACHINE LLC",
-"why": "直近 90 日で機械 2 台・登記 1 件と、続けて設備を入れている会社。1 件ずつより、連続した導入の方が増産の意思が読める。"
+"why": "直近 90 日に 1 件を担保に登記した会社(機械 2 台)。連続した担保登記は、設備の動きを追う手掛かりとなる型。"
 },
 {
 "kind": "auto",
 "tag": "自動化",
-"title": "STEIGER STEEL & FABRICATING, INC. が自動化つきのロータリードローパイプベンダーを導入",
-"body": "La Crosse, WI。8月に登記。搬入出やロボットまで含めた導入 = 省人化と量産化の動き。",
-"move": "STEIGER STEEL & FABRICATING, INC. が自動化つきのロータリードローパイプベンダーを導入",
+"title": "STEIGER STEEL & FABRICATING, INC. が自動化つきのロータリードローパイプベンダーを担保に登記",
+"body": "La Crosse, WI。8月に自動化つき設備の担保登記。",
+"move": "STEIGER STEEL & FABRICATING, INC. が自動化つきのロータリードローパイプベンダーを担保に登記",
 "link": "ucc/",
 "face": "UCC",
 "date": "2026-08-07",
 "karte": "C-12917",
 "company": "STEIGER STEEL & FABRICATING, INC.",
-"why": "直近 90 日の登記で、搬入出やロボットまで含む自動化つきの導入。省人化と量産化の両方を読める型なので 1 枠。"
+"why": "直近 90 日の登記で、自動化つきの設備を確認。省人化と量産化の両方を読める型なので 1 枠。"
 }
 ],
 "counts": {
-"permits_targets": 195,
-"permits_new90": 126,
-"ucc_read": 20,
-"ucc_new90": 20,
+"permits_targets": 1443,
+"permits_new90": 1443,
+"ucc_read": 12,
+"ucc_new90": 11,
 "ucc_companies": 8,
-"jp_companies": 3
+"jp_companies": 1
 },
 "permits_meta": {
-"generated_at": "2026-10-11T08:45:15+00:00",
+"generated_at": "2026-10-19T08:46:38+00:00",
 "funnel": {
-"signals_total": 76696,
-"candidates": 1069,
-"enriched": 52481,
-"targets": 202,
-"unclassified": 52279,
-"unevaluated": 24215,
+"signals_total": 81725,
+"candidates": 64189,
+"targets": 1443,
+"permits_folded": 1830,
+"unclassified": 0,
+"unevaluated": 35638,
+"unissued_excluded": 51,
 "by_category": {
-"データセンター建設": 12,
-"医療施設": 108,
-"未分類": 52279,
-"物流・倉庫の新設": 19,
-"研究・ラボ施設": 18,
-"製造能力の増強": 45
-}
+"操業の変化": 216,
+"保全": 852,
+"事務所・その他": 169,
+"内容不明": 55,
+"工事でない記録": 151
+},
+"stages": {
+"0": 17536,
+"2a": 4591,
+"2b": 24605,
+"2c": 6442,
+"2d": 22530,
+"3": 3907,
+"5": 209,
+"6": 1905
+},
+"enriched": 28551
 },
 "states": [
 "IL",
@@ -108,29 +132,35 @@
 ]
 },
 "ucc_meta": {
-"generated_at": "2026-10-11T15:00:32+00:00",
+"generated_at": "2026-10-19T08:52:36+00:00",
 "funnel": {
-"filings_total": 8561,
-"with_collateral": 954,
-"read": 915,
+"filings_total": 9009,
+"with_collateral": 956,
+"read": 917,
 "unread": 39,
-"no_text_yet": 7607,
+"no_text_yet": 8053,
 "by_kind": {
 "与信枠の新設": 60,
 "未分類": 28,
-"設備投資": 756,
+"設備投資": 758,
 "資金繰り警戒": 2,
 "雑音": 69
 },
-"wi_index": 7495,
+"wi_index": 7935,
 "wi_purchased": 12,
-"wi_candidates": 659
+"wi_candidates": 716,
+"g3_key": "state+fs_number",
+"g3_duplicates": 0,
+"wi_fact_merged": 8,
+"machines": 5,
+"machines_unconfirmed_filings": 8,
+"g2_units": "g2_units.UNITS"
 },
 "catalog": {
 "equipment_rows": 280,
 "equipment_hits": 6,
 "equipment_misses": 0,
-"companies_checked": 3306,
+"companies_checked": 3356,
 "companies_total": 8
 }
 },
