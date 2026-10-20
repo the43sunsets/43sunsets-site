@@ -69,9 +69,9 @@ assert.ok(issuers);
 const { topSplit, issuerOptions, programOptions, programLabel, passKind } = runInNewContext(
   [issuers, marked("subsidy-kind"), "({ topSplit, issuerOptions, programOptions, programLabel, passKind })"].join("\n")
 );
-const federal = ["NIH", "DOE", "Agency 3", "Agency 4", "Agency 5", "Agency 6", "Agency 7", "Agency 8", "Agency 9"];
+const federal = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "NIH"];
 const programs = ["93.310", "93.859", "93.003", "93.004", "93.005", "93.006", "93.007", "93.008", "93.009"];
-const vocab = { issuer: { "連邦": federal.map((name, i) => [name, 9 - i]), "州": [["Indiana IEDC", 2]] }, program: { NIH: programs.map((id, i) => [id, i ? null : "Trans-NIH", 9 - i]) } };
+const vocab = { issuer: { "連邦": federal.map((name, i) => [name, 9 - i, name === "NIH" ? 5 : 0]), "州": [["Indiana IEDC", 2, 1]] }, program: { NIH: programs.map((id, i) => [id, i ? null : "Trans-NIH", i === 8 ? 10 : 9 - i, 9 - i]) } };
 const plain = value => JSON.parse(JSON.stringify(value));
 test("SS-5: topSplit keeps eight entries and handles absent lists", () => {
   const nine = topSplit(federal, 8);
@@ -81,11 +81,15 @@ test("SS-5: topSplit keeps eight entries and handles absent lists", () => {
   assert.deepEqual(plain(topSplit(undefined, 8)), { top: [], rest: [] });
 });
 test("SS-6: issuerOptions groups fixed top entries in issuer-level order", () => {
-  const options = issuerOptions(vocab, new Set());
+  const options = issuerOptions(vocab, new Set(), true);
   assert.deepEqual(plain(options.map(o => o.level)), ["連邦", "州"]);
-  assert.deepEqual(plain(options[0].top), federal.slice(0, 8)); assert.deepEqual([...options[0].rest], [federal[8]]);
+  assert.deepEqual(plain(options[0].top), ["NIH", ...federal.slice(0, 7)]); assert.deepEqual([...options[0].rest], ["A8"]);
   assert.deepEqual(plain(options[1].top), ["Indiana IEDC"]); assert.equal(options[1].rest.size, 0);
-  assert.deepEqual(plain(issuerOptions(vocab, new Set(["州"])).map(o => o.level)), ["州"]);
+  const all = issuerOptions(vocab, new Set(), false);
+  assert.deepEqual(plain(all[0].top), federal.slice(0, 8)); assert.deepEqual([...all[0].rest], ["NIH"]);
+  assert.deepEqual(plain(issuerOptions(vocab, new Set(["州"]), true).map(o => o.level)), ["州"]);
+  const legacy = { issuer: { "連邦": [["X", 3], ["Y", 2]] } };
+  for (const capexOnly of [true, false]) assert.deepEqual(plain(issuerOptions(legacy, null, capexOnly)[0].top), ["X", "Y"]);
 });
 test("SS-7: programLabel uses the name, number or missing-number label", () => {
   assert.equal(programLabel({ program: "93.310", name: "Trans-NIH" }), "Trans-NIH(93.310)");
@@ -94,21 +98,26 @@ test("SS-7: programLabel uses the name, number or missing-number label", () => {
 });
 test("SS-8: kind filtering distinguishes issuers, levels, programs and other buckets", () => {
   const row = (issuer, program = "93.310", issuer_level = "連邦") => ({ issuer, program, issuer_level });
-  const pass = (s, issuers = [], programs = [], v = vocab) => passKind(s, new Set(issuers), new Set(programs), v);
-  assert.equal(pass(row("NIH"), ["NIH"]), true); assert.equal(pass(row("DOE"), ["NIH"]), false);
-  assert.equal(pass(row(federal[8]), ["連邦\u0000__other__"]), true);
+  const pass = (s, issuers = [], programs = [], v = vocab, capexOnly = true) => passKind(s, new Set(issuers), new Set(programs), v, capexOnly);
+  assert.equal(pass(row("NIH"), ["NIH"]), true); assert.equal(pass(row("A1"), ["NIH"]), false);
+  assert.equal(pass(row("A8"), ["連邦\u0000__other__"]), true);
   assert.equal(pass(row("NIH"), ["連邦\u0000__other__"]), false);
-  assert.equal(pass(row(federal[8], "", "州"), ["連邦\u0000__other__"]), false);
+  assert.equal(pass(row("NIH"), ["連邦\u0000__other__"], [], vocab, false), true);
+  assert.equal(pass(row("A8"), ["連邦\u0000__other__"], [], vocab, false), false);
+  assert.equal(pass(row("A8", "", "州"), ["連邦\u0000__other__"]), false);
   // A state-level remainder must not match a federal-only selection either.
-  const stateVocab = { ...vocab, issuer: { ...vocab.issuer, "州": Array.from({ length: 9 }, (_, i) => [`State ${i}`, 9 - i]) } };
+  const stateVocab = { ...vocab, issuer: { ...vocab.issuer, "州": Array.from({ length: 9 }, (_, i) => [`State ${i}`, 9 - i, 9 - i]) } };
   assert.equal(pass(row("State 8", "", "州"), ["連邦\u0000__other__"], [], stateVocab), false);
   assert.equal(pass(row("NIH"), [], ["NIH\u000093.310"]), true);
   assert.equal(pass(row("NIH", "93.859"), [], ["NIH\u000093.310"]), false);
-  assert.equal(pass(row("DOE"), [], ["NIH\u000093.310"]), false);
+  assert.equal(pass(row("A1"), [], ["NIH\u000093.310"]), false);
   assert.equal(pass(row("NIH", programs[8]), [], ["NIH\u0000__other__"]), true);
   assert.equal(pass(row("NIH", programs[0]), [], ["NIH\u0000__other__"]), false);
+  assert.equal(pass(row("NIH", programs[8]), [], ["NIH\u0000__other__"], vocab, false), false);
+  assert.equal(pass(row("NIH", programs[7]), [], ["NIH\u0000__other__"], vocab, false), true);
   assert.equal(pass({}), true);
-  assert.deepEqual(plain(programOptions(vocab, "NIH").top[0]), { program: "93.310", name: "Trans-NIH" });
+  assert.deepEqual(plain(programOptions(vocab, "NIH", true).top[0]), { program: "93.310", name: "Trans-NIH" });
+  assert.equal(programOptions(vocab, "NIH", false).top[0].program, programs[8]);
 });
 
 const card = html.match(/function cardHtml\(s\)\{[\s\S]*?\/\* card:end \*\/\s*\}/)?.[0];

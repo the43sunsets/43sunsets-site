@@ -254,27 +254,35 @@ function visibleBase(){ const m = document.getElementById("capexonly").checked; 
 /* subsidy-kind:start */
 const TOP_N = 8, OTHER = "__other__";
 function topSplit(list, n){ const l = Array.isArray(list) ? list : []; return l.length <= n ? {top: l, rest: []} : {top: l.slice(0, n), rest: l.slice(n)}; }
-function issuerOptions(vocab, levels){
-  // 出し手の層ごとに、機関を件数の多い順(export の vocab の順)で上位 N と「その他」に分ける。levels = 選択中の層(空 = 全部・ISSUERS の順)
+function rankBy(list, capexOnly, nameIdx){
+  // rev.3: 要素 = [名, 全行の件数, 既定集合の件数](制度は [番号, 名, 全行, 既定集合] = nameIdx 1)。トグルがオンなら既定集合の件数順、オフなら全行の件数順。2 要素の古い形は件数 0 として受ける
+  const l = Array.isArray(list) ? list : [];
+  const allIdx = nameIdx + 1, capIdx = nameIdx + 2;
+  const num = (x, i) => (typeof x[i] === "number" ? x[i] : 0);
+  const key = x => capexOnly ? [num(x, capIdx), num(x, allIdx)] : [num(x, allIdx), num(x, capIdx)];
+  return l.slice().sort((a, b) => { const ka = key(a), kb = key(b); return (kb[0] - ka[0]) || (kb[1] - ka[1]) || String(a[0]).localeCompare(String(b[0])); });
+}
+function issuerOptions(vocab, levels, capexOnly){
+  // 出し手の層ごとに、機関をトグルの状態に応じた件数の多い順で上位 N と「その他」に分ける。levels = 選択中の層(空 = 全部・ISSUERS の順)
   const v = (vocab && vocab.issuer) || {};
   const lv = (levels && levels.size) ? ISSUERS.filter(l => levels.has(l)) : ISSUERS;
-  return lv.map(level => { const {top, rest} = topSplit(v[level], TOP_N); return {level, top: top.map(x => x[0]), rest: new Set(rest.map(x => x[0]))}; });
+  return lv.map(level => { const {top, rest} = topSplit(rankBy(v[level], capexOnly, 0), TOP_N); return {level, top: top.map(x => x[0]), rest: new Set(rest.map(x => x[0]))}; });
 }
-function programOptions(vocab, issuer){
+function programOptions(vocab, issuer, capexOnly){
   const v = (vocab && vocab.program) || {};
-  const {top, rest} = topSplit(v[issuer], TOP_N);
+  const {top, rest} = topSplit(rankBy(v[issuer], capexOnly, 1), TOP_N);
   return {top: top.map(x => ({program: x[0], name: x[1]})), rest: new Set(rest.map(x => x[0]))};
 }
 function programLabel(p){ return p.name ? `${p.name}(${p.program})` : (p.program ? `CFDA ${p.program}` : "制度番号なし"); }
-function passKind(s, selIssuer, selProgram, vocab){
+function passKind(s, selIssuer, selProgram, vocab, capexOnly){
   // selIssuer = 機関名 または `<層>\u0000__other__` / selProgram = `<機関名>\u0000<制度番号>` または `<機関名>\u0000__other__`
   const iss = s.issuer || "", prg = s.program || "";
   if(selIssuer.size){
-    const opt = issuerOptions(vocab, null).find(o => o.level === s.issuer_level);
+    const opt = issuerOptions(vocab, null, capexOnly).find(o => o.level === s.issuer_level);
     if(!(selIssuer.has(iss) || (opt && selIssuer.has(opt.level + "\u0000" + OTHER) && opt.rest.has(iss)))) return false;
   }
   if(selProgram.size){
-    const po = programOptions(vocab, iss);
+    const po = programOptions(vocab, iss, capexOnly);
     if(!(selProgram.has(iss + "\u0000" + prg) || (selProgram.has(iss + "\u0000" + OTHER) && po.rest.has(prg)))) return false;
   }
   return true;
@@ -283,7 +291,7 @@ function passKind(s, selIssuer, selProgram, vocab){
 function pass(s, except){
   const jp = document.getElementById("jponly").checked;
   for(const f of FIELDS){ if(f!==except && sel[f].size && !sel[f].has(s[f])) return false; }
-  if(except!=="kind" && !passKind(s, sel.issuer, sel.program, META && META.vocab)) return false;
+  if(except!=="kind" && !passKind(s, sel.issuer, sel.program, META && META.vocab, document.getElementById("capexonly").checked)) return false;
   if(jp && !s.jp) return false;
   return inPeriod(s, period);
 }
@@ -334,12 +342,13 @@ function renderFilters(){
     });
     el.appendChild(lab);
   };
-  for(const {level, top, rest} of issuerOptions(META.vocab, sel.issuer_level)){
+  const capexOnly = document.getElementById("capexonly").checked;
+  for(const {level, top, rest} of issuerOptions(META.vocab, sel.issuer_level, capexOnly)){
     const h = document.createElement("h3"); h.className = "sub"; h.textContent = level; el.appendChild(h);
     for(const issuer of top){
       add("issuer", level, issuer, issuer, base.filter(s=>s.issuer===issuer).length);
       if(sel.issuer.has(issuer)){
-        const po = programOptions(META.vocab, issuer);
+        const po = programOptions(META.vocab, issuer, capexOnly);
         for(const p of po.top) add("program", level, issuer + "\u0000" + p.program, programLabel(p), base.filter(s=>s.issuer===issuer && (s.program||"")===p.program).length);
         if(po.rest.size) add("program", level, issuer + "\u0000" + OTHER, `その他(${po.rest.size} 制度)`, base.filter(s=>s.issuer===issuer && po.rest.has(s.program||"")).length);
       }
