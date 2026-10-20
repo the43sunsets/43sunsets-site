@@ -6,6 +6,7 @@
 import { store, currentSession, json, logFaceDay, logCompanyView } from "../../signal/_lib.js";
 
 const GATED = new Set(["ucc.json", "ucc-wi.json", "subsidies.json", "hiring.json", "news.json", "macro.json"]);   // 9/9: ucc-wi.json = WI の索引行(推論段)   // 9/8 CEO: 景気の状況(ニュース 2 軸と AI の読み ②③)も見本モード
+const GATED_PREFIXES = ["subsidies-more-"];   // 10/20: 補助金の州別の分割ファイル(MINOR 行)= 主ファイルと同じ施錠
 const SAMPLE_N = 4;                    // 見本の枚数
 const SAMPLE_MIN_AGE_DAYS = 45;        // 見本は 45 日以上前の実例だけ(鮮度は登録の対価)
 const MINOR_SUBSIDY = new Set(["訓練・インフラ・その他", "未分類"]);   // signal/index.html と同じ主要件数の規則
@@ -14,19 +15,20 @@ export async function onRequestGet(context) {
   const { request, env, next } = context;
   const path = (context.params.path || []).join("/");
   const isCompany = /^companies\/C-\d+\.json$/.test(path);
-  if (!GATED.has(path) && !isCompany) return next();
+  const gatedByPrefix = GATED_PREFIXES.some(p => path.startsWith(p));
+  if (!GATED.has(path) && !isCompany && !gatedByPrefix) return next();
   const sess = await currentSession(request, env);
   if (sess) {
     // 9/8 CEO 甲: ログイン済みでも 1 セッション 1 分 60 回まで(全件を機械で吸う動きを止める)+登録者ごと・面ごと・日ごとの閲覧回数(点数付け)
     if (await sessionLimited(env, sess.sid)) return json({ ok: false, error: "too many requests — 1 分ほど待ってから再読み込みしてください" }, 429, { "retry-after": "60" });
-    await logFaceDay(env, sess.email, isCompany ? "company" : path.replace(/\.json$/, ""));
+    await logFaceDay(env, sess.email, isCompany ? "company" : (gatedByPrefix ? "subsidies" : path.replace(/\.json$/, "")));
     if (isCompany) await logCompanyView(env, sess.email, path.match(/^companies\/(C-\d+)\.json$/)[1]);
     const r = await next(); return withHeaders(r, "full", sess.sid);
   }
   const r = await next(); if (!r.ok) return r;
   let d; try { d = await r.json(); } catch { return json({ ok: false, error: "bad data" }, 502); }
   const cutoff = new Date(Date.now() - SAMPLE_MIN_AGE_DAYS * 864e5).toISOString().slice(0, 10);
-  const out = isCompany ? demoCompany(d) : (path === "news.json" ? demoNews(d) : (path === "macro.json" ? demoMacro(d) : demoFace(path, d, cutoff)));
+  const out = isCompany ? demoCompany(d) : (gatedByPrefix ? demoMore(d) : (path === "news.json" ? demoNews(d) : (path === "macro.json" ? demoMacro(d) : demoFace(path, d, cutoff))));
   return json(out, 200, { "x-signal-mode": "demo", "vary": "cookie" });
 }
 
@@ -52,6 +54,9 @@ async function sessionLimited(env, sid) {
   return n > SESSION_PER_MINUTE;
 }
 
+// 10/20: 分割ファイル(州別・MINOR 行)の見本 = 空。見本は主ファイル(既定の表示集合)からだけ切り出す
+function demoMore(d) { return { demo: true, generated_at: d.generated_at ?? null, state: d.state ?? null, part: d.part ?? null, parts: d.parts ?? null, signals: [] }; }
+
 function demoFace(path, d, cutoff) {
   const meta = { ...(d.meta || {}) };
   const all = d.signals || [];
@@ -65,7 +70,10 @@ function demoFace(path, d, cutoff) {
     pick = pool.slice(0, SAMPLE_N);
   }
   meta.demo = { note: `全 ${all.length} 件のうち ${pick.length} 件(${path === "hiring.json" ? "観測値" : cutoff + " 以前の実例"})を表示。登録すると全件・当日分・絞り込み・企業カルテが使えます。`, total: all.length, cutoff, sample: pick.length };
-  if (path === "subsidies.json") meta.n_major = all.filter(x => !(MINOR_SUBSIDY.has(x.category) && x.issuer_level === "連邦")).length;
+  if (path === "subsidies.json") {
+    meta.n_major = (d.meta && d.meta.n_major != null) ? d.meta.n_major : all.filter(x => !(MINOR_SUBSIDY.has(x.category) && x.issuer_level === "連邦")).length;
+    meta.n_capex = (d.meta && d.meta.n_capex != null) ? d.meta.n_capex : all.filter(x => !MINOR_SUBSIDY.has(x.category)).length;
+  }
   const out = { demo: true, meta, signals: pick };
   if (d.companies) { const ids = new Set(pick.map(s => s.company_id).filter(Boolean)); out.companies = d.companies.filter(c => ids.has(c.id)); }
   return out;

@@ -142,6 +142,8 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   .app{grid-template-columns:1fr;}
   aside{position:static; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
 }
+.money{display:flex;align-items:baseline;gap:10px;margin:4px 0}.money .amount{font-size:1.3em;font-weight:600}.money .when{color:var(--sub);font-size:.92em}.prog{margin-left:8px;color:var(--sub);font-size:.92em}.detail{margin-top:6px}.detail>summary{cursor:pointer;color:var(--sub);font-size:.92em}.detail[open]>summary{margin-bottom:6px}
+.fitem.sub2{margin-left:14px}#f-kind h3.sub{font-size:.8em;color:var(--sub);margin:8px 0 2px}
 </style>
 <link rel="stylesheet" href="/signal/assets/cockpit.css?v=20260910a">
 <script src="/signal/assets/favi.js?v=20260907t"></script>
@@ -179,6 +181,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   <div class="fgroup"><h2>州</h2><div id="f-state"></div></div>
   <div class="fgroup"><h2>段階</h2><div id="f-stage"></div></div>
   <div class="fgroup"><h2>出し手</h2><div id="f-issuer_level"></div></div>
+  <div class="fgroup" id="g-kind" hidden><h2>補助金の種類</h2><div id="f-kind"></div></div>
   <div class="fgroup"><h2>投資の種類</h2><div id="f-category"></div></div>
   <div class="fgroup"><h2>業種</h2><div id="f-industry"></div></div>
   <div class="fgroup"><h2>投資規模</h2><div id="f-size"></div></div>
@@ -191,7 +194,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
   <div class="toolbar">
     <div class="left">
       <span class="hitcount"><span class="num" id="hitnum">0</span> 件</span>
-      <span class="hitsub" id="hitsub"></span>
+      <span class="hitsub" id="hitsub"></span><span class="ng" id="morefail"></span>
       <select class="sortsel" id="sortsel" title="並び順"><option value="amount">金額の大きい順</option><option value="date">決定日の新しい順</option></select>
       <div class="seg" id="seg-period" title="期間 = 決定日(連邦が交付を決めて義務化した日・融資は実行日)。履行期間ではない。件数は他のフィルタ適用後"></div>
     </div>
@@ -207,7 +210,7 @@ button:focus-visible,.fitem input:focus-visible{outline:2px solid var(--ai-accen
     <ul id="scopenotes">
       <li>源(現在): 連邦 = USAspending.gov(5 州の事業者への助成と、設備投資に近い融資制度 SBA 504・USDA B&I/REAP・DOE 融資。直近 365 日に取引のあった案件)。州 = Illinois DCEO の EDGE 契約一覧(2015 年以降)・Indiana IEDC の Transparency Portal(EDGE/HBI/SEF 等の契約)・Ohio Tax Credit Authority の月次議事録(雇用創出税額控除の承認・2021 年以降)・Michigan Strategic Fund の Business Development Program 一覧・Wisconsin WEDC の受賞一覧(全制度・四半期更新)。州の案件は「段階 = 承認」(投資の決定)で、多くは予定投資額・雇用目標が付きます(OH の議事録には控除の見込額がありません)。</li>
       <li>未収集: JobsOhio の独自の助成(案件が非公開)・Michigan Strategic Fund の他制度(MCRP・SOAR 等)と、市・郡の固定資産税減免(Cook 郡 6b・IN の減免・OH CRA・MI PA 198・WI TIF)。市・郡の減免は、公開データから取れるかを確かめているところです。</li>
-      <li>「設備投資案件のみ」(既定でオン)= 投資の種類が 製造能力の増強・物流・データセンター・医療施設・研究・ラボ施設・研究開発 の案件。外すと、訓練・インフラ・その他と未分類も表示します。業種で絞るときは左の「業種」を使ってください。</li>
+      <li>「設備投資案件のみ」(既定でオン)= 投資の種類が 製造能力の増強・物流・データセンター・医療施設・研究・ラボ施設・研究開発 の案件。外すと、訓練・インフラ・その他と未分類も表示します。業種で絞るときは左の「業種」を使ってください。外したときは、選んでいる州(選んでいなければ全州)の残りの案件をそのとき読み込みます。</li>
       <li>分類の出所: 設備投資に関わる案件は当社 AI(Sonnet 5・Batch)が読み、日本語の要約と投資の種類・業種を付けます(確信度が低いものは「未分類」)。まだ読んでいない案件は規則(制度番号・機関・本文の語)で仮置きしています。SBA 504 融資は公開データに使途の内訳が無く、受領者名に製造の語がある案件だけを読みの対象にしています。</li>
       <li>受領者名の「›」は企業カルテ(建設許可・UCC・補助金を 1 枚に)へのリンク。同じ会社が許可や登記にも出ていれば、その時系列が並びます。</li>
       <li>日付の軸は「決定日」(連邦が交付を決めて義務化した日 = Base Obligation Date。融資は実行日)。履行期間(開始〜終了)は別に表示します。古い決定日の案件が載るのは、直近 1 年に変更・追加交付があったためです。州の審議会が入ると「承認日」が同じ軸に載ります。</li>
@@ -239,6 +242,7 @@ let page = 1;
 const FIELDS = ["state","stage","issuer_level","category","industry","size"];
 const VOCAB = {state:STATES, stage:STAGES, issuer_level:ISSUERS, category:CATEGORIES, industry:INDUSTRIES, size:SIZES};
 const sel = Object.fromEntries(FIELDS.map(f=>[f,new Set()]));
+sel.issuer = new Set(); sel.program = new Set();
 const PERIODS = [["90d","直近 90 日",90],["1y","直近 1 年",365],["2y","直近 2 年",730],["all","すべて",null]];
 let period = "all";
 const cutoff = days => days ? new Date(Date.now() - days*864e5).toISOString().slice(0,10) : null;
@@ -247,9 +251,39 @@ const isMinor = s => MINOR.has(s.category) && s.issuer_level === "連邦";   // 
 const isCapex = s => !MINOR.has(s.category);   // 9/9 CEO(最終): 「設備投資案件のみ」= 投資の種類で判定(製造業の括りは外す・既定オン)
 let SORT = "amount";   // 9/8: 既定 = 金額の大きい順(小口は下に沈める・隠さない)。"date" = 決定日の新しい順
 function visibleBase(){ const m = document.getElementById("capexonly").checked; return m ? SIGNALS.filter(isCapex) : SIGNALS; }
+/* subsidy-kind:start */
+const TOP_N = 8, OTHER = "__other__";
+function topSplit(list, n){ const l = Array.isArray(list) ? list : []; return l.length <= n ? {top: l, rest: []} : {top: l.slice(0, n), rest: l.slice(n)}; }
+function issuerOptions(vocab, levels){
+  // 出し手の層ごとに、機関を件数の多い順(export の vocab の順)で上位 N と「その他」に分ける。levels = 選択中の層(空 = 全部・ISSUERS の順)
+  const v = (vocab && vocab.issuer) || {};
+  const lv = (levels && levels.size) ? ISSUERS.filter(l => levels.has(l)) : ISSUERS;
+  return lv.map(level => { const {top, rest} = topSplit(v[level], TOP_N); return {level, top: top.map(x => x[0]), rest: new Set(rest.map(x => x[0]))}; });
+}
+function programOptions(vocab, issuer){
+  const v = (vocab && vocab.program) || {};
+  const {top, rest} = topSplit(v[issuer], TOP_N);
+  return {top: top.map(x => ({program: x[0], name: x[1]})), rest: new Set(rest.map(x => x[0]))};
+}
+function programLabel(p){ return p.name ? `${p.name}(${p.program})` : (p.program ? `CFDA ${p.program}` : "制度番号なし"); }
+function passKind(s, selIssuer, selProgram, vocab){
+  // selIssuer = 機関名 または `<層>\u0000__other__` / selProgram = `<機関名>\u0000<制度番号>` または `<機関名>\u0000__other__`
+  const iss = s.issuer || "", prg = s.program || "";
+  if(selIssuer.size){
+    const opt = issuerOptions(vocab, null).find(o => o.level === s.issuer_level);
+    if(!(selIssuer.has(iss) || (opt && selIssuer.has(opt.level + "\u0000" + OTHER) && opt.rest.has(iss)))) return false;
+  }
+  if(selProgram.size){
+    const po = programOptions(vocab, iss);
+    if(!(selProgram.has(iss + "\u0000" + prg) || (selProgram.has(iss + "\u0000" + OTHER) && po.rest.has(prg)))) return false;
+  }
+  return true;
+}
+/* subsidy-kind:end */
 function pass(s, except){
   const jp = document.getElementById("jponly").checked;
   for(const f of FIELDS){ if(f!==except && sel[f].size && !sel[f].has(s[f])) return false; }
+  if(except!=="kind" && !passKind(s, sel.issuer, sel.program, META && META.vocab)) return false;
   if(jp && !s.jp) return false;
   return inPeriod(s, period);
 }
@@ -281,7 +315,37 @@ function renderFilters(){
       el.appendChild(lab);
     }
   }
-  document.querySelectorAll('.fitem input[data-field]').forEach(cb=>{ cb.addEventListener("change", ()=>{ const set = sel[cb.dataset.field]; cb.checked ? set.add(cb.value) : set.delete(cb.value); page = 1; render(); }); });
+  document.querySelectorAll('.fitem input[data-field]').forEach(cb=>{ cb.addEventListener("change", async ()=>{ const set = sel[cb.dataset.field]; cb.checked ? set.add(cb.value) : set.delete(cb.value); if(cb.dataset.field==="state") await ensureMore(); page = 1; renderFilters(); render(); }); });
+  const group = document.getElementById("g-kind");
+  group.hidden = !(META && META.vocab && META.vocab.issuer);
+  if(group.hidden) return;
+  const el = document.getElementById("f-kind"); el.innerHTML = "";
+  const base = visibleBase().filter(s=>pass(s, "kind"));
+  const add = (kind, level, value, label, n)=>{
+    const lab = document.createElement("label"); lab.className = "fitem" + (kind==="program" ? " sub2" : "");
+    lab.innerHTML = `<input type="checkbox"><span class="long" title="${esc(label)}">${esc(label)}</span><span class="cnt">${n}</span>`;
+    const cb = lab.querySelector("input"); cb.dataset.kind = kind;
+    if(kind==="issuer") cb.dataset.level = level;
+    cb.value = value; cb.checked = sel[kind].has(value);
+    cb.addEventListener("change", ()=>{
+      cb.checked ? sel[kind].add(value) : sel[kind].delete(value);
+      if(kind==="issuer" && !cb.checked) [...sel.program].filter(k=>k.startsWith(value + "\u0000")).forEach(k=>sel.program.delete(k));
+      page = 1; renderFilters(); render();
+    });
+    el.appendChild(lab);
+  };
+  for(const {level, top, rest} of issuerOptions(META.vocab, sel.issuer_level)){
+    const h = document.createElement("h3"); h.className = "sub"; h.textContent = level; el.appendChild(h);
+    for(const issuer of top){
+      add("issuer", level, issuer, issuer, base.filter(s=>s.issuer===issuer).length);
+      if(sel.issuer.has(issuer)){
+        const po = programOptions(META.vocab, issuer);
+        for(const p of po.top) add("program", level, issuer + "\u0000" + p.program, programLabel(p), base.filter(s=>s.issuer===issuer && (s.program||"")===p.program).length);
+        if(po.rest.size) add("program", level, issuer + "\u0000" + OTHER, `その他(${po.rest.size} 制度)`, base.filter(s=>s.issuer===issuer && po.rest.has(s.program||"")).length);
+      }
+    }
+    if(rest.size) add("issuer", level, level + "\u0000" + OTHER, `その他(${rest.size} 機関)`, base.filter(s=>rest.has(s.issuer||"")).length);
+  }
 }
 function filtered(){ const byDate = (a,b)=> (b.date||"").localeCompare(a.date||"") || (b.amount||0)-(a.amount||0); const byAmt = (a,b)=> ((b.amount||0)-(a.amount||0)) || (b.date||"").localeCompare(a.date||""); return visibleBase().filter(s=>pass(s, null)).sort(SORT==="amount" ? byAmt : byDate); }
 function fmtUsd(v){ if(v==null) return "—"; if(v>=1e6) return "$"+(v/1e6).toFixed(v>=1e8?0:1)+"M"; if(v>=1e3) return "$"+Math.round(v/1e3)+"k"; return "$"+Math.round(v); }
@@ -297,15 +361,19 @@ function cardHtml(s){
   const infer = inferText ? `<div class="infer"><span class="badge-infer" title="当社 AI(${esc((s.ai&&s.ai.model)||"")})が記録を読んで書いた要約と、記録から読み取れる推論。事実は上の欄">推論</span>${esc(inferText)}</div>` : "";
   // 事実の本文: AI 読みの日本語訳があればそれを主に、英語の逐語は折り畳み(逐語は原文のまま残す規律)
   const verb = s.description_ja ? `<span class="verbatim">${esc(s.description_ja)}</span> <details class="verb-en"><summary>原文(英語)</summary>${esc(s.description)}</details>` : (s.description ? `<span class="verbatim">${esc(s.description.length>220 ? s.description.slice(0,220)+"…" : s.description)}</span>` : "");
+  /* card:start */
   return `<article class="card">
-    <div class="srcline"><span class="chip src" title="出し手の層と機関">${esc(s.issuer_level)}・${esc(s.issuer||"")}</span></div>
     <div class="head"><span class="state">${esc(s.state)}</span><h3>${window.faviSlot ? faviSlot(s.company_id, s.recipient) : ""}${name}</h3><span class="chip kind" title="助成 = 返済不要の交付 / 融資 = 連邦の融資・保証">${esc(s.kind_label)}</span></div>
-    <div><span class="chip stage" title="承認 = 審議会が決めた(これから建つ)/ 契約・交付 = 実行済み">${esc(s.stage)}</span><span class="chip" title="投資の種類 — ${basisTip}">${esc(s.category)}</span><span class="chip" title="業種 — ${basisTip}">${esc(s.industry)}</span>${jp}<span class="amount" title="${s.issuer_level==="州" ? "州の交付・控除額" : (s.kind==="grant" ? "交付額" : "融資額")}">${fmtUsd(s.amount)}</span>${s.investment ? `<span class="chip" title="予定投資額(州の契約に記載)">投資 ${fmtUsd(s.investment)}</span>` : ""}${s.jobs_new ? `<span class="chip" title="雇用の目標(新規)">雇用 ${s.jobs_new}</span>` : ""}</div>
-    <div class="loc">${esc(s.city||"")}${s.city?"・":""}${prog}</div>
-    ${summary}
-    <div class="fact"><span class="flabel">事実(公的記録)</span>${esc(s.issuer_level==="州" ? (s.issuer||"州") : "USAspending.gov")}・決定 <span class="mono">${esc(s.date||"—")}</span>${s.start_date?`・履行期間 <span class="mono">${esc(s.start_date)}</span>〜<span class="mono">${esc(s.end_date||"")}</span>`:""}・${s.kind==="grant"?"交付額":"融資額"} <span class="mono">${s.amount!=null?"$"+Math.round(s.amount).toLocaleString("en-US"):"—"}</span>${link?"・"+link:""}${verb}</div>
-    ${infer}
+    <div class="loc">${esc(s.city||"")}</div>
+    <div class="money"><span class="amount" title="${s.issuer_level==="州" ? "州の交付・控除額" : (s.kind==="grant" ? "交付額" : "融資額")}">${fmtUsd(s.amount)}</span><span class="when">決定 <span class="mono">${esc(s.date||"—")}</span></span></div>
+    <div class="srcline"><span class="chip src" title="出し手の層と機関">${esc(s.issuer_level)}・${esc(s.issuer||"")}</span>${prog ? `<span class="prog">${prog}</span>` : ""}</div>
+    <div><span class="chip stage" title="承認 = 審議会が決めた(これから建つ)/ 契約・交付 = 実行済み">${esc(s.stage)}</span><span class="chip" title="投資の種類 — ${basisTip}">${esc(s.category)}</span><span class="chip" title="業種 — ${basisTip}">${esc(s.industry)}</span>${jp}${s.investment ? `<span class="chip" title="予定投資額(州の契約に記載)">投資 ${fmtUsd(s.investment)}</span>` : ""}${s.jobs_new ? `<span class="chip" title="雇用の目標(新規)">雇用 ${s.jobs_new}</span>` : ""}</div>
+    <details class="detail"><summary>詳細(記録の本文・履行期間・記録へのリンク・推論)</summary>
+      <div class="fact"><span class="flabel">事実(公的記録)</span>${esc(s.issuer_level==="州" ? (s.issuer||"州") : "USAspending.gov")}・決定 <span class="mono">${esc(s.date||"—")}</span>${s.start_date?`・履行期間 <span class="mono">${esc(s.start_date)}</span>〜<span class="mono">${esc(s.end_date||"")}</span>`:""}・${s.kind==="grant"?"交付額":"融資額"} <span class="mono">${s.amount!=null?"$"+Math.round(s.amount).toLocaleString("en-US"):"—"}</span>${s.jobs_retained?`・雇用の維持 <span class="mono">${esc(s.jobs_retained)}</span>`:""}${link?"・"+link:""}${verb}</div>
+      ${infer}
+    </details>
   </article>`;
+  /* card:end */
 }
 function render(){
   refreshCounts();
@@ -328,9 +396,38 @@ function render(){
   }
 }
 document.getElementById("jponly").addEventListener("change", ()=>{ page=1; render(); });
-document.getElementById("capexonly").addEventListener("change", ()=>{ page=1; renderFilters(); render(); });
+/* subsidies-more:start */
+const MORE_LOADED = new Set();   // 読み込み済みの州
+async function loadMore(states){
+  // 「設備投資案件のみ」を外したとき、残りの案件(州別ファイル meta.more_files)を、選択中の州(未選択なら全州)の分だけ読み込む
+  const files = (META && META.more_files) || {};
+  const want = (states && states.length ? states : Object.keys(files)).filter(st => files[st] && !MORE_LOADED.has(st));
+  for(const st of want){
+    try{
+      const names = Array.isArray(files[st]) ? files[st] : [files[st]];
+      for(const name of names){
+        const r = await fetch("/cockpit/data/" + name, {cache:"no-store"});
+        if(!r.ok) throw new Error("HTTP "+r.status);
+        const d = await r.json();
+        SIGNALS = SIGNALS.concat(d.signals || []);
+      }
+      MORE_LOADED.add(st);
+    }catch(err){
+      document.getElementById("morefail").textContent = "残りの案件を読み込めませんでした: " + st;   // rev.2: hitsub は render() が書き換えるので別の要素に
+    }
+  }
+}
+async function ensureMore(){
+  const cb = document.getElementById("capexonly");
+  if(cb.checked) return;
+  cb.disabled = true;
+  await loadMore(Array.from(sel.state));
+  cb.disabled = false;
+}
+/* subsidies-more:end */
+document.getElementById("capexonly").addEventListener("change", async ()=>{ await ensureMore(); page=1; renderFilters(); render(); });
 document.getElementById("sortsel").addEventListener("change", e=>{ SORT = e.target.value; page=1; render(); });
-document.getElementById("clear").addEventListener("click", ()=>{ for(const k in sel) sel[k].clear(); period = "all"; document.querySelectorAll('.fitem input').forEach(cb=>cb.checked=false); page = 1; renderFilters(); render(); });
+document.getElementById("clear").addEventListener("click", async ()=>{ for(const k in sel) sel[k].clear(); period = "all"; document.querySelectorAll('.fitem input').forEach(cb=>cb.checked=false); page = 1; await ensureMore(); renderFilters(); render(); });
 function csvEscape(v){ v = String(v==null?"":v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
 document.getElementById("export").addEventListener("click", ()=>{
   const list = filtered();
@@ -356,8 +453,8 @@ async function boot(){
   try{
     const r = await fetch("/cockpit/data/subsidies.json", {cache:"no-store"}); if(!r.ok) throw new Error("HTTP "+r.status);
     const d = await r.json(); META = d.meta; SIGNALS = d.signals;
-    document.getElementById("capexcnt").textContent = SIGNALS.filter(isCapex).length.toLocaleString();
-    const major = (d.demo && META.n_major != null) ? META.n_major : SIGNALS.filter(s=>!isMinor(s)).length;   // 見本モードは全体の件数(ゲートが meta に入れる)
+    document.getElementById("capexcnt").textContent = (META.n_capex != null ? META.n_capex : SIGNALS.filter(isCapex).length).toLocaleString();
+    const major = META.n_major != null ? META.n_major : SIGNALS.filter(s=>!isMinor(s)).length;   // export(ゲート経由でも)が書いた全体の件数。無い古い形では手元で数える
     document.getElementById("metaline").innerHTML = `IL・IN・MI・OH・WI / 保存 <span class="mono">${META.n.toLocaleString()}</span> 件・設備投資に関わる案件 <span class="mono">${major}</span> 件・更新 <span class="mono">${fmtCT(META.generated_at)}</span>`;
     renderFilters(); render(); renderScope();
     if(d.demo && window.sgDemo) sgDemo(META.demo);   // 見本モード(未ログイン)
