@@ -128,7 +128,7 @@ test("T-2 invalid fields get aria-invalid, red border class and first focus only
 });
 test("T-3 join loads helpers, preserves hidden styles and checks login state", () => {
   const page = read("signal/join/index.html"), js = read("signal/assets/join.js");
-  assert.match(page, /<script src="\/signal\/assets\/join\.js" defer><\/script>/);
+  assert.match(page, /<script src="\/signal\/assets\/join\.js(\?v=[0-9a-z]+)?" defer><\/script>/);
   assert.ok(!page.includes("sessionStorage")); assert.ok(js.includes("sessionStorage"));
   assert.match(js, /fetch\("\/signal\/me", \{cache:"no-store", credentials:"same-origin"\}\)/);
   assert.match(js, /!m\.loggedIn/);
