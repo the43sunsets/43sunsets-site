@@ -1,23 +1,23 @@
 {
-  "run_date": "2026-10-20",
-  "generated_at": "2026-10-20T15:12:52.760767+00:00",
+  "run_date": "2026-10-21",
+  "generated_at": "2026-10-21T09:20:42.849514+00:00",
   "slo": {
     "deadline": "06:30 America/Chicago",
-    "deadline_met": false,
-    "evaluated_at": "2026-10-20T15:12:52.760767+00:00"
+    "deadline_met": true,
+    "evaluated_at": "2026-10-21T09:20:42.849514+00:00"
   },
   "faces": {
     "permits": {
       "state": "degraded",
       "reasons": [
-        "errors_30h 1"
+        "errors_30h 4"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 7.101322498172522,
-        "errors_30h": 1
+        "age_h": 1.2599583305418491,
+        "errors_30h": 4
       }
     },
     "ucc": {
@@ -30,37 +30,38 @@
         "deny_24h": 0,
         "stage_failed": 0,
         "source_stopped": 1,
-        "age_h": 176.18104465749528,
+        "age_h": 194.3116248650021,
         "sync_ok": 1,
-        "wi_age_d": 0.2909347340464592
+        "wi_age_d": 0.04763715248554945
       }
     },
     "subsidies": {
       "state": "degraded",
       "reasons": [
+        "unread 1",
         "untranslated 1"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 6.850211385637522,
+        "age_h": 0.9335694462060928,
         "errors_30h": 0,
         "untranslated": 1,
-        "unread": 0
+        "unread": 1
       }
     },
     "hiring": {
       "state": "degraded",
       "reasons": [
-        "errors_30h 29"
+        "errors_30h 58"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 6.804933607578278,
-        "errors_30h": 29
+        "age_h": 0.834124993532896,
+        "errors_30h": 58
       }
     },
     "news": {
@@ -72,7 +73,7 @@
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 28.709655839949846,
+        "age_h": 46.840236112475395,
         "unread": 655
       }
     }
