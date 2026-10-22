@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-10-21T09:02:19+00:00",
+"generated_at": "2026-10-22T08:42:43+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,31 +15,31 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 83171,
-"candidates": 63155,
-"targets": 1437,
-"permits_folded": 1813,
+"signals_total": 83856,
+"candidates": 62717,
+"targets": 1426,
+"permits_folded": 1800,
 "unclassified": 0,
-"unevaluated": 34730,
+"unevaluated": 34391,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 215,
-"保全": 849,
-"事務所・その他": 167,
-"内容不明": 55,
+"操業の変化": 214,
+"保全": 842,
+"事務所・その他": 165,
+"内容不明": 54,
 "工事でない記録": 151
 },
 "stages": {
-"0": 20016,
-"2a": 4333,
-"2b": 23916,
-"2c": 6481,
-"2d": 22452,
-"3": 3889,
+"0": 21139,
+"2a": 4212,
+"2b": 23590,
+"2c": 6589,
+"2d": 22401,
+"3": 3854,
 "5": 196,
-"6": 1888
+"6": 1875
 },
-"enriched": 28425
+"enriched": 28326
 },
 "sources": [
 {
@@ -48,13 +48,13 @@
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-21T07:01:00Z",
+"last_run_at": "2026-10-22T07:01:19Z",
 "last_run_reason": "ok",
-"signals": 9573,
+"signals": 9677,
 "date_min": "2026-07-01",
-"date_max": "2026-10-19",
-"owner_coverage": 9205,
-"targets": 417,
+"date_max": "2026-10-20",
+"owner_coverage": 9309,
+"targets": 413,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -65,7 +65,7 @@
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-21T07:01:06Z",
+"last_run_at": "2026-10-22T07:01:20Z",
 "last_run_reason": "ok",
 "signals": 223,
 "date_min": "2026-07-01",
@@ -82,13 +82,13 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-21T07:01:07Z",
+"last_run_at": "2026-10-22T07:01:21Z",
 "last_run_reason": "ok",
-"signals": 3110,
+"signals": 3129,
 "date_min": "2026-07-01",
-"date_max": "2026-10-16",
-"owner_coverage": 2981,
-"targets": 113,
+"date_max": "2026-10-19",
+"owner_coverage": 2999,
+"targets": 111,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -99,13 +99,13 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-21T07:01:08Z",
+"last_run_at": "2026-10-22T07:01:21Z",
 "last_run_reason": "ok",
-"signals": 2686,
+"signals": 2728,
 "date_min": "2026-07-01",
-"date_max": "2026-10-18",
-"owner_coverage": 2673,
-"targets": 153,
+"date_max": "2026-10-19",
+"owner_coverage": 2715,
+"targets": 149,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -116,7 +116,7 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-21T07:01:12Z",
+"last_run_at": "2026-10-22T07:01:23Z",
 "last_run_reason": "ok",
 "signals": 1515,
 "date_min": "2026-07-07",
@@ -132,9 +132,9 @@
 "state": "OH",
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-21T08:05:07Z",
-"last_run_reason": "ok",
+"last_run_status": "error",
+"last_run_at": "2026-10-22T07:54:00Z",
+"last_run_reason": "upstream_error",
 "signals": 111,
 "date_min": "2026-07-07",
 "date_max": "2026-07-31",
@@ -150,12 +150,12 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-21T07:01:13Z",
+"last_run_at": "2026-10-22T07:01:23Z",
 "last_run_reason": "ok",
-"signals": 2059,
+"signals": 2098,
 "date_min": "2026-07-01",
-"date_max": "2026-10-19",
-"owner_coverage": 2049,
+"date_max": "2026-10-20",
+"owner_coverage": 2087,
 "targets": 40,
 "cadence": "daily",
 "next_run_at": null,
@@ -184,11 +184,11 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-21T07:01:15Z",
+"last_run_at": "2026-10-22T07:01:25Z",
 "last_run_reason": "ok",
-"signals": 1043,
+"signals": 1093,
 "date_min": "2024-11-18",
-"date_max": "2026-10-20",
+"date_max": "2026-10-22",
 "owner_coverage": 0,
 "targets": 279,
 "cadence": "daily",
@@ -201,7 +201,7 @@
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-21T07:01:14Z",
+"last_run_at": "2026-10-22T07:01:24Z",
 "last_run_reason": "ok",
 "signals": 358,
 "date_min": "2026-07-01",
@@ -218,7 +218,7 @@
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-21T07:01:14Z",
+"last_run_at": "2026-10-22T07:01:25Z",
 "last_run_reason": "ok",
 "signals": 1533,
 "date_min": "2026-07-01",
@@ -235,7 +235,7 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-21T07:01:04Z",
+"last_run_at": "2026-10-22T07:01:19Z",
 "last_run_reason": "ok",
 "signals": 8120,
 "date_min": "2026-07-01",
@@ -252,12 +252,12 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-21T08:00:06Z",
+"last_run_at": "2026-10-22T07:43:20Z",
 "last_run_reason": "ok",
-"signals": 21311,
+"signals": 21501,
 "date_min": "2026-07-01",
-"date_max": "2026-10-21",
-"owner_coverage": 14367,
+"date_max": "2026-10-22",
+"owner_coverage": 14474,
 "targets": 497,
 "cadence": "daily",
 "next_run_at": null,
@@ -269,13 +269,13 @@
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-21T08:00:22Z",
+"last_run_at": "2026-10-22T07:49:21Z",
 "last_run_reason": "ok",
-"signals": 12358,
+"signals": 12599,
 "date_min": "2026-07-01",
-"date_max": "2026-10-20",
-"owner_coverage": 6441,
-"targets": 194,
+"date_max": "2026-10-21",
+"owner_coverage": 6525,
+"targets": 191,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -286,7 +286,7 @@
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-21T08:03:07Z",
+"last_run_at": "2026-10-22T07:52:05Z",
 "last_run_reason": "ok",
 "signals": 712,
 "date_min": "2026-07-01",
@@ -303,7 +303,7 @@
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-21T08:05:05Z",
+"last_run_at": "2026-10-22T07:53:57Z",
 "last_run_reason": "ok",
 "signals": 115,
 "date_min": "2026-07-01",
@@ -1560,14 +1560,14 @@
 ]
 },
 "stages": {
-"0": 20016,
-"2a": 4333,
-"2b": 23916,
-"2c": 6481,
-"2d": 22452,
-"3": 3889,
+"0": 21139,
+"2a": 4212,
+"2b": 23590,
+"2c": 6589,
+"2d": 22401,
+"3": 3854,
 "5": 196,
-"6": 1888
+"6": 1875
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 16802,
+"checked": 16674,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -2158,71 +2158,6 @@
 ],
 "kinds": [
 "増築・新築"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "KH Washington Township",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-74350",
-"state": "OH",
-"city": "Montgomery County・1989 MIAMISBURG CENTERVILLE Rd DAYTON, OH 45459",
-"company": "KH Washington Township",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-10-05",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "KH Washington Townshipがワシントンタウンシップで増築・修繕の許可を取得(1件)",
-"infer": null,
-"note": "増築・新築・更新・修繕",
-"fact": {
-"src": "Montgomery County 建築許可(公開記録)",
-"ref": "許可 BLDC26-0349 Commercial Building",
-"value": null,
-"verbatim": "Phase Two (new work) for the expansion and renovation of the existing Infusion Center at KH Washington Township. / Commercial Building / (WASHINGTON TOWNSHIP)",
-"gc": null,
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-17903",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:24.118500+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": null,
-"headline_en": "KH Washington Township obtained a permit for an addition and renovation in Washington Township (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-05",
-"n_permits": 1,
-"member_ids": [
-"S-74350"
-],
-"kinds": [
-"増築・新築",
-"更新・修繕"
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
@@ -23461,70 +23396,6 @@
 },
 {
 "investor": {
-"name": "GRANGE MUTUAL CASUALTY CO",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-73583",
-"state": "OH",
-"city": "Columbus・671 S HIGH ST",
-"company": "GRANGE MUTUAL CASUALTY CO",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "金融・保険",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-01",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "GRANGE MUTUAL CASUALTY COがColumbusで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 MMEPC2639631 Mechanical",
-"value": null,
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"gc": "Air Force One",
-"pin": "010014149",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-13513",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:04.362973+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "GRANGE MUTUAL CASUALTY CO obtained a repair/renovation permit in Columbus (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-01",
-"n_permits": 1,
-"member_ids": [
-"S-73583"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "OHIO LIVING COMMUNITIES",
 "basis": "operator",
 "label": "操業事業者",
@@ -28783,70 +28654,6 @@
 },
 {
 "investor": {
-"name": "Young Scholars Learning Center",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-70204",
-"state": "OH",
-"city": "Columbus・3943 GROVES RD",
-"company": "Young Scholars Learning Center",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "教育",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-29",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Young Scholars Learning CenterがColumbusで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 ALTC2627764 Alteration",
-"value": null,
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 465 SQFT",
-"gc": "Young Scholars Learning Center",
-"pin": "010118508",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-15516",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:08.793706+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "Young Scholars Learning Center obtained a repair/renovation permit in Columbus (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-29",
-"n_permits": 1,
-"member_ids": [
-"S-70204"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "JPMORGAN CHASE BANK, NA",
 "basis": "operator",
 "label": "操業事業者",
@@ -31954,70 +31761,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "FAIRFIELD TWP TRS",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-67188",
-"state": "OH",
-"city": "Butler County・6048 MORRIS RD, UNKNOWN OH 45",
-"company": "FAIRFIELD TWP TRS",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-25",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "FAIRFIELD TWP TRSがUNKNOWNで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Butler County 建築許可(公開記録)",
-"ref": "許可 BLD-EZ26-04115 Commercial Electric",
-"value": null,
-"verbatim": "Remodel of existing space / INCOMPLETE SUBMITTAL / Commercial Electric",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:butler_oh:addr"
-},
-"karte": null,
-"company_id": "C-15571",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:39.562897+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "FAIRFIELD TWP TRS obtained a repair/renovation permit in UNKNOWN (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-25",
-"n_permits": 1,
-"member_ids": [
-"S-67188"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -37080,70 +36823,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-66115"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "PROSPECT HOUSE INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-66828",
-"state": "OH",
-"city": "Cincinnati・562 GRAND AV",
-"company": "PROSPECT HOUSE INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-23",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "PROSPECT HOUSE INCがシンシナティで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P08962 Building",
-"value": 3000.0,
-"verbatim": "Alteration / Building / I-1",
-"gc": "UNLIMITED CARPENTRY",
-"pin": "017800270081",
-"owner_source": "parcel:hamilton_oh"
-},
-"karte": null,
-"company_id": "C-14610",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:13.298959+00:00"
-},
-"meaning": "保全",
-"amount_usd": 3000.0,
-"headline_en": "PROSPECT HOUSE INC obtained a permit for repair/renovation work in Cincinnati (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-23",
-"n_permits": 1,
-"member_ids": [
-"S-66828"
 ],
 "kinds": [
 "更新・修繕"
@@ -47707,70 +47386,6 @@
 },
 {
 "investor": {
-"name": "JONES LANG LASALLE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-59551",
-"state": "IL",
-"city": "Chicago・120 S RIVERSIDE PLZ",
-"company": "JONES LANG LASALLE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-16",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "JONES LANG LASALLEがChicagoで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101087719 PERMIT - ELEVATOR EQUIPMENT",
-"value": 0.0,
-"verbatim": "REPLACE HOIST ROPES ON EG PASSENGER ELEVATOR #13, 4000LBS CAPACITY, 22 FLOORS, SUBJECT TO CITY OF CHICAGO DEPT. OF BUILDINGS ELEVATOR BUREAU INSPECTION (EV005801).",
-"gc": null,
-"pin": "1716107007",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-15987",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:03.368505+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "Jones Lang LaSalle obtained a repair/renovation permit in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-23",
-"n_permits": 1,
-"member_ids": [
-"S-59551"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "NORTHERN TRUST CORPORATION",
 "basis": "operator",
 "label": "操業事業者",
@@ -49499,71 +49114,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "PROCTER & GAMBLE CO THE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-8831",
-"state": "OH",
-"city": "Cincinnati・6100 CENTER HILL AV",
-"company": "PROCTER & GAMBLE CO THE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "化学・日用品",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "PROCTER & GAMBLE CO THEがCincinnatiで更新・修繕の許可を取得(2件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P08118 Building",
-"value": 50000.0,
-"verbatim": "Alteration / Building / B",
-"gc": "TRIVERSITY CONSTRUCTION CO LLC",
-"pin": "023800060003",
-"owner_source": "parcel:hamilton_oh"
-},
-"karte": null,
-"company_id": "C-13718",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:56.259596+00:00"
-},
-"meaning": "保全",
-"amount_usd": 50000.0,
-"headline_en": "PROCTER & GAMBLE CO THE obtained permits for repair/renovation work in Cincinnati (2 records)",
-"not_construction": false,
-"as_of": "2026-09-15",
-"n_permits": 2,
-"member_ids": [
-"S-8831",
-"S-58723"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -52912,70 +52462,6 @@
 ],
 "kinds": [
 "ユーティリティ"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "RUSH BOWLS",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-58192",
-"state": "IL",
-"city": "Chicago・1220 S ASHLAND AVE",
-"company": "RUSH BOWLS",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-14",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "RUSH BOWLSがChicagoで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200478490 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 16153.0,
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. ADD 7 CIRCUITS TO EXISTING 100 AMP SERVICE DISCONNECTING MEANS. RECEPTACLE OUTLETS: 36 . LIGHTING OUTLETS: 10. SPECIFIC LOCATION: UNIT 14 STORE FRONT RUSH BOWLS.",
-"gc": null,
-"pin": "1719207058",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-15805",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:46.050477+00:00"
-},
-"meaning": "保全",
-"amount_usd": 16153.0,
-"headline_en": "RUSH BOWLS obtained a repair/renovation permit in Chicago (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-14",
-"n_permits": 1,
-"member_ids": [
-"S-58192"
-],
-"kinds": [
-"更新・修繕"
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
@@ -72120,70 +71606,6 @@
 },
 {
 "investor": {
-"name": "CITY OF COLUMBUS OHIO",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-70211",
-"state": "OH",
-"city": "Columbus・3395 EASTON WAY",
-"company": "CITY OF COLUMBUS OHIO",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-09-29",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CITY OF COLUMBUS OHIOがColumbusで事務所・その他の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 EMEPC2639152 Electrical",
-"value": null,
-"verbatim": "Commercial - Other / Electrical / MEP",
-"gc": "NORTH ELECTRIC INC",
-"pin": "010310617",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-3730",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:16.235214+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": null,
-"headline_en": "CITY OF COLUMBUS OHIO obtained a permit for office/other work in Columbus (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-29",
-"n_permits": 1,
-"member_ids": [
-"S-70211"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "WESTERN RESERVE UNIV",
 "basis": "operator",
 "label": "操業事業者",
@@ -72757,71 +72179,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "CARNICERIA LA HACIENDA NO. 3, INC.",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-69740",
-"state": "IL",
-"city": "Chicago・2744 W 55TH ST",
-"company": "CARNICERIA LA HACIENDA NO. 3, INC.",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-09-28",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CARNICERIA LA HACIENDA NO. 3がシカゴで看板設置の許可を取得(2件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101085233 PERMIT - SIGNS",
-"value": 6000.0,
-"verbatim": "CARNICERIA LA HACIENDA NO. 3, INC.NEW ILLUMINATED ID WALL SIGN LOCATION: SOUTH ELEVATIONSIGN FACING: 55TH ST.READS: CARNICERIA LA HACIENDA",
-"gc": "PRO IMAGE PROMOTIONS INC",
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-15046",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:36.779138+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": 6000.0,
-"headline_en": "Carniceria La Hacienda No. 3 obtained permits for signage installation in Chicago (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-28",
-"n_permits": 2,
-"member_ids": [
-"S-69740",
-"S-69761"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -93812,70 +93169,6 @@
 },
 {
 "investor": {
-"name": "CITY OF COLUMBUS OHIO",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-1589",
-"state": "OH",
-"city": "Columbus・1851 E BROAD ST",
-"company": "CITY OF COLUMBUS OHIO",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "内容不明",
-"category_raw": "内容不明",
-"confidence": "high",
-"date": "2026-08-19",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CITY OF COLUMBUS OHIOがColumbusで内容不明の許可を取得(1件)",
-"infer": null,
-"note": "内容不明",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 TSTRC2629726 Temporary Structure",
-"value": null,
-"verbatim": "Commercial - Other / Temporary Structure / Special",
-"gc": "LASTING IMPRESSIONS EVENT RENTAL",
-"pin": "010066878",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-3730",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:50.084681+00:00"
-},
-"meaning": "内容不明",
-"amount_usd": null,
-"headline_en": "CITY OF COLUMBUS OHIO obtained a permit of unclear work type in Columbus (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-06",
-"n_permits": 1,
-"member_ids": [
-"S-1589"
-],
-"kinds": [
-"内容不明"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "CITY OF COLUMBUS",
 "basis": "operator",
 "label": "操業事業者",
@@ -94324,11 +93617,11 @@
 "name": "CITY OF COLUMBUS OHIO",
 "entity_type": "public",
 "jp": false,
-"signals": 17,
+"signals": 15,
 "value_total": null,
 "states": "OH",
 "latest": "2026-10-01",
-"targets": 17,
+"targets": 15,
 "signal_ids": [
 "S-73591",
 "S-70838",
@@ -94339,14 +93632,12 @@
 "S-66082",
 "S-63395",
 "S-1636",
-"S-70211",
 "S-63352",
 "S-63390",
 "S-24411",
 "S-24452",
 "S-21910",
-"S-1535",
-"S-1589"
+"S-1535"
 ],
 "n_amount_excluded": 0
 },
@@ -94915,25 +94206,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13718",
-"name": "PROCTER & GAMBLE CO THE",
-"entity_type": "corp",
-"jp": false,
-"signals": 5,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-16",
-"targets": 5,
-"signal_ids": [
-"S-60442",
-"S-8831",
-"S-8618",
-"S-8901",
-"S-8647"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-138",
 "name": "OHIOHEALTH CORP",
 "entity_type": "corp",
@@ -95231,6 +94503,24 @@
 "S-66102",
 "S-53524",
 "S-1938"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-13718",
+"name": "PROCTER & GAMBLE CO THE",
+"entity_type": "corp",
+"jp": false,
+"signals": 4,
+"value_total": null,
+"states": "OH",
+"latest": "2026-09-16",
+"targets": 4,
+"signal_ids": [
+"S-60442",
+"S-8618",
+"S-8901",
+"S-8647"
 ],
 "n_amount_excluded": 0
 },
@@ -95905,22 +95195,6 @@
 "signal_ids": [
 "S-64316",
 "S-64399"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-14610",
-"name": "PROSPECT HOUSE INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-01",
-"targets": 2,
-"signal_ids": [
-"S-73562",
-"S-66828"
 ],
 "n_amount_excluded": 0
 },
@@ -97103,21 +96377,6 @@
 "targets": 1,
 "signal_ids": [
 "S-58221"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-13513",
-"name": "GRANGE MUTUAL CASUALTY CO",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-01",
-"targets": 1,
-"signal_ids": [
-"S-73583"
 ],
 "n_amount_excluded": 0
 },
@@ -98817,6 +98076,21 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-14610",
+"name": "PROSPECT HOUSE INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-01",
+"targets": 1,
+"signal_ids": [
+"S-73562"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-14622",
 "name": "MALIBU CONDOMINIUM ASSOCIATION",
 "entity_type": "corp",
@@ -99968,21 +99242,6 @@
 "targets": 1,
 "signal_ids": [
 "S-69868"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15046",
-"name": "CARNICERIA LA HACIENDA NO. 3, INC.",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-28",
-"targets": 1,
-"signal_ids": [
-"S-69740"
 ],
 "n_amount_excluded": 0
 },
@@ -102132,21 +101391,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15516",
-"name": "Young Scholars Learning Center",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-29",
-"targets": 1,
-"signal_ids": [
-"S-70204"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15518",
 "name": "Southern Indiana Power",
 "entity_type": "corp",
@@ -102428,21 +101672,6 @@
 "targets": 1,
 "signal_ids": [
 "S-67070"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15571",
-"name": "FAIRFIELD TWP TRS",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-25",
-"targets": 1,
-"signal_ids": [
-"S-67188"
 ],
 "n_amount_excluded": 0
 },
@@ -104082,21 +103311,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15805",
-"name": "RUSH BOWLS",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-14",
-"targets": 1,
-"signal_ids": [
-"S-58192"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15807",
 "name": "Brazuca Jiu Jitsu USA",
 "entity_type": "corp",
@@ -105280,21 +104494,6 @@
 "S-68434"
 ],
 "n_amount_excluded": 0
-},
-{
-"id": "C-15987",
-"name": "JONES LANG LASALLE",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-16",
-"targets": 1,
-"signal_ids": [
-"S-59551"
-],
-"n_amount_excluded": 1
 },
 {
 "id": "C-15988",
@@ -107123,21 +106322,6 @@
 "targets": 1,
 "signal_ids": [
 "S-74372"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-17903",
-"name": "KH Washington Township",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-05",
-"targets": 1,
-"signal_ids": [
-"S-74350"
 ],
 "n_amount_excluded": 0
 },
