@@ -204,10 +204,10 @@ async function boot(){
     if(m.ai_read && m.ai_read.text) document.getElementById("ai").innerHTML = `<div class="ai"><div><div class="axl">① 10 の指標</div><p>${esc(m.ai_read.text)}</p><div class="d">${esc(m.ai_read.model)}・${fmtCT(m.ai_read.generated_at, true)}・根拠は右の 10 指標のみ</div></div></div>`;
     if(m.ai_news && m.ai_news.us) document.getElementById("ai-us").innerHTML = `<div class="ai"><div><div class="axl">② 米製造業のニュース</div><p>${esc(m.ai_news.us)}</p><div class="d">${esc(m.ai_news.model)}・${fmtCT(m.ai_news.generated_at, true)}・根拠は下のニュースの見出しと要約のみ</div></div></div>`;
     if(m.ai_news && m.ai_news.states) document.getElementById("ai-st").innerHTML = `<div class="ai"><div><div class="axl">③ 5 州のローカル</div><p>${esc(m.ai_news.states)}</p><div class="d">${esc(m.ai_news.model)}・${fmtCT(m.ai_news.generated_at, true)}・根拠は下の 5 州のニュースのみ</div></div></div>`;
-    if(m.ai_read && m.ai_read.locked){ const here = encodeURIComponent(location.pathname); document.getElementById("ai").innerHTML = `<div class="ai sg-lockai"><div><div class="axl">① 10 の指標</div><p class="d"><a href="/signal/join/?next=${here}">登録すると指標と AI の読みが開きます(無料・日系製造業の方)</a></p></div></div>`; }
+    if(m.ai_read && m.ai_read.locked){ const here = encodeURIComponent(location.pathname); document.getElementById("ai").innerHTML = `<div class="ai sg-lockai"><div><div class="axl">① 10 の指標</div><p class="d"><a href="/signal/join/?next=${here}">登録すると指標と AI の読みが開きます(無料・製造業向けの日系企業の方)</a></p></div></div>`; }
     if(m.ai_news && m.ai_news.locked){   // 見本モード(未ログイン): ② ③ はぼかした見本文+登録案内
       const here = encodeURIComponent(location.pathname);
-      const lockBlk = (lab, txt) => `<div class="ai sg-lockai"><div><div class="axl">${lab}</div><p class="d"><a href="/signal/join/?next=${here}">登録すると AI の読みが開きます(無料・日系製造業の方)</a></p></div></div>`;
+      const lockBlk = (lab, txt) => `<div class="ai sg-lockai"><div><div class="axl">${lab}</div><p class="d"><a href="/signal/join/?next=${here}">登録すると AI の読みが開きます(無料・製造業向けの日系企業の方)</a></p></div></div>`;
       document.getElementById("ai-us").innerHTML = lockBlk("② 米製造業のニュース", "先端分野の大型投資と工場閉鎖が同時に進み、業種間で明暗が分かれる展開とみられる。設備投資意欲は底堅く、機械・産業機器の需要は分野により差が出る。");
       document.getElementById("ai-st").innerHTML = lockBlk("③ 5 州のローカル", "イリノイ州では電動化・グリッド関連の投資が活発で当たり所となりうる。インディアナ州は大型のメモリ工場が進む一方、部品工場の閉鎖もあり明暗が分かれる。オハイオ・ミシガン・ウィスコンシンでも新設と拡張の発表が続く。");
     }

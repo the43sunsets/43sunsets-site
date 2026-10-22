@@ -105,7 +105,7 @@ export function loginMail(link, name, ttl = TOKEN_SECONDS) {
 }
 export function pendingMail(name) {
   return { subject: "Signal 登録を受け付けました(ご案内まで少しお待ちください)",
-    text: [`${name ? name + " 様" : "こんにちは"}`, "", "Signal by 43 Sunsets への登録を受け付けました。ベータ版は米国の日系製造業の方に限定して無料でご提供しているため、内容を確認のうえ、ログイン用のリンクを別のメールでお送りします(通常 1 営業日以内)。", "", SIGN].join("\n") };
+    text: [`${name ? name + " 様" : "こんにちは"}`, "", "Signal by 43 Sunsets への登録を受け付けました。ベータ版は米国の製造業向けの日系企業(メーカー、商社、物流など)の方に限定して無料でご提供しているため、内容を確認のうえ、ログイン用のリンクを別のメールでお送りします(通常 1 営業日以内)。", "", SIGN].join("\n") };
 }
 export function adminMail(reg, decideUrl) {
   return { subject: `[Signal 登録] ${reg.company} / ${reg.name} <${reg.email}>${reg.roster ? "(名簿・自動承認)" : "(名簿外・承認待ち)"}`,

@@ -61,7 +61,7 @@
   });
   const messages = {
     sent: `<div class="msg"><strong>ログイン用リンクをお送りしました。</strong><br>メールを開き、リンク先の「ログインする」を押してください(72 時間有効)。届かない場合は迷惑メール箱をご確認ください。</div>`,
-    pending: `<div class="msg"><strong>登録を受け付けました。</strong><br>ベータ版は日系製造業の方に限定しているため、内容を確認のうえ、ログイン用のリンクを別のメールでお送りします(通常 1 営業日以内)。</div>`
+    pending: `<div class="msg"><strong>登録を受け付けました。</strong><br>ベータ版は製造業向けの日系企業(メーカー、商社、物流など)の方に限定しているため、内容を確認のうえ、ログイン用のリンクを別のメールでお送りします(通常 1 営業日以内)。</div>`
   };
   const succeeded = st === "sent" || st === "pending";
   if (succeeded) {
