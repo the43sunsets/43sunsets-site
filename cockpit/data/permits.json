@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-10-23T08:45:53+00:00",
+"generated_at": "2026-10-24T08:47:13+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,31 +15,31 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 84443,
-"candidates": 63264,
-"targets": 1417,
-"permits_folded": 1775,
+"signals_total": 84938,
+"candidates": 63726,
+"targets": 1412,
+"permits_folded": 1766,
 "unclassified": 0,
-"unevaluated": 35018,
+"unevaluated": 35547,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 212,
-"保全": 836,
+"操業の変化": 210,
+"保全": 833,
 "事務所・その他": 164,
 "内容不明": 54,
 "工事でない記録": 151
 },
 "stages": {
-"0": 21179,
-"2a": 4324,
-"2b": 23920,
-"2c": 6774,
-"2d": 22357,
-"3": 3844,
+"0": 21212,
+"2a": 4394,
+"2b": 24213,
+"2c": 6940,
+"2d": 22315,
+"3": 3828,
 "5": 195,
-"6": 1850
+"6": 1841
 },
-"enriched": 28246
+"enriched": 28179
 },
 "sources": [
 {
@@ -48,12 +48,12 @@
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-23T07:01:01Z",
+"last_run_at": "2026-10-24T07:00:40Z",
 "last_run_reason": "ok",
-"signals": 9805,
+"signals": 9899,
 "date_min": "2026-07-01",
-"date_max": "2026-10-21",
-"owner_coverage": 9437,
+"date_max": "2026-10-22",
+"owner_coverage": 9531,
 "targets": 407,
 "cadence": "daily",
 "next_run_at": null,
@@ -65,7 +65,7 @@
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-23T07:01:05Z",
+"last_run_at": "2026-10-24T07:00:43Z",
 "last_run_reason": "ok",
 "signals": 223,
 "date_min": "2026-07-01",
@@ -82,13 +82,13 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-23T07:01:07Z",
+"last_run_at": "2026-10-24T07:00:45Z",
 "last_run_reason": "ok",
-"signals": 3167,
+"signals": 3208,
 "date_min": "2026-07-01",
-"date_max": "2026-10-20",
-"owner_coverage": 3036,
-"targets": 105,
+"date_max": "2026-10-21",
+"owner_coverage": 3076,
+"targets": 103,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -99,13 +99,13 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-23T07:01:08Z",
+"last_run_at": "2026-10-24T07:00:45Z",
 "last_run_reason": "ok",
-"signals": 2749,
+"signals": 2779,
 "date_min": "2026-07-01",
-"date_max": "2026-10-20",
-"owner_coverage": 2736,
-"targets": 149,
+"date_max": "2026-10-21",
+"owner_coverage": 2766,
+"targets": 145,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -116,7 +116,7 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-23T07:01:09Z",
+"last_run_at": "2026-10-24T07:00:48Z",
 "last_run_reason": "ok",
 "signals": 1515,
 "date_min": "2026-07-07",
@@ -133,7 +133,7 @@
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-23T07:55:30Z",
+"last_run_at": "2026-10-24T07:51:30Z",
 "last_run_reason": "ok",
 "signals": 111,
 "date_min": "2026-07-07",
@@ -150,12 +150,12 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-23T07:01:10Z",
+"last_run_at": "2026-10-24T07:00:49Z",
 "last_run_reason": "ok",
-"signals": 2126,
+"signals": 2138,
 "date_min": "2026-07-01",
-"date_max": "2026-10-21",
-"owner_coverage": 2115,
+"date_max": "2026-10-22",
+"owner_coverage": 2127,
 "targets": 40,
 "cadence": "daily",
 "next_run_at": null,
@@ -184,11 +184,11 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-23T07:01:11Z",
+"last_run_at": "2026-10-24T07:00:50Z",
 "last_run_reason": "ok",
-"signals": 1135,
+"signals": 1155,
 "date_min": "2024-11-18",
-"date_max": "2026-10-22",
+"date_max": "2026-10-23",
 "owner_coverage": 0,
 "targets": 279,
 "cadence": "daily",
@@ -201,7 +201,7 @@
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-23T07:01:10Z",
+"last_run_at": "2026-10-24T07:00:50Z",
 "last_run_reason": "ok",
 "signals": 358,
 "date_min": "2026-07-01",
@@ -218,7 +218,7 @@
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-23T07:01:10Z",
+"last_run_at": "2026-10-24T07:00:50Z",
 "last_run_reason": "ok",
 "signals": 1533,
 "date_min": "2026-07-01",
@@ -235,7 +235,7 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-23T07:01:03Z",
+"last_run_at": "2026-10-24T07:00:43Z",
 "last_run_reason": "ok",
 "signals": 8120,
 "date_min": "2026-07-01",
@@ -252,13 +252,13 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-23T07:45:09Z",
+"last_run_at": "2026-10-24T07:40:52Z",
 "last_run_reason": "ok",
-"signals": 21749,
+"signals": 21927,
 "date_min": "2026-07-01",
-"date_max": "2026-10-23",
-"owner_coverage": 14608,
-"targets": 489,
+"date_max": "2026-10-24",
+"owner_coverage": 14707,
+"targets": 488,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -269,13 +269,13 @@
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-23T07:51:18Z",
+"last_run_at": "2026-10-24T07:46:46Z",
 "last_run_reason": "ok",
-"signals": 12681,
+"signals": 12801,
 "date_min": "2026-07-01",
-"date_max": "2026-10-22",
-"owner_coverage": 6557,
-"targets": 186,
+"date_max": "2026-10-23",
+"owner_coverage": 6598,
+"targets": 184,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -286,7 +286,7 @@
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-23T07:53:38Z",
+"last_run_at": "2026-10-24T07:49:37Z",
 "last_run_reason": "ok",
 "signals": 712,
 "date_min": "2026-07-01",
@@ -303,7 +303,7 @@
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-23T07:55:28Z",
+"last_run_at": "2026-10-24T07:51:28Z",
 "last_run_reason": "ok",
 "signals": 115,
 "date_min": "2026-07-01",
@@ -1560,14 +1560,14 @@
 ]
 },
 "stages": {
-"0": 21179,
-"2a": 4324,
-"2b": 23920,
-"2c": 6774,
-"2d": 22357,
-"3": 3844,
+"0": 21212,
+"2a": 4394,
+"2b": 24213,
+"2c": 6940,
+"2d": 22315,
+"3": 3828,
 "5": 195,
-"6": 1850
+"6": 1841
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 16570,
+"checked": 16511,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -3258,72 +3258,6 @@
 ],
 "amount_band": "10m_100m",
 "amount_band_label": "$10M〜$100M"
-},
-{
-"investor": {
-"name": "CRISTO HOMES INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-1160",
-"state": "OH",
-"city": "Cincinnati・573 TRISON DR",
-"company": "CRISTO HOMES INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-10-01",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CRISTO HOMES INCがCincinnatiで新築の許可を取得(2件)",
-"infer": null,
-"note": "増築・新築・内容不明",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P06725 Building",
-"value": 200000.0,
-"verbatim": "New Building / Building / 1-2-3 FM",
-"gc": "CRISTO HOMES INC",
-"pin": "016600040196",
-"owner_source": "parcel:hamilton_oh:addr"
-},
-"karte": null,
-"company_id": "C-13515",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:09.441096+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 200000.0,
-"headline_en": "CRISTO HOMES INC obtained construction permits for new building in Cincinnati (2 permits)",
-"not_construction": false,
-"as_of": "2026-10-04",
-"n_permits": 2,
-"member_ids": [
-"S-1160",
-"S-73549"
-],
-"kinds": [
-"増築・新築",
-"内容不明"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -6755,70 +6689,6 @@
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
-"name": "7 BREW",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-66277",
-"state": "OH",
-"city": "Clermont County・1410 STATE ROUTE 125 AMELIA OH 45102",
-"company": "7 BREW",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-24",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "7 BREWがAMELIAで新築の許可を取得(1件)",
-"infer": null,
-"note": "増築・新築",
-"fact": {
-"src": "Clermont County 建築許可(公開記録)",
-"ref": "許可 B-076348-2026 Commercial New Structure",
-"value": 1500000.0,
-"verbatim": "7 BREW DRIVE THRU / Commercial New Structure / New Structure",
-"gc": null,
-"pin": "054551C019.",
-"owner_source": "parcel:clermont_oh"
-},
-"karte": null,
-"company_id": "C-331",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:31.025651+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 1500000.0,
-"headline_en": "7 BREW obtained a new-structure construction permit in Amelia (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-24",
-"n_permits": 1,
-"member_ids": [
-"S-66277"
-],
-"kinds": [
-"増築・新築"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
 },
 {
 "investor": {
@@ -28320,72 +28190,6 @@
 },
 {
 "investor": {
-"name": "JPMORGAN CHASE BANK, NA",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-70212",
-"state": "OH",
-"city": "Columbus・1111 POLARIS PKWY",
-"company": "JPMORGAN CHASE BANK, NA",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "金融・保険",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-29",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "JPMORGAN CHASE BANK, NAがColumbusで更新・修繕の許可を取得(3件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 ALTC2541373 Alteration",
-"value": 75000.0,
-"verbatim": "Commercial - Other / Alteration / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Structural / 1298 SQFT",
-"gc": "BHDP Architecture",
-"pin": "31834401007000",
-"owner_source": "parcel:delaware_oh"
-},
-"karte": null,
-"company_id": "C-15496",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:46.488123+00:00"
-},
-"meaning": "保全",
-"amount_usd": 800000.0,
-"headline_en": "JPMorgan Chase Bank, NA obtained permits for repair/renovation work in Columbus (3 permits)",
-"not_construction": false,
-"as_of": "2026-09-29",
-"n_permits": 3,
-"member_ids": [
-"S-70212",
-"S-70213",
-"S-70214"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
 "name": "EMIR PROPERTIES LLC",
 "basis": "operator",
 "label": "操業事業者",
@@ -36489,70 +36293,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-66868"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "JPMORGAN CHASE BANK, NA",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-66891",
-"state": "OH",
-"city": "Columbus・1111 POLARIS PKWY",
-"company": "JPMORGAN CHASE BANK, NA",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "金融・保険",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-23",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "JPMORGAN CHASE BANK, NAがColumbusで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 MMEPC2638294 Mechanical",
-"value": null,
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"gc": "APPLIED MECHANICAL SYSTEMS INC",
-"pin": "31834401007000",
-"owner_source": "parcel:delaware_oh"
-},
-"karte": null,
-"company_id": "C-15736",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:10.456113+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "JPMorgan Chase Bank, NA obtained a repair/renovation permit in Columbus (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-23",
-"n_permits": 1,
-"member_ids": [
-"S-66891"
 ],
 "kinds": [
 "更新・修繕"
@@ -50707,72 +50447,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "ZOROASTRIAN ASSOCIATION OF KENTUCKY OHIO AND IND",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-36206",
-"state": "OH",
-"city": "Hamilton County・3473 NIAGARA ST , COLERAIN TOWNSHIP OH 45251",
-"company": "ZOROASTRIAN ASSOCIATION OF KENTUCKY OHIO AND IND",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "宗教・非営利",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-14",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "ZOROASTRIAN ASSOCIATIONがCOLERAIN TOWNSHIPで改修・許可取得の記録(2件)",
-"infer": null,
-"note": "更新・修繕・内容不明",
-"fact": {
-"src": "Hamilton County 建築許可(公開記録)",
-"ref": "許可 26HAM-PMT-004388 OBC Alteration",
-"value": null,
-"verbatim": "Distributed for Review / OBC Alteration",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:hamilton_oh:addr"
-},
-"karte": null,
-"company_id": "C-16001",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:26.341363+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "ZOROASTRIAN ASSOCIATION OF KENTUCKY OHIO AND IND obtained permits/repair records in Colerain Township (2 records)",
-"not_construction": false,
-"as_of": "2026-09-14",
-"n_permits": 2,
-"member_ids": [
-"S-36206",
-"S-55240"
-],
-"kinds": [
-"更新・修繕",
-"内容不明"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -94420,22 +94094,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13515",
-"name": "CRISTO HOMES INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-01",
-"targets": 2,
-"signal_ids": [
-"S-1160",
-"S-8894"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-13544",
 "name": "ADVANCE AUTO PARTS",
 "entity_type": "corp",
@@ -95743,6 +95401,21 @@
 "targets": 1,
 "signal_ids": [
 "S-58221"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-13515",
+"name": "CRISTO HOMES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "OH",
+"latest": "2026-08-27",
+"targets": 1,
+"signal_ids": [
+"S-8894"
 ],
 "n_amount_excluded": 0
 },
@@ -100607,21 +100280,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15496",
-"name": "JPMORGAN CHASE BANK, NA",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-29",
-"targets": 1,
-"signal_ids": [
-"S-70212"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15498",
 "name": "HOMEGOODS",
 "entity_type": "corp",
@@ -102148,21 +101806,6 @@
 "targets": 1,
 "signal_ids": [
 "S-65886"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15736",
-"name": "JPMORGAN CHASE BANK, NA",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-23",
-"targets": 1,
-"signal_ids": [
-"S-66891"
 ],
 "n_amount_excluded": 0
 },
@@ -103948,21 +103591,6 @@
 "targets": 1,
 "signal_ids": [
 "S-68329"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-16001",
-"name": "ZOROASTRIAN ASSOCIATION OF KENTUCKY OHIO AND IND",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-14",
-"targets": 1,
-"signal_ids": [
-"S-36206"
 ],
 "n_amount_excluded": 0
 },
@@ -105943,21 +105571,6 @@
 "targets": 1,
 "signal_ids": [
 "S-55214"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-331",
-"name": "7 BREW",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-24",
-"targets": 1,
-"signal_ids": [
-"S-66277"
 ],
 "n_amount_excluded": 0
 },
