@@ -1,8 +1,8 @@
 {
-"generated_at": "2026-10-19T09:05:52+00:00",
-"updated_ct": "2026-10-19",
-"week_start": "2026-10-19",
-"next_update_ct": "2026-10-26",
+"generated_at": "2026-10-26T09:12:15+00:00",
+"updated_ct": "2026-10-26",
+"week_start": "2026-10-26",
+"next_update_ct": "2026-11-02",
 "window_days": 90,
 "rule": "直近 90 日の記録から最大 5 件を選ぶ(交差/日系/大型の許可/連続した担保登記/自動化つき設備)。同じ会社は 1 回。主体未特定・雑音は選ばず、足りなくても埋めない。見出しは記録の種類の言葉だけで書く。毎週月曜に選び直す。選定理由は why に。",
 "intro": "直近 90 日の記録から、毎週月曜に選び直す最大 5 件。見出しは記録の種類の言葉だけで書く。記録日は 90 日前まで遡ることがある。",
@@ -10,8 +10,8 @@
 "n": 5,
 "unidentified": 0,
 "unidentified_excluded": 4,
-"noise_excluded": 1180,
-"verbs_checked": 265,
+"noise_excluded": 1124,
+"verbs_checked": 259,
 "verbs_rejected": 0,
 "verbs_version": {
 "kinds": "headline-verbs-v1-2026-10-04",
@@ -44,7 +44,7 @@
 "date": "2026-09-16",
 "karte": "C-4",
 "company": "LEGACY GI TC 400 LASALLE LLC",
-"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 9 件中の上位)。工事費 $1M 以上 = 設備の入る建屋の型。"
+"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 8 件中の上位)。工事費 $1M 以上 = 設備の入る建屋の型。"
 },
 {
 "kind": "permit",
@@ -57,7 +57,7 @@
 "date": "2026-09-28",
 "karte": "C-154",
 "company": "FORD MOTOR COMPANY",
-"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 9 件中の上位)。工事費 $1M 以上 = 設備の入る建屋の型。"
+"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 8 件中の上位)。工事費 $1M 以上 = 設備の入る建屋の型。"
 },
 {
 "kind": "multi",
@@ -87,41 +87,41 @@
 }
 ],
 "counts": {
-"permits_targets": 1443,
-"permits_new90": 1443,
+"permits_targets": 1381,
+"permits_new90": 1381,
 "ucc_read": 12,
-"ucc_new90": 11,
+"ucc_new90": 10,
 "ucc_companies": 8,
 "jp_companies": 1
 },
 "permits_meta": {
-"generated_at": "2026-10-19T08:46:38+00:00",
+"generated_at": "2026-10-26T08:50:53+00:00",
 "funnel": {
-"signals_total": 81725,
-"candidates": 64189,
-"targets": 1443,
-"permits_folded": 1830,
+"signals_total": 85413,
+"candidates": 61847,
+"targets": 1381,
+"permits_folded": 1714,
 "unclassified": 0,
-"unevaluated": 35638,
+"unevaluated": 29133,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 216,
-"保全": 852,
-"事務所・その他": 169,
-"内容不明": 55,
-"工事でない記録": 151
+"操業の変化": 201,
+"保全": 820,
+"事務所・その他": 162,
+"内容不明": 51,
+"工事でない記録": 147
 },
 "stages": {
-"0": 17536,
-"2a": 4591,
-"2b": 24605,
-"2c": 6442,
-"2d": 22530,
-"3": 3907,
-"5": 209,
-"6": 1905
+"0": 23566,
+"2a": 2883,
+"2b": 20862,
+"2c": 5388,
+"2d": 24992,
+"3": 5315,
+"5": 618,
+"6": 1789
 },
-"enriched": 28551
+"enriched": 32714
 },
 "states": [
 "IL",
@@ -132,13 +132,13 @@
 ]
 },
 "ucc_meta": {
-"generated_at": "2026-10-19T08:52:36+00:00",
+"generated_at": "2026-10-26T08:57:34+00:00",
 "funnel": {
-"filings_total": 9009,
+"filings_total": 9523,
 "with_collateral": 956,
 "read": 917,
 "unread": 39,
-"no_text_yet": 8053,
+"no_text_yet": 8567,
 "by_kind": {
 "与信枠の新設": 60,
 "未分類": 28,
@@ -146,9 +146,9 @@
 "資金繰り警戒": 2,
 "雑音": 69
 },
-"wi_index": 7935,
+"wi_index": 8434,
 "wi_purchased": 12,
-"wi_candidates": 716,
+"wi_candidates": 767,
 "g3_key": "state+fs_number",
 "g3_duplicates": 0,
 "wi_fact_merged": 8,
@@ -160,7 +160,7 @@
 "equipment_rows": 280,
 "equipment_hits": 6,
 "equipment_misses": 0,
-"companies_checked": 3356,
+"companies_checked": 3513,
 "companies_total": 8
 }
 },
