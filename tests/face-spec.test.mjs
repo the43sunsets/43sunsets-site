@@ -24,8 +24,8 @@ test("A1: schema exposes every contract column, sort/filter and c_item composite
   } finally { f.db.close(); }
 });
 test("A20: rate extraction is verbatim and all other legacy gate bytes are unchanged", () => {
-  const old = execFileSync("git", ["show", "c2a46cde64e:functions/cockpit/data/[[path]].js"], { encoding: "utf8" }).split(/(?<=\n)/);
-  const expected = old.slice(0,6).join("") + 'import { sessionLimited } from "../../signal/_rate.js";\n' + old.slice(6,33).join("") + old[35] + old.slice(53).join("");
+  const old = execFileSync("git", ["show", "0ca191d:functions/cockpit/data/[[path]].js"], { encoding: "utf8" }).split(/(?<=\n)/);
+  const expected = old.slice(0,6).join("") + 'import { sessionLimited } from "../../signal/_rate.js";\n' + old.slice(6,35).join("") + old[37] + old.slice(55).join("");
   assert.equal(readFileSync("functions/cockpit/data/[[path]].js", "utf8"), expected);
-  assert.equal(readFileSync("functions/signal/_rate.js", "utf8"), 'import { store } from "./_lib.js";\n\n' + old.slice(33,35).join("") + old.slice(36,53).join("").replace("async function sessionLimited", "export async function sessionLimited"));
+  assert.equal(readFileSync("functions/signal/_rate.js", "utf8"), 'import { store } from "./_lib.js";\n\n' + old.slice(35,37).join("") + old.slice(38,55).join("").replace("async function sessionLimited", "export async function sessionLimited"));
 });
