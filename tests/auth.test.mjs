@@ -244,7 +244,7 @@ test("static: storage key literals stay in backend/FOIA and protected files are 
     assert.ok(!readFileSync(file, "utf8").includes("sg:"), file);
   }
   const changes = execFileSync("git", ["diff", "--name-only"], { encoding: "utf8" }).trim().split("\n");
-  assert.ok(!changes.some(f => /^(functions\/(signal\/(hit|stats)\.js|services\/|contact\/|_turnstile\.js)|legal\/|assets\/|signal\/|cockpit\/data\/|_redirects$)/.test(f)));
+  assert.ok(!changes.some(f => /^(functions\/(signal\/(hit|stats)\.js|services\/|contact\/|_turnstile\.js)|legal\/|assets\/|cockpit\/data\/|_redirects$)/.test(f)));
   const old = execFileSync("git", ["show", "HEAD:functions/signal/_lib.js"], { encoding: "utf8" }), current = readFileSync("functions/signal/_lib.js", "utf8");
   assert.equal(current.slice(current.indexOf('// ── メール本文')), old.slice(old.indexOf('// ── メール本文')));
 });

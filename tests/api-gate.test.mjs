@@ -7,7 +7,7 @@ const ids=rows=>new Set(rows.map(r=>r.id));
 function seeds(f) {
   for(const face of ["permits","ucc","subsidies","hiring","news"]){
     f.meta(face);
-    for(let i=0;i<5;i++)f.row(face,{id:`${face}-${i}`,ord:i,is_sample:i<2?1:0,period_date:face==="hiring"?null:i<2?"2026-03-11":"2026-09-20"});
+    for(let i=0;i<5;i++)f.row(face,{id:`${face}-${i}`,ord:i,is_sample:i<2?1:0,period_date:i<2?"2026-03-11":"2026-09-20"});
     f.insert("f_count",{face,key:JSON.stringify(["OH",["A","B"]]),period:"older",n:42});
   }
 }
@@ -17,8 +17,8 @@ for(const kind of ["d1","kv"]){
     assert.deepEqual(await body(env,"face/permits"),await body(env,"face/permits",cookie));
     const response=await get(env,"face/permits");assert.equal(response.headers.get("x-signal-mode"),"demo");
     for(const face of ["ucc","subsidies","hiring"]){
-      const live=await body(env,`face/${face}?period=all&limit=2`,cookie);
-      for(const q of ["","?period=90d","?period=1y",`?cursor=${live.next_cursor}`,`?cursor=${live.next_cursor}&period=all&limit=50`, `?cursor=${encodeCursor(["amount",9e15,"9999-12-31","ZZZ"])}`,"?state=XX&sort=bogus&limit=0&period=3y"]){
+      const live=await body(env,`face/${face}?period=365d&limit=2`,cookie);
+      for(const q of ["","?period=90d","?period=1y",`?cursor=${live.next_cursor}`,`?cursor=${live.next_cursor}&period=365d&limit=50`, `?cursor=${encodeCursor(["amount",9e15,"9999-12-31","ZZZ"])}`,"?state=XX&sort=bogus&limit=0&period=3y"]){
         const result=await body(env,`face/${face}${q}`);assert.deepEqual(ids(result.rows),new Set([`${face}-0`,`${face}-1`]));assert.equal(result.next_cursor,null);
         for(let i=2;i<5;i++)assert.ok(!JSON.stringify(result).includes(`${face}-${i}`));
       }
@@ -38,7 +38,7 @@ for(const kind of ["d1","kv"]){
   });
   test(`A7 ${kind}: old samples survive default/explicit periods while authenticated rows do not`,async t=>{
     const env=setup(t,kind),f=env.FACES_DB,cookie=await cookieFor(env);
-    for(const face of ["ucc","subsidies","hiring"]){f.meta(face);f.row(face,{id:"old-sample",is_sample:1,period_date:face==="hiring"?null:"2026-03-11"});for(const q of ["","?period=90d","?period=1y"]){assert.equal((await body(env,`face/${face}${q}`)).rows.length,1);}assert.equal((await body(env,`face/${face}?period=90d`,cookie)).rows.length,face==="hiring"?1:0);}
+    for(const face of ["ucc","subsidies","hiring"]){f.meta(face);f.row(face,{id:"old-sample",is_sample:1,period_date:"2026-03-11"});for(const q of ["","?period=90d","?period=1y"]){assert.equal((await body(env,`face/${face}${q}`)).rows.length,1);}assert.equal((await body(env,`face/${face}?period=90d`,cookie)).rows.length,0);}
   });
   test(`A8 ${kind}: news sample membership is per axis and ignores article is_sample`,async t=>{
     const env=setup(t,kind),f=env.FACES_DB,cookie=await cookieFor(env);f.meta("news");
@@ -51,9 +51,9 @@ for(const kind of ["d1","kv"]){
   });
   test(`A9 ${kind}: logout revokes the same cookie across face/CSV/company sections`,async t=>{
     const env=setup(t,kind),f=env.FACES_DB,cookie=await cookieFor(env);seeds(f);f.company("C-12103",{ucc:[{id:"SECRET"}],timeline:[{face:"ucc",ref:"SECRET"},{face:"permits",ref:"PUBLIC"}]});
-    assert.equal((await body(env,"face/ucc?period=all",cookie)).rows.length,5);
+    assert.equal((await body(env,"face/ucc?period=365d",cookie)).rows.length,5);
     const out=await logout({env,request:new Request("https://example.test/signal/logout",{method:"POST",headers:{cookie}})});assert.ok(out.status<400);
-    const r=await get(env,"face/ucc?period=all",cookie);assert.equal(r.headers.get("x-signal-mode"),"demo");assert.equal((await r.json()).rows.length,2);
+    const r=await get(env,"face/ucc?period=365d",cookie);assert.equal(r.headers.get("x-signal-mode"),"demo");assert.equal((await r.json()).rows.length,2);
     assert.equal((await get(env,"face/ucc.csv",cookie)).status,401);assert.equal((await get(env,`company/C-12103?face=ucc&cursor=${encodeCursor(["ucc",0])}`,cookie)).status,403);
     const timeline=await body(env,"company/C-12103?face=timeline",cookie);assert.deepEqual(timeline.faces.timeline.rows,[{face:"permits",ref:"PUBLIC"}]);assert.equal(timeline.header.demo,true);assert.deepEqual(timeline.header.faces.ucc,{count:1,locked:true});assert.ok(!JSON.stringify(timeline).includes("SECRET"));
   });

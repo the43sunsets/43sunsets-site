@@ -12,10 +12,12 @@ function run(el){
     const p = Object.fromEntries(new Intl.DateTimeFormat("en-US",o).formatToParts(d).filter(x=>x.type!=="literal").map(x=>[x.type,x.value])); return withTime ? `${p.month}-${p.day} ${p.hour==="24"?"00":p.hour}:${p.minute}` : `${p.year}-${p.month}-${p.day}`; };
   const todayCT = fmt(new Date().toISOString(), false);
   el.innerHTML = el.classList.contains("hb-tile") ? `<div class="t-top"><span class="hb-dot"></span><b>${LABEL}</b><span class="go">›</span></div><div class="t-st">読み込み中…</div>` : `<span class="hb-dot hb-wait"></span><span class="hb-txt"><span class="hb-lbl">${LABEL}</span><span class="hb-sep">·</span>今日 <span class="mono">${todayCT}</span>・読み込み中…</span>`;
-  fetch("/cockpit/data/health.json", {cache:"no-store"}).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); }).then(h=>{
+  fetch("/cockpit/data/health.json", {cache:"no-store"}).then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); }).then(async h=>{
     const c = (h.checks||{})[KEY] || {}; const last = c.raw_db_synced_at || c.last_run_at || null;
     const lastCT = fmt(last, true); const lastDay = fmt(last, false);
-    const n = (c.new_records!=null) ? c.new_records : null;
+    let n = (c.new_records!=null) ? c.new_records : null;
+    const face = ({permits_update_vps:"permits",ucc_sync_mac:"ucc",subsidies_update_vps:"subsidies",hiring_update_vps:"hiring",news_update_vps:"news"})[KEY];
+    if(face) try { const r = await fetch(`/signal/api/meta/${face}`, {cache:"no-store",credentials:"same-origin"}); if(!r.ok) throw new Error("meta unavailable"); const m = await r.json(); if(m.f_meta?.meta?.new_today != null) n = m.f_meta.meta.new_today; } catch { /* Keep the collection count if meta is unavailable. */ }
     const ranToday = last && lastDay === todayCT;
     let cls = "hb-ok", label = "当日の収集 済";
     if(c.state === "FAIL"){ cls = "hb-fail"; label = "最終実行で失敗"; }
@@ -24,7 +26,7 @@ function run(el){
     const gen = fmt(h.generated_at, true);
     const title = `運行状態(${LABEL} の収集)\n判定 ${c.state||"—"}・health.json 生成 ${gen} CT\n収集の予定: ${c.schedule||"—"}\n最終収集: ${lastCT} CT${n!=null?`・新規 ${n>=0?"+":""}${n} 件`:""}${c.fetched!=null?`・取得 ${c.fetched} 件`:""}${c.errors?`・取得できない情報源 ${c.errors}`:""}\n${c.last_status && c.last_status.ok===0 ? "最終実行に失敗した工程があります" : ""}`.trim();
     const tile = el.classList.contains("hb-tile");
-    el.className = "hb " + (tile ? "hb-tile " : "") + cls; el.title = title;
+    el.className = "hb " + (tile ? "hb-tile " : "") + cls; el.title = title + (face && c.new_records!=null ? `\n記録 +${c.new_records} 行` : "");
     if(tile){ el.innerHTML = `<div class="t-top"><span class="hb-dot"></span><b>${LABEL}</b><span class="go">›</span></div><div class="t-st">${label}</div><div class="t-sub">最終 <span class="mono">${lastCT}</span> CT${n!=null?`・新規 <span class="mono">${n>=0?"+":""}${n}</span> 件`:""}</div>`; return; }
     el.innerHTML = `<span class="hb-dot"></span><span class="hb-txt"><span class="hb-lbl">${LABEL}</span><span class="hb-sep">·</span><span class="hb-k">今日</span> <span class="mono">${todayCT}</span><span class="hb-sep">·</span><span class="hb-k">${label}</span><span class="hb-sep">·</span><span class="hb-k">最終収集</span> <span class="mono">${lastCT}</span>${n!=null?`<span class="hb-sep">·</span><span class="hb-k">新規</span> <span class="mono">${n>=0?"+":""}${n}</span><span class="hb-u"> 件</span>`:""}</span>`;
   }).catch(err=>{ if(el.classList.contains("hb-tile")){ el.className = "hb hb-tile hb-fail"; el.title = "health.json を読めません: "+err.message; el.innerHTML = `<div class="t-top"><span class="hb-dot"></span><b>${LABEL}</b><span class="go">›</span></div><div class="t-st">運行状態 不明</div>`; return; } el.className = "hb hb-fail"; el.title = "health.json を読めません: "+err.message; el.innerHTML = `<span class="hb-dot"></span><span class="hb-txt"><span class="hb-lbl">${LABEL}</span><span class="hb-sep">·</span>今日 <span class="mono">${todayCT}</span>・運行状態 不明(${err.message})</span>`; });

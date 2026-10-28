@@ -22,3 +22,4 @@ CREATE TABLE IF NOT EXISTS copy_request (key TEXT PRIMARY KEY, ts TEXT NOT NULL,
   status TEXT NOT NULL CHECK (status IN ('requested','purchased','done','declined')), updated_at TEXT, note TEXT, updated TEXT);
 CREATE TABLE IF NOT EXISTS copy_request_index (fs TEXT NOT NULL, email TEXT NOT NULL, ts TEXT NOT NULL, expires_at TEXT NOT NULL, PRIMARY KEY (fs, email));
 CREATE TABLE IF NOT EXISTS copy_count (email TEXT NOT NULL, month TEXT NOT NULL, n INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (email, month));
+CREATE TABLE IF NOT EXISTS interest_day (day TEXT NOT NULL, face TEXT NOT NULL, id TEXT NOT NULL, n INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (day, face, id));
