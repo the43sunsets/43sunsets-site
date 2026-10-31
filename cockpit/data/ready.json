@@ -1,21 +1,23 @@
 {
-  "run_date": "2026-10-30",
-  "generated_at": "2026-10-30T15:14:27.389429+00:00",
+  "run_date": "2026-10-31",
+  "generated_at": "2026-10-31T10:28:19.047987+00:00",
   "slo": {
     "deadline": "06:30 America/Chicago",
-    "deadline_met": false,
-    "evaluated_at": "2026-10-30T15:14:27.389429+00:00"
+    "deadline_met": true,
+    "evaluated_at": "2026-10-31T10:28:19.047987+00:00"
   },
   "faces": {
     "permits": {
-      "state": "complete",
-      "reasons": [],
+      "state": "degraded",
+      "reasons": [
+        "errors_30h 2"
+      ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 7.412330288439989,
-        "errors_30h": 0
+        "age_h": 2.670846663415432,
+        "errors_30h": 2
       }
     },
     "ucc": {
@@ -28,38 +30,38 @@
         "deny_24h": 0,
         "stage_failed": 0,
         "source_stopped": 1,
-        "age_h": 416.2073303969701,
+        "age_h": 435.43834666305116,
         "sync_ok": 1,
-        "wi_age_d": 0.2743910765275359
+        "wi_age_d": 0.07509314781054854
       }
     },
     "subsidies": {
       "state": "degraded",
       "reasons": [
-        "unread 2",
+        "unread 1",
         "untranslated 1"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 6.418996945023537,
+        "age_h": 1.4016799964010715,
         "errors_30h": 0,
         "untranslated": 1,
-        "unread": 2
+        "unread": 1
       }
     },
     "hiring": {
       "state": "degraded",
       "reasons": [
-        "errors_30h 61"
+        "errors_30h 63"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 6.3667747266590595,
-        "errors_30h": 61
+        "age_h": 0.8839022219181061,
+        "errors_30h": 63
       }
     },
     "news": {
@@ -71,7 +73,7 @@
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 4.74010806530714,
+        "age_h": 23.971124444156885,
         "unread": 436
       }
     }
