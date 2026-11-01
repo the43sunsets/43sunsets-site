@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-10-31T10:08:54+00:00",
+"generated_at": "2026-11-01T11:40:03+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,31 +15,31 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 88572,
-"candidates": 61236,
-"targets": 1353,
-"permits_folded": 1669,
+"signals_total": 88812,
+"candidates": 60297,
+"targets": 1344,
+"permits_folded": 1658,
 "unclassified": 0,
-"unevaluated": 29026,
+"unevaluated": 28209,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 196,
-"保全": 801,
-"事務所・その他": 160,
+"操業の変化": 193,
+"保全": 797,
+"事務所・その他": 158,
 "内容不明": 51,
 "工事でない記録": 145
 },
 "stages": {
-"0": 27336,
-"2a": 2821,
-"2b": 20146,
-"2c": 6059,
-"2d": 24735,
-"3": 5155,
-"5": 576,
-"6": 1744
+"0": 28515,
+"2a": 2723,
+"2b": 19565,
+"2c": 5921,
+"2d": 24701,
+"3": 5082,
+"5": 572,
+"6": 1733
 },
-"enriched": 32210
+"enriched": 32088
 },
 "sources": [
 {
@@ -48,13 +48,13 @@
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-31T07:00:19Z",
+"last_run_at": "2026-11-01T08:05:02Z",
 "last_run_reason": "ok",
-"signals": 10416,
+"signals": 10493,
 "date_min": "2026-07-01",
-"date_max": "2026-10-29",
-"owner_coverage": 10024,
-"targets": 391,
+"date_max": "2026-10-30",
+"owner_coverage": 10101,
+"targets": 384,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -64,14 +64,14 @@
 "state": "IL",
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-31T07:00:25Z",
+"last_run_status": "ok",
+"last_run_at": "2026-11-01T08:05:27Z",
 "last_run_reason": "ok",
-"signals": 223,
+"signals": 302,
 "date_min": "2026-07-01",
-"date_max": "2026-09-30",
+"date_max": "2026-10-31",
 "owner_coverage": 0,
-"targets": 14,
+"targets": 13,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -82,12 +82,12 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-31T07:00:26Z",
+"last_run_at": "2026-11-01T08:05:29Z",
 "last_run_reason": "ok",
-"signals": 3427,
+"signals": 3461,
 "date_min": "2026-07-01",
-"date_max": "2026-10-28",
-"owner_coverage": 3273,
+"date_max": "2026-10-29",
+"owner_coverage": 3305,
 "targets": 89,
 "cadence": "daily",
 "next_run_at": null,
@@ -99,12 +99,12 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-31T07:00:26Z",
+"last_run_at": "2026-11-01T08:05:31Z",
 "last_run_reason": "ok",
-"signals": 2931,
+"signals": 2948,
 "date_min": "2026-07-01",
-"date_max": "2026-10-28",
-"owner_coverage": 2918,
+"date_max": "2026-10-29",
+"owner_coverage": 2935,
 "targets": 132,
 "cadence": "daily",
 "next_run_at": null,
@@ -116,13 +116,13 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-31T07:00:27Z",
+"last_run_at": "2026-11-01T08:05:32Z",
 "last_run_reason": "ok",
 "signals": 1632,
 "date_min": "2026-07-07",
 "date_max": "2026-10-24",
 "owner_coverage": 1575,
-"targets": 78,
+"targets": 77,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -133,7 +133,7 @@
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
 "last_run_status": "empty",
-"last_run_at": "2026-10-31T07:48:04Z",
+"last_run_at": "2026-11-01T09:13:26Z",
 "last_run_reason": "ok",
 "signals": 111,
 "date_min": "2026-07-07",
@@ -150,13 +150,13 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-31T07:00:27Z",
+"last_run_at": "2026-11-01T08:05:33Z",
 "last_run_reason": "ok",
 "signals": 2298,
 "date_min": "2026-07-01",
 "date_max": "2026-10-29",
 "owner_coverage": 2287,
-"targets": 40,
+"targets": 39,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -166,9 +166,9 @@
 "state": "WI",
 "jurisdiction": "Milwaukee",
 "label": "ミルウォーキー市 建築許可(公開記録・約 2.5 ヶ月遅れ)",
-"last_run_status": "empty",
-"last_run_at": "2026-09-30T07:03:57Z",
-"last_run_reason": "ok",
+"last_run_status": "error",
+"last_run_at": "2026-11-01T08:05:35Z",
+"last_run_reason": "upstream_error",
 "signals": 150,
 "date_min": "2026-04-01",
 "date_max": "2026-06-15",
@@ -184,7 +184,7 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-31T07:00:30Z",
+"last_run_at": "2026-11-01T08:05:36Z",
 "last_run_reason": "ok",
 "signals": 1410,
 "date_min": "2024-11-18",
@@ -200,8 +200,8 @@
 "state": "IL",
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-31T07:00:29Z",
+"last_run_status": "ok",
+"last_run_at": "2026-11-01T08:05:35Z",
 "last_run_reason": "ok",
 "signals": 358,
 "date_min": "2026-07-01",
@@ -217,8 +217,8 @@
 "state": "IL",
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-31T07:00:29Z",
+"last_run_status": "ok",
+"last_run_at": "2026-11-01T08:05:36Z",
 "last_run_reason": "ok",
 "signals": 1533,
 "date_min": "2026-07-01",
@@ -235,7 +235,7 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-31T07:00:24Z",
+"last_run_at": "2026-11-01T08:05:26Z",
 "last_run_reason": "ok",
 "signals": 8120,
 "date_min": "2026-07-01",
@@ -252,12 +252,12 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-31T07:38:37Z",
+"last_run_at": "2026-11-01T08:53:26Z",
 "last_run_reason": "ok",
-"signals": 23099,
+"signals": 23109,
 "date_min": "2026-07-01",
 "date_max": "2026-10-31",
-"owner_coverage": 15432,
+"owner_coverage": 15441,
 "targets": 463,
 "cadence": "daily",
 "next_run_at": null,
@@ -269,13 +269,13 @@
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-10-31T07:43:31Z",
+"last_run_at": "2026-11-01T09:04:43Z",
 "last_run_reason": "ok",
-"signals": 13392,
+"signals": 13415,
 "date_min": "2026-07-01",
-"date_max": "2026-10-30",
-"owner_coverage": 6851,
-"targets": 169,
+"date_max": "2026-10-31",
+"owner_coverage": 6854,
+"targets": 168,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -285,8 +285,8 @@
 "state": "IL",
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-31T07:46:11Z",
+"last_run_status": "ok",
+"last_run_at": "2026-11-01T09:11:32Z",
 "last_run_reason": "ok",
 "signals": 712,
 "date_min": "2026-07-01",
@@ -302,8 +302,8 @@
 "state": "IL",
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-10-31T07:48:02Z",
+"last_run_status": "ok",
+"last_run_at": "2026-11-01T09:13:23Z",
 "last_run_reason": "ok",
 "signals": 115,
 "date_min": "2026-07-01",
@@ -1560,14 +1560,14 @@
 ]
 },
 "stages": {
-"0": 27336,
-"2a": 2821,
-"2b": 20146,
-"2c": 6059,
-"2d": 24735,
-"3": 5155,
-"5": 576,
-"6": 1744
+"0": 28515,
+"2a": 2723,
+"2b": 19565,
+"2c": 5921,
+"2d": 24701,
+"3": 5082,
+"5": 572,
+"6": 1733
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 15831,
+"checked": 15723,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -2935,71 +2935,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "THE CITY CHURCH FELLOWSHIP",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-521",
-"state": "IL",
-"city": "Chicago・1700 W ADAMS ST",
-"company": "THE CITY CHURCH FELLOWSHIP",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "宗教・非営利",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-10-01",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "THE CITY CHURCH FELLOWSHIPがChicagoで新築の許可を取得(2件)",
-"infer": null,
-"note": "増築・新築",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101081073 PERMIT - RENOVATION/ALTERATION",
-"value": 2500000.0,
-"verbatim": "DDS 2019 CBC: FOUNDATION ONLY. SHALLOW FOUNDATIONS FOR A PROPOSED 2-STORY PRECAST CONCRETE CHURCH. WORK TO INCLUDE COLUMN SPREAD FOOTINGS, CONTINUOUS WALL FOOTINGS, AND GROUND FLOOR SLAB.  UNDER SLAB UTILITIES, GROUND IMPROVEMENTS, AND STORM TRAP INCLUDED IN SCOPE.  CONSTRUCTION TYPE IIA, OCCUPANCY A-2/A-3 ASSEMBLY AND E-2 EDUCATIONAL, WITH BUSINESS, MERCANTILE, AND S-1 STORAGE AS ACCESSORY USES. ",
-"gc": "ARCO/MURRAY NATIONAL HOLDINGS INC",
-"pin": "1718213045",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-66",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:56.468541+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 15000000.0,
-"headline_en": "THE CITY CHURCH FELLOWSHIP obtained permits to build a new church in Chicago (2 permits)",
-"not_construction": false,
-"as_of": "2026-10-01",
-"n_permits": 2,
-"member_ids": [
-"S-521",
-"S-70698"
-],
-"kinds": [
-"増築・新築"
-],
-"amount_band": "10m_100m",
-"amount_band_label": "$10M〜$100M"
 },
 {
 "investor": {
@@ -6372,70 +6307,6 @@
 },
 {
 "investor": {
-"name": "HIVE ON RUSSELL",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-66921",
-"state": "MI",
-"city": "Detroit・2033 Russell St",
-"company": "HIVE ON RUSSELL",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-24",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "HIVE ON RUSSELLがDetroitで新築の許可を取得(1件)",
-"infer": null,
-"note": "増築・新築",
-"fact": {
-"src": "デトロイト市 建築許可(公開記録)",
-"ref": "許可 BLD2024-00126 New",
-"value": 16000000.0,
-"verbatim": "Construct New 4 Story, 78 Unit Multi-Family Dwelling (45 Studio/1 Bath, 27 One Bed/1 Bath, 6 Two Bed/1 Bath) & Site Work at 2033 Russell only per plans. Subject to Field Approval. Separate Trade, DPW Right-of-Way, & DWSD Permits required. / Multi-Family Dwelling (78 Units) / New",
-"gc": null,
-"pin": "05003461-76",
-"owner_source": "parcel:detroit"
-},
-"karte": null,
-"company_id": "C-15678",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:35.402903+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 16000000.0,
-"headline_en": "HIVE ON RUSSELL obtained a permit to build new construction in Detroit (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-24",
-"n_permits": 1,
-"member_ids": [
-"S-66921"
-],
-"kinds": [
-"増築・新築"
-],
-"amount_band": "10m_100m",
-"amount_band_label": "$10M〜$100M"
-},
-{
-"investor": {
 "name": "Mid State Truck Equipment",
 "basis": "operator",
 "label": "操業事業者",
@@ -6691,70 +6562,6 @@
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
-"name": "MARSHALLS FULFILLMENT CENTER",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-65607",
-"state": "OH",
-"city": "Montgomery County・2100 Douglas Way",
-"company": "MARSHALLS FULFILLMENT CENTER",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "物流・卸",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-23",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "MARSHALLS FULFILLMENT CENTERがMONTGOMERYで倉庫・搬送の許可を取得(1件)",
-"infer": null,
-"note": "倉庫・搬送",
-"fact": {
-"src": "Montgomery County 建築許可(公開記録)",
-"ref": "許可 ELEC26-0466 Commercial Electrical Permit",
-"value": null,
-"verbatim": "added power for two Shuttle strations, added power for Mini load isle, and added power for work ststions and added power for recieving work ststions / Cancelled / Commercial Electrical Permit / (UNION)",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:montgomery_oh:addr"
-},
-"karte": null,
-"company_id": "C-15684",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:53.915217+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": null,
-"headline_en": "MARSHALLS FULFILLMENT CENTER obtained a warehouse/conveyor permit in Montgomery (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-23",
-"n_permits": 1,
-"member_ids": [
-"S-65607"
-],
-"kinds": [
-"倉庫・搬送"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -28236,72 +28043,6 @@
 },
 {
 "investor": {
-"name": "IOWA & PULASKI AUTO BODY",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-69764",
-"state": "IL",
-"city": "Chicago・4005 W IOWA ST",
-"company": "IOWA & PULASKI AUTO BODY",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-28",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "IOWA & PULASKI AUTO BODYがChicagoで更新・修繕と事務所・その他の許可を取得(2件)",
-"infer": null,
-"note": "更新・修繕・事務所・その他",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200513435 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 1500.0,
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. NEW PERMANENT 200 AMP SERVICE DISCONNECTING MEANS WITH 20 CIRCUITS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: ELECTRICAL SERVICE ENTRY ALLEY  BACK TO BACK.",
-"gc": null,
-"pin": "1603431022",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-15572",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:09.003728+00:00"
-},
-"meaning": "保全",
-"amount_usd": 1500.0,
-"headline_en": "IOWA & PULASKI AUTO BODY obtained permits for repair and office fit-out in Chicago (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-28",
-"n_permits": 2,
-"member_ids": [
-"S-69764",
-"S-69799"
-],
-"kinds": [
-"更新・修繕",
-"事務所・その他"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "CMHDC",
 "basis": "operator",
 "label": "操業事業者",
@@ -34207,70 +33948,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "U.S. COTTON LLC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-67656",
-"state": "OH",
-"city": "Cleveland・15501 INDUSTRIAL PKWY, CLEVELAND, OH, 44135",
-"company": "U.S. COTTON LLC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "化学・日用品",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-23",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "U.S. COTTON LLCがクリーブランドで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCH26-037951 Commercial HVAC",
-"value": 25000.0,
-"verbatim": "Commercial HVAC / B Business / INSTALL 1 ROOFTOP HEATING/ COOLING UNITS",
-"gc": "CAMPBELL INC.",
-"pin": "02821011",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-15742",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:53.134437+00:00"
-},
-"meaning": "保全",
-"amount_usd": 25000.0,
-"headline_en": "U.S. COTTON LLC obtained a repair/renovation permit in Cleveland (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-23",
-"n_permits": 1,
-"member_ids": [
-"S-67656"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -42636,70 +42313,6 @@
 },
 {
 "investor": {
-"name": "COOK COUNTY C/O TRANSWESTERN",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-60369",
-"state": "IL",
-"city": "Chicago・69 W WASHINGTON ST",
-"company": "COOK COUNTY C/O TRANSWESTERN",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-17",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "COOK COUNTY C/O TRANSWESTERNがChicagoで警備設備の許可を取得(1件)",
-"infer": null,
-"note": "警備",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200512078 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 76135.0,
-"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL SECURITY. SPECIFIC LOCATION: 30TH FLR.",
-"gc": null,
-"pin": "1709461015",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-13705",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:26.554351+00:00"
-},
-"meaning": "保全",
-"amount_usd": 76135.0,
-"headline_en": "COOK COUNTY C/O TRANSWESTERN obtained a permit for security installation in Chicago (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-17",
-"n_permits": 1,
-"member_ids": [
-"S-60369"
-],
-"kinds": [
-"警備"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "SAFETY NATIONAL",
 "basis": "operator",
 "label": "操業事業者",
@@ -49760,70 +49373,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-58225"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
-"name": "MARIANOS 508-531",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-58232",
-"state": "IL",
-"city": "Chicago・40 S HALSTED ST",
-"company": "MARIANOS 508-531",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-14",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "MARIANOS 508-531がシカゴでコンクリート補修の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200510528 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 113803.0,
-"verbatim": "CONCRETE MASONRY REPAIR / REPLACEMNT: 350SQ. FT., EXCAVATION = . LOCATION: PARKING GARAGE.",
-"gc": null,
-"pin": "1717209019",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-16005",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:33.733903+00:00"
-},
-"meaning": "保全",
-"amount_usd": 113803.0,
-"headline_en": "MARIANOS 508-531 obtained a permit for concrete masonry repair in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-23",
-"n_permits": 1,
-"member_ids": [
-"S-58232"
 ],
 "kinds": [
 "更新・修繕"
@@ -67622,70 +67171,6 @@
 },
 {
 "investor": {
-"name": "MARS SNACKING NORTH AMERICA",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-69956",
-"state": "IL",
-"city": "Chicago・400 N ABERDEEN ST",
-"company": "MARS SNACKING NORTH AMERICA",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "食品・飲料",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-09-29",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "MARS SNACKING NORTH AMERICAがChicagoで看板設置の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101088150 PERMIT - SIGNS",
-"value": 700.0,
-"verbatim": "FLAT CUT OUT TENANT GRAPHICS READING \"MARS SNACKING NORTH AMERICA\"",
-"gc": "ALL-RIGHT SIGN INC",
-"pin": null,
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-15515",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:27.024358+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": 700.0,
-"headline_en": "MARS SNACKING NORTH AMERICA obtained a permit for signage installation in Chicago (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-29",
-"n_permits": 1,
-"member_ids": [
-"S-69956"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "WESTERN RESERVE UNIV",
 "basis": "operator",
 "label": "操業事業者",
@@ -73603,70 +73088,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-73516"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "BUFFALO WILD WINGS GO SIGN",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-73530",
-"state": "IL",
-"city": "Rockford・3035 11TH",
-"company": "BUFFALO WILD WINGS GO SIGN",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-09-16",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "BUFFALO WILD WINGS GO SIGNがRockfordで看板設置の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "ロックフォード市 商業建築許可(公開記録)",
-"ref": "許可 MULCOM20261738 Multifamily/Commercial Permits",
-"value": 1300.0,
-"verbatim": "SIGN / directional sign / SIGNS",
-"gc": "Wysocki Walter",
-"pin": "15-01-307-016",
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-15505",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:43.095914+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": 1300.0,
-"headline_en": "BUFFALO WILD WINGS GO SIGN obtained a permit for signage in Rockford (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-16",
-"n_permits": 1,
-"member_ids": [
-"S-73530"
 ],
 "kinds": [
 "事務所・その他"
@@ -91954,21 +91375,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13705",
-"name": "COOK COUNTY C/O TRANSWESTERN",
-"entity_type": "public",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-17",
-"targets": 1,
-"signal_ids": [
-"S-60369"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-13712",
 "name": "KASHMERE DREAMS LLC",
 "entity_type": "spe",
@@ -96214,21 +95620,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15505",
-"name": "BUFFALO WILD WINGS GO SIGN",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-16",
-"targets": 1,
-"signal_ids": [
-"S-73530"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15506",
 "name": "Pin Fusion / Arcade Center",
 "entity_type": "corp",
@@ -96270,21 +95661,6 @@
 "targets": 1,
 "signal_ids": [
 "S-69227"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15515",
-"name": "MARS SNACKING NORTH AMERICA",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-29",
-"targets": 1,
-"signal_ids": [
-"S-69956"
 ],
 "n_amount_excluded": 0
 },
@@ -96555,21 +95931,6 @@
 "targets": 1,
 "signal_ids": [
 "S-67070"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15572",
-"name": "IOWA & PULASKI AUTO BODY",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-28",
-"targets": 1,
-"signal_ids": [
-"S-69764"
 ],
 "n_amount_excluded": 0
 },
@@ -97159,21 +96520,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15678",
-"name": "HIVE ON RUSSELL",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "MI",
-"latest": "2026-09-24",
-"targets": 1,
-"signal_ids": [
-"S-66921"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15679",
 "name": "Krieg-Devault",
 "entity_type": "corp",
@@ -97200,21 +96546,6 @@
 "targets": 1,
 "signal_ids": [
 "S-65600"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15684",
-"name": "MARSHALLS FULFILLMENT CENTER",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-23",
-"targets": 1,
-"signal_ids": [
-"S-65607"
 ],
 "n_amount_excluded": 0
 },
@@ -97680,21 +97011,6 @@
 "targets": 1,
 "signal_ids": [
 "S-68651"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15742",
-"name": "U.S. COTTON LLC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-23",
-"targets": 1,
-"signal_ids": [
-"S-67656"
 ],
 "n_amount_excluded": 0
 },
@@ -99375,21 +98691,6 @@
 "targets": 1,
 "signal_ids": [
 "S-61946"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-16005",
-"name": "MARIANOS 508-531",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-14",
-"targets": 1,
-"signal_ids": [
-"S-58232"
 ],
 "n_amount_excluded": 0
 },
@@ -101640,21 +100941,6 @@
 "targets": 1,
 "signal_ids": [
 "S-70303"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-66",
-"name": "THE CITY CHURCH FELLOWSHIP",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-10-01",
-"targets": 1,
-"signal_ids": [
-"S-521"
 ],
 "n_amount_excluded": 0
 },

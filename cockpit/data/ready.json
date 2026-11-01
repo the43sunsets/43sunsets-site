@@ -1,23 +1,23 @@
 {
-  "run_date": "2026-10-31",
-  "generated_at": "2026-10-31T10:28:19.047987+00:00",
+  "run_date": "2026-11-01",
+  "generated_at": "2026-11-01T11:59:09.306696+00:00",
   "slo": {
     "deadline": "06:30 America/Chicago",
     "deadline_met": true,
-    "evaluated_at": "2026-10-31T10:28:19.047987+00:00"
+    "evaluated_at": "2026-11-01T11:59:09.306696+00:00"
   },
   "faces": {
     "permits": {
       "state": "degraded",
       "reasons": [
-        "errors_30h 2"
+        "errors_30h 5"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 2.670846663415432,
-        "errors_30h": 2
+        "age_h": 2.7620297223329544,
+        "errors_30h": 5
       }
     },
     "ucc": {
@@ -30,38 +30,37 @@
         "deny_24h": 0,
         "stage_failed": 0,
         "source_stopped": 1,
-        "age_h": 435.43834666305116,
+        "age_h": 460.95230741553837,
         "sync_ok": 1,
-        "wi_age_d": 0.07509314781054854
+        "wi_age_d": 0.08143873838707805
       }
     },
     "subsidies": {
       "state": "degraded",
       "reasons": [
-        "unread 1",
         "untranslated 1"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 1.4016799964010715,
+        "age_h": 1.834807500243187,
         "errors_30h": 0,
         "untranslated": 1,
-        "unread": 1
+        "unread": 0
       }
     },
     "hiring": {
       "state": "degraded",
       "reasons": [
-        "errors_30h 63"
+        "errors_30h 120"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 0.8839022219181061,
-        "errors_30h": 63
+        "age_h": 0.7548075020313263,
+        "errors_30h": 120
       }
     },
     "news": {
@@ -73,7 +72,7 @@
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 23.971124444156885,
+        "age_h": 49.48508528620005,
         "unread": 436
       }
     }
