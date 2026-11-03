@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-11-02T10:35:01+00:00",
+"generated_at": "2026-11-03T10:38:18+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,31 +15,31 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 89068,
-"candidates": 59503,
-"targets": 1340,
-"permits_folded": 1653,
+"signals_total": 89835,
+"candidates": 59032,
+"targets": 1321,
+"permits_folded": 1620,
 "unclassified": 0,
-"unevaluated": 27497,
+"unevaluated": 22212,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 192,
-"保全": 796,
-"事務所・その他": 156,
-"内容不明": 51,
-"工事でない記録": 145
+"操業の変化": 187,
+"保全": 787,
+"事務所・その他": 155,
+"内容不明": 50,
+"工事でない記録": 142
 },
 "stages": {
-"0": 29565,
-"2a": 2664,
-"2b": 19085,
-"2c": 5748,
-"2d": 24644,
-"3": 5067,
-"5": 567,
-"6": 1728
+"0": 30803,
+"2a": 2301,
+"2b": 15236,
+"2c": 4675,
+"2d": 28637,
+"3": 5761,
+"5": 727,
+"6": 1695
 },
-"enriched": 32006
+"enriched": 36820
 },
 "sources": [
 {
@@ -48,13 +48,13 @@
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:00:31Z",
+"last_run_at": "2026-11-03T08:00:35Z",
 "last_run_reason": "ok",
-"signals": 10493,
+"signals": 10510,
 "date_min": "2026-07-01",
-"date_max": "2026-10-30",
-"owner_coverage": 10101,
-"targets": 382,
+"date_max": "2026-11-01",
+"owner_coverage": 10118,
+"targets": 378,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -65,7 +65,7 @@
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:00:37Z",
+"last_run_at": "2026-11-03T08:00:36Z",
 "last_run_reason": "ok",
 "signals": 302,
 "date_min": "2026-07-01",
@@ -82,13 +82,13 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:00:39Z",
+"last_run_at": "2026-11-03T08:00:39Z",
 "last_run_reason": "ok",
 "signals": 3498,
 "date_min": "2026-07-01",
 "date_max": "2026-10-30",
 "owner_coverage": 3341,
-"targets": 88,
+"targets": 86,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -99,13 +99,13 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:00:39Z",
+"last_run_at": "2026-11-03T08:00:41Z",
 "last_run_reason": "ok",
-"signals": 2963,
+"signals": 2964,
 "date_min": "2026-07-01",
-"date_max": "2026-10-30",
-"owner_coverage": 2950,
-"targets": 131,
+"date_max": "2026-10-31",
+"owner_coverage": 2951,
+"targets": 128,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -116,13 +116,13 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:00:40Z",
+"last_run_at": "2026-11-03T08:00:43Z",
 "last_run_reason": "ok",
 "signals": 1720,
 "date_min": "2026-07-07",
 "date_max": "2026-10-30",
 "owner_coverage": 1662,
-"targets": 76,
+"targets": 68,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -133,7 +133,7 @@
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
 "last_run_status": "empty",
-"last_run_at": "2026-11-02T08:55:15Z",
+"last_run_at": "2026-11-03T08:56:03Z",
 "last_run_reason": "ok",
 "signals": 111,
 "date_min": "2026-07-07",
@@ -150,12 +150,12 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:00:41Z",
+"last_run_at": "2026-11-03T08:00:43Z",
 "last_run_reason": "ok",
-"signals": 2316,
+"signals": 2324,
 "date_min": "2026-07-01",
-"date_max": "2026-10-31",
-"owner_coverage": 2305,
+"date_max": "2026-11-01",
+"owner_coverage": 2313,
 "targets": 39,
 "cadence": "daily",
 "next_run_at": null,
@@ -184,13 +184,13 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:00:43Z",
+"last_run_at": "2026-11-03T08:00:44Z",
 "last_run_reason": "ok",
-"signals": 1413,
+"signals": 1472,
 "date_min": "2024-11-18",
-"date_max": "2026-11-01",
+"date_max": "2026-11-02",
 "owner_coverage": 0,
-"targets": 267,
+"targets": 263,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -201,7 +201,7 @@
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:00:43Z",
+"last_run_at": "2026-11-03T08:00:44Z",
 "last_run_reason": "ok",
 "signals": 394,
 "date_min": "2026-07-01",
@@ -217,13 +217,13 @@
 "state": "IL",
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-11-02T08:00:43Z",
+"last_run_status": "ok",
+"last_run_at": "2026-11-03T08:00:44Z",
 "last_run_reason": "ok",
-"signals": 1533,
+"signals": 1770,
 "date_min": "2026-07-01",
-"date_max": "2026-09-30",
-"owner_coverage": 1122,
+"date_max": "2026-10-30",
+"owner_coverage": 1274,
 "targets": 5,
 "cadence": "daily",
 "next_run_at": null,
@@ -235,7 +235,7 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:00:37Z",
+"last_run_at": "2026-11-03T08:00:36Z",
 "last_run_reason": "ok",
 "signals": 8128,
 "date_min": "2026-07-01",
@@ -252,13 +252,13 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:44:50Z",
+"last_run_at": "2026-11-03T08:45:22Z",
 "last_run_reason": "ok",
-"signals": 23116,
+"signals": 23433,
 "date_min": "2026-07-01",
-"date_max": "2026-11-01",
-"owner_coverage": 15456,
-"targets": 463,
+"date_max": "2026-11-03",
+"owner_coverage": 15725,
+"targets": 457,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -269,13 +269,13 @@
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-02T08:50:53Z",
+"last_run_at": "2026-11-03T08:51:42Z",
 "last_run_reason": "ok",
-"signals": 13459,
+"signals": 13579,
 "date_min": "2026-07-01",
-"date_max": "2026-11-01",
-"owner_coverage": 6872,
-"targets": 168,
+"date_max": "2026-11-02",
+"owner_coverage": 6921,
+"targets": 163,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -286,7 +286,7 @@
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
 "last_run_status": "empty",
-"last_run_at": "2026-11-02T08:53:21Z",
+"last_run_at": "2026-11-03T08:54:10Z",
 "last_run_reason": "ok",
 "signals": 712,
 "date_min": "2026-07-01",
@@ -302,12 +302,12 @@
 "state": "IL",
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
-"last_run_status": "empty",
-"last_run_at": "2026-11-02T08:55:12Z",
+"last_run_status": "ok",
+"last_run_at": "2026-11-03T08:56:01Z",
 "last_run_reason": "ok",
-"signals": 115,
+"signals": 123,
 "date_min": "2026-07-01",
-"date_max": "2026-09-30",
+"date_max": "2026-10-30",
 "owner_coverage": 0,
 "targets": 0,
 "cadence": "daily",
@@ -1560,14 +1560,14 @@
 ]
 },
 "stages": {
-"0": 29565,
-"2a": 2664,
-"2b": 19085,
-"2c": 5748,
-"2d": 24644,
-"3": 5067,
-"5": 567,
-"6": 1728
+"0": 30803,
+"2a": 2301,
+"2b": 15236,
+"2c": 4675,
+"2d": 28637,
+"3": 5761,
+"5": 727,
+"6": 1695
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 15677,
+"checked": 15458,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -7536,70 +7536,6 @@
 },
 {
 "investor": {
-"name": "Payton Place Powersports",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-68345",
-"state": "IN",
-"city": "Indiana/CLARK・305 Lewis and Clark Pkwy",
-"company": "Payton Place Powersports",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-22",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Payton Place PowersportsがClarkで新拠点・用途転換の許可を取得(1件)",
-"infer": null,
-"note": "新拠点・用途転換",
-"fact": {
-"src": "インディアナ州 建築計画審査記録(公開記録)",
-"ref": "許可 463898:2026-09-22 CDR release",
-"value": null,
-"verbatim": "Payton Place Powersports / Vehicle Showroom",
-"gc": null,
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-15992",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:38.039364+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": null,
-"headline_en": "Payton Place Powersports obtained a permit for new site/use conversion in Clark (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-22",
-"n_permits": 1,
-"member_ids": [
-"S-68345"
-],
-"kinds": [
-"新拠点・用途転換"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "Timbren",
 "basis": "operator",
 "label": "操業事業者",
@@ -7917,138 +7853,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "QAHWA COFFEE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-15247",
-"state": "IL",
-"city": "Arlington Heights・1736 W ALGONQUIN RD Unit: A ARLINGTON HEIGHTS IL 60005",
-"company": "QAHWA COFFEE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-21",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "QAHWA COFFEEがアーリントンハイツで用途転換・修繕の許可を取得(2件)",
-"infer": null,
-"note": "新拠点・用途転換・更新・修繕",
-"fact": {
-"src": "Arlington Heights 建築許可(公開記録)",
-"ref": "許可 FIREC2026-00076 Fire Commercial Systems - Fire Alarm",
-"value": 6000.0,
-"verbatim": "QAHWA COFFEE--FIRE ALARM / Fire Commercial Systems - Fire Alarm / Fire Alarm",
-"gc": null,
-"pin": "08084010400000",
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-15906",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:53.344413+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 150083.0,
-"headline_en": "QAHWA COFFEE obtained permits for use conversion and repair in Arlington Heights (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-21",
-"n_permits": 2,
-"member_ids": [
-"S-15247",
-"S-63706"
-],
-"kinds": [
-"新拠点・用途転換",
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
-"name": "CLEVELAND CLINIC FOUNDATION",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-26836",
-"state": "OH",
-"city": "Cleveland・2083 E 89TH ST, CLEVELAND, OH, 44106",
-"company": "CLEVELAND CLINIC FOUNDATION",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-21",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "クリーブランド・クリニックがクリーブランドでカフェ改装・用途転換の許可を取得(2件)",
-"infer": null,
-"note": "新拠点・用途転換・更新・修繕",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCB26-027697 Commercial Building",
-"value": 450000.0,
-"verbatim": "Commercial Building / A-2 Assembly - Food and Drink Consumption / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO 5,162 SF CAFE PER APPROVED PLANS. SEPARATE PLUMBING, HVAC, ELECTRICAL AND FIRE PROTECTION PERMITS ARE REQUIRED.",
-"gc": "TURNER CONSTRUCTION COMPANY",
-"pin": "11916001",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-7724",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:15.868992+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 450000.0,
-"headline_en": "Cleveland Clinic Foundation obtained permits for cafe renovation and use conversion in Cleveland (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-21",
-"n_permits": 2,
-"member_ids": [
-"S-26836",
-"S-67706"
-],
-"kinds": [
-"新拠点・用途転換",
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -11940,72 +11744,6 @@
 },
 {
 "investor": {
-"name": "TARGET CORPORATION",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-5226",
-"state": "IL",
-"city": "Chicago・3501 S PULASKI RD",
-"company": "TARGET CORPORATION",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-08",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "TARGETがChicagoで倉庫・搬送と更新・修繕の許可を取得(2件)",
-"infer": null,
-"note": "倉庫・搬送・更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200481563 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 89000.0,
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. REPAIR OR ALTER DEVICES ON EXISTING CIRCUITS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 1. SPECIFIC LOCATION: INTERIOR, CONVEYOR LINE.",
-"gc": null,
-"pin": "1635300039",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-74",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:01.451990+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 400000.0,
-"headline_en": "TARGET obtained permits for warehouse/racking and repair work in Chicago (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-08",
-"n_permits": 2,
-"member_ids": [
-"S-5226",
-"S-50917"
-],
-"kinds": [
-"倉庫・搬送",
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
 "name": "CITY OF CHIGAGO",
 "basis": "operator",
 "label": "操業事業者",
@@ -13938,70 +13676,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "TROPICAL SMOOTHIE CAFE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-554",
-"state": "IL",
-"city": "Chicago・2508 W CERMAK RD",
-"company": "TROPICAL SMOOTHIE CAFE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-08-05",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "トロピカルスムージーカフェがシカゴで新拠点の用途転換の許可を取得(1件)",
-"infer": null,
-"note": "新拠点・用途転換",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101084604 PERMIT - RENOVATION/ALTERATION",
-"value": 200000.0,
-"verbatim": "NEW TENANT TROPICAL SMOOTHIE CAFE MOVING INTO AN EXISTING SHELL SPACE. WORK TO INCLUDE PLUMBING, MEP, ELECTRICAL, AND ARCH. NO HOOD",
-"gc": "RESA CONSTRUCTION",
-"pin": "1624427003",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-15228",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:41.941871+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 200000.0,
-"headline_en": "Tropical Smoothie Cafe obtained a permit for new site fit-out/conversion in Chicago (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-05",
-"n_permits": 1,
-"member_ids": [
-"S-554"
-],
-"kinds": [
-"新拠点・用途転換"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -22032,76 +21706,6 @@
 "kinds": [
 "更新・修繕",
 "事務所・その他"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "N&G TAKHAR OIL LLC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-36229",
-"state": "OH",
-"city": "Hamilton County・10843 MONTGOMERY RD , SYCAMORE TOWNSHIP OH 45242",
-"company": "N&G TAKHAR OIL LLC",
-"entity_type": "spe",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-30",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "N&G TAKHAR OIL LLCがサイカモアタウンシップで更新・修繕等の許可を取得(5件)",
-"infer": null,
-"note": "更新・修繕・警備・内容不明",
-"fact": {
-"src": "Hamilton County 建築許可(公開記録)",
-"ref": "許可 26HAM-PMT-004406 OBC Mechanical Permit",
-"value": null,
-"verbatim": "OBC Mechanical Permit",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:hamilton_oh:addr"
-},
-"karte": null,
-"company_id": "C-14031",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:27.012990+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "N&G Takhar Oil LLC obtained permits including repair work in Sycamore Township (5 permits).",
-"not_construction": false,
-"as_of": "2026-09-30",
-"n_permits": 5,
-"member_ids": [
-"S-35940",
-"S-36229",
-"S-64925",
-"S-68117",
-"S-69708"
-],
-"kinds": [
-"更新・修繕",
-"警備",
-"内容不明"
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
@@ -31580,70 +31184,6 @@
 },
 {
 "investor": {
-"name": "BIGGBY COFFEE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-65452",
-"state": "OH",
-"city": "Clermont County・1041 OLD US 52 NEW RICHMOND OH",
-"company": "BIGGBY COFFEE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-23",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "BIGGBY COFFEEがNEW RICHMONDで消防スプリンクラー設備の修繕許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Clermont County 建築許可(公開記録)",
-"ref": "許可 F-077867-2026 Fire Protection Systems Fire Sprinkler - Suppression",
-"value": 9250.0,
-"verbatim": "BIGGBY COFFEE FS / Fire Protection Systems Fire Sprinkler - Suppression / Fire Sprinkler - Suppression",
-"gc": null,
-"pin": "260922.006.",
-"owner_source": "parcel:clermont_oh"
-},
-"karte": null,
-"company_id": "C-15651",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:24.215064+00:00"
-},
-"meaning": "保全",
-"amount_usd": 9250.0,
-"headline_en": "BIGGBY COFFEE obtained a permit to repair fire sprinkler suppression system in New Richmond (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-23",
-"n_permits": 1,
-"member_ids": [
-"S-65452"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "GRAND COMMUNITIES LLC",
 "basis": "operator",
 "label": "操業事業者",
@@ -36460,72 +36000,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "GREATER CLEVELAND FOOD BANK INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-26848",
-"state": "OH",
-"city": "Cleveland・9830 LORAIN AVE, CLEVELAND, OH, 44102",
-"company": "GREATER CLEVELAND FOOD BANK INC",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "宗教・非営利",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-21",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "GREATER CLEVELAND FOOD BANKがクリーブランドで更新・修繕の許可を取得(3件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCP26-032865 Commercial Plumbing",
-"value": 140000.0,
-"verbatim": "Commercial Plumbing / B Business / INSTALL 2 WATER CLOSET/TOILET, 2 LAVATORY SINK, 4 SINK, 1 DRINKING FOUNTAIN, 9 FLOOR DRAIN, 2 HOT WATER HEATER, 200 LIN. FT. DRAIN, WASTE, VENT PIPING, 300 LIN. FT. WATER DISTRIBUTION PIPING ***BUILDING PERMIT NO BCB26-021500***",
-"gc": "STEINGASS MECHANCIAL CONTRACTING, INC",
-"pin": "00519103",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-7751",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:28.787740+00:00"
-},
-"meaning": "保全",
-"amount_usd": 915000.0,
-"headline_en": "Greater Cleveland Food Bank obtained repair/renovation permits in Cleveland (3 permits)",
-"not_construction": false,
-"as_of": "2026-09-21",
-"n_permits": 3,
-"member_ids": [
-"S-26698",
-"S-26848",
-"S-67695"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -62158,73 +61632,6 @@
 },
 {
 "investor": {
-"name": "BOARD OF EDUCATION",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-1947",
-"state": "OH",
-"city": "Columbus・4841 E LIVINGSTON AVE",
-"company": "BOARD OF EDUCATION",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-12",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "BOARD OF EDUCATIONがColumbusで警備設備・修繕の許可を取得(3件)",
-"infer": null,
-"note": "更新・修繕・警備",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 MMEPC2631262 Mechanical",
-"value": null,
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"gc": "FIRSTCALL MECHANICAL GROUP OHIO LLC",
-"pin": "010099180",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-14597",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:21.053269+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "BOARD OF EDUCATION obtained permits for security equipment and repair work in Columbus (3 permits)",
-"not_construction": false,
-"as_of": "2026-09-06",
-"n_permits": 3,
-"member_ids": [
-"S-1750",
-"S-1751",
-"S-1947"
-],
-"kinds": [
-"更新・修繕",
-"警備"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "CHICAGO SPECIAL EVENTS MANAGEMENT",
 "basis": "operator",
 "label": "操業事業者",
@@ -64850,327 +64257,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "THE UNIVERSITY OF CHICAGO",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-5269",
-"state": "IL",
-"city": "Chicago・6032 S KENWOOD AVE",
-"company": "THE UNIVERSITY OF CHICAGO",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "教育",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-05",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "シカゴ大学がシカゴでユーティリティ整備の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200476488 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 84400.0,
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. NEW TEMPORARY 200 AMP SERVICE DISCONNECTING MEANS WITH 4 CIRCUITS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. ELECTRIC VEHICLE SUPPLY EQUIPMENT:8 SPACES. SPECIFIC LOCATION: UNIVERSTIY OF CHICAGO CAMPUS PARKING LOT.",
-"gc": null,
-"pin": "2014401023",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-49",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:50.098603+00:00"
-},
-"meaning": "保全",
-"amount_usd": 84400.0,
-"headline_en": "University of Chicago obtained a utility work permit in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-08-05",
-"n_permits": 1,
-"member_ids": [
-"S-5269"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "CLEVELAND CLINIC FOUNDATION",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-26838",
-"state": "OH",
-"city": "Cleveland・9410 CARNEGIE AVE 0, CLEVELAND, OH, 44115",
-"company": "CLEVELAND CLINIC FOUNDATION",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-05",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CLEVELAND CLINIC FOUNDATIONがClevelandで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCB26-029251 Commercial Building",
-"value": 300000.0,
-"verbatim": "Commercial Building / B Business / Interior Only Remodel / MAKE INTERIOR ALTERATIONS SELECTIVE DEMOLITION OF 5TH-FLOOR AND ENABLING WORK. FOLLOW-ON PERMITS REQUIRED FOR BUILD-OUT AND TO ESTABLISH OCCUPANCY. MAINTAIN OBC CHAPTER 33 SAFEGUARDS DURING CONSTRUCTION. NO CERTIFICATE OF OCCUPANCY REQUIRED WITH THIS PERMIT.",
-"gc": "DRAKE CONSTRUCTION COMPANY",
-"pin": "11923058",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-7724",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:23.455108+00:00"
-},
-"meaning": "保全",
-"amount_usd": 300000.0,
-"headline_en": "CLEVELAND CLINIC FOUNDATION obtained a repair/renovation permit in Cleveland (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-06",
-"n_permits": 1,
-"member_ids": [
-"S-26838"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
-"name": "MCKINLEY ASSOCIATES INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-31874",
-"state": "MI",
-"city": "Ann Arbor・1362 Brookfield Dr Ann Arbor MI 48103",
-"company": "MCKINLEY ASSOCIATES INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-05",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "MCKINLEY ASSOCIATES INCがAnn Arborで更新・修繕の許可を取得(2件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ELECC26-0960 Electrical (Commercial)  - Reconnect",
-"value": null,
-"verbatim": "water heater install / Electrical (Commercial)  - Reconnect / Reconnect",
-"gc": null,
-"pin": "09-12-06-400-013",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-14871",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:38.538475+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained permits for repair/renovation (water heater) work in Ann Arbor (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-06",
-"n_permits": 2,
-"member_ids": [
-"S-31874",
-"S-31875"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "COMCAST",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-54219",
-"state": "IN",
-"city": "Bargersville・4271 LAUDER RD BARGERSVILLE IN 46106",
-"company": "COMCAST",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "通信・交通インフラ",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-05",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Comcastがバージャーズビルでユーティリティ整備の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Bargersville 建築許可(公開記録)",
-"ref": "許可 ELEC-005776-2026 Electrical Non-Residential",
-"value": 1500.0,
-"verbatim": "Comcast Power Supply / Electrical Non-Residential / Service Change",
-"gc": null,
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-2580",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:07.021427+00:00"
-},
-"meaning": "保全",
-"amount_usd": 1500.0,
-"headline_en": "Comcast obtained a permit for utility work (electrical service change) in Bargersville (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-05",
-"n_permits": 1,
-"member_ids": [
-"S-54219"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "AT&T",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-61042",
-"state": "IL",
-"city": "Crestwood・13459 S Cicero",
-"company": "AT&T",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "通信・交通インフラ",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-05",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "AT&TがCrestwoodでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Crestwood 建築許可(公開記録)",
-"ref": "許可 21835",
-"value": 5000.0,
-"verbatim": "Wirelss: Wireless At&T equipment",
-"gc": null,
-"pin": "24-34-302-015-0000",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-3101",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:37.975392+00:00"
-},
-"meaning": "保全",
-"amount_usd": 5000.0,
-"headline_en": "AT&T obtained a utility work permit in Crestwood (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-05",
-"n_permits": 1,
-"member_ids": [
-"S-61042"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -75152,72 +74238,6 @@
 },
 {
 "investor": {
-"name": "CLEVELAND CITY OF",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-26823",
-"state": "OH",
-"city": "Cleveland・103 ERIESIDE AVE, CLEVELAND, OH, 44114",
-"company": "CLEVELAND CITY OF",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-08-05",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CLEVELAND CITY OFがClevelandで警備設備・仮設テントの許可を取得(2件)",
-"infer": "INSTALL DATE 08/07/2026 - REMOVAL DATE: 08/09/2026",
-"note": "警備・事務所・その他",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCE26-032767 Commercial Electrical",
-"value": 1000.0,
-"verbatim": "Commercial Electrical / A-1 Assembly - Performing Arts / Electrical grounding for MGK Day Event 8/6. ***BUILDING PERMIT NO BCB26-032687***",
-"gc": "LAKELAND ELECTRIC, INC.",
-"pin": "10103015",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-7752",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:03.214020+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": 30839.0,
-"headline_en": "CLEVELAND CITY OF obtained permits for security equipment and temporary tent setup in Cleveland (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-06",
-"n_permits": 2,
-"member_ids": [
-"S-26823",
-"S-26833"
-],
-"kinds": [
-"警備",
-"事務所・その他"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "PEASLEE NEIGHBORHOOD CENTER INC",
 "basis": "operator",
 "label": "操業事業者",
@@ -78807,70 +77827,6 @@
 },
 {
 "investor": {
-"name": "Porter-Starke Services Crisis Center",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-69298",
-"state": "IN",
-"city": "Indiana/LAPORTE・1230 W SR 2",
-"company": "Porter-Starke Services Crisis Center",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "工事でない記録",
-"category_raw": "工事でない記録",
-"confidence": "high",
-"date": "2026-09-29",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Porter-Starke Services Crisis CenterがLAPORTEで記録取得の許可を取得(1件)",
-"infer": null,
-"note": "工事でない記録",
-"fact": {
-"src": "インディアナ州 建築計画審査記録(公開記録)",
-"ref": "許可 462773:2026-09-29 CDR release",
-"value": null,
-"verbatim": "Porter-Starke Services Crisis Center - / Medicla Clinic",
-"gc": null,
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-15511",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:56.901926+00:00"
-},
-"meaning": "内容不明",
-"amount_usd": null,
-"headline_en": "Porter-Starke Services Crisis Center obtained a record (not construction) permit in LAPORTE (1 permit).",
-"not_construction": true,
-"as_of": "2026-09-29",
-"n_permits": 1,
-"member_ids": [
-"S-69298"
-],
-"kinds": [
-"工事でない記録"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "ST. MARON",
 "basis": "operator",
 "label": "操業事業者",
@@ -79374,70 +78330,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-68647"
-],
-"kinds": [
-"工事でない記録"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "Sunman BP",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-68653",
-"state": "IN",
-"city": "Indiana/RIPLEY・8845 E SR 46",
-"company": "Sunman BP",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "工事でない記録",
-"category_raw": "工事でない記録",
-"confidence": "high",
-"date": "2026-09-28",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Sunman BPがRIPLEYで記録取得の許可を取得(1件)",
-"infer": null,
-"note": "工事でない記録",
-"fact": {
-"src": "インディアナ州 建築計画審査記録(公開記録)",
-"ref": "許可 464330:2026-09-28 CDR release",
-"value": null,
-"verbatim": "Sunman BP / C-Store",
-"gc": null,
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-15502",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:44.972155+00:00"
-},
-"meaning": "内容不明",
-"amount_usd": null,
-"headline_en": "Sunman BP obtained a record (transfer/license/certificate) permit in RIPLEY (1 permit).",
-"not_construction": true,
-"as_of": "2026-09-28",
-"n_permits": 1,
-"member_ids": [
-"S-68653"
 ],
 "kinds": [
 "工事でない記録"
@@ -80338,71 +79230,6 @@
 ],
 "kinds": [
 "工事でない記録"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "JDR RENTAL PROPERTIES LLC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-8205",
-"state": "OH",
-"city": "Cincinnati・5504 STEWART AV",
-"company": "JDR RENTAL PROPERTIES LLC",
-"entity_type": "spe",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "内容不明",
-"category_raw": "内容不明",
-"confidence": "high",
-"date": "2026-09-25",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "JDR RENTAL PROPERTIES LLCがCincinnatiで許可を取得(2件)",
-"infer": null,
-"note": "内容不明",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P07444 Building",
-"value": 6000.0,
-"verbatim": "Alteration / Building / 1-2-3 FM",
-"gc": "ORICK RENOVATIONS",
-"pin": "00340A020004",
-"owner_source": "parcel:hamilton_oh:addr"
-},
-"karte": null,
-"company_id": "C-14715",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:41.479425+00:00"
-},
-"meaning": "内容不明",
-"amount_usd": 6000.0,
-"headline_en": "JDR RENTAL PROPERTIES LLC obtained permits in Cincinnati (2 records)",
-"not_construction": false,
-"as_of": "2026-09-25",
-"n_permits": 2,
-"member_ids": [
-"S-8205",
-"S-67563"
-],
-"kinds": [
-"内容不明"
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
@@ -83539,70 +82366,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-68387"
-],
-"kinds": [
-"工事でない記録"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "Dayton Freight Lines",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-68395",
-"state": "IN",
-"city": "Indiana/HENDRICKS・1120 E Northfield Dr",
-"company": "Dayton Freight Lines",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "物流・卸",
-"category": "工事でない記録",
-"category_raw": "工事でない記録",
-"confidence": "high",
-"date": "2026-09-22",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Dayton Freight LinesがHENDRICKSで記録取得の許可を取得(1 件)",
-"infer": null,
-"note": "工事でない記録",
-"fact": {
-"src": "インディアナ州 建築計画審査記録(公開記録)",
-"ref": "許可 464182:2026-09-22 CDR release",
-"value": null,
-"verbatim": "Dayton Freight Lines",
-"gc": null,
-"pin": null,
-"owner_source": null
-},
-"karte": null,
-"company_id": "C-14866",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:37.624855+00:00"
-},
-"meaning": "内容不明",
-"amount_usd": null,
-"headline_en": "Dayton Freight Lines obtained a permit record (CDR release) in HENDRICKS, Indiana (1 permit)",
-"not_construction": true,
-"as_of": "2026-09-22",
-"n_permits": 1,
-"member_ids": [
-"S-68395"
 ],
 "kinds": [
 "工事でない記録"
@@ -87893,11 +86656,11 @@
 "name": "COMCAST",
 "entity_type": "corp",
 "jp": false,
-"signals": 21,
+"signals": 20,
 "value_total": null,
 "states": "IL,IN,MI",
 "latest": "2026-10-02",
-"targets": 21,
+"targets": 20,
 "signal_ids": [
 "S-71054",
 "S-69363",
@@ -87918,8 +86681,7 @@
 "S-19419",
 "S-19423",
 "S-31032",
-"S-30200",
-"S-54219"
+"S-30200"
 ],
 "n_amount_excluded": 0
 },
@@ -87956,37 +86718,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-14871",
-"name": "MCKINLEY ASSOCIATES INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 17,
-"value_total": null,
-"states": "MI",
-"latest": "2026-09-30",
-"targets": 17,
-"signal_ids": [
-"S-69521",
-"S-53548",
-"S-32389",
-"S-32012",
-"S-32013",
-"S-32020",
-"S-32022",
-"S-32023",
-"S-32025",
-"S-32043",
-"S-32066",
-"S-32123",
-"S-32136",
-"S-32153",
-"S-32163",
-"S-31040",
-"S-31874"
-],
-"n_amount_excluded": 9
-},
-{
 "id": "C-3732",
 "name": "CINCINNATI CITY OF",
 "entity_type": "public",
@@ -88016,6 +86747,36 @@
 "S-8469"
 ],
 "n_amount_excluded": 0
+},
+{
+"id": "C-14871",
+"name": "MCKINLEY ASSOCIATES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 16,
+"value_total": null,
+"states": "MI",
+"latest": "2026-09-30",
+"targets": 16,
+"signal_ids": [
+"S-69521",
+"S-53548",
+"S-32389",
+"S-32012",
+"S-32013",
+"S-32020",
+"S-32022",
+"S-32023",
+"S-32025",
+"S-32043",
+"S-32066",
+"S-32123",
+"S-32136",
+"S-32153",
+"S-32163",
+"S-31040"
+],
+"n_amount_excluded": 9
 },
 {
 "id": "C-3730",
@@ -88102,32 +86863,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-49",
-"name": "THE UNIVERSITY OF CHICAGO",
-"entity_type": "corp",
-"jp": false,
-"signals": 12,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-30",
-"targets": 12,
-"signal_ids": [
-"S-7049",
-"S-745",
-"S-70066",
-"S-66766",
-"S-59730",
-"S-58207",
-"S-6850",
-"S-50925",
-"S-50949",
-"S-36579",
-"S-626",
-"S-5269"
-],
-"n_amount_excluded": 1
-},
-{
 "id": "C-55",
 "name": "CHICAGO PUBLIC SCHOOLS",
 "entity_type": "public",
@@ -88179,27 +86914,27 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-3101",
-"name": "AT&T",
+"id": "C-49",
+"name": "THE UNIVERSITY OF CHICAGO",
 "entity_type": "corp",
 "jp": false,
 "signals": 11,
 "value_total": null,
-"states": "IL,MI,OH,WI",
-"latest": "2026-10-01",
+"states": "IL",
+"latest": "2026-09-30",
 "targets": 11,
 "signal_ids": [
-"S-70441",
-"S-68007",
-"S-68009",
-"S-64681",
-"S-60015",
-"S-33076",
-"S-46585",
-"S-49370",
-"S-18576",
-"S-682",
-"S-61042"
+"S-7049",
+"S-745",
+"S-70066",
+"S-66766",
+"S-59730",
+"S-58207",
+"S-6850",
+"S-50925",
+"S-50949",
+"S-36579",
+"S-626"
 ],
 "n_amount_excluded": 1
 },
@@ -88226,6 +86961,30 @@
 "S-36030"
 ],
 "n_amount_excluded": 0
+},
+{
+"id": "C-3101",
+"name": "AT&T",
+"entity_type": "corp",
+"jp": false,
+"signals": 10,
+"value_total": null,
+"states": "IL,MI,OH,WI",
+"latest": "2026-10-01",
+"targets": 10,
+"signal_ids": [
+"S-70441",
+"S-68007",
+"S-68009",
+"S-64681",
+"S-60015",
+"S-33076",
+"S-46585",
+"S-49370",
+"S-18576",
+"S-682"
+],
+"n_amount_excluded": 1
 },
 {
 "id": "C-335",
@@ -88425,48 +87184,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-7724",
-"name": "CLEVELAND CLINIC FOUNDATION",
-"entity_type": "corp",
-"jp": false,
-"signals": 7,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-21",
-"targets": 7,
-"signal_ids": [
-"S-26836",
-"S-36970",
-"S-36881",
-"S-26689",
-"S-37004",
-"S-26795",
-"S-26838"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-7752",
-"name": "CLEVELAND CITY OF",
-"entity_type": "public",
-"jp": false,
-"signals": 7,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-01",
-"targets": 7,
-"signal_ids": [
-"S-73839",
-"S-73850",
-"S-73902",
-"S-73909",
-"S-26687",
-"S-36989",
-"S-26823"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15438",
 "name": "Breezeline",
 "entity_type": "corp",
@@ -88527,6 +87244,26 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-7752",
+"name": "CLEVELAND CITY OF",
+"entity_type": "public",
+"jp": false,
+"signals": 6,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-01",
+"targets": 6,
+"signal_ids": [
+"S-73839",
+"S-73850",
+"S-73902",
+"S-73909",
+"S-26687",
+"S-36989"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-1072",
 "name": "COMERICA BANK",
 "entity_type": "corp",
@@ -88561,25 +87298,6 @@
 "S-65945",
 "S-65983",
 "S-6624"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-14597",
-"name": "BOARD OF EDUCATION",
-"entity_type": "public",
-"jp": false,
-"signals": 5,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-23",
-"targets": 5,
-"signal_ids": [
-"S-1398",
-"S-1947",
-"S-1824",
-"S-1912",
-"S-66907"
 ],
 "n_amount_excluded": 0
 },
@@ -88793,6 +87511,25 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-7724",
+"name": "CLEVELAND CLINIC FOUNDATION",
+"entity_type": "corp",
+"jp": false,
+"signals": 5,
+"value_total": null,
+"states": "OH",
+"latest": "2026-08-27",
+"targets": 5,
+"signal_ids": [
+"S-36970",
+"S-36881",
+"S-26689",
+"S-37004",
+"S-26795"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-1126",
 "name": "DETROIT LAND BANK AUTHORITY",
 "entity_type": "public",
@@ -88861,6 +87598,24 @@
 "S-24425",
 "S-1536",
 "S-65243"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-14597",
+"name": "BOARD OF EDUCATION",
+"entity_type": "public",
+"jp": false,
+"signals": 4,
+"value_total": null,
+"states": "OH",
+"latest": "2026-09-23",
+"targets": 4,
+"signal_ids": [
+"S-1398",
+"S-1824",
+"S-1912",
+"S-66907"
 ],
 "n_amount_excluded": 0
 },
@@ -89207,23 +87962,6 @@
 "S-33407",
 "S-69311",
 "S-68504"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-74",
-"name": "TARGET CORPORATION",
-"entity_type": "corp",
-"jp": false,
-"signals": 3,
-"value_total": null,
-"states": "IL,OH",
-"latest": "2026-09-29",
-"targets": 3,
-"signal_ids": [
-"S-5226",
-"S-65631",
-"S-69063"
 ],
 "n_amount_excluded": 0
 },
@@ -89594,22 +88332,6 @@
 "signal_ids": [
 "S-50911",
 "S-69734"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15228",
-"name": "TROPICAL SMOOTHIE CAFE",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "IL,IN",
-"latest": "2026-09-24",
-"targets": 2,
-"signal_ids": [
-"S-554",
-"S-68665"
 ],
 "n_amount_excluded": 0
 },
@@ -90106,6 +88828,22 @@
 "signal_ids": [
 "S-19370",
 "S-68790"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-74",
+"name": "TARGET CORPORATION",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "OH",
+"latest": "2026-09-29",
+"targets": 2,
+"signal_ids": [
+"S-65631",
+"S-69063"
 ],
 "n_amount_excluded": 0
 },
@@ -91461,21 +90199,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-14031",
-"name": "N&G TAKHAR OIL LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-30",
-"targets": 1,
-"signal_ids": [
-"S-36229"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-14034",
 "name": "BETHEL BAPTIST CHURCH EAST",
 "entity_type": "corp",
@@ -92421,21 +91144,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-14715",
-"name": "JDR RENTAL PROPERTIES LLC",
-"entity_type": "spe",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-25",
-"targets": 1,
-"signal_ids": [
-"S-8205"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-14721",
 "name": "CHURCH OHIO CONF ASSOC OF",
 "entity_type": "public",
@@ -93051,21 +91759,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-14866",
-"name": "Dayton Freight Lines",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IN",
-"latest": "2026-09-22",
-"targets": 1,
-"signal_ids": [
-"S-68395"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-14868",
 "name": "IU HEALTH FORT WAYNE HOSPITAL",
 "entity_type": "corp",
@@ -93677,6 +92370,21 @@
 "targets": 1,
 "signal_ids": [
 "S-902"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15228",
+"name": "TROPICAL SMOOTHIE CAFE",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IN",
+"latest": "2026-09-24",
+"targets": 1,
+"signal_ids": [
+"S-68665"
 ],
 "n_amount_excluded": 0
 },
@@ -95301,21 +94009,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15502",
-"name": "Sunman BP",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IN",
-"latest": "2026-09-28",
-"targets": 1,
-"signal_ids": [
-"S-68653"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15504",
 "name": "TIMBER GLEN II LTD",
 "entity_type": "corp",
@@ -95342,21 +94035,6 @@
 "targets": 1,
 "signal_ids": [
 "S-68589"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15511",
-"name": "Porter-Starke Services Crisis Center",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IN",
-"latest": "2026-09-29",
-"targets": 1,
-"signal_ids": [
-"S-69298"
 ],
 "n_amount_excluded": 0
 },
@@ -96017,21 +94695,6 @@
 "targets": 1,
 "signal_ids": [
 "S-68532"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15651",
-"name": "BIGGBY COFFEE",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-23",
-"targets": 1,
-"signal_ids": [
-"S-65452"
 ],
 "n_amount_excluded": 0
 },
@@ -97701,21 +96364,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15906",
-"name": "QAHWA COFFEE",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-21",
-"targets": 1,
-"signal_ids": [
-"S-15247"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15908",
 "name": "Mulberry Jeans Accents",
 "entity_type": "corp",
@@ -98312,21 +96960,6 @@
 "targets": 1,
 "signal_ids": [
 "S-68478"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15992",
-"name": "Payton Place Powersports",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IN",
-"latest": "2026-09-22",
-"targets": 1,
-"signal_ids": [
-"S-68345"
 ],
 "n_amount_excluded": 0
 },
@@ -100682,21 +99315,6 @@
 "targets": 1,
 "signal_ids": [
 "S-70912"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-7751",
-"name": "GREATER CLEVELAND FOOD BANK INC",
-"entity_type": "public",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-21",
-"targets": 1,
-"signal_ids": [
-"S-26848"
 ],
 "n_amount_excluded": 0
 },

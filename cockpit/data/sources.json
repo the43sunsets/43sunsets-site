@@ -1,21 +1,21 @@
 {
-"generated_at": "2026-11-02T15:19:48+00:00",
+"generated_at": "2026-11-03T11:06:00+00:00",
 "status_updated": "2026-09-07",
 "schedule": "毎日 02:00 America/Chicago",
 "permits": {
 "unit": "自治体(郡別に集計)",
 "health": "OK",
-"last_run_at": "2026-11-02T08:55:15Z",
+"last_run_at": "2026-11-03T08:56:03Z",
 "munis": 2085,
-"fresh": 506,
-"pop_share_fresh": 0.4009888724189552,
+"fresh": 501,
+"pop_share_fresh": 0.39561946388921065,
 "states": [
 {
 "state": "IL",
 "name": "イリノイ",
 "munis": 505,
-"fresh": 72,
-"pop_share_fresh": 0.4964
+"fresh": 68,
+"pop_share_fresh": 0.4937
 },
 {
 "state": "IN",
@@ -28,8 +28,8 @@
 "state": "MI",
 "name": "ミシガン",
 "munis": 366,
-"fresh": 8,
-"pop_share_fresh": 0.1349
+"fresh": 7,
+"pop_share_fresh": 0.1152
 },
 {
 "state": "OH",
@@ -51,7 +51,7 @@
 "unit": "州",
 "health": "SKIP",
 "last_run_at": "2026-10-13T07:02:01+00:00",
-"filings": 10104,
+"filings": 10200,
 "states_live": [
 "OH"
 ],
@@ -101,9 +101,9 @@
 "name": "ウィスコンシン",
 "status": "partial",
 "label": "一覧を収集中・本文は照会中",
-"n": 9145,
+"n": 9241,
 "since": "2026-07-08",
-"latest": "2026-11-01",
+"latest": "2026-11-03",
 "note": "州金融機関局(DFI)の公開検索 API から登記の一覧と債務者の住所を毎日取得(2026-09-06〜)。担保物の本文は有償データのため提供条件を照会中(2026-09-07 送信)。本文が揃うまでページには出しません。"
 }
 ]
@@ -111,8 +111,8 @@
 "subsidies": {
 "unit": "出し手(連邦・州・市郡)",
 "health": "OK",
-"last_run_at": "2026-11-02T09:52:30Z",
-"total": 21224,
+"last_run_at": "2026-11-03T09:59:16Z",
+"total": 21225,
 "issuers": [
 {
 "id": "SRC-075",
@@ -122,7 +122,7 @@
 "status_label": "収集中",
 "n": 12828,
 "n_shown": 12680,
-"last": "2026-11-02T09:50",
+"last": "2026-11-03T09:57",
 "note": "事業者への助成(grants/cooperative agreements)と、SBA 504・USDA B&I/REAP・DOE 融資。直近 365 日に取引(新規・変更)のあった案件。日付 = 決定日(Base Obligation Date / 融資は Issued Date)。分類は規則(CFDA・機関・本文の語)で AI 読みではない。"
 },
 {
@@ -131,9 +131,9 @@
 "label": "Indiana IEDC — Transparency Portal(州)",
 "status": "live",
 "status_label": "収集中",
-"n": 6043,
-"n_shown": 1855,
-"last": "2026-11-02T09:52",
+"n": 6044,
+"n_shown": 1856,
+"last": "2026-11-03T09:59",
 "note": "EDGE/HBI/SEF 等の契約(契約日・契約額・予定投資額・雇用)。決定日 = 契約日。段階 = 承認。"
 },
 {
@@ -144,7 +144,7 @@
 "status_label": "収集中",
 "n": 1939,
 "n_shown": 1939,
-"last": "2026-11-02T09:52",
+"last": "2026-11-03T09:59",
 "note": "WEDC の全制度(税額控除・助成・融資・投資家控除)。四半期更新の xlsx。事業費・計画設備投資・計画雇用・業種(NAICS)。"
 },
 {
@@ -155,7 +155,7 @@
 "status_label": "収集中",
 "n": 414,
 "n_shown": 190,
-"last": "2026-11-02T09:50",
+"last": "2026-11-03T09:57",
 "note": "EDGE 税額控除の契約(2015-01-20 以降・締結から 10 営業日以内に掲示)。決定日 = 締結日。金額 = 控除の見込額。段階 = 承認。"
 },
 {
@@ -207,7 +207,7 @@
 "hiring": {
 "unit": "会社(採用ページ)",
 "health": "OK",
-"last_run_at": "2026-11-02T10:10:31+00:00",
+"last_run_at": "2026-11-03T10:02:44Z",
 "companies": 314,
 "boards": 377,
 "ats_types": [
@@ -224,9 +224,9 @@
 "jobvite",
 "ukg"
 ],
-"open": 12337,
-"shown": 2442,
-"counted_day": "2026-11-02",
+"open": 12379,
+"shown": 2414,
+"counted_day": "2026-11-03",
 "note": "公開 API を持つ会社(Greenhouse・Lever・Workday・SmartRecruiters・BambooHR・Paylocity・ADP・iCIMS)は毎晩、総領事館名簿の会社は採用ページ本文を週 1 で AI が読む。人材派遣会社は除外。増勢の判定は観測開始から 30 日後。",
 "by_ats": [
 {
@@ -234,11 +234,11 @@
 "label": "Greenhouse",
 "boards": 21,
 "companies": 19,
-"open": 477,
-"shown": 41,
+"open": 474,
+"shown": 42,
 "shown_companies": 6,
-"last_collect": "2026-11-02T09:55:15Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"last_collect": "2026-11-03T10:02:44Z",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 },
 {
@@ -246,11 +246,11 @@
 "label": "Lever",
 "boards": 6,
 "companies": 6,
-"open": 87,
-"shown": 4,
-"shown_companies": 3,
-"last_collect": "2026-11-02T09:55:15Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"open": 86,
+"shown": 5,
+"shown_companies": 4,
+"last_collect": "2026-11-03T10:02:44Z",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 },
 {
@@ -258,11 +258,11 @@
 "label": "Workday",
 "boards": 125,
 "companies": 106,
-"open": 6678,
-"shown": 719,
-"shown_companies": 68,
-"last_collect": "2026-11-02T09:55:15Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"open": 6720,
+"shown": 687,
+"shown_companies": 67,
+"last_collect": "2026-11-03T10:02:44Z",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 },
 {
@@ -274,7 +274,7 @@
 "shown": 91,
 "shown_companies": 3,
 "last_collect": "2026-09-30T08:47:19Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 },
 {
@@ -282,11 +282,11 @@
 "label": "BambooHR",
 "boards": 4,
 "companies": 4,
-"open": 45,
+"open": 46,
 "shown": 6,
 "shown_companies": 2,
-"last_collect": "2026-11-02T09:55:15Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"last_collect": "2026-11-03T10:02:44Z",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 },
 {
@@ -294,11 +294,11 @@
 "label": "Paylocity",
 "boards": 47,
 "companies": 45,
-"open": 512,
-"shown": 215,
+"open": 503,
+"shown": 211,
 "shown_companies": 31,
-"last_collect": "2026-11-02T09:55:15Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"last_collect": "2026-11-03T10:02:44Z",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 },
 {
@@ -306,11 +306,11 @@
 "label": "ADP",
 "boards": 41,
 "companies": 41,
-"open": 397,
-"shown": 161,
-"shown_companies": 31,
-"last_collect": "2026-11-02T09:55:15Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"open": 403,
+"shown": 162,
+"shown_companies": 32,
+"last_collect": "2026-11-03T10:02:44Z",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 },
 {
@@ -318,11 +318,11 @@
 "label": "iCIMS",
 "boards": 63,
 "companies": 30,
-"open": 2443,
-"shown": 728,
+"open": 2435,
+"shown": 727,
 "shown_companies": 17,
-"last_collect": "2026-11-02T09:55:15Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"last_collect": "2026-11-03T10:02:44Z",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 },
 {
@@ -342,11 +342,11 @@
 "label": "applicantpro",
 "boards": 12,
 "companies": 12,
-"open": 229,
-"shown": 99,
+"open": 245,
+"shown": 104,
 "shown_companies": 6,
-"last_collect": "2026-11-02T09:55:15Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"last_collect": "2026-11-03T10:02:44Z",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 },
 {
@@ -354,11 +354,11 @@
 "label": "jobvite",
 "boards": 11,
 "companies": 8,
-"open": 88,
-"shown": 4,
+"open": 86,
+"shown": 5,
 "shown_companies": 2,
-"last_collect": "2026-11-02T09:55:15Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"last_collect": "2026-11-03T10:02:44Z",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 },
 {
@@ -370,7 +370,7 @@
 "shown": 357,
 "shown_companies": 16,
 "last_collect": "2026-09-30T08:47:19Z",
-"next_collect": "2026-11-03T02:00-06:00",
+"next_collect": "2026-11-04T02:00-06:00",
 "cadence": "毎晩 02:00 CT(公開 API)"
 }
 ]
