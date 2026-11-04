@@ -23,11 +23,79 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 3,
 "value_total": null,
 "n_amount_excluded": 1,
-"latest": "2026-08-13",
+"latest": "2026-10-23",
 "items": [
+{
+"id": "S-86425",
+"date": "2026-10-23",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "2139 AUBURN AV",
+"permit_no": "2026P09966",
+"permit_type": "Building",
+"source_id": "SRC-003",
+"value": 20000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CHRIST HOSPITAL THEがCincinnatiで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Alteration / Building / I-2",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:53:06.338289+00:00",
+"reading_id": "01M6JB0SH2W5R1VYXKDD3HFTZ8"
+},
+"n_permits": 1,
+"member_ids": [
+"S-86425"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-86272",
+"date": "2026-10-22",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "2123 AUBURN AV",
+"permit_no": "2026P08937",
+"permit_type": "HVAC",
+"source_id": "SRC-003",
+"value": 87500.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CHRIST HOSPITAL THEがCincinnatiで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "HVAC / HVAC / B",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:29.654543+00:00",
+"reading_id": "01M6JAZNPPE15HSBRDMVH4S4GC"
+},
+"n_permits": 1,
+"member_ids": [
+"S-86272"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-8471",
 "date": "2026-08-13",
@@ -90,6 +158,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-23",
+"face": "permits",
+"title": "建設許可(Cincinnati): CHRIST HOSPITAL THEがCincinnatiで更新・修繕の許可を取得(1件)",
+"ref": "S-86425",
+"summary": "CHRIST HOSPITAL THEがCincinnatiで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-10-22",
+"face": "permits",
+"title": "建設許可(Cincinnati): CHRIST HOSPITAL THEがCincinnatiで更新・修繕の許可を取得(1件)",
+"ref": "S-86272",
+"summary": "CHRIST HOSPITAL THEがCincinnatiで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-08-13",
 "face": "permits",
 "title": "建設許可(Cincinnati): CHRIST HOSPITAL THEがCincinnatiで警備設備の許可を取得(1件)",
@@ -97,6 +179,6 @@
 "summary": "CHRIST HOSPITAL THEがCincinnatiで警備設備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

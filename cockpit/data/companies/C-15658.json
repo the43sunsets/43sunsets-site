@@ -23,11 +23,79 @@
 },
 "faces": {
 "permits": {
-"count": 3,
+"count": 6,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-23",
+"latest": "2026-10-23",
 "items": [
+{
+"id": "S-85973",
+"date": "2026-10-23",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "4008 SILVERSTONE LN BATAVIA OH 45103",
+"permit_no": "B-079106-2026",
+"permit_type": "Residential Plumbing New - Single Family",
+"source_id": "SRC-022",
+"value": 231027.0,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "GRAND COMMUNITIES LLCがBATAVIAで増築・新築の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "FISCHER SFR / Residential Plumbing New - Single Family / Plumbing New",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:36.055334+00:00",
+"reading_id": "01M6JAZVYQ3C9JG5NPV559CWD6"
+},
+"n_permits": 1,
+"member_ids": [
+"S-85973"
+],
+"kinds": [
+"増築・新築"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-76842",
+"date": "2026-10-09",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "4032 SILVERSTONE LN BATAVIA OH",
+"permit_no": "B-078773-2026",
+"permit_type": "Residential Plumbing New - Single Family",
+"source_id": "SRC-022",
+"value": 181128.0,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "GRAND COMMUNITIES LLCがBATAVIAで増築・新築の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "FISCHER SFR / Residential Plumbing New - Single Family / Plumbing New",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:30.823440+00:00",
+"reading_id": "01M6JAZPV7J157EF33MDYWHK0F"
+},
+"n_permits": 1,
+"member_ids": [
+"S-76842"
+],
+"kinds": [
+"増築・新築"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-29287",
 "date": "2026-09-23",
@@ -62,6 +130,49 @@
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-84236",
+"date": "2026-10-20",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "5894 PARKVIEW LN Unit: 201 MILFORD OH",
+"permit_no": "B-074578-2026",
+"permit_type": "Commercial - Plumbing SFU",
+"source_id": "SRC-022",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "GRAND COMMUNITIES LLCがミルフォードで更新・修繕の許可を取得(10件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "FISCHER 10 FAMILY UNIT 201 / Commercial - Plumbing SFU / Plumbing SFU",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:38.382996+00:00",
+"reading_id": "01M6JAZY7FNP8V2CVVFXHRVX1G"
+},
+"n_permits": 10,
+"member_ids": [
+"S-84236",
+"S-84237",
+"S-84238",
+"S-84239",
+"S-84240",
+"S-84241",
+"S-84242",
+"S-84243",
+"S-84244",
+"S-84245"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-65456",
@@ -159,6 +270,27 @@
 },
 "timeline": [
 {
+"date": "2026-10-23",
+"face": "permits",
+"title": "建設許可(Clermont County): GRAND COMMUNITIES LLCがBATAVIAで増築・新築の許可を取得(1件)",
+"ref": "S-85973",
+"summary": "GRAND COMMUNITIES LLCがBATAVIAで増築・新築の許可を取得(1件)"
+},
+{
+"date": "2026-10-20",
+"face": "permits",
+"title": "建設許可(Clermont County): GRAND COMMUNITIES LLCがミルフォードで更新・修繕の許可を取得(10件)",
+"ref": "S-84236",
+"summary": "GRAND COMMUNITIES LLCがミルフォードで更新・修繕の許可を取得(10件)"
+},
+{
+"date": "2026-10-09",
+"face": "permits",
+"title": "建設許可(Clermont County): GRAND COMMUNITIES LLCがBATAVIAで増築・新築の許可を取得(1件)",
+"ref": "S-76842",
+"summary": "GRAND COMMUNITIES LLCがBATAVIAで増築・新築の許可を取得(1件)"
+},
+{
 "date": "2026-09-23",
 "face": "permits",
 "title": "建設許可(Clermont County): GRAND COMMUNITIES LLCがMILFORDで新築の許可を取得(2件)",
@@ -180,6 +312,6 @@
 "summary": "GRAND COMMUNITIES LLCがGOSHENで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

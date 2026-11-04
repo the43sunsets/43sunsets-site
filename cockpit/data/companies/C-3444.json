@@ -20,11 +20,47 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-01",
+"latest": "2026-10-16",
 "items": [
+{
+"id": "S-75373",
+"date": "2026-10-16",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "4170 ROSSLYN DR",
+"permit_no": "2026P08786",
+"permit_type": "Plumbing Permits",
+"source_id": "SRC-003",
+"value": 6000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "VEGA AMERICAS INCがCincinnatiで修繕・看板設置の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Plumbing Permits / Plumbing Permits / B",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:22.968523+00:00",
+"reading_id": "01M6JAZF5REY6DC4SR49Q6ZMJX"
+},
+"n_permits": 2,
+"member_ids": [
+"S-75373",
+"S-82770"
+],
+"kinds": [
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-73567",
 "date": "2026-10-01",
@@ -314,6 +350,13 @@
 "summary": null
 },
 {
+"date": "2026-10-16",
+"face": "permits",
+"title": "建設許可(Cincinnati): VEGA AMERICAS INCがCincinnatiで修繕・看板設置の許可を取得(2件)",
+"ref": "S-75373",
+"summary": "VEGA AMERICAS INCがCincinnatiで修繕・看板設置の許可を取得(2件)"
+},
+{
 "date": "2026-10-12",
 "face": "hiring",
 "title": "求人: Supply Chain Co-Op - Spring 2027(物流・Mason OH)",
@@ -363,6 +406,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

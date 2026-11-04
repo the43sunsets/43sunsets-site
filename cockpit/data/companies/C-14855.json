@@ -20,11 +20,51 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-18",
+"latest": "2026-10-21",
 "items": [
+{
+"id": "S-70325",
+"date": "2026-10-21",
+"applied": null,
+"state": "IN",
+"jurisdiction": "Indiana/MARION",
+"address": "9115 N Hague Rd",
+"permit_no": "463673:2026-10-01",
+"permit_type": "CDR release",
+"source_id": "SRC-009",
+"value": null,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "RocheがインディアナポリスでMARIONで危険物・倉庫・生産設備の許可を取得(3 件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Roche Building W5 Hazardous Storage 2026 / Office/Production/Warehse",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:21.473870+00:00",
+"reading_id": "01M6JAZDQ11NW7FQ3RJ684CVC0"
+},
+"n_permits": 3,
+"member_ids": [
+"S-70325",
+"S-79717",
+"S-84625"
+],
+"kinds": [
+"倉庫・搬送",
+"生産設備",
+"危険物",
+"事務所・その他",
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
 {
 "id": "S-68446",
 "date": "2026-09-18",
@@ -87,6 +127,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-21",
+"face": "permits",
+"title": "建設許可(Indiana/MARION): RocheがインディアナポリスでMARIONで危険物・倉庫・生産設備の許可を取得(3 件)",
+"ref": "S-70325",
+"summary": "RocheがインディアナポリスでMARIONで危険物・倉庫・生産設備の許可を取得(3 件)"
+},
+{
 "date": "2026-09-18",
 "face": "permits",
 "title": "建設許可(Indiana/MARION): Rocheが危険物設備の許可を取得(1件)",
@@ -94,6 +141,6 @@
 "summary": "Rocheが危険物設備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

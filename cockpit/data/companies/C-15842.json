@@ -23,11 +23,45 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-17",
+"latest": "2026-10-16",
 "items": [
+{
+"id": "S-80963",
+"date": "2026-10-16",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1997 N CLYBOURN AVE",
+"permit_no": "B200512796",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"source_id": "SRC-001",
+"value": 750000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "PAWS CHICAGOがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "REPAIR/REPLACEMENT AFFECTING 1 SYSTEMS :   1 ROOFTOP PACKAGED UNIT(ANNEXAIR, MODEL: HDA-VHX 400-800) . ELECTRICAL WORK UNDER THIS PERMIT = NO . LOCATIONS: 0 RESIDENTIAL UNIT(S), 1 NON-RESIDENTIAL UNIT(S), EXTERIOR WORK,  REPLACING A DOAS UNIT ON ROOF, LIKE-FOR-LIKE.",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:48.461958+00:00",
+"reading_id": "01M6JB082DKWV2QDFECWZYRV41"
+},
+"n_permits": 1,
+"member_ids": [
+"S-80963"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-61958",
 "date": "2026-09-17",
@@ -90,6 +124,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-16",
+"face": "permits",
+"title": "建設許可(Chicago): PAWS CHICAGOがChicagoで更新・修繕の許可を取得(1件)",
+"ref": "S-80963",
+"summary": "PAWS CHICAGOがChicagoで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-09-17",
 "face": "permits",
 "title": "建設許可(Chicago): PAWS CHICAGOがChicagoで事務所・その他の許可を取得(1 件)",
@@ -97,6 +138,6 @@
 "summary": "PAWS CHICAGOがChicagoで事務所・その他の許可を取得(1 件)"
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

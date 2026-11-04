@@ -20,11 +20,113 @@
 },
 "faces": {
 "permits": {
-"count": 7,
+"count": 11,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-05",
+"latest": "2026-10-29",
 "items": [
+{
+"id": "S-79106",
+"date": "2026-10-14",
+"applied": null,
+"state": "IN",
+"jurisdiction": "Indiana/FRANKLIN",
+"address": "1034 SR 229 N",
+"permit_no": "464385:2026-10-14",
+"permit_type": "CDR release",
+"source_id": "SRC-009",
+"value": null,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "KrogerがFRANKLINで増築・新築の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Kroger - Pickup Expansion / Grocery Store",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:53:09.512344+00:00",
+"reading_id": "01M6JB0WM85Q4H1CANF0MXAB93"
+},
+"n_permits": 1,
+"member_ids": [
+"S-79106"
+],
+"kinds": [
+"増築・新築"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-88193",
+"date": "2026-10-29",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Park Ridge",
+"address": "1900 S CUMBERLAND AVE PARK RIDGE IL 60068",
+"permit_no": "CM-26-0223",
+"permit_type": "Commercial - Signs",
+"source_id": "SRC-022",
+"value": 15000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "KrogerがPark Ridgeで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Replacing existing pickup signs in parking lot to new signs per Kroger's specs.  Also replacing the directional signs in the parking lot to new signs.  Repainting the existing pickup parking spots to red and adding 4 more additional pickup parking spots / Commercial - Signs / Signs",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:44.080505+00:00",
+"reading_id": "01M6JB03SGN9Q61SMBR2H7CYQF"
+},
+"n_permits": 1,
+"member_ids": [
+"S-88193"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-86347",
+"date": "2026-10-22",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2000 E MAIN ST",
+"permit_no": "SIGN2601229",
+"permit_type": "NA",
+"source_id": "SRC-017",
+"value": null,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "KROGER COがColumbusで看板設置の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "NA / Sign / 46 SQFT",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:42.914457+00:00",
+"reading_id": "01M6JB02N2HW7ZRBW638XC5TRJ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-86347"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
 {
 "id": "S-49884",
 "date": "2026-09-08",
@@ -58,6 +160,40 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
+},
+{
+"id": "S-79101",
+"date": "2026-10-14",
+"applied": null,
+"state": "IN",
+"jurisdiction": "Indiana/BOONE",
+"address": "2420 N Lebanon St",
+"permit_no": "458161:2026-10-14",
+"permit_type": "CDR release",
+"source_id": "SRC-009",
+"value": null,
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "KrogerがBOONEで記録取得の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Kroger J-940 / Grocery",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:53:08.785836+00:00",
+"reading_id": "01M6JB0VXHVZG7TVRFC60M400F"
+},
+"n_permits": 1,
+"member_ids": [
+"S-79101"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-73999",
@@ -385,6 +521,34 @@
 },
 "timeline": [
 {
+"date": "2026-10-29",
+"face": "permits",
+"title": "建設許可(Park Ridge): KrogerがPark Ridgeで更新・修繕の許可を取得(1件)",
+"ref": "S-88193",
+"summary": "KrogerがPark Ridgeで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-10-22",
+"face": "permits",
+"title": "建設許可(Columbus): KROGER COがColumbusで看板設置の許可を取得(1件)",
+"ref": "S-86347",
+"summary": "KROGER COがColumbusで看板設置の許可を取得(1件)"
+},
+{
+"date": "2026-10-14",
+"face": "permits",
+"title": "建設許可(Indiana/FRANKLIN): KrogerがFRANKLINで増築・新築の許可を取得(1件)",
+"ref": "S-79106",
+"summary": "KrogerがFRANKLINで増築・新築の許可を取得(1件)"
+},
+{
+"date": "2026-10-14",
+"face": "permits",
+"title": "建設許可(Indiana/BOONE): KrogerがBOONEで記録取得の許可を取得(1件)",
+"ref": "S-79101",
+"summary": "KrogerがBOONEで記録取得の許可を取得(1件)"
+},
+{
 "date": "2026-10-05",
 "face": "permits",
 "title": "建設許可(Indiana/MARION): Krogerがインディアナ州Marionで許可を取得(1件)",
@@ -455,6 +619,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

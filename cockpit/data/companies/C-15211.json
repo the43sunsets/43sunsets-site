@@ -23,11 +23,47 @@
 },
 "faces": {
 "permits": {
-"count": 11,
+"count": 13,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-30",
+"latest": "2026-10-22",
 "items": [
+{
+"id": "S-75244",
+"date": "2026-10-06",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Hamilton County",
+"address": "2832 ROSEBUD DR , CINCINNATI OH 45238",
+"permit_no": "CIN-ELE-AST-22846-26S11",
+"permit_type": "Elevator Safety Test",
+"source_id": "SRC-024",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "ARCHBISHOP OF CINCINNATI TRがシンシナティでエレベーター更新・修繕の許可を取得(3件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Test Submitted / Elevator Safety Test",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:53:07.392812+00:00",
+"reading_id": "01M6JB0TJ0C1M8HX16WT3XHGMB"
+},
+"n_permits": 3,
+"member_ids": [
+"S-75244",
+"S-75247",
+"S-75248"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
 {
 "id": "S-70815",
 "date": "2026-09-30",
@@ -301,6 +337,41 @@
 "amount_band_label": "$100k 未満"
 },
 {
+"id": "S-80072",
+"date": "2026-10-22",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Hamilton County",
+"address": "4366 BRIDGETOWN RD , GREEN TOWNSHIP OH 45211",
+"permit_no": "26TMP-016975",
+"permit_type": "OBC Certificate of Occupancy",
+"source_id": "SRC-024",
+"value": null,
+"category": "工事でない記録",
+"confidence": "high",
+"summary": "ARCHBISHOP OF CINCINNATI TRがGREEN TOWNSHIPで記録を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "OBC Certificate of Occupancy",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:40.266912+00:00",
+"reading_id": "01M6JB002AF28WTVV8NBP3Y3QM"
+},
+"n_permits": 2,
+"member_ids": [
+"S-80072",
+"S-85645"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
 "id": "S-24387",
 "date": "2026-09-01",
 "applied": null,
@@ -430,6 +501,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-22",
+"face": "permits",
+"title": "建設許可(Hamilton County): ARCHBISHOP OF CINCINNATI TRがGREEN TOWNSHIPで記録を取得(2件)",
+"ref": "S-80072",
+"summary": "ARCHBISHOP OF CINCINNATI TRがGREEN TOWNSHIPで記録を取得(2件)"
+},
+{
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Hamilton County): ARCHBISHOP OF CINCINNATI TRがシンシナティでエレベーター更新・修繕の許可を取得(3件)",
+"ref": "S-75244",
+"summary": "ARCHBISHOP OF CINCINNATI TRがシンシナティでエレベーター更新・修繕の許可を取得(3件)"
+},
+{
 "date": "2026-09-30",
 "face": "permits",
 "title": "建設許可(Cincinnati): ARCHBISHOP OF CINCINNATI TRがCincinnatiで更新・修繕の許可を取得(1件)",
@@ -507,6 +592,6 @@
 "summary": "ARCHBISHOP OF CINCINNATI TRがCincinnatiで警備設備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

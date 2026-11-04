@@ -23,11 +23,147 @@
 },
 "faces": {
 "permits": {
-"count": 5,
+"count": 9,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-23",
+"latest": "2026-10-30",
 "items": [
+{
+"id": "S-86986",
+"date": "2026-10-26",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Montgomery County",
+"address": "7494 DAYTON GERMANTOWN MIAMISBURG OH 45342",
+"permit_no": "BLDC26-0373",
+"permit_type": "Commercial Building",
+"source_id": "SRC-024",
+"value": null,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "Verizonがマイアミズバーグでアンテナ等の撤去許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Verizon Equipment only. Remove existing antenna, mounts and coax cable. Tower to remain in place. / 7494 DAYTON GERMANTOWN / Commercial Building",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:37.334074+00:00",
+"reading_id": "01M6JAZX6PTZANXGFCMXR2G92B"
+},
+"n_permits": 1,
+"member_ids": [
+"S-86986"
+],
+"kinds": [
+"縮小・撤去"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-89719",
+"date": "2026-10-30",
+"applied": null,
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "2011 Manchester Rd Ann Arbor MI 48104",
+"permit_no": "BLDGC26-0474",
+"permit_type": "Building (Commercial) - Alteration/Repair",
+"source_id": "SRC-022",
+"value": 10000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "Verizonがアナーバーで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Verizon antenna swap on existing Verizon location. / Building (Commercial) - Alteration/Repair / Alteration/Repair",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:53:01.732666+00:00",
+"reading_id": "01M6JB0N141YDX0EB44G8KP4CZ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-89719"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-85891",
+"date": "2026-10-23",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Palatine",
+"address": "1298 E DUNDEE RD Palatine IL 60074",
+"permit_no": "ROW-025951-2026",
+"permit_type": "Right of Way Work Permit",
+"source_id": "SRC-022",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "VERIZONがPalatineでユーティリティの許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "EXISTING VERIZON SMALL CELL EQUIPMENT REPLACEMENT ON EXISTING WOOD POLE, INSTALL (3) NEW ERICSSON AIR 1672 ANTENNAS; REMOVE (1) EXISTING OMNI ANTENNA AND REPLACE WITH (1) NEW OMNI ANTENNA; REPLACE (4) EXISTING RADIOS WITH (2) NEW RADIOS (4490/4890); INSTALL (1)\nNEW ERICSSON PSU 6308, LOAD CENTER AND",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:53:09.984131+00:00",
+"reading_id": "01M6JB0X30RCZDXBNPH68KBA9R"
+},
+"n_permits": 1,
+"member_ids": [
+"S-85891"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-78943",
+"date": "2026-10-13",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "3507 W 51ST ST",
+"permit_no": "101088521",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"source_id": "SRC-001",
+"value": 35000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "VERIZONがChicagoでユーティリティの許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "ALTER EXISTING WIRELESS COMMUNICATION FACILITY ON MONOPOLE: REMOVE 3 EXISTING ANTENNAS AND REPLACE WITH 9 ANTENNAS; REPLACE EXISTING RADIOS AND SUPPLEMENTARY EQUIPMENT; INSTALL 2 CABINETS ON PROPOSED 3'X3' CONCRETE PAD.(VERIZON SITE 17490148 / ATC PROJECT 15439446)",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:39.714973+00:00",
+"reading_id": "01M6JAZZH2XGE6V0021DT7NHA1"
+},
+"n_permits": 1,
+"member_ids": [
+"S-78943"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-69121",
 "date": "2026-09-23",
@@ -226,6 +362,34 @@
 },
 "timeline": [
 {
+"date": "2026-10-30",
+"face": "permits",
+"title": "建設許可(Ann Arbor): Verizonがアナーバーで更新・修繕の許可を取得(1件)",
+"ref": "S-89719",
+"summary": "Verizonがアナーバーで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-10-26",
+"face": "permits",
+"title": "建設許可(Montgomery County): Verizonがマイアミズバーグでアンテナ等の撤去許可を取得(1件)",
+"ref": "S-86986",
+"summary": "Verizonがマイアミズバーグでアンテナ等の撤去許可を取得(1件)"
+},
+{
+"date": "2026-10-23",
+"face": "permits",
+"title": "建設許可(Palatine): VERIZONがPalatineでユーティリティの許可を取得(1件)",
+"ref": "S-85891",
+"summary": "VERIZONがPalatineでユーティリティの許可を取得(1件)"
+},
+{
+"date": "2026-10-13",
+"face": "permits",
+"title": "建設許可(Chicago): VERIZONがChicagoでユーティリティの許可を取得(1件)",
+"ref": "S-78943",
+"summary": "VERIZONがChicagoでユーティリティの許可を取得(1件)"
+},
+{
 "date": "2026-09-23",
 "face": "permits",
 "title": "建設許可(Rockford): VerizonがRockfordで更新・修繕の許可を取得(1件)",
@@ -261,6 +425,6 @@
 "summary": "VERIZONがChicagoで事務所・その他の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

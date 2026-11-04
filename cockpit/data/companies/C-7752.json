@@ -23,11 +23,113 @@
 },
 "faces": {
 "permits": {
-"count": 6,
+"count": 9,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-01",
+"latest": "2026-10-26",
 "items": [
+{
+"id": "S-90173",
+"date": "2026-10-26",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "890 MARTIN LUTHER KING JR BLVD, CLEVELAND, OH, 44103",
+"permit_no": "BCE26-045662",
+"permit_type": "Commercial Electrical",
+"source_id": "SRC-068",
+"value": 80000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial Electrical / A-1 Assembly - Performing Arts / Electrical Alterations 1000 SQ FT .",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:53:05.796814+00:00",
+"reading_id": "01M6JB0S04HC256FGYNVV66N3B"
+},
+"n_permits": 1,
+"member_ids": [
+"S-90173"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-82821",
+"date": "2026-10-16",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "750 E 88TH ST, CLEVELAND, OH, 44108",
+"permit_no": "BCE26-044875",
+"permit_type": "Commercial Electrical",
+"source_id": "SRC-068",
+"value": 400000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial Electrical / B Business / Install (4,100) Sq. Ft. Wiring - Remodel of administration offices Related Building: B24006295",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:56.833618+00:00",
+"reading_id": "01M6JB0G818JCN0G08BS3N9FY0"
+},
+"n_permits": 1,
+"member_ids": [
+"S-82821"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-77999",
+"date": "2026-10-07",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "1191 MARTIN LUTHER KING JR. DR, CLEVELAND, OH, 44108",
+"permit_no": "BCB26-033421",
+"permit_type": "Commercial Building",
+"source_id": "SRC-068",
+"value": 160000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial Building / U Utility - Miscellaneous / Exterior only remodel / REPLACE STONE ARCHWAY AND PAVING, MAKE SITE IMPROVEMENTS TO SYRIAN CULTURAL GARDEN PER APPROVED PLANS, MANUFACTURER'S INSTALLATION INSTRUCTIONS AND COA 26-017. NO CHANGE OF USE WITH THIS PERMIT.",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:22.862389+00:00",
+"reading_id": "01M6JAZF2E63NCG7SRDRV0WC0R"
+},
+"n_permits": 1,
+"member_ids": [
+"S-77999"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-73839",
 "date": "2026-10-01",
@@ -263,6 +365,27 @@
 },
 "timeline": [
 {
+"date": "2026-10-26",
+"face": "permits",
+"title": "建設許可(Cleveland): CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)",
+"ref": "S-90173",
+"summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-10-16",
+"face": "permits",
+"title": "建設許可(Cleveland): CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)",
+"ref": "S-82821",
+"summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-10-07",
+"face": "permits",
+"title": "建設許可(Cleveland): CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)",
+"ref": "S-77999",
+"summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-10-01",
 "face": "permits",
 "title": "建設許可(Cleveland): CLEVELAND CITY OFがCLEVELANDで更新・修繕の許可を取得(2件)",
@@ -305,6 +428,6 @@
 "summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

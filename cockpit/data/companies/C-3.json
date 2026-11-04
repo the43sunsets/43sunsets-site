@@ -20,11 +20,79 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 3,
 "value_total": null,
-"n_amount_excluded": 0,
-"latest": "2026-09-18",
+"n_amount_excluded": 1,
+"latest": "2026-10-28",
 "items": [
+{
+"id": "S-87923",
+"date": "2026-10-28",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "710 N FAIRBANKS CT",
+"permit_no": "101090189",
+"permit_type": "PERMIT - ELEVATOR EQUIPMENT",
+"source_id": "SRC-001",
+"value": null,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "NORTHWESTERN MEMORIAL HOSPITALがChicagoで撤去の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "DECOMMISSION OF ONE(1) 1500LB CAPACITY, 2-FLOOR, FREIGHT ELEVATOR(#9), PURSUANT TO THE SCOPE OF WORK SUBMITTED.(EV009699)",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:53:08.182330+00:00",
+"reading_id": "01M6JB0VAP87SMA05DMTX7GT45"
+},
+"n_permits": 1,
+"member_ids": [
+"S-87923"
+],
+"kinds": [
+"縮小・撤去"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-75311",
+"date": "2026-10-06",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "251 E HURON ST",
+"permit_no": "101088154",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"source_id": "SRC-001",
+"value": 650000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "NORTHWESTERN MEMORIAL HOSPITALがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SELF-CERT 2019 CBRC: INTERIOR ALTERATIONS TO EXISTING RESIDENT'S WORK ROOM, CONFERENCE ROOM AND LOUNGE TO INCLUDE REMOVAL OF EXISTING FURNITURE AND SELECTIVE DEMOLITION OF PORTIONS OF WALLS AND EXISTING CEILING. NEW CEILING AND PATCHING EXISTING WALLS, NEW MILLWORK, NEW FURNITURE, NEW INTERIOR FINIS",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:53:04.560176+00:00",
+"reading_id": "01M6JB0QSGQJ0ZGZK8B3W8RDVV"
+},
+"n_permits": 1,
+"member_ids": [
+"S-75311"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-62014",
 "date": "2026-09-18",
@@ -87,6 +155,20 @@
 },
 "timeline": [
 {
+"date": "2026-10-28",
+"face": "permits",
+"title": "建設許可(Chicago): NORTHWESTERN MEMORIAL HOSPITALがChicagoで撤去の許可を取得(1件)",
+"ref": "S-87923",
+"summary": "NORTHWESTERN MEMORIAL HOSPITALがChicagoで撤去の許可を取得(1件)"
+},
+{
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Chicago): NORTHWESTERN MEMORIAL HOSPITALがChicagoで更新・修繕の許可を取得(1件)",
+"ref": "S-75311",
+"summary": "NORTHWESTERN MEMORIAL HOSPITALがChicagoで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-09-18",
 "face": "permits",
 "title": "建設許可(Chicago): NORTHWESTERN MEMORIAL HOSPITALがChicagoでユーティリティ整備の許可を取得(1件)",
@@ -94,6 +176,6 @@
 "summary": "NORTHWESTERN MEMORIAL HOSPITALがChicagoでユーティリティ整備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

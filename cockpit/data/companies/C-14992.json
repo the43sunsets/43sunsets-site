@@ -23,11 +23,50 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 3,
 "value_total": null,
-"n_amount_excluded": 1,
-"latest": "2026-09-28",
+"n_amount_excluded": 2,
+"latest": "2026-10-16",
 "items": [
+{
+"id": "S-75863",
+"date": "2026-10-16",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "3800 VICTORY PKWY",
+"permit_no": "2026P09400",
+"permit_type": "Misc. Structures",
+"source_id": "SRC-003",
+"value": 10000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "XAVIER UNIVERSITYがCINCINNATIで更新・修繕等の許可を取得(4件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Misc. Structures / Misc. Structures / A-5",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:38.750243+00:00",
+"reading_id": "01M6JAZYJY5DY699CH202N27HP"
+},
+"n_permits": 4,
+"member_ids": [
+"S-75863",
+"S-76338",
+"S-76369",
+"S-82765"
+],
+"kinds": [
+"更新・修繕",
+"事務所・その他",
+"内容不明"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-66044",
 "date": "2026-09-28",
@@ -126,6 +165,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-16",
+"face": "permits",
+"title": "建設許可(Cincinnati): XAVIER UNIVERSITYがCINCINNATIで更新・修繕等の許可を取得(4件)",
+"ref": "S-75863",
+"summary": "XAVIER UNIVERSITYがCINCINNATIで更新・修繕等の許可を取得(4件)"
+},
+{
 "date": "2026-09-28",
 "face": "permits",
 "title": "建設許可(Cincinnati): XAVIER UNIVERSITYがシンシナティで更新・修繕などの許可を取得(2件)",
@@ -140,6 +186,6 @@
 "summary": "XAVIER UNIVERSITYがCincinnatiで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -20,10 +20,10 @@
 },
 "faces": {
 "permits": {
-"count": 15,
+"count": 18,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-01",
+"latest": "2026-10-19",
 "items": [
 {
 "id": "S-73591",
@@ -158,6 +158,42 @@
 ],
 "kinds": [
 "増築・新築"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-84541",
+"date": "2026-10-19",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "3395 EASTON WAY",
+"permit_no": "PMEPC2642258",
+"permit_type": "Plumbing",
+"source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "CITY OF COLUMBUS OHIOがColumbusで更新・修繕の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Plumbing / MEP",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:53:04.933309+00:00",
+"reading_id": "01M6JB0R55H4TFFQ4DRHV3ZWKZ"
+},
+"n_permits": 2,
+"member_ids": [
+"S-84541",
+"S-84542"
+],
+"kinds": [
+"更新・修繕",
+"事務所・その他"
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
@@ -334,6 +370,74 @@
 "kinds": [
 "ユーティリティ",
 "更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-75898",
+"date": "2026-10-06",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1111 E BROAD ST",
+"permit_no": "EMEPC2640239",
+"permit_type": "Electrical",
+"source_id": "SRC-017",
+"value": null,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "CITY OF COLUMBUS OHIOがColumbusで事務所・その他の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:12.721421+00:00",
+"reading_id": "01M6JAZ55H4FMEV508QZTCQXH8"
+},
+"n_permits": 1,
+"member_ids": [
+"S-75898"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-75911",
+"date": "2026-10-06",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "580 E WOODROW AVE",
+"permit_no": "EMEPC2638927",
+"permit_type": "Electrical",
+"source_id": "SRC-017",
+"value": null,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "CITY OF COLUMBUS OHIOがColumbusで事務所・その他の許可を取得(1 件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-04T03:52:32.601380+00:00",
+"reading_id": "01M6JAZRJS314TQVQF7R6Y1R82"
+},
+"n_permits": 1,
+"member_ids": [
+"S-75911"
+],
+"kinds": [
+"事務所・その他"
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
@@ -570,6 +674,27 @@
 },
 "timeline": [
 {
+"date": "2026-10-19",
+"face": "permits",
+"title": "建設許可(Columbus): CITY OF COLUMBUS OHIOがColumbusで更新・修繕の許可を取得(2件)",
+"ref": "S-84541",
+"summary": "CITY OF COLUMBUS OHIOがColumbusで更新・修繕の許可を取得(2件)"
+},
+{
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Columbus): CITY OF COLUMBUS OHIOがColumbusで事務所・その他の許可を取得(1件)",
+"ref": "S-75898",
+"summary": "CITY OF COLUMBUS OHIOがColumbusで事務所・その他の許可を取得(1件)"
+},
+{
+"date": "2026-10-06",
+"face": "permits",
+"title": "建設許可(Columbus): CITY OF COLUMBUS OHIOがColumbusで事務所・その他の許可を取得(1 件)",
+"ref": "S-75911",
+"summary": "CITY OF COLUMBUS OHIOがColumbusで事務所・その他の許可を取得(1 件)"
+},
+{
 "date": "2026-10-01",
 "face": "permits",
 "title": "建設許可(Columbus): CITY OF COLUMBUS OHIOがColumbusで解体の許可を取得(1件)",
@@ -675,6 +800,6 @@
 "summary": "CITY OF COLUMBUS OHIOがColumbusで更新・修繕およびユーティリティの許可を取得(3件)"
 }
 ],
-"generated_at": "2026-11-03T10:50:56+00:00",
+"generated_at": "2026-11-04T11:39:13+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
