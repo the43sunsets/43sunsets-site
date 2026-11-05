@@ -1,21 +1,23 @@
 {
-  "run_date": "2026-11-04",
-  "generated_at": "2026-11-04T15:15:29.137533+00:00",
+  "run_date": "2026-11-05",
+  "generated_at": "2026-11-05T10:33:05.245425+00:00",
   "slo": {
     "deadline": "06:30 America/Chicago",
-    "deadline_met": false,
-    "evaluated_at": "2026-11-04T15:15:29.137533+00:00"
+    "deadline_met": true,
+    "evaluated_at": "2026-11-05T10:33:05.245425+00:00"
   },
   "faces": {
     "permits": {
-      "state": "complete",
-      "reasons": [],
+      "state": "degraded",
+      "reasons": [
+        "errors_30h 5"
+      ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 6.343093883246183,
-        "errors_30h": 0
+        "age_h": 1.5514569394290447,
+        "errors_30h": 5
       }
     },
     "ucc": {
@@ -28,26 +30,26 @@
         "deny_24h": 0,
         "stage_failed": 0,
         "source_stopped": 1,
-        "age_h": 536.2244826480415,
+        "age_h": 555.517845951385,
         "sync_ok": 1,
-        "wi_age_d": 0.22446918953210115
+        "wi_age_d": 0.04956302046775818
       }
     },
     "subsidies": {
       "state": "degraded",
       "reasons": [
         "errors_30h 1",
-        "unread 1",
+        "unread 5",
         "untranslated 1"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 4.579482771456242,
+        "age_h": 1.0581236109137535,
         "errors_30h": 1,
         "untranslated": 1,
-        "unread": 1
+        "unread": 5
       }
     },
     "hiring": {
@@ -59,7 +61,7 @@
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 3.1569827757775784,
+        "age_h": 1.0145124904811382,
         "errors_30h": 62
       }
     },
@@ -72,7 +74,7 @@
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 3.7580938898026943,
+        "age_h": 23.051456943154335,
         "unread": 598
       }
     }
