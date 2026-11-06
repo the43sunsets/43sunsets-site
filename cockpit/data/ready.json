@@ -1,23 +1,23 @@
 {
   "run_date": "2026-11-06",
-  "generated_at": "2026-11-06T11:40:16.091643+00:00",
+  "generated_at": "2026-11-06T15:15:10.395593+00:00",
   "slo": {
     "deadline": "06:30 America/Chicago",
-    "deadline_met": true,
-    "evaluated_at": "2026-11-06T11:40:16.091643+00:00"
+    "deadline_met": false,
+    "evaluated_at": "2026-11-06T15:15:10.395593+00:00"
   },
   "faces": {
     "permits": {
       "state": "degraded",
       "reasons": [
-        "errors_30h 7"
+        "errors_30h 2"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 0.09585888683795929,
-        "errors_30h": 7
+        "age_h": 3.677609995007515,
+        "errors_30h": 2
       }
     },
     "ucc": {
@@ -30,38 +30,38 @@
         "deny_24h": 0,
         "stage_failed": 0,
         "source_stopped": 1,
-        "age_h": 580.6375254564152,
+        "age_h": 584.219276553591,
         "sync_ok": 1,
-        "wi_age_d": 1.0962163424119353
+        "wi_age_d": 0.09830319415777922
       }
     },
     "subsidies": {
       "state": "degraded",
       "reasons": [
-        "unread 5",
+        "unread 6",
         "untranslated 1"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 26.177803337574005,
+        "age_h": 2.22177666798234,
         "errors_30h": 0,
         "untranslated": 1,
-        "unread": 5
+        "unread": 6
       }
     },
     "hiring": {
       "state": "degraded",
       "reasons": [
-        "errors_30h 31"
+        "errors_30h 62"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 26.13419221714139,
-        "errors_30h": 31
+        "age_h": 2.174832221120596,
+        "errors_30h": 62
       }
     },
     "news": {
@@ -73,7 +73,7 @@
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 0.17113666981458664,
+        "age_h": 3.7528877779841423,
         "unread": 603
       }
     }

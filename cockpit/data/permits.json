@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-11-05T10:10:36+00:00",
+"generated_at": "2026-11-06T13:41:45+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,31 +15,31 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 91190,
-"candidates": 58165,
-"targets": 1678,
-"permits_folded": 2091,
+"signals_total": 92087,
+"candidates": 58997,
+"targets": 1656,
+"permits_folded": 2065,
 "unclassified": 0,
-"unevaluated": 27161,
+"unevaluated": 28131,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 246,
-"保全": 993,
-"事務所・その他": 194,
+"操業の変化": 241,
+"保全": 979,
+"事務所・その他": 192,
 "内容不明": 68,
-"工事でない記録": 177
+"工事でない記録": 176
 },
 "stages": {
-"0": 33025,
-"2a": 2420,
-"2b": 18887,
-"2c": 5854,
-"2d": 23142,
-"3": 5498,
-"5": 198,
-"6": 2166
+"0": 33090,
+"2a": 2538,
+"2b": 19532,
+"2c": 6061,
+"2d": 23076,
+"3": 5453,
+"5": 197,
+"6": 2140
 },
-"enriched": 31004
+"enriched": 30866
 },
 "sources": [
 {
@@ -48,13 +48,13 @@
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:04:33Z",
+"last_run_at": "2026-11-06T08:03:19Z",
 "last_run_reason": "ok",
-"signals": 10703,
+"signals": 10868,
 "date_min": "2026-07-01",
-"date_max": "2026-11-03",
-"owner_coverage": 10292,
-"targets": 448,
+"date_max": "2026-11-04",
+"owner_coverage": 10457,
+"targets": 443,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -65,7 +65,7 @@
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:04:35Z",
+"last_run_at": "2026-11-06T08:03:20Z",
 "last_run_reason": "ok",
 "signals": 302,
 "date_min": "2026-07-01",
@@ -82,13 +82,13 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:04:45Z",
+"last_run_at": "2026-11-06T08:03:27Z",
 "last_run_reason": "ok",
-"signals": 3518,
+"signals": 3563,
 "date_min": "2026-07-01",
-"date_max": "2026-11-02",
-"owner_coverage": 3360,
-"targets": 134,
+"date_max": "2026-11-03",
+"owner_coverage": 3400,
+"targets": 131,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -99,13 +99,13 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:04:45Z",
+"last_run_at": "2026-11-06T08:03:27Z",
 "last_run_reason": "ok",
-"signals": 2983,
+"signals": 3018,
 "date_min": "2026-07-01",
-"date_max": "2026-11-02",
-"owner_coverage": 2970,
-"targets": 168,
+"date_max": "2026-11-03",
+"owner_coverage": 3005,
+"targets": 161,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -116,7 +116,7 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:04:46Z",
+"last_run_at": "2026-11-06T08:03:28Z",
 "last_run_reason": "ok",
 "signals": 1720,
 "date_min": "2026-07-07",
@@ -133,7 +133,7 @@
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
 "last_run_status": "empty",
-"last_run_at": "2026-11-05T08:25:19Z",
+"last_run_at": "2026-11-06T11:34:31Z",
 "last_run_reason": "ok",
 "signals": 111,
 "date_min": "2026-07-07",
@@ -150,12 +150,12 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:04:47Z",
+"last_run_at": "2026-11-06T08:03:28Z",
 "last_run_reason": "ok",
-"signals": 2399,
+"signals": 2416,
 "date_min": "2026-07-01",
-"date_max": "2026-11-03",
-"owner_coverage": 2388,
+"date_max": "2026-11-04",
+"owner_coverage": 2405,
 "targets": 46,
 "cadence": "daily",
 "next_run_at": null,
@@ -184,7 +184,7 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "error",
-"last_run_at": "2026-11-05T08:04:48Z",
+"last_run_at": "2026-11-06T08:03:30Z",
 "last_run_reason": "upstream_error",
 "signals": 1482,
 "date_min": "2024-11-18",
@@ -201,7 +201,7 @@
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:04:47Z",
+"last_run_at": "2026-11-06T08:03:29Z",
 "last_run_reason": "ok",
 "signals": 394,
 "date_min": "2026-07-01",
@@ -218,7 +218,7 @@
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:04:48Z",
+"last_run_at": "2026-11-06T08:03:29Z",
 "last_run_reason": "ok",
 "signals": 1770,
 "date_min": "2026-07-01",
@@ -235,7 +235,7 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:04:34Z",
+"last_run_at": "2026-11-06T08:03:20Z",
 "last_run_reason": "ok",
 "signals": 8128,
 "date_min": "2026-07-01",
@@ -252,13 +252,13 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:19:54Z",
+"last_run_at": "2026-11-06T11:24:19Z",
 "last_run_reason": "ok",
-"signals": 23871,
+"signals": 24177,
 "date_min": "2026-07-01",
-"date_max": "2026-11-05",
-"owner_coverage": 16009,
-"targets": 567,
+"date_max": "2026-11-06",
+"owner_coverage": 16226,
+"targets": 557,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -269,13 +269,13 @@
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:21:11Z",
+"last_run_at": "2026-11-06T11:30:18Z",
 "last_run_reason": "ok",
-"signals": 13766,
+"signals": 13975,
 "date_min": "2026-07-01",
-"date_max": "2026-11-04",
-"owner_coverage": 7017,
-"targets": 227,
+"date_max": "2026-11-06",
+"owner_coverage": 7090,
+"targets": 226,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -286,7 +286,7 @@
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:23:25Z",
+"last_run_at": "2026-11-06T11:32:37Z",
 "last_run_reason": "ok",
 "signals": 756,
 "date_min": "2026-07-01",
@@ -303,7 +303,7 @@
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-05T08:25:17Z",
+"last_run_at": "2026-11-06T11:34:29Z",
 "last_run_reason": "ok",
 "signals": 123,
 "date_min": "2026-07-01",
@@ -319,9 +319,9 @@
 "state": "IL",
 "jurisdiction": "Cook 郡 BS&A 利用自治体(Skokie 他)",
 "label": "Cook 郡 BS&A 利用自治体(Skokie 他) 建築許可(公開記録)",
-"last_run_status": "running",
-"last_run_at": "2026-11-05T09:00:00Z",
-"last_run_reason": null,
+"last_run_status": "killed",
+"last_run_at": "2026-11-06T00:30:45Z",
+"last_run_reason": "timeout",
 "signals": 20,
 "date_min": "2026-07-08",
 "date_max": "2026-09-04",
@@ -626,11 +626,11 @@
 "jurisdiction": "Island Lake",
 "label": "アイランドレイク村 建築許可(FOIA 回答・Excel・金額欄なし)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-04T17:36:09Z",
+"last_run_at": "2026-11-06T05:56:32Z",
 "last_run_reason": "ok",
-"signals": 94,
+"signals": 189,
 "date_min": "2026-07-02",
-"date_max": "2026-08-27",
+"date_max": "2026-11-03",
 "owner_coverage": 0,
 "targets": 0,
 "cadence": "daily",
@@ -1170,12 +1170,12 @@
 "jurisdiction": "Downs",
 "label": "ダウンズ村 建築許可(FOIA 回答・Excel・金額欄なし)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-08T21:10:47Z",
+"last_run_at": "2026-11-06T05:56:33Z",
 "last_run_reason": "ok",
-"signals": 1,
+"signals": 4,
 "date_min": "2026-08-26",
-"date_max": "2026-08-26",
-"owner_coverage": 1,
+"date_max": "2026-10-28",
+"owner_coverage": 4,
 "targets": 0,
 "cadence": "daily",
 "next_run_at": null,
@@ -1459,11 +1459,11 @@
 "jurisdiction": "Le Roy",
 "label": "ルロイ市 建築許可(FOIA 回答・スキャン 2 頁を AI 画像読み・原本に交付日の列なし)",
 "last_run_status": "ok",
-"last_run_at": "2026-09-11T01:34:12Z",
+"last_run_at": "2026-11-06T05:56:33Z",
 "last_run_reason": "ok",
-"signals": 18,
+"signals": 37,
 "date_min": "2026-08-31",
-"date_max": "2026-08-31",
+"date_max": "2026-10-31",
 "owner_coverage": 0,
 "targets": 0,
 "cadence": "daily",
@@ -1560,14 +1560,14 @@
 ]
 },
 "stages": {
-"0": 33025,
-"2a": 2420,
-"2b": 18887,
-"2c": 5854,
-"2d": 23142,
-"3": 5498,
-"5": 198,
-"6": 2166
+"0": 33090,
+"2a": 2538,
+"2b": 19532,
+"2c": 6061,
+"2d": 23076,
+"3": 5453,
+"5": 197,
+"6": 2140
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 19462,
+"checked": 19210,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -2519,83 +2519,6 @@
 },
 {
 "investor": {
-"name": "DR HORTON",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-86842",
-"state": "OH",
-"city": "Clermont County・120 WOODCREEK LN NEW RICHMOND OH 45157",
-"company": "DR HORTON",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-10-26",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "DR HORTONがNEW RICHMONDで新築の許可を取得(1件)",
-"infer": null,
-"note": "増築・新築",
-"fact": {
-"src": "Clermont County 建築許可(公開記録)",
-"ref": "許可 B-078824-2026 Residential Single Family Residence",
-"value": 275000.0,
-"verbatim": "DR HORTON SFR / Residential Single Family Residence / Single Family Residence",
-"gc": null,
-"pin": "260916A116.",
-"owner_source": "parcel:clermont_oh"
-},
-"karte": null,
-"company_id": "C-15956",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:39.937305+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 275000.0,
-"headline_en": "DR HORTON obtained a permit for new construction in NEW RICHMOND (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-26",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 275000.0,
-"total": 275000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-86842"
-],
-"kinds": [
-"増築・新築"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
 "name": "VERIZON",
 "basis": "operator",
 "label": "操業事業者",
@@ -3012,7 +2935,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CHICAGO PARK DISTRICTがChicagoで増築・新築の許可を取得(1件)",
 "infer": null,
 "note": "増築・新築",
@@ -4085,83 +4008,6 @@
 ],
 "amount_band": "1m_10m",
 "amount_band_label": "$1M〜$10M"
-},
-{
-"investor": {
-"name": "LMP GALLERIA PROPERTY LLC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-80403",
-"state": "MI",
-"city": "Ann Arbor・1208 S University Ave Ann Arbor MI 48104",
-"company": "LMP GALLERIA PROPERTY LLC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-10-16",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "LMP GALLERIA PROPERTY LLCがAnn Arborで増築・新築の許可を取得(1件)",
-"infer": null,
-"note": "増築・新築",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 BLDGC25-0357 Building (Commercial) - New Construction",
-"value": 125000000.0,
-"verbatim": "NEW CONSTRUCTION OF A 18-STORY, CONCRETE, MIXED-USE BUILDING CONTAINING  GROUND LEVEL RETAIL, LOBBY, AND LEASING, PARKING GARAGE ON LEVELS 1 AND 2, AND MULTI-FAMILY DWELLING UNITS FROM LEVELS 3-18 WITH PRIVATE AMENITIES AT LEVELS 1, 2, 3 & 18 AND PRIVATE EXTERIOR ROOFTOP AMENITY DECK AT LEVEL 18. / Building (Commercial) - New Construction / New Construction",
-"gc": null,
-"pin": "09-09-28-310-027",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15541",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:53:03.140565+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 125000000.0,
-"headline_en": "LMP Galleria Property LLC obtained a construction permit for new construction in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-16",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 125000000.0,
-"total": 125000000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-80403"
-],
-"kinds": [
-"増築・新築"
-],
-"amount_band": "ge_100m",
-"amount_band_label": "$100M 以上"
 },
 {
 "investor": {
@@ -7673,83 +7519,6 @@
 },
 {
 "investor": {
-"name": "CROSSROADS COMMUNITY CHURCH INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-70451",
-"state": "OH",
-"city": "Clermont County・2461 BURNS RD FELICITY OH",
-"company": "CROSSROADS COMMUNITY CHURCH INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "宗教・非営利",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-10-01",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CROSSROADS COMMUNITY CHURCH INCがFELICITYで新築の許可を取得(1件)",
-"infer": null,
-"note": "増築・新築",
-"fact": {
-"src": "Clermont County 建築許可(公開記録)",
-"ref": "許可 B-077592-2026 Residential Single Family Residence",
-"value": 75000.0,
-"verbatim": "CROSSROADS COMMUNITY CHURCH SFR / Residential Single Family Residence / Single Family Residence",
-"gc": null,
-"pin": "433308J025.",
-"owner_source": "parcel:clermont_oh"
-},
-"karte": null,
-"company_id": "C-12644",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:16.995356+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 75000.0,
-"headline_en": "Crossroads Community Church Inc obtained a permit to build in Felicity, OH (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-02",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 75000.0,
-"total": 75000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-70451"
-],
-"kinds": [
-"増築・新築"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "THE CITY CHURCH FELLOWSHIP",
 "basis": "operator",
 "label": "操業事業者",
@@ -9790,87 +9559,6 @@
 },
 {
 "investor": {
-"name": "SUPERCHARGED ENTERTAINMENT",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-67601",
-"state": "OH",
-"city": "Columbus・9300 LYRA DR",
-"company": "SUPERCHARGED ENTERTAINMENT",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-28",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "SUPERCHARGED ENTERTAINMENTがColumbusで新築・修繕の許可を取得(2件)",
-"infer": null,
-"note": "増築・新築・更新・修繕",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 NEWC2620847 New Structure",
-"value": 20000000.0,
-"verbatim": "Commercial - New Structure / New Structure / Amusement, Social, and Recreational / Structural / 96500 SQFT",
-"gc": "ARCO/Murray National Construction",
-"pin": "31842403018000",
-"owner_source": "parcel:delaware_oh"
-},
-"karte": null,
-"company_id": "C-15483",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:55.052745+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 20000000.0,
-"headline_en": "SUPERCHARGED ENTERTAINMENT obtained permits in Columbus for new construction and repair work (2 records)",
-"not_construction": false,
-"as_of": "2026-09-28",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"ARCO/MURRAY NATIONAL CONSTRUCTION"
-],
-"contractors_n": 1,
-"amount": {
-"max": 20000000.0,
-"total": 20055000.0,
-"stated_n": 2,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-67601",
-"S-69232"
-],
-"kinds": [
-"増築・新築",
-"更新・修繕"
-],
-"amount_band": "10m_100m",
-"amount_band_label": "$10M〜$100M"
-},
-{
-"investor": {
 "name": "The American Legion",
 "basis": "operator",
 "label": "操業事業者",
@@ -11273,85 +10961,6 @@
 "kinds": [
 "増築・新築",
 "ユーティリティ",
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "French Toast",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-65388",
-"state": "IL",
-"city": "Elmhurst・111 E FIRST ST ELMHURST IL 60126",
-"company": "French Toast",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "その他製造",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-09-24",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "French TooastがElmhurstで用途転換と修繕の許可を取得(2件)",
-"infer": null,
-"note": "新拠点・用途転換・更新・修繕",
-"fact": {
-"src": "Elmhurst 建築許可(公開記録)",
-"ref": "許可 NBOP-010777-2026 New Business Occupancy Permit",
-"value": null,
-"verbatim": "New business occupancy for French Toast, a full-service restaurant with on-premise food and liquor service, in an existing commercial tenant space currently undergoing an interior remodel under the related Commercial Remodel permit. / New Business Occupancy Permit / New Business Occupancy Permit",
-"gc": null,
-"pin": "0601118009",
-"owner_source": "parcel:dupage"
-},
-"karte": null,
-"company_id": "C-15578",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:02.190340+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": null,
-"headline_en": "French Toast obtained permits for use conversion and repair work in Elmhurst (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-24",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-65388",
-"S-66192"
-],
-"kinds": [
-"新拠点・用途転換",
 "更新・修繕"
 ],
 "amount_band": "unknown",
@@ -24111,83 +23720,6 @@
 },
 {
 "investor": {
-"name": "FAIRFIELD TWP TRS",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-87016",
-"state": "OH",
-"city": "Butler County・6048 MORRIS RD, UNKNOWN OH 45",
-"company": "FAIRFIELD TWP TRS",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-26",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "FAIRFIELD TWP TRSがUNKNOWNで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Butler County 建築許可(公開記録)",
-"ref": "許可 BLD-SK26-04593 Commercial Sprinkler",
-"value": null,
-"verbatim": "SPRINKLER- FAIRFIELD TOWNSHIP FIRE DEPT / IN PROGRESS / Commercial Sprinkler",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:butler_oh:addr"
-},
-"karte": null,
-"company_id": "C-15571",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:20.755344+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "FAIRFIELD TWP TRS obtained a repair/renovation permit in UNKNOWN (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-26",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-87016"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "JONES LANG LASALLE",
 "basis": "operator",
 "label": "操業事業者",
@@ -25550,7 +25082,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "ハーパーカレッジがパラタインで更新・修繕の許可を取得(2件)",
 "infer": null,
 "note": "更新・修繕・工事でない記録",
@@ -25629,7 +25161,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -25706,7 +25238,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -25783,7 +25315,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -25860,7 +25392,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1 件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -25937,7 +25469,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -26014,7 +25546,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -26091,7 +25623,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "DTEがアナーバーでユーティリティ設備の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -26168,7 +25700,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -26245,7 +25777,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "NicorがArlington Heightsでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -26296,83 +25828,6 @@
 },
 {
 "investor": {
-"name": "Sephora",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-85496",
-"state": "MI",
-"city": "Ann Arbor・100 Briarwood Cir Ann Arbor MI 48108",
-"company": "Sephora",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-22",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "SephoraがAnn Arborで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 MESA26-0161 MESA - Fire Suppression",
-"value": null,
-"verbatim": "Modify existing fire protection to accommodate tenant build out. (#G124C Sephora)  / MESA - Fire Suppression / Fire Suppression",
-"gc": null,
-"pin": "09-12-08-100-071",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15675",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:23.547215+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "Sephora obtained a repair/renovation permit in Ann Arbor (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-22",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-85496"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "CITY OF ANN ARBOR",
 "basis": "operator",
 "label": "操業事業者",
@@ -26399,7 +25854,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "City of Ann ArborがAnn Arborでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -26476,7 +25931,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -26553,7 +26008,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "BreezelineがIndependenceでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -26630,7 +26085,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CHRIST HOSPITAL THEがCincinnatiで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -26709,7 +26164,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "PROCTER & GAMBLE CO THEがCincinnatiで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -26788,7 +26243,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "WORKING IN NEIGHBORHOODSがシンシナティで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -26867,7 +26322,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CENTER FOR RESPITE CARE INCがCincinnatiで更新・修繕の許可を取得(1 件)",
 "infer": null,
 "note": "更新・修繕",
@@ -26946,7 +26401,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "FRANKLIN UNIVERSITYがColumbusで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -27025,7 +26480,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "GREATER CLEVELAND RTAがクリーブランドで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -27104,7 +26559,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "GREATER CLEVELAND RTAがClevelandで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -27183,7 +26638,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "GREATER CLEVELAND RTAがクリーブランドで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -27262,7 +26717,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "GREATER CLEVELAND RTAがClevelandで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -27341,7 +26796,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "GREATER CLEVELAND RTAがClevelandで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -27474,90 +26929,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "OHIOHEALTH CORP",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-82807",
-"state": "OH",
-"city": "Columbus・3420 OHIOHEALTH PKWY",
-"company": "OHIOHEALTH CORP",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-21",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "OHIOHEALTH CORPがColumbusで更新・修繕の許可を取得(3件)",
-"infer": null,
-"note": "更新・修繕・事務所・その他",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 MMEPC2641904 Mechanical",
-"value": null,
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"gc": "Farber Corporation",
-"pin": "010183740",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-138",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:24.665641+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "OHIOHEALTH CORP obtained permits for repair/renovation work in Columbus (3 permits).",
-"not_construction": false,
-"as_of": "2026-10-21",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"FARBER CORPORATION",
-"GEIGER BROTHERS, INC.",
-"S.A.COMUNALE CO, INC."
-],
-"contractors_n": 3,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 3
-},
-"n_permits": 3,
-"member_ids": [
-"S-82807",
-"S-82946",
-"S-85807"
-],
-"kinds": [
-"更新・修繕",
-"事務所・その他"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -28329,85 +27700,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-85132"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "CRISTO HOMES INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-85770",
-"state": "OH",
-"city": "Cincinnati・573 TRISON DR",
-"company": "CRISTO HOMES INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-21",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CRISTO HOMES INCがCincinnatiでHVACの更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P09842 HVAC",
-"value": 8675.0,
-"verbatim": "HVAC / HVAC / 1-2-3 FM",
-"gc": "A-1 MECHANICAL OF DAYTON LLC",
-"pin": "016600040196",
-"owner_source": "parcel:hamilton_oh:addr"
-},
-"karte": null,
-"company_id": "C-13515",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:53:10.328592+00:00"
-},
-"meaning": "保全",
-"amount_usd": 8675.0,
-"headline_en": "CRISTO HOMES INC obtained a permit for HVAC repair/renovation work in Cincinnati (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-21",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"A-1 MECHANICAL OF DAYTON LLC"
-],
-"contractors_n": 1,
-"amount": {
-"max": 8675.0,
-"total": 8675.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-85770"
 ],
 "kinds": [
 "更新・修繕"
@@ -30152,85 +29444,6 @@
 },
 {
 "investor": {
-"name": "GRANGE MUTUAL CASUALTY CO",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-84514",
-"state": "OH",
-"city": "Columbus・671 S HIGH ST",
-"company": "GRANGE MUTUAL CASUALTY CO",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "金融・保険",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-19",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "GRANGE MUTUAL CASUALTY COがColumbusで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 FSUPC2638501 Fire Suppression",
-"value": 2000000.0,
-"verbatim": "Commercial - Other / Fire Suppression / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
-"gc": "D8Fire",
-"pin": "010014149",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-13513",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:58.557222+00:00"
-},
-"meaning": "保全",
-"amount_usd": 2000000.0,
-"headline_en": "GRANGE MUTUAL CASUALTY CO obtained a repair/renovation permit in Columbus (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-19",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"D8FIRE"
-],
-"contractors_n": 1,
-"amount": {
-"max": 2000000.0,
-"total": 2000000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-84514"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
-},
-{
-"investor": {
 "name": "CITY OF COLUMBUS OHIO",
 "basis": "operator",
 "label": "操業事業者",
@@ -31958,83 +31171,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-79386"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-79388",
-"state": "MI",
-"city": "Ann Arbor・3390 E Huron River Dr Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがアナーバーでユーティリティ整備の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0974 Right-of-Way - General",
-"value": null,
-"verbatim": "PROJECT IS FOR THE INSTALLATION OF TESTWIRE AND ANODES ALONG AN EXISTING 12\" GAS MAIN AND ALONG AN EXISTING 6\" GAS MAIN. THE DTE GAS MAINS ARE LOCATED ON THE SOUTH SIDE OF EAST HURON RIVER DRIVE, SOUTH SIDE OF EAST HURON RIVER DRIVE, BETWEEN HURON PARKWAY AND BLAKEWAY STREET. FIVE (5) 4'X4' PITS WILL BE DUG TO FACILITATE INSTALLATION OF TESTWIRE AND CATHODIC ANODES FOR PROTECTION OF THE EXISTING G",
-"gc": null,
-"pin": "09-09-35-203-005",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:21.719149+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a permit for utility work (cathodic protection) in Ann Arbor, MI (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-79388"
 ],
 "kinds": [
 "ユーティリティ"
@@ -35634,164 +34770,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-76549"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "CRISTO HOMES INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-77070",
-"state": "OH",
-"city": "Cincinnati・561 TRISON DR",
-"company": "CRISTO HOMES INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-08",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CRISTO HOMES INCがCincinnatiで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P08782 Plumbing Permits",
-"value": 2500.0,
-"verbatim": "Plumbing Permits / Plumbing Permits / 1-2-3 FM",
-"gc": "NEXT LEVEL PLUMBING SYSTEMS",
-"pin": "016600040217",
-"owner_source": "parcel:hamilton_oh"
-},
-"karte": null,
-"company_id": "C-13515",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:31.613694+00:00"
-},
-"meaning": "保全",
-"amount_usd": 2500.0,
-"headline_en": "CRISTO HOMES INC obtained a repair/renovation permit in Cincinnati (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-11",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"NEXT LEVEL PLUMBING SYSTEMS"
-],
-"contractors_n": 1,
-"amount": {
-"max": 2500.0,
-"total": 2500.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-77070"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "CRISTO HOMES INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-77074",
-"state": "OH",
-"city": "Cincinnati・500 TRISON DR",
-"company": "CRISTO HOMES INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-08",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CRISTO HOMES INCがCincinnatiで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P08781 Plumbing Permits",
-"value": 2500.0,
-"verbatim": "Plumbing Permits / Plumbing Permits / 1-2-3 FM",
-"gc": "NEXT LEVEL PLUMBING SYSTEMS",
-"pin": "016600040229",
-"owner_source": "parcel:hamilton_oh"
-},
-"karte": null,
-"company_id": "C-13515",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:57.558116+00:00"
-},
-"meaning": "保全",
-"amount_usd": 2500.0,
-"headline_en": "CRISTO HOMES INC obtained a repair/renovation permit in Cincinnati (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-11",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"NEXT LEVEL PLUMBING SYSTEMS"
-],
-"contractors_n": 1,
-"amount": {
-"max": 2500.0,
-"total": 2500.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-77074"
 ],
 "kinds": [
 "更新・修繕"
@@ -46819,85 +45797,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-73582"
-],
-"kinds": [
-"警備"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "OHIO LIVING COMMUNITIES",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-73597",
-"state": "OH",
-"city": "Columbus・645 NEIL AVE",
-"company": "OHIO LIVING COMMUNITIES",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-01",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "OHIO LIVING COMMUNITIESがColumbusで警備設備の許可を取得(1件)",
-"infer": null,
-"note": "警備",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 FALRC2618801 Fire Alarm",
-"value": null,
-"verbatim": "Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
-"gc": "UNION ELECTRIC & COMMUNICATIONS LLC",
-"pin": "010227935",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-17158",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:43.300988+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "OHIO LIVING COMMUNITIES obtained a permit for security/fire alarm work in Columbus (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-01",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"UNION ELECTRIC & COMMUNICATIONS LLC"
-],
-"contractors_n": 1,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-73597"
 ],
 "kinds": [
 "警備"
@@ -60232,85 +59131,6 @@
 },
 {
 "investor": {
-"name": "CHGO BOARD OF EDUCATION",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-65920",
-"state": "IL",
-"city": "Chicago・4650 N MENARD AVE",
-"company": "CHGO BOARD OF EDUCATION",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-23",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CHGO BOARD OF EDUCATIONがChicagoで通信設備の更新・修繕の許可を取得(1 件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200510386 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 3500.0,
-"verbatim": "ALTERATION OF EXISTING COMMUNICATION EQUIPMENT.  ALTERATION OF 3 BOXES AND EQUIPMENT ON 1 TOWERS / STRUCTURES.  LOCATION: SMOKESTACK.",
-"gc": "ALL CELL INC",
-"pin": "1317206001",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-13813",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:37.841837+00:00"
-},
-"meaning": "保全",
-"amount_usd": 3500.0,
-"headline_en": "CHGO BOARD OF EDUCATION obtained a permit to repair/alter communication equipment in Chicago (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-23",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"ALL CELL INC"
-],
-"contractors_n": 1,
-"amount": {
-"max": 3500.0,
-"total": 3500.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-65920"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "GRAHAM ENTERPRISE INC",
 "basis": "operator",
 "label": "操業事業者",
@@ -66091,83 +64911,6 @@
 ],
 "kinds": [
 "更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "KAPITAL ELECTRIC CO., INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-64311",
-"state": "IL",
-"city": "Chicago・21 E HURON ST",
-"company": "KAPITAL ELECTRIC CO., INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "その他の事業体",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-21",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "KAPITAL ELECTRIC CO., INCがChicagoでユーティリティ更新の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200510030 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 2900.0,
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. ADD 1 CIRCUITS TO EXISTING 400 AMP SERVICE DISCONNECTING MEANS. RECEPTACLE OUTLETS: 1 . LIGHTING OUTLETS: 0. ELECTRIC VEHICLE SUPPLY EQUIPMENT:1 SPACES. SPECIFIC LOCATION: PARKING SPOT 201&202.",
-"gc": null,
-"pin": "1710107016",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-1710",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:47.638602+00:00"
-},
-"meaning": "保全",
-"amount_usd": 2900.0,
-"headline_en": "KAPITAL ELECTRIC CO., INC obtained a permit for utility work (electrical) in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-21",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 2900.0,
-"total": 2900.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-64311"
-],
-"kinds": [
-"ユーティリティ"
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
@@ -79753,83 +78496,6 @@
 },
 {
 "investor": {
-"name": "REGUS MANAGEMENT GROUP LLC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-58161",
-"state": "IL",
-"city": "Chicago・605 N MICHIGAN AVE",
-"company": "REGUS MANAGEMENT GROUP LLC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-14",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "REGUS MANAGEMENT GROUP LLCがChicagoで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200511093 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 4546.0,
-"verbatim": "TUCKPOINTING AND UNIT MASONRY REPAIR / REPLACEMENT: 50 SQ. FT., LINTEL QTY. 0, MAX. LENGTH 0. LOCATION: SW CORNER ENTRANCE.",
-"gc": null,
-"pin": "1710118006",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-13486",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:39.577992+00:00"
-},
-"meaning": "保全",
-"amount_usd": 4546.0,
-"headline_en": "REGUS MANAGEMENT GROUP LLC obtained a repair/renovation permit in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-14",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 4546.0,
-"total": 4546.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-58161"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "ISOSTATIC INDUSTRIES",
 "basis": "operator",
 "label": "操業事業者",
@@ -83320,83 +81986,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-32986"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-32994",
-"state": "MI",
-"city": "Ann Arbor・3100 Baylis Dr Ann Arbor MI 48108",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-04",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0697 Right-of-Way - General",
-"value": null,
-"verbatim": "Reroute of Gas Service - Repair of DTE Gas Cross Bore of city storm main within the Stone School Road Right-of-Way.  The proposed work is located 24' off the centerline of Stone School Road approximately 66 South' from the nearest storm manhole. / Right-of-Way - General / General",
-"gc": null,
-"pin": "09-12-10-203-004",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:30.917740+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-04",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-32994"
 ],
 "kinds": [
 "ユーティリティ"
@@ -98275,83 +96864,6 @@
 },
 {
 "investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-32265",
-"state": "MI",
-"city": "Ann Arbor・3875 E Huron River Dr Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-08",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0632 Right-of-Way - General",
-"value": null,
-"verbatim": "DTE anode replacement / Right-of-Way - General / General",
-"gc": null,
-"pin": "09-09-35-405-001",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:42.457795+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a permit for utility work (anode replacement) in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-08",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-32265"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "TIRE DISCOUNTER",
 "basis": "operator",
 "label": "操業事業者",
@@ -99399,7 +97911,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "KROGER COがColumbusで看板設置の許可を取得(1件)",
 "infer": null,
 "note": "事務所・その他",
@@ -100151,85 +98663,6 @@
 "member_ids": [
 "S-60111",
 "S-80442"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
-"name": "TISHMAN SPEGER",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-80823",
-"state": "IL",
-"city": "Chicago・222 W ADAMS ST",
-"company": "TISHMAN SPEGER",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-10-16",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "TISHMAN SPEGERがChicagoで事務所改装の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101089203 PERMIT - RENOVATION/ALTERATION",
-"value": 328450.0,
-"verbatim": "SELF-CERT 2019 CBRC: ALTERATION OF INTERIOR OFFICE SUITE ON FLOOR 31 IN AN EXISTING 35 STORY BUILDING (OCCUPANCY GROUP B / TYPE 1A CONSTRUCTION)",
-"gc": "BEAR CONSTRUCTION COMPANY",
-"pin": "1716209008",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-15617",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:14.752675+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": 328450.0,
-"headline_en": "TISHMAN SPEGER obtained a permit for office fit-out in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-16",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"BEAR CONSTRUCTION COMPANY"
-],
-"contractors_n": 1,
-"amount": {
-"max": 328450.0,
-"total": 328450.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-80823"
 ],
 "kinds": [
 "事務所・その他"
@@ -109032,83 +107465,6 @@
 },
 {
 "investor": {
-"name": "JONES LANG LASALLE AMERICAS INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-62055",
-"state": "IL",
-"city": "Chicago・111 S WACKER DR",
-"company": "JONES LANG LASALLE AMERICAS INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-09-18",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "JONES LANG LASALLE AMERICAS INCがChicagoで事務所改装の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200512333 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 10258.0,
-"verbatim": "LOW VOLTAGE/COMMUNICATION ELECTRICAL WORK. INSTALL DATA/VIDEO. SPECIFIC LOCATION: SUITE 3340.",
-"gc": null,
-"pin": "1716208018",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-13840",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:06.495456+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": 10258.0,
-"headline_en": "Jones Lang LaSalle Americas Inc obtained a permit for office fit-out work in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-18",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 10258.0,
-"total": 10258.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-62055"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "Winnebago County Courthouse",
 "basis": "operator",
 "label": "操業事業者",
@@ -115162,7 +113518,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "ARCHBISHOP OF CINCINNATI TRがGREEN TOWNSHIPで記録を取得(2件)",
 "infer": null,
 "note": "工事でない記録",
@@ -115240,7 +113596,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "Walmartがハリソンで記録を取得(1件)",
 "infer": null,
 "note": "工事でない記録",
@@ -115317,7 +113673,7 @@
 "date": "2026-10-22",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "Tropical Smoothie CafeがMARIONで記録取得の許可を取得(1 件)",
 "infer": null,
 "note": "工事でない記録",
@@ -118691,83 +117047,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "The Guild of Artists and Artisans",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-68857",
-"state": "MI",
-"city": "Ann Arbor・350 S Main St Ann Arbor MI 48104",
-"company": "The Guild of Artists and Artisans",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "宗教・非営利",
-"category": "工事でない記録",
-"category_raw": "工事でない記録",
-"confidence": "high",
-"date": "2026-10-01",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "The Guild of Artists and ArtisansがAnn Arborで記録取得の許可を取得(1件)",
-"infer": null,
-"note": "工事でない記録",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 BANR26-0012 Banner - Street",
-"value": null,
-"verbatim": "Banner to promote 6th Annual A2 Artoberfest - Fine Art Fair, produced by The Guild of Artists and Artisans and moving to Main Street this year due to construction on Ann + 4th Ave. / Banner - Street / Street",
-"gc": null,
-"pin": "09-09-29-407-001",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15365",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:02.901800+00:00"
-},
-"meaning": "内容不明",
-"amount_usd": null,
-"headline_en": "The Guild of Artists and Artisans obtained a record (banner permit) in Ann Arbor (1 permit).",
-"not_construction": true,
-"as_of": "2026-10-01",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-68857"
-],
-"kinds": [
-"工事でない記録"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -132544,11 +130823,11 @@
 "name": "DTE",
 "entity_type": "corp",
 "jp": false,
-"signals": 64,
+"signals": 61,
 "value_total": null,
 "states": "MI",
 "latest": "2026-10-22",
-"targets": 64,
+"targets": 61,
 "signal_ids": [
 "S-84798",
 "S-84803",
@@ -132562,7 +130841,6 @@
 "S-79955",
 "S-79956",
 "S-79959",
-"S-79388",
 "S-78207",
 "S-75064",
 "S-69495",
@@ -132581,7 +130859,6 @@
 "S-55115",
 "S-33154",
 "S-32986",
-"S-32994",
 "S-33007",
 "S-33009",
 "S-33010",
@@ -132612,7 +130889,6 @@
 "S-30319",
 "S-30323",
 "S-30739",
-"S-32265",
 "S-84308"
 ],
 "n_amount_excluded": 0
@@ -133066,31 +131342,6 @@
 "n_amount_excluded": 1
 },
 {
-"id": "C-138",
-"name": "OHIOHEALTH CORP",
-"entity_type": "corp",
-"jp": false,
-"signals": 11,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-26",
-"targets": 11,
-"signal_ids": [
-"S-87782",
-"S-87801",
-"S-82807",
-"S-75912",
-"S-76644",
-"S-79637",
-"S-73798",
-"S-1812",
-"S-86470",
-"S-79631",
-"S-67592"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15553",
 "name": "MARONDA HOMES OF CINCINNATI LLC",
 "entity_type": "corp",
@@ -133187,6 +131438,30 @@
 "S-37004",
 "S-86546",
 "S-86581"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-138",
+"name": "OHIOHEALTH CORP",
+"entity_type": "corp",
+"jp": false,
+"signals": 10,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-26",
+"targets": 10,
+"signal_ids": [
+"S-87782",
+"S-87801",
+"S-75912",
+"S-76644",
+"S-79637",
+"S-73798",
+"S-1812",
+"S-86470",
+"S-79631",
+"S-67592"
 ],
 "n_amount_excluded": 0
 },
@@ -133770,25 +132045,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13515",
-"name": "CRISTO HOMES INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 5,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-21",
-"targets": 5,
-"signal_ids": [
-"S-85770",
-"S-82588",
-"S-77070",
-"S-77074",
-"S-8894"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-13609",
 "name": "STATE OF OHIO",
 "entity_type": "public",
@@ -133899,25 +132155,6 @@
 "S-5533",
 "S-88096",
 "S-68669"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-1710",
-"name": "KAPITAL ELECTRIC CO., INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 5,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-29",
-"targets": 5,
-"signal_ids": [
-"S-69875",
-"S-69909",
-"S-69934",
-"S-64311",
-"S-52386"
 ],
 "n_amount_excluded": 0
 },
@@ -134090,24 +132327,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13813",
-"name": "CHGO BOARD OF EDUCATION",
-"entity_type": "public",
-"jp": false,
-"signals": 4,
-"value_total": null,
-"states": "IL",
-"latest": "2026-10-13",
-"targets": 4,
-"signal_ids": [
-"S-79011",
-"S-75306",
-"S-65920",
-"S-62001"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-14053",
 "name": "CITY OF CINCINNATI",
 "entity_type": "public",
@@ -134234,6 +132453,24 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-1710",
+"name": "KAPITAL ELECTRIC CO., INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 4,
+"value_total": null,
+"states": "IL",
+"latest": "2026-09-29",
+"targets": 4,
+"signal_ids": [
+"S-69875",
+"S-69909",
+"S-69934",
+"S-52386"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-176",
 "name": "DETROIT PARKS & RECREATION",
 "entity_type": "public",
@@ -134284,23 +132521,6 @@
 "S-89560",
 "S-89571",
 "S-68535"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-12644",
-"name": "CROSSROADS COMMUNITY CHURCH INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 3,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-01",
-"targets": 3,
-"signal_ids": [
-"S-70451",
-"S-66102",
-"S-53524"
 ],
 "n_amount_excluded": 0
 },
@@ -134369,6 +132589,23 @@
 "S-79664",
 "S-88045",
 "S-59842"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-13813",
+"name": "CHGO BOARD OF EDUCATION",
+"entity_type": "public",
+"jp": false,
+"signals": 3,
+"value_total": null,
+"states": "IL",
+"latest": "2026-10-13",
+"targets": 3,
+"signal_ids": [
+"S-79011",
+"S-75306",
+"S-62001"
 ],
 "n_amount_excluded": 0
 },
@@ -134607,23 +132844,6 @@
 "S-75346",
 "S-69768",
 "S-59726"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15675",
-"name": "Sephora",
-"entity_type": "corp",
-"jp": false,
-"signals": 3,
-"value_total": null,
-"states": "IN,MI",
-"latest": "2026-10-22",
-"targets": 3,
-"signal_ids": [
-"S-85496",
-"S-84278",
-"S-68639"
 ],
 "n_amount_excluded": 0
 },
@@ -134900,6 +133120,22 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-12644",
+"name": "CROSSROADS COMMUNITY CHURCH INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "OH",
+"latest": "2026-09-28",
+"targets": 2,
+"signal_ids": [
+"S-66102",
+"S-53524"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-129",
 "name": "GOOGLE, INC.",
 "entity_type": "corp",
@@ -134928,6 +133164,22 @@
 "signal_ids": [
 "S-58468",
 "S-29360"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-13515",
+"name": "CRISTO HOMES INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-15",
+"targets": 2,
+"signal_ids": [
+"S-82588",
+"S-8894"
 ],
 "n_amount_excluded": 0
 },
@@ -135104,22 +133356,6 @@
 "signal_ids": [
 "S-87752",
 "S-8346"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-13840",
-"name": "JONES LANG LASALLE AMERICAS INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "IL",
-"latest": "2026-10-20",
-"targets": 2,
-"signal_ids": [
-"S-84448",
-"S-62055"
 ],
 "n_amount_excluded": 0
 },
@@ -135536,6 +133772,22 @@
 "signal_ids": [
 "S-65549",
 "S-65552"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15675",
+"name": "Sephora",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "IN,MI",
+"latest": "2026-10-20",
+"targets": 2,
+"signal_ids": [
+"S-84278",
+"S-68639"
 ],
 "n_amount_excluded": 0
 },
@@ -136504,21 +134756,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13486",
-"name": "REGUS MANAGEMENT GROUP LLC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-14",
-"targets": 1,
-"signal_ids": [
-"S-58161"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-1349",
 "name": "PITA INN",
 "entity_type": "corp",
@@ -136575,21 +134812,6 @@
 "targets": 1,
 "signal_ids": [
 "S-58221"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-13513",
-"name": "GRANGE MUTUAL CASUALTY CO",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-19",
-"targets": 1,
-"signal_ids": [
-"S-84514"
 ],
 "n_amount_excluded": 0
 },
@@ -137160,6 +135382,21 @@
 "targets": 1,
 "signal_ids": [
 "S-89492"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-13840",
+"name": "JONES LANG LASALLE AMERICAS INC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IL",
+"latest": "2026-10-20",
+"targets": 1,
+"signal_ids": [
+"S-84448"
 ],
 "n_amount_excluded": 0
 },
@@ -140239,21 +138476,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15365",
-"name": "The Guild of Artists and Artisans",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "MI",
-"latest": "2026-10-01",
-"targets": 1,
-"signal_ids": [
-"S-68857"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15366",
 "name": "DCMH-2 South Outpatient Clinic",
 "entity_type": "corp",
@@ -141184,21 +139406,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15483",
-"name": "SUPERCHARGED ENTERTAINMENT",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-28",
-"targets": 1,
-"signal_ids": [
-"S-67601"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15486",
 "name": "BRIGHTPATH",
 "entity_type": "corp",
@@ -141544,21 +139751,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15541",
-"name": "LMP GALLERIA PROPERTY LLC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "MI",
-"latest": "2026-10-16",
-"targets": 1,
-"signal_ids": [
-"S-80403"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15549",
 "name": "ELM ST HEALTH CENTER",
 "entity_type": "corp",
@@ -141679,21 +139871,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15571",
-"name": "FAIRFIELD TWP TRS",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-26",
-"targets": 1,
-"signal_ids": [
-"S-87016"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15573",
 "name": "KASHGAR UYGHUR DINING",
 "entity_type": "corp",
@@ -141750,21 +139927,6 @@
 "targets": 1,
 "signal_ids": [
 "S-67066"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15578",
-"name": "French Toast",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-24",
-"targets": 1,
-"signal_ids": [
-"S-65388"
 ],
 "n_amount_excluded": 0
 },
@@ -141930,21 +140092,6 @@
 "targets": 1,
 "signal_ids": [
 "S-53177"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15617",
-"name": "TISHMAN SPEGER",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-10-16",
-"targets": 1,
-"signal_ids": [
-"S-80823"
 ],
 "n_amount_excluded": 0
 },
@@ -144094,21 +142241,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15956",
-"name": "DR HORTON",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-26",
-"targets": 1,
-"signal_ids": [
-"S-86842"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15957",
 "name": "MOORE COMMUNITY COUNCIL",
 "entity_type": "corp",
@@ -145320,21 +143452,6 @@
 "targets": 1,
 "signal_ids": [
 "S-73582"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-17158",
-"name": "OHIO LIVING COMMUNITIES",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-01",
-"targets": 1,
-"signal_ids": [
-"S-73597"
 ],
 "n_amount_excluded": 0
 },
