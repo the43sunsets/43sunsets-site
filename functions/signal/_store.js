@@ -26,6 +26,7 @@ export function kvStore(kv) {
   const bump = async (key, ttl) => { const n = Math.max(parseInt(await kv.get(key) || "0", 10), 0) + 1; await kv.put(key, String(n), { expirationTtl: ttl }); return n; };
   return {
     kind: "kv",
+    async bumpInterest(day, face, id) { const key = `interest:${face}:${id}:${day}`; const n = (parseInt(await kv.get(key) || "0", 10) || 0) + 1; await kv.put(key, String(n)); return n; },
     async sweep() { return {}; },
     async getAccount(email) { return kv.get("sg:acct:" + email, "json"); },
     async putAccount(acct) { await put("sg:acct:" + acct.email, acct); },
@@ -103,6 +104,7 @@ export function d1Store(db) {
   const sessionValue = row => row ? compact({ email: row.email, company: row.company, created: row.created_at }) : null;
   return {
     kind: "d1",
+    async bumpInterest(day, face, id) { return (await first("INSERT INTO interest_day (day,face,id,n) VALUES (?,?,?,1) ON CONFLICT(day,face,id) DO UPDATE SET n=n+1 RETURNING n", day, face, id)).n; },
     async sweep(now = nowISO()) {
       try {
         const cutoff = later(now, -60 * 86400), grace = later(now, -7 * 86400);

@@ -66,8 +66,11 @@ export function afterCursor(terms, values) {
   return { sql: `(${alternatives.join(" OR ")})`, args };
 }
 export function faceQuery(face, spec, params, policy, csv = false) {
-  const tags = Object.keys(spec.tags).filter(x => x !== "sample_axis");
-  checkNames(params, [...Object.keys(spec.filters), ...tags, "period", "sort", "cursor", "limit", "view"]);
+  const tagNames = new Map(Object.keys(spec.tags).filter(x => x !== "sample_axis").map(x => [x, x]));
+  for (const [key, value] of Object.entries(spec.filters)) if (value?.place === "tag") tagNames.set(key, value.dim);
+  const tags = [...tagNames.keys()];
+  checkNames(params, [...Object.keys(spec.filters), ...tags, "period", "sort", "cursor", "limit", "view", ...(csv ? ["layout"] : [])]);
+  if (csv && params.has("layout") && (single(params, "layout") !== "crm" || !["permits", "ucc"].includes(face))) fail(400, "bad value");
   // Unknown names and invalid filter types remain errors even when a sample ignores their values.
   for (const key of [...Object.keys(spec.filters), ...tags]) for (const value of params.getAll(key)) {
     if (value.length > 200 || (/^(INTEGER|REAL)\b/.test(spec.columns[key] || "") && !/^-?\d+(\.\d+)?$/.test(value))) fail(400, "bad value");
@@ -79,20 +82,22 @@ export function faceQuery(face, spec, params, policy, csv = false) {
   if (!Object.hasOwn(spec.sorts, sort)) fail(400, "bad sort");
   const terms = spec.sorts[sort], parts = [], args = [];
   for (const col of Object.keys(spec.filters)) {
+    if (spec.filters[col]?.place) continue;
     const values = params.getAll(col); if (!values.length) continue;
     parts.push(`f.${col} IN (${values.map(() => "?").join(",")})`); args.push(...values);
   }
   for (const dim of tags) {
     const values = params.getAll(dim); if (!values.length) continue;
-    parts.push(`EXISTS (SELECT 1 FROM f_tag t WHERE t.face=? AND t.dim=? AND t.id=f.id AND t.value IN (${values.map(() => "?").join(",")}))`); args.push(face, dim, ...values);
+    parts.push(`EXISTS (SELECT 1 FROM f_tag t WHERE t.face=? AND t.dim=? AND t.id=f.id AND t.value IN (${values.map(() => "?").join(",")}))`); args.push(face, tagNames.get(dim), ...values);
   }
-  if (spec.period !== null) {
-    const period = single(params, "period") ?? "90d";
-    if (period !== "all") {
-      if (!Object.hasOwn(FACE_SPEC.period_days, period) || !Number.isFinite(FACE_SPEC.period_days[period])) fail(400, "bad period");
-      parts.push("f.period_date >= (SELECT date(substr(generated_at, 1, 10), ?) FROM f_meta WHERE face=?)"); args.push(`-${FACE_SPEC.period_days[period]} days`, face);
-    }
+  if (params.has("new")) {
+    if (single(params, "new") !== "1") fail(400, "bad value");
+    parts.push("f.first_published_at IS NOT NULL AND f.first_published_at >= (SELECT date(substr(generated_at, 1, 10), '-7 days') FROM f_meta WHERE face=?)"); args.push(face);
   }
+  const period = single(params, "period") ?? spec.default_period;
+  const periods = spec.periods ?? FACE_SPEC.periods, days = spec.period_days ?? FACE_SPEC.period_days;
+  if (!periods.includes(period) || !Object.hasOwn(days, period) || !Number.isFinite(days[period])) fail(400, "bad period");
+  parts.push("f.period_date >= (SELECT date(substr(generated_at, 1, 10), ?) FROM f_meta WHERE face=?)"); args.push(`-${days[period]} days`, face);
   let limit = 8;
   if (!csv) {
     const raw = single(params, "limit");
@@ -109,8 +114,10 @@ export async function batch(db, queries) {
   if (out.some(x => x.success === false || !Array.isArray(x.results))) throw new Error("query failed");
   return out.map(x => x.results);
 }
-export function card(row, spec) {
+export function card(row, spec, generatedAt) {
   const result = JSON.parse(row.card);
-  if (spec.new_date !== null && Number.isFinite(spec.NEW_DAYS)) result.new = row.new_date != null && row.new_date >= new Date(Date.now() - spec.NEW_DAYS * 864e5).toISOString().slice(0, 10);
+  const date = Date.parse(String(generatedAt).slice(0, 10));
+  result.new = row.first_published_at != null && Number.isFinite(date) && row.first_published_at >= new Date(date - spec.NEW_DAYS * 864e5).toISOString().slice(0, 10);
+  result.first_published_at = row.first_published_at ?? null;
   return result;
 }
