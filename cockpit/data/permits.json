@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-11-07T12:52:47+00:00",
+"generated_at": "2026-11-08T13:41:33+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,31 +15,31 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 93251,
-"candidates": 60121,
-"targets": 1214,
-"permits_folded": 1509,
+"signals_total": 95013,
+"candidates": 60604,
+"targets": 1202,
+"permits_folded": 1492,
 "unclassified": 0,
-"unevaluated": 30277,
+"unevaluated": 31296,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 177,
-"保全": 787,
-"事務所・その他": 123,
+"操業の変化": 176,
+"保全": 777,
+"事務所・その他": 122,
 "内容不明": 47,
 "工事でない記録": 80
 },
 "stages": {
-"0": 33130,
-"2a": 3110,
-"2b": 20043,
-"2c": 7124,
-"2d": 23798,
-"3": 4291,
-"5": 196,
-"6": 1559
+"0": 34409,
+"2a": 3154,
+"2b": 21040,
+"2c": 7102,
+"2d": 23368,
+"3": 4200,
+"5": 198,
+"6": 1542
 },
-"enriched": 29844
+"enriched": 29308
 },
 "sources": [
 {
@@ -47,14 +47,14 @@
 "state": "IL",
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-11-07T08:03:14Z",
-"last_run_reason": "ok",
+"last_run_status": "error",
+"last_run_at": "2026-11-08T08:02:05Z",
+"last_run_reason": "upstream_error",
 "signals": 11005,
 "date_min": "2026-07-01",
 "date_max": "2026-11-05",
 "owner_coverage": 10581,
-"targets": 337,
+"targets": 334,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -65,7 +65,7 @@
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:03:24Z",
+"last_run_at": "2026-11-08T08:02:30Z",
 "last_run_reason": "ok",
 "signals": 302,
 "date_min": "2026-07-01",
@@ -82,13 +82,13 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:03:34Z",
+"last_run_at": "2026-11-08T08:02:31Z",
 "last_run_reason": "ok",
-"signals": 3596,
+"signals": 3630,
 "date_min": "2026-07-01",
-"date_max": "2026-11-04",
-"owner_coverage": 3433,
-"targets": 92,
+"date_max": "2026-11-05",
+"owner_coverage": 3466,
+"targets": 90,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -99,13 +99,13 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:03:35Z",
+"last_run_at": "2026-11-08T08:02:33Z",
 "last_run_reason": "ok",
-"signals": 3058,
+"signals": 3100,
 "date_min": "2026-07-01",
-"date_max": "2026-11-04",
-"owner_coverage": 3045,
-"targets": 127,
+"date_max": "2026-11-05",
+"owner_coverage": 3087,
+"targets": 125,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -116,7 +116,7 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:03:35Z",
+"last_run_at": "2026-11-08T08:02:34Z",
 "last_run_reason": "ok",
 "signals": 1720,
 "date_min": "2026-07-07",
@@ -133,7 +133,7 @@
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
 "last_run_status": "empty",
-"last_run_at": "2026-11-07T08:56:16Z",
+"last_run_at": "2026-11-08T10:15:07Z",
 "last_run_reason": "ok",
 "signals": 111,
 "date_min": "2026-07-07",
@@ -150,12 +150,12 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:03:36Z",
+"last_run_at": "2026-11-08T08:02:35Z",
 "last_run_reason": "ok",
-"signals": 2442,
+"signals": 2470,
 "date_min": "2026-07-01",
-"date_max": "2026-11-05",
-"owner_coverage": 2431,
+"date_max": "2026-11-06",
+"owner_coverage": 2459,
 "targets": 35,
 "cadence": "daily",
 "next_run_at": null,
@@ -184,11 +184,11 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:03:37Z",
+"last_run_at": "2026-11-08T08:02:39Z",
 "last_run_reason": "ok",
-"signals": 1599,
+"signals": 1600,
 "date_min": "2024-11-18",
-"date_max": "2026-11-06",
+"date_max": "2026-11-07",
 "owner_coverage": 0,
 "targets": 135,
 "cadence": "daily",
@@ -201,12 +201,12 @@
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:03:36Z",
+"last_run_at": "2026-11-08T08:02:38Z",
 "last_run_reason": "ok",
-"signals": 394,
+"signals": 476,
 "date_min": "2026-07-01",
 "date_max": "2026-10-30",
-"owner_coverage": 392,
+"owner_coverage": 472,
 "targets": 1,
 "cadence": "daily",
 "next_run_at": null,
@@ -218,12 +218,12 @@
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:03:37Z",
+"last_run_at": "2026-11-08T08:02:38Z",
 "last_run_reason": "ok",
-"signals": 1770,
+"signals": 2067,
 "date_min": "2026-07-01",
 "date_max": "2026-10-30",
-"owner_coverage": 1274,
+"owner_coverage": 1490,
 "targets": 5,
 "cadence": "daily",
 "next_run_at": null,
@@ -235,12 +235,12 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:03:22Z",
+"last_run_at": "2026-11-08T08:02:24Z",
 "last_run_reason": "ok",
-"signals": 8128,
+"signals": 9109,
 "date_min": "2026-07-01",
 "date_max": "2026-11-05",
-"owner_coverage": 122,
+"owner_coverage": 135,
 "targets": 4,
 "cadence": "daily",
 "next_run_at": null,
@@ -252,13 +252,13 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:45:24Z",
+"last_run_at": "2026-11-08T09:03:57Z",
 "last_run_reason": "ok",
-"signals": 24399,
+"signals": 24401,
 "date_min": "2026-07-01",
 "date_max": "2026-11-07",
-"owner_coverage": 16383,
-"targets": 459,
+"owner_coverage": 16385,
+"targets": 451,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -269,13 +269,13 @@
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:51:29Z",
+"last_run_at": "2026-11-08T10:04:43Z",
 "last_run_reason": "ok",
-"signals": 14099,
+"signals": 14101,
 "date_min": "2026-07-01",
-"date_max": "2026-11-06",
-"owner_coverage": 7147,
-"targets": 199,
+"date_max": "2026-11-07",
+"owner_coverage": 7151,
+"targets": 197,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -286,12 +286,12 @@
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:53:34Z",
+"last_run_at": "2026-11-08T10:13:12Z",
 "last_run_reason": "ok",
-"signals": 756,
+"signals": 891,
 "date_min": "2026-07-01",
 "date_max": "2026-10-30",
-"owner_coverage": 585,
+"owner_coverage": 686,
 "targets": 1,
 "cadence": "daily",
 "next_run_at": null,
@@ -303,9 +303,9 @@
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-07T08:55:25Z",
+"last_run_at": "2026-11-08T10:15:04Z",
 "last_run_reason": "ok",
-"signals": 123,
+"signals": 143,
 "date_min": "2026-07-01",
 "date_max": "2026-10-30",
 "owner_coverage": 0,
@@ -1560,14 +1560,14 @@
 ]
 },
 "stages": {
-"0": 33130,
-"2a": 3110,
-"2b": 20043,
-"2c": 7124,
-"2d": 23798,
-"3": 4291,
-"5": 196,
-"6": 1559
+"0": 34409,
+"2a": 3154,
+"2b": 21040,
+"2c": 7102,
+"2d": 23368,
+"3": 4200,
+"5": 198,
+"6": 1542
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 14088,
+"checked": 13954,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -15374,83 +15374,6 @@
 },
 {
 "investor": {
-"name": "WALMART",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-35182",
-"state": "OH",
-"city": "Butler County・3201 PRINCETON RD, OH 45011 United States",
-"company": "WALMART",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-08-10",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "WALMARTがBUTLERで倉庫・搬送の許可を取得(1件)",
-"infer": null,
-"note": "倉庫・搬送",
-"fact": {
-"src": "Butler County 建築許可(公開記録)",
-"ref": "許可 BLD-RV26-03377 Building/Commercial/Revision/NA",
-"value": null,
-"verbatim": "REVISION * ALTERATION & RACKING-WALMART / Building/Commercial/Revision/NA",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:butler_oh:addr"
-},
-"karte": null,
-"company_id": "C-3034",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:38.363731+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": null,
-"headline_en": "WALMART obtained a warehouse/racking permit in BUTLER (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-10",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-35182"
-],
-"kinds": [
-"倉庫・搬送"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "COMCAST",
 "basis": "operator",
 "label": "操業事業者",
@@ -15679,85 +15602,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "NATIONWIDE CHILDRENS HOSPITAL",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-90076",
-"state": "OH",
-"city": "Columbus・630 CHILDREN'S DR",
-"company": "NATIONWIDE CHILDRENS HOSPITAL",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-30",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "NATIONWIDE CHILDRENS HOSPITALがColumbusでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 FSUPC2643036 Fire Suppression",
-"value": null,
-"verbatim": "Commercial - Other / Fire Suppression / Fire Protection",
-"gc": "S & S MIDWEST FIRE PROTECTION LLC",
-"pin": "010082628",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-140",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-07T12:37:31.870647+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "NATIONWIDE CHILDRENS HOSPITAL obtained a utility work permit in Columbus (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-30",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"S & S MIDWEST FIRE PROTECTION LLC"
-],
-"contractors_n": 1,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-90076"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -24687,88 +24531,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "PROCTER & GAMBLE CO THE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-75392",
-"state": "OH",
-"city": "Cincinnati・6331 CENTER HILL AV",
-"company": "PROCTER & GAMBLE CO THE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "化学・日用品",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-16",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "PROCTER & GAMBLE CO THEがCincinnatiで警備設備・ユーティリティの許可取得(2件)",
-"infer": null,
-"note": "ユーティリティ・警備",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P09320 Fire Protection Systems",
-"value": 18363.0,
-"verbatim": "Fire Protection Systems / Fire Protection Systems / B",
-"gc": "PREFERRED FIRE PROTECTION INC",
-"pin": "023800060062",
-"owner_source": "parcel:hamilton_oh"
-},
-"karte": null,
-"company_id": "C-13718",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-07T12:37:38.184776+00:00"
-},
-"meaning": "保全",
-"amount_usd": 250000.0,
-"headline_en": "Procter & Gamble Co The obtained permits for security equipment and utility work in Cincinnati (2 permits)",
-"not_construction": false,
-"as_of": "2026-10-16",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"PREFERRED FIRE PROTECTION INC",
-"DRIEKAST PIPING CORP"
-],
-"contractors_n": 2,
-"amount": {
-"max": 250000.0,
-"total": 268363.0,
-"stated_n": 2,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-75392",
-"S-82788"
-],
-"kinds": [
-"ユーティリティ",
-"警備"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -52768,86 +52530,6 @@
 },
 {
 "investor": {
-"name": "CHICAGO HOUSING AUTHORITY",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-631",
-"state": "IL",
-"city": "Chicago・6131 S CALUMET AVE",
-"company": "CHICAGO HOUSING AUTHORITY",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-18",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CHICAGO HOUSING AUTHORITYがChicagoで警備設備の許可を取得(2件)",
-"infer": null,
-"note": "警備",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200481965 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 152395.0,
-"verbatim": "PURPOSE: NEW/REPLACEMENT INSTALLATION. CHAIN LINK FENCE - 5'-0' ' (HEIGHT) X 10'-0' ' (LENGTH). LOCATION: ENTIRE PERIMETER.",
-"gc": "UNITY FENCING COMPANY",
-"pin": "2015317050",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-120",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:30.759664+00:00"
-},
-"meaning": "保全",
-"amount_usd": 152395.0,
-"headline_en": "CHICAGO HOUSING AUTHORITY obtained permits for security/fencing work in Chicago (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-18",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"UNITY FENCING COMPANY"
-],
-"contractors_n": 1,
-"amount": {
-"max": 152395.0,
-"total": 304789.0,
-"stated_n": 2,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-631",
-"S-62058"
-],
-"kinds": [
-"警備"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
 "name": "MANCHESTER FLATS LLC",
 "basis": "operator",
 "label": "操業事業者",
@@ -54328,85 +54010,6 @@
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
-"name": "HD DEVELOPMENT OF MARYLAND INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-27958",
-"state": "OH",
-"city": "Clermont County・1094 SR 28 MILFORD OH",
-"company": "HD DEVELOPMENT OF MARYLAND INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-17",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "HD DEVELOPMENT OF MARYLAND INCがMILFORDで警備・更新修繕の許可を取得(2件)",
-"infer": null,
-"note": "更新・修繕・警備",
-"fact": {
-"src": "Clermont County 建築許可(公開記録)",
-"ref": "許可 F-076192-2026 Fire Protection Systems Fire Alarm",
-"value": 3500.0,
-"verbatim": "HOME DEPOT FA / Fire Protection Systems Fire Alarm / Fire Alarm",
-"gc": null,
-"pin": "182516D260.",
-"owner_source": "parcel:clermont_oh"
-},
-"karte": null,
-"company_id": "C-14974",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:01.965980+00:00"
-},
-"meaning": "保全",
-"amount_usd": 29414.0,
-"headline_en": "HD Development of Maryland Inc obtained permits for security and repair/renovation work in Milford (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-17",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 29414.0,
-"total": 32914.0,
-"stated_n": 2,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-27958",
-"S-59956"
-],
-"kinds": [
-"更新・修繕",
-"警備"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -60794,85 +60397,6 @@
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
-"name": "TRINITY EPISCOPAL CHURCH",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-18863",
-"state": "IL",
-"city": "Highland Park・411 LAUREL AVE HIGHLAND PARK IL 60035",
-"company": "TRINITY EPISCOPAL CHURCH",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "宗教・非営利",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-14",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "TRINITY EPISCOPAL CHURCHがHighland Parkでフェンス設置と修繕の許可を取得(2件)",
-"infer": null,
-"note": "更新・修繕・事務所・その他",
-"fact": {
-"src": "Highland Park 建築許可(公開記録)",
-"ref": "許可 ACCY-2026-01112 Accessory Structure - Fence",
-"value": null,
-"verbatim": "Installation of a 6 ft cedar privacy fence on left and right side yards including one access gate. / Accessory Structure - Fence / Accessory - Fence",
-"gc": null,
-"pin": "16234090320000",
-"owner_source": "parcel:lake"
-},
-"karte": null,
-"company_id": "C-2485",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:26.550606+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "Trinity Episcopal Church obtained permits for fencing and repair work in Highland Park (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-14",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-18863",
-"S-55010"
-],
-"kinds": [
-"更新・修繕",
-"事務所・その他"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -76497,394 +76021,6 @@
 },
 {
 "investor": {
-"name": "THE UNIVERSITY OF CHICAGO",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-626",
-"state": "IL",
-"city": "Chicago・5850 S WOODLAWN AVE",
-"company": "THE UNIVERSITY OF CHICAGO",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "教育",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-10",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "THE UNIVERSITY OF CHICAGOがChicagoで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101080904 PERMIT - RENOVATION/ALTERATION",
-"value": 1924294.0,
-"verbatim": "SPR 2019 CBC: LOWER-LEVEL RESTROOM FACILITIES RENOVATION AND WATER SERVICE UPGRADE TO AN EXISTING CONCRETE AND MASONRY CHAPEL BUILDING.",
-"gc": "NACIONAL GROUP, LLC",
-"pin": "2014120001",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-49",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:10.038542+00:00"
-},
-"meaning": "保全",
-"amount_usd": 1924294.0,
-"headline_en": "THE UNIVERSITY OF CHICAGO obtained a permit for repair/renovation work in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-08-10",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"NACIONAL GROUP, LLC"
-],
-"contractors_n": 1,
-"amount": {
-"max": 1924294.0,
-"total": 1924294.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-626"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
-},
-{
-"investor": {
-"name": "COLONIAL SQUARE 4 APARTMENTS",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-31406",
-"state": "MI",
-"city": "Ann Arbor・3393 Williamsburg Rd Ann Arbor MI 48108",
-"company": "COLONIAL SQUARE 4 APARTMENTS",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-10",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "COLONIAL SQUARE 4 APARTMENTSがAnn Arborで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ELECR26-1924 Electrical (Residential) - General",
-"value": null,
-"verbatim": "dishwasher circuit\nbasement circuit  left of washer in cubby\ninstall sconce in stairwell on existing cir.\ninstall 3 kitchen outlets on existing circuit.  add basement light on exist circuit. / Electrical (Residential) - General / General",
-"gc": null,
-"pin": "09-12-11-300-007",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15548",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:25.264701+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "COLONIAL SQUARE 4 APARTMENTS obtained a repair/renovation permit in Ann Arbor (1 permit).",
-"not_construction": false,
-"as_of": "2026-09-06",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-31406"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "WINDSONG LIMITED DIVIDEND HOUSING",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-31740",
-"state": "MI",
-"city": "Ann Arbor・3025 Valencia Cir Ann Arbor MI 48108",
-"company": "WINDSONG LIMITED DIVIDEND HOUSING",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-10",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "WINDSONG LIMITED DIVIDEND HOUSINGがAnn Arborで更新・修繕の許可を取得(2件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 MECHC26-0765 Mechanical (Commercial) - General HVAC",
-"value": null,
-"verbatim": "Removing and installing a new A/C Unit / Mechanical (Commercial) - General HVAC / General HVAC",
-"gc": null,
-"pin": "09-12-10-303-202",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15565",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:10.143783+00:00"
-},
-"meaning": "保全",
-"amount_usd": 6517.0,
-"headline_en": "WINDSONG LIMITED DIVIDEND HOUSING obtained repair/renovation permits in Ann Arbor (2 permits)",
-"not_construction": false,
-"as_of": "2026-09-06",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 6517.0,
-"total": 6517.0,
-"stated_n": 1,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-31740",
-"S-31743"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "MANCHESTER FLATS LLC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-32681",
-"state": "MI",
-"city": "Ann Arbor・1105 Norman Pl Unit: 4 Ann Arbor MI 48103",
-"company": "MANCHESTER FLATS LLC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-10",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "MANCHESTER FLATS LLCがAnn Arborで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 MECHC26-0781 Mechanical (Commercial) - General HVAC",
-"value": null,
-"verbatim": "Water heater install / Mechanical (Commercial) - General HVAC / General HVAC",
-"gc": null,
-"pin": "09-09-31-118-001",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15917",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:35.088656+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "MANCHESTER FLATS LLC obtained a repair/renovation permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-06",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-32681"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "FIFTH THIRD BANK",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-36451",
-"state": "OH",
-"city": "Hamilton County・10708 LOVELAND MADEIRA RD , SYMMES TOWNSHIP OH 45140",
-"company": "FIFTH THIRD BANK",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "金融・保険",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-10",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "FIFTH THIRD BANKがSYMMES TOWNSHIPで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Hamilton County 建築許可(公開記録)",
-"ref": "許可 26HAM-PMT-004223 OBC Mechanical Permit",
-"value": null,
-"verbatim": "OBC Mechanical Permit",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:hamilton_oh:addr"
-},
-"karte": null,
-"company_id": "C-1866",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:31.974368+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "Fifth Third Bank obtained a permit for repair/renovation work in Symmes Township (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-06",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-36451"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "TIRE DISCOUNTER",
 "basis": "operator",
 "label": "操業事業者",
@@ -78996,85 +78132,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-78813"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "OHIOHEALTH CORP",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-79631",
-"state": "OH",
-"city": "Columbus・500 THOMAS LN",
-"company": "OHIOHEALTH CORP",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-10-13",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "OHIOHEALTH CORPORATIONがColumbusで看板設置の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 SIGN2601173 NA",
-"value": null,
-"verbatim": "NA / Sign / 50 SQFT",
-"gc": "Morrison Sign Company, Inc.",
-"pin": "010103190",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-138",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-07T12:37:43.408225+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": null,
-"headline_en": "OHIOHEALTH CORPORATION obtained a permit for sign installation in Columbus (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-13",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"MORRISON SIGN COMPANY, INC."
-],
-"contractors_n": 1,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-79631"
 ],
 "kinds": [
 "事務所・その他"
@@ -96678,33 +95735,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-3034",
-"name": "WALMART",
-"entity_type": "corp",
-"jp": false,
-"signals": 13,
-"value_total": null,
-"states": "IN,OH",
-"latest": "2026-10-29",
-"targets": 13,
-"signal_ids": [
-"S-84605",
-"S-86655",
-"S-68380",
-"S-35182",
-"S-79698",
-"S-79727",
-"S-69326",
-"S-89567",
-"S-85299",
-"S-82998",
-"S-83002",
-"S-76026",
-"S-75965"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-3730",
 "name": "CITY OF COLUMBUS OHIO",
 "entity_type": "public",
@@ -96732,31 +95762,30 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-49",
-"name": "THE UNIVERSITY OF CHICAGO",
+"id": "C-3034",
+"name": "WALMART",
 "entity_type": "corp",
 "jp": false,
-"signals": 13,
+"signals": 12,
 "value_total": null,
-"states": "IL",
-"latest": "2026-10-13",
-"targets": 13,
+"states": "IN",
+"latest": "2026-10-29",
+"targets": 12,
 "signal_ids": [
-"S-7049",
-"S-745",
-"S-78918",
-"S-70066",
-"S-66766",
-"S-59730",
-"S-58207",
-"S-6850",
-"S-50925",
-"S-50949",
-"S-36579",
-"S-626",
-"S-78364"
+"S-84605",
+"S-86655",
+"S-68380",
+"S-79698",
+"S-79727",
+"S-69326",
+"S-89567",
+"S-85299",
+"S-82998",
+"S-83002",
+"S-76026",
+"S-75965"
 ],
-"n_amount_excluded": 1
+"n_amount_excluded": 0
 },
 {
 "id": "C-335",
@@ -96783,6 +95812,32 @@
 "S-69238"
 ],
 "n_amount_excluded": 0
+},
+{
+"id": "C-49",
+"name": "THE UNIVERSITY OF CHICAGO",
+"entity_type": "corp",
+"jp": false,
+"signals": 12,
+"value_total": null,
+"states": "IL",
+"latest": "2026-10-13",
+"targets": 12,
+"signal_ids": [
+"S-7049",
+"S-745",
+"S-78918",
+"S-70066",
+"S-66766",
+"S-59730",
+"S-58207",
+"S-6850",
+"S-50925",
+"S-50949",
+"S-36579",
+"S-78364"
+],
+"n_amount_excluded": 1
 },
 {
 "id": "C-15553",
@@ -96830,29 +95885,6 @@
 "S-64333",
 "S-64414",
 "S-25211"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-138",
-"name": "OHIOHEALTH CORP",
-"entity_type": "corp",
-"jp": false,
-"signals": 9,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-26",
-"targets": 9,
-"signal_ids": [
-"S-87782",
-"S-87801",
-"S-75912",
-"S-76644",
-"S-79637",
-"S-73798",
-"S-86470",
-"S-79631",
-"S-67592"
 ],
 "n_amount_excluded": 0
 },
@@ -96948,26 +95980,26 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15917",
-"name": "MANCHESTER FLATS LLC",
+"id": "C-138",
+"name": "OHIOHEALTH CORP",
 "entity_type": "corp",
 "jp": false,
 "signals": 8,
 "value_total": null,
-"states": "MI",
-"latest": "2026-09-18",
+"states": "OH",
+"latest": "2026-10-26",
 "targets": 8,
 "signal_ids": [
-"S-32358",
-"S-60080",
-"S-32074",
-"S-32042",
-"S-32054",
-"S-32056",
-"S-31782",
-"S-32681"
+"S-87782",
+"S-87801",
+"S-75912",
+"S-76644",
+"S-79637",
+"S-73798",
+"S-86470",
+"S-67592"
 ],
-"n_amount_excluded": 5
+"n_amount_excluded": 0
 },
 {
 "id": "C-15996",
@@ -96988,28 +96020,6 @@
 "S-74214",
 "S-74215",
 "S-79109"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-1866",
-"name": "FIFTH THIRD BANK",
-"entity_type": "corp",
-"jp": false,
-"signals": 8,
-"value_total": null,
-"states": "IL,OH",
-"latest": "2026-10-28",
-"targets": 8,
-"signal_ids": [
-"S-89445",
-"S-36451",
-"S-88553",
-"S-85004",
-"S-53520",
-"S-40117",
-"S-24802",
-"S-69198"
 ],
 "n_amount_excluded": 0
 },
@@ -97100,27 +96110,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15548",
-"name": "COLONIAL SQUARE 4 APARTMENTS",
-"entity_type": "corp",
-"jp": false,
-"signals": 7,
-"value_total": null,
-"states": "MI",
-"latest": "2026-10-09",
-"targets": 7,
-"signal_ids": [
-"S-76871",
-"S-67985",
-"S-60075",
-"S-32520",
-"S-32673",
-"S-31102",
-"S-31406"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15551",
 "name": "UNIVERSITY OF MICHIGAN",
 "entity_type": "corp",
@@ -97138,6 +96127,48 @@
 "S-32267",
 "S-32971",
 "S-60717"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15917",
+"name": "MANCHESTER FLATS LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 7,
+"value_total": null,
+"states": "MI",
+"latest": "2026-09-18",
+"targets": 7,
+"signal_ids": [
+"S-32358",
+"S-60080",
+"S-32074",
+"S-32042",
+"S-32054",
+"S-32056",
+"S-31782"
+],
+"n_amount_excluded": 5
+},
+{
+"id": "C-1866",
+"name": "FIFTH THIRD BANK",
+"entity_type": "corp",
+"jp": false,
+"signals": 7,
+"value_total": null,
+"states": "IL,OH",
+"latest": "2026-10-28",
+"targets": 7,
+"signal_ids": [
+"S-89445",
+"S-88553",
+"S-85004",
+"S-53520",
+"S-40117",
+"S-24802",
+"S-69198"
 ],
 "n_amount_excluded": 0
 },
@@ -97184,26 +96215,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13718",
-"name": "PROCTER & GAMBLE CO THE",
-"entity_type": "corp",
-"jp": false,
-"signals": 6,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-22",
-"targets": 6,
-"signal_ids": [
-"S-79581",
-"S-86284",
-"S-84508",
-"S-75392",
-"S-80082",
-"S-60442"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-13908",
 "name": "GREATER CLEVELAND RTA",
 "entity_type": "public",
@@ -97220,6 +96231,26 @@
 "S-86533",
 "S-86534",
 "S-73907"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15548",
+"name": "COLONIAL SQUARE 4 APARTMENTS",
+"entity_type": "corp",
+"jp": false,
+"signals": 6,
+"value_total": null,
+"states": "MI",
+"latest": "2026-10-09",
+"targets": 6,
+"signal_ids": [
+"S-76871",
+"S-67985",
+"S-60075",
+"S-32520",
+"S-32673",
+"S-31102"
 ],
 "n_amount_excluded": 0
 },
@@ -97362,6 +96393,25 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-13718",
+"name": "PROCTER & GAMBLE CO THE",
+"entity_type": "corp",
+"jp": false,
+"signals": 5,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-22",
+"targets": 5,
+"signal_ids": [
+"S-79581",
+"S-86284",
+"S-84508",
+"S-80082",
+"S-60442"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-1596",
 "name": "OLD NATIONAL BANK",
 "entity_type": "corp",
@@ -97433,24 +96483,6 @@
 "S-69881",
 "S-69907",
 "S-5770"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-120",
-"name": "CHICAGO HOUSING AUTHORITY",
-"entity_type": "public",
-"jp": false,
-"signals": 4,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-18",
-"targets": 4,
-"signal_ids": [
-"S-631",
-"S-62028",
-"S-58910",
-"S-58249"
 ],
 "n_amount_excluded": 0
 },
@@ -97671,6 +96703,23 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-120",
+"name": "CHICAGO HOUSING AUTHORITY",
+"entity_type": "public",
+"jp": false,
+"signals": 3,
+"value_total": null,
+"states": "IL",
+"latest": "2026-09-18",
+"targets": 3,
+"signal_ids": [
+"S-62028",
+"S-58910",
+"S-58249"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-12640",
 "name": "COLUMBUS REGIONAL AIRPORT AUTHORITY",
 "entity_type": "public",
@@ -97786,23 +96835,6 @@
 "S-90142",
 "S-82895",
 "S-63582"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-140",
-"name": "NATIONWIDE CHILDRENS HOSPITAL",
-"entity_type": "corp",
-"jp": false,
-"signals": 3,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-30",
-"targets": 3,
-"signal_ids": [
-"S-90076",
-"S-1468",
-"S-65243"
 ],
 "n_amount_excluded": 0
 },
@@ -98342,6 +97374,22 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-140",
+"name": "NATIONWIDE CHILDRENS HOSPITAL",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "OH",
+"latest": "2026-09-24",
+"targets": 2,
+"signal_ids": [
+"S-1468",
+"S-65243"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-14053",
 "name": "CITY OF CINCINNATI",
 "entity_type": "public",
@@ -98642,22 +97690,6 @@
 "signal_ids": [
 "S-78195",
 "S-66285"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15565",
-"name": "WINDSONG LIMITED DIVIDEND HOUSING",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "MI",
-"latest": "2026-09-24",
-"targets": 2,
-"signal_ids": [
-"S-66327",
-"S-31740"
 ],
 "n_amount_excluded": 0
 },
@@ -102125,21 +101157,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-14974",
-"name": "HD DEVELOPMENT OF MARYLAND INC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-09-17",
-"targets": 1,
-"signal_ids": [
-"S-27958"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-14979",
 "name": "The Heritage Group",
 "entity_type": "corp",
@@ -103576,6 +102593,21 @@
 "targets": 1,
 "signal_ids": [
 "S-69819"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15565",
+"name": "WINDSONG LIMITED DIVIDEND HOUSING",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "MI",
+"latest": "2026-09-24",
+"targets": 1,
+"signal_ids": [
+"S-66327"
 ],
 "n_amount_excluded": 0
 },
@@ -105901,21 +104933,6 @@
 "targets": 1,
 "signal_ids": [
 "S-82962"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-2485",
-"name": "TRINITY EPISCOPAL CHURCH",
-"entity_type": "public",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-14",
-"targets": 1,
-"signal_ids": [
-"S-18863"
 ],
 "n_amount_excluded": 0
 },
