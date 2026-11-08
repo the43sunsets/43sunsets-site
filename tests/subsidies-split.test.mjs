@@ -180,5 +180,6 @@ test("SS-13: counts, labels, markers and every existing gate helper remain prese
   assert.ok(!html.includes("d.demo && META.n_major"));
   const gate = readFileSync(new URL("../functions/cockpit/data/[[path]].js", import.meta.url), "utf8");
   assert.ok(gate.includes("GATED_PREFIXES")); assert.ok(gate.includes("function demoMore("));
-  for (const name of ["demoMacro", "demoNews", "demoCompany", "sessionLimited", "withHeaders"]) assert.equal((gate.match(new RegExp(`\\bfunction ${name}\\(`, "g")) || []).length, 1, name);
+  for (const name of ["demoMacro", "demoNews", "demoCompany", "withHeaders"]) assert.equal((gate.match(new RegExp(`\\bfunction ${name}\\(`, "g")) || []).length, 1, name);
+  assert.equal((readFileSync(new URL("../functions/signal/_rate.js", import.meta.url), "utf8").match(/export async function sessionLimited\(/g) || []).length, 1, "sessionLimited in _rate.js");
 });
