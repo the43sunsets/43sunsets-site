@@ -38,7 +38,7 @@
 },
 "faces": {
 "permits": {
-"count": 6,
+"count": 8,
 "value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-10-28",
@@ -78,6 +78,78 @@
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-8675",
+"parent_id": "S-8675",
+"member_n": 1,
+"date": "2026-08-21",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "10 FOUNTAIN SQUARE PLAZA",
+"permit_no": "2026P08027",
+"permit_type": "HVAC",
+"source_id": "SRC-003",
+"value": 1142.0,
+"category": "保全",
+"confidence": "high",
+"summary": "FIFTH THIRD BANKがCincinnatiで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "HVAC / HVAC / A-2 (1)",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:01:32.242092+00:00",
+"reading_id": "01M711VG6JHD0X99AA3P440T3N"
+},
+"n_permits": 1,
+"member_ids": [
+"S-8675"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-8459",
+"parent_id": "S-8459",
+"member_n": 1,
+"date": "2026-08-12",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "3000 HENSHAW AV",
+"permit_no": "2026P05948",
+"permit_type": "HVAC",
+"source_id": "SRC-003",
+"value": 25815.0,
+"category": "保全",
+"confidence": "high",
+"summary": "FIFTH THIRD BANKがCincinnatiでHVACの更新許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "HVAC / HVAC / B",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:01:48.064237+00:00",
+"reading_id": "01M711VZN0NG8W2X2R5VTB5NNJ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-8459"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "id": "S-88553",
@@ -322,13 +394,27 @@
 "summary": "FIFTH THIRD BANKがLOVELANDで看板設置の許可を取得(1件)"
 },
 {
+"date": "2026-08-21",
+"face": "permits",
+"title": "建設許可(Cincinnati): FIFTH THIRD BANKがCincinnatiで更新・修繕の許可を取得(1件)",
+"ref": "S-8675",
+"summary": "FIFTH THIRD BANKがCincinnatiで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-08-18",
 "face": "permits",
 "title": "建設許可(Kettering): Fifth Third BankがKetteringで事務所・その他の許可を取得(1件)",
 "ref": "S-40117",
 "summary": "Fifth Third BankがKetteringで事務所・その他の許可を取得(1件)"
+},
+{
+"date": "2026-08-12",
+"face": "permits",
+"title": "建設許可(Cincinnati): FIFTH THIRD BANKがCincinnatiでHVACの更新許可を取得(1件)",
+"ref": "S-8459",
+"summary": "FIFTH THIRD BANKがCincinnatiでHVACの更新許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-09T12:37:09+00:00",
+"generated_at": "2026-11-09T21:21:48+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

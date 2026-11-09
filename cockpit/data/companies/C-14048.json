@@ -38,11 +38,47 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-09-21",
 "items": [
+{
+"id": "S-64316",
+"parent_id": "S-64316",
+"member_n": 1,
+"date": "2026-09-21",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "71 W VAN BUREN ST",
+"permit_no": "B200511291",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"source_id": "SRC-001",
+"value": 570000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "MCC CHICAGOがChicagoで屋根の修繕許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SCOPE: ROOF REPLACEMENT. AREA: 1200 SQ. FT. ROOF COVERING: MINERAL - SURFACED ROLL ROOFING. LOCATION: ROOFTOP. IL ROOFING CONTRACTOR LICENSE: 104016915.",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:01:59.386212+00:00",
+"reading_id": "01M711WAPTH52QBNS3D1SEG1JA"
+},
+"n_permits": 1,
+"member_ids": [
+"S-64316"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-64399",
 "parent_id": "S-64399",
@@ -109,11 +145,18 @@
 {
 "date": "2026-09-21",
 "face": "permits",
+"title": "建設許可(Chicago): MCC CHICAGOがChicagoで屋根の修繕許可を取得(1件)",
+"ref": "S-64316",
+"summary": "MCC CHICAGOがChicagoで屋根の修繕許可を取得(1件)"
+},
+{
+"date": "2026-09-21",
+"face": "permits",
 "title": "建設許可(Chicago): MCC CHICAGOがシカゴで屋根の修繕許可を取得(1件)",
 "ref": "S-64399",
 "summary": "MCC CHICAGOがシカゴで屋根の修繕許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-09T12:37:09+00:00",
+"generated_at": "2026-11-09T21:21:48+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

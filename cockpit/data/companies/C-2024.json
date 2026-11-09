@@ -35,7 +35,7 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 3,
 "value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-10-30",
@@ -55,7 +55,7 @@
 "value": null,
 "category": "操業の変化",
 "confidence": "high",
-"summary": "FedExがMARIONで倉庫・搬送の許可を取得(2件)",
+"summary": "FedExがマリオン郡で倉庫・搬送設備の許可を取得(2件)",
 "infer": null,
 "role": "operator",
 "role_label": "操業事業者",
@@ -63,8 +63,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:34.580199+00:00",
-"reading_id": "01M6JAZTGMEWZAQT5JP953YZV6"
+"generated_at": "2026-11-09T21:02:49.439648+00:00",
+"reading_id": "01M711XVJZMG065PBANW07MZVM"
 },
 "n_permits": 2,
 "member_ids": [
@@ -112,6 +112,43 @@
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-48884",
+"parent_id": "S-48884",
+"member_n": 2,
+"date": "2026-08-26",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Bedford Park",
+"address": "6833 w 75th Street",
+"permit_no": "11230",
+"permit_type": null,
+"source_id": "SRC-105",
+"value": 8000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "FedexがBedford Parkで更新・修繕の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Replace channel letters Fedex / [issued by Cook County Building & Zoning for Bedford Park]",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:02:14.395134+00:00",
+"reading_id": "01M711WSBVM1NDSHPF5993BYX7"
+},
+"n_permits": 2,
+"member_ids": [
+"S-48884",
+"S-48890"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -150,11 +187,18 @@
 {
 "date": "2026-10-06",
 "face": "permits",
-"title": "建設許可(Indiana/MARION): FedExがMARIONで倉庫・搬送の許可を取得(2件)",
+"title": "建設許可(Indiana/MARION): FedExがマリオン郡で倉庫・搬送設備の許可を取得(2件)",
 "ref": "S-68604",
-"summary": "FedExがMARIONで倉庫・搬送の許可を取得(2件)"
+"summary": "FedExがマリオン郡で倉庫・搬送設備の許可を取得(2件)"
+},
+{
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Bedford Park): FedexがBedford Parkで更新・修繕の許可を取得(2件)",
+"ref": "S-48884",
+"summary": "FedexがBedford Parkで更新・修繕の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-11-09T12:37:09+00:00",
+"generated_at": "2026-11-09T21:21:48+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
