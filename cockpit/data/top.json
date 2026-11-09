@@ -1,17 +1,17 @@
 {
-"generated_at": "2026-11-02T10:54:23+00:00",
-"updated_ct": "2026-11-02",
-"week_start": "2026-11-02",
-"next_update_ct": "2026-11-09",
+"generated_at": "2026-11-09T09:50:18+00:00",
+"updated_ct": "2026-11-09",
+"week_start": "2026-11-09",
+"next_update_ct": "2026-11-16",
 "window_days": 90,
 "rule": "直近 90 日の記録から最大 5 件を選ぶ(交差/日系/大型の許可/連続した担保登記/自動化つき設備)。同じ会社は 1 回。主体未特定・雑音は選ばず、足りなくても埋めない。見出しは記録の種類の言葉だけで書く。毎週月曜に選び直す。選定理由は why に。",
 "intro": "直近 90 日の記録から、毎週月曜に選び直す最大 5 件。見出しは記録の種類の言葉だけで書く。記録日は 90 日前まで遡ることがある。",
 "g4": {
 "n": 5,
 "unidentified": 0,
-"unidentified_excluded": 4,
-"noise_excluded": 1090,
-"verbs_checked": 252,
+"unidentified_excluded": 55,
+"noise_excluded": 939,
+"verbs_checked": 265,
 "verbs_rejected": 0,
 "verbs_version": {
 "kinds": "headline-verbs-v1-2026-10-04",
@@ -44,20 +44,20 @@
 "date": "2026-09-16",
 "karte": "C-4",
 "company": "LEGACY GI TC 400 LASALLE LLC",
-"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 7 件中の上位)。工事費 $1M 以上 = 設備の入る建屋の型。"
+"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 9 件中の上位)。工事費 $1M 以上 = 設備の入る建屋の型。"
 },
 {
 "kind": "permit",
 "tag": "大型",
-"title": "FORD MOTOR COMPANYがDetroitで用途転換・改修の許可を取得(2件)",
-"body": "Detroit。9月に建設許可。工事費 $24.0M。",
-"move": "FORD MOTOR COMPANYがDetroitで用途転換・改修の許可を取得(2件)",
+"title": "コロンバス空港局がコロンバスで新築等の許可を取得(3件)",
+"body": "Columbus。9月に建設許可。工事費 $32.0M。",
+"move": "コロンバス空港局がコロンバスで新築等の許可を取得(3件)",
 "link": "permits/",
 "face": "許可",
-"date": "2026-09-28",
-"karte": "C-154",
-"company": "FORD MOTOR COMPANY",
-"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 7 件中の上位)。工事費 $1M 以上 = 設備の入る建屋の型。"
+"date": "2026-09-24",
+"karte": "C-12640",
+"company": "COLUMBUS REGIONAL AIRPORT AUTHORITY",
+"why": "直近 90 日の建設許可(用途が読めて確信度 high)のうち工事費が上位(選定時点で 9 件中の上位)。工事費 $1M 以上 = 設備の入る建屋の型。"
 },
 {
 "kind": "multi",
@@ -75,53 +75,53 @@
 {
 "kind": "auto",
 "tag": "自動化",
-"title": "STEIGER STEEL & FABRICATING, INC. が自動化つきのロータリードローパイプベンダーを担保に登記",
-"body": "La Crosse, WI。8月に自動化つき設備の担保登記。",
-"move": "STEIGER STEEL & FABRICATING, INC. が自動化つきのロータリードローパイプベンダーを担保に登記",
+"title": "Hynes Industries, Inc. が自動化つきのファイバーレーザー切断機[パイプ・profile]を担保に登記",
+"body": "Youngstown, OH。8月に自動化つき設備の担保登記。",
+"move": "Hynes Industries, Inc. が自動化つきのファイバーレーザー切断機[パイプ・profile]を担保に登記",
 "link": "ucc/",
 "face": "UCC",
-"date": "2026-08-07",
-"karte": "C-12917",
-"company": "STEIGER STEEL & FABRICATING, INC.",
+"date": "2026-08-19",
+"karte": "C-3295",
+"company": "Hynes Industries, Inc.",
 "why": "直近 90 日の登記で、自動化つきの設備を確認。省人化と量産化の両方を読める型なので 1 枠。"
 }
 ],
 "counts": {
-"permits_targets": 1340,
-"permits_new90": 1340,
-"ucc_read": 12,
-"ucc_new90": 9,
-"ucc_companies": 8,
-"jp_companies": 1
+"permits_targets": 1202,
+"permits_new90": 1202,
+"ucc_read": 162,
+"ucc_new90": 21,
+"ucc_companies": 74,
+"jp_companies": 2
 },
 "permits_meta": {
-"generated_at": "2026-11-02T10:35:01+00:00",
+"generated_at": "2026-11-08T13:41:33+00:00",
 "funnel": {
-"signals_total": 89068,
-"candidates": 59503,
-"targets": 1340,
-"permits_folded": 1653,
+"signals_total": 95013,
+"candidates": 60604,
+"targets": 1202,
+"permits_folded": 1492,
 "unclassified": 0,
-"unevaluated": 27497,
+"unevaluated": 31296,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 192,
-"保全": 796,
-"事務所・その他": 156,
-"内容不明": 51,
-"工事でない記録": 145
+"操業の変化": 176,
+"保全": 777,
+"事務所・その他": 122,
+"内容不明": 47,
+"工事でない記録": 80
 },
 "stages": {
-"0": 29565,
-"2a": 2664,
-"2b": 19085,
-"2c": 5748,
-"2d": 24644,
-"3": 5067,
-"5": 567,
-"6": 1728
+"0": 34409,
+"2a": 3154,
+"2b": 21040,
+"2c": 7102,
+"2d": 23368,
+"3": 4200,
+"5": 198,
+"6": 1542
 },
-"enriched": 32006
+"enriched": 29308
 },
 "states": [
 "IL",
@@ -132,36 +132,36 @@
 ]
 },
 "ucc_meta": {
-"generated_at": "2026-11-02T10:41:11+00:00",
+"generated_at": "2026-11-09T09:50:05+00:00",
 "funnel": {
-"filings_total": 10104,
-"with_collateral": 956,
-"read": 917,
-"unread": 39,
-"no_text_yet": 9148,
+"filings_total": 10029,
+"with_collateral": 305,
+"read": 253,
+"unread": 52,
+"no_text_yet": 9724,
 "by_kind": {
-"与信枠の新設": 60,
-"未分類": 28,
-"設備投資": 758,
+"与信枠の新設": 32,
+"未分類": 23,
+"設備投資": 183,
 "資金繰り警戒": 2,
-"雑音": 69
+"雑音": 13
 },
-"wi_index": 9003,
+"wi_index": 9724,
 "wi_purchased": 12,
-"wi_candidates": 808,
+"wi_candidates": 387,
 "g3_key": "state+fs_number",
 "g3_duplicates": 0,
 "wi_fact_merged": 8,
-"machines": 5,
-"machines_unconfirmed_filings": 8,
+"machines": 186,
+"machines_unconfirmed_filings": 4,
 "g2_units": "g2_units.UNITS"
 },
 "catalog": {
 "equipment_rows": 280,
-"equipment_hits": 6,
-"equipment_misses": 0,
-"companies_checked": 3550,
-"companies_total": 8
+"equipment_hits": 137,
+"equipment_misses": 64,
+"companies_checked": 3589,
+"companies_total": 74
 }
 },
 "g5": {
