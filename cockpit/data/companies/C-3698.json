@@ -35,7 +35,7 @@
 },
 "faces": {
 "permits": {
-"count": 5,
+"count": 8,
 "value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-10-30",
@@ -149,6 +149,42 @@
 "amount_band_label": "不明"
 },
 {
+"id": "S-69121",
+"parent_id": "S-69121",
+"member_n": 1,
+"date": "2026-09-23",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Rockford",
+"address": "E 1415 STATE",
+"permit_no": "MULCOM20261749",
+"permit_type": "Multifamily/Commercial Permits",
+"source_id": "SRC-002",
+"value": 20000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "Verizonがロックフォードで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "WIRELESS COMMUNICATION-ROOFTOP / Existing Wireless Facility/Rooftop Verizon proposed equipment modification. / REMALTCOMM",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:01:35.103187+00:00",
+"reading_id": "01M711VJZZJC343RJ0AMDGH7Z2"
+},
+"n_permits": 1,
+"member_ids": [
+"S-69121"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
 "id": "S-67673",
 "parent_id": "S-67673",
 "member_n": 1,
@@ -219,6 +255,78 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
+},
+{
+"id": "S-16036",
+"parent_id": "S-16036",
+"member_n": 1,
+"date": "2026-08-14",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Palatine",
+"address": "1765 N RAND RD Palatine IL 60074",
+"permit_no": "ROW-025950-2026",
+"permit_type": "Right of Way Work Permit",
+"source_id": "SRC-022",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "VERIZONがPalatineでユーティリティの許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "EXISTING VERIZON SMALL CELL EQUIPMENT REPLACEMENT ON AN EXISTING WOOD POLE , INSTALL (3) NEW ERICSSON AIR 1672 ANTENNAS; REMOVE (3) EXISTING ANTENNAS AND REPLACE WITH (1) NEW OMNI ANTENNA; REPLACE EXISTING RADIOS WITH (2) NEW RADIOS (4490/4890); INSTALL (1) NEW ERICSSON PSU 6308, LOAD CENTER\nAND FIB",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:01:22.892059+00:00",
+"reading_id": "01M711V72C9PCXB91J4EEARZV2"
+},
+"n_permits": 1,
+"member_ids": [
+"S-16036"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-5924",
+"parent_id": "S-5924",
+"member_n": 1,
+"date": "2026-08-14",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "109 W DIVISION ST",
+"permit_no": "101085665",
+"permit_type": "PERMIT - SIGNS",
+"source_id": "SRC-001",
+"value": 11178.0,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "VERIZONがChicagoで事務所・その他の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "INSTALLATION OF INTERNALLY ILLUMINATED WALL SIGN TO READ \"VERIZON\" CONNECTING TO ALREADY EXISTING CUSTOMER LEADS ONLY",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:02:01.560686+00:00",
+"reading_id": "01M711WCTRSPRMKYAPD7HWWJZX"
+},
+"n_permits": 1,
+"member_ids": [
+"S-5924"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 }
 ]
 },
@@ -269,6 +377,13 @@
 "summary": "VERIZONがPalatineでユーティリティの許可を取得(1件)"
 },
 {
+"date": "2026-09-23",
+"face": "permits",
+"title": "建設許可(Rockford): Verizonがロックフォードで更新・修繕の許可を取得(1件)",
+"ref": "S-69121",
+"summary": "Verizonがロックフォードで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-09-22",
 "face": "permits",
 "title": "建設許可(Cleveland): VerizonがClevelandでユーティリティの許可を取得(1件)",
@@ -281,8 +396,22 @@
 "title": "建設許可(Ann Arbor): VerizonがAnn Arborでユーティリティの許可を取得(1件)",
 "ref": "S-33075",
 "summary": "VerizonがAnn Arborでユーティリティの許可を取得(1件)"
+},
+{
+"date": "2026-08-14",
+"face": "permits",
+"title": "建設許可(Palatine): VERIZONがPalatineでユーティリティの許可を取得(1件)",
+"ref": "S-16036",
+"summary": "VERIZONがPalatineでユーティリティの許可を取得(1件)"
+},
+{
+"date": "2026-08-14",
+"face": "permits",
+"title": "建設許可(Chicago): VERIZONがChicagoで事務所・その他の許可を取得(1件)",
+"ref": "S-5924",
+"summary": "VERIZONがChicagoで事務所・その他の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-09T12:37:09+00:00",
+"generated_at": "2026-11-09T21:21:48+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

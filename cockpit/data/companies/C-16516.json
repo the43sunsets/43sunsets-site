@@ -35,7 +35,7 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 3,
 "value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-10-22",
@@ -69,6 +69,78 @@
 "n_permits": 1,
 "member_ids": [
 "S-86299"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-73557",
+"parent_id": "S-73557",
+"member_n": 1,
+"date": "2026-10-01",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "1796 DREMAN AV",
+"permit_no": "2026P08362",
+"permit_type": "Plumbing Permits",
+"source_id": "SRC-003",
+"value": 3200.0,
+"category": "保全",
+"confidence": "high",
+"summary": "WORKING IN NEIGHBORHOODSがCincinnatiで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Plumbing Permits / Plumbing Permits / 1-2-3 FM",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:01:53.326500+00:00",
+"reading_id": "01M711W4SEHRN49A0NPG07Q7DT"
+},
+"n_permits": 1,
+"member_ids": [
+"S-73557"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-8930",
+"parent_id": "S-8930",
+"member_n": 1,
+"date": "2026-08-28",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "3733 LLEWELLYN AV",
+"permit_no": "2026P08199",
+"permit_type": "HVAC",
+"source_id": "SRC-003",
+"value": 9400.0,
+"category": "保全",
+"confidence": "high",
+"summary": "WORKING IN NEIGHBORHOODSがCincinnatiで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "HVAC / HVAC / 1-2-3 FM",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:01:47.725063+00:00",
+"reading_id": "01M711VZADQS7RP8EV71B1PHAV"
+},
+"n_permits": 1,
+"member_ids": [
+"S-8930"
 ],
 "kinds": [
 "更新・修繕"
@@ -109,8 +181,22 @@
 "title": "建設許可(Cincinnati): WORKING IN NEIGHBORHOODSがCincinnatiで配管の更新許可を取得(1件)",
 "ref": "S-86299",
 "summary": "WORKING IN NEIGHBORHOODSがCincinnatiで配管の更新許可を取得(1件)"
+},
+{
+"date": "2026-10-01",
+"face": "permits",
+"title": "建設許可(Cincinnati): WORKING IN NEIGHBORHOODSがCincinnatiで更新・修繕の許可を取得(1件)",
+"ref": "S-73557",
+"summary": "WORKING IN NEIGHBORHOODSがCincinnatiで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-08-28",
+"face": "permits",
+"title": "建設許可(Cincinnati): WORKING IN NEIGHBORHOODSがCincinnatiで更新・修繕の許可を取得(1件)",
+"ref": "S-8930",
+"summary": "WORKING IN NEIGHBORHOODSがCincinnatiで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-09T12:37:09+00:00",
+"generated_at": "2026-11-09T21:21:48+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

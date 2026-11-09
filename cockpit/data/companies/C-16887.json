@@ -38,7 +38,7 @@
 },
 "faces": {
 "permits": {
-"count": 5,
+"count": 6,
 "value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-10-30",
@@ -152,6 +152,42 @@
 "amount_band_label": "$100k 未満"
 },
 {
+"id": "S-36846",
+"parent_id": "S-36846",
+"member_n": 1,
+"date": "2026-08-26",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2076 ADELBERT AVE, CLEVELAND, OH, 44106",
+"permit_no": "BCH26-035425",
+"permit_type": "Commercial HVAC",
+"source_id": "SRC-068",
+"value": 45728.27,
+"category": "保全",
+"confidence": "high",
+"summary": "CASE WESTERN RESERVEがClevelandで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial HVAC / M Mercantile - Stores / Markets / Retail / INSTALL 1 DX system, R448A REFRIGERATION SYSTEM 25 TONS OE LESS COST OF MISC. DEVICES-ONE MEDIUM TEMP INDOOR CONDENSING UNIT, WATER COOLED. ONE EVAPORATOR COIL. -$40,000.00***Building permit BCB26-018483***",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:02:13.247481+00:00",
+"reading_id": "01M711WR7ZWHQCBPM7BQ7WTBT3"
+},
+"n_permits": 1,
+"member_ids": [
+"S-36846"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
 "id": "S-73863",
 "parent_id": "S-73863",
 "member_n": 1,
@@ -166,7 +202,7 @@
 "value": 50000.0,
 "category": "事務所・その他",
 "confidence": "high",
-"summary": "CASE WESTERN RESERVEがクリーブランドで事務所・その他の許可を取得(1件)",
+"summary": "CASE WESTERN RESERVEがClevelandで看板設置の許可を取得(1件)",
 "infer": null,
 "role": "operator",
 "role_label": "操業事業者",
@@ -174,8 +210,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:54.532803+00:00",
-"reading_id": "01M4W24KA4XS7AV5N3NF089DJH"
+"generated_at": "2026-11-09T21:02:26.208436+00:00",
+"reading_id": "01M711X4X0CVWPXX1TVB107WEE"
 },
 "n_permits": 1,
 "member_ids": [
@@ -281,11 +317,18 @@
 {
 "date": "2026-09-30",
 "face": "permits",
-"title": "建設許可(Cleveland): CASE WESTERN RESERVEがクリーブランドで事務所・その他の許可を取得(1件)",
+"title": "建設許可(Cleveland): CASE WESTERN RESERVEがClevelandで看板設置の許可を取得(1件)",
 "ref": "S-73863",
-"summary": "CASE WESTERN RESERVEがクリーブランドで事務所・その他の許可を取得(1件)"
+"summary": "CASE WESTERN RESERVEがClevelandで看板設置の許可を取得(1件)"
+},
+{
+"date": "2026-08-26",
+"face": "permits",
+"title": "建設許可(Cleveland): CASE WESTERN RESERVEがClevelandで更新・修繕の許可を取得(1件)",
+"ref": "S-36846",
+"summary": "CASE WESTERN RESERVEがClevelandで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-09T12:37:09+00:00",
+"generated_at": "2026-11-09T21:21:48+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

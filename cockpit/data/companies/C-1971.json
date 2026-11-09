@@ -38,11 +38,47 @@
 },
 "faces": {
 "permits": {
-"count": 3,
+"count": 6,
 "value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-10-29",
 "items": [
+{
+"id": "S-67800",
+"parent_id": "S-67800",
+"member_n": 1,
+"date": "2026-09-27",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "6711 S JEFFERY BLVD",
+"permit_no": "B200512380",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"source_id": "SRC-001",
+"value": 17000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "DUNKINがシカゴで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SCOPE: NONSTRUCTURAL INTERIOR ALTERATION OF EXISTING DUNKIN', REMOVE AND REPLACE ELECTRICAL FIXTURES, FINISHES AND MILLWORK FOR NEW BRANDING.LOCATIONS: 0 RESIDENTIAL UNIT(S), 1 NON-RESIDENTIAL UNIT(S), DUNKIN -  FRONT INTERIOR.",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:01:45.352774+00:00",
+"reading_id": "01M711VX082JYB0DM0HPS5NWGQ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-67800"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-88188",
 "parent_id": "S-88188",
@@ -108,6 +144,78 @@
 "n_permits": 1,
 "member_ids": [
 "S-84124"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-26418",
+"parent_id": "S-26418",
+"member_n": 1,
+"date": "2026-09-04",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Niles",
+"address": "8080 N MILWAUKEE AVE NILES IL 60714",
+"permit_no": "SIGN-00727-12-08-2026",
+"permit_type": "Sign (Ground/Tenant & Wall)",
+"source_id": "SRC-022",
+"value": null,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "DUNKIN'がNilesで看板設置の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "DUNKIN SIGN REBRANDING / Sign (Ground/Tenant & Wall) / Ground/Wall Sign",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:01:43.837620+00:00",
+"reading_id": "01M711VVGXKJN6REWMJ0RXGW2K"
+},
+"n_permits": 1,
+"member_ids": [
+"S-26418"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-73511",
+"parent_id": "S-73511",
+"member_n": 1,
+"date": "2026-09-03",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Rockford",
+"address": "E 7370 STATE",
+"permit_no": "MULCOM20261502",
+"permit_type": "Multifamily/Commercial Permits",
+"source_id": "SRC-002",
+"value": 1890.0,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "DUNKINがRockfordで看板設置の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "DUNKIN- FREESTANDING SIGN / Installing freestanding height clearance bar / SIGNS",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:01:51.224893+00:00",
+"reading_id": "01M711W2QRBJE15VHRCKS8MWTJ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-73511"
 ],
 "kinds": [
 "事務所・その他"
@@ -193,6 +301,27 @@
 "summary": "DUNKIN'がPark Ridgeで事務所・その他の許可を取得(1件)"
 },
 {
+"date": "2026-09-27",
+"face": "permits",
+"title": "建設許可(Chicago): DUNKINがシカゴで更新・修繕の許可を取得(1件)",
+"ref": "S-67800",
+"summary": "DUNKINがシカゴで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-09-04",
+"face": "permits",
+"title": "建設許可(Niles): DUNKIN'がNilesで看板設置の許可を取得(1件)",
+"ref": "S-26418",
+"summary": "DUNKIN'がNilesで看板設置の許可を取得(1件)"
+},
+{
+"date": "2026-09-03",
+"face": "permits",
+"title": "建設許可(Rockford): DUNKINがRockfordで看板設置の許可を取得(1件)",
+"ref": "S-73511",
+"summary": "DUNKINがRockfordで看板設置の許可を取得(1件)"
+},
+{
 "date": "2026-08-24",
 "face": "permits",
 "title": "建設許可(Chicago Ridge): DUNKIN'がChicago Ridgeで許可を取得(1件)",
@@ -200,6 +329,6 @@
 "summary": "DUNKIN'がChicago Ridgeで許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-09T12:37:09+00:00",
+"generated_at": "2026-11-09T21:21:48+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

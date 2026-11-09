@@ -38,7 +38,7 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 3,
 "value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-10-13",
@@ -66,8 +66,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:53:02.776430+00:00",
-"reading_id": "01M6JB0P1RC929YZBCCE067HGY"
+"generated_at": "2026-11-09T21:02:32.109307+00:00",
+"reading_id": "01M711XANDF23T3786ETR3KFZD"
 },
 "n_permits": 1,
 "member_ids": [
@@ -75,6 +75,44 @@
 ],
 "kinds": [
 "更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-69732",
+"parent_id": "S-69732",
+"member_n": 2,
+"date": "2026-09-28",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1501 W RANDOLPH ST",
+"permit_no": "101085739",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"source_id": "SRC-001",
+"value": 250000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CHICAGO PUBLIC PARKS DISTRICTがChicagoで警備設備・修繕の許可を取得(2件)",
+"infer": "PERMIT EXPIRES ON 11/08/2026 ERECTION STARTS: 9/3/2026, ERECTION ENDS: 9/12/2026",
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SELF-CERT 2019 CRBC: ALTERATIONS TO EXISTING PARK FIELDHOUSE EXTERIOR RAMP AND DOOR MODIFICATIONS FOR ACCESSIBILITY. (OCCUPANCY GROUP A-3; TYPE II-B CONSTRUCTION)",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-09T21:02:17.011034+00:00",
+"reading_id": "01M711WVXKA03W3JDMDPK9A3W0"
+},
+"n_permits": 2,
+"member_ids": [
+"S-50911",
+"S-69732"
+],
+"kinds": [
+"更新・修繕",
+"警備"
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
@@ -102,8 +140,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:37.274900+00:00",
-"reading_id": "01M4W25X1TRAP3GQR5410RRN42"
+"generated_at": "2026-11-09T21:02:25.847018+00:00",
+"reading_id": "01M711X4HQJK7TATEQVAK6M3HV"
 },
 "n_permits": 1,
 "member_ids": [
@@ -152,11 +190,18 @@
 {
 "date": "2026-09-28",
 "face": "permits",
+"title": "建設許可(Chicago): CHICAGO PUBLIC PARKS DISTRICTがChicagoで警備設備・修繕の許可を取得(2件)",
+"ref": "S-69732",
+"summary": "CHICAGO PUBLIC PARKS DISTRICTがChicagoで警備設備・修繕の許可を取得(2件)"
+},
+{
+"date": "2026-09-28",
+"face": "permits",
 "title": "建設許可(Chicago): CHICAGO PUBLIC PARKS DISTRICTがChicagoで更新・修繕の許可を取得(1件)",
 "ref": "S-69734",
 "summary": "CHICAGO PUBLIC PARKS DISTRICTがChicagoで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-09T12:37:09+00:00",
+"generated_at": "2026-11-09T21:21:48+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
