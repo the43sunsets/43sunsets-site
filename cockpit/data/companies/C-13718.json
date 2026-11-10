@@ -35,10 +35,10 @@
 },
 "faces": {
 "permits": {
-"count": 7,
+"count": 8,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-22",
+"latest": "2026-11-05",
 "items": [
 {
 "id": "S-79581",
@@ -75,6 +75,42 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
+},
+{
+"id": "S-95466",
+"parent_id": "S-95466",
+"member_n": 1,
+"date": "2026-11-05",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "6331 CENTER HILL AV",
+"permit_no": "2026P09468",
+"permit_type": "Fire Protection Systems",
+"source_id": "SRC-003",
+"value": 160000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "P&Gがシンシナティで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Fire Protection Systems / Fire Protection Systems / B",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:07.941239+00:00",
+"reading_id": "01M72QG9D5PXRQRBEY4NTR59P4"
+},
+"n_permits": 1,
+"member_ids": [
+"S-95466"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 },
 {
 "id": "S-86284",
@@ -320,6 +356,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-05",
+"face": "permits",
+"title": "建設許可(Cincinnati): P&Gがシンシナティで更新・修繕の許可を取得(1件)",
+"ref": "S-95466",
+"summary": "P&Gがシンシナティで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-10-22",
 "face": "permits",
 "title": "建設許可(Cincinnati): PROCTER & GAMBLE CO THEがCincinnatiで更新・修繕の許可を取得(1件)",
@@ -369,6 +412,6 @@
 "summary": "PROCTER & GAMBLE CO THEがCincinnatiで警備設備の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-10T12:38:04+00:00",
+"generated_at": "2026-11-10T12:59:19+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

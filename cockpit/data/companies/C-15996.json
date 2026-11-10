@@ -35,11 +35,47 @@
 },
 "faces": {
 "permits": {
-"count": 8,
+"count": 9,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-28",
+"latest": "2026-11-03",
 "items": [
+{
+"id": "S-91379",
+"parent_id": "S-91379",
+"member_n": 1,
+"date": "2026-11-03",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "1179 RIDGEWOOD DR LOVELAND OH 45140",
+"permit_no": "B-079185-2026",
+"permit_type": "Residential Single Family Residence",
+"source_id": "SRC-022",
+"value": 757570.0,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "DREESがLOVELANDで新築の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "DREES SFR / Residential Single Family Residence / Single Family Residence",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:16.743899+00:00",
+"reading_id": "01M72QGJ07QZBJJWHAMK5J5FPN"
+},
+"n_permits": 1,
+"member_ids": [
+"S-91379"
+],
+"kinds": [
+"増築・新築"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-88304",
 "parent_id": "S-88304",
@@ -673,6 +709,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-03",
+"face": "permits",
+"title": "建設許可(Clermont County): DREESがLOVELANDで新築の許可を取得(1件)",
+"ref": "S-91379",
+"summary": "DREESがLOVELANDで新築の許可を取得(1件)"
+},
+{
 "date": "2026-10-28",
 "face": "permits",
 "title": "建設許可(Clermont County): DREES COMPANYがLOVELANDで新築の許可を取得(1件)",
@@ -736,6 +779,6 @@
 "summary": "DREES COMPANYがCINCINNATIで新築の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-10T12:38:04+00:00",
+"generated_at": "2026-11-10T12:59:19+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

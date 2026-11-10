@@ -38,11 +38,47 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 3,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-20",
+"latest": "2026-11-04",
 "items": [
+{
+"id": "S-92652",
+"parent_id": "S-92652",
+"member_n": 1,
+"date": "2026-11-04",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "605 N MICHIGAN AVE",
+"permit_no": "B200514811",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"source_id": "SRC-001",
+"value": 180938.0,
+"category": "保全",
+"confidence": "high",
+"summary": "SephoraがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "REPAIR/REPLACEMENT AFFECTING 2 SYSTEMS :   2 OTHER AIR HANDLING EQUIPMENT(CARRIER FJ5ANXC48L00 CEILING OF STORE)  2 SPLIT SYSTEM(CARRIER 37MURAQ48AA3 ROOF)  3 SPLIT SYSTEM(CARRIER 38AUZ012  ROOF) . ELECTRICAL WORK UNDER THIS PERMIT = YES . LOCATIONS: 0 RESIDENTIAL UNIT(S), 1 NON-RESIDENTIAL UNIT(S),",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:21.563500+00:00",
+"reading_id": "01M72QGPPVQ7X0TT9M9828V45A"
+},
+"n_permits": 1,
+"member_ids": [
+"S-92652"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-84278",
 "parent_id": "S-84278",
@@ -143,6 +179,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-04",
+"face": "permits",
+"title": "建設許可(Chicago): SephoraがChicagoで更新・修繕の許可を取得(1件)",
+"ref": "S-92652",
+"summary": "SephoraがChicagoで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-10-20",
 "face": "permits",
 "title": "建設許可(Ann Arbor): Sephoraがアナーバーで更新・修繕の許可を取得(1件)",
@@ -157,6 +200,6 @@
 "summary": "SephoraがMONROEで記録を取得(1件)"
 }
 ],
-"generated_at": "2026-11-10T12:38:04+00:00",
+"generated_at": "2026-11-10T12:59:19+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

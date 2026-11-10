@@ -35,10 +35,10 @@
 },
 "faces": {
 "permits": {
-"count": 8,
+"count": 10,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-30",
+"latest": "2026-11-03",
 "items": [
 {
 "id": "S-86986",
@@ -75,6 +75,42 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
+},
+{
+"id": "S-91444",
+"parent_id": "S-91444",
+"member_n": 1,
+"date": "2026-11-03",
+"applied": null,
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "3150 Plymouth Rd Ann Arbor MI 48105",
+"permit_no": "BLDGC26-0475",
+"permit_type": "Building (Commercial) - Alteration/Repair",
+"source_id": "SRC-022",
+"value": 10000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "Verizonがアナーバーでアンテナ更新の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Verizon will be making updates to their antennas in already existing location. / Building (Commercial) - Alteration/Repair / Alteration/Repair",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:18.988922+00:00",
+"reading_id": "01M72QGM6CTJTACZY5HDR8AG30"
+},
+"n_permits": 1,
+"member_ids": [
+"S-91444"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "id": "S-89719",
@@ -149,6 +185,42 @@
 "amount_band_label": "不明"
 },
 {
+"id": "S-78943",
+"parent_id": "S-78943",
+"member_n": 1,
+"date": "2026-10-13",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "3507 W 51ST ST",
+"permit_no": "101088521",
+"permit_type": "PERMIT - RENOVATION/ALTERATION",
+"source_id": "SRC-001",
+"value": 35000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "VERIZONがChicagoでユーティリティの許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "ALTER EXISTING WIRELESS COMMUNICATION FACILITY ON MONOPOLE: REMOVE 3 EXISTING ANTENNAS AND REPLACE WITH 9 ANTENNAS; REPLACE EXISTING RADIOS AND SUPPLEMENTARY EQUIPMENT; INSTALL 2 CABINETS ON PROPOSED 3'X3' CONCRETE PAD.(VERIZON SITE 17490148 / ATC PROJECT 15439446)",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:22.531331+00:00",
+"reading_id": "01M72QGQN3KHKC66KN3FNSS1R3"
+},
+"n_permits": 1,
+"member_ids": [
+"S-78943"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
 "id": "S-69121",
 "parent_id": "S-69121",
 "member_n": 1,
@@ -199,7 +271,7 @@
 "value": 5000.0,
 "category": "保全",
 "confidence": "high",
-"summary": "VerizonがClevelandでユーティリティの許可を取得(1件)",
+"summary": "Verizonがクリーブランドでユーティリティの許可を取得(1件)",
 "infer": null,
 "role": "operator",
 "role_label": "操業事業者",
@@ -207,8 +279,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:12.924865+00:00",
-"reading_id": "01M4W2558WV6BW9XS6F5TSYAJ6"
+"generated_at": "2026-11-10T12:39:24.834022+00:00",
+"reading_id": "01M72QGSX264E6Y0JEGEB94GZQ"
 },
 "n_permits": 1,
 "member_ids": [
@@ -356,6 +428,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-03",
+"face": "permits",
+"title": "建設許可(Ann Arbor): Verizonがアナーバーでアンテナ更新の許可を取得(1件)",
+"ref": "S-91444",
+"summary": "Verizonがアナーバーでアンテナ更新の許可を取得(1件)"
+},
+{
 "date": "2026-10-30",
 "face": "permits",
 "title": "建設許可(Ann Arbor): Verizonがアナーバーで更新・修繕の許可を取得(1件)",
@@ -377,6 +456,13 @@
 "summary": "VERIZONがPalatineでユーティリティの許可を取得(1件)"
 },
 {
+"date": "2026-10-13",
+"face": "permits",
+"title": "建設許可(Chicago): VERIZONがChicagoでユーティリティの許可を取得(1件)",
+"ref": "S-78943",
+"summary": "VERIZONがChicagoでユーティリティの許可を取得(1件)"
+},
+{
 "date": "2026-09-23",
 "face": "permits",
 "title": "建設許可(Rockford): Verizonがロックフォードで更新・修繕の許可を取得(1件)",
@@ -386,9 +472,9 @@
 {
 "date": "2026-09-22",
 "face": "permits",
-"title": "建設許可(Cleveland): VerizonがClevelandでユーティリティの許可を取得(1件)",
+"title": "建設許可(Cleveland): Verizonがクリーブランドでユーティリティの許可を取得(1件)",
 "ref": "S-67673",
-"summary": "VerizonがClevelandでユーティリティの許可を取得(1件)"
+"summary": "Verizonがクリーブランドでユーティリティの許可を取得(1件)"
 },
 {
 "date": "2026-09-04",
@@ -412,6 +498,6 @@
 "summary": "VERIZONがChicagoで事務所・その他の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-10T12:38:04+00:00",
+"generated_at": "2026-11-10T12:59:19+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

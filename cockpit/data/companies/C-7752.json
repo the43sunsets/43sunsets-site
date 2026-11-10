@@ -38,11 +38,83 @@
 },
 "faces": {
 "permits": {
-"count": 9,
+"count": 11,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-26",
+"latest": "2026-11-05",
 "items": [
+{
+"id": "S-96322",
+"parent_id": "S-96322",
+"member_n": 1,
+"date": "2026-11-05",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "2050 BELVOIR BLVD, CLEVELAND, OH, 44112",
+"permit_no": "B25039508",
+"permit_type": "New",
+"source_id": "SRC-068",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "CLEVELAND CITY OFがClevelandでユーティリティの許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "New / U Utility - Miscellaneous / Alteration / ERECT MEANS FOR STORMWATER MANAGEMENT RELATING TO THE INSTALLATION OF NINE MILE DEBRIS RACK AT CULVERT INLET PER APPROVED SWPPP PLANS, NO-RISE CERTIFICATE, OHIO EPA 401 WATER QUALITY CERTIFICATION, ODNR CONSISTENCY DETERMINATION AND USACE PERMIT No. LRB",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:06.230450+00:00",
+"reading_id": "01M72QG7QP1T14ZR6WAGC954M8"
+},
+"n_permits": 1,
+"member_ids": [
+"S-96322"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-96351",
+"parent_id": "S-96351",
+"member_n": 1,
+"date": "2026-11-04",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "5300 RIVERSIDE DR, CLEVELAND, OH, 44135",
+"permit_no": "LEL26-045632",
+"permit_type": "Elevator Dumbwaiter",
+"source_id": "SRC-068",
+"value": 50000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Elevator Dumbwaiter / REPAIR Replace Existing pump unit with new submersible CAPACITY 4000 SPEED 125 FLOORS 2 FILE #2796 SERIAL #4751",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:11.223541+00:00",
+"reading_id": "01M72QGCKQJH868WC1KDVFZES7"
+},
+"n_permits": 1,
+"member_ids": [
+"S-96351"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-90173",
 "parent_id": "S-90173",
@@ -398,6 +470,20 @@
 },
 "timeline": [
 {
+"date": "2026-11-05",
+"face": "permits",
+"title": "建設許可(Cleveland): CLEVELAND CITY OFがClevelandでユーティリティの許可を取得(1件)",
+"ref": "S-96322",
+"summary": "CLEVELAND CITY OFがClevelandでユーティリティの許可を取得(1件)"
+},
+{
+"date": "2026-11-04",
+"face": "permits",
+"title": "建設許可(Cleveland): CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)",
+"ref": "S-96351",
+"summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-10-26",
 "face": "permits",
 "title": "建設許可(Cleveland): CLEVELAND CITY OFがCLEVELANDで更新・修繕の許可を取得(1件)",
@@ -461,6 +547,6 @@
 "summary": "CLEVELAND CITY OFがClevelandで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-10T12:38:04+00:00",
+"generated_at": "2026-11-10T12:59:19+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

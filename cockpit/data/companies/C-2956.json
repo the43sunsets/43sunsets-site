@@ -38,10 +38,10 @@
 },
 "faces": {
 "permits": {
-"count": 4,
+"count": 5,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-16",
+"latest": "2026-11-05",
 "items": [
 {
 "id": "S-52332",
@@ -157,6 +157,47 @@
 "amount_band_label": "$100k 未満"
 },
 {
+"id": "S-93746",
+"parent_id": "S-93746",
+"member_n": 6,
+"date": "2026-11-05",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2449 W LAWRENCE AVE",
+"permit_no": "101088931",
+"permit_type": "PERMIT - SIGNS",
+"source_id": "SRC-001",
+"value": 5000.0,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "BURGER KINGがChicagoで看板設置の許可を取得(6件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "33 SQ/FT ILLUMINATED SIGN; NORTH ELEVATION; BUN - BURGER KING",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:05.486780+00:00",
+"reading_id": "01M72QG70EVT445A68B75WN0ZJ"
+},
+"n_permits": 6,
+"member_ids": [
+"S-93746",
+"S-93777",
+"S-93800",
+"S-93820",
+"S-93850",
+"S-93858"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
 "id": "S-61985",
 "parent_id": "S-61985",
 "member_n": 11,
@@ -231,6 +272,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-05",
+"face": "permits",
+"title": "建設許可(Chicago): BURGER KINGがChicagoで看板設置の許可を取得(6件)",
+"ref": "S-93746",
+"summary": "BURGER KINGがChicagoで看板設置の許可を取得(6件)"
+},
+{
 "date": "2026-10-16",
 "face": "permits",
 "title": "建設許可(Chicago): BURGER KINGがChicagoで改修・看板設置の許可を取得(5件)",
@@ -259,6 +307,6 @@
 "summary": "BURGER KING CORPがMelrose Parkで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-10T12:38:04+00:00",
+"generated_at": "2026-11-10T12:59:19+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

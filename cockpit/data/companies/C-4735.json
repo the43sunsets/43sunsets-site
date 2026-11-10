@@ -35,10 +35,10 @@
 },
 "faces": {
 "permits": {
-"count": 11,
+"count": 12,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-29",
+"latest": "2026-11-05",
 "items": [
 {
 "id": "S-79106",
@@ -72,6 +72,43 @@
 ],
 "kinds": [
 "増築・新築"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-93200",
+"parent_id": "S-93200",
+"member_n": 2,
+"date": "2026-11-05",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Butler County",
+"address": "7855 TYLERSVILLLE RD, United States",
+"permit_no": "BLD-EZ26-04768",
+"permit_type": "Commercial Electric",
+"source_id": "SRC-024",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "KROGERが現地で更新・修繕の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "ELECTRIC-KROGER / IN PROGRESS / Commercial Electric",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:16.514748+00:00",
+"reading_id": "01M72QGHS2PGV0Z84VSGPFJYX1"
+},
+"n_permits": 2,
+"member_ids": [
+"S-93200",
+"S-93203"
+],
+"kinds": [
+"更新・修繕"
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
@@ -379,7 +416,7 @@
 "value": null,
 "category": "工事でない記録",
 "confidence": "high",
-"summary": "Krogerがインディアナ/マリオンで記録取得(1件)",
+"summary": "Krogerがマリオンで記録取得の許可を取得(1件)",
 "infer": null,
 "role": "operator",
 "role_label": "操業事業者",
@@ -387,8 +424,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:45.149312+00:00",
-"reading_id": "01M4W22FHXPCZH8K6JJZD1WPXH"
+"generated_at": "2026-11-10T12:39:48.173630+00:00",
+"reading_id": "01M72QHGPD01QH8ZXW7N1MD635"
 },
 "n_permits": 1,
 "member_ids": [
@@ -558,6 +595,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-05",
+"face": "permits",
+"title": "建設許可(Butler County): KROGERが現地で更新・修繕の許可を取得(2件)",
+"ref": "S-93200",
+"summary": "KROGERが現地で更新・修繕の許可を取得(2件)"
+},
+{
 "date": "2026-10-29",
 "face": "permits",
 "title": "建設許可(Park Ridge): KrogerがPark Ridgeで更新・修繕の許可を取得(1件)",
@@ -616,9 +660,9 @@
 {
 "date": "2026-09-23",
 "face": "permits",
-"title": "建設許可(Indiana/MARION): Krogerがインディアナ/マリオンで記録取得(1件)",
+"title": "建設許可(Indiana/MARION): Krogerがマリオンで記録取得の許可を取得(1件)",
 "ref": "S-68600",
-"summary": "Krogerがインディアナ/マリオンで記録取得(1件)"
+"summary": "Krogerがマリオンで記録取得の許可を取得(1件)"
 },
 {
 "date": "2026-09-16",
@@ -656,6 +700,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-11-10T12:38:04+00:00",
+"generated_at": "2026-11-10T12:59:19+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

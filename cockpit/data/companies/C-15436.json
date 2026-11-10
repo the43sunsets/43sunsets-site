@@ -38,11 +38,84 @@
 },
 "faces": {
 "permits": {
-"count": 4,
+"count": 6,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-30",
+"latest": "2026-11-04",
 "items": [
+{
+"id": "S-92249",
+"parent_id": "S-92249",
+"member_n": 1,
+"date": "2026-11-04",
+"applied": null,
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "3061 Signature Blvd Ann Arbor MI 48103",
+"permit_no": "ELECC26-1707",
+"permit_type": "Electrical (Commercial) -  General",
+"source_id": "SRC-022",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "EMERSON APARTMENTS LLCがAnn Arborで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Water Heater / Electrical (Commercial) -  General / General",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:16.030717+00:00",
+"reading_id": "01M72QGH9YM09JT55E05ABVXPS"
+},
+"n_permits": 1,
+"member_ids": [
+"S-92249"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-91440",
+"parent_id": "S-91440",
+"member_n": 2,
+"date": "2026-11-03",
+"applied": null,
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "3022 Signature Blvd Unit: C Ann Arbor MI 48103",
+"permit_no": "MECHC26-1216",
+"permit_type": "Mechanical (Commercial) - General HVAC",
+"source_id": "SRC-022",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "EMERSON APARTMENTSがAnn Arborで更新・修繕の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Electric water heater install / Mechanical (Commercial) - General HVAC / General HVAC",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:12.241457+00:00",
+"reading_id": "01M72QGDKHS2S9T86HKXVKHBKN"
+},
+"n_permits": 2,
+"member_ids": [
+"S-91440",
+"S-91441"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
 {
 "id": "S-69547",
 "parent_id": "S-69547",
@@ -219,6 +292,20 @@
 },
 "timeline": [
 {
+"date": "2026-11-04",
+"face": "permits",
+"title": "建設許可(Ann Arbor): EMERSON APARTMENTS LLCがAnn Arborで更新・修繕の許可を取得(1件)",
+"ref": "S-92249",
+"summary": "EMERSON APARTMENTS LLCがAnn Arborで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-11-03",
+"face": "permits",
+"title": "建設許可(Ann Arbor): EMERSON APARTMENTSがAnn Arborで更新・修繕の許可を取得(2件)",
+"ref": "S-91440",
+"summary": "EMERSON APARTMENTSがAnn Arborで更新・修繕の許可を取得(2件)"
+},
+{
 "date": "2026-09-30",
 "face": "permits",
 "title": "建設許可(Ann Arbor): EMERSON APARTMENTSがアナーバーで更新・修繕の許可を取得(2件)",
@@ -247,6 +334,6 @@
 "summary": "EMERSON APARTMENTS LLCがAnn Arborで更新・修繕の許可を取得(2件)"
 }
 ],
-"generated_at": "2026-11-10T12:38:04+00:00",
+"generated_at": "2026-11-10T12:59:19+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

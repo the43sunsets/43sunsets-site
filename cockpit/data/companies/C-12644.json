@@ -38,11 +38,47 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 3,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-28",
+"latest": "2026-11-05",
 "items": [
+{
+"id": "S-92918",
+"parent_id": "S-92918",
+"member_n": 1,
+"date": "2026-11-05",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "2461 BURNS RD FELICITY OH",
+"permit_no": "HSP-075589-2026",
+"permit_type": "Health Septic - New Construction",
+"source_id": "SRC-022",
+"value": 35000.0,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "CROSSROADS COMMUNITY CHURCHがFELICITYで増築・新築の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "NEW CONSTRUCTION-CROSSROADS COMMUNITY CHURCH-3 BD / Health Septic - New Construction / New Construction",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:09.717446+00:00",
+"reading_id": "01M72QGB4NY7CRVTWYRDS0FWX1"
+},
+"n_permits": 1,
+"member_ids": [
+"S-92918"
+],
+"kinds": [
+"増築・新築"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-66102",
 "parent_id": "S-66102",
@@ -58,7 +94,7 @@
 "value": 4500000.0,
 "category": "保全",
 "confidence": "high",
-"summary": "CROSSROADS COMMUNITY CHURCH INCがColumbusで更新・修繕の許可を取得(4件)",
+"summary": "CROSSROADS COMMUNITY CHURCH INCがColumbusで改修・設備の許可を取得(4件)",
 "infer": null,
 "role": "operator",
 "role_label": "操業事業者",
@@ -66,8 +102,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:09.067154+00:00",
-"reading_id": "01M4W236XB04SMMPKEPMN6AM6C"
+"generated_at": "2026-11-10T12:39:38.093307+00:00",
+"reading_id": "01M72QH6VDYYXN3729EPJ5YP0C"
 },
 "n_permits": 4,
 "member_ids": [
@@ -148,11 +184,18 @@
 },
 "timeline": [
 {
+"date": "2026-11-05",
+"face": "permits",
+"title": "建設許可(Clermont County): CROSSROADS COMMUNITY CHURCHがFELICITYで増築・新築の許可を取得(1件)",
+"ref": "S-92918",
+"summary": "CROSSROADS COMMUNITY CHURCHがFELICITYで増築・新築の許可を取得(1件)"
+},
+{
 "date": "2026-09-28",
 "face": "permits",
-"title": "建設許可(Columbus): CROSSROADS COMMUNITY CHURCH INCがColumbusで更新・修繕の許可を取得(4件)",
+"title": "建設許可(Columbus): CROSSROADS COMMUNITY CHURCH INCがColumbusで改修・設備の許可を取得(4件)",
 "ref": "S-66102",
-"summary": "CROSSROADS COMMUNITY CHURCH INCがColumbusで更新・修繕の許可を取得(4件)"
+"summary": "CROSSROADS COMMUNITY CHURCH INCがColumbusで改修・設備の許可を取得(4件)"
 },
 {
 "date": "2026-09-11",
@@ -162,6 +205,6 @@
 "summary": "CROSSROADS COMMUNITY CHURCH INCがFELICITYで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-10T12:38:04+00:00",
+"generated_at": "2026-11-10T12:59:19+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

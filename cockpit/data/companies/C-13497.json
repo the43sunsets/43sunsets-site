@@ -38,11 +38,47 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-15",
+"latest": "2026-11-03",
 "items": [
+{
+"id": "S-91374",
+"parent_id": "S-91374",
+"member_n": 1,
+"date": "2026-11-03",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "83 George Street New Richmond OH 45157",
+"permit_no": "ZONE-079383-2026",
+"permit_type": "Zoning - Commercial",
+"source_id": "SRC-022",
+"value": 15000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "VILLAGE OF NEW RICHMONDがNew RichmondでEV充電用電気設備の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Electric For EV Charging Systems / Zoning - Commercial / Commercial",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-10T12:39:13.270749+00:00",
+"reading_id": "01M72QGEKPJ64GVQ66NSPGEXC4"
+},
+"n_permits": 1,
+"member_ids": [
+"S-91374"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-58476",
 "parent_id": "S-58476",
@@ -107,6 +143,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-03",
+"face": "permits",
+"title": "建設許可(Clermont County): VILLAGE OF NEW RICHMONDがNew RichmondでEV充電用電気設備の許可を取得(1件)",
+"ref": "S-91374",
+"summary": "VILLAGE OF NEW RICHMONDがNew RichmondでEV充電用電気設備の許可を取得(1件)"
+},
+{
 "date": "2026-09-15",
 "face": "permits",
 "title": "建設許可(Clermont County): VILLAGE OF NEW RICHMONDがNEW RICHMONDでユーティリティ更新の許可を取得(1件)",
@@ -114,6 +157,6 @@
 "summary": "VILLAGE OF NEW RICHMONDがNEW RICHMONDでユーティリティ更新の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-10T12:38:04+00:00",
+"generated_at": "2026-11-10T12:59:19+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
