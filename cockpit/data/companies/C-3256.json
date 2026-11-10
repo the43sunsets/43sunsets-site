@@ -1,7 +1,7 @@
 {
 "id": "C-3256",
 "name": "Vertiv Corporation",
-"city": null,
+"city": "Columbus",
 "state": "OH",
 "entity_type": "corp",
 "industry": "データセンター",
@@ -42,12 +42,72 @@
 "items": []
 },
 "ucc": {
-"count": 0,
+"count": 2,
 "machines": 0,
-"machines_unconfirmed": 0,
-"makers": [],
-"latest": null,
-"items": []
+"machines_unconfirmed": 2,
+"makers": [
+"不明",
+"不明(未判定)"
+],
+"latest": "2026-08-06",
+"items": [
+{
+"id": "U-1108137",
+"date": "2026-08-06",
+"lapse": "",
+"kind": "雑音",
+"lender": "リース・設備ファイナンス",
+"secured_party": "Gelco Fleet Trust",
+"equipment": [],
+"makers": [
+"不明(未判定)"
+],
+"summary": "VERTIV CORPORATION(Columbus, OH)が Gelco Fleet Trust を担保権者として車両リース契約に基づく車両及び関連資産の包括担保を登記(2026-08-06)。",
+"infer": "フリート車両リースに伴う予防的登記であり、生産設備投資とは無関係(推論)。",
+"ref": "FS OH00300675901 Original",
+"status": null,
+"role": "debtor",
+"role_label": "債務者(UCC 登記)",
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_019HBmCapbfKJDBEvaHdUUAQ",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-11-09T09:45:02+00:00"
+}
+},
+{
+"id": "U-1108036",
+"date": "2025-11-14",
+"lapse": "",
+"kind": "設備投資",
+"lender": "リース・設備ファイナンス",
+"secured_party": "CHG-MERIDIAN USA Corp.",
+"equipment": [
+{
+"type": "不明(製番のみ)",
+"maker": "不明",
+"model": "コンピュータ及びその他の情報技術機器を含む全設備",
+"qty": null,
+"domain": "非製造"
+}
+],
+"makers": [
+"不明"
+],
+"summary": "VERTIV CORPORATION(Columbus, OH)が CHG-MERIDIAN USA Corp. を担保権者として、2025年11月11日付マスターリース契約に基づくコンピュータ・IT機器等の全設備を登記(2025-11-14)。",
+"infer": "IT・データセンター関連機器のリース調達による設備更新の可能性(推論)。",
+"ref": "FS OH00294291413 Original",
+"status": null,
+"role": "debtor",
+"role_label": "債務者(UCC 登記)",
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_019HBmCapbfKJDBEvaHdUUAQ",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-11-09T09:45:02+00:00"
+}
+}
+]
 },
 "hiring": {
 "status": "該当なし",
@@ -87,8 +147,22 @@
 "title": "ニュース(JobsOhio): Vertiv is Powering the Future of AI Infrastructure from Ohio",
 "ref": "N-3009",
 "summary": "VertivがOhioからAIインフラ向け電力供給事業を展開している。"
+},
+{
+"date": "2026-08-06",
+"face": "ucc",
+"title": "UCC 登記: 機械",
+"ref": "U-1108137",
+"summary": "VERTIV CORPORATION(Columbus, OH)が Gelco Fleet Trust を担保権者として車両リース契約に基づく車両及び関連資産の包括担保を登記(2026-08-06)。"
+},
+{
+"date": "2025-11-14",
+"face": "ucc",
+"title": "UCC 登記: 不明(製番のみ)",
+"ref": "U-1108036",
+"summary": "VERTIV CORPORATION(Columbus, OH)が CHG-MERIDIAN USA Corp. を担保権者として、2025年11月11日付マスターリース契約に基づくコンピュータ・IT機器等の全設備を登記(2025-11-14)。"
 }
 ],
-"generated_at": "2026-11-09T21:21:48+00:00",
+"generated_at": "2026-11-10T10:23:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

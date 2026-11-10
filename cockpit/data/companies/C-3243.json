@@ -42,12 +42,47 @@
 "items": []
 },
 "ucc": {
-"count": 0,
-"machines": 0,
+"count": 1,
+"machines": 1,
 "machines_unconfirmed": 0,
-"makers": [],
-"latest": null,
-"items": []
+"makers": [
+"TRUMPF"
+],
+"latest": "2026-01-19",
+"items": [
+{
+"id": "U-1000247",
+"date": "2026-01-19",
+"lapse": "2031-01-19",
+"kind": "設備投資",
+"lender": "メーカー/メーカー系金融",
+"secured_party": "TRUMPF Inc.",
+"equipment": [
+{
+"type": "プレスブレーキ",
+"maker": "TRUMPF",
+"model": "TruBend 7036",
+"qty": 1,
+"domain": "板金加工"
+}
+],
+"makers": [
+"TRUMPF"
+],
+"summary": "Rogue Fitness(Columbus, OH)が TRUMPF Inc. を担保権者として TruBend 7036 ベンディングマシン 1 台(製番 B1702I0462)を登記(2026-01-19)。",
+"infer": "フィットネス器具製造向け板金曲げ加工能力の増強の可能性(推論)。",
+"ref": "FS OH00295825902 Original",
+"status": "Active",
+"role": "debtor",
+"role_label": "債務者(UCC 登記)",
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01DvwhburgpkzJE2M69hixeQ",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-09-05T17:21:15+00:00"
+}
+}
+]
 },
 "hiring": {
 "status": "収集中",
@@ -118,8 +153,15 @@
 "title": "求人: Senior Manufacturing Engineer(生産技術・Columbus OH)",
 "ref": "#hiring",
 "summary": null
+},
+{
+"date": "2026-01-19",
+"face": "ucc",
+"title": "UCC 登記: プレスブレーキ",
+"ref": "U-1000247",
+"summary": "Rogue Fitness(Columbus, OH)が TRUMPF Inc. を担保権者として TruBend 7036 ベンディングマシン 1 台(製番 B1702I0462)を登記(2026-01-19)。"
 }
 ],
-"generated_at": "2026-11-09T21:21:48+00:00",
+"generated_at": "2026-11-10T10:23:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

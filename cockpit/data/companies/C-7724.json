@@ -1,7 +1,7 @@
 {
 "id": "C-7724",
 "name": "CLEVELAND CLINIC FOUNDATION",
-"city": null,
+"city": "Cleveland",
 "state": "OH",
 "entity_type": "corp",
 "industry": "医薬・ライフサイエンス",
@@ -333,12 +333,39 @@
 ]
 },
 "ucc": {
-"count": 0,
+"count": 1,
 "machines": 0,
-"machines_unconfirmed": 0,
-"makers": [],
-"latest": null,
-"items": []
+"machines_unconfirmed": 1,
+"makers": [
+"不明(未判定)"
+],
+"latest": "2026-01-13",
+"items": [
+{
+"id": "U-1108065",
+"date": "2026-01-13",
+"lapse": "",
+"kind": "未分類",
+"lender": "不明",
+"secured_party": "AMO Sales & Services, Inc.",
+"equipment": [],
+"makers": [
+"不明(未判定)"
+],
+"summary": "Cleveland Clinic Foundation(Cleveland, OH)が AMO Sales & Services, Inc. を担保権者として登記(2026-01-13)、担保物の記載が「Original Document」のみで詳細不明。",
+"infer": null,
+"ref": "FS OH00295726679 Original",
+"status": null,
+"role": "debtor",
+"role_label": "債務者(UCC 登記)",
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_019HBmCapbfKJDBEvaHdUUAQ",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-11-09T09:45:02+00:00"
+}
+}
+]
 },
 "hiring": {
 "status": "該当なし",
@@ -412,8 +439,15 @@
 "title": "建設許可(Cleveland): CLEVELAND CLINIC FOUNDATIONがClevelandで更新・修繕の許可を取得(1件)",
 "ref": "S-37004",
 "summary": "CLEVELAND CLINIC FOUNDATIONがClevelandで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-01-13",
+"face": "ucc",
+"title": "UCC 登記: 機械",
+"ref": "U-1108065",
+"summary": "Cleveland Clinic Foundation(Cleveland, OH)が AMO Sales & Services, Inc. を担保権者として登記(2026-01-13)、担保物の記載が「Original Document」のみで詳細不明。"
 }
 ],
-"generated_at": "2026-11-09T21:21:48+00:00",
+"generated_at": "2026-11-10T10:23:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

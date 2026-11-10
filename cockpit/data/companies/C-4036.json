@@ -153,12 +153,135 @@
 ]
 },
 "ucc": {
-"count": 0,
+"count": 5,
 "machines": 0,
-"machines_unconfirmed": 0,
-"makers": [],
-"latest": null,
-"items": []
+"machines_unconfirmed": 5,
+"makers": [
+"不明(未判定)"
+],
+"latest": "2026-10-28",
+"items": [
+{
+"id": "U-1108148",
+"date": "2026-10-28",
+"lapse": "",
+"kind": "雑音",
+"lender": "銀行・信用組合",
+"secured_party": "The Bank of New York Mellon Trust Company, N.A.",
+"equipment": [],
+"makers": [
+"不明(未判定)"
+],
+"summary": "Children's Hospital Medical Center(Cincinnati, OHIO)が The Bank of New York Mellon Trust Company, N.A. を担保権者として Master Trust Indenture に基づく Gross Revenues を登記(2026-10-28)。",
+"infer": "病院債券発行に伴う収益担保設定であり設備投資とは無関係(推論)。",
+"ref": "FS OH00302741964 Original",
+"status": null,
+"role": "debtor",
+"role_label": "債務者(UCC 登記)",
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_019HBmCapbfKJDBEvaHdUUAQ",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-11-09T09:45:02+00:00"
+}
+},
+{
+"id": "U-1108087",
+"date": "2026-04-08",
+"lapse": "",
+"kind": "設備投資",
+"lender": "リース・設備ファイナンス",
+"secured_party": "Dell Financial Services L.L.C.",
+"equipment": [],
+"makers": [
+"不明(未判定)"
+],
+"summary": "Children's Hospital Medical Center(Cincinnati, OH)が Dell Financial Services L.L.C. を担保権者としてコンピュータ機器・周辺機器等のリース設備を登記(2026-04-08)。",
+"infer": "IT機器のリース更新・導入の可能性(推論)。",
+"ref": "FS OH00297719838 Original",
+"status": null,
+"role": "debtor",
+"role_label": "債務者(UCC 登記)",
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_019HBmCapbfKJDBEvaHdUUAQ",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-11-09T09:45:02+00:00"
+}
+},
+{
+"id": "U-1108088",
+"date": "2026-04-08",
+"lapse": "",
+"kind": "設備投資",
+"lender": "リース・設備ファイナンス",
+"secured_party": "Dell Financial Services L.L.C.",
+"equipment": [],
+"makers": [
+"不明(未判定)"
+],
+"summary": "CHILDREN'S HOSPITAL MEDICAL CENTER(Cincinnati, OH)が Dell Financial Services L.L.C. を担保権者としてコンピュータ機器・周辺機器等のリース契約(Agreement Number 011-9015008-003)に基づく設備を登記(2026-04-08)。",
+"infer": "IT機器のリース更新・導入の可能性(推論)。",
+"ref": "FS OH00297720073 Original",
+"status": null,
+"role": "debtor",
+"role_label": "債務者(UCC 登記)",
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_019HBmCapbfKJDBEvaHdUUAQ",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-11-09T09:45:02+00:00"
+}
+},
+{
+"id": "U-1108089",
+"date": "2026-04-08",
+"lapse": "",
+"kind": "設備投資",
+"lender": "リース・設備ファイナンス",
+"secured_party": "Dell Financial Services L.L.C.",
+"equipment": [],
+"makers": [
+"不明(未判定)"
+],
+"summary": "Children's Hospital Medical Center(Cincinnati, OH)が Dell Financial Services L.L.C. を担保権者としてコンピュータ機器・周辺機器・ソフトウェア等(リース契約番号011-9015008-002に基づく)を登記(2026-04-08)。",
+"infer": "IT機器リースによる情報システム更新の可能性(推論)。",
+"ref": "FS OH00297720295 Original",
+"status": null,
+"role": "debtor",
+"role_label": "債務者(UCC 登記)",
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_019HBmCapbfKJDBEvaHdUUAQ",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-11-09T09:45:02+00:00"
+}
+},
+{
+"id": "U-1108090",
+"date": "2026-04-08",
+"lapse": "",
+"kind": "雑音",
+"lender": "リース・設備ファイナンス",
+"secured_party": "Dell Financial Services L.L.C.",
+"equipment": [],
+"makers": [
+"不明(未判定)"
+],
+"summary": "CHILDREN'S HOSPITAL MEDICAL CENTER(Cincinnati, OH)が Dell Financial Services L.L.C. を担保権者としてコンピュータ機器・周辺機器等のリース契約(Agreement Number 011-9015008-001)に基づく設備を登記(2026-04-08)。",
+"infer": "病院向けIT機器のリースであり、生産設備投資とは無関係(推論)。",
+"ref": "FS OH00297720306 Original",
+"status": null,
+"role": "debtor",
+"role_label": "債務者(UCC 登記)",
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_019HBmCapbfKJDBEvaHdUUAQ",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-11-09T09:45:02+00:00"
+}
+}
+]
 },
 "hiring": {
 "status": "該当なし",
@@ -212,6 +335,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-28",
+"face": "ucc",
+"title": "UCC 登記: 機械",
+"ref": "U-1108148",
+"summary": "Children's Hospital Medical Center(Cincinnati, OHIO)が The Bank of New York Mellon Trust Company, N.A. を担保権者として Master Trust Indenture に基づく Gross Revenues を登記(2026-10-28)。"
+},
+{
 "date": "2026-10-06",
 "face": "permits",
 "title": "建設許可(Cincinnati): CHILDRENS HOSPITAL MEDICAL CENTERがCincinnatiで更新・修繕の許可を取得(1件)",
@@ -233,6 +363,34 @@
 "summary": "CHILDRENS HOSPITAL MEDICAL CENTERがCINCINNATIで更新・修繕の許可を取得(3件)"
 },
 {
+"date": "2026-04-08",
+"face": "ucc",
+"title": "UCC 登記: 機械",
+"ref": "U-1108087",
+"summary": "Children's Hospital Medical Center(Cincinnati, OH)が Dell Financial Services L.L.C. を担保権者としてコンピュータ機器・周辺機器等のリース設備を登記(2026-04-08)。"
+},
+{
+"date": "2026-04-08",
+"face": "ucc",
+"title": "UCC 登記: 機械",
+"ref": "U-1108088",
+"summary": "CHILDREN'S HOSPITAL MEDICAL CENTER(Cincinnati, OH)が Dell Financial Services L.L.C. を担保権者としてコンピュータ機器・周辺機器等のリース契約(Agreement Number 011-9015008-003)に基づく設備を登記(2026-04-08)。"
+},
+{
+"date": "2026-04-08",
+"face": "ucc",
+"title": "UCC 登記: 機械",
+"ref": "U-1108089",
+"summary": "Children's Hospital Medical Center(Cincinnati, OH)が Dell Financial Services L.L.C. を担保権者としてコンピュータ機器・周辺機器・ソフトウェア等(リース契約番号011-9015008-002に基づく)を登記(2026-04-08)。"
+},
+{
+"date": "2026-04-08",
+"face": "ucc",
+"title": "UCC 登記: 機械",
+"ref": "U-1108090",
+"summary": "CHILDREN'S HOSPITAL MEDICAL CENTER(Cincinnati, OH)が Dell Financial Services L.L.C. を担保権者としてコンピュータ機器・周辺機器等のリース契約(Agreement Number 011-9015008-001)に基づく設備を登記(2026-04-08)。"
+},
+{
 "date": "2026-02-19",
 "face": "grants",
 "title": "助成(連邦・National Science Foundation): 研究開発",
@@ -240,6 +398,6 @@
 "summary": "National Science FoundationがCHILDRENS HOSPITAL MEDICAL CENTER(OH)に$600kを交付し、ヒト血液-脊髄バリアを模した3Dチップ(BSCB-on-a-chip)をバイオエンジニアリングするCAREER研究プロジェクトに使われる。"
 }
 ],
-"generated_at": "2026-11-09T21:21:48+00:00",
+"generated_at": "2026-11-10T10:23:34+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
