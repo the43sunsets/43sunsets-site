@@ -1,23 +1,23 @@
 {
-  "run_date": "2026-11-10",
-  "generated_at": "2026-11-10T12:59:29.184033+00:00",
+  "run_date": "2026-11-11",
+  "generated_at": "2026-11-11T10:59:59.463613+00:00",
   "slo": {
     "deadline": "06:30 America/Chicago",
-    "deadline_met": false,
-    "evaluated_at": "2026-11-10T12:59:29.184033+00:00"
+    "deadline_met": true,
+    "evaluated_at": "2026-11-11T10:59:59.463613+00:00"
   },
   "faces": {
     "permits": {
       "state": "degraded",
       "reasons": [
-        "errors_30h 5"
+        "errors_30h 4"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 4.585051104426384,
-        "errors_30h": 5
+        "age_h": 2.0559622161090374,
+        "errors_30h": 4
       }
     },
     "ucc": {
@@ -30,51 +30,51 @@
         "deny_24h": 0,
         "stage_failed": 0,
         "source_stopped": 1,
-        "age_h": 677.9578288980325,
+        "age_h": 699.9662398925093,
         "sync_ok": 1,
-        "wi_age_d": 0.1363910185173154
+        "wi_age_d": 0.029009999707341194
       }
     },
     "subsidies": {
       "state": "degraded",
       "reasons": [
-        "unread 2",
+        "unread 5",
         "untranslated 1"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 3.135884441435337,
+        "age_h": 0.5676288865506649,
         "errors_30h": 0,
         "untranslated": 1,
-        "unread": 2
+        "unread": 5
       }
     },
     "hiring": {
       "state": "degraded",
       "reasons": [
-        "errors_30h 68"
+        "errors_30h 62"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 3.091995544731617,
-        "errors_30h": 68
+        "age_h": 0.5265177749097347,
+        "errors_30h": 62
       }
     },
     "news": {
       "state": "degraded",
       "reasons": [
-        "unread 172"
+        "unread 124"
       ],
       "counts": {
         "hold": 0,
         "deny_24h": 0,
         "stage_failed": 0,
-        "age_h": 25.491439998149872,
-        "unread": 172
+        "age_h": 47.49985111132264,
+        "unread": 124
       }
     }
   }
