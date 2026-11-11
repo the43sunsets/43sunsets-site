@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-11-11T10:58:40+00:00",
+"generated_at": "2026-11-11T12:37:55+00:00",
 "states": [
 "IL",
 "IN",
@@ -40,13 +40,13 @@
 "funnel": {
 "filings_total": 10255,
 "with_collateral": 322,
-"read": 260,
-"unread": 62,
+"read": 264,
+"unread": 58,
 "no_text_yet": 9933,
 "by_kind": {
-"与信枠の新設": 32,
+"与信枠の新設": 34,
 "未分類": 23,
-"設備投資": 190,
+"設備投資": 192,
 "資金繰り警戒": 2,
 "雑音": 13
 },
@@ -56,7 +56,7 @@
 "g3_key": "state+fs_number",
 "g3_duplicates": 0,
 "wi_fact_merged": 8,
-"machines": 170,
+"machines": 194,
 "machines_unconfirmed_filings": 1,
 "g2_units": "g2_units.UNITS"
 },
@@ -70,9 +70,9 @@
 "catalog": {
 "equipment_rows": 333,
 "equipment_hits": 208,
-"equipment_misses": 0,
+"equipment_misses": 6,
 "companies_checked": 3611,
-"companies_total": 81
+"companies_total": 84
 },
 "makers_searched": {
 "2026-08-14": 360,
@@ -403,7 +403,7 @@
 "jp_rule": "日系 = 在シカゴ総領事館 2025 名簿(中西部 10 州)または人の確認で確定した会社。AI 判定のみは「日系?」(候補)で、日系トグルには入らない",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 2318,
+"checked": 2347,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -1040,8 +1040,8 @@
 {
 "id": "U-1105892",
 "state": "OH",
-"company": "Accelevation LLC",
-"company_id": null,
+"company": "ACCELEVATION LLC",
+"company_id": "UC-16639",
 "entity_type": "corp",
 "city": "Miamisburg, OH",
 "secured_party": "TRUMPF Inc.",
@@ -1075,10 +1075,10 @@
 "makers": [
 "TRUMPF"
 ],
-"industry": "機械・金属",
-"industry_basis": "filing",
-"made": null,
-"website": null,
+"industry": "データセンター",
+"industry_basis": "master",
+"made": "データセンター向け白色空間インフラ製品の製造",
+"website": "https://www.accelevation.com",
 "jp": false,
 "jp_candidate": false,
 "jp_basis": null,
@@ -1088,7 +1088,7 @@
 "new": true,
 "summary": "Accelevation LLC(Miamisburg, OH)が TRUMPF Inc. を担保権者として TruLaser Tube 7000 (T12) レーザー加工機 1 台(製番 A2441L0027)を登記(2026-09-28)。",
 "infer": "パイプ・チューブ加工能力の新設または増強の可能性(推論)。",
-"karte": null,
+"karte": "C-16639",
 "fact": {
 "src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
 "ref": "FS OH00302067752 Original",
@@ -1114,10 +1114,146 @@
 "lender_class": "maker_finance"
 },
 {
+"id": "U-1108237",
+"state": "OH",
+"company": "The MetroHealth System",
+"company_id": null,
+"entity_type": "public",
+"city": "Cleveland Heights, OH",
+"secured_party": "Flex Financial, A Division of Stryker Sales, LLC",
+"secured_party_city": "Portage, MI",
+"maker_query": "OH00301909020",
+"kind": "設備投資",
+"kind_raw": "設備投資",
+"scope": "specific",
+"lender": "maker_finance",
+"lender_label": "メーカー/メーカー系金融",
+"equipment": [
+{
+"maker": "不明(未判定)",
+"maker_raw": "Stryker",
+"model": "PKG 1788 Camera Control Unit CCU-Standard",
+"serial": null,
+"qty": 3,
+"domain": "不明",
+"process": null,
+"type": null,
+"automation": false,
+"source_url": null,
+"checked_at": null,
+"confidence": null,
+"verified": false
+},
+{
+"maker": "不明(未判定)",
+"maker_raw": "Stryker",
+"model": "PKG 1788 4K CAMERA HEAD WITH INTEGRATED COUPLER-Standard",
+"serial": null,
+"qty": 16,
+"domain": "不明",
+"process": null,
+"type": null,
+"automation": false,
+"source_url": null,
+"checked_at": null,
+"confidence": null,
+"verified": false
+},
+{
+"maker": "不明(未判定)",
+"maker_raw": "Stryker",
+"model": "PKG L12 LED LIGHT SOURCE WITH AIM-Standard",
+"serial": null,
+"qty": 3,
+"domain": "不明",
+"process": null,
+"type": null,
+"automation": false,
+"source_url": null,
+"checked_at": null,
+"confidence": null,
+"verified": false
+},
+{
+"maker": "不明(未判定)",
+"maker_raw": "Stryker",
+"model": "Video Processor Illuminator VPI with SPY-QP Flourescence Assessment Software Kit-Standard",
+"serial": null,
+"qty": 1,
+"domain": "不明",
+"process": null,
+"type": null,
+"automation": false,
+"source_url": null,
+"checked_at": null,
+"confidence": null,
+"verified": false
+},
+{
+"maker": "不明(未判定)",
+"maker_raw": "Stryker",
+"model": "SPY-PHI Handheld Imager US Kit-Standard",
+"serial": null,
+"qty": 1,
+"domain": "不明",
+"process": null,
+"type": null,
+"automation": false,
+"source_url": null,
+"checked_at": null,
+"confidence": null,
+"verified": false
+}
+],
+"domains": [
+"不明"
+],
+"makers": [
+"不明(未判定)"
+],
+"industry": "未分類",
+"industry_basis": "filing",
+"made": null,
+"website": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"confidence": "high",
+"date": "2026-09-24",
+"lapse": "",
+"new": true,
+"summary": "The MetroHealth System(Cleveland Heights, OH)が Flex Financial, A Division of Stryker Sales, LLC を担保権者として内視鏡カメラ・光源・映像処理装置等の医療機器一式を登記(2026-09-24)。",
+"infer": "病院の内視鏡手術設備の更新・増設の可能性(推論)。",
+"karte": null,
+"fact": {
+"src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
+"ref": "FS OH00301909020 Original",
+"verbatim": "Contract 0000048304 Item no. Part No. Description U/M Qty 1 1788010000 PKG 1788 Camera Control Unit CCU-Standard 3 2 1788610122 PKG 1788 4K CAMERA HEAD WITH INTEGRATED COUPLER-Standard 16 3 220240300 PKG L12 LED LIGHT SOURCE WITH AIM-Standard 3 4 PC9001QP Video Processor Illuminator VPI with SPY-QP Flourescence Assessment Software Kit-Standard 1 5 HH9030K SPY-PHI Handheld Imager US Kit-Standard 1",
+"status": null
+},
+"provenance": {
+"policy": "ucc-v0-2026-09-05-original-with-collateral",
+"batch": "msgbatch_01UXEhxE6NJ1EDDexoWCfwi6",
+"model": "claude-sonnet-5 (batch api ucc-v0)",
+"generated_at": "2026-11-11T12:30:49+00:00"
+},
+"tier": "fact",
+"candidate": false,
+"candidate_score": 0,
+"candidate_reason": null,
+"copy": {
+"status": "free",
+"fs_number": "OH00301909020",
+"price_usd": 0
+},
+"equipment_named": 1,
+"lender_class": "maker_finance"
+},
+{
 "id": "U-1104032",
 "state": "OH",
 "company": "Technibus, Inc.",
-"company_id": null,
+"company_id": "UC-3297",
 "entity_type": "corp",
 "city": "Canton, OH",
 "secured_party": "TRUMPF Inc.",
@@ -1152,8 +1288,8 @@
 "TRUMPF"
 ],
 "industry": "機械・金属",
-"industry_basis": "filing",
-"made": null,
+"industry_basis": "master",
+"made": "メタル製バスシステム(送電・配電用金属閉鎖バス)製造",
 "website": null,
 "jp": false,
 "jp_candidate": false,
@@ -1164,7 +1300,7 @@
 "new": true,
 "summary": "Technibus, Inc.(Canton, OH)が TRUMPF Inc. を担保権者として TruBend 1225 (B45) ベンディングマシン 1 台(製番 B0122R0025)を登記(2026-09-21)。",
 "infer": "板金加工の曲げ工程増強の可能性(推論)。",
-"karte": null,
+"karte": "C-3297",
 "fact": {
 "src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
 "ref": "FS OH00301835336 Original",
@@ -1193,7 +1329,7 @@
 "id": "U-1103749",
 "state": "OH",
 "company": "Chickasaw Machine & Tool Company, Inc.",
-"company_id": null,
+"company_id": "UC-13563",
 "entity_type": "corp",
 "city": "Chickasaw, OH",
 "secured_party": "Mazak Corporation",
@@ -1228,9 +1364,9 @@
 "Mazak"
 ],
 "industry": "機械・金属",
-"industry_basis": "filing",
-"made": null,
-"website": null,
+"industry_basis": "master",
+"made": "機械用歯車の製造・機械加工サービス",
+"website": "https://www.chickasawmachine.com/",
 "jp": false,
 "jp_candidate": false,
 "jp_basis": null,
@@ -1240,7 +1376,7 @@
 "new": true,
 "summary": "Chickasaw Machine & Tool Company, Inc.(Chickasaw, OH)が Mazak Corporation を担保権者として MAZAK 製工作機械 1 台(製番 369138)を登記(2026-09-15)。",
 "infer": "加工能力増強・更新投資の可能性(推論)。",
-"karte": null,
+"karte": "C-13563",
 "fact": {
 "src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
 "ref": "FS OH00301690651 Original",
@@ -1269,7 +1405,7 @@
 "id": "U-1103469",
 "state": "OH",
 "company": "Tipp Holdings LLC",
-"company_id": null,
+"company_id": "UC-20308",
 "entity_type": "corp",
 "city": "Tipp City, OH",
 "secured_party": "TRUMPF Inc.",
@@ -1316,7 +1452,7 @@
 "new": true,
 "summary": "Tipp Holdings LLC(Tipp City, OH)が TRUMPF Inc. を担保権者として TruBend 5230 (S) (B23) ベンディングマシン 1 台(製番 B1508I0659)を登記(2026-09-11)。",
 "infer": "板金加工ラインの増強・新規稼働の可能性(推論)。",
-"karte": null,
+"karte": "C-20308",
 "fact": {
 "src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
 "ref": "FS OH00301625301 Original",
@@ -1345,7 +1481,7 @@
 "id": "U-1103468",
 "state": "OH",
 "company": "FAXON MACHINING, LLC",
-"company_id": null,
+"company_id": "UC-3336",
 "entity_type": "corp",
 "city": "Cincinnati, OH",
 "secured_party": "Mazak Corporation",
@@ -1379,10 +1515,10 @@
 "makers": [
 "Mazak"
 ],
-"industry": "機械・金属",
-"industry_basis": "filing",
-"made": null,
-"website": null,
+"industry": "軍事・防衛",
+"industry_basis": "master",
+"made": "防衛・航空宇宙向け部品の受託加工製造",
+"website": "https://www.faxon-machining.com",
 "jp": false,
 "jp_candidate": false,
 "jp_basis": null,
@@ -1392,7 +1528,7 @@
 "new": true,
 "summary": "FAXON MACHINING, LLC(Cincinnati, OH)が Mazak Corporation を担保権者として MAZAK 製工作機械(製番 368173)を登記(2026-09-10)。",
 "infer": "工作機械の導入による加工能力増強の可能性(推論)。",
-"karte": null,
+"karte": "C-3336",
 "fact": {
 "src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
 "ref": "FS OH00301598069 Original",
@@ -1421,7 +1557,7 @@
 "id": "U-1103467",
 "state": "OH",
 "company": "FAXON MACHINING, LLC",
-"company_id": null,
+"company_id": "UC-3336",
 "entity_type": "corp",
 "city": "Cincinnati, OH",
 "secured_party": "Mazak Corporation",
@@ -1455,10 +1591,10 @@
 "makers": [
 "Mazak"
 ],
-"industry": "機械・金属",
-"industry_basis": "filing",
-"made": null,
-"website": null,
+"industry": "軍事・防衛",
+"industry_basis": "master",
+"made": "防衛・航空宇宙向け部品の受託加工製造",
+"website": "https://www.faxon-machining.com",
 "jp": false,
 "jp_candidate": false,
 "jp_basis": null,
@@ -1468,7 +1604,7 @@
 "new": true,
 "summary": "FAXON MACHINING, LLC(Cincinnati, OH)が Mazak Corporation を担保権者として MAZAK 製工作機械(製番 368174)を登記(2026-09-10)。",
 "infer": "加工能力増強・既存機更新の可能性(推論)。",
-"karte": null,
+"karte": "C-3336",
 "fact": {
 "src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
 "ref": "FS OH00301597279 Original",
@@ -1497,7 +1633,7 @@
 "id": "U-1000539",
 "state": "OH",
 "company": "BLUE CHIP TOOL, INC.",
-"company_id": null,
+"company_id": "UC-3386",
 "entity_type": "corp",
 "city": "Cincinnati, OH",
 "secured_party": "Mazak Corporation",
@@ -1532,9 +1668,9 @@
 "Mazak"
 ],
 "industry": "機械・金属",
-"industry_basis": "filing",
-"made": null,
-"website": null,
+"industry_basis": "master",
+"made": "精密機械加工・工具製造の受託加工業",
+"website": "https://www.bluechiptool.com",
 "jp": false,
 "jp_candidate": false,
 "jp_basis": null,
@@ -1544,7 +1680,7 @@
 "new": true,
 "summary": "BLUE CHIP TOOL, INC.(Cincinnati, OH)が Mazak Corporation を担保権者として MAZAK MACHINE(製番 356793)を登記(2026-09-04)。",
 "infer": "工作機械の新規導入・生産能力増強の可能性(推論)。",
-"karte": null,
+"karte": "C-3386",
 "fact": {
 "src": "オハイオ州務長官 UCC 登記(ucc.ohiosos.gov・公開検索)",
 "ref": "FS OH00301520561 Original",
@@ -12338,6 +12474,76 @@
 ]
 },
 {
+"id": "UC-3336",
+"karte": "C-3336",
+"name": "FAXON MACHINING, LLC",
+"city": "Cincinnati, OH",
+"state": "OH",
+"industry": "軍事・防衛",
+"made": "防衛・航空宇宙向け部品の受託加工製造",
+"website": "https://www.faxon-machining.com",
+"size": "100-150人",
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"filings": 5,
+"machines": 5,
+"machines_unconfirmed": 0,
+"domains": [
+"切削加工"
+],
+"makers": [
+"Mazak"
+],
+"latest": "2026-09-10",
+"earliest": "2026-02-24",
+"permits": 0,
+"card_ids": [
+"U-1103468",
+"U-1103467",
+"U-1000564",
+"U-1000558",
+"U-1000554"
+],
+"timeline": [
+{
+"date": "2026-09-10",
+"kind": "ucc",
+"title": "UCC 登記: 不明(製番のみ)",
+"ref": "FS OH00301598069 Original",
+"card": "U-1103468"
+},
+{
+"date": "2026-09-10",
+"kind": "ucc",
+"title": "UCC 登記: 不明(製番のみ)",
+"ref": "FS OH00301597279 Original",
+"card": "U-1103467"
+},
+{
+"date": "2026-07-20",
+"kind": "ucc",
+"title": "UCC 登記: 不明(製番のみ)",
+"ref": "FS OH00300244928 Original",
+"card": "U-1000564"
+},
+{
+"date": "2026-07-06",
+"kind": "ucc",
+"title": "UCC 登記: 不明(製番のみ)",
+"ref": "FS OH00299955103 Original",
+"card": "U-1000558"
+},
+{
+"date": "2026-02-24",
+"kind": "ucc",
+"title": "UCC 登記: 不明(製番のみ)",
+"ref": "FS OH00296574364 Original",
+"card": "U-1000554"
+}
+]
+},
+{
 "id": "UC-20080",
 "karte": "C-20080",
 "name": "PARKER HANNIFIN CORPORATION",
@@ -12524,6 +12730,61 @@
 "title": "UCC 登記: 不明(製番のみ)",
 "ref": "FS OH00295499080 Original",
 "card": "U-1000521"
+}
+]
+},
+{
+"id": "UC-16639",
+"karte": "C-16639",
+"name": "ACCELEVATION LLC",
+"city": "Miamisburg, OH",
+"state": "OH",
+"industry": "データセンター",
+"made": "データセンター向け白色空間インフラ製品の製造",
+"website": "https://www.accelevation.com",
+"size": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"filings": 3,
+"machines": 4,
+"machines_unconfirmed": 0,
+"domains": [
+"板金加工",
+"自動化・搬送"
+],
+"makers": [
+"TRUMPF"
+],
+"latest": "2026-10-29",
+"earliest": "2026-09-28",
+"permits": 0,
+"card_ids": [
+"U-1108149",
+"U-1108147",
+"U-1105892"
+],
+"timeline": [
+{
+"date": "2026-10-29",
+"kind": "ucc",
+"title": "UCC 登記: ファイバーレーザー切断機[平板], 搬入出装置(レーザー加工機用)",
+"ref": "FS OH00302748049 Original",
+"card": "U-1108149"
+},
+{
+"date": "2026-10-26",
+"kind": "ucc",
+"title": "UCC 登記: プレスブレーキ(ベンディングマシン)",
+"ref": "FS OH00302655456 Original",
+"card": "U-1108147"
+},
+{
+"date": "2026-09-28",
+"kind": "ucc",
+"title": "UCC 登記: ファイバーレーザー切断機[パイプ・チューブ]",
+"ref": "FS OH00302067752 Original",
+"card": "U-1105892"
 }
 ]
 },
@@ -12739,60 +13000,6 @@
 ]
 },
 {
-"id": "UC-3336",
-"karte": "C-3336",
-"name": "FAXON MACHINING, LLC",
-"city": "Cincinnati, OH",
-"state": "OH",
-"industry": "軍事・防衛",
-"made": "防衛・航空宇宙向け部品の受託加工製造",
-"website": "https://www.faxon-machining.com",
-"size": "100-150人",
-"jp": false,
-"jp_candidate": false,
-"jp_basis": null,
-"filings": 3,
-"machines": 3,
-"machines_unconfirmed": 0,
-"domains": [
-"切削加工"
-],
-"makers": [
-"Mazak"
-],
-"latest": "2026-07-20",
-"earliest": "2026-02-24",
-"permits": 0,
-"card_ids": [
-"U-1000564",
-"U-1000558",
-"U-1000554"
-],
-"timeline": [
-{
-"date": "2026-07-20",
-"kind": "ucc",
-"title": "UCC 登記: 不明(製番のみ)",
-"ref": "FS OH00300244928 Original",
-"card": "U-1000564"
-},
-{
-"date": "2026-07-06",
-"kind": "ucc",
-"title": "UCC 登記: 不明(製番のみ)",
-"ref": "FS OH00299955103 Original",
-"card": "U-1000558"
-},
-{
-"date": "2026-02-24",
-"kind": "ucc",
-"title": "UCC 登記: 不明(製番のみ)",
-"ref": "FS OH00296574364 Original",
-"card": "U-1000554"
-}
-]
-},
-{
 "id": "UC-4963",
 "karte": "C-4963",
 "name": "Axium Packaging LLC",
@@ -12843,53 +13050,6 @@
 "title": "UCC 登記: 押出ブロー成形機(ツインステーション)",
 "ref": "FS OH00299326908 Original",
 "card": "U-1108020"
-}
-]
-},
-{
-"id": "UC-16639",
-"karte": "C-16639",
-"name": "ACCELEVATION LLC",
-"city": "Miamisburg, OH",
-"state": "OH",
-"industry": "データセンター",
-"made": "データセンター向け白色空間インフラ製品の製造",
-"website": "https://www.accelevation.com",
-"size": null,
-"jp": false,
-"jp_candidate": false,
-"jp_basis": null,
-"filings": 2,
-"machines": 3,
-"machines_unconfirmed": 0,
-"domains": [
-"板金加工",
-"自動化・搬送"
-],
-"makers": [
-"TRUMPF"
-],
-"latest": "2026-10-29",
-"earliest": "2026-10-26",
-"permits": 0,
-"card_ids": [
-"U-1108149",
-"U-1108147"
-],
-"timeline": [
-{
-"date": "2026-10-29",
-"kind": "ucc",
-"title": "UCC 登記: ファイバーレーザー切断機[平板], 搬入出装置(レーザー加工機用)",
-"ref": "FS OH00302748049 Original",
-"card": "U-1108149"
-},
-{
-"date": "2026-10-26",
-"kind": "ucc",
-"title": "UCC 登記: プレスブレーキ(ベンディングマシン)",
-"ref": "FS OH00302655456 Original",
-"card": "U-1108147"
 }
 ]
 },
@@ -13196,6 +13356,52 @@
 "title": "UCC 登記: 立形マシニングセンタ(50番テーパー)",
 "ref": "FS OH00296340935 Original",
 "card": "U-1000749"
+}
+]
+},
+{
+"id": "UC-3297",
+"karte": "C-3297",
+"name": "Technibus, Inc.",
+"city": "Canton, OH",
+"state": "OH",
+"industry": "機械・金属",
+"made": "メタル製バスシステム(送電・配電用金属閉鎖バス)製造",
+"website": null,
+"size": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"filings": 2,
+"machines": 2,
+"machines_unconfirmed": 0,
+"domains": [
+"板金加工"
+],
+"makers": [
+"TRUMPF"
+],
+"latest": "2026-09-21",
+"earliest": "2026-04-30",
+"permits": 0,
+"card_ids": [
+"U-1104032",
+"U-1000266"
+],
+"timeline": [
+{
+"date": "2026-09-21",
+"kind": "ucc",
+"title": "UCC 登記: プレスブレーキ(曲げ機)",
+"ref": "FS OH00301835336 Original",
+"card": "U-1104032"
+},
+{
+"date": "2026-04-30",
+"kind": "ucc",
+"title": "UCC 登記: プレスブレーキ(曲げ機)",
+"ref": "FS OH00298278621 Original",
+"card": "U-1000266"
 }
 ]
 },
@@ -13794,6 +14000,120 @@
 "title": "UCC 登記: 不明(製番のみ)",
 "ref": "FS OH00302176763 Original",
 "card": "U-1105891"
+}
+]
+},
+{
+"id": "UC-13563",
+"karte": "C-13563",
+"name": "Chickasaw Machine & Tool Company, Inc.",
+"city": "Chickasaw, OH",
+"state": "OH",
+"industry": "機械・金属",
+"made": "機械用歯車の製造・機械加工サービス",
+"website": "https://www.chickasawmachine.com/",
+"size": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"filings": 1,
+"machines": 1,
+"machines_unconfirmed": 0,
+"domains": [
+"切削加工"
+],
+"makers": [
+"Mazak"
+],
+"latest": "2026-09-15",
+"earliest": "2026-09-15",
+"permits": 0,
+"card_ids": [
+"U-1103749"
+],
+"timeline": [
+{
+"date": "2026-09-15",
+"kind": "ucc",
+"title": "UCC 登記: 不明(製番のみ)",
+"ref": "FS OH00301690651 Original",
+"card": "U-1103749"
+}
+]
+},
+{
+"id": "UC-20308",
+"karte": "C-20308",
+"name": "Tipp Holdings LLC",
+"city": "Tipp City, OH",
+"state": "OH",
+"industry": "機械・金属",
+"made": null,
+"website": null,
+"size": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"filings": 1,
+"machines": 1,
+"machines_unconfirmed": 0,
+"domains": [
+"板金加工"
+],
+"makers": [
+"TRUMPF"
+],
+"latest": "2026-09-11",
+"earliest": "2026-09-11",
+"permits": 0,
+"card_ids": [
+"U-1103469"
+],
+"timeline": [
+{
+"date": "2026-09-11",
+"kind": "ucc",
+"title": "UCC 登記: プレスブレーキ(曲げ機)",
+"ref": "FS OH00301625301 Original",
+"card": "U-1103469"
+}
+]
+},
+{
+"id": "UC-3386",
+"karte": "C-3386",
+"name": "BLUE CHIP TOOL, INC.",
+"city": "Cincinnati, OH",
+"state": "OH",
+"industry": "機械・金属",
+"made": "精密機械加工・工具製造の受託加工業",
+"website": "https://www.bluechiptool.com",
+"size": null,
+"jp": false,
+"jp_candidate": false,
+"jp_basis": null,
+"filings": 1,
+"machines": 1,
+"machines_unconfirmed": 0,
+"domains": [
+"切削加工"
+],
+"makers": [
+"Mazak"
+],
+"latest": "2026-09-04",
+"earliest": "2026-09-04",
+"permits": 0,
+"card_ids": [
+"U-1000539"
+],
+"timeline": [
+{
+"date": "2026-09-04",
+"kind": "ucc",
+"title": "UCC 登記: 不明(製番のみ)",
+"ref": "FS OH00301520561 Original",
+"card": "U-1000539"
 }
 ]
 },
@@ -14478,44 +14798,6 @@
 "title": "UCC 登記: パンチ・ファイバーレーザー複合機[平板]",
 "ref": "FS OH00298459968 Original",
 "card": "U-1000267"
-}
-]
-},
-{
-"id": "UC-3297",
-"karte": "C-3297",
-"name": "Technibus, Inc.",
-"city": "Canton, OH",
-"state": "OH",
-"industry": "機械・金属",
-"made": "メタル製バスシステム(送電・配電用金属閉鎖バス)製造",
-"website": null,
-"size": null,
-"jp": false,
-"jp_candidate": false,
-"jp_basis": null,
-"filings": 1,
-"machines": 1,
-"machines_unconfirmed": 0,
-"domains": [
-"板金加工"
-],
-"makers": [
-"TRUMPF"
-],
-"latest": "2026-04-30",
-"earliest": "2026-04-30",
-"permits": 0,
-"card_ids": [
-"U-1000266"
-],
-"timeline": [
-{
-"date": "2026-04-30",
-"kind": "ucc",
-"title": "UCC 登記: プレスブレーキ(曲げ機)",
-"ref": "FS OH00298278621 Original",
-"card": "U-1000266"
 }
 ]
 },
