@@ -38,11 +38,83 @@
 },
 "faces": {
 "permits": {
-"count": 4,
+"count": 6,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-18",
+"latest": "2026-11-03",
 "items": [
+{
+"id": "S-92048",
+"parent_id": "S-92048",
+"member_n": 1,
+"date": "2026-11-03",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "3542 W 38TH PL",
+"permit_no": "B200515700",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"source_id": "SRC-001",
+"value": 10000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CHICAGO HOUSING AUTHORITYがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "FULL REBUILD (SAME AS EXISTING) FOR WOOD PORCH (OPEN) (QUANTITY: 1, LOCATION: REAR OF BUILDING).",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-11T12:48:00.062310+00:00",
+"reading_id": "01M75AD81YR584SDJJB3RJ2949"
+},
+"n_permits": 1,
+"member_ids": [
+"S-92048"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-91153",
+"parent_id": "S-91153",
+"member_n": 1,
+"date": "2026-11-02",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "1447 S ASHLAND AVE",
+"permit_no": "B200515371",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"source_id": "SRC-001",
+"value": 263850.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CHICAGO HOUSING AUTHORITYがChicagoで屋根の修繕許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SCOPE: ROOF REPLACEMENT. AREA: 1400 SQ. FT. ROOF COVERING: OTHER. LOCATION: WORKK DONE ON THE PATIO AREA OF THE TOP FLOOR. IL ROOFING CONTRACTOR LICENSE: 104000096.",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-11T12:48:02.421090+00:00",
+"reading_id": "01M75ADABN8MKCTGXB7EX9JMG1"
+},
+"n_permits": 1,
+"member_ids": [
+"S-91153"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-62028",
 "parent_id": "S-62028",
@@ -66,8 +138,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:41.591814+00:00",
-"reading_id": "01M4W22C2Q3BT65KVZC19MVW0N"
+"generated_at": "2026-11-11T12:48:27.311364+00:00",
+"reading_id": "01M75AE2NFCQ03K339N4B8PPTK"
 },
 "n_permits": 1,
 "member_ids": [
@@ -138,8 +210,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:38.466376+00:00",
-"reading_id": "01M4W25Y72A6QPZFTZYY2GDGSG"
+"generated_at": "2026-11-11T12:48:16.022280+00:00",
+"reading_id": "01M75ADQMP88MXS6M4EGPDKXDY"
 },
 "n_permits": 1,
 "member_ids": [
@@ -166,7 +238,7 @@
 "value": 480000.0,
 "category": "保全",
 "confidence": "high",
-"summary": "CHICAGO HOUSING AUTHORITYがChicagoでボイラー更新・修繕の許可を取得(1件)",
+"summary": "CHICAGO HOUSING AUTHORITYがChicagoで更新・修繕の許可を取得(1件)",
 "infer": null,
 "role": "operator",
 "role_label": "操業事業者",
@@ -174,8 +246,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:49.882026+00:00",
-"reading_id": "01M4W269BTJ0X927F0WVAKT1FZ"
+"generated_at": "2026-11-11T12:48:29.661095+00:00",
+"reading_id": "01M75AE4YXHZ8M94SCZ2X428FX"
 },
 "n_permits": 1,
 "member_ids": [
@@ -215,6 +287,20 @@
 },
 "timeline": [
 {
+"date": "2026-11-03",
+"face": "permits",
+"title": "建設許可(Chicago): CHICAGO HOUSING AUTHORITYがChicagoで更新・修繕の許可を取得(1件)",
+"ref": "S-92048",
+"summary": "CHICAGO HOUSING AUTHORITYがChicagoで更新・修繕の許可を取得(1件)"
+},
+{
+"date": "2026-11-02",
+"face": "permits",
+"title": "建設許可(Chicago): CHICAGO HOUSING AUTHORITYがChicagoで屋根の修繕許可を取得(1件)",
+"ref": "S-91153",
+"summary": "CHICAGO HOUSING AUTHORITYがChicagoで屋根の修繕許可を取得(1件)"
+},
+{
 "date": "2026-09-18",
 "face": "permits",
 "title": "建設許可(Chicago): CHICAGO HOUSING AUTHORITYがChicagoで更新・修繕の許可を取得(1件)",
@@ -238,11 +324,11 @@
 {
 "date": "2026-09-14",
 "face": "permits",
-"title": "建設許可(Chicago): CHICAGO HOUSING AUTHORITYがChicagoでボイラー更新・修繕の許可を取得(1件)",
+"title": "建設許可(Chicago): CHICAGO HOUSING AUTHORITYがChicagoで更新・修繕の許可を取得(1件)",
 "ref": "S-58249",
-"summary": "CHICAGO HOUSING AUTHORITYがChicagoでボイラー更新・修繕の許可を取得(1件)"
+"summary": "CHICAGO HOUSING AUTHORITYがChicagoで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-11T12:46:50+00:00",
+"generated_at": "2026-11-11T13:08:01+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

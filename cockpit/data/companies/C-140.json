@@ -35,85 +35,11 @@
 },
 "faces": {
 "permits": {
-"count": 6,
+"count": 4,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-11-06",
+"latest": "2026-09-24",
 "items": [
-{
-"id": "S-95490",
-"parent_id": "S-95490",
-"member_n": 2,
-"date": "2026-11-06",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "630 CHILDREN'S DR",
-"permit_no": "PMEPC2645067",
-"permit_type": "Plumbing",
-"source_id": "SRC-017",
-"value": 500000.0,
-"category": "保全",
-"confidence": "high",
-"summary": "NATIONWIDE CHILDRENS HOSPITALがColumbusでユーティリティ・修繕の許可を取得(2件)",
-"infer": null,
-"role": "operator",
-"role_label": "操業事業者",
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"provenance": {
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:16.391202+00:00",
-"reading_id": "01M72QGHN7W4BCZH79X5AGAC6R"
-},
-"n_permits": 2,
-"member_ids": [
-"S-95490",
-"S-96271"
-],
-"kinds": [
-"ユーティリティ",
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"id": "S-93912",
-"parent_id": "S-93912",
-"member_n": 1,
-"date": "2026-11-04",
-"applied": null,
-"state": "OH",
-"jurisdiction": "Columbus",
-"address": "700 CHILDREN'S DR",
-"permit_no": "FALRC2639992",
-"permit_type": "Fire Alarm",
-"source_id": "SRC-017",
-"value": null,
-"category": "保全",
-"confidence": "high",
-"summary": "NATIONWIDE CHILDRENS HOSPITALがColumbusで警備設備の許可を取得(1件)",
-"infer": null,
-"role": "operator",
-"role_label": "操業事業者",
-"verbatim": "Commercial - Other / Fire Alarm / Additions, Alterations and Conversions - Non-residential and No-housekeeping / Fire Protection",
-"provenance": {
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:08.205899+00:00",
-"reading_id": "01M72QG9NDGZV6AK2VGMTH0BJY"
-},
-"n_permits": 1,
-"member_ids": [
-"S-93912"
-],
-"kinds": [
-"警備"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
 {
 "id": "S-1468",
 "parent_id": "S-1468",
@@ -129,7 +55,7 @@
 "value": 1000000.0,
 "category": "保全",
 "confidence": "high",
-"summary": "NATIONWIDE CHILDRENS HOSPITALがColumbusで更新・修繕等の許可を取得(3件)",
+"summary": "NATIONWIDE CHILDRENS HOSPITALがColumbusで修繕・警備設備の許可を取得(3件)",
 "infer": null,
 "role": "operator",
 "role_label": "操業事業者",
@@ -137,8 +63,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:59.048406+00:00",
-"reading_id": "01M4W22X48SX03AKDZ5RE9W8JW"
+"generated_at": "2026-11-11T12:48:24.547782+00:00",
+"reading_id": "01M75ADZZ34K8F2GT9JY167A8C"
 },
 "n_permits": 3,
 "member_ids": [
@@ -665,20 +591,6 @@
 },
 "timeline": [
 {
-"date": "2026-11-06",
-"face": "permits",
-"title": "建設許可(Columbus): NATIONWIDE CHILDRENS HOSPITALがColumbusでユーティリティ・修繕の許可を取得(2件)",
-"ref": "S-95490",
-"summary": "NATIONWIDE CHILDRENS HOSPITALがColumbusでユーティリティ・修繕の許可を取得(2件)"
-},
-{
-"date": "2026-11-04",
-"face": "permits",
-"title": "建設許可(Columbus): NATIONWIDE CHILDRENS HOSPITALがColumbusで警備設備の許可を取得(1件)",
-"ref": "S-93912",
-"summary": "NATIONWIDE CHILDRENS HOSPITALがColumbusで警備設備の許可を取得(1件)"
-},
-{
 "date": "2026-11-03",
 "face": "hiring",
 "title": "求人: Receiving Coordinator - RI Central Distribution(物流・Columbus OH)",
@@ -723,9 +635,9 @@
 {
 "date": "2026-09-24",
 "face": "permits",
-"title": "建設許可(Columbus): NATIONWIDE CHILDRENS HOSPITALがColumbusで更新・修繕等の許可を取得(3件)",
+"title": "建設許可(Columbus): NATIONWIDE CHILDRENS HOSPITALがColumbusで修繕・警備設備の許可を取得(3件)",
 "ref": "S-1468",
-"summary": "NATIONWIDE CHILDRENS HOSPITALがColumbusで更新・修繕等の許可を取得(3件)"
+"summary": "NATIONWIDE CHILDRENS HOSPITALがColumbusで修繕・警備設備の許可を取得(3件)"
 },
 {
 "date": "2026-09-21",
@@ -763,6 +675,6 @@
 "summary": null
 }
 ],
-"generated_at": "2026-11-11T12:46:50+00:00",
+"generated_at": "2026-11-11T13:08:01+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

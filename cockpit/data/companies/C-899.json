@@ -38,11 +38,47 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 3,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-17",
+"latest": "2026-11-06",
 "items": [
+{
+"id": "S-96479",
+"parent_id": "S-96479",
+"member_n": 1,
+"date": "2026-11-06",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "411 W 105TH ST",
+"permit_no": "101085708",
+"permit_type": "PERMIT - WRECKING/DEMOLITION",
+"source_id": "SRC-001",
+"value": 100000.0,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "CHICAGO TRANSIT AUTHORITYがChicagoで撤去の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "WRECK AND REMOVE A 1 STORY MASONRY BUILDING, BACKFILL AND GRADE.",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-11T12:48:04.777161+00:00",
+"reading_id": "01M75ADCN94P9B29H05MEYS27P"
+},
+"n_permits": 1,
+"member_ids": [
+"S-96479"
+],
+"kinds": [
+"縮小・撤去"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-59536",
 "parent_id": "S-59536",
@@ -58,7 +94,7 @@
 "value": 30000.0,
 "category": "操業の変化",
 "confidence": "high",
-"summary": "CHICAGO TRANSIT AUTHORITYがChicagoで複数建物の解体許可を取得(10件)",
+"summary": "CHICAGO TRANSIT AUTHORITYがシカゴで建物等の解体許可を取得(10件)",
 "infer": null,
 "role": "operator",
 "role_label": "操業事業者",
@@ -66,8 +102,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:48.193242+00:00",
-"reading_id": "01M4W22JH1TY40G39H4186CC0W"
+"generated_at": "2026-11-11T12:48:16.966563+00:00",
+"reading_id": "01M75ADRJ6SJT0HSEAQSYC2629"
 },
 "n_permits": 10,
 "member_ids": [
@@ -103,7 +139,7 @@
 "value": 30000.0,
 "category": "操業の変化",
 "confidence": "high",
-"summary": "CHICAGO TRANSIT AUTHORITYがChicagoでポンプ場等の解体許可を取得(6件)",
+"summary": "CHICAGO TRANSIT AUTHORITYがChicagoで解体の許可を取得(6件)",
 "infer": null,
 "role": "operator",
 "role_label": "操業事業者",
@@ -111,8 +147,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:36.253939+00:00",
-"reading_id": "01M4W226VX094WJSZ8XV4RGEBG"
+"generated_at": "2026-11-11T12:48:27.754918+00:00",
+"reading_id": "01M75AE33AMY24BDSRMVVPP7AS"
 },
 "n_permits": 6,
 "member_ids": [
@@ -157,20 +193,27 @@
 },
 "timeline": [
 {
-"date": "2026-09-17",
+"date": "2026-11-06",
 "face": "permits",
-"title": "建設許可(Chicago): CHICAGO TRANSIT AUTHORITYがChicagoで複数建物の解体許可を取得(10件)",
-"ref": "S-59536",
-"summary": "CHICAGO TRANSIT AUTHORITYがChicagoで複数建物の解体許可を取得(10件)"
+"title": "建設許可(Chicago): CHICAGO TRANSIT AUTHORITYがChicagoで撤去の許可を取得(1件)",
+"ref": "S-96479",
+"summary": "CHICAGO TRANSIT AUTHORITYがChicagoで撤去の許可を取得(1件)"
 },
 {
 "date": "2026-09-17",
 "face": "permits",
-"title": "建設許可(Chicago): CHICAGO TRANSIT AUTHORITYがChicagoでポンプ場等の解体許可を取得(6件)",
+"title": "建設許可(Chicago): CHICAGO TRANSIT AUTHORITYがシカゴで建物等の解体許可を取得(10件)",
+"ref": "S-59536",
+"summary": "CHICAGO TRANSIT AUTHORITYがシカゴで建物等の解体許可を取得(10件)"
+},
+{
+"date": "2026-09-17",
+"face": "permits",
+"title": "建設許可(Chicago): CHICAGO TRANSIT AUTHORITYがChicagoで解体の許可を取得(6件)",
 "ref": "S-61943",
-"summary": "CHICAGO TRANSIT AUTHORITYがChicagoでポンプ場等の解体許可を取得(6件)"
+"summary": "CHICAGO TRANSIT AUTHORITYがChicagoで解体の許可を取得(6件)"
 }
 ],
-"generated_at": "2026-11-11T12:46:50+00:00",
+"generated_at": "2026-11-11T13:08:01+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

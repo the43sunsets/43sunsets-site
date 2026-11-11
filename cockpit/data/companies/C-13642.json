@@ -38,11 +38,47 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 3,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-16",
+"latest": "2026-11-03",
 "items": [
+{
+"id": "S-91976",
+"parent_id": "S-91976",
+"member_n": 1,
+"date": "2026-11-03",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "2001 N CLARK ST",
+"permit_no": "B200518328",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"source_id": "SRC-001",
+"value": 40000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "LINCOLN PARK ZOOがChicagoで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "LINE VOLTAGE ELECTRICAL WORK. ADD 15 CIRCUITS TO EXISTING 200 AMP SERVICE DISCONNECTING MEANS. RECEPTACLE OUTLETS: 15 . LIGHTING OUTLETS: 8. SPECIFIC LOCATION: SAFARI CAFE.",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-11T12:48:05.842888+00:00",
+"reading_id": "01M75ADDPJXZC7MCHTQVFE3VX4"
+},
+"n_permits": 1,
+"member_ids": [
+"S-91976"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-59614",
 "parent_id": "S-59614",
@@ -66,8 +102,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:19.868884+00:00",
-"reading_id": "01M4W25C1WTK15MWCN5CMY6BZG"
+"generated_at": "2026-11-11T12:48:18.553926+00:00",
+"reading_id": "01M75ADT3SXKDPM27SEZ37ZWZ3"
 },
 "n_permits": 1,
 "member_ids": [
@@ -143,6 +179,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-03",
+"face": "permits",
+"title": "建設許可(Chicago): LINCOLN PARK ZOOがChicagoで更新・修繕の許可を取得(1件)",
+"ref": "S-91976",
+"summary": "LINCOLN PARK ZOOがChicagoで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-09-16",
 "face": "permits",
 "title": "建設許可(Chicago): LINCOLN PARK ZOOがChicagoで更新・修繕の許可を取得(1件)",
@@ -157,6 +200,6 @@
 "summary": "LINCOLN PARK ZOOがChicagoで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-11T12:46:50+00:00",
+"generated_at": "2026-11-11T13:08:01+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

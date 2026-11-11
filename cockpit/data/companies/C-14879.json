@@ -38,11 +38,47 @@
 },
 "faces": {
 "permits": {
-"count": 3,
+"count": 5,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-11-05",
+"latest": "2026-11-09",
 "items": [
+{
+"id": "S-96627",
+"parent_id": "S-96627",
+"member_n": 1,
+"date": "2026-11-09",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "1054 OLD US 52 NEW RICHMOND OH 45157",
+"permit_no": "B-077658-2026",
+"permit_type": "Commercial New Structure",
+"source_id": "SRC-022",
+"value": 840000.0,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "Dollar GeneralがNew Richmondで新築の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "DOLLAR GENERAL  / Commercial New Structure / New Structure",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-11T12:48:04.637578+00:00",
+"reading_id": "01M75ADCGX59ES0SJDMCF5JPCN"
+},
+"n_permits": 1,
+"member_ids": [
+"S-96627"
+],
+"kinds": [
+"増築・新築"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-29116",
 "parent_id": "S-29116",
@@ -80,6 +116,42 @@
 "増築・新築",
 "更新・修繕",
 "事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-90813",
+"parent_id": "S-90813",
+"member_n": 1,
+"date": "2026-11-02",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "2977 SR 132 NEW RICHMOND OH",
+"permit_no": "HSP-074954-2026",
+"permit_type": "Health Septic - Replacement",
+"source_id": "SRC-022",
+"value": 44000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "Dollar GeneralがNEW RICHMONDで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "DOLLAR GENERAL REPLACEMENT / Health Septic - Replacement / Replacement",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-11T12:48:05.235736+00:00",
+"reading_id": "01M75ADD3KYW6F7DDPGJWHXTD7"
+},
+"n_permits": 1,
+"member_ids": [
+"S-90813"
+],
+"kinds": [
+"更新・修繕"
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
@@ -184,11 +256,25 @@
 },
 "timeline": [
 {
+"date": "2026-11-09",
+"face": "permits",
+"title": "建設許可(Clermont County): Dollar GeneralがNew Richmondで新築の許可を取得(1件)",
+"ref": "S-96627",
+"summary": "Dollar GeneralがNew Richmondで新築の許可を取得(1件)"
+},
+{
 "date": "2026-11-05",
 "face": "permits",
 "title": "建設許可(Indiana/DEARBORN): Dollar GeneralがIndiana/DEARBORNで内容不明の許可を取得(1件)",
 "ref": "S-93991",
 "summary": "Dollar GeneralがIndiana/DEARBORNで内容不明の許可を取得(1件)"
+},
+{
+"date": "2026-11-02",
+"face": "permits",
+"title": "建設許可(Clermont County): Dollar GeneralがNEW RICHMONDで更新・修繕の許可を取得(1件)",
+"ref": "S-90813",
+"summary": "Dollar GeneralがNEW RICHMONDで更新・修繕の許可を取得(1件)"
 },
 {
 "date": "2026-09-21",
@@ -205,6 +291,6 @@
 "summary": "Dollar GeneralがBethelで新築・看板等の許可を取得（4件）"
 }
 ],
-"generated_at": "2026-11-11T12:46:50+00:00",
+"generated_at": "2026-11-11T13:08:01+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
