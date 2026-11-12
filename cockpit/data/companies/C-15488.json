@@ -38,11 +38,47 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-29",
+"latest": "2026-11-02",
 "items": [
+{
+"id": "S-91087",
+"parent_id": "S-91087",
+"member_n": 1,
+"date": "2026-11-02",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Chicago",
+"address": "3745 N LINCOLN AVE",
+"permit_no": "B200518288",
+"permit_type": "PERMIT – EXPRESS PERMIT PROGRAM",
+"source_id": "SRC-001",
+"value": 387700.0,
+"category": "保全",
+"confidence": "high",
+"summary": "TRADER JOE'Sがシカゴで更新・修繕の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SCOPE: ROOF RECOVER. AREA: 28875 SQ. FT. ROOF COVERING: BUILT-UP ROOF. LOCATION: REROOF. IL ROOFING CONTRACTOR LICENSE: 104017674.",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:16.570257+00:00",
+"reading_id": "01M78WZGVTEVMAMSJD3SHHM31R"
+},
+"n_permits": 1,
+"member_ids": [
+"S-91087"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
 {
 "id": "S-69865",
 "parent_id": "S-69865",
@@ -109,6 +145,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-02",
+"face": "permits",
+"title": "建設許可(Chicago): TRADER JOE'Sがシカゴで更新・修繕の許可を取得(1件)",
+"ref": "S-91087",
+"summary": "TRADER JOE'Sがシカゴで更新・修繕の許可を取得(1件)"
+},
+{
 "date": "2026-09-29",
 "face": "permits",
 "title": "建設許可(Chicago): TRADER JOE'Sがシカゴで看板設置の許可を取得(3件)",
@@ -116,6 +159,6 @@
 "summary": "TRADER JOE'Sがシカゴで看板設置の許可を取得(3件)"
 }
 ],
-"generated_at": "2026-11-12T22:05:49+00:00",
+"generated_at": "2026-11-12T22:29:58+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

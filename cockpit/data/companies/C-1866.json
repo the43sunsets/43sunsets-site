@@ -38,10 +38,10 @@
 },
 "faces": {
 "permits": {
-"count": 8,
+"count": 9,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-11-04",
+"latest": "2026-11-10",
 "items": [
 {
 "id": "S-89445",
@@ -114,6 +114,42 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
+},
+{
+"id": "S-97175",
+"parent_id": "S-97175",
+"member_n": 1,
+"date": "2026-11-10",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Butler County",
+"address": "5265 Hildenbrand WAY, United States",
+"permit_no": "BLD-SN26-04815",
+"permit_type": "Commercial Sign",
+"source_id": "SRC-024",
+"value": null,
+"category": "事務所・その他",
+"confidence": "high",
+"summary": "FIFTH THIRD BANKがButler Countyで看板設置の許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "SIGN PACKAGE - FIFTH THIRD BANK / IN PROGRESS / Pay Fees Due / Commercial Sign",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:17.011848+00:00",
+"reading_id": "01M78WZH9K3CAHMF1R9YBGHWGQ"
+},
+"n_permits": 1,
+"member_ids": [
+"S-97175"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "id": "S-93232",
@@ -274,7 +310,7 @@
 "value": null,
 "category": "事務所・その他",
 "confidence": "high",
-"summary": "Fifth Third BankがKetteringで事務所・その他の許可を取得(1件)",
+"summary": "Fifth Third BankがKetteringで看板設置の許可を取得(1件)",
 "infer": null,
 "role": "operator",
 "role_label": "操業事業者",
@@ -282,8 +318,8 @@
 "provenance": {
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:16.464985+00:00",
-"reading_id": "01M4W23E4HYEPSSZNZTCVPHF15"
+"generated_at": "2026-11-12T22:10:23.282389+00:00",
+"reading_id": "01M78WZQDJEVA50ETQ9TN5M47A"
 },
 "n_permits": 1,
 "member_ids": [
@@ -359,6 +395,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-10",
+"face": "permits",
+"title": "建設許可(Butler County): FIFTH THIRD BANKがButler Countyで看板設置の許可を取得(1件)",
+"ref": "S-97175",
+"summary": "FIFTH THIRD BANKがButler Countyで看板設置の許可を取得(1件)"
+},
+{
 "date": "2026-11-04",
 "face": "permits",
 "title": "建設許可(Butler County): FIFTH THIRD BANKがOHで看板設置の許可を取得(1件)",
@@ -410,11 +453,11 @@
 {
 "date": "2026-08-18",
 "face": "permits",
-"title": "建設許可(Kettering): Fifth Third BankがKetteringで事務所・その他の許可を取得(1件)",
+"title": "建設許可(Kettering): Fifth Third BankがKetteringで看板設置の許可を取得(1件)",
 "ref": "S-40117",
-"summary": "Fifth Third BankがKetteringで事務所・その他の許可を取得(1件)"
+"summary": "Fifth Third BankがKetteringで看板設置の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-12T22:05:49+00:00",
+"generated_at": "2026-11-12T22:29:58+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

@@ -38,11 +38,54 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-23",
+"latest": "2026-11-10",
 "items": [
+{
+"id": "S-82215",
+"parent_id": "S-82215",
+"member_n": 6,
+"date": "2026-11-10",
+"applied": null,
+"state": "IL",
+"jurisdiction": "Palatine",
+"address": "1200 W ALGONQUIN RD, Z, PALATINE, IL 60067",
+"permit_no": "BLDC-026396-2026",
+"permit_type": "COMMERCIAL PERMIT",
+"source_id": "SRC-021",
+"value": 35900.0,
+"category": "保全",
+"confidence": "high",
+"summary": "HARPER COLLEGEがPALATINEで修繕・記録等の許可を取得(6件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "COMMERCIAL - ALTERATION / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:17.594328+00:00",
+"reading_id": "01M78WZHVTYQB3VW59RRTGHMMS"
+},
+"n_permits": 6,
+"member_ids": [
+"S-82215",
+"S-85379",
+"S-94122",
+"S-96568",
+"S-96570",
+"S-96916"
+],
+"kinds": [
+"更新・修繕",
+"警備",
+"工事でない記録"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-65351",
 "parent_id": "S-65351",
@@ -107,6 +150,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-10",
+"face": "permits",
+"title": "建設許可(Palatine): HARPER COLLEGEがPALATINEで修繕・記録等の許可を取得(6件)",
+"ref": "S-82215",
+"summary": "HARPER COLLEGEがPALATINEで修繕・記録等の許可を取得(6件)"
+},
+{
 "date": "2026-09-23",
 "face": "permits",
 "title": "建設許可(Palatine): HARPER COLLEGEがPalatineで更新・修繕の許可を取得(1件)",
@@ -114,6 +164,6 @@
 "summary": "HARPER COLLEGEがPalatineで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-12T22:05:49+00:00",
+"generated_at": "2026-11-12T22:29:58+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

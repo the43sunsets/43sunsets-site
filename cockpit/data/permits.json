@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-11-12T22:05:45+00:00",
+"generated_at": "2026-11-12T22:29:56+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -17,29 +17,29 @@
 "funnel": {
 "signals_total": 96855,
 "candidates": 57711,
-"targets": 1666,
-"permits_folded": 2072,
+"targets": 1670,
+"permits_folded": 2096,
 "unclassified": 0,
-"unevaluated": 8935,
+"unevaluated": 7863,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 247,
-"保全": 982,
+"操業の変化": 248,
+"保全": 983,
 "事務所・その他": 194,
-"内容不明": 65,
-"工事でない記録": 178
+"内容不明": 64,
+"工事でない記録": 181
 },
 "stages": {
 "0": 39144,
-"2a": 2732,
-"2b": 5075,
-"2c": 1128,
-"2d": 41064,
-"3": 5381,
-"5": 188,
-"6": 2143
+"2a": 2539,
+"2b": 4339,
+"2c": 985,
+"2d": 41894,
+"3": 5573,
+"5": 214,
+"6": 2167
 },
-"enriched": 48776
+"enriched": 49848
 },
 "sources": [
 {
@@ -54,7 +54,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-11-11",
 "owner_coverage": 10904,
-"targets": 451,
+"targets": 453,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -105,7 +105,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-11-10",
 "owner_coverage": 3191,
-"targets": 149,
+"targets": 144,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -122,7 +122,7 @@
 "date_min": "2026-07-07",
 "date_max": "2026-11-07",
 "owner_coverage": 1761,
-"targets": 101,
+"targets": 100,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -156,7 +156,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-11-11",
 "owner_coverage": 2533,
-"targets": 46,
+"targets": 44,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -190,7 +190,7 @@
 "date_min": "2024-11-18",
 "date_max": "2026-11-12",
 "owner_coverage": 0,
-"targets": 346,
+"targets": 359,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -241,7 +241,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-11-05",
 "owner_coverage": 135,
-"targets": 9,
+"targets": 10,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -258,7 +258,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-11-12",
 "owner_coverage": 16713,
-"targets": 574,
+"targets": 587,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -275,7 +275,7 @@
 "date_min": "2026-07-01",
 "date_max": "2026-11-12",
 "owner_coverage": 7312,
-"targets": 253,
+"targets": 256,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -1561,13 +1561,13 @@
 },
 "stages": {
 "0": 39144,
-"2a": 2732,
-"2b": 5075,
-"2c": 1128,
-"2d": 41064,
-"3": 5381,
-"5": 188,
-"6": 2143
+"2a": 2539,
+"2b": 4339,
+"2c": 985,
+"2d": 41894,
+"3": 5573,
+"5": 214,
+"6": 2167
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 19336,
+"checked": 19386,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -1585,6 +1585,323 @@
 }
 },
 "signals": [
+{
+"investor": {
+"name": "QUASONIX INC",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-97173",
+"state": "OH",
+"city": "Butler County・6025 SCHUMACHER PARK DR, OH",
+"company": "QUASONIX INC",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "電子・計測",
+"category": "操業の変化",
+"category_raw": "操業の変化",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "QUASONIX INCがButlerで新築の許可を取得(2件)",
+"infer": null,
+"note": "増築・新築",
+"fact": {
+"src": "Butler County 建築許可(公開記録)",
+"ref": "許可 BLD-EZ26-04822 Commercial Electric",
+"value": null,
+"verbatim": "ELECTRIC FOR NEW GARAGE - QUASONIX INC / IN PROGRESS / Commercial Electric",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:butler_oh:addr"
+},
+"karte": null,
+"company_id": "C-15487",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:16.123642+00:00"
+},
+"meaning": "操業の変化",
+"amount_usd": null,
+"headline_en": "QUASONIX INC obtained new-construction permits in Butler (2 records)",
+"not_construction": false,
+"as_of": "2026-11-10",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 2
+},
+"n_permits": 2,
+"member_ids": [
+"S-97173",
+"S-97174"
+],
+"kinds": [
+"増築・新築"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "Bethel Baptist Church",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-68386",
+"state": "IN",
+"city": "Indiana/HANCOCK・1610 S State St",
+"company": "Bethel Baptist Church",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "宗教・非営利",
+"category": "操業の変化",
+"category_raw": "操業の変化",
+"confidence": "high",
+"date": "2026-11-09",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "Bethel Baptist Churchが1610 S State Stで増築の許可を取得(2件)",
+"infer": null,
+"note": "増築・新築",
+"fact": {
+"src": "インディアナ州 建築計画審査記録(公開記録)",
+"ref": "許可 464041:2026-09-16 CDR release",
+"value": null,
+"verbatim": "Bethel Baptist Church Expansion",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-15845",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:19.032972+00:00"
+},
+"meaning": "操業の変化",
+"amount_usd": null,
+"headline_en": "Bethel Baptist Church obtained addition/construction permits at 1610 S State St (2 records)",
+"not_construction": false,
+"as_of": "2026-11-09",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 2
+},
+"n_permits": 2,
+"member_ids": [
+"S-68386",
+"S-96802"
+],
+"kinds": [
+"増築・新築"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "Wabash Valley Produce",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-69280",
+"state": "IN",
+"city": "Indiana/DUBOIS・4897 E 450 N",
+"company": "Wabash Valley Produce",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "食品・飲料",
+"category": "操業の変化",
+"category_raw": "操業の変化",
+"confidence": "high",
+"date": "2026-11-09",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "Wabash Valley ProduceがDUBOISで倉庫・新築・生産設備の許可を取得(2件)",
+"infer": null,
+"note": "増築・新築・倉庫・搬送・生産設備",
+"fact": {
+"src": "インディアナ州 建築計画審査記録(公開記録)",
+"ref": "許可 464396:2026-09-30 CDR release",
+"value": null,
+"verbatim": "Wabash Valley Produce - New Warehouse / Egg Processing Facility",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-14997",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:17.711772+00:00"
+},
+"meaning": "操業の変化",
+"amount_usd": null,
+"headline_en": "Wabash Valley Produce obtained permits for warehouse, new construction, and production equipment in Dubois (2 records)",
+"not_construction": false,
+"as_of": "2026-11-09",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 2
+},
+"n_permits": 2,
+"member_ids": [
+"S-69280",
+"S-96785"
+],
+"kinds": [
+"増築・新築",
+"倉庫・搬送",
+"生産設備"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "Fortify Fieldhouse",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-88058",
+"state": "IN",
+"city": "Indiana/DEKALB・3375 CR 427",
+"company": "Fortify Fieldhouse",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "個人向けサービス",
+"category": "操業の変化",
+"category_raw": "操業の変化",
+"confidence": "high",
+"date": "2026-11-09",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "Fortify FieldhouseがDEKALBで増築と修繕の許可を取得(4件)",
+"infer": null,
+"note": "増築・新築・更新・修繕",
+"fact": {
+"src": "インディアナ州 建築計画審査記録(公開記録)",
+"ref": "許可 462977:2026-10-28 CDR release",
+"value": null,
+"verbatim": "Fortify Fieldhouse Renovation / Multi-Sports",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-16084",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:19.156739+00:00"
+},
+"meaning": "操業の変化",
+"amount_usd": null,
+"headline_en": "Fortify Fieldhouse obtained permits for addition and repair work in DEKALB (4 permits)",
+"not_construction": false,
+"as_of": "2026-11-09",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 4
+},
+"n_permits": 4,
+"member_ids": [
+"S-68352",
+"S-75956",
+"S-88058",
+"S-96783"
+],
+"kinds": [
+"増築・新築",
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
 {
 "investor": {
 "name": "Dollar General",
@@ -2073,85 +2390,6 @@
 },
 {
 "investor": {
-"name": "CASE WESTERN RESERVE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-96310",
-"state": "OH",
-"city": "Cleveland・2074 ADELBERT RD, CLEVELAND, OH, 44106",
-"company": "CASE WESTERN RESERVE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "教育",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-11-06",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "CASE WESTERN RESERVEがCLEVELANDでラボ整備の許可を取得(1件)",
-"infer": null,
-"note": "ラボ",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCP26-046871 Commercial Plumbing",
-"value": 130000.0,
-"verbatim": "Commercial Plumbing / B Business / INSTALL 2 SINK, 1 EYEWASH, 6 LAB GAS ENCLOSURES, 65 LIN. FT. DRAIN, VENT PIPING, 100 LIN. FT. WQATER DISTRIBUTION ***BUILDING PERMIT NO BCB26-035087***",
-"gc": "JOHN F. GALLAGHER CO. (THE)",
-"pin": "12110004",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-16887",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:22.658009+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 130000.0,
-"headline_en": "Case Western Reserve obtained 1 permit for lab fit-out work in Cleveland.",
-"not_construction": false,
-"as_of": "2026-11-06",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"JOHN F. GALLAGHER CO. (THE)"
-],
-"contractors_n": 1,
-"amount": {
-"max": 130000.0,
-"total": 130000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-96310"
-],
-"kinds": [
-"ラボ"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
 "name": "CHICAGO TRANSIT AUTHORITY",
 "basis": "operator",
 "label": "操業事業者",
@@ -2305,83 +2543,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "LMP GALLERIA PROPERTY LLC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-92970",
-"state": "MI",
-"city": "Ann Arbor・1208 S University Ave Ann Arbor MI 48104",
-"company": "LMP GALLERIA PROPERTY LLC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-11-05",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "LMP GALLERIA PROPERTY LLCがAnn Arborで新築の許可を取得(1件)",
-"infer": null,
-"note": "増築・新築",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 PLUMC26-0599 Plumbing (Commercial) - General",
-"value": null,
-"verbatim": "The Metro on South U\n18 Story Student Housing with 259 Units\nand Amenity Fixtures \nComplete Plumbing / Plumbing (Commercial) - General / General",
-"gc": null,
-"pin": "09-09-28-310-027",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15541",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:13.613004+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": null,
-"headline_en": "LMP Galleria Property LLC obtained a construction permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-11-05",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-92970"
-],
-"kinds": [
-"増築・新築"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -2694,84 +2855,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "CLERMONT COUNTY BOARD OF",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-92226",
-"state": "OH",
-"city": "Clermont County・4470 SR 222 BATAVIA OH 45103",
-"company": "CLERMONT COUNTY BOARD OF",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-11-04",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "CLERMONT COUNTY BOARD OFがBATAVIAで新築の許可を取得(2件)",
-"infer": null,
-"note": "増築・新築",
-"fact": {
-"src": "Clermont County 建築許可(公開記録)",
-"ref": "許可 B-076253-2026 Commercial New Structure",
-"value": 562000.0,
-"verbatim": "CLERMONT COUNTY CTC PARKING BUS CANOPY / Commercial New Structure / New Structure",
-"gc": null,
-"pin": "060224.009.",
-"owner_source": "parcel:clermont_oh"
-},
-"karte": null,
-"company_id": "C-13492",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-11T12:47:59.121475+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 2260000.0,
-"headline_en": "CLERMONT COUNTY BOARD OF obtained new structure permits in BATAVIA (2 permits)",
-"not_construction": false,
-"as_of": "2026-11-04",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 2260000.0,
-"total": 2822000.0,
-"stated_n": 2,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-90795",
-"S-92226"
-],
-"kinds": [
-"増築・新築"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
 },
 {
 "investor": {
@@ -19292,7 +19375,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Dollar GeneralがBethelで新築・看板等の許可を取得（4件）",
+"summary": "Dollar GeneralがBethelで新築・看板・修繕の許可を取得(4件)",
 "infer": null,
 "note": "増築・新築・更新・修繕・事務所・その他",
 "fact": {
@@ -19310,11 +19393,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:46.014525+00:00"
+"generated_at": "2026-11-12T22:10:32.441031+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 39000.0,
-"headline_en": "Dollar General obtained permits for new construction, signage, and other work in Bethel (4 permits)",
+"headline_en": "Dollar General obtained permits in Bethel for new construction, signage, and repair work (4 permits)",
 "not_construction": false,
 "as_of": "2026-09-04",
 "work_period": {
@@ -19392,11 +19475,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:46.345966+00:00"
+"generated_at": "2026-11-12T22:10:28.366741+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 750000.0,
-"headline_en": "PLANET FITNESS obtained a permit for tenant build-out/conversion in Chicago (1 permit)",
+"headline_en": "PLANET FITNESS obtained a new site/use-conversion permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-03",
 "work_period": {
@@ -19453,7 +19536,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CITY OF CHICAGO DEMO DEPT.がChicagoで縮小・撤去の許可を取得(1件)",
+"summary": "CITY OF CHICAGO DEMO DEPT.がChicagoで撤去の許可を取得(1件)",
 "infer": null,
 "note": "縮小・撤去",
 "fact": {
@@ -19471,11 +19554,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:34.355911+00:00"
+"generated_at": "2026-11-12T22:10:39.070390+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 32500.0,
-"headline_en": "CITY OF CHICAGO DEMO DEPT. obtained a demolition/removal permit in Chicago (1 permit)",
+"headline_en": "CITY OF CHICAGO DEMO DEPT. obtained a demolition permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-02",
 "work_period": {
@@ -19532,7 +19615,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CITY OF CHICAGO DEMO DEPT.がChicagoで解体の許可を取得(1件)",
+"summary": "CITY OF CHICAGO DEMO DEPT.がChicagoで撤去の許可を取得(1件)",
 "infer": null,
 "note": "縮小・撤去",
 "fact": {
@@ -19550,7 +19633,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:11.333002+00:00"
+"generated_at": "2026-11-12T22:10:29.181999+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 24000.0,
@@ -19767,7 +19850,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CITY OF COLUMBUS OHIOがColumbusで増築・新築の許可を取得(1件)",
+"summary": "CITY OF COLUMBUS OHIOがColumbusで新築の許可を取得(1件)",
 "infer": null,
 "note": "増築・新築",
 "fact": {
@@ -19785,11 +19868,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:30.392903+00:00"
+"generated_at": "2026-11-12T22:10:29.997020+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": null,
-"headline_en": "CITY OF COLUMBUS OHIO obtained a permit to build a new industrial structure in Columbus (1 permit).",
+"headline_en": "CITY OF COLUMBUS OHIO obtained a permit to build a new structure in Columbus (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-01",
 "work_period": {
@@ -19846,7 +19929,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "TEXAS ROADHOUSEがBUTLERで増築・新築の許可を取得(3件)",
+"summary": "TEXAS ROADHOUSEがBUTLERで増築の許可を取得(3件)",
 "infer": null,
 "note": "増築・新築・ユーティリティ",
 "fact": {
@@ -19864,11 +19947,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:00.133779+00:00"
+"generated_at": "2026-11-12T22:10:29.531996+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": null,
-"headline_en": "TEXAS ROADHOUSE obtained permits for a building addition in Butler (3 records)",
+"headline_en": "Texas Roadhouse obtains addition permits in Butler (3 permits)",
 "not_construction": false,
 "as_of": "2026-09-01",
 "work_period": {
@@ -19926,7 +20009,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "シカゴ大学がシカゴで搬送設備の許可を取得(1件)",
+"summary": "UNIVERSITY OF CHICAGOがChicagoで倉庫・搬送の許可を取得(1件)",
 "infer": null,
 "note": "倉庫・搬送",
 "fact": {
@@ -19944,11 +20027,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:53.148932+00:00"
+"generated_at": "2026-11-12T22:10:21.280282+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 27620.0,
-"headline_en": "University of Chicago obtained a permit to install loading dock equipment in Chicago (1 permit).",
+"headline_en": "University of Chicago obtained a warehouse/conveyance permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-31",
 "work_period": {
@@ -20003,7 +20086,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CITY OF CHIGAGOがChicagoで撤去の許可を取得(1件)",
+"summary": "CITY OF CHIGAGOがChicagoで解体の許可を取得(1件)",
 "infer": null,
 "note": "縮小・撤去",
 "fact": {
@@ -20021,11 +20104,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:27.662230+00:00"
+"generated_at": "2026-11-12T22:10:20.930620+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 24400.0,
-"headline_en": "CITY OF CHIGAGO obtained a demolition permit in Chicago (1 permit).",
+"headline_en": "CITY OF CHIGAGO obtained a demolition permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-28",
 "work_period": {
@@ -20082,7 +20165,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CITY OF CHICAGO DEMO DEPT.がChicagoで撤去の許可を取得(2件)",
+"summary": "CITY OF CHICAGO DEMO DEPT.がシカゴで解体の許可を取得(2件)",
 "infer": null,
 "note": "縮小・撤去",
 "fact": {
@@ -20100,11 +20183,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:21.963184+00:00"
+"generated_at": "2026-11-12T22:10:28.828662+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 54700.0,
-"headline_en": "CITY OF CHICAGO DEMO DEPT. obtained demolition permits in Chicago (2 permits)",
+"headline_en": "CITY OF CHICAGO DEMO DEPT. obtained demolition permits in Chicago (2)",
 "not_construction": false,
 "as_of": "2026-08-28",
 "work_period": {
@@ -20162,7 +20245,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CITY OF CHICAGO DEMO DEPT.がChicagoで解体の許可を取得(1件)",
+"summary": "CITY OF CHICAGO DEMO DEPT.がChicagoで撤去の許可を取得(1件)",
 "infer": null,
 "note": "縮小・撤去",
 "fact": {
@@ -20180,7 +20263,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:57.247588+00:00"
+"generated_at": "2026-11-12T22:10:31.606893+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 24400.0,
@@ -20259,11 +20342,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:09.567027+00:00"
+"generated_at": "2026-11-12T22:10:27.760778+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 3000.0,
-"headline_en": "DR HORTON INDIANA LLC obtained a permit for an addition (deck) in New Richmond (1 permit)",
+"headline_en": "DR HORTON INDIANA LLC obtained a permit to build an addition (deck) in New Richmond (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -20318,7 +20401,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CITY OF CHICAGO DEMO DEPT.がChicagoで解体の許可を取得(1件)",
+"summary": "CITY OF CHICAGO DEMO DEPT.がChicagoで撤去の許可を取得(1件)",
 "infer": null,
 "note": "縮小・撤去",
 "fact": {
@@ -20336,7 +20419,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:44.834135+00:00"
+"generated_at": "2026-11-12T22:10:31.371652+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 32000.0,
@@ -20397,7 +20480,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "TRUE NORTH ENERGY LLCがGRAWNで増築・新築の許可を取得(1件)",
+"summary": "TRUE NORTH ENERGY LLCがGRAWNで新築の許可を取得(1件)",
 "infer": null,
 "note": "増築・新築",
 "fact": {
@@ -20415,11 +20498,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:42.229700+00:00"
+"generated_at": "2026-11-12T22:10:30.362402+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": null,
-"headline_en": "TRUE NORTH ENERGY LLC obtained a construction permit for a new build in Grawn (1 permit)",
+"headline_en": "TRUE NORTH ENERGY LLC obtained a build permit in Grawn (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -20474,7 +20557,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "TRUE NORTH ENERGY LLCがTRAVERSE CITYでユーティリティ・新拠点整備の許可を取得(1件)",
+"summary": "TRUE NORTH ENERGY LLCがSOUTH TRAVERSE CITYで配管・用途転換の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ・新拠点・用途転換",
 "fact": {
@@ -20492,11 +20575,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:52.406729+00:00"
+"generated_at": "2026-11-12T22:10:27.529911+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": null,
-"headline_en": "TRUE NORTH ENERGY LLC obtained a permit for utility work and new site fit-out in TRAVERSE CITY (1 permit).",
+"headline_en": "TRUE NORTH ENERGY LLC obtains permit for utility/site fit-out work in South Traverse City (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-27",
 "work_period": {
@@ -20633,7 +20716,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Five BelowがMattesonで新拠点・用途転換の許可を取得(1 件)",
+"summary": "Five BelowがMattesonで新拠点整備の許可を取得(1件)",
 "infer": null,
 "note": "新拠点・用途転換",
 "fact": {
@@ -20651,11 +20734,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:18.478365+00:00"
+"generated_at": "2026-11-12T22:10:22.021409+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 250000.0,
-"headline_en": "Five Below obtained a permit for use conversion/new site fit-out in Matteson (1 permit).",
+"headline_en": "Five Below obtained a permit for new site fit-out in Matteson (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-24",
 "work_period": {
@@ -20710,7 +20793,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DR HORTON INDIANA LLCがNEW RICHMONDで新築の許可を取得(1件)",
+"summary": "DR HORTON INDIANA LLCがNEW RICHMONDで増築・新築の許可を取得(1件)",
 "infer": null,
 "note": "増築・新築",
 "fact": {
@@ -20728,11 +20811,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:02.360972+00:00"
+"generated_at": "2026-11-12T22:10:24.586897+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 235000.0,
-"headline_en": "DR HORTON INDIANA LLC obtained a permit to build in New Richmond (1 permit)",
+"headline_en": "DR HORTON INDIANA LLC obtained a build/addition permit in New Richmond (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-19",
 "work_period": {
@@ -20805,11 +20888,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:52.383485+00:00"
+"generated_at": "2026-11-12T22:10:23.536434+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 240000.0,
-"headline_en": "DR HORTON INDIANA LLC obtained a permit to build in New Richmond (1 permit)",
+"headline_en": "DR Horton Indiana LLC obtained a new construction permit in New Richmond (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-17",
 "work_period": {
@@ -20882,11 +20965,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:14.224682+00:00"
+"generated_at": "2026-11-12T22:10:31.723299+00:00"
 },
 "meaning": "操業の変化",
 "amount_usd": 1575000.0,
-"headline_en": "UNIVERSITY OF CHICAGO obtained a permit for lab fit-out work in Chicago (1 permit)",
+"headline_en": "UNIVERSITY OF CHICAGO obtained a permit to fit out a lab in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-17",
 "work_period": {
@@ -20913,6 +20996,173 @@
 ],
 "amount_band": "1m_10m",
 "amount_band_label": "$1M〜$10M"
+},
+{
+"investor": {
+"name": "HARPER COLLEGE (WILLIAM RAINE",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-82215",
+"state": "IL",
+"city": "Palatine・1200 W ALGONQUIN RD, Z, PALATINE, IL 60067",
+"company": "HARPER COLLEGE (WILLIAM RAINE",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "教育",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "HARPER COLLEGEがPALATINEで修繕・記録等の許可を取得(6件)",
+"infer": null,
+"note": "更新・修繕・警備・工事でない記録",
+"fact": {
+"src": "Palatine 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
+"ref": "許可 BLDC-026396-2026 COMMERCIAL PERMIT",
+"value": 35900.0,
+"verbatim": "COMMERCIAL - ALTERATION / COMMERCIAL PERMIT / REPLACE-REPAIR BUILDING - FACTORY",
+"gc": null,
+"pin": "02283020030000",
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-15638",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:17.594328+00:00"
+},
+"meaning": "保全",
+"amount_usd": 35900.0,
+"headline_en": "Harper College obtained repair and event-related permits in Palatine (6 permits)",
+"not_construction": false,
+"as_of": "2026-11-10",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": 35900.0,
+"total": 35900.0,
+"stated_n": 1,
+"member_n": 6
+},
+"n_permits": 6,
+"member_ids": [
+"S-82215",
+"S-85379",
+"S-94122",
+"S-96568",
+"S-96570",
+"S-96916"
+],
+"kinds": [
+"更新・修繕",
+"警備",
+"工事でない記録"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"investor": {
+"name": "DOLLAR TREE",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-92143",
+"state": "IL",
+"city": "Arlington Heights・1215 E RAND RD ARLINGTON HEIGHTS IL 60004",
+"company": "DOLLAR TREE",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "小売・飲食",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "Dollar TreeがArlington Heightsで更新・修繕等の許可を取得(6件)",
+"infer": null,
+"note": "更新・修繕・事務所・その他",
+"fact": {
+"src": "Arlington Heights 建築許可(公開記録)",
+"ref": "許可 FIREC2026-00123 Fire Commercial Systems - Fire Alarm",
+"value": 3600.0,
+"verbatim": "DOLLAR TREE -RELOCATING EXISTING FIRE ALARM DEVICES FOR BUILD-OUT / Fire Commercial Systems - Fire Alarm / Fire Alarm",
+"gc": null,
+"pin": "03202130250000",
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-319",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:18.451146+00:00"
+},
+"meaning": "保全",
+"amount_usd": 660135.0,
+"headline_en": "Dollar Tree obtained permits for repair/renovation work in Arlington Heights (6 permits)",
+"not_construction": false,
+"as_of": "2026-11-10",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": 660135.0,
+"total": 1346447.0,
+"stated_n": 6,
+"member_n": 6
+},
+"n_permits": 6,
+"member_ids": [
+"S-54909",
+"S-60495",
+"S-68707",
+"S-78094",
+"S-92143",
+"S-96890"
+],
+"kinds": [
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -20987,6 +21237,391 @@
 ],
 "kinds": [
 "ユーティリティ"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "TRINITY EPISCOPAL CHURCH",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-96967",
+"state": "IL",
+"city": "Highland Park・411 LAUREL AVE HIGHLAND PARK IL 60035",
+"company": "TRINITY EPISCOPAL CHURCH",
+"entity_type": "public",
+"company_basis": "operator",
+"industry": "宗教・非営利",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "TRINITY EPISCOPAL CHURCHがHighland Parkで屋根の更新・修繕の許可を取得(1件)",
+"infer": null,
+"note": "更新・修繕",
+"fact": {
+"src": "Highland Park 建築許可(公開記録)",
+"ref": "許可 EXTR-2026-03234 Exterior Work - Roof, Residential",
+"value": 19048.68,
+"verbatim": " Complete tear-off down to roof deck and replacement of existing asphalt shingle roof. Installation of GAF Timberline HDZ architectural shingles, GAF WeatherWatch ice & water shield, synthetic underlayment, starter strips, hip & ridge shingles, and ridge ventilation. / Exterior Work - Roof, Residential / Exterior - Roof, Residential",
+"gc": null,
+"pin": "16234090320000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"company_id": "C-2485",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:16.681131+00:00"
+},
+"meaning": "保全",
+"amount_usd": 19048.68,
+"headline_en": "TRINITY EPISCOPAL CHURCH obtained a permit for roof repair in Highland Park (1 permit)",
+"not_construction": false,
+"as_of": "2026-11-10",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": 19048.68,
+"total": 19048.68,
+"stated_n": 1,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-96967"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"investor": {
+"name": "KLAIRMONT ENTERPRISES, INC.",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-96968",
+"state": "IL",
+"city": "Highland Park・492 CENTRAL AVE HIGHLAND PARK IL 60035",
+"company": "KLAIRMONT ENTERPRISES, INC.",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "不動産",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "KLAIRMONT ENTERPRISESがHighland Parkで警備設備の許可を取得(1件)",
+"infer": null,
+"note": "警備",
+"fact": {
+"src": "Highland Park 建築許可(公開記録)",
+"ref": "許可 FPRE-2026-00107 Fire Prevention - Tent",
+"value": null,
+"verbatim": "Design 492 Grand Opening Gala / Fire Prevention - Tent / Fire Prevention - Tent",
+"gc": null,
+"pin": "16234090020000",
+"owner_source": "parcel:lake"
+},
+"karte": null,
+"company_id": "C-13443",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:18.683917+00:00"
+},
+"meaning": "保全",
+"amount_usd": null,
+"headline_en": "KLAIRMONT ENTERPRISES obtained a security-related permit in Highland Park (1 permit)",
+"not_construction": false,
+"as_of": "2026-11-11",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-96968"
+],
+"kinds": [
+"警備"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "ARROWWOOD HILLS COOPERATIVE",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-97012",
+"state": "MI",
+"city": "Ann Arbor・2466 Arrowwood Trl Ann Arbor MI 48105",
+"company": "ARROWWOOD HILLS COOPERATIVE",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "不動産",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)",
+"infer": null,
+"note": "更新・修繕",
+"fact": {
+"src": "Ann Arbor 建築許可(公開記録)",
+"ref": "許可 MECHR26-2396 Mechanical (Residential) - General HVAC",
+"value": null,
+"verbatim": "Replace 40 gallon water heaters / Mechanical (Residential) - General HVAC / General HVAC",
+"gc": null,
+"pin": "09-09-16-321-002",
+"owner_source": "parcel:annarbor_mi"
+},
+"karte": null,
+"company_id": "C-15348",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:17.246903+00:00"
+},
+"meaning": "保全",
+"amount_usd": null,
+"headline_en": "ARROWWOOD HILLS COOPERATIVE obtained a repair/replacement permit in Ann Arbor (1 permit)",
+"not_construction": false,
+"as_of": "2026-11-10",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-97012"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "ACC OP (WILLOWTREE) LLC",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-97018",
+"state": "MI",
+"city": "Ann Arbor・1819 Willowtree Ln Ann Arbor MI 48105",
+"company": "ACC OP (WILLOWTREE) LLC",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "不動産",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "ACC OP (WILLOWTREE) LLCがAnn Arborで警備設備の許可を取得(1件)",
+"infer": null,
+"note": "警備",
+"fact": {
+"src": "Ann Arbor 建築許可(公開記録)",
+"ref": "許可 MESA26-0168 MESA - Fire Alarm Permit",
+"value": 10000.0,
+"verbatim": "Adding fire alarm cellular dialer (which is a fire alarm panel itself) to the existing conventional fire alarm panel and cross tying. / MESA - Fire Alarm Permit / Fire Alarm",
+"gc": null,
+"pin": "09-09-22-201-021",
+"owner_source": "parcel:annarbor_mi"
+},
+"karte": null,
+"company_id": "C-16018",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:16.346071+00:00"
+},
+"meaning": "保全",
+"amount_usd": 10000.0,
+"headline_en": "ACC OP (WILLOWTREE) LLC obtained a security equipment permit in Ann Arbor (1 permit)",
+"not_construction": false,
+"as_of": "2026-11-10",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": 10000.0,
+"total": 10000.0,
+"stated_n": 1,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-97018"
+],
+"kinds": [
+"警備"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"investor": {
+"name": "CINCINNATI CITY OF",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-97238",
+"state": "OH",
+"city": "Hamilton County・925 RIVERSIDE DR , CINCINNATI OH 45202",
+"company": "CINCINNATI CITY OF",
+"entity_type": "public",
+"company_basis": "operator",
+"industry": "行政・公共",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "CINCINNATI CITY OFがCINCINNATIで更新・修繕の許可を取得(1件)",
+"infer": null,
+"note": "更新・修繕",
+"fact": {
+"src": "Hamilton County 建築許可(公開記録)",
+"ref": "許可 CIN-ELE-AST-22081-26S10 Elevator Safety Test",
+"value": null,
+"verbatim": "Test Submitted / Elevator Safety Test",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:hamilton_oh:addr"
+},
+"karte": null,
+"company_id": "C-3732",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:18.228925+00:00"
+},
+"meaning": "保全",
+"amount_usd": null,
+"headline_en": "CINCINNATI CITY OF obtained a repair/renovation permit in CINCINNATI (1 permit)",
+"not_construction": false,
+"as_of": "2026-11-11",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-97238"
+],
+"kinds": [
+"更新・修繕"
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
@@ -21317,83 +21952,6 @@
 "applicant": null,
 "gc": null
 },
-"id": "S-93043",
-"state": "MI",
-"city": "Ann Arbor・3390 E Huron River Dr Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-11-06",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "DTEがAnn Arborでユーティリティ整備の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-1050 Right-of-Way - General",
-"value": null,
-"verbatim": "PROJECT IS FOR THE INSTALLATION OF TESTWIRE AND ANODES ALONG AN EXISTING GAS MAIN. THE DTE GAS MAIN IS LOCATED ON THE SOUTH SIDE OF E HURON RIVER DR AND SIDE OF E HURON RIVER DR AND WEST SIDE OF ELMWOOD FOR A 4'X4' PIT TO FACILITATE INSTALLATION OF A TESTWIRE AND CATHODIC ANODES FOR PROTECTION OF THE EXISTING GAS MAIN THE CONTRACTOR WILL UTILIZE TRAFFIC CONTROL TA-10 FOR A LANE CLOSURE AT TA-10 FO",
-"gc": null,
-"pin": "09-09-35-203-005",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:12.918240+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit).",
-"not_construction": false,
-"as_of": "2026-11-06",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-93043"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
 "id": "S-93044",
 "state": "MI",
 "city": "Ann Arbor・1375 Bird Rd Ann Arbor MI 48103",
@@ -21532,85 +22090,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "BLUE CROSS/BLUE SHIELD OF MICHIGAN",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-93961",
-"state": "MI",
-"city": "Detroit・600 E Lafayette Ave",
-"company": "BLUE CROSS/BLUE SHIELD OF MICHIGAN",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "金融・保険",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-11-06",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "BLUE CROSS/BLUE SHIELD OF MICHIGANがDetroitで改装・修繕の許可を取得(2件)",
-"infer": null,
-"note": "更新・修繕・事務所・その他",
-"fact": {
-"src": "デトロイト市 建築許可(公開記録)",
-"ref": "許可 BLD2026-01612 Alteration",
-"value": 287000.0,
-"verbatim": "Interior alterations/renovations (4th floor) per provided plans. (Subject to field approval.) / Office / Alteration",
-"gc": null,
-"pin": "03000100-63",
-"owner_source": "parcel:detroit"
-},
-"karte": null,
-"company_id": "C-13519",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:14.564261+00:00"
-},
-"meaning": "保全",
-"amount_usd": 600000.0,
-"headline_en": "BLUE CROSS/BLUE SHIELD OF MICHIGAN obtained alteration/repair permits in Detroit (2 permits)",
-"not_construction": false,
-"as_of": "2026-11-06",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 600000.0,
-"total": 887000.0,
-"stated_n": 2,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-93961",
-"S-95536"
-],
-"kinds": [
-"更新・修繕",
-"事務所・その他"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -21845,83 +22324,6 @@
 },
 {
 "investor": {
-"name": "KELSEY HAYES CO",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-94237",
-"state": "MI",
-"city": "Ann Arbor・2500 Green Rd Unit: 400 Ann Arbor MI 48105",
-"company": "KELSEY HAYES CO",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "自動車・輸送機器",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-11-06",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "KELSEY HAYES COがAnn Arborで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 MECHC26-1231 Mechanical (Commercial) - General HVAC",
-"value": null,
-"verbatim": "Office Renovation - Ductwork to meet new office layout. Ductless system for server room.\n#BLDGC26-0468 / Mechanical (Commercial) - General HVAC / General HVAC",
-"gc": null,
-"pin": "09-09-14-100-437",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15304",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:17.316966+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "KELSEY HAYES CO obtained a repair/renovation permit in Ann Arbor (1 permit).",
-"not_construction": false,
-"as_of": "2026-11-06",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-94237"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "ACC OP (WILLOWTREE) LLC",
 "basis": "operator",
 "label": "操業事業者",
@@ -22076,85 +22478,6 @@
 },
 {
 "investor": {
-"name": "NATIONWIDE MUTUAL INSURANCE CO",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-96263",
-"state": "OH",
-"city": "Columbus・1 NATIONWIDE PLZ",
-"company": "NATIONWIDE MUTUAL INSURANCE CO",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "金融・保険",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-11-06",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "NATIONWIDE MUTUAL INSURANCE COがColumbusでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 MMEPC2645141 Mechanical",
-"value": null,
-"verbatim": "Commercial - Other / Mechanical / MEP",
-"gc": "SPEER MECHANICAL",
-"pin": "010014003",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-3758",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:13.733596+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "Nationwide Mutual Insurance Co obtained a utility work permit in Columbus (1 permit).",
-"not_construction": false,
-"as_of": "2026-11-06",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"SPEER MECHANICAL"
-],
-"contractors_n": 1,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-96263"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "CLEVELAND CITY",
 "basis": "operator",
 "label": "操業事業者",
@@ -22231,85 +22554,6 @@
 ],
 "amount_band": "1m_10m",
 "amount_band_label": "$1M〜$10M"
-},
-{
-"investor": {
-"name": "CLEVELAND CLINIC FOUNDATION",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-96308",
-"state": "OH",
-"city": "Cleveland・9105 CEDAR AVE, CLEVELAND, OH, 44106",
-"company": "CLEVELAND CLINIC FOUNDATION",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-11-06",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "CLEVELAND CLINIC FOUNDATIONがClevelandで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCE26-046496 Commercial Electrical",
-"value": 196000.0,
-"verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / Provide temporary power for jobsite, relocate underground utilities, relocate light poles. 1500 SQ FT BUILDING PERMIT NO. BCB26-036525.",
-"gc": "LAKE ERIE ELECTRIC INC.",
-"pin": "11923058",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-7724",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:23.688467+00:00"
-},
-"meaning": "保全",
-"amount_usd": 196000.0,
-"headline_en": "CLEVELAND CLINIC FOUNDATION obtained a repair/renovation permit in Cleveland (1 permit).",
-"not_construction": false,
-"as_of": "2026-11-06",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"LAKE ERIE ELECTRIC INC."
-],
-"contractors_n": 1,
-"amount": {
-"max": 196000.0,
-"total": 196000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-96308"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -22931,83 +23175,6 @@
 },
 {
 "investor": {
-"name": "FAIRFIELD TWP TRS",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-93204",
-"state": "OH",
-"city": "Butler County・6048 MORRIS RD, UNKNOWN OH 45",
-"company": "FAIRFIELD TWP TRS",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-11-05",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "FAIRFIELD TWP TRSがUNKNOWNで警備設備の許可を取得(1件)",
-"infer": null,
-"note": "警備",
-"fact": {
-"src": "Butler County 建築許可(公開記録)",
-"ref": "許可 BLD-FA26-04753 Commercial Fire Alarm",
-"value": null,
-"verbatim": "FIRE ALARM- FAIRFIELD TOWNSHIP FIRE DEPT / IN PROGRESS / Pay Fees Due / Commercial Fire Alarm",
-"gc": null,
-"pin": null,
-"owner_source": "parcel:butler_oh:addr"
-},
-"karte": null,
-"company_id": "C-15571",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:19.225795+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "FAIRFIELD TWP TRS obtained a security equipment permit in UNKNOWN (1 permit)",
-"not_construction": false,
-"as_of": "2026-11-05",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-93204"
-],
-"kinds": [
-"警備"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "ALDI INC.",
 "basis": "operator",
 "label": "操業事業者",
@@ -23161,85 +23328,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "PROCTER & GAMBLE CO THE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-95466",
-"state": "OH",
-"city": "Cincinnati・6331 CENTER HILL AV",
-"company": "PROCTER & GAMBLE CO THE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "化学・日用品",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-11-05",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "P&Gがシンシナティで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P09468 Fire Protection Systems",
-"value": 160000.0,
-"verbatim": "Fire Protection Systems / Fire Protection Systems / B",
-"gc": "MAYERS ELECTRIC CO INC",
-"pin": "023800060062",
-"owner_source": "parcel:hamilton_oh"
-},
-"karte": null,
-"company_id": "C-13718",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:07.941239+00:00"
-},
-"meaning": "保全",
-"amount_usd": 160000.0,
-"headline_en": "Procter & Gamble obtained a repair/renovation permit in Cincinnati (1 permit).",
-"not_construction": false,
-"as_of": "2026-11-05",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"MAYERS ELECTRIC CO INC"
-],
-"contractors_n": 1,
-"amount": {
-"max": 160000.0,
-"total": 160000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-95466"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -23398,85 +23486,6 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "CASE WESTERN RESERVE UNIVERSITY",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-96325",
-"state": "OH",
-"city": "Cleveland・1689 E 115TH ST, CLEVELAND, OH, 44106",
-"company": "CASE WESTERN RESERVE UNIVERSITY",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "教育",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-11-05",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "CASE WESTERN RESERVE UNIVERSITYがClevelandで警備設備の許可を取得(1件)",
-"infer": null,
-"note": "警備",
-"fact": {
-"src": "クリーブランド市 建築許可(公開記録・月次更新)",
-"ref": "許可 BCB26-044959 Commercial Building",
-"value": 9534.0,
-"verbatim": "Commercial Building / B Business / Commercial Fences / INSTALL 54 LIN FT. OF 8'-0\" TALL WHITE VINYL PRIVACY FENCE PER APPROVED PLANS + BZA RESOLUTION 26-117. NO SEPARATE M/E/P PERMITS REQUIRED.",
-"gc": "GREAT NORTHERN FENCE CO, INC",
-"pin": "12023010",
-"owner_source": "parcel:cuyahoga_oh"
-},
-"karte": null,
-"company_id": "C-14687",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:12.017497+00:00"
-},
-"meaning": "保全",
-"amount_usd": 9534.0,
-"headline_en": "Case Western Reserve University obtained a permit for security/fencing work in Cleveland (1 permit).",
-"not_construction": false,
-"as_of": "2026-11-05",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"GREAT NORTHERN FENCE CO, INC"
-],
-"contractors_n": 1,
-"amount": {
-"max": 9534.0,
-"total": 9534.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-96325"
-],
-"kinds": [
-"警備"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -24799,6 +24808,87 @@
 },
 {
 "investor": {
+"name": "PARKWAY MEADOWS ANN ARBOR LDHA",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-91408",
+"state": "MI",
+"city": "Ann Arbor・2303 Sandalwood Cir Unit: 213B Ann Arbor MI 48105",
+"company": "PARKWAY MEADOWS ANN ARBOR LDHA",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "不動産",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-11-03",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "PARKWAY MEADOWS ANN ARBOR LDHAがアナーバーでユーティリティの許可を取得(4件)",
+"infer": null,
+"note": "ユーティリティ・更新・修繕",
+"fact": {
+"src": "Ann Arbor 建築許可(公開記録)",
+"ref": "許可 MECHC26-1082 Mechanical (Commercial) - Fuel Gas Piping",
+"value": null,
+"verbatim": "Run new gas pipe from new meter to existing gas line going into the building for each unit. / Mechanical (Commercial) - Fuel Gas Piping / Fuel Gas Piping",
+"gc": null,
+"pin": "09-09-15-409-004",
+"owner_source": "parcel:annarbor_mi"
+},
+"karte": null,
+"company_id": "C-15285",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:16.788981+00:00"
+},
+"meaning": "保全",
+"amount_usd": null,
+"headline_en": "PARKWAY MEADOWS ANN ARBOR LDHA obtained utility work permits in Ann Arbor (4 permits)",
+"not_construction": false,
+"as_of": "2026-11-03",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 4
+},
+"n_permits": 4,
+"member_ids": [
+"S-88393",
+"S-88394",
+"S-88395",
+"S-91408"
+],
+"kinds": [
+"ユーティリティ",
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
 "name": "EMERSON APARTMENTS LLC",
 "basis": "operator",
 "label": "操業事業者",
@@ -25266,7 +25356,7 @@
 },
 {
 "investor": {
-"name": "GRANGE MUTUAL CASUALTY CO",
+"name": "CRISTO HOMES INC",
 "basis": "operator",
 "label": "操業事業者",
 "source": "reading",
@@ -25279,13 +25369,13 @@
 "applicant": null,
 "gc": null
 },
-"id": "S-92735",
+"id": "S-92714",
 "state": "OH",
-"city": "Columbus・671 S HIGH ST",
-"company": "GRANGE MUTUAL CASUALTY CO",
+"city": "Cincinnati・561 TRISON DR",
+"company": "CRISTO HOMES INC",
 "entity_type": "corp",
 "company_basis": "operator",
-"industry": "金融・保険",
+"industry": "不動産",
 "category": "保全",
 "category_raw": "保全",
 "confidence": "high",
@@ -25293,29 +25383,29 @@
 "applied": null,
 "jp": false,
 "new": true,
-"summary": "GRANGE MUTUAL CASUALTY COがColumbusで更新・修繕の許可を取得(1件)",
+"summary": "CRISTO HOMES INCがCincinnatiで更新・修繕の許可を取得(2件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 PMEPC2644614 Plumbing",
-"value": null,
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"gc": "ABRAM CONTRACTORS",
-"pin": "010014149",
-"owner_source": "parcel:franklin_oh"
+"src": "シンシナティ市 建築許可(公開記録)",
+"ref": "許可 2026P09559 Plumbing Permits",
+"value": 3650.0,
+"verbatim": "Plumbing Permits / Plumbing Permits / 1-2-3 FM",
+"gc": "YOUR FAVORITE PLUMBER LLC",
+"pin": "016600040217",
+"owner_source": "parcel:hamilton_oh"
 },
 "karte": null,
-"company_id": "C-13513",
+"company_id": "C-13515",
 "provenance": {
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-11-11T12:48:00.932344+00:00"
+"generated_at": "2026-11-12T22:10:17.479644+00:00"
 },
 "meaning": "保全",
-"amount_usd": null,
-"headline_en": "GRANGE MUTUAL CASUALTY CO obtained a repair/renovation permit in Columbus (1 permit)",
+"amount_usd": 9150.0,
+"headline_en": "CRISTO HOMES INC obtained repair/renovation permits in Cincinnati (2 permits)",
 "not_construction": false,
 "as_of": "2026-11-03",
 "work_period": {
@@ -25324,24 +25414,26 @@
 "to": null
 },
 "contractors": [
-"ABRAM CONTRACTORS"
+"A-1 MECHANICAL OF DAYTON LLC",
+"YOUR FAVORITE PLUMBER LLC"
 ],
-"contractors_n": 1,
+"contractors_n": 2,
 "amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
+"max": 9150.0,
+"total": 12800.0,
+"stated_n": 2,
+"member_n": 2
 },
-"n_permits": 1,
+"n_permits": 2,
 "member_ids": [
-"S-92735"
+"S-92069",
+"S-92714"
 ],
 "kinds": [
 "更新・修繕"
 ],
-"amount_band": "unknown",
-"amount_band_label": "不明"
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -25809,7 +25901,7 @@
 },
 {
 "investor": {
-"name": "2 FM FLEET AND FACILITY MANAGEMENT",
+"name": "TRADER JOES",
 "basis": "operator",
 "label": "操業事業者",
 "source": "reading",
@@ -25822,13 +25914,13 @@
 "applicant": null,
 "gc": null
 },
-"id": "S-91082",
+"id": "S-91087",
 "state": "IL",
-"city": "Chicago・400 S STATE ST",
-"company": "2 FM FLEET AND FACILITY MANAGEMENT",
-"entity_type": "public",
+"city": "Chicago・3745 N LINCOLN AVE",
+"company": "TRADER JOES",
+"entity_type": "corp",
 "company_basis": "operator",
-"industry": "行政・公共",
+"industry": "小売・飲食",
 "category": "保全",
 "category_raw": "保全",
 "confidence": "high",
@@ -25836,53 +25928,55 @@
 "applied": null,
 "jp": false,
 "new": true,
-"summary": "2 FM FLEET AND FACILITY MANAGEMENTがChicagoで更新・修繕の許可を取得(1件)",
+"summary": "TRADER JOE'Sがシカゴで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
 "src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200515816 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 5000.0,
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. ADD 6 CIRCUITS TO EXISTING 600 AMP SERVICE DISCONNECTING MEANS. RECEPTACLE OUTLETS: 2 . LIGHTING OUTLETS: 10. SPECIFIC LOCATION: 1ST FLOOR AUDITORIUM.",
-"gc": null,
-"pin": "1716247062",
+"ref": "許可 B200518288 PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 387700.0,
+"verbatim": "SCOPE: ROOF RECOVER. AREA: 28875 SQ. FT. ROOF COVERING: BUILT-UP ROOF. LOCATION: REROOF. IL ROOFING CONTRACTOR LICENSE: 104017674.",
+"gc": "SOUTH SHORE ROOFING OF ILLIONIS INC",
+"pin": "1419220012",
 "owner_source": "permit"
 },
 "karte": null,
-"company_id": "C-13353",
+"company_id": "C-15488",
 "provenance": {
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-11-11T12:47:59.699032+00:00"
+"generated_at": "2026-11-12T22:10:16.570257+00:00"
 },
 "meaning": "保全",
-"amount_usd": 5000.0,
-"headline_en": "2 FM Fleet and Facility Management obtained a repair/renovation permit in Chicago (1 permit).",
+"amount_usd": 387700.0,
+"headline_en": "Trader Joe's obtained a repair/renovation permit in Chicago (1 permit).",
 "not_construction": false,
-"as_of": "2026-11-02",
+"as_of": "2026-11-11",
 "work_period": {
 "text": null,
 "from": null,
 "to": null
 },
-"contractors": [],
-"contractors_n": 0,
+"contractors": [
+"SOUTH SHORE ROOFING OF ILLIONIS INC"
+],
+"contractors_n": 1,
 "amount": {
-"max": 5000.0,
-"total": 5000.0,
+"max": 387700.0,
+"total": 387700.0,
 "stated_n": 1,
 "member_n": 1
 },
 "n_permits": 1,
 "member_ids": [
-"S-91082"
+"S-91087"
 ],
 "kinds": [
 "更新・修繕"
 ],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -25962,6 +26056,162 @@
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
+},
+{
+"investor": {
+"name": "BD OF ED CSD",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-96366",
+"state": "OH",
+"city": "Cleveland・1468 W 98TH ST, CLEVELAND, OH, 44102",
+"company": "BD OF ED CSD",
+"entity_type": "public",
+"company_basis": "operator",
+"industry": "行政・公共",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-11-02",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "BD OF ED CSDがClevelandでHVACの更新・修繕の許可を取得(1件)",
+"infer": null,
+"note": "更新・修繕",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCH26-045915 Commercial HVAC",
+"value": 3525799.0,
+"verbatim": "Commercial HVAC / E Educational / Furnish and Install Commercial HVAC per plans and specs. 2 Boiler(s), 3 Heat Pump(s), 4 Installation of steam or hot water radiation devices; 1 Wall/Space Heater. 405000 Installed Cost of Ductwork Supply/Return/Exh. Air; 27500 Kitchen Hood Exhaust Duct System Cost. BUILDING PERMIT NO. B25039058.",
+"gc": "CASTLE HEATING & AIR INC.",
+"pin": "00129049",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7754",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:15.775506+00:00"
+},
+"meaning": "保全",
+"amount_usd": 3525799.0,
+"headline_en": "BD OF ED CSD obtained a permit to repair/renovate HVAC in Cleveland (1 permit)",
+"not_construction": false,
+"as_of": "2026-11-02",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [
+"CASTLE HEATING & AIR INC."
+],
+"contractors_n": 1,
+"amount": {
+"max": 3525799.0,
+"total": 3525799.0,
+"stated_n": 1,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-96366"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "1m_10m",
+"amount_band_label": "$1M〜$10M"
+},
+{
+"investor": {
+"name": "CMHDC",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-90299",
+"state": "IL",
+"city": "Chicago・2920 N ALBANY AVE",
+"company": "CMHDC",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "不動産",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-11-01",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "CMHDCがシカゴでタックポインティング等修繕の許可を取得(1件)",
+"infer": null,
+"note": "更新・修繕",
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 B200514699 PERMIT – EXPRESS PERMIT PROGRAM",
+"value": 8700.0,
+"verbatim": "TUCKPOINTING AND UNIT MASONRY REPAIR / REPLACEMENT: 75 SQ. FT., LINTEL QTY. 0, MAX. LENGTH 0. LOCATION: SPOT TUCKPOINTING WHERE NEEDED.",
+"gc": null,
+"pin": "1325309029",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-15595",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:15.897756+00:00"
+},
+"meaning": "保全",
+"amount_usd": 8700.0,
+"headline_en": "CMHDC obtained a permit for tuckpointing and masonry repair in Chicago (1 permit)",
+"not_construction": false,
+"as_of": "2026-11-01",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": 8700.0,
+"total": 8700.0,
+"stated_n": 1,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-90299"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
 },
 {
 "investor": {
@@ -26975,6 +27225,85 @@
 },
 {
 "investor": {
+"name": "CLEVELAND CLINIC FOUNDATION",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-90124",
+"state": "OH",
+"city": "Cleveland・9500 EUCLID, CLEVELAND, OH, 44106",
+"company": "CLEVELAND CLINIC FOUNDATION",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "医療",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-10-29",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "CLEVELAND CLINIC FOUNDATIONがClevelandでユーティリティ更新の許可を取得(1件)",
+"infer": null,
+"note": "ユーティリティ",
+"fact": {
+"src": "クリーブランド市 建築許可(公開記録・月次更新)",
+"ref": "許可 BCH26-046701 Commercial HVAC",
+"value": 117650.0,
+"verbatim": "Commercial HVAC / I-2 Institutional - Hospitals / Nursing Home / INSTALL 2 HEAT PUMPS ***Building permit # B25018487***",
+"gc": "RELMEC MECHANICAL, LLC.",
+"pin": "11916001",
+"owner_source": "parcel:cuyahoga_oh"
+},
+"karte": null,
+"company_id": "C-7724",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:15.513366+00:00"
+},
+"meaning": "保全",
+"amount_usd": 117650.0,
+"headline_en": "CLEVELAND CLINIC FOUNDATION obtained a utility upgrade permit in Cleveland (1 permit)",
+"not_construction": false,
+"as_of": "2026-10-29",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [
+"RELMEC MECHANICAL, LLC."
+],
+"contractors_n": 1,
+"amount": {
+"max": 117650.0,
+"total": 117650.0,
+"stated_n": 1,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-90124"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
+{
+"investor": {
 "name": "COMCAST",
 "basis": "operator",
 "label": "操業事業者",
@@ -27049,6 +27378,165 @@
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "RIVER NORTH POINT",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-87916",
+"state": "IL",
+"city": "Chicago・350 N ORLEANS ST",
+"company": "RIVER NORTH POINT",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "不動産",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-10-28",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "RIVER NORTH POINTがChicagoでエレベーター更新の許可を取得(1件)",
+"infer": null,
+"note": "更新・修繕",
+"fact": {
+"src": "シカゴ市 建築許可(公開記録)",
+"ref": "許可 101090211 PERMIT - ELEVATOR EQUIPMENT",
+"value": 0.0,
+"verbatim": "REPLACEMENT OF HOIST CABLES ON ONE(1) 6000LB CAPACITY, 14-FLOOR, 700FPM, PASSENGER ELEVATOR(D), PURSUANT TO THE SCOPE OF WORK SUBMITTED.(EV005143)",
+"gc": null,
+"pin": "1709400019",
+"owner_source": "permit"
+},
+"karte": null,
+"company_id": "C-15627",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:17.983174+00:00"
+},
+"meaning": "保全",
+"amount_usd": null,
+"headline_en": "RIVER NORTH POINT obtained a permit to repair/replace elevator equipment in Chicago (1 permit).",
+"not_construction": false,
+"as_of": "2026-10-28",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-87916"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "CHILDRENS HOSPITAL MEDICAL",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-87975",
+"state": "OH",
+"city": "Cincinnati・3333 BURNET AV",
+"company": "CHILDRENS HOSPITAL MEDICAL",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "医療",
+"category": "保全",
+"category_raw": "保全",
+"confidence": "high",
+"date": "2026-10-28",
+"applied": null,
+"jp": false,
+"new": false,
+"summary": "CHILDRENS HOSPITAL MEDICALがCincinnatiで警備・修繕の許可を取得(2件)",
+"infer": null,
+"note": "更新・修繕・警備",
+"fact": {
+"src": "シンシナティ市 建築許可(公開記録)",
+"ref": "許可 2026P09436 Fire Protection Systems",
+"value": 142500.0,
+"verbatim": "Fire Protection Systems / Fire Protection Systems / I-2",
+"gc": "J II FIRE SYSTEMS INC",
+"pin": "010400020052",
+"owner_source": "parcel:hamilton_oh"
+},
+"karte": null,
+"company_id": "C-7786",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:18.101844+00:00"
+},
+"meaning": "保全",
+"amount_usd": 142500.0,
+"headline_en": "CHILDRENS HOSPITAL MEDICAL obtained security and repair permits in Cincinnati (2 permits)",
+"not_construction": false,
+"as_of": "2026-10-28",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [
+"J II FIRE SYSTEMS INC",
+"THE NELSON STARK CO"
+],
+"contractors_n": 2,
+"amount": {
+"max": 142500.0,
+"total": 192500.0,
+"stated_n": 2,
+"member_n": 2
+},
+"n_permits": 2,
+"member_ids": [
+"S-87975",
+"S-89461"
+],
+"kinds": [
+"更新・修繕",
+"警備"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
 },
 {
 "investor": {
@@ -27751,85 +28239,6 @@
 },
 {
 "investor": {
-"name": "KROGER CO THE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-89471",
-"state": "OH",
-"city": "Cincinnati・1014 VINE ST",
-"company": "KROGER CO THE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-28",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "KROGER CO THEがCincinnatiで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P09642 Elevator Permit",
-"value": 328000.0,
-"verbatim": "Elevator Permit / Elevator Permit / B",
-"gc": "OTIS ELEVATOR CO",
-"pin": "007600020185",
-"owner_source": "parcel:hamilton_oh"
-},
-"karte": null,
-"company_id": "C-14197",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-07T12:37:42.704533+00:00"
-},
-"meaning": "保全",
-"amount_usd": 328000.0,
-"headline_en": "KROGER CO THE obtained a repair/renovation permit in Cincinnati (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-28",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"OTIS ELEVATOR CO"
-],
-"contractors_n": 1,
-"amount": {
-"max": 328000.0,
-"total": 328000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-89471"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "100k_1m",
-"amount_band_label": "$100k〜$1M"
-},
-{
-"investor": {
 "name": "AREA 809 CORPORATION",
 "basis": "operator",
 "label": "操業事業者",
@@ -28141,84 +28550,6 @@
 ],
 "kinds": [
 "ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "MCKINLEY ASSOCIATES INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-87407",
-"state": "MI",
-"city": "Ann Arbor・1980 Pauline Blvd Ann Arbor MI 48103",
-"company": "MCKINLEY ASSOCIATES INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-27",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "MCKINLEY ASSOCIATES INCがAnn Arborで更新・修繕の許可を取得(2件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 PLUMC26-0560 Plumbing (Commercial) - General",
-"value": null,
-"verbatim": "Replace toilet  - UNIT 212  / Plumbing (Commercial) - General / General",
-"gc": null,
-"pin": "09-09-31-208-048",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-14871",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-07T12:37:28.881318+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained 2 repair/renovation permits in Ann Arbor",
-"not_construction": false,
-"as_of": "2026-10-27",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-87407",
-"S-87408"
-],
-"kinds": [
-"更新・修繕"
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
@@ -28998,85 +29329,6 @@
 },
 {
 "investor": {
-"name": "OHIOHEALTH CORP",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-87782",
-"state": "OH",
-"city": "Columbus・285 E STATE ST",
-"company": "OHIOHEALTH CORP",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-26",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "OHIOHEALTH CORPORATIONがColumbusで警備設備の許可を取得(1件)",
-"infer": null,
-"note": "警備",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 FSUPC2638572 Fire Suppression",
-"value": null,
-"verbatim": "Commercial - Other / Fire Suppression / Fire Protection",
-"gc": "S & S MIDWEST FIRE PROTECTION LLC",
-"pin": "010012730",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-138",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-07T12:37:15.769008+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "OhioHealth Corporation obtained a security-related permit in Columbus (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-26",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"S & S MIDWEST FIRE PROTECTION LLC"
-],
-"contractors_n": 1,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-87782"
-],
-"kinds": [
-"警備"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "BOARD OF EDUCATION",
 "basis": "operator",
 "label": "操業事業者",
@@ -29851,85 +30103,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-86225"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "CHRIST HOSPITAL THE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-86425",
-"state": "OH",
-"city": "Cincinnati・2139 AUBURN AV",
-"company": "CHRIST HOSPITAL THE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-23",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CHRIST HOSPITAL THEがCincinnatiで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P09966 Building",
-"value": 20000.0,
-"verbatim": "Alteration / Building / I-2",
-"gc": "R J BEISCHEL BUILDING CO",
-"pin": "008800080170",
-"owner_source": "parcel:hamilton_oh"
-},
-"karte": null,
-"company_id": "C-15296",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-07T12:37:42.829580+00:00"
-},
-"meaning": "保全",
-"amount_usd": 20000.0,
-"headline_en": "CHRIST HOSPITAL THE obtained a repair/renovation permit in Cincinnati (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-23",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"R J BEISCHEL BUILDING CO"
-],
-"contractors_n": 1,
-"amount": {
-"max": 20000.0,
-"total": 20000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-86425"
 ],
 "kinds": [
 "更新・修繕"
@@ -80339,11 +80512,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:08.277301+00:00"
+"generated_at": "2026-11-12T22:10:33.143684+00:00"
 },
 "meaning": "保全",
 "amount_usd": 89427.0,
-"headline_en": "ST. JOSAPHAT PARISH obtained a repair/renovation permit in Chicago (1 permit).",
+"headline_en": "ST. JOSAPHAT PARISH obtained a repair/renovation permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-15",
 "work_period": {
@@ -80866,7 +81039,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "コストコ・ホールセールがシカゴで警備設備の許可を取得(1件)",
+"summary": "COSTCO WHOLESALE CORPORATIONがChicagoで警備設備の許可を取得(1件)",
 "infer": null,
 "note": "警備",
 "fact": {
@@ -80884,11 +81057,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:21.718520+00:00"
+"generated_at": "2026-11-12T22:10:33.282229+00:00"
 },
 "meaning": "保全",
 "amount_usd": 2091.0,
-"headline_en": "Costco Wholesale obtained a permit for security equipment work in Chicago (1 permit)",
+"headline_en": "COSTCO WHOLESALE CORPORATION obtained a security equipment permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-15",
 "work_period": {
@@ -85877,11 +86050,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:31.873223+00:00"
+"generated_at": "2026-11-12T22:10:20.473020+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "CINCINNATI CITY OF obtained a repair/renovation permit in CINCINNATI (1 permit).",
+"headline_en": "CINCINNATI CITY OF obtained a repair/renovation permit in CINCINNATI (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-08",
 "work_period": {
@@ -86092,7 +86265,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
+"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -86110,11 +86283,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:52.068567+00:00"
+"generated_at": "2026-11-12T22:10:36.246083+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit).",
+"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-05",
 "work_period": {
@@ -86169,7 +86342,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -86187,7 +86360,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:28.631410+00:00"
+"generated_at": "2026-11-12T22:10:25.913459+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -86246,7 +86419,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborでユーティリティ整備の許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -86264,7 +86437,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:56.565363+00:00"
+"generated_at": "2026-11-12T22:10:31.257769+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -86323,7 +86496,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -86341,7 +86514,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:55.284082+00:00"
+"generated_at": "2026-11-12T22:10:25.223161+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -86400,7 +86573,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティ整備の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -86418,11 +86591,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:03.937038+00:00"
+"generated_at": "2026-11-12T22:10:38.784429+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a permit for utility work in Ann Arbor (1 permit).",
 "not_construction": false,
 "as_of": "2026-09-04",
 "work_period": {
@@ -86477,7 +86650,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "VerizonがAnn Arborでユーティリティの許可を取得(1件)",
+"summary": "VerizonがAnn Arborでユーティリティ整備の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -86495,11 +86668,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:15.518016+00:00"
+"generated_at": "2026-11-12T22:10:19.858441+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "Verizon obtained a utility-work permit in Ann Arbor (1 permit).",
+"headline_en": "Verizon obtained a permit for utility work in Ann Arbor (1 permit).",
 "not_construction": false,
 "as_of": "2026-09-04",
 "work_period": {
@@ -86554,7 +86727,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CATHOLIC BISHOP OF CHICAGOがChicagoで更新・修繕の許可を取得(1 件)",
+"summary": "CATHOLIC BISHOP OF CHICAGOがChicagoで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -86572,7 +86745,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:25.600754+00:00"
+"generated_at": "2026-11-12T22:10:30.604042+00:00"
 },
 "meaning": "保全",
 "amount_usd": 3500.0,
@@ -86633,7 +86806,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CHICAGO SPECIAL EVENTS MANAGEMENTがChicagoで電気設備の更新許可を取得(1件)",
+"summary": "CHICAGO SPECIAL EVENTS MANAGEMENTがChicagoで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -86651,11 +86824,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:18.435087+00:00"
+"generated_at": "2026-11-12T22:10:34.206414+00:00"
 },
 "meaning": "保全",
 "amount_usd": 1000.0,
-"headline_en": "CHICAGO SPECIAL EVENTS MANAGEMENT obtained a permit to upgrade electrical service in Chicago (1 permit)",
+"headline_en": "CHICAGO SPECIAL EVENTS MANAGEMENT obtained a repair/renewal permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-04",
 "work_period": {
@@ -86710,7 +86883,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CVSがChicagoで更新・修繕の許可を取得(1件)",
+"summary": "CVSがシカゴで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -86728,11 +86901,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:44.130614+00:00"
+"generated_at": "2026-11-12T22:10:26.790847+00:00"
 },
 "meaning": "保全",
 "amount_usd": 12500.0,
-"headline_en": "CVS obtained a permit for repair/renovation work in Chicago (1 permit)",
+"headline_en": "CVS obtained a repair/renovation permit in Chicago (1 permit).",
 "not_construction": false,
 "as_of": "2026-09-04",
 "work_period": {
@@ -86787,7 +86960,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CATHOLIC BISHOP OF CHICAGOがChicagoでユーティリティ更新の許可を取得(1件)",
+"summary": "CATHOLIC BISHOP OF CHICAGOがChicagoでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -86805,11 +86978,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:10.660942+00:00"
+"generated_at": "2026-11-12T22:10:35.351913+00:00"
 },
 "meaning": "保全",
 "amount_usd": 3500.0,
-"headline_en": "CATHOLIC BISHOP OF CHICAGO obtained a permit for utility work in Chicago (1 permit)",
+"headline_en": "CATHOLIC BISHOP OF CHICAGO obtained a utility permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-04",
 "work_period": {
@@ -86884,11 +87057,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:13.894882+00:00"
+"generated_at": "2026-11-12T22:10:26.026794+00:00"
 },
 "meaning": "保全",
 "amount_usd": 6411265.0,
-"headline_en": "THE UNIVERSITY OF CHICAGO obtained a repair/renovation permit in Chicago (1 permit)",
+"headline_en": "THE UNIVERSITY OF CHICAGO obtained a repair permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-04",
 "work_period": {
@@ -86961,7 +87134,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:07.103565+00:00"
+"generated_at": "2026-11-12T22:10:22.383280+00:00"
 },
 "meaning": "保全",
 "amount_usd": 30000.0,
@@ -87038,11 +87211,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:37.945265+00:00"
+"generated_at": "2026-11-12T22:10:30.479212+00:00"
 },
 "meaning": "保全",
 "amount_usd": 37300.0,
-"headline_en": "CHICAGO PUBLIC SCHOOLS obtained permits for repair/renovation work in Chicago (2 permits)",
+"headline_en": "Chicago Public Schools obtained repair/renovation permits in Chicago (2 permits)",
 "not_construction": false,
 "as_of": "2026-09-03",
 "work_period": {
@@ -87177,7 +87350,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "THE BUILDING GROUP, INC.がChicagoで更新・修繕の許可を取得(1件)",
+"summary": "THE BUILDING GROUPがシカゴで屋根の修繕許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -87195,11 +87368,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:18.169266+00:00"
+"generated_at": "2026-11-12T22:10:21.393941+00:00"
 },
 "meaning": "保全",
 "amount_usd": 52645.0,
-"headline_en": "THE BUILDING GROUP, INC. obtained a repair/renovation permit in Chicago (1 permit).",
+"headline_en": "THE BUILDING GROUP obtained a roof repair permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-03",
 "work_period": {
@@ -87274,7 +87447,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:34.366367+00:00"
+"generated_at": "2026-11-12T22:10:24.334917+00:00"
 },
 "meaning": "保全",
 "amount_usd": 3500.0,
@@ -87353,11 +87526,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:29.933225+00:00"
+"generated_at": "2026-11-12T22:10:30.110322+00:00"
 },
 "meaning": "保全",
 "amount_usd": 1500000.0,
-"headline_en": "Northwestern University obtained a repair/renovation permit in Chicago (1 permit).",
+"headline_en": "Northwestern University obtained a repair/renovation permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-03",
 "work_period": {
@@ -87489,7 +87662,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CITY OF ANN ARBORがAnn Arborで更新・修繕の許可を取得(2件)",
+"summary": "CITY OF ANN ARBORがアナーバーでエレベーター関連の更新・修繕許可を取得(2件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -87507,11 +87680,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:37.202374+00:00"
+"generated_at": "2026-11-12T22:10:31.489340+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "CITY OF ANN ARBOR obtained permits for repair/renovation work (elevator-related) in Ann Arbor (2 permits)",
+"headline_en": "City of Ann Arbor obtains permits to repair/update elevator-related systems in Ann Arbor (2 permits)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -87585,7 +87758,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:46.217299+00:00"
+"generated_at": "2026-11-12T22:10:35.796561+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -87645,7 +87818,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティ整備の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -87663,11 +87836,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:13.091470+00:00"
+"generated_at": "2026-11-12T22:10:32.091139+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a permit for utility work (streetlight repair) in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a permit for utility work in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-03",
 "work_period": {
@@ -87722,7 +87895,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "AT&TがAnn Arborでユーティリティの許可を取得(1件)",
+"summary": "AT&Tがアナーバーでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -87740,11 +87913,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:57.238015+00:00"
+"generated_at": "2026-11-12T22:10:38.044635+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "AT&T obtained a utility work permit in Ann Arbor (1 permit).",
+"headline_en": "AT&T obtained a utility work permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-03",
 "work_period": {
@@ -87799,7 +87972,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "ComcastがHighland Parkでユーティリティ更新の許可を取得(1件)",
+"summary": "ComcastがHighland Parkでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -87817,11 +87990,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:50.158928+00:00"
+"generated_at": "2026-11-12T22:10:23.652506+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "Comcast obtained a utility work permit in Highland Park (1 permit)",
+"headline_en": "Comcast obtained a utility permit in Highland Park (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-02",
 "work_period": {
@@ -87876,7 +88049,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "ComcastがHighland Parkでユーティリティの許可を取得(1件)",
+"summary": "ComcastがHighland Parkでユーティリティ整備の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -87894,7 +88067,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:17.212636+00:00"
+"generated_at": "2026-11-12T22:10:38.654695+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -87953,7 +88126,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Comcastがハイランドパークでユーティリティ整備の許可を取得(1件)",
+"summary": "Comcastがハイランドパークでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -87971,7 +88144,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:47.481769+00:00"
+"generated_at": "2026-11-12T22:10:25.456735+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -88048,7 +88221,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:33.062882+00:00"
+"generated_at": "2026-11-12T22:10:32.555421+00:00"
 },
 "meaning": "保全",
 "amount_usd": 3500.0,
@@ -88127,11 +88300,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:28.219912+00:00"
+"generated_at": "2026-11-12T22:10:35.598718+00:00"
 },
 "meaning": "保全",
 "amount_usd": 3811000.0,
-"headline_en": "CHICAGO PUBLIC SCHOOLS obtained a repair/renovation permit in Chicago (1 permit)",
+"headline_en": "Chicago Public Schools obtained a repair/renovation permit in Chicago (1 permit).",
 "not_construction": false,
 "as_of": "2026-09-02",
 "work_period": {
@@ -88267,7 +88440,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "ComEdがBlue Islandでユーティリティ更新の許可を取得(1件)",
+"summary": "ComEdがBlue Islandでユーティリティ整備の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -88285,11 +88458,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:33.086478+00:00"
+"generated_at": "2026-11-12T22:10:24.825384+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "ComEd obtained a utility upgrade permit in Blue Island (1 permit).",
+"headline_en": "ComEd obtained a utility work permit in Blue Island (1 permit).",
 "not_construction": false,
 "as_of": "2026-09-02",
 "work_period": {
@@ -88362,11 +88535,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:48.066398+00:00"
+"generated_at": "2026-11-12T22:10:31.846949+00:00"
 },
 "meaning": "保全",
 "amount_usd": 3500.0,
-"headline_en": "CATHOLIC BISHOP OF CHICAGO obtained a permit for repair/renovation work in Chicago (1 permit)",
+"headline_en": "CATHOLIC BISHOP OF CHICAGO obtained a repair/renovation permit in Chicago (1 permit).",
 "not_construction": false,
 "as_of": "2026-09-01",
 "work_period": {
@@ -88520,7 +88693,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:04.397366+00:00"
+"generated_at": "2026-11-12T22:10:22.268773+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -88597,11 +88770,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:45.403170+00:00"
+"generated_at": "2026-11-12T22:10:28.136900+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "EMERSON APARTMENTS LLC obtained repair/renewal permits in Ann Arbor (2 permits)",
+"headline_en": "EMERSON APARTMENTS LLC obtained repair/renewal permits in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -88657,7 +88830,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "AT&TがMadisonでユーティリティの許可を取得(1件)",
+"summary": "AT&Tがマディソンでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -88675,7 +88848,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:11.749020+00:00"
+"generated_at": "2026-11-12T22:10:22.499359+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -88752,11 +88925,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:19.556003+00:00"
+"generated_at": "2026-11-12T22:10:29.646742+00:00"
 },
 "meaning": "保全",
 "amount_usd": 7500.0,
-"headline_en": "Extra Space Storage obtained a repair/renovation permit in Chicago (1 permit)",
+"headline_en": "EXTRA SPACE STORAGE obtained a repair/renovation permit in Chicago (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-31",
 "work_period": {
@@ -88813,7 +88986,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CHICAGO PARK DISTRICT***がChicagoで更新・修繕の許可を取得(1 件)",
+"summary": "CHICAGO PARK DISTRICT***がChicagoで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -88831,11 +89004,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:03.261301+00:00"
+"generated_at": "2026-11-12T22:10:35.071378+00:00"
 },
 "meaning": "保全",
 "amount_usd": 5000.0,
-"headline_en": "CHICAGO PARK DISTRICT*** obtained a repair/renovation permit in Chicago (1 permit).",
+"headline_en": "CHICAGO PARK DISTRICT*** obtained a repair/alteration permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-31",
 "work_period": {
@@ -88908,7 +89081,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:09.194032+00:00"
+"generated_at": "2026-11-12T22:10:32.324711+00:00"
 },
 "meaning": "保全",
 "amount_usd": 850.0,
@@ -88969,7 +89142,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "MCKINLEY ASSOCIATES INCがAnn Arborで更新・修繕の許可を取得(2件)",
+"summary": "MCKINLEY ASSOCIATESがアナーバーで更新・修繕の許可を取得(2件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -88987,11 +89160,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:46.697167+00:00"
+"generated_at": "2026-11-12T22:10:30.899554+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained permits for repair/replacement work in Ann Arbor (2 permits)",
+"headline_en": "MCKINLEY ASSOCIATES obtained repair/replacement permits in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -89047,7 +89220,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "MCKINLEY ASSOCIATES INCがAnn Arborで更新・修繕の許可を取得(1件)",
+"summary": "MCKINLEY ASSOCIATESがアナーバーで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -89065,7 +89238,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:31.565480+00:00"
+"generated_at": "2026-11-12T22:10:26.497935+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -89124,7 +89297,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "MCKINLEY ASSOCIATES INCがAnn Arborで更新・修繕の許可を取得(2件)",
+"summary": "MCKINLEY ASSOCIATESがアナーバーで更新・修繕の許可を取得(2件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -89142,11 +89315,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:07.864679+00:00"
+"generated_at": "2026-11-12T22:10:31.139936+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained permits for repair/renovation work in Ann Arbor (2 permits)",
+"headline_en": "MCKINLEY ASSOCIATES INC obtained repair/replacement permits in Ann Arbor (2)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -89202,7 +89375,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "MCKINLEY ASSOCIATES INCがAnn Arborで更新・修繕の許可を取得(2件)",
+"summary": "MCKINLEY ASSOCIATESがAnn Arborで更新・修繕の許可を取得(2件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -89220,11 +89393,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:49.844726+00:00"
+"generated_at": "2026-11-12T22:10:23.908148+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained permits for repair/replace work in Ann Arbor (2 records)",
+"headline_en": "MCKINLEY ASSOCIATES INC obtained repair/renovation permits in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -89298,11 +89471,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:34.559260+00:00"
+"generated_at": "2026-11-12T22:10:23.156081+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained permits for repair/renovation work in Ann Arbor (2 records)",
+"headline_en": "MCKINLEY ASSOCIATES INC obtained permits for repair/replace work in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -89376,11 +89549,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:50.579450+00:00"
+"generated_at": "2026-11-12T22:10:33.530846+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained repair/renovation permits in Ann Arbor (2 permits)",
+"headline_en": "MCKINLEY ASSOCIATES obtained repair/renewal permits in Ann Arbor (2 permits)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -89454,11 +89627,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:30.181914+00:00"
+"generated_at": "2026-11-12T22:10:22.640235+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MANCHESTER FLATS LLC obtained repair/renovation permits in Ann Arbor (2 permits)",
+"headline_en": "MANCHESTER FLATS LLC obtained repair/renewal permits in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -89514,7 +89687,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "MCKINLEY ASSOCIATES INCがAnn Arborで更新・修繕の許可を取得(2件)",
+"summary": "MCKINLEY ASSOCIATESがAnn Arborで更新・修繕の許可を取得(2件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -89532,11 +89705,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:33.707757+00:00"
+"generated_at": "2026-11-12T22:10:38.338848+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained permits for repair/replacement work in Ann Arbor (2 permits)",
+"headline_en": "MCKINLEY ASSOCIATES obtained repair/maintenance permits in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -89610,11 +89783,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:28.889982+00:00"
+"generated_at": "2026-11-12T22:10:39.190028+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MANCHESTER FLATS LLC obtained repair/renewal permits in Ann Arbor (2 records)",
+"headline_en": "MANCHESTER FLATS LLC obtained permits for repair/replacement work in Ann Arbor (2 permits)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -89688,11 +89861,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:20.512843+00:00"
+"generated_at": "2026-11-12T22:10:23.407811+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MANCHESTER FLATS LLC obtained repair/renovation permits in Ann Arbor (2 permits)",
+"headline_en": "MANCHESTER FLATS LLC obtained repair/renovation permits in Ann Arbor (2)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -89766,7 +89939,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:33.118910+00:00"
+"generated_at": "2026-11-12T22:10:36.827029+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -89843,11 +90016,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:27.704485+00:00"
+"generated_at": "2026-11-12T22:10:21.631102+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained permits for repair/replace work in Ann Arbor (2 records)",
+"headline_en": "MCKINLEY ASSOCIATES INC obtained permits for repair/replacement work in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -89921,7 +90094,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:15.064142+00:00"
+"generated_at": "2026-11-12T22:10:36.124937+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -89998,7 +90171,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:49.723560+00:00"
+"generated_at": "2026-11-12T22:10:22.777321+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -90057,7 +90230,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "MCKINLEY ASSOCIATES INCがAnn Arborで更新・修繕の許可を取得(2件)",
+"summary": "MCKINLEY ASSOCIATESがAnn Arborで更新・修繕の許可を取得(2件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -90075,11 +90248,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:23.562009+00:00"
+"generated_at": "2026-11-12T22:10:25.801194+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained permits for repair/renovation work in Ann Arbor (2 permits)",
+"headline_en": "MCKINLEY ASSOCIATES INC obtained repair/maintenance permits in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -90153,11 +90326,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:00.685924+00:00"
+"generated_at": "2026-11-12T22:10:24.021518+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "City of Ann Arbor obtained permits for repair/renovation work in Ann Arbor (2 permits)",
+"headline_en": "City of Ann Arbor obtained repair/maintenance-related permits in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-08-29",
 "work_period": {
@@ -90231,11 +90404,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:20.689348+00:00"
+"generated_at": "2026-11-12T22:10:37.573899+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a permit for utility work (pole replacement) in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a permit for utility work in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-29",
 "work_period": {
@@ -90308,11 +90481,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:16.713485+00:00"
+"generated_at": "2026-11-12T22:10:37.209301+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "City of Ann Arbor obtained a utility work permit in Ann Arbor (1 permit).",
+"headline_en": "City of Ann Arbor obtained a utility work permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-29",
 "work_period": {
@@ -90367,7 +90540,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "City of Ann ArborがAnn Arborで警備(交通規制)の許可を取得(1件)",
+"summary": "City of Ann ArborがAnn Arborで警備の許可を取得(1件)",
 "infer": null,
 "note": "警備",
 "fact": {
@@ -90385,11 +90558,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:41.270458+00:00"
+"generated_at": "2026-11-12T22:10:23.770371+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "City of Ann Arbor obtained a permit for traffic control/security setup in Ann Arbor (1 permit).",
+"headline_en": "City of Ann Arbor obtained a security/traffic-control permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-29",
 "work_period": {
@@ -90774,11 +90947,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:24.045161+00:00"
+"generated_at": "2026-11-12T22:10:35.206344+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MANCHESTER FLATS LLC obtained repair/renovation permits in Ann Arbor (2 permits)",
+"headline_en": "MANCHESTER FLATS LLC obtained permits for repair/renewal work in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -90834,7 +91007,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "ARROWWOOD HILLS COOPERATIVEがアナーバーで更新・修繕の許可を取得(1件)",
+"summary": "ARROWWOOD HILLS COOPERATIVEがAnn Arborで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -90852,11 +91025,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:22.393980+00:00"
+"generated_at": "2026-11-12T22:10:29.411577+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "ARROWWOOD HILLS COOPERATIVE obtained a repair/renovation permit in Ann Arbor (1 permit)",
+"headline_en": "ARROWWOOD HILLS COOPERATIVE obtained a repair/replacement permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -90929,11 +91102,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:29.629570+00:00"
+"generated_at": "2026-11-12T22:10:24.474887+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-28",
 "work_period": {
@@ -91006,11 +91179,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:45.892650+00:00"
+"generated_at": "2026-11-12T22:10:27.175508+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "EMERSON APARTMENTS LLC obtained permits for repair/renovation (water heater) in Ann Arbor (2 permits)",
+"headline_en": "EMERSON APARTMENTS LLC obtained repair/renewal permits in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -91161,11 +91334,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:02.352458+00:00"
+"generated_at": "2026-11-12T22:10:37.821413+00:00"
 },
 "meaning": "保全",
 "amount_usd": 610995.0,
-"headline_en": "Lincoln Park Zoo obtained a permit for repair/renovation work in Chicago (1 permit).",
+"headline_en": "Lincoln Park Zoo obtained a repair/renovation permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-27",
 "work_period": {
@@ -91637,11 +91810,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:19.715686+00:00"
+"generated_at": "2026-11-12T22:10:20.104964+00:00"
 },
 "meaning": "保全",
 "amount_usd": 20182.0,
-"headline_en": "Old National Bank obtained a repair/maintenance permit in Shorewood (1 permit).",
+"headline_en": "Old National Bank obtained 1 repair/maintenance permit in Shorewood.",
 "not_construction": false,
 "as_of": "2026-08-27",
 "work_period": {
@@ -91696,7 +91869,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CHICAGO PARK DISTRICTがChicagoで更新・修繕の許可を取得(1件)",
+"summary": "CHICAGO PARK DISTRICT***がChicagoで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -91714,11 +91887,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:55.182044+00:00"
+"generated_at": "2026-11-12T22:10:27.892230+00:00"
 },
 "meaning": "保全",
 "amount_usd": 2500.0,
-"headline_en": "CHICAGO PARK DISTRICT obtained a repair/renovation permit in Chicago (1 permit)",
+"headline_en": "CHICAGO PARK DISTRICT*** obtained a repair/renovation permit in Chicago (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-26",
 "work_period": {
@@ -91852,7 +92025,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DETROIT LAND BANK AUTHORITYがDetroitで更新・修繕の許可を取得(1件)",
+"summary": "DETROIT LAND BANK AUTHORITYがDetroitで改修の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -91870,11 +92043,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:59.208495+00:00"
+"generated_at": "2026-11-12T22:10:27.293499+00:00"
 },
 "meaning": "保全",
 "amount_usd": 24000.0,
-"headline_en": "DETROIT LAND BANK AUTHORITY obtained a repair/renovation permit in Detroit (1 permit)",
+"headline_en": "DETROIT LAND BANK AUTHORITY obtained a renovation permit in Detroit (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-02",
 "work_period": {
@@ -91947,11 +92120,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:47.604024+00:00"
+"generated_at": "2026-11-12T22:10:34.669762+00:00"
 },
 "meaning": "保全",
 "amount_usd": 1000.0,
-"headline_en": "COLONIAL SQUARE 4 APARTMENTS obtained permits for repair/renovation work in Ann Arbor (2 permits)",
+"headline_en": "COLONIAL SQUARE 4 APARTMENTS obtained repair/renovation permits in Ann Arbor (2 permits)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -92086,7 +92259,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Breezelineがインディペンデンスでユーティリティ整備の許可を取得(1件)",
+"summary": "BreezelineがIndependenceでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -92104,11 +92277,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:55.489931+00:00"
+"generated_at": "2026-11-12T22:10:37.934539+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "Breezeline obtained a permit for utility work (connection burial) in Independence (1 permit).",
+"headline_en": "Breezeline obtained a utility work permit in Independence (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-26",
 "work_period": {
@@ -92163,7 +92336,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "BreezelineがIndependenceでユーティリティ整備の許可を取得(1件)",
+"summary": "BreezelineがIndependenceでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -92181,7 +92354,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:50.052214+00:00"
+"generated_at": "2026-11-12T22:10:26.906897+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -92336,7 +92509,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:15.165917+00:00"
+"generated_at": "2026-11-12T22:10:32.210655+00:00"
 },
 "meaning": "保全",
 "amount_usd": 20420.0,
@@ -92415,7 +92588,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:28.549406+00:00"
+"generated_at": "2026-11-12T22:10:33.867955+00:00"
 },
 "meaning": "保全",
 "amount_usd": 150000.0,
@@ -92494,7 +92667,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:07.139884+00:00"
+"generated_at": "2026-11-12T22:10:36.488038+00:00"
 },
 "meaning": "保全",
 "amount_usd": 730000.0,
@@ -92553,7 +92726,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CROWN CASTLE INTERNATIONAL CORP.がChicagoで更新・修繕の許可を取得(1件)",
+"summary": "CROWN CASTLEがChicagoで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -92571,11 +92744,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:18.045475+00:00"
+"generated_at": "2026-11-12T22:10:28.591722+00:00"
 },
 "meaning": "保全",
 "amount_usd": 35000.0,
-"headline_en": "Crown Castle International Corp. obtained a repair/renovation permit in Chicago (1 permit).",
+"headline_en": "Crown Castle obtained a repair/renovation permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-25",
 "work_period": {
@@ -92727,7 +92900,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:19.377876+00:00"
+"generated_at": "2026-11-12T22:10:26.640855+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -92804,11 +92977,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:54.672916+00:00"
+"generated_at": "2026-11-12T22:10:25.339458+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "ARROWWOOD HILLS COOPERATIVE obtained a repair/renewal permit in Ann Arbor (1 permit)",
+"headline_en": "ARROWWOOD HILLS COOPERATIVE obtained a repair/replace permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -92942,7 +93115,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CHICAGO SPECIAL EVENTS MANAGEMENTがChicagoで電気設備の更新の許可を取得(1件)",
+"summary": "CHICAGO SPECIAL EVENTS MANAGEMENTがChicagoで電気設備の更新許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -92960,11 +93133,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:22.056521+00:00"
+"generated_at": "2026-11-12T22:10:27.416009+00:00"
 },
 "meaning": "保全",
 "amount_usd": 1000.0,
-"headline_en": "CHICAGO SPECIAL EVENTS MANAGEMENT obtained a permit to upgrade electrical equipment in Chicago (1 permit)",
+"headline_en": "CHICAGO SPECIAL EVENTS MANAGEMENT obtained a permit to upgrade electrical service in Chicago (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-24",
 "work_period": {
@@ -93173,7 +93346,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "AMERICAN TOWER CORPがMendotaでユーティリティの許可を取得(1件)",
+"summary": "American Tower CorpがMendotaでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -93191,7 +93364,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:05.628501+00:00"
+"generated_at": "2026-11-12T22:10:33.755569+00:00"
 },
 "meaning": "保全",
 "amount_usd": 45000.0,
@@ -93268,11 +93441,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:06.858939+00:00"
+"generated_at": "2026-11-12T22:10:35.993525+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "COLONIAL SQUARE 4 APARTMENTS obtained a repair/renovation permit in Ann Arbor (1 permit)",
+"headline_en": "COLONIAL SQUARE 4 APARTMENTS obtained a repair/renewal permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -93327,7 +93500,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Breezelineがインディペンデンスでユーティリティの許可を取得(1件)",
+"summary": "BreezelineがIndependenceでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -93345,7 +93518,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:25.871852+00:00"
+"generated_at": "2026-11-12T22:10:26.142026+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -93404,7 +93577,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "EnbridgeがIndependenceで更新・修繕の許可を取得(1件)",
+"summary": "Enbridgeがインディペンデンスで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -93422,7 +93595,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:07.429704+00:00"
+"generated_at": "2026-11-12T22:10:31.018756+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -93481,7 +93654,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "AT&Tがナイルズでユーティリティ整備の許可を取得(1件)",
+"summary": "AT&TがNilesで電気・配管設備の更新許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -93499,11 +93672,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-11-04T03:52:34.472450+00:00"
+"generated_at": "2026-11-12T22:10:34.792139+00:00"
 },
 "meaning": "保全",
 "amount_usd": 20000.0,
-"headline_en": "AT&T obtained a utility work permit in Niles (1 permit).",
+"headline_en": "AT&T obtained a permit to upgrade utility service at existing cell tower in Niles (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-24",
 "work_period": {
@@ -93558,7 +93731,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DETROIT LAND BANK AUTHORITYがDetroitで更新・修繕の許可を取得(1 件)",
+"summary": "DETROIT LAND BANK AUTHORITYがDetroitで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -93576,11 +93749,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:45.514368+00:00"
+"generated_at": "2026-11-12T22:10:37.334809+00:00"
 },
 "meaning": "保全",
 "amount_usd": 38000.0,
-"headline_en": "DETROIT LAND BANK AUTHORITY obtained a repair/renovation permit in Detroit (1 permit)",
+"headline_en": "DETROIT LAND BANK AUTHORITY obtained a repair/renovation permit in Detroit (1 permit).",
 "not_construction": false,
 "as_of": "2026-09-02",
 "work_period": {
@@ -93653,11 +93826,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:50.795623+00:00"
+"generated_at": "2026-11-12T22:10:29.294880+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility-work permit in Ann Arbor (1 permit).",
+"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-22",
 "work_period": {
@@ -93712,7 +93885,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
+"summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -93730,7 +93903,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:45.505262+00:00"
+"generated_at": "2026-11-12T22:10:34.315388+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -93807,7 +93980,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:40.892790+00:00"
+"generated_at": "2026-11-12T22:10:31.978407+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -93866,7 +94039,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -93884,11 +94057,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:39.455546+00:00"
+"generated_at": "2026-11-12T22:10:25.689144+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility-work permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-22",
 "work_period": {
@@ -93943,7 +94116,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -93961,11 +94134,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:57.015895+00:00"
+"generated_at": "2026-11-12T22:10:37.059527+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility-work permit in Ann Arbor (1 permit).",
+"headline_en": "DTE obtained 1 utility permit in Ann Arbor for streetlight pole replacement.",
 "not_construction": false,
 "as_of": "2026-08-22",
 "work_period": {
@@ -94196,11 +94369,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:03.418253+00:00"
+"generated_at": "2026-11-12T22:10:33.413644+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained 1 permit for utility work in Ann Arbor",
 "not_construction": false,
 "as_of": "2026-08-21",
 "work_period": {
@@ -94273,11 +94446,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:26.094805+00:00"
+"generated_at": "2026-11-12T22:10:20.585398+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "MCKINLEY ASSOCIATES INC obtained a repair/renovation permit in Ann Arbor (1 permit)",
+"headline_en": "MCKINLEY ASSOCIATES INC obtained a repair/replacement permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -94350,11 +94523,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:33.524474+00:00"
+"generated_at": "2026-11-12T22:10:38.935410+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "CITY OF ANN ARBOR obtained a permit for repair/renovation work in Ann Arbor (1 permit).",
+"headline_en": "CITY OF ANN ARBOR obtained a repair/renovation permit in Ann Arbor (1 permit).",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -94427,11 +94600,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:19.658121+00:00"
+"generated_at": "2026-11-12T22:10:34.550725+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "Dollar Tree obtained a repair/renovation permit in Trotwood (1 permit)",
+"headline_en": "Dollar Tree obtained a repair/replacement permit in Trotwood (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-21",
 "work_period": {
@@ -94486,7 +94659,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CHICAGO PUBLIC SCHOOLSがChicagoで更新・修繕と警備の許可を取得(1件)",
+"summary": "CHICAGO PUBLIC SCHOOLSがChicagoで修繕・警備設備の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕・警備",
 "fact": {
@@ -94504,11 +94677,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:09.576718+00:00"
+"generated_at": "2026-11-12T22:10:38.158349+00:00"
 },
 "meaning": "保全",
 "amount_usd": 2800000.0,
-"headline_en": "CHICAGO PUBLIC SCHOOLS obtained a permit for repair/renovation and security work in Chicago (1 permit)",
+"headline_en": "Chicago Public Schools obtained a permit for repair and security work in Chicago (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-20",
 "work_period": {
@@ -94566,7 +94739,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CINCINNATI CITY OFがCincinnatiでHVAC更新の許可を取得(1件)",
+"summary": "CINCINNATI CITY OFがCincinnatiで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -94584,11 +94757,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:18.843738+00:00"
+"generated_at": "2026-11-12T22:10:34.951203+00:00"
 },
 "meaning": "保全",
 "amount_usd": 1680000.0,
-"headline_en": "CINCINNATI CITY OF obtained a permit to upgrade HVAC in Cincinnati (1 permit)",
+"headline_en": "CINCINNATI CITY OF obtained a repair/renovation permit in Cincinnati (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-20",
 "work_period": {
@@ -94825,11 +94998,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:38.079378+00:00"
+"generated_at": "2026-11-12T22:10:23.037409+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "CITY OF ANN ARBOR obtained utility-related permits in Ann Arbor (2 records)",
+"headline_en": "City of Ann Arbor obtains utility work permits in Ann Arbor (2 permits)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -94886,7 +95059,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティ整備の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -94904,7 +95077,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:47.410180+00:00"
+"generated_at": "2026-11-12T22:10:20.816912+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -94963,7 +95136,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
+"summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -94981,11 +95154,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:54.616217+00:00"
+"generated_at": "2026-11-12T22:10:26.265566+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtains a utility upgrade permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-20",
 "work_period": {
@@ -95058,11 +95231,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:24.003340+00:00"
+"generated_at": "2026-11-12T22:10:27.644005+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "UNIVERSITY OF MICHIGAN obtained a utility work permit in Ann Arbor (1 permit)",
+"headline_en": "UNIVERSITY OF MICHIGAN obtained a utility permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -95117,7 +95290,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "UNIVERSITY OF MICHIGANがAnn Arborで更新・修繕の許可を取得(1 件)",
+"summary": "UNIVERSITY OF MICHIGANがAnn Arborで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -95135,11 +95308,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:21.021960+00:00"
+"generated_at": "2026-11-12T22:10:22.908700+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "UNIVERSITY OF MICHIGAN obtained a repair/renovation permit in Ann Arbor (1 permit)",
+"headline_en": "University of Michigan obtained a repair/renovation permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-20",
 "work_period": {
@@ -95194,7 +95367,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "SPEEDWAY SUPERAMERICA LLCが同住所でHVAC更新の許可を取得(1件)",
+"summary": "SPEEDWAY SUPERAMERICA LLCがUNKNOWNで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -95212,11 +95385,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:11.150065+00:00"
+"generated_at": "2026-11-12T22:10:29.879646+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "Speedway Superamerica LLC obtained a permit to upgrade HVAC and gas piping at the same address (1 permit).",
+"headline_en": "Speedway Superamerica LLC obtained a repair/renovation permit in Unknown (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -95289,11 +95462,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:50.685091+00:00"
+"generated_at": "2026-11-12T22:10:33.010753+00:00"
 },
 "meaning": "保全",
 "amount_usd": 38375.0,
-"headline_en": "Chicago Public Schools obtained a permit for security equipment installation in Chicago (1 permit).",
+"headline_en": "Chicago Public Schools obtained a permit for security equipment in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-19",
 "work_period": {
@@ -95366,11 +95539,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:58.969011+00:00"
+"generated_at": "2026-11-12T22:10:34.429359+00:00"
 },
 "meaning": "保全",
 "amount_usd": 72000.0,
-"headline_en": "CHICAGO PUBLIC SCHOOLS obtained a repair/renovation permit in Chicago (1 permit)",
+"headline_en": "Chicago Public Schools obtained a repair/renovation permit in Chicago (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-19",
 "work_period": {
@@ -95522,11 +95695,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:59.630711+00:00"
+"generated_at": "2026-11-12T22:10:32.780102+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained utility work permits in Ann Arbor (2 permits)",
+"headline_en": "DTE obtains utility work permits in Ann Arbor (2 records)",
 "not_construction": false,
 "as_of": "2026-08-19",
 "work_period": {
@@ -95600,7 +95773,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:40.202724+00:00"
+"generated_at": "2026-11-12T22:10:21.506934+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -95677,11 +95850,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:39.084037+00:00"
+"generated_at": "2026-11-12T22:10:29.054246+00:00"
 },
 "meaning": "保全",
 "amount_usd": 632000.0,
-"headline_en": "CHICAGO PUBLIC SCHOOLS obtained a repair/renovation permit in Chicago (1 permit)",
+"headline_en": "CHICAGO PUBLIC SCHOOLS obtained a repair/renovation permit in Chicago (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-18",
 "work_period": {
@@ -95738,7 +95911,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "CHICAGO SPECIAL EVENTS MANAGEMENTがChicagoで更新・修繕の許可を取得(1件)",
+"summary": "CHICAGO SPECIAL EVENTS MANAGEMENTがシカゴで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -95756,11 +95929,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:47.955983+00:00"
+"generated_at": "2026-11-12T22:10:30.237591+00:00"
 },
 "meaning": "保全",
 "amount_usd": 1000.0,
-"headline_en": "CHICAGO SPECIAL EVENTS MANAGEMENT obtained a repair/renovation permit in Chicago (1 permit).",
+"headline_en": "Chicago Special Events Management obtained a repair/renovation permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-18",
 "work_period": {
@@ -95833,11 +96006,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:29.825001+00:00"
+"generated_at": "2026-11-12T22:10:30.777947+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "Comcast obtained a utility work permit in Ann Arbor (1 permit)",
+"headline_en": "Comcast obtains a utility work permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-18",
 "work_period": {
@@ -95910,11 +96083,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:56.703426+00:00"
+"generated_at": "2026-11-12T22:10:35.469279+00:00"
 },
 "meaning": "保全",
 "amount_usd": 300000.0,
-"headline_en": "2 FM FLEET AND FACILITY MANAGEMENT obtained a permit for repair/renovation work in Chicago (1 permit)",
+"headline_en": "2 FM FLEET AND FACILITY MANAGEMENT obtained a repair/renovation permit in Chicago (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-17",
 "work_period": {
@@ -95971,7 +96144,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "コメリカ銀行がデトロイトでATM更新・修繕の許可を取得(1件)",
+"summary": "コメリカ銀行がデトロイトでATM更新の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -95989,11 +96162,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:15.895110+00:00"
+"generated_at": "2026-11-12T22:10:24.180215+00:00"
 },
 "meaning": "保全",
 "amount_usd": 47150.0,
-"headline_en": "Comerica Bank obtained a permit to repair/replace an ATM in Detroit (1 permit)",
+"headline_en": "Comerica Bank obtains permit to repair/replace ATM in Detroit (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-02",
 "work_period": {
@@ -96048,7 +96221,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "COMERICA BANKがDetroitでATM更新・修繕の許可を取得(1件)",
+"summary": "COMERICA BANKがDetroitでATM更新の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -96066,11 +96239,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:54.043924+00:00"
+"generated_at": "2026-11-12T22:10:25.100946+00:00"
 },
 "meaning": "保全",
 "amount_usd": 47150.0,
-"headline_en": "COMERICA BANK obtained a permit for repair/replacement work (ATM) in Detroit (1 permit)",
+"headline_en": "Comerica Bank obtained a permit to replace an ATM in Detroit (1 permit).",
 "not_construction": false,
 "as_of": "2026-09-02",
 "work_period": {
@@ -96202,7 +96375,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "City of Ann ArborがAnn Arborで更新・修繕の許可を取得(1件)",
+"summary": "City of Ann ArborがAnn Arborでマンホール改修の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -96220,11 +96393,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:18.763265+00:00"
+"generated_at": "2026-11-12T22:10:26.380025+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "City of Ann Arbor obtained a repair/renovation permit in Ann Arbor (1 permit).",
+"headline_en": "City of Ann Arbor obtains a permit to repair a manhole structure in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-17",
 "work_period": {
@@ -96297,11 +96470,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:57.357589+00:00"
+"generated_at": "2026-11-12T22:10:33.982747+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "ARROWWOOD HILLS COOPERATIVE obtained a repair/renovation permit in Ann Arbor (1 permit)",
+"headline_en": "ARROWWOOD HILLS COOPERATIVE obtained a repair/replace permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -96593,7 +96766,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -96611,11 +96784,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:46.928135+00:00"
+"generated_at": "2026-11-12T22:10:28.480479+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility upgrade permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -96670,7 +96843,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -96688,11 +96861,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:13.690428+00:00"
+"generated_at": "2026-11-12T22:10:33.643858+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility upgrade permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a utility permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -96747,7 +96920,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがアン・アーバーで更新・修繕の許可を取得(1件)",
+"summary": "DTEがAnn Arborで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -96765,11 +96938,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:26.323518+00:00"
+"generated_at": "2026-11-12T22:10:21.897118+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a repair/replacement permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a repair/replacement permit in Ann Arbor (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -96824,7 +96997,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
+"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -96842,11 +97015,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:05.543439+00:00"
+"generated_at": "2026-11-12T22:10:38.476728+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a utility permit in Ann Arbor (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -96901,7 +97074,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがアン・アーバーでユーティリティ更新の許可を取得(1件)",
+"summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -96919,7 +97092,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:20.409651+00:00"
+"generated_at": "2026-11-12T22:10:24.708129+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
@@ -96996,11 +97169,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:18.865533+00:00"
+"generated_at": "2026-11-12T22:10:22.154153+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained 1 utility work permit in Ann Arbor",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -97073,11 +97246,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:16.814032+00:00"
+"generated_at": "2026-11-12T22:10:32.893000+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a permit for utility work (streetlight pole replacement) in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a permit for utility work in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -97132,7 +97305,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -97150,11 +97323,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:33.295091+00:00"
+"generated_at": "2026-11-12T22:10:21.768414+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtains a utility upgrade permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -97209,7 +97382,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborで電柱交換等ユーティリティ更新の許可を取得(1件)",
+"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -97227,11 +97400,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:18.298811+00:00"
+"generated_at": "2026-11-12T22:10:32.666124+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a permit for utility work (wood pole replacement) in Ann Arbor (1 permit).",
+"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -97286,7 +97459,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
+"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -97304,11 +97477,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:03.945409+00:00"
+"generated_at": "2026-11-12T22:10:24.948841+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit).",
+"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -97363,7 +97536,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
+"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
 "fact": {
@@ -97381,11 +97554,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:01.573202+00:00"
+"generated_at": "2026-11-12T22:10:37.451877+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a permit for utility work (streetlight pole replacement) in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -97440,7 +97613,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DTEがアン・アーバーで更新・修繕の許可を取得(1件)",
+"summary": "DTEがAnn Arborで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
 "fact": {
@@ -97458,11 +97631,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:01.113709+00:00"
+"generated_at": "2026-11-12T22:10:36.713206+00:00"
 },
 "meaning": "保全",
 "amount_usd": null,
-"headline_en": "DTE obtained a repair/renovation permit in Ann Arbor (1 permit)",
+"headline_en": "DTE obtained a repair/replace permit in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-15",
 "work_period": {
@@ -97484,6 +97657,160 @@
 ],
 "kinds": [
 "更新・修繕"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "ELMHURST PARK DIST",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-96940",
+"state": "IL",
+"city": "Elmhurst・385 E VAN BUREN ST ELMHURST IL 60126",
+"company": "ELMHURST PARK DIST",
+"entity_type": "public",
+"company_basis": "operator",
+"industry": "行政・公共",
+"category": "事務所・その他",
+"category_raw": "事務所・その他",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "ELMHURST PARK DISTがElmhurstでパティオ整備の許可を取得(1件)",
+"infer": null,
+"note": "事務所・その他",
+"fact": {
+"src": "Elmhurst 建築許可(公開記録)",
+"ref": "許可 PAT-011458-2026 Patio",
+"value": 3750.0,
+"verbatim": "Patio / Patio",
+"gc": null,
+"pin": "0613205003",
+"owner_source": "parcel:dupage"
+},
+"karte": null,
+"company_id": "C-14218",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:15.248859+00:00"
+},
+"meaning": "事務所・その他",
+"amount_usd": 3750.0,
+"headline_en": "ELMHURST PARK DIST obtained a permit for patio work in Elmhurst (1 permit).",
+"not_construction": false,
+"as_of": "2026-11-10",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": 3750.0,
+"total": 3750.0,
+"stated_n": 1,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-96940"
+],
+"kinds": [
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"investor": {
+"name": "FIFTH THIRD BANK",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-97175",
+"state": "OH",
+"city": "Butler County・5265 Hildenbrand WAY, United States",
+"company": "FIFTH THIRD BANK",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "金融・保険",
+"category": "事務所・その他",
+"category_raw": "事務所・その他",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "FIFTH THIRD BANKがButler Countyで看板設置の許可を取得(1件)",
+"infer": null,
+"note": "事務所・その他",
+"fact": {
+"src": "Butler County 建築許可(公開記録)",
+"ref": "許可 BLD-SN26-04815 Commercial Sign",
+"value": null,
+"verbatim": "SIGN PACKAGE - FIFTH THIRD BANK / IN PROGRESS / Pay Fees Due / Commercial Sign",
+"gc": null,
+"pin": null,
+"owner_source": "parcel:butler_oh:addr"
+},
+"karte": null,
+"company_id": "C-1866",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:17.011848+00:00"
+},
+"meaning": "事務所・その他",
+"amount_usd": null,
+"headline_en": "Fifth Third Bank obtained a sign permit in Butler County (1 permit)",
+"not_construction": false,
+"as_of": "2026-11-10",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-97175"
+],
+"kinds": [
+"事務所・その他"
 ],
 "amount_band": "unknown",
 "amount_band_label": "不明"
@@ -97875,85 +98202,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-93899"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "OHIOHEALTH CORP",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-92752",
-"state": "OH",
-"city": "Columbus・3420 OHIOHEALTH PKWY",
-"company": "OHIOHEALTH CORP",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-11-03",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "OHIOHEALTH CORPがColumbusで事務所・その他の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 PMEPC2644667 Plumbing",
-"value": null,
-"verbatim": "Commercial - Other / Plumbing / MEP",
-"gc": "Geiger Brothers, Inc.",
-"pin": "010183740",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-138",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-11T12:48:04.232721+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": null,
-"headline_en": "OHIOHEALTH CORP obtained a permit for office/other work in Columbus (1 permit)",
-"not_construction": false,
-"as_of": "2026-11-03",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"GEIGER BROTHERS, INC."
-],
-"contractors_n": 1,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-92752"
 ],
 "kinds": [
 "事務所・その他"
@@ -98816,85 +99064,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-88579"
-],
-"kinds": [
-"事務所・その他"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "STATE OF OHIO",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-87809",
-"state": "OH",
-"city": "Columbus・2555 W DUBLIN-GRANVILLE RD",
-"company": "STATE OF OHIO",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-10-26",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "STATE OF OHIOがColumbusで事務所・その他の許可を取得(1件)",
-"infer": null,
-"note": "事務所・その他",
-"fact": {
-"src": "コロンバス市 建築許可(公開記録)",
-"ref": "許可 EMEPC2643359 Electrical",
-"value": null,
-"verbatim": "Commercial - Other / Electrical / MEP",
-"gc": "Magnum Electric Inc.",
-"pin": "610159043",
-"owner_source": "parcel:franklin_oh"
-},
-"karte": null,
-"company_id": "C-13609",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-07T12:37:37.825062+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": null,
-"headline_en": "STATE OF OHIO obtained an office/other permit in Columbus (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-26",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"MAGNUM ELECTRIC INC."
-],
-"contractors_n": 1,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-87809"
 ],
 "kinds": [
 "事務所・その他"
@@ -111667,7 +111836,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "ミシガン大学がアナーバーでイベント用発電機設置の許可を取得(1件)",
+"summary": "ミシガン大学がアナーバーでイベント用発電機の許可を取得(1件)",
 "infer": null,
 "note": "事務所・その他",
 "fact": {
@@ -111685,11 +111854,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:12.357926+00:00"
+"generated_at": "2026-11-12T22:10:27.035750+00:00"
 },
 "meaning": "事務所・その他",
 "amount_usd": null,
-"headline_en": "University of Michigan obtained a permit for a generator installation for an event in Ann Arbor (1 permit)",
+"headline_en": "University of Michigan obtains permit for event generator in Ann Arbor (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -111918,7 +112087,7 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:52.955239+00:00"
+"generated_at": "2026-11-12T22:10:37.707373+00:00"
 },
 "meaning": "事務所・その他",
 "amount_usd": null,
@@ -112294,7 +112463,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "EDWARD JONESがOHでテナント内装の許可を取得(1件)",
+"summary": "EDWARD JONESがButler Countyでテナント内装の許可を取得(1件)",
 "infer": null,
 "note": "事務所・その他",
 "fact": {
@@ -112312,11 +112481,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:25.803625+00:00"
+"generated_at": "2026-11-12T22:10:21.159559+00:00"
 },
 "meaning": "事務所・その他",
 "amount_usd": null,
-"headline_en": "EDWARD JONES obtained a commercial tenant finish permit in OH (1 permit)",
+"headline_en": "EDWARD JONES obtained a tenant finish permit in Butler County (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-21",
 "work_period": {
@@ -112389,11 +112558,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:59:37.387314+00:00"
+"generated_at": "2026-11-12T22:10:20.342625+00:00"
 },
 "meaning": "事務所・その他",
 "amount_usd": null,
-"headline_en": "CVS obtained a permit for office/other work (signage) in Hickory Hills (1 permit).",
+"headline_en": "CVS obtained an office/other permit in Hickory Hills (1 permit)",
 "not_construction": false,
 "as_of": "2026-08-20",
 "work_period": {
@@ -112448,7 +112617,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "POTBELLY SANDWICH WORKSがChicagoで事務所・その他の許可を取得(1件)",
+"summary": "POTBELLY SANDWICH WORKSがChicagoで看板設置の許可を取得(1件)",
 "infer": null,
 "note": "事務所・その他",
 "fact": {
@@ -112466,11 +112635,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T02:00:14.979660+00:00"
+"generated_at": "2026-11-12T22:10:36.599904+00:00"
 },
 "meaning": "事務所・その他",
 "amount_usd": 4400.0,
-"headline_en": "POTBELLY SANDWICH WORKS obtained a permit for office/other work in Chicago (1 permit).",
+"headline_en": "POTBELLY SANDWICH WORKS obtained a sign permit in Chicago (1 permit).",
 "not_construction": false,
 "as_of": "2026-08-19",
 "work_period": {
@@ -112606,7 +112775,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "Fifth Third BankがKetteringで事務所・その他の許可を取得(1件)",
+"summary": "Fifth Third BankがKetteringで看板設置の許可を取得(1件)",
 "infer": null,
 "note": "事務所・その他",
 "fact": {
@@ -112624,11 +112793,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:16.464985+00:00"
+"generated_at": "2026-11-12T22:10:23.282389+00:00"
 },
 "meaning": "事務所・その他",
 "amount_usd": null,
-"headline_en": "Fifth Third Bank obtained an office/other permit (signage) in Kettering (1 permit).",
+"headline_en": "Fifth Third Bank obtained a sign permit in Kettering (1 permit)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -112730,6 +112899,162 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
+},
+{
+"investor": {
+"name": "First Onsite Property",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-68627",
+"state": "IN",
+"city": "Indiana/MARION・5405 Stanley Rd",
+"company": "First Onsite Property",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "その他の事業体",
+"category": "工事でない記録",
+"category_raw": "工事でない記録",
+"confidence": "high",
+"date": "2026-11-10",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "First Onsite PropertyがMARIONで記録を取得(2件)",
+"infer": null,
+"note": "工事でない記録",
+"fact": {
+"src": "インディアナ州 建築計画審査記録(公開記録)",
+"ref": "許可 462803:2026-09-28 CDR release",
+"value": null,
+"verbatim": "First Onsite Property / EQUIPMENT STORAGE",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-15533",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:18.913366+00:00"
+},
+"meaning": "内容不明",
+"amount_usd": null,
+"headline_en": "First Onsite Property obtained records in Marion (2 records)",
+"not_construction": true,
+"as_of": "2026-11-10",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 2
+},
+"n_permits": 2,
+"member_ids": [
+"S-68627",
+"S-96844"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "Illinois Retina Associates",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-69296",
+"state": "IN",
+"city": "Indiana/LAKE・9200 Calumet Ave",
+"company": "Illinois Retina Associates",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "医療",
+"category": "工事でない記録",
+"category_raw": "工事でない記録",
+"confidence": "high",
+"date": "2026-11-09",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "Illinois Retina AssociatesがLAKEでCDR関連記録を取得(2件)",
+"infer": null,
+"note": "工事でない記録",
+"fact": {
+"src": "インディアナ州 建築計画審査記録(公開記録)",
+"ref": "許可 463742:2026-09-30 CDR release",
+"value": null,
+"verbatim": "Illinois Retina Associates",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-14988",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:18.338366+00:00"
+},
+"meaning": "内容不明",
+"amount_usd": null,
+"headline_en": "Illinois Retina Associates obtained CDR release records in LAKE (2 records)",
+"not_construction": true,
+"as_of": "2026-11-09",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 2
+},
+"n_permits": 2,
+"member_ids": [
+"S-69296",
+"S-96820"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -113121,85 +113446,6 @@
 },
 {
 "investor": {
-"name": "CRISTO HOMES INC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-92715",
-"state": "OH",
-"city": "Cincinnati・573 TRISON DR",
-"company": "CRISTO HOMES INC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "内容不明",
-"category_raw": "内容不明",
-"confidence": "high",
-"date": "2026-11-03",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "CRISTO HOMES INCがCincinnatiで内容不明の許可を取得(1件)",
-"infer": null,
-"note": "内容不明",
-"fact": {
-"src": "シンシナティ市 建築許可(公開記録)",
-"ref": "許可 2026P09560 Plumbing Permits",
-"value": 3650.0,
-"verbatim": "Plumbing Permits / Plumbing Permits / 1-2-3 FM",
-"gc": "YOUR FAVORITE PLUMBER LLC",
-"pin": "016600040219",
-"owner_source": "parcel:hamilton_oh"
-},
-"karte": null,
-"company_id": "C-13515",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-11T12:48:03.741395+00:00"
-},
-"meaning": "内容不明",
-"amount_usd": 3650.0,
-"headline_en": "CRISTO HOMES INC obtained a permit of unclear work in Cincinnati (1 record).",
-"not_construction": false,
-"as_of": "2026-11-03",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"YOUR FAVORITE PLUMBER LLC"
-],
-"contractors_n": 1,
-"amount": {
-"max": 3650.0,
-"total": 3650.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-92715"
-],
-"kinds": [
-"内容不明"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "Cornerstone Church",
 "basis": "operator",
 "label": "操業事業者",
@@ -113269,6 +113515,83 @@
 "member_ids": [
 "S-68487",
 "S-90590"
+],
+"kinds": [
+"工事でない記録"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"investor": {
+"name": "Centra Credit Union",
+"basis": "operator",
+"label": "操業事業者",
+"source": "reading",
+"source_label": "許可記録の読み(出来事)"
+},
+"parties": {
+"owner_of_record": null,
+"owner_kind": null,
+"owner_is_spe": false,
+"applicant": null,
+"gc": null
+},
+"id": "S-90579",
+"state": "IN",
+"city": "Indiana/JACKSON・503 Burkart Blvd",
+"company": "Centra Credit Union",
+"entity_type": "corp",
+"company_basis": "operator",
+"industry": "金融・保険",
+"category": "工事でない記録",
+"category_raw": "工事でない記録",
+"confidence": "high",
+"date": "2026-11-02",
+"applied": null,
+"jp": false,
+"new": true,
+"summary": "Centra Credit UnionがJACKSONで記録を取得(1件)",
+"infer": null,
+"note": "工事でない記録",
+"fact": {
+"src": "インディアナ州 建築計画審査記録(公開記録)",
+"ref": "許可 465059:2026-11-02 CDR release",
+"value": null,
+"verbatim": "Centra Credit Union Branch Banking Facility",
+"gc": null,
+"pin": null,
+"owner_source": null
+},
+"karte": null,
+"company_id": "C-14840",
+"provenance": {
+"pipeline_version": "qa-1-rev6-2026-09-26",
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-12T22:10:16.456344+00:00"
+},
+"meaning": "内容不明",
+"amount_usd": null,
+"headline_en": "Centra Credit Union obtained a record in JACKSON (1 permit)",
+"not_construction": true,
+"as_of": "2026-11-02",
+"work_period": {
+"text": null,
+"from": null,
+"to": null
+},
+"contractors": [],
+"contractors_n": 0,
+"amount": {
+"max": null,
+"total": 0,
+"stated_n": 0,
+"member_n": 1
+},
+"n_permits": 1,
+"member_ids": [
+"S-90579"
 ],
 "kinds": [
 "工事でない記録"
@@ -131255,11 +131578,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:57:35.919669+00:00"
+"generated_at": "2026-11-12T22:10:28.707519+00:00"
 },
 "meaning": "内容不明",
 "amount_usd": null,
-"headline_en": "MARONDA HOMES OF CINCINNATI LLC obtained a permit in MIAMI TOWNSHIP (1 permit).",
+"headline_en": "MARONDA HOMES OF CINCINNATI LLC obtained a permit in Miami Township (1 record)",
 "not_construction": false,
 "as_of": "2026-09-06",
 "work_period": {
@@ -131314,7 +131637,7 @@
 "applied": null,
 "jp": false,
 "new": false,
-"summary": "DUNKIN'がChicago Ridgeで許可を取得(1件)",
+"summary": "DUNKIN'がChicago Ridgeで内容不明の許可を取得(1件)",
 "infer": null,
 "note": "内容不明",
 "fact": {
@@ -131332,11 +131655,11 @@
 "pipeline_version": "qa-1-rev6-2026-09-26",
 "policy": "permit-agg-1",
 "model": "claude-sonnet-5",
-"generated_at": "2026-10-14T01:58:27.896600+00:00"
+"generated_at": "2026-11-12T22:10:28.252282+00:00"
 },
 "meaning": "内容不明",
 "amount_usd": 16000.0,
-"headline_en": "DUNKIN' obtained a permit in Chicago Ridge (1 record).",
+"headline_en": "DUNKIN' obtained 1 permit of unclear work in Chicago Ridge.",
 "not_construction": false,
 "as_of": "2026-08-24",
 "work_period": {
@@ -131527,15 +131850,14 @@
 "name": "DTE",
 "entity_type": "corp",
 "jp": false,
-"signals": 66,
+"signals": 65,
 "value_total": null,
 "states": "MI",
 "latest": "2026-11-10",
-"targets": 66,
+"targets": 65,
 "signal_ids": [
 "S-96667",
 "S-93040",
-"S-93043",
 "S-93044",
 "S-93046",
 "S-92290",
@@ -131751,13 +132073,14 @@
 "name": "CINCINNATI CITY OF",
 "entity_type": "public",
 "jp": false,
-"signals": 27,
+"signals": 28,
 "value_total": null,
 "states": "OH",
-"latest": "2026-11-04",
-"targets": 27,
+"latest": "2026-11-10",
+"targets": 28,
 "signal_ids": [
 "S-59045",
+"S-97238",
 "S-92360",
 "S-88883",
 "S-87753",
@@ -131859,13 +132182,12 @@
 "name": "MCKINLEY ASSOCIATES INC",
 "entity_type": "corp",
 "jp": false,
-"signals": 17,
+"signals": 16,
 "value_total": null,
 "states": "MI",
-"latest": "2026-10-27",
-"targets": 17,
+"latest": "2026-09-30",
+"targets": 16,
 "signal_ids": [
-"S-87407",
 "S-69521",
 "S-53548",
 "S-32389",
@@ -132069,30 +132391,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-138",
-"name": "OHIOHEALTH CORP",
-"entity_type": "corp",
-"jp": false,
-"signals": 10,
-"value_total": null,
-"states": "OH",
-"latest": "2026-11-05",
-"targets": 10,
-"signal_ids": [
-"S-95493",
-"S-87782",
-"S-87801",
-"S-75912",
-"S-76644",
-"S-79637",
-"S-73798",
-"S-95504",
-"S-92752",
-"S-67592"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15211",
 "name": "ARCHBISHOP OF CINCINNATI TR",
 "entity_type": "spe",
@@ -132113,6 +132411,30 @@
 "S-80072",
 "S-24387",
 "S-36140"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15348",
+"name": "ARROWWOOD HILLS COOPERATIVE",
+"entity_type": "corp",
+"jp": false,
+"signals": 10,
+"value_total": null,
+"states": "MI",
+"latest": "2026-11-10",
+"targets": 10,
+"signal_ids": [
+"S-97012",
+"S-85524",
+"S-83160",
+"S-80375",
+"S-80376",
+"S-32437",
+"S-31849",
+"S-31886",
+"S-31889",
+"S-33088"
 ],
 "n_amount_excluded": 0
 },
@@ -132212,29 +132534,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15348",
-"name": "ARROWWOOD HILLS COOPERATIVE",
-"entity_type": "corp",
-"jp": false,
-"signals": 9,
-"value_total": null,
-"states": "MI",
-"latest": "2026-10-22",
-"targets": 9,
-"signal_ids": [
-"S-85524",
-"S-83160",
-"S-80375",
-"S-80376",
-"S-32437",
-"S-31849",
-"S-31886",
-"S-31889",
-"S-33088"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15438",
 "name": "Breezeline",
 "entity_type": "corp",
@@ -132281,6 +132580,29 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-1866",
+"name": "FIFTH THIRD BANK",
+"entity_type": "corp",
+"jp": false,
+"signals": 9,
+"value_total": null,
+"states": "OH",
+"latest": "2026-11-10",
+"targets": 9,
+"signal_ids": [
+"S-89445",
+"S-8675",
+"S-97175",
+"S-93232",
+"S-88553",
+"S-85004",
+"S-53520",
+"S-40117",
+"S-69198"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-7724",
 "name": "CLEVELAND CLINIC FOUNDATION",
 "entity_type": "corp",
@@ -132288,11 +132610,11 @@
 "signals": 9,
 "value_total": null,
 "states": "OH",
-"latest": "2026-11-06",
+"latest": "2026-10-29",
 "targets": 9,
 "signal_ids": [
 "S-67706",
-"S-96308",
+"S-90124",
 "S-78002",
 "S-36826",
 "S-36881",
@@ -132304,8 +132626,8 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13718",
-"name": "PROCTER & GAMBLE CO THE",
+"id": "C-138",
+"name": "OHIOHEALTH CORP",
 "entity_type": "corp",
 "jp": false,
 "signals": 8,
@@ -132314,14 +132636,14 @@
 "latest": "2026-11-05",
 "targets": 8,
 "signal_ids": [
-"S-79581",
-"S-95466",
-"S-86284",
-"S-84508",
-"S-80082",
-"S-60442",
-"S-8901",
-"S-8647"
+"S-95493",
+"S-87801",
+"S-75912",
+"S-76644",
+"S-79637",
+"S-73798",
+"S-95504",
+"S-67592"
 ],
 "n_amount_excluded": 0
 },
@@ -132414,28 +132736,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-1866",
-"name": "FIFTH THIRD BANK",
-"entity_type": "corp",
-"jp": false,
-"signals": 8,
-"value_total": null,
-"states": "OH",
-"latest": "2026-11-04",
-"targets": 8,
-"signal_ids": [
-"S-89445",
-"S-8675",
-"S-93232",
-"S-88553",
-"S-85004",
-"S-53520",
-"S-40117",
-"S-69198"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-2301",
 "name": "CHICAGO SPECIAL EVENTS MANAGEMENT",
 "entity_type": "corp",
@@ -132501,23 +132801,23 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-14687",
-"name": "CASE WESTERN RESERVE UNIVERSITY",
-"entity_type": "public",
+"id": "C-13718",
+"name": "PROCTER & GAMBLE CO THE",
+"entity_type": "corp",
 "jp": false,
 "signals": 7,
 "value_total": null,
 "states": "OH",
-"latest": "2026-11-05",
+"latest": "2026-10-22",
 "targets": 7,
 "signal_ids": [
-"S-90143",
-"S-96325",
-"S-78044",
-"S-73849",
-"S-90098",
-"S-90101",
-"S-90134"
+"S-79581",
+"S-86284",
+"S-84508",
+"S-80082",
+"S-60442",
+"S-8901",
+"S-8647"
 ],
 "n_amount_excluded": 0
 },
@@ -132539,27 +132839,6 @@
 "S-84236",
 "S-65456",
 "S-55033"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-16887",
-"name": "CASE WESTERN RESERVE",
-"entity_type": "corp",
-"jp": false,
-"signals": 7,
-"value_total": null,
-"states": "OH",
-"latest": "2026-11-06",
-"targets": 7,
-"signal_ids": [
-"S-96310",
-"S-82881",
-"S-90094",
-"S-86498",
-"S-36846",
-"S-73863",
-"S-82818"
 ],
 "n_amount_excluded": 0
 },
@@ -132646,6 +132925,26 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-14687",
+"name": "CASE WESTERN RESERVE UNIVERSITY",
+"entity_type": "public",
+"jp": false,
+"signals": 6,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-30",
+"targets": 6,
+"signal_ids": [
+"S-90143",
+"S-78044",
+"S-73849",
+"S-90098",
+"S-90101",
+"S-90134"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-15548",
 "name": "COLONIAL SQUARE 4 APARTMENTS",
 "entity_type": "corp",
@@ -132682,6 +132981,26 @@
 "S-32267",
 "S-32971",
 "S-60717"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-16887",
+"name": "CASE WESTERN RESERVE",
+"entity_type": "corp",
+"jp": false,
+"signals": 6,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-30",
+"targets": 6,
+"signal_ids": [
+"S-82881",
+"S-90094",
+"S-86498",
+"S-36846",
+"S-73863",
+"S-82818"
 ],
 "n_amount_excluded": 0
 },
@@ -132896,6 +133215,25 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-319",
+"name": "DOLLAR TREE",
+"entity_type": "corp",
+"jp": false,
+"signals": 5,
+"value_total": null,
+"states": "IL,IN,OH",
+"latest": "2026-11-10",
+"targets": 5,
+"signal_ids": [
+"S-92143",
+"S-68079",
+"S-55533",
+"S-33525",
+"S-70928"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-3663",
 "name": "EDWARD JONES",
 "entity_type": "corp",
@@ -133008,24 +133346,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13353",
-"name": "2 FM FLEET AND FACILITY MANAGEMENT",
-"entity_type": "public",
-"jp": false,
-"signals": 4,
-"value_total": null,
-"states": "IL",
-"latest": "2026-11-02",
-"targets": 4,
-"signal_ids": [
-"S-91082",
-"S-80880",
-"S-71430",
-"S-734"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-13515",
 "name": "CRISTO HOMES INC",
 "entity_type": "corp",
@@ -133037,27 +133357,9 @@
 "targets": 4,
 "signal_ids": [
 "S-92693",
+"S-92714",
 "S-82588",
-"S-8894",
-"S-92715"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-13609",
-"name": "STATE OF OHIO",
-"entity_type": "public",
-"jp": false,
-"signals": 4,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-26",
-"targets": 4,
-"signal_ids": [
-"S-63354",
-"S-87809",
-"S-59756",
-"S-77912"
+"S-8894"
 ],
 "n_amount_excluded": 0
 },
@@ -133076,24 +133378,6 @@
 "S-24425",
 "S-1536",
 "S-65243"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-14197",
-"name": "KROGER CO THE",
-"entity_type": "corp",
-"jp": false,
-"signals": 4,
-"value_total": null,
-"states": "OH",
-"latest": "2026-10-28",
-"targets": 4,
-"signal_ids": [
-"S-66509",
-"S-89440",
-"S-89471",
-"S-69162"
 ],
 "n_amount_excluded": 0
 },
@@ -133170,6 +133454,24 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-15595",
+"name": "CMHDC",
+"entity_type": "corp",
+"jp": false,
+"signals": 4,
+"value_total": null,
+"states": "IL",
+"latest": "2026-11-01",
+"targets": 4,
+"signal_ids": [
+"S-90299",
+"S-75346",
+"S-69768",
+"S-59726"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-1596",
 "name": "OLD NATIONAL BANK",
 "entity_type": "corp",
@@ -133184,6 +133486,24 @@
 "S-49813",
 "S-88096",
 "S-68669"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-16018",
+"name": "ACC OP (WILLOWTREE) LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 4,
+"value_total": null,
+"states": "MI",
+"latest": "2026-11-10",
+"targets": 4,
+"signal_ids": [
+"S-97018",
+"S-94203",
+"S-94207",
+"S-94239"
 ],
 "n_amount_excluded": 0
 },
@@ -133242,24 +133562,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-319",
-"name": "DOLLAR TREE",
-"entity_type": "corp",
-"jp": false,
-"signals": 4,
-"value_total": null,
-"states": "IL,IN,OH",
-"latest": "2026-10-02",
-"targets": 4,
-"signal_ids": [
-"S-68079",
-"S-55533",
-"S-33525",
-"S-70928"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-6028",
 "name": "Five Below, Inc.",
 "entity_type": "corp",
@@ -133312,19 +133614,19 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13492",
-"name": "CLERMONT COUNTY BOARD OF",
+"id": "C-13353",
+"name": "2 FM FLEET AND FACILITY MANAGEMENT",
 "entity_type": "public",
 "jp": false,
 "signals": 3,
 "value_total": null,
-"states": "OH",
-"latest": "2026-11-04",
+"states": "IL",
+"latest": "2026-10-16",
 "targets": 3,
 "signal_ids": [
-"S-92226",
-"S-58468",
-"S-29360"
+"S-80880",
+"S-71430",
+"S-734"
 ],
 "n_amount_excluded": 0
 },
@@ -133342,6 +133644,23 @@
 "S-58998",
 "S-59014",
 "S-76516"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-13609",
+"name": "STATE OF OHIO",
+"entity_type": "public",
+"jp": false,
+"signals": 3,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-09",
+"targets": 3,
+"signal_ids": [
+"S-63354",
+"S-59756",
+"S-77912"
 ],
 "n_amount_excluded": 0
 },
@@ -133431,6 +133750,23 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-14197",
+"name": "KROGER CO THE",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-28",
+"targets": 3,
+"signal_ids": [
+"S-66509",
+"S-89440",
+"S-69162"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-14597",
 "name": "BOARD OF EDUCATION",
 "entity_type": "public",
@@ -133444,6 +133780,23 @@
 "S-87792",
 "S-1398",
 "S-66907"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-14840",
+"name": "Centra Credit Union",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": null,
+"states": "IN",
+"latest": "2026-11-02",
+"targets": 3,
+"signal_ids": [
+"S-74846",
+"S-68569",
+"S-90579"
 ],
 "n_amount_excluded": 0
 },
@@ -133567,23 +133920,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15595",
-"name": "CMHDC",
-"entity_type": "corp",
-"jp": false,
-"signals": 3,
-"value_total": null,
-"states": "IL",
-"latest": "2026-10-08",
-"targets": 3,
-"signal_ids": [
-"S-75346",
-"S-69768",
-"S-59726"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15675",
 "name": "Sephora",
 "entity_type": "corp",
@@ -133631,23 +133967,6 @@
 "S-58263",
 "S-52549",
 "S-52559"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-16018",
-"name": "ACC OP (WILLOWTREE) LLC",
-"entity_type": "corp",
-"jp": false,
-"signals": 3,
-"value_total": null,
-"states": "MI",
-"latest": "2026-11-06",
-"targets": 3,
-"signal_ids": [
-"S-94203",
-"S-94207",
-"S-94239"
 ],
 "n_amount_excluded": 0
 },
@@ -133889,6 +134208,38 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-13443",
+"name": "KLAIRMONT ENTERPRISES, INC.",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "IL",
+"latest": "2026-11-10",
+"targets": 2,
+"signal_ids": [
+"S-58140",
+"S-96968"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-13492",
+"name": "CLERMONT COUNTY BOARD OF",
+"entity_type": "public",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "OH",
+"latest": "2026-09-15",
+"targets": 2,
+"signal_ids": [
+"S-58468",
+"S-29360"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-13497",
 "name": "VILLAGE OF NEW RICHMOND",
 "entity_type": "public",
@@ -133901,22 +134252,6 @@
 "signal_ids": [
 "S-91374",
 "S-58476"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-13519",
-"name": "BLUE CROSS/BLUE SHIELD OF MICHIGAN",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "MI",
-"latest": "2026-11-06",
-"targets": 2,
-"signal_ids": [
-"S-93961",
-"S-67505"
 ],
 "n_amount_excluded": 0
 },
@@ -134081,6 +134416,22 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-14218",
+"name": "ELMHURST PARK DIST",
+"entity_type": "public",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "IL",
+"latest": "2026-11-10",
+"targets": 2,
+"signal_ids": [
+"S-66186",
+"S-96940"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-14610",
 "name": "PROSPECT HOUSE INC",
 "entity_type": "corp",
@@ -134141,22 +134492,6 @@
 "signal_ids": [
 "S-68497",
 "S-84053"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-14840",
-"name": "Centra Credit Union",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "IN",
-"latest": "2026-10-06",
-"targets": 2,
-"signal_ids": [
-"S-74846",
-"S-68569"
 ],
 "n_amount_excluded": 0
 },
@@ -134241,18 +134576,18 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15296",
-"name": "CHRIST HOSPITAL THE",
+"id": "C-15285",
+"name": "PARKWAY MEADOWS ANN ARBOR LDHA",
 "entity_type": "corp",
 "jp": false,
 "signals": 2,
 "value_total": null,
-"states": "OH",
-"latest": "2026-10-23",
+"states": "MI",
+"latest": "2026-11-03",
 "targets": 2,
 "signal_ids": [
-"S-86425",
-"S-86272"
+"S-91408",
+"S-83247"
 ],
 "n_amount_excluded": 0
 },
@@ -134349,6 +134684,22 @@
 "signal_ids": [
 "S-86872",
 "S-83232"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15488",
+"name": "TRADER JOES",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "IL",
+"latest": "2026-11-02",
+"targets": 2,
+"signal_ids": [
+"S-91087",
+"S-69865"
 ],
 "n_amount_excluded": 0
 },
@@ -134477,6 +134828,22 @@
 "signal_ids": [
 "S-67068",
 "S-75584"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15638",
+"name": "HARPER COLLEGE (WILLIAM RAINE",
+"entity_type": "corp",
+"jp": false,
+"signals": 2,
+"value_total": null,
+"states": "IL",
+"latest": "2026-11-10",
+"targets": 2,
+"signal_ids": [
+"S-82215",
+"S-65351"
 ],
 "n_amount_excluded": 0
 },
@@ -134897,22 +135264,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-3758",
-"name": "NATIONWIDE MUTUAL INSURANCE CO",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "OH",
-"latest": "2026-11-06",
-"targets": 2,
-"signal_ids": [
-"S-96263",
-"S-67577"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-5217",
 "name": "Forest River, Inc.",
 "entity_type": "corp",
@@ -135188,21 +135539,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13443",
-"name": "KLAIRMONT ENTERPRISES, INC.",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-14",
-"targets": 1,
-"signal_ids": [
-"S-58140"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-13445",
 "name": "LABORERS LOCAL 1410",
 "entity_type": "corp",
@@ -135458,17 +135794,17 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13513",
-"name": "GRANGE MUTUAL CASUALTY CO",
+"id": "C-13519",
+"name": "BLUE CROSS/BLUE SHIELD OF MICHIGAN",
 "entity_type": "corp",
 "jp": false,
 "signals": 1,
 "value_total": null,
-"states": "OH",
-"latest": "2026-11-03",
+"states": "MI",
+"latest": "2026-09-25",
 "targets": 1,
 "signal_ids": [
-"S-92735"
+"S-67505"
 ],
 "n_amount_excluded": 0
 },
@@ -136928,21 +137264,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-14218",
-"name": "ELMHURST PARK DIST",
-"entity_type": "public",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-24",
-"targets": 1,
-"signal_ids": [
-"S-66186"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-14549",
 "name": "EXTRA SPACE MANAGEMENT, INC.",
 "entity_type": "corp",
@@ -138068,6 +138389,21 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-14988",
+"name": "Illinois Retina Associates",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IN",
+"latest": "2026-11-09",
+"targets": 1,
+"signal_ids": [
+"S-69296"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-14996",
 "name": "ST ANTHONY MESSENGER PRESS",
 "entity_type": "corp",
@@ -138079,6 +138415,21 @@
 "targets": 1,
 "signal_ids": [
 "S-69197"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-14997",
+"name": "Wabash Valley Produce",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IN",
+"latest": "2026-11-09",
+"targets": 1,
+"signal_ids": [
+"S-69280"
 ],
 "n_amount_excluded": 0
 },
@@ -138638,21 +138989,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15285",
-"name": "PARKWAY MEADOWS ANN ARBOR LDHA",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "MI",
-"latest": "2026-10-19",
-"targets": 1,
-"signal_ids": [
-"S-83247"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15287",
 "name": "NECTO",
 "entity_type": "corp",
@@ -138713,6 +139049,21 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-15296",
+"name": "CHRIST HOSPITAL THE",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-22",
+"targets": 1,
+"signal_ids": [
+"S-86272"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-15297",
 "name": "FIRST BAPTIST CHURCH OF ROSS",
 "entity_type": "corp",
@@ -138754,21 +139105,6 @@
 "targets": 1,
 "signal_ids": [
 "S-70346"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15304",
-"name": "KELSEY HAYES CO",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "MI",
-"latest": "2026-11-06",
-"targets": 1,
-"signal_ids": [
-"S-94237"
 ],
 "n_amount_excluded": 0
 },
@@ -140183,17 +140519,17 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15488",
-"name": "TRADER JOES",
+"id": "C-15487",
+"name": "QUASONIX INC",
 "entity_type": "corp",
 "jp": false,
 "signals": 1,
 "value_total": null,
-"states": "IL",
-"latest": "2026-09-29",
+"states": "OH",
+"latest": "2026-11-10",
 "targets": 1,
 "signal_ids": [
-"S-69865"
+"S-97173"
 ],
 "n_amount_excluded": 0
 },
@@ -140423,6 +140759,21 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-15533",
+"name": "First Onsite Property",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IN",
+"latest": "2026-11-10",
+"targets": 1,
+"signal_ids": [
+"S-68627"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-15538",
 "name": "The American Legion",
 "entity_type": "corp",
@@ -140464,21 +140815,6 @@
 "targets": 1,
 "signal_ids": [
 "S-68625"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15541",
-"name": "LMP GALLERIA PROPERTY LLC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "MI",
-"latest": "2026-11-05",
-"targets": 1,
-"signal_ids": [
-"S-92970"
 ],
 "n_amount_excluded": 0
 },
@@ -140614,21 +140950,6 @@
 "targets": 1,
 "signal_ids": [
 "S-67070"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15571",
-"name": "FAIRFIELD TWP TRS",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "OH",
-"latest": "2026-11-05",
-"targets": 1,
-"signal_ids": [
-"S-93204"
 ],
 "n_amount_excluded": 0
 },
@@ -140888,6 +141209,21 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-15627",
+"name": "RIVER NORTH POINT",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IL",
+"latest": "2026-10-28",
+"targets": 1,
+"signal_ids": [
+"S-87916"
+],
+"n_amount_excluded": 1
+},
+{
 "id": "C-15634",
 "name": "Franklin College",
 "entity_type": "corp",
@@ -140929,21 +141265,6 @@
 "targets": 1,
 "signal_ids": [
 "S-65587"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-15638",
-"name": "HARPER COLLEGE (WILLIAM RAINE",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-23",
-"targets": 1,
-"signal_ids": [
-"S-65351"
 ],
 "n_amount_excluded": 0
 },
@@ -142324,6 +142645,21 @@
 "targets": 1,
 "signal_ids": [
 "S-62033"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15845",
+"name": "Bethel Baptist Church",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IN",
+"latest": "2026-11-09",
+"targets": 1,
+"signal_ids": [
+"S-68386"
 ],
 "n_amount_excluded": 0
 },
@@ -144038,6 +144374,21 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-16084",
+"name": "Fortify Fieldhouse",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IN",
+"latest": "2026-11-09",
+"targets": 1,
+"signal_ids": [
+"S-88058"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-16085",
 "name": "Westside Community Church",
 "entity_type": "corp",
@@ -145253,6 +145604,21 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-2485",
+"name": "TRINITY EPISCOPAL CHURCH",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IL",
+"latest": "2026-11-10",
+"targets": 1,
+"signal_ids": [
+"S-96967"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-2554",
 "name": "CYM LIVING LLC",
 "entity_type": "spe",
@@ -145369,6 +145735,21 @@
 "targets": 1,
 "signal_ids": [
 "S-79632"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-3758",
+"name": "NATIONWIDE MUTUAL INSURANCE CO",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "OH",
+"latest": "2026-09-25",
+"targets": 1,
+"signal_ids": [
+"S-67577"
 ],
 "n_amount_excluded": 0
 },
@@ -145669,6 +146050,36 @@
 "targets": 1,
 "signal_ids": [
 "S-96361"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-7754",
+"name": "BD OF ED CSD",
+"entity_type": "public",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "OH",
+"latest": "2026-11-02",
+"targets": 1,
+"signal_ids": [
+"S-96366"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-7786",
+"name": "CHILDRENS HOSPITAL MEDICAL",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "OH",
+"latest": "2026-10-28",
+"targets": 1,
+"signal_ids": [
+"S-87975"
 ],
 "n_amount_excluded": 0
 },
