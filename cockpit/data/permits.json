@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-11-12T22:29:56+00:00",
+"generated_at": "2026-11-13T11:58:31+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,31 +15,31 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 96855,
-"candidates": 57711,
-"targets": 1670,
-"permits_folded": 2096,
+"signals_total": 97002,
+"candidates": 57814,
+"targets": 1657,
+"permits_folded": 2082,
 "unclassified": 0,
-"unevaluated": 7863,
+"unevaluated": 8036,
 "unissued_excluded": 51,
 "by_category": {
 "操業の変化": 248,
-"保全": 983,
+"保全": 970,
 "事務所・その他": 194,
 "内容不明": 64,
 "工事でない記録": 181
 },
 "stages": {
-"0": 39144,
-"2a": 2539,
-"2b": 4339,
-"2c": 985,
-"2d": 41894,
-"3": 5573,
-"5": 214,
-"6": 2167
+"0": 39188,
+"2a": 2550,
+"2b": 4452,
+"2c": 1034,
+"2d": 41841,
+"3": 5571,
+"5": 213,
+"6": 2153
 },
-"enriched": 49848
+"enriched": 49778
 },
 "sources": [
 {
@@ -47,9 +47,9 @@
 "state": "IL",
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-11-12T18:31:26Z",
-"last_run_reason": "ok",
+"last_run_status": "error",
+"last_run_at": "2026-11-13T08:02:58Z",
+"last_run_reason": "upstream_error",
 "signals": 11339,
 "date_min": "2026-07-01",
 "date_max": "2026-11-11",
@@ -65,7 +65,7 @@
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T18:31:52Z",
+"last_run_at": "2026-11-13T08:03:02Z",
 "last_run_reason": "ok",
 "signals": 302,
 "date_min": "2026-07-01",
@@ -82,7 +82,7 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T18:32:06Z",
+"last_run_at": "2026-11-13T08:03:07Z",
 "last_run_reason": "ok",
 "signals": 3752,
 "date_min": "2026-07-01",
@@ -99,7 +99,7 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T18:32:07Z",
+"last_run_at": "2026-11-13T08:03:11Z",
 "last_run_reason": "ok",
 "signals": 3204,
 "date_min": "2026-07-01",
@@ -116,7 +116,7 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T18:32:10Z",
+"last_run_at": "2026-11-13T08:03:12Z",
 "last_run_reason": "ok",
 "signals": 1818,
 "date_min": "2026-07-07",
@@ -133,7 +133,7 @@
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
 "last_run_status": "empty",
-"last_run_at": "2026-11-12T19:26:41Z",
+"last_run_at": "2026-11-13T08:49:30Z",
 "last_run_reason": "ok",
 "signals": 111,
 "date_min": "2026-07-07",
@@ -150,7 +150,7 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T18:32:10Z",
+"last_run_at": "2026-11-13T08:03:12Z",
 "last_run_reason": "ok",
 "signals": 2545,
 "date_min": "2026-07-01",
@@ -184,9 +184,9 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T18:32:11Z",
+"last_run_at": "2026-11-13T08:04:14Z",
 "last_run_reason": "ok",
-"signals": 1759,
+"signals": 1772,
 "date_min": "2024-11-18",
 "date_max": "2026-11-12",
 "owner_coverage": 0,
@@ -200,9 +200,9 @@
 "state": "IL",
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-11-12T18:32:10Z",
-"last_run_reason": "ok",
+"last_run_status": "error",
+"last_run_at": "2026-11-13T08:03:13Z",
+"last_run_reason": "timeout",
 "signals": 476,
 "date_min": "2026-07-01",
 "date_max": "2026-10-30",
@@ -218,7 +218,7 @@
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T18:32:11Z",
+"last_run_at": "2026-11-13T08:04:14Z",
 "last_run_reason": "ok",
 "signals": 2067,
 "date_min": "2026-07-01",
@@ -235,7 +235,7 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T18:31:51Z",
+"last_run_at": "2026-11-13T08:03:00Z",
 "last_run_reason": "ok",
 "signals": 9109,
 "date_min": "2026-07-01",
@@ -252,13 +252,13 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T19:16:38Z",
+"last_run_at": "2026-11-13T08:39:11Z",
 "last_run_reason": "ok",
-"signals": 24961,
+"signals": 25051,
 "date_min": "2026-07-01",
-"date_max": "2026-11-12",
-"owner_coverage": 16713,
-"targets": 587,
+"date_max": "2026-11-13",
+"owner_coverage": 16779,
+"targets": 573,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -269,12 +269,12 @@
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T19:22:31Z",
+"last_run_at": "2026-11-13T08:44:56Z",
 "last_run_reason": "ok",
-"signals": 14479,
+"signals": 14523,
 "date_min": "2026-07-01",
 "date_max": "2026-11-12",
-"owner_coverage": 7312,
+"owner_coverage": 7346,
 "targets": 256,
 "cadence": "daily",
 "next_run_at": null,
@@ -286,7 +286,7 @@
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T19:24:46Z",
+"last_run_at": "2026-11-13T08:47:27Z",
 "last_run_reason": "ok",
 "signals": 891,
 "date_min": "2026-07-01",
@@ -303,7 +303,7 @@
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-12T19:26:38Z",
+"last_run_at": "2026-11-13T08:49:18Z",
 "last_run_reason": "ok",
 "signals": 143,
 "date_min": "2026-07-01",
@@ -1560,14 +1560,14 @@
 ]
 },
 "stages": {
-"0": 39144,
-"2a": 2539,
-"2b": 4339,
-"2c": 985,
-"2d": 41894,
-"3": 5573,
-"5": 214,
-"6": 2167
+"0": 39188,
+"2a": 2550,
+"2b": 4452,
+"2c": 1034,
+"2d": 41841,
+"3": 5571,
+"5": 213,
+"6": 2153
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 19386,
+"checked": 19243,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -3502,7 +3502,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "Walmartがヘンドリックスで倉庫整備と増築の許可を取得(2件)",
 "infer": null,
 "note": "増築・新築・倉庫・搬送",
@@ -26630,7 +26630,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "KrogerがPark Ridgeで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -26707,7 +26707,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "Comcastがアナーバーでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -26784,7 +26784,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "AT&TがIndependenceでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -26861,7 +26861,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "AT&TがIndependenceでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -26938,7 +26938,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "SPEEDWAY SUPERAMERICAがSYMMES TOWNSHIPで更新・修繕の許可を取得(3件)",
 "infer": null,
 "note": "更新・修繕",
@@ -27017,7 +27017,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CINCINNATI CITY OFがCINCINNATIで更新・修繕の許可を取得(4件)",
 "infer": null,
 "note": "更新・修繕",
@@ -27097,7 +27097,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CHICAGO CUBS BASEBALL CLUB, LLCがChicagoで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -27174,7 +27174,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "TAJS INCがColumbusで警備設備の許可を取得(1件)",
 "infer": null,
 "note": "警備",
@@ -27251,7 +27251,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CLEVELAND CLINIC FOUNDATIONがClevelandでユーティリティ更新の許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -95650,84 +95650,6 @@
 },
 {
 "investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30788",
-"state": "MI",
-"city": "Ann Arbor・1809 Packard St Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-19",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがアナーバーでユーティリティの許可を取得(2件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0766 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD 35/5 STREETLIGHT POLE FOR DTE PTM COMMUNITY LIGHTING. SAME HOLE TO BE USED. HAND DIG AROUND ANY UTILITIES / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-09-33-410-015",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:32.780102+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtains utility work permits in Ann Arbor (2 records)",
-"not_construction": false,
-"as_of": "2026-08-19",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-30788",
-"S-32253"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "CITY OF ANN ARBOR",
 "basis": "operator",
 "label": "操業事業者",
@@ -96739,930 +96661,6 @@
 },
 {
 "investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30780",
-"state": "MI",
-"city": "Ann Arbor・1511 South Blvd Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0768 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD 35/5 STREETLIGHT POLE FOR DTE PTM COMMUNITY LIGHTING. SAME HOLE TO BE USED. HAND DIG AROUND ANY UTILITIES / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-09-33-408-026",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:28.480479+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit).",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30780"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30781",
-"state": "MI",
-"city": "Ann Arbor・3016 Brockman Blvd Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0771 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD 35/5 STREETLIGHT POLE FOR DTE PTM COMMUNITY LIGHTING. SAME HOLE TO BE USED. HAND DIG AROUND ANY UTILITIES - ADJACENT TO 3016 BROCKMAN BLVD / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-09-33-406-001",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:33.643858+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a utility permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30781"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30782",
-"state": "MI",
-"city": "Ann Arbor・1365 Morehead Dr Ann Arbor MI 48103",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがAnn Arborで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0742 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD SL POLE FOR DTE - PTM - 1365 Morehead Dr / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-12-06-111-004",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:21.897118+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a repair/replacement permit in Ann Arbor (1 permit).",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30782"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30783",
-"state": "MI",
-"city": "Ann Arbor・2440 Picadilly Cir Ann Arbor MI 48103",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0741 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD SL POLE FOR DTE - PTM - 2440 Picadilly Cir / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-12-06-111-009",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:38.476728+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a utility permit in Ann Arbor (1 permit).",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30783"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30784",
-"state": "MI",
-"city": "Ann Arbor・3105 Brockman Blvd Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0772 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE TWO WOOD 35/5 STREETLIGHT POLES FOR DTE PTM COMMUNITY LIGHTING. SAME HOLES TO BE USED. HAND DIG AROUND ANY UTILITIES / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-12-04-106-002",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:24.708129+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a utility upgrade permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30784"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30785",
-"state": "MI",
-"city": "Ann Arbor・2007 Devolson Ave Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがAnn Arborでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0775 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD 35/5 STREETLIGHT POLE FOR DTE PTM COMMUNITY LIGHTING. SAME HOLE TO BE USED. HAND DIG AROUND ANY UTILITIES / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-09-33-402-009",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:22.154153+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained 1 utility work permit in Ann Arbor",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30785"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30786",
-"state": "MI",
-"city": "Ann Arbor・1933 Brock Ct Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0770 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD 35/5 STREETLIGHT POLE FOR DTE PTM COMMUNITY LIGHTING. SAME HOLE TO BE USED. HAND DIG AROUND ANY UTILITIES / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-09-33-407-021",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:32.893000+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a permit for utility work in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30786"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30787",
-"state": "MI",
-"city": "Ann Arbor・1394 Coler Rd Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0767 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD 35/5 STREETLIGHT POLE FOR DTE PTM COMMUNITY LIGHTING. SAME HOLE TO BE USED. HAND DIG AROUND ANY UTILITIES / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-09-33-411-012",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:21.768414+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtains a utility upgrade permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30787"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30789",
-"state": "MI",
-"city": "Ann Arbor・2435 Newbury Ct Ann Arbor MI 48103",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0739 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD SL POLE FOR DTE - PTM / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-12-06-111-014",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:32.666124+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30789"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30790",
-"state": "MI",
-"city": "Ann Arbor・1920 Packard St Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがAnn Arborでユーティリティ更新の許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0769 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD 35/5 STREETLIGHT POLE FOR DTE PTM COMMUNITY LIGHTING. SAME HOLE TO BE USED. HAND DIG AROUND ANY UTILITIES / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-09-33-411-003",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:24.948841+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30790"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30791",
-"state": "MI",
-"city": "Ann Arbor・2014 Carhart Ave Ann Arbor MI 48104",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0776 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD 35/5 STREETLIGHT POLE FOR DTE PTM COMMUNITY LIGHTING. SAME HOLE TO BE USED. HAND DIG AROUND ANY UTILITIES / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-09-33-402-001",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:37.451877+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a utility work permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30791"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "DTE",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-30793",
-"state": "MI",
-"city": "Ann Arbor・2154 Ascot Rd Ann Arbor MI 48103",
-"company": "DTE",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "エネルギー・公益",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-08-15",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "DTEがAnn Arborで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW26-0743 Right-of-Way Community Lighting",
-"value": null,
-"verbatim": "HARLAN TO REPLACE WOOD SL POLE FOR DTE - PTM - 2154 Ascot Rd / Right-of-Way Community Lighting / Community Lighting",
-"gc": null,
-"pin": "09-12-05-202-008",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15322",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-12T22:10:36.713206+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "DTE obtained a repair/replace permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-08-15",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-30793"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
 "name": "ELMHURST PARK DIST",
 "basis": "operator",
 "label": "操業事業者",
@@ -98470,7 +97468,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "DunkinがPark Ridgeで看板設置の許可を取得(1件)",
 "infer": null,
 "note": "事務所・その他",
@@ -98547,7 +97545,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CITY OF ANN ARBORがAnn Arborで事務所・その他の許可を取得(1件)",
 "infer": "Will be erected for one day.",
 "note": "事務所・その他",
@@ -114246,7 +113244,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "AT&TがLAWRENCEで記録を取得(2件)",
 "infer": null,
 "note": "事務所・その他・工事でない記録",
@@ -114325,7 +113323,7 @@
 "date": "2026-10-29",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "Walmartがポーターで記録(配管関連)を取得(1件)",
 "infer": null,
 "note": "工事でない記録",
@@ -131850,11 +130848,11 @@
 "name": "DTE",
 "entity_type": "corp",
 "jp": false,
-"signals": 65,
+"signals": 52,
 "value_total": null,
 "states": "MI",
 "latest": "2026-11-10",
-"targets": 65,
+"targets": 52,
 "signal_ids": [
 "S-96667",
 "S-93040",
@@ -131907,19 +130905,6 @@
 "S-31028",
 "S-31918",
 "S-32225",
-"S-30788",
-"S-30780",
-"S-30781",
-"S-30782",
-"S-30783",
-"S-30784",
-"S-30785",
-"S-30786",
-"S-30787",
-"S-30789",
-"S-30790",
-"S-30791",
-"S-30793",
 "S-84308"
 ],
 "n_amount_excluded": 0
