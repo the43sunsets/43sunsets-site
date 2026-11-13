@@ -38,11 +38,53 @@
 },
 "faces": {
 "permits": {
-"count": 1,
+"count": 2,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-25",
+"latest": "2026-11-06",
 "items": [
+{
+"id": "S-96263",
+"parent_id": "S-96263",
+"member_n": 5,
+"date": "2026-11-06",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "1 NATIONWIDE PLZ",
+"permit_no": "MMEPC2645141",
+"permit_type": "Mechanical",
+"source_id": "SRC-017",
+"value": 10955.0,
+"category": "保全",
+"confidence": "high",
+"summary": "NATIONWIDE MUTUAL INSURANCE COがColumbusで更新・修繕等の許可を取得(5件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Mechanical / MEP",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-13T12:31:16.864884+00:00",
+"reading_id": "01M7AE82C0KMZWKWB0KX52Y0HF"
+},
+"n_permits": 5,
+"member_ids": [
+"S-84513",
+"S-85239",
+"S-85798",
+"S-87783",
+"S-96263"
+],
+"kinds": [
+"ユーティリティ",
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
 {
 "id": "S-67577",
 "parent_id": "S-67577",
@@ -107,6 +149,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-06",
+"face": "permits",
+"title": "建設許可(Columbus): NATIONWIDE MUTUAL INSURANCE COがColumbusで更新・修繕等の許可を取得(5件)",
+"ref": "S-96263",
+"summary": "NATIONWIDE MUTUAL INSURANCE COがColumbusで更新・修繕等の許可を取得(5件)"
+},
+{
 "date": "2026-09-25",
 "face": "permits",
 "title": "建設許可(Columbus): NATIONWIDE MUTUAL INSURANCE COがColumbusで事務所・その他の許可を取得(1件)",
@@ -114,6 +163,6 @@
 "summary": "NATIONWIDE MUTUAL INSURANCE COがColumbusで事務所・その他の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-13T12:10:10+00:00",
+"generated_at": "2026-11-13T12:50:51+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

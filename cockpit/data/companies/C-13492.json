@@ -38,11 +38,52 @@
 },
 "faces": {
 "permits": {
-"count": 2,
+"count": 3,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-09-15",
+"latest": "2026-11-04",
 "items": [
+{
+"id": "S-92226",
+"parent_id": "S-92226",
+"member_n": 4,
+"date": "2026-11-04",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Clermont County",
+"address": "4470 SR 222 BATAVIA OH 45103",
+"permit_no": "B-076253-2026",
+"permit_type": "Commercial New Structure",
+"source_id": "SRC-022",
+"value": 10800000.0,
+"category": "操業の変化",
+"confidence": "high",
+"summary": "CLERMONT COUNTY BOARD OFがBATAVIAで新築・修繕の許可を取得(4件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "CLERMONT COUNTY CTC PARKING BUS CANOPY / Commercial New Structure / New Structure",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-13T12:31:18.548183+00:00",
+"reading_id": "01M7AE840MZ2DMSSJ6TTMQSY9H"
+},
+"n_permits": 4,
+"member_ids": [
+"S-79291",
+"S-85462",
+"S-90795",
+"S-92226"
+],
+"kinds": [
+"増築・新築",
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "10m_100m",
+"amount_band_label": "$10M〜$100M"
+},
 {
 "id": "S-58468",
 "parent_id": "S-58468",
@@ -143,6 +184,13 @@
 },
 "timeline": [
 {
+"date": "2026-11-04",
+"face": "permits",
+"title": "建設許可(Clermont County): CLERMONT COUNTY BOARD OFがBATAVIAで新築・修繕の許可を取得(4件)",
+"ref": "S-92226",
+"summary": "CLERMONT COUNTY BOARD OFがBATAVIAで新築・修繕の許可を取得(4件)"
+},
+{
 "date": "2026-09-15",
 "face": "permits",
 "title": "建設許可(Clermont County): CLERMONT COUNTY BOARD OFがBATAVIAで更新・修繕の許可を取得(1件)",
@@ -157,6 +205,6 @@
 "summary": "CLERMONT COUNTY BOARD OFがBATAVIAで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-13T12:10:10+00:00",
+"generated_at": "2026-11-13T12:50:51+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

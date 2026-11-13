@@ -35,10 +35,10 @@
 },
 "faces": {
 "permits": {
-"count": 9,
+"count": 11,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-29",
+"latest": "2026-11-06",
 "items": [
 {
 "id": "S-67706",
@@ -72,6 +72,83 @@
 ],
 "kinds": [
 "新拠点・用途転換"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-96308",
+"parent_id": "S-96308",
+"member_n": 2,
+"date": "2026-11-06",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "9105 CEDAR AVE, CLEVELAND, OH, 44106",
+"permit_no": "BCE26-046496",
+"permit_type": "Commercial Electrical",
+"source_id": "SRC-068",
+"value": 196000.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CLEVELAND CLINIC FOUNDATIONがClevelandで更新・修繕の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial Electrical / I-2 Institutional - Hospitals / Nursing Home / Provide temporary power for jobsite, relocate underground utilities, relocate light poles. 1500 SQ FT BUILDING PERMIT NO. BCB26-036525.",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-13T12:31:15.500253+00:00",
+"reading_id": "01M7AE811CK02RTCTCQKY27BA9"
+},
+"n_permits": 2,
+"member_ids": [
+"S-82848",
+"S-96308"
+],
+"kinds": [
+"更新・修繕"
+],
+"amount_band": "100k_1m",
+"amount_band_label": "$100k〜$1M"
+},
+{
+"id": "S-90132",
+"parent_id": "S-90132",
+"member_n": 4,
+"date": "2026-11-05",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cleveland",
+"address": "9500 EUCLID AVE, CLEVELAND, OH, 44195",
+"permit_no": "BCB26-035623",
+"permit_type": "Commercial Building",
+"source_id": "SRC-068",
+"value": 388704.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CLEVELAND CLINIC FOUNDATIONがClevelandで改修の許可を取得(4件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial Building / I-2 Institutional - Hospitals / Nursing Home / Interior Only Remodel / MAKE INTERIOR ALTERATIONS TO 1,211 SF RECOVERY UNIT ON THE SECOND FLOOR PER APPROVED PLANS. SEPARATE PLUMBING, HVAC, ELECTRICAL AND FIRE PROTECTION PERMITS ARE REQUIRED.",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-13T12:31:17.353810+00:00",
+"reading_id": "01M7AE82V9825TRNRP4E4WMSY7"
+},
+"n_permits": 4,
+"member_ids": [
+"S-82826",
+"S-90121",
+"S-90132",
+"S-96333"
+],
+"kinds": [
+"更新・修繕",
+"事務所・その他"
 ],
 "amount_band": "100k_1m",
 "amount_band_label": "$100k〜$1M"
@@ -420,6 +497,20 @@
 },
 "timeline": [
 {
+"date": "2026-11-06",
+"face": "permits",
+"title": "建設許可(Cleveland): CLEVELAND CLINIC FOUNDATIONがClevelandで更新・修繕の許可を取得(2件)",
+"ref": "S-96308",
+"summary": "CLEVELAND CLINIC FOUNDATIONがClevelandで更新・修繕の許可を取得(2件)"
+},
+{
+"date": "2026-11-05",
+"face": "permits",
+"title": "建設許可(Cleveland): CLEVELAND CLINIC FOUNDATIONがClevelandで改修の許可を取得(4件)",
+"ref": "S-90132",
+"summary": "CLEVELAND CLINIC FOUNDATIONがClevelandで改修の許可を取得(4件)"
+},
+{
 "date": "2026-10-29",
 "face": "permits",
 "title": "建設許可(Cleveland): CLEVELAND CLINIC FOUNDATIONがClevelandでユーティリティ更新の許可を取得(1件)",
@@ -490,6 +581,6 @@
 "summary": "Cleveland Clinic Foundation(Cleveland, OH)が AMO Sales & Services, Inc. を担保権者として登記(2026-01-13)、担保物の記載が「Original Document」のみで詳細不明。"
 }
 ],
-"generated_at": "2026-11-13T12:10:10+00:00",
+"generated_at": "2026-11-13T12:50:51+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

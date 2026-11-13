@@ -38,7 +38,7 @@
 },
 "faces": {
 "permits": {
-"count": 4,
+"count": 5,
 "value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-11-03",
@@ -112,6 +112,44 @@
 ],
 "kinds": [
 "更新・修繕"
+],
+"amount_band": "lt_100k",
+"amount_band_label": "$100k 未満"
+},
+{
+"id": "S-92715",
+"parent_id": "S-92715",
+"member_n": 2,
+"date": "2026-11-03",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Cincinnati",
+"address": "573 TRISON DR",
+"permit_no": "2026P09560",
+"permit_type": "Plumbing Permits",
+"source_id": "SRC-003",
+"value": 8675.0,
+"category": "保全",
+"confidence": "high",
+"summary": "CRISTO HOMES INCがCincinnatiで更新・修繕の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Plumbing Permits / Plumbing Permits / 1-2-3 FM",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-13T12:31:17.720420+00:00",
+"reading_id": "01M7AE836R7YMFGRMSQN68SSND"
+},
+"n_permits": 2,
+"member_ids": [
+"S-85770",
+"S-92715"
+],
+"kinds": [
+"更新・修繕",
+"内容不明"
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
@@ -230,6 +268,13 @@
 "summary": "CRISTO HOMES INCがCincinnatiで更新・修繕の許可を取得(2件)"
 },
 {
+"date": "2026-11-03",
+"face": "permits",
+"title": "建設許可(Cincinnati): CRISTO HOMES INCがCincinnatiで更新・修繕の許可を取得(2件)",
+"ref": "S-92715",
+"summary": "CRISTO HOMES INCがCincinnatiで更新・修繕の許可を取得(2件)"
+},
+{
 "date": "2026-10-15",
 "face": "permits",
 "title": "建設許可(Cincinnati): CRISTO HOMES INCがCincinnatiでHVAC更新の許可を取得(1件)",
@@ -244,6 +289,6 @@
 "summary": "CRISTO HOMES INCがCincinnatiで更新・修繕の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-13T12:10:10+00:00",
+"generated_at": "2026-11-13T12:50:51+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

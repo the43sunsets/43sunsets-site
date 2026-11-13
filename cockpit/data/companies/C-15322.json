@@ -35,7 +35,7 @@
 },
 "faces": {
 "permits": {
-"count": 52,
+"count": 54,
 "value_total": null,
 "n_amount_excluded": 0,
 "latest": "2026-11-10",
@@ -105,6 +105,43 @@
 "n_permits": 1,
 "member_ids": [
 "S-93040"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
+"id": "S-93043",
+"parent_id": "S-93043",
+"member_n": 2,
+"date": "2026-11-06",
+"applied": null,
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "3390 E Huron River Dr Ann Arbor MI 48104",
+"permit_no": "ROW26-1050",
+"permit_type": "Right-of-Way - General",
+"source_id": "SRC-022",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "DTEがアナーバーでユーティリティ整備の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "PROJECT IS FOR THE INSTALLATION OF TESTWIRE AND ANODES ALONG AN EXISTING GAS MAIN. THE DTE GAS MAIN IS LOCATED ON THE SOUTH SIDE OF E HURON RIVER DR AND SIDE OF E HURON RIVER DR AND WEST SIDE OF ELMWOOD FOR A 4'X4' PIT TO FACILITATE INSTALLATION OF A TESTWIRE AND CATHODIC ANODES FOR PROTECTION OF TH",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-13T12:31:16.989320+00:00",
+"reading_id": "01M7AE82FXPMSRK7SY5ZY1GBEH"
+},
+"n_permits": 2,
+"member_ids": [
+"S-79388",
+"S-93043"
 ],
 "kinds": [
 "ユーティリティ"
@@ -1878,6 +1915,42 @@
 "amount_band_label": "不明"
 },
 {
+"id": "S-32253",
+"parent_id": "S-32253",
+"member_n": 1,
+"date": "2026-08-19",
+"applied": null,
+"state": "MI",
+"jurisdiction": "Ann Arbor",
+"address": "1809 Packard St Ann Arbor MI 48104",
+"permit_no": "TCP26-0492",
+"permit_type": "Right-of-Way - Traffic Control",
+"source_id": "SRC-022",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "HARLAN TO REPLACE WOOD POLES FOR DTE COMMUNITY LIGHTING - STREETLIGHTS\nROW26-0766, 0767, 0769, 0773 / Right-of-Way - Traffic Control / Traffic Control",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-13T12:31:16.411183+00:00",
+"reading_id": "01M7AE81XVKCAAB1ERY3TD9FZ6"
+},
+"n_permits": 1,
+"member_ids": [
+"S-32253"
+],
+"kinds": [
+"ユーティリティ"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
+{
 "id": "S-84308",
 "parent_id": "S-84308",
 "member_n": 1,
@@ -1953,6 +2026,13 @@
 "title": "建設許可(Ann Arbor): DTEがAnn Arborでユーティリティ整備の許可を取得(1件)",
 "ref": "S-93040",
 "summary": "DTEがAnn Arborでユーティリティ整備の許可を取得(1件)"
+},
+{
+"date": "2026-11-06",
+"face": "permits",
+"title": "建設許可(Ann Arbor): DTEがアナーバーでユーティリティ整備の許可を取得(2件)",
+"ref": "S-93043",
+"summary": "DTEがアナーバーでユーティリティ整備の許可を取得(2件)"
 },
 {
 "date": "2026-11-06",
@@ -2303,8 +2383,15 @@
 "title": "建設許可(Ann Arbor): DTEがアナーバーでユーティリティ更新の許可を取得(1件)",
 "ref": "S-32225",
 "summary": "DTEがアナーバーでユーティリティ更新の許可を取得(1件)"
+},
+{
+"date": "2026-08-19",
+"face": "permits",
+"title": "建設許可(Ann Arbor): DTEがアナーバーでユーティリティの許可を取得(1件)",
+"ref": "S-32253",
+"summary": "DTEがアナーバーでユーティリティの許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-13T12:10:10+00:00",
+"generated_at": "2026-11-13T12:50:51+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }

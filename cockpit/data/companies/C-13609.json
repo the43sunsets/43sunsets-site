@@ -38,11 +38,49 @@
 },
 "faces": {
 "permits": {
-"count": 3,
+"count": 4,
 "value_total": null,
 "n_amount_excluded": 0,
-"latest": "2026-10-09",
+"latest": "2026-10-26",
 "items": [
+{
+"id": "S-87809",
+"parent_id": "S-87809",
+"member_n": 2,
+"date": "2026-10-26",
+"applied": null,
+"state": "OH",
+"jurisdiction": "Columbus",
+"address": "2555 W DUBLIN-GRANVILLE RD",
+"permit_no": "EMEPC2643359",
+"permit_type": "Electrical",
+"source_id": "SRC-017",
+"value": null,
+"category": "保全",
+"confidence": "high",
+"summary": "STATE OF OHIOがColumbusで更新・修繕と事務所・その他の許可を取得(2件)",
+"infer": null,
+"role": "operator",
+"role_label": "操業事業者",
+"verbatim": "Commercial - Other / Electrical / MEP",
+"provenance": {
+"policy": "permit-agg-1",
+"model": "claude-sonnet-5",
+"generated_at": "2026-11-13T12:31:15.852688+00:00",
+"reading_id": "01M7AE81CCX8P8J3ADTRV84TH6"
+},
+"n_permits": 2,
+"member_ids": [
+"S-82636",
+"S-87809"
+],
+"kinds": [
+"更新・修繕",
+"事務所・その他"
+],
+"amount_band": "unknown",
+"amount_band_label": "不明"
+},
 {
 "id": "S-63354",
 "parent_id": "S-63354",
@@ -179,6 +217,13 @@
 },
 "timeline": [
 {
+"date": "2026-10-26",
+"face": "permits",
+"title": "建設許可(Columbus): STATE OF OHIOがColumbusで更新・修繕と事務所・その他の許可を取得(2件)",
+"ref": "S-87809",
+"summary": "STATE OF OHIOがColumbusで更新・修繕と事務所・その他の許可を取得(2件)"
+},
+{
 "date": "2026-10-09",
 "face": "permits",
 "title": "建設許可(Cincinnati): STATE OF OHIOがCincinnatiで内容不明の許可を取得(1件)",
@@ -200,6 +245,6 @@
 "summary": "STATE OF OHIOがCincinnatiで事務所・その他の許可を取得(1件)"
 }
 ],
-"generated_at": "2026-11-13T12:10:10+00:00",
+"generated_at": "2026-11-13T12:50:51+00:00",
 "note": "事実欄は公的記録の逐語、分類は当社 AI の読み(出典つき)。名義の基準(所有名義/申請者/債務者)は記録ごとの札のとおりで、所有名義は地主・特別目的会社のことがある。情報の正確性・完全性は保証しない。"
 }
