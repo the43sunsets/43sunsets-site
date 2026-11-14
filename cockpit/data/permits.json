@@ -1,6 +1,6 @@
 {
 "meta": {
-"generated_at": "2026-11-13T12:50:49+00:00",
+"generated_at": "2026-11-14T09:41:22+00:00",
 "beta_states": [
 "IL",
 "IN",
@@ -15,31 +15,31 @@
 },
 "new_rule": "記録日が書き出し日から 14 日以内(v0)。cron 稼働後は検出日基準に切替。",
 "funnel": {
-"signals_total": 97002,
-"candidates": 57814,
-"targets": 1692,
-"permits_folded": 2158,
+"signals_total": 97504,
+"candidates": 58287,
+"targets": 1685,
+"permits_folded": 2150,
 "unclassified": 0,
-"unevaluated": 6925,
+"unevaluated": 7512,
 "unissued_excluded": 51,
 "by_category": {
-"操業の変化": 254,
-"保全": 998,
-"事務所・その他": 195,
+"操業の変化": 252,
+"保全": 994,
+"事務所・その他": 194,
 "内容不明": 64,
 "工事でない記録": 181
 },
 "stages": {
-"0": 39188,
-"2a": 2431,
-"2b": 3713,
-"2c": 781,
-"2d": 42706,
-"3": 5743,
-"5": 211,
-"6": 2229
+"0": 39217,
+"2a": 2473,
+"2b": 4098,
+"2c": 941,
+"2d": 42625,
+"3": 5721,
+"5": 208,
+"6": 2221
 },
-"enriched": 50889
+"enriched": 50775
 },
 "sources": [
 {
@@ -47,14 +47,14 @@
 "state": "IL",
 "jurisdiction": "Chicago",
 "label": "シカゴ市 建築許可(公開記録)",
-"last_run_status": "error",
-"last_run_at": "2026-11-13T08:02:58Z",
-"last_run_reason": "upstream_error",
-"signals": 11339,
+"last_run_status": "ok",
+"last_run_at": "2026-11-14T08:03:31Z",
+"last_run_reason": "ok",
+"signals": 11461,
 "date_min": "2026-07-01",
-"date_max": "2026-11-11",
-"owner_coverage": 10904,
-"targets": 453,
+"date_max": "2026-11-12",
+"owner_coverage": 11021,
+"targets": 451,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -65,7 +65,7 @@
 "jurisdiction": "Rockford",
 "label": "ロックフォード市 商業建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-13T08:03:02Z",
+"last_run_at": "2026-11-14T08:03:33Z",
 "last_run_reason": "ok",
 "signals": 302,
 "date_min": "2026-07-01",
@@ -82,7 +82,7 @@
 "jurisdiction": "Cincinnati",
 "label": "シンシナティ市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-13T08:03:07Z",
+"last_run_at": "2026-11-14T08:03:34Z",
 "last_run_reason": "ok",
 "signals": 3752,
 "date_min": "2026-07-01",
@@ -99,7 +99,7 @@
 "jurisdiction": "Columbus",
 "label": "コロンバス市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-13T08:03:11Z",
+"last_run_at": "2026-11-14T08:03:38Z",
 "last_run_reason": "ok",
 "signals": 3204,
 "date_min": "2026-07-01",
@@ -116,7 +116,7 @@
 "jurisdiction": "Cleveland",
 "label": "クリーブランド市 建築許可(公開記録・月次更新)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-13T08:03:12Z",
+"last_run_at": "2026-11-14T08:03:38Z",
 "last_run_reason": "ok",
 "signals": 1818,
 "date_min": "2026-07-07",
@@ -133,7 +133,7 @@
 "jurisdiction": "Mason",
 "label": "メイソン市 建築許可(公開記録・月報)",
 "last_run_status": "empty",
-"last_run_at": "2026-11-13T08:49:30Z",
+"last_run_at": "2026-11-14T08:55:04Z",
 "last_run_reason": "ok",
 "signals": 111,
 "date_min": "2026-07-07",
@@ -150,12 +150,12 @@
 "jurisdiction": "Detroit",
 "label": "デトロイト市 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-13T08:03:12Z",
+"last_run_at": "2026-11-14T08:03:39Z",
 "last_run_reason": "ok",
-"signals": 2545,
+"signals": 2568,
 "date_min": "2026-07-01",
-"date_max": "2026-11-11",
-"owner_coverage": 2533,
+"date_max": "2026-11-12",
+"owner_coverage": 2556,
 "targets": 47,
 "cadence": "daily",
 "next_run_at": null,
@@ -184,11 +184,11 @@
 "jurisdiction": "州全域",
 "label": "インディアナ州 建築計画審査記録(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-13T08:04:14Z",
+"last_run_at": "2026-11-14T08:03:41Z",
 "last_run_reason": "ok",
-"signals": 1772,
+"signals": 1797,
 "date_min": "2024-11-18",
-"date_max": "2026-11-12",
+"date_max": "2026-11-13",
 "owner_coverage": 0,
 "targets": 360,
 "cadence": "daily",
@@ -200,9 +200,9 @@
 "state": "IL",
 "jurisdiction": "Normal",
 "label": "ノーマル町 建築許可(公開記録)",
-"last_run_status": "error",
-"last_run_at": "2026-11-13T08:03:13Z",
-"last_run_reason": "timeout",
+"last_run_status": "empty",
+"last_run_at": "2026-11-14T08:03:40Z",
+"last_run_reason": "ok",
 "signals": 476,
 "date_min": "2026-07-01",
 "date_max": "2026-10-30",
@@ -217,8 +217,8 @@
 "state": "IL",
 "jurisdiction": "Naperville",
 "label": "ネイパービル市 建築許可(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-11-13T08:04:14Z",
+"last_run_status": "empty",
+"last_run_at": "2026-11-14T08:03:40Z",
 "last_run_reason": "ok",
 "signals": 2067,
 "date_min": "2026-07-01",
@@ -235,7 +235,7 @@
 "jurisdiction": "Cook 郡 40 自治体",
 "label": "Cook 郡 40 自治体 建築許可(Cook 郡 Assessor 台帳・約 1〜2 ヶ月遅れ)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-13T08:03:00Z",
+"last_run_at": "2026-11-14T08:03:32Z",
 "last_run_reason": "ok",
 "signals": 9109,
 "date_min": "2026-07-01",
@@ -252,13 +252,13 @@
 "jurisdiction": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov)",
 "label": "IL 12 自治体+OH Clermont 郡+MI Ann Arbor(EnerGov) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-13T08:39:11Z",
+"last_run_at": "2026-11-14T08:45:30Z",
 "last_run_reason": "ok",
-"signals": 25051,
+"signals": 25258,
 "date_min": "2026-07-01",
-"date_max": "2026-11-13",
-"owner_coverage": 16779,
-"targets": 590,
+"date_max": "2026-11-14",
+"owner_coverage": 16920,
+"targets": 584,
 "cadence": "daily",
 "next_run_at": null,
 "interrupted": false
@@ -269,12 +269,12 @@
 "jurisdiction": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela)",
 "label": "Evanston・DuPage 郡+OH Montgomery/Butler/Hamilton 郡(Accela) 建築許可(公開記録)",
 "last_run_status": "ok",
-"last_run_at": "2026-11-13T08:44:56Z",
+"last_run_at": "2026-11-14T08:51:02Z",
 "last_run_reason": "ok",
-"signals": 14523,
+"signals": 14648,
 "date_min": "2026-07-01",
-"date_max": "2026-11-12",
-"owner_coverage": 7346,
+"date_max": "2026-11-13",
+"owner_coverage": 7405,
 "targets": 258,
 "cadence": "daily",
 "next_run_at": null,
@@ -285,8 +285,8 @@
 "state": "IL",
 "jurisdiction": "Woodridge",
 "label": "ウッドリッジ村 月次許可報告(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-11-13T08:47:27Z",
+"last_run_status": "empty",
+"last_run_at": "2026-11-14T08:53:10Z",
 "last_run_reason": "ok",
 "signals": 891,
 "date_min": "2026-07-01",
@@ -302,8 +302,8 @@
 "state": "IL",
 "jurisdiction": "Savoy",
 "label": "サボイ村 月次許可報告(公開記録)",
-"last_run_status": "ok",
-"last_run_at": "2026-11-13T08:49:18Z",
+"last_run_status": "empty",
+"last_run_at": "2026-11-14T08:55:01Z",
 "last_run_reason": "ok",
 "signals": 143,
 "date_min": "2026-07-01",
@@ -1560,14 +1560,14 @@
 ]
 },
 "stages": {
-"0": 39188,
-"2a": 2431,
-"2b": 3713,
-"2c": 781,
-"2d": 42706,
-"3": 5743,
-"5": 211,
-"6": 2229
+"0": 39217,
+"2a": 2473,
+"2b": 4098,
+"2c": 941,
+"2d": 42625,
+"3": 5721,
+"5": 208,
+"6": 2221
 },
 "g3_key": "identity_key(anchor)+source_id+permit_no",
 "g3_duplicates": 0,
@@ -1575,7 +1575,7 @@
 "g2_units": "g2_units.UNITS",
 "g5": {
 "version": "g5-words-v1-2026-10-07",
-"checked": 19633,
+"checked": 19555,
 "hits": 0,
 "hits_ids": 0,
 "hits_words": 0,
@@ -2706,83 +2706,6 @@
 },
 {
 "investor": {
-"name": "EXPRESS FASHION OPERATIONS, LLC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-93005",
-"state": "MI",
-"city": "Ann Arbor・100 Briarwood Cir Unit: K069 Ann Arbor MI 48108",
-"company": "EXPRESS FASHION OPERATIONS, LLC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-11-05",
-"applied": null,
-"jp": false,
-"new": true,
-"summary": "EXPRESS FASHION OPERATIONSがAnn Arborで新築の許可を取得(1件)",
-"infer": null,
-"note": "増築・新築",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 BLDGC26-0570 Building (Commercial) - New Construction",
-"value": 20000.0,
-"verbatim": "** $195 Transferred from COFO26-0428 ** RF\n\n 10'x12' kiosk / Building (Commercial) - New Construction / New Construction",
-"gc": null,
-"pin": "09-12-08-100-071",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15599",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:20.291589+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": 20000.0,
-"headline_en": "EXPRESS FASHION OPERATIONS obtained a new construction permit in Ann Arbor (1 permit).",
-"not_construction": false,
-"as_of": "2026-11-05",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 20000.0,
-"total": 20000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-93005"
-],
-"kinds": [
-"増築・新築"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "JETSET PILATES",
 "basis": "operator",
 "label": "操業事業者",
@@ -3590,7 +3513,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "Five BelowがPORTERで新拠点整備の許可を取得(1件)",
 "infer": null,
 "note": "新拠点・用途転換",
@@ -3667,7 +3590,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "Dutch Bros Coffeeがタイピカヌーで新拠点整備の許可を取得(1件)",
 "infer": null,
 "note": "新拠点・用途転換",
@@ -4802,83 +4725,6 @@
 ],
 "amount_band": "lt_100k",
 "amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "Sephora",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-85496",
-"state": "MI",
-"city": "Ann Arbor・100 Briarwood Cir Ann Arbor MI 48108",
-"company": "Sephora",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "小売・飲食",
-"category": "操業の変化",
-"category_raw": "操業の変化",
-"confidence": "high",
-"date": "2026-10-22",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "SephoraがAnn Arborで新拠点・用途転換の許可を取得(1件)",
-"infer": null,
-"note": "新拠点・用途転換",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 MESA26-0161 MESA - Fire Suppression",
-"value": null,
-"verbatim": "Modify existing fire protection to accommodate tenant build out. (#G124C Sephora)  / MESA - Fire Suppression / Fire Suppression",
-"gc": null,
-"pin": "09-12-08-100-071",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15675",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-13T12:31:17.603261+00:00"
-},
-"meaning": "操業の変化",
-"amount_usd": null,
-"headline_en": "Sephora obtained a convert use/tenant build-out permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-22",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-85496"
-],
-"kinds": [
-"新拠点・用途転換"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
 },
 {
 "investor": {
@@ -27856,7 +27702,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "ComcastがPalatineでユーティリティの許可を取得(1件)",
 "infer": null,
 "note": "ユーティリティ",
@@ -27933,7 +27779,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "FEDEXがNilesで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -28010,7 +27856,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "Verizonがアナーバーで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -28087,7 +27933,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "STELLA MARIS, INCがClevelandで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -28166,7 +28012,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CASE WESTERN RESERVEがClevelandで更新・修繕の許可を取得(1件)",
 "infer": null,
 "note": "更新・修繕",
@@ -34478,85 +34324,6 @@
 },
 {
 "investor": {
-"name": "CHICAGO CUBS BASEBALL CLUB LLC",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-85076",
-"state": "IL",
-"city": "Chicago・1060 W ADDISON ST",
-"company": "CHICAGO CUBS BASEBALL CLUB LLC",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "その他の事業体",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-21",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "CHICAGO CUBS BASEBALL CLUB, LLCがChicagoで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 101087623 PERMIT - RENOVATION/ALTERATION",
-"value": 6500000.0,
-"verbatim": "DDS 2019 CBC: INSTALLATION OF A NEW FORCED-AIR AND DRAIN SYSTEM FOR THE BALL FIELD. ALL NEW EQUIPMENT WILL BE LOCATED ON THE RIGHT FIELD SIDE OF THE STADIUM UNDERNEATH THE STADIUM.TTHE WORK INCLUDES INSTALLATION OF THE FORCED AIR UNIT, DUCTWORK CONNECTING THE UNIT TO THE FIELD, AND DUCTWORK CONNECTING THE UNIT TO A FURNACE LOCATED ABOVE THE CONCOURSE. (OCCUPANCY TYPE A A; CONSTRUCTION CLASS IIB). ",
-"gc": "SHAMROCK DECORATING INC",
-"pin": "1420227002",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-3668",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-07T12:37:44.999126+00:00"
-},
-"meaning": "保全",
-"amount_usd": 6500000.0,
-"headline_en": "CHICAGO CUBS BASEBALL CLUB, LLC obtained a repair/renovation permit in Chicago (1 permit).",
-"not_construction": false,
-"as_of": "2026-10-21",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [
-"SHAMROCK DECORATING INC"
-],
-"contractors_n": 1,
-"amount": {
-"max": 6500000.0,
-"total": 6500000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-85076"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "1m_10m",
-"amount_band_label": "$1M〜$10M"
-},
-{
-"investor": {
 "name": "VERTICAL BRIDGE",
 "basis": "operator",
 "label": "操業事業者",
@@ -37713,83 +37480,6 @@
 },
 {
 "investor": {
-"name": "2 FM FLEET AND FACILITY MANAGEMENT",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-80880",
-"state": "IL",
-"city": "Chicago・5101 S WENTWORTH AVE",
-"company": "2 FM FLEET AND FACILITY MANAGEMENT",
-"entity_type": "public",
-"company_basis": "operator",
-"industry": "行政・公共",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-16",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "2 FM FLEET AND FACILITY MANAGEMENTがシカゴでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "シカゴ市 建築許可(公開記録)",
-"ref": "許可 B200478162 PERMIT – EXPRESS PERMIT PROGRAM",
-"value": 10000.0,
-"verbatim": "LINE VOLTAGE ELECTRICAL WORK. INSTALL PERMANENT-NOT REQUIRED BY CODE 1000 KW DIESEL GENERATOR. RECEPTACLE OUTLETS: 0 . LIGHTING OUTLETS: 0. SPECIFIC LOCATION: EXTERIOR LOT.",
-"gc": null,
-"pin": "2009404118",
-"owner_source": "permit"
-},
-"karte": null,
-"company_id": "C-13353",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-07T12:37:22.659887+00:00"
-},
-"meaning": "保全",
-"amount_usd": 10000.0,
-"headline_en": "2 FM FLEET AND FACILITY MANAGEMENT obtained a utility work permit in Chicago (1 permit)",
-"not_construction": false,
-"as_of": "2026-10-16",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 10000.0,
-"total": 10000.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-80880"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "CHICAGO PUBLIC SCHOOLS",
 "basis": "operator",
 "label": "操業事業者",
@@ -40049,83 +39739,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-78207"
-],
-"kinds": [
-"ユーティリティ"
-],
-"amount_band": "unknown",
-"amount_band_label": "不明"
-},
-{
-"investor": {
-"name": "COMCAST",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-78209",
-"state": "MI",
-"city": "Ann Arbor・701 Church St Ann Arbor MI 48104",
-"company": "COMCAST",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "通信・交通インフラ",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-10-13",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "Comcastがアナーバーでユーティリティの許可を取得(1件)",
-"infer": null,
-"note": "ユーティリティ",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 ROW25-1149 Right-of-Way - Telecommunications without a METRO Act Permit",
-"value": null,
-"verbatim": "Comcast proposes the aerial installation of ~46' of coaxial cable lashed to 1/4\" strand crossing Willard St, West of Church St, and the  underground installation of ~255' (191' inside ROW) of coaxial cable in conduit along the South side of Willard St, crossing Church St, for a Comcast force relocate project to maintain telecommunication services. / Right-of-Way - Telecommunications without a METR",
-"gc": null,
-"pin": "09-09-28-308-022",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-2580",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-09T21:02:23.972515+00:00"
-},
-"meaning": "保全",
-"amount_usd": null,
-"headline_en": "Comcast obtained 1 utility work permit in Ann Arbor.",
-"not_construction": false,
-"as_of": "2026-10-13",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": null,
-"total": 0,
-"stated_n": 0,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-78209"
 ],
 "kinds": [
 "ユーティリティ"
@@ -58693,83 +58306,6 @@
 "n_permits": 1,
 "member_ids": [
 "S-67963"
-],
-"kinds": [
-"更新・修繕"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
-"name": "COLONIAL SQUARE 4 APARTMENTS",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-67985",
-"state": "MI",
-"city": "Ann Arbor・3076 Wolverine Dr Ann Arbor MI 48108",
-"company": "COLONIAL SQUARE 4 APARTMENTS",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "不動産",
-"category": "保全",
-"category_raw": "保全",
-"confidence": "high",
-"date": "2026-09-28",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "COLONIAL SQUARE 4 APARTMENTSがAnn Arborで更新・修繕の許可を取得(1件)",
-"infer": null,
-"note": "更新・修繕",
-"fact": {
-"src": "Ann Arbor 建築許可(公開記録)",
-"ref": "許可 BLDGR26-1397 Building (Residential) - Alteration/Repair",
-"value": 4520.0,
-"verbatim": "Add bathroom exhaust fan to 2nd floor bathroom.\nRemove abandoned chimney flue next to closets on main and 2nd floor.   Expand adjacent closets to encompass recovered space. / Building (Residential) - Alteration/Repair / Alteration/Repair",
-"gc": null,
-"pin": "09-12-11-300-007",
-"owner_source": "parcel:annarbor_mi"
-},
-"karte": null,
-"company_id": "C-15548",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-10T12:39:49.616449+00:00"
-},
-"meaning": "保全",
-"amount_usd": 4520.0,
-"headline_en": "COLONIAL SQUARE 4 APARTMENTS obtained a repair/renovation permit in Ann Arbor (1 permit)",
-"not_construction": false,
-"as_of": "2026-09-28",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 4520.0,
-"total": 4520.0,
-"stated_n": 1,
-"member_n": 1
-},
-"n_permits": 1,
-"member_ids": [
-"S-67985"
 ],
 "kinds": [
 "更新・修繕"
@@ -100049,7 +99585,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "TIRE DISCOUNTERがMILFORDで看板設置の許可を取得(1件)",
 "infer": null,
 "note": "事務所・その他",
@@ -100126,7 +99662,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "HBH HOLDINGS INCがシンシナティで看板設置の許可を取得(1件)",
 "infer": null,
 "note": "事務所・その他",
@@ -114090,85 +113626,6 @@
 },
 {
 "investor": {
-"name": "ELMHURST MEMORIAL HEALTH",
-"basis": "operator",
-"label": "操業事業者",
-"source": "reading",
-"source_label": "許可記録の読み(出来事)"
-},
-"parties": {
-"owner_of_record": null,
-"owner_kind": null,
-"owner_is_spe": false,
-"applicant": null,
-"gc": null
-},
-"id": "S-17242",
-"state": "IL",
-"city": "Elmhurst・155 E BRUSH HILL RD ELMHURST IL 60126",
-"company": "ELMHURST MEMORIAL HEALTH",
-"entity_type": "corp",
-"company_basis": "operator",
-"industry": "医療",
-"category": "事務所・その他",
-"category_raw": "事務所・その他",
-"confidence": "high",
-"date": "2026-08-24",
-"applied": null,
-"jp": false,
-"new": false,
-"summary": "ELMHURST MEMORIAL HEALTHがElmhurstで看板改修・修繕の許可取得(2件)",
-"infer": null,
-"note": "更新・修繕・事務所・その他",
-"fact": {
-"src": "Elmhurst 建築許可(公開記録)",
-"ref": "許可 SIGN-010358-2026 Sign ",
-"value": 4200.0,
-"verbatim": "Replace faces on two existing monument signs / Sign  / Sign",
-"gc": null,
-"pin": "0613311037",
-"owner_source": "parcel:dupage"
-},
-"karte": null,
-"company_id": "C-180",
-"provenance": {
-"pipeline_version": "qa-1-rev6-2026-09-26",
-"policy": "permit-agg-1",
-"model": "claude-sonnet-5",
-"generated_at": "2026-11-09T21:01:43.388580+00:00"
-},
-"meaning": "事務所・その他",
-"amount_usd": 4200.0,
-"headline_en": "Elmhurst Memorial Health obtained 2 permits in Elmhurst for sign face replacement and repair work.",
-"not_construction": false,
-"as_of": "2026-09-03",
-"work_period": {
-"text": null,
-"from": null,
-"to": null
-},
-"contractors": [],
-"contractors_n": 0,
-"amount": {
-"max": 4200.0,
-"total": 6700.0,
-"stated_n": 2,
-"member_n": 2
-},
-"n_permits": 2,
-"member_ids": [
-"S-17242",
-"S-17339"
-],
-"kinds": [
-"更新・修繕",
-"事務所・その他"
-],
-"amount_band": "lt_100k",
-"amount_band_label": "$100k 未満"
-},
-{
-"investor": {
 "name": "CITY OF COLUMBUS OHIO",
 "basis": "operator",
 "label": "操業事業者",
@@ -115517,7 +114974,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "Edward JonesがIndiana/LAWRENCEで記録を取得(1件)",
 "infer": null,
 "note": "工事でない記録",
@@ -115594,7 +115051,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "Edward JonesがSTEUBENで記録を取得(1件)",
 "infer": null,
 "note": "工事でない記録",
@@ -115671,7 +115128,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CITY OF ELMHURSTがElmhurstで内容不明の許可を取得(1件)",
 "infer": null,
 "note": "内容不明",
@@ -115748,7 +115205,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "FISCHERがGOSHENで内容不明の許可を取得(1件)",
 "infer": null,
 "note": "内容不明",
@@ -115825,7 +115282,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CINCINNATI CITY OFがCincinnatiで内容不明の許可を取得(1件)",
 "infer": null,
 "note": "内容不明",
@@ -115904,7 +115361,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CASE WESTERN RESERVE UNIVERSITYがClevelandで記録を取得(1件)",
 "infer": null,
 "note": "工事でない記録",
@@ -115981,7 +115438,7 @@
 "date": "2026-10-30",
 "applied": null,
 "jp": false,
-"new": true,
+"new": false,
 "summary": "CASE WESTERN RESERVE UNIVERSITYがClevelandで記録取得の許可を取得(1件)",
 "infer": null,
 "note": "工事でない記録",
@@ -133829,11 +133286,11 @@
 "name": "COMCAST",
 "entity_type": "corp",
 "jp": false,
-"signals": 31,
+"signals": 30,
 "value_total": null,
 "states": "IL,IN,MI",
 "latest": "2026-11-06",
-"targets": 31,
+"targets": 30,
 "signal_ids": [
 "S-93037",
 "S-92291",
@@ -133845,7 +133302,6 @@
 "S-79385",
 "S-79386",
 "S-79392",
-"S-78209",
 "S-75482",
 "S-71054",
 "S-69363",
@@ -134780,26 +134236,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15548",
-"name": "COLONIAL SQUARE 4 APARTMENTS",
-"entity_type": "corp",
-"jp": false,
-"signals": 6,
-"value_total": null,
-"states": "MI",
-"latest": "2026-10-09",
-"targets": 6,
-"signal_ids": [
-"S-76871",
-"S-67985",
-"S-60075",
-"S-32520",
-"S-32673",
-"S-31102"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15551",
 "name": "UNIVERSITY OF MICHIGAN",
 "entity_type": "corp",
@@ -134912,6 +134348,25 @@
 "S-75272",
 "S-87649",
 "S-73434"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15548",
+"name": "COLONIAL SQUARE 4 APARTMENTS",
+"entity_type": "corp",
+"jp": false,
+"signals": 5,
+"value_total": null,
+"states": "MI",
+"latest": "2026-10-09",
+"targets": 5,
+"signal_ids": [
+"S-76871",
+"S-60075",
+"S-32520",
+"S-32673",
+"S-31102"
 ],
 "n_amount_excluded": 0
 },
@@ -135199,24 +134654,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-13353",
-"name": "2 FM FLEET AND FACILITY MANAGEMENT",
-"entity_type": "public",
-"jp": false,
-"signals": 4,
-"value_total": null,
-"states": "IL",
-"latest": "2026-11-02",
-"targets": 4,
-"signal_ids": [
-"S-91082",
-"S-80880",
-"S-71430",
-"S-734"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-13609",
 "name": "STATE OF OHIO",
 "entity_type": "public",
@@ -135379,24 +134816,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15675",
-"name": "Sephora",
-"entity_type": "corp",
-"jp": false,
-"signals": 4,
-"value_total": null,
-"states": "IL,IN,MI",
-"latest": "2026-11-04",
-"targets": 4,
-"signal_ids": [
-"S-85496",
-"S-92652",
-"S-84278",
-"S-68639"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-1596",
 "name": "OLD NATIONAL BANK",
 "entity_type": "corp",
@@ -135535,6 +134954,23 @@
 "S-92918",
 "S-66102",
 "S-53524"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-13353",
+"name": "2 FM FLEET AND FACILITY MANAGEMENT",
+"entity_type": "public",
+"jp": false,
+"signals": 3,
+"value_total": null,
+"states": "IL",
+"latest": "2026-11-02",
+"targets": 3,
+"signal_ids": [
+"S-91082",
+"S-71430",
+"S-734"
 ],
 "n_amount_excluded": 0
 },
@@ -135807,6 +135243,23 @@
 "S-88324",
 "S-88371",
 "S-67963"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-15675",
+"name": "Sephora",
+"entity_type": "corp",
+"jp": false,
+"signals": 3,
+"value_total": null,
+"states": "IL,IN,MI",
+"latest": "2026-11-04",
+"targets": 3,
+"signal_ids": [
+"S-92652",
+"S-84278",
+"S-68639"
 ],
 "n_amount_excluded": 0
 },
@@ -137010,22 +136463,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-180",
-"name": "ELMHURST MEMORIAL HEALTH",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "IL",
-"latest": "2026-09-22",
-"targets": 2,
-"signal_ids": [
-"S-64569",
-"S-17242"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-1972",
 "name": "ALDI INC.",
 "entity_type": "corp",
@@ -137102,22 +136539,6 @@
 "signal_ids": [
 "S-82876",
 "S-67707"
-],
-"n_amount_excluded": 0
-},
-{
-"id": "C-3668",
-"name": "CHICAGO CUBS BASEBALL CLUB LLC",
-"entity_type": "corp",
-"jp": false,
-"signals": 2,
-"value_total": null,
-"states": "IL",
-"latest": "2026-10-29",
-"targets": 2,
-"signal_ids": [
-"S-89423",
-"S-85076"
 ],
 "n_amount_excluded": 0
 },
@@ -143008,21 +142429,6 @@
 "n_amount_excluded": 0
 },
 {
-"id": "C-15599",
-"name": "EXPRESS FASHION OPERATIONS, LLC",
-"entity_type": "corp",
-"jp": false,
-"signals": 1,
-"value_total": null,
-"states": "MI",
-"latest": "2026-11-05",
-"targets": 1,
-"signal_ids": [
-"S-93005"
-],
-"n_amount_excluded": 0
-},
-{
 "id": "C-15602",
 "name": "KRP INVESTMENTS LLC",
 "entity_type": "corp",
@@ -147463,6 +146869,21 @@
 "n_amount_excluded": 0
 },
 {
+"id": "C-180",
+"name": "ELMHURST MEMORIAL HEALTH",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IL",
+"latest": "2026-09-22",
+"targets": 1,
+"signal_ids": [
+"S-64569"
+],
+"n_amount_excluded": 0
+},
+{
 "id": "C-1896",
 "name": "FORTIS GROUND WERKS",
 "entity_type": "corp",
@@ -147609,6 +147030,21 @@
 "targets": 1,
 "signal_ids": [
 "S-67077"
+],
+"n_amount_excluded": 0
+},
+{
+"id": "C-3668",
+"name": "CHICAGO CUBS BASEBALL CLUB LLC",
+"entity_type": "corp",
+"jp": false,
+"signals": 1,
+"value_total": null,
+"states": "IL",
+"latest": "2026-10-29",
+"targets": 1,
+"signal_ids": [
+"S-89423"
 ],
 "n_amount_excluded": 0
 },
